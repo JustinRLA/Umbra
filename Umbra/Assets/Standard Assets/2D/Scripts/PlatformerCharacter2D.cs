@@ -23,6 +23,7 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+		public bool Climb;
 
         private void Awake()
         {
@@ -84,7 +85,8 @@ namespace UnityStandardAssets._2D
 
 				// Move the character
 				m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
-
+				if(Climb==false)
+				{
 				// If the input is moving the player right and the player is facing left...
 				if (move > 0 && !m_FacingRight)
 				{
@@ -96,6 +98,7 @@ namespace UnityStandardAssets._2D
 				{
 					// ... flip the player.
 					Flip();
+					}
 				}
 			}
 			// If the player should jump...

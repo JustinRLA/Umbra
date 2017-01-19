@@ -1,15 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
+
+namespace UnityStandardAssets._2D
+{
 
 public class ladderScript : MonoBehaviour {
 	public bool canClimb;
 	GameObject ThePlayer;
 	Animator animPlayer;
+	public bool RightLadder;
+		PlatformerCharacter2D myPLatformCharacter;
+
 
 	// Use this for initialization
 	void Start () {
 		ThePlayer = GameObject.Find ("2DCharacter");
 		animPlayer = ThePlayer.GetComponent<Animator> ();
+		//ThePlayer
+			myPLatformCharacter=ThePlayer.GetComponent<PlatformerCharacter2D>();
+
 	}
 	
 	// Update is called once per frame
@@ -24,6 +34,8 @@ public class ladderScript : MonoBehaviour {
 			if (Input.GetKey (KeyCode.Space))
 				canClimb = false;	
 			animPlayer.SetBool ("Climb", true);
+				myPLatformCharacter.Climb = true;
+			
 		}
 		else
 			StartCoroutine (ReturnToNormal ());
@@ -53,7 +65,10 @@ public class ladderScript : MonoBehaviour {
 	{
 		ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		animPlayer.SetBool ("Climb", false);
+			myPLatformCharacter.Climb = false;
 
 		yield return null;
 	}
+}
+
 }
