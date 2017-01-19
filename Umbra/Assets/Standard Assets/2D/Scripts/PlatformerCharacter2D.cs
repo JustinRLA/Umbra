@@ -15,6 +15,9 @@ namespace UnityStandardAssets._2D
 		public GameObject RunTrigger;
 		CircleCollider2D RunCircleCollider;
 
+		public GameObject ViewTrigger;
+		CircleCollider2D ViewTriggerCollider;
+
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
@@ -28,7 +31,7 @@ namespace UnityStandardAssets._2D
         private void Awake()
         {
 			RunCircleCollider = RunTrigger.GetComponent<CircleCollider2D> ();
-
+			ViewTriggerCollider = ViewTrigger.GetComponent<CircleCollider2D> ();
             // Setting up references.
 			m_GroundCheck = transform.Find("GroundCheck");
 			m_CeilingCheck = transform.Find("CeilingCheck");
@@ -111,10 +114,23 @@ namespace UnityStandardAssets._2D
 			}
 
 			if(move==0||crouch==true||m_Grounded==false)
-				RunCircleCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);		
+			{
+				RunCircleCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);	
+
+			}
+			if(move==0)
+				ViewTriggerCollider.transform.localScale=new Vector3(0.05f,0.05f,0.05f);	
+			if(crouch==true && move!=0)
+				ViewTriggerCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);	
+			if(crouch==false && move!=0)
+				ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
+
+
+
 			else
+			{
 				RunCircleCollider.transform.localScale=new Vector3(1,1,1);		
-//			
+						    }
         }
 
 

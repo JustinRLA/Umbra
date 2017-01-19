@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 public class EnnemyPattern : MonoBehaviour {
 	public Transform PlayerOne;
@@ -7,7 +8,7 @@ public class EnnemyPattern : MonoBehaviour {
 
 
 	void Start () {
-
+		
 	}
 
 
@@ -19,10 +20,10 @@ public class EnnemyPattern : MonoBehaviour {
 
 		void Update () {
 
-		
-				Vector3 dir= PlayerOne.position-transform.position;
-				float angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg;
-				transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+//		
+//				Vector3 dir= PlayerOne.position-transform.position;
+//				float angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg;
+//				transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 
 	}
 }
