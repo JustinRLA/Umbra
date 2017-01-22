@@ -118,6 +118,10 @@ namespace UnityStandardAssets._2D
 				RunCircleCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);	
 
 			}
+			else
+			{
+				RunCircleCollider.transform.localScale=new Vector3(1,1,1);		
+			}
 			if(move==0)
 				ViewTriggerCollider.transform.localScale=new Vector3(0.05f,0.05f,0.05f);	
 			if(crouch==true && move!=0)
@@ -127,10 +131,7 @@ namespace UnityStandardAssets._2D
 
 
 
-			else
-			{
-				RunCircleCollider.transform.localScale=new Vector3(1,1,1);		
-						    }
+	
         }
 
 
