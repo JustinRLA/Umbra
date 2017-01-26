@@ -30,6 +30,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 	Vector2 target;
 	Vector3 NewPos;
 	GameObject myLight;
+	SightListenerTemplate mySighListernetTemplate;
+	public GameObject mySighListerner;
 
 	// SoundDetection Part
 	int AlertCondition;
@@ -49,6 +51,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 //
 //	// Use this for initialization
 	void Start () {
+		mySighListernetTemplate = mySighListerner.GetComponent<SightListenerTemplate> ();
 		StartCoroutine (MyAttack());
 		//InvokeRepeating ("throwdagger", 1f, attackdelay);
 		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
@@ -66,6 +69,18 @@ public class EnnnemyPatrol : MonoBehaviour {
 //	// Update is called once per frame
 //
 	void Update () {
+		if (mySighListernetTemplate.throwSuspicious == true)
+			StartCoroutine (SuspicousMode ());
+		
+		if (mySighListernetTemplate.throwAlert == true)
+		{
+			
+			StopCoroutine (SuspicousMode ());
+			StartCoroutine (AlerMode ());
+
+		}
+
+
 		if (Alert == true)
 			GetComponent<SpriteRenderer> ().color = new Color (0, 1, 1, 1);
 		if (Suspicious == true)
@@ -185,10 +200,13 @@ public class EnnnemyPatrol : MonoBehaviour {
 		if(InRange==true)
 		{
 			SoundLevel = Vector3.Distance (ThePlayer.transform.position, transform.position);
-			if ((SoundListerner-DistranctionsSoud) / SoundLevel > 4 && Alert == false)
+			if(Alert==false)
+			{
+				if ((SoundListerner-DistranctionsSoud) / SoundLevel > 4 || mySighListernetTemplate.throwAlert==false)
 				StartCoroutine (SuspicousMode ());
+			}	
 			//print ((SoundListerner / SoundLevel));
-			if ((SoundListerner-DistranctionsSoud) / SoundLevel > 8)
+			if ((SoundListerner-DistranctionsSoud) / SoundLevel > 8 || mySighListernetTemplate.throwSuspicious==true)
 			{
 				StopCoroutine (SuspicousMode ());
 				StartCoroutine (AlerMode ());
@@ -344,12 +362,13 @@ public class EnnnemyPatrol : MonoBehaviour {
 	}
 //
 //
-	IEnumerator SuspicousMode()
+	public IEnumerator SuspicousMode()
 	{
+		Suspicious = true; 
+
 		NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 		NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
 
-		Suspicious = true; 
 		//speed = 7;
 		PhantomPlayer.transform.position = MyPlayer.transform.position;
 		CurrentNavPoint = PhamomPoint;
@@ -361,7 +380,9 @@ public class EnnnemyPatrol : MonoBehaviour {
 			flip ();
 	if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
 			flip ();
+		
 		yield return new WaitForSeconds(10f);
+
 		Suspicious=false;
 		if(Suspicious==false)
 		{
@@ -387,19 +408,19 @@ public class EnnnemyPatrol : MonoBehaviour {
 			}
 
 		}
+
+		
+		speed = OriginalSpeed;
 		if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
 			flip ();
 		if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
 			flip ();
-		
-		speed = OriginalSpeed;
-
 		//return null;
 		yield return false;
 	}
 //
 //
-	IEnumerator AlerMode()
+	public IEnumerator AlerMode()
 	{	
 		Suspicious = false;
 		Alert = true;
@@ -412,17 +433,19 @@ public class EnnnemyPatrol : MonoBehaviour {
 		flip ();
 	if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
 			flip ();
+		Suspicious = false;
+		Alert = true;
 
 		print ("How Many");
 		Alert = true;
 		yield return new WaitForSeconds(10f);
 		Alert=false;
-
-		if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
-			flip ();
-		if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-			flip ();
-		speed = OriginalSpeed;
+//		if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+//			flip ();
+//		if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+//			flip ();
+//		
+		//speed = OriginalSpeed;
 	StartCoroutine (SuspicousMode());
 		attackdelay=1;
 		yield return false;

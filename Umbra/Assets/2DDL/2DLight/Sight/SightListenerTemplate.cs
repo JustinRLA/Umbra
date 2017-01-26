@@ -13,6 +13,8 @@ public class SightListenerTemplate : MonoBehaviour {
 	public GameObject EnnemyBase;
 	public bool iSeeYou;
 	private bool check = false;
+	public bool throwSuspicious;
+	public bool throwAlert;
 
 	public void Start()
 	{
@@ -86,12 +88,16 @@ public class SightListenerTemplate : MonoBehaviour {
 			//print()
 			print ("I SawYou");
 			iSeeYou = false;
+			throwSuspicious = false;
+			throwAlert = false;
 		}
 
 
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 			print (go.name + " --> OnExit() event");
 			go.GetComponent<SpriteRenderer>().color = Color.white;
+
+
 		}
 	}
 
@@ -124,9 +130,11 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	IEnumerator InSight()
 	{
-		if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)
-		transform.parent.GetComponent<EnnnemyPatrol>().Suspicious=true;
+		if(throwAlert==false)
+		throwSuspicious = true;
 		yield return new WaitForSeconds (5f);
-		transform.parent.GetComponent<EnnnemyPatrol>().Alert=true;
+		throwAlert = true;
+	
+	
 	}
 }
