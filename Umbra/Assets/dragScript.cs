@@ -28,7 +28,9 @@ public class dragScript : MonoBehaviour {
 		dragging = false;
 		MyOverlay.SetActive (false);
 		//GetComponent<dragScript> ().enabled = false;
+		Destroy(GameObject.Find("OldCube"));
 		Destroy (GetComponent<dragScript> ());
+			gameObject.name=("OldCube");
 	}
 
 	void OnMouseUp()

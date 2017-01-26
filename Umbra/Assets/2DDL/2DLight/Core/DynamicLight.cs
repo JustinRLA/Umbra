@@ -741,6 +741,7 @@
 						renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 						renderer.receiveShadows = false;
 						renderer.useLightProbes = false;
+		//	renderer.lightProbeUsage = light
 						//renderer.sortingLayerName = "Default";
 
 						//--mesh filter--//

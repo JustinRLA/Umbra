@@ -15,8 +15,8 @@ namespace UnityStandardAssets._2D
 		public GameObject RunTrigger;
 		CircleCollider2D RunCircleCollider;
 
-		public GameObject ViewTrigger;
-		CircleCollider2D ViewTriggerCollider;
+		//public GameObject ViewTrigger;
+//		CircleCollider2D ViewTriggerCollider;
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -28,10 +28,12 @@ namespace UnityStandardAssets._2D
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 		public bool Climb;
 
+
         private void Awake()
         {
+			
 			RunCircleCollider = RunTrigger.GetComponent<CircleCollider2D> ();
-			ViewTriggerCollider = ViewTrigger.GetComponent<CircleCollider2D> ();
+		//	ViewTriggerCollider = ViewTrigger.GetComponent<CircleCollider2D> ();
             // Setting up references.
 			m_GroundCheck = transform.Find("GroundCheck");
 			m_CeilingCheck = transform.Find("CeilingCheck");
@@ -39,6 +41,7 @@ namespace UnityStandardAssets._2D
 			m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
         }
+
 
 
         private void FixedUpdate()
@@ -122,19 +125,37 @@ namespace UnityStandardAssets._2D
 			{
 				RunCircleCollider.transform.localScale=new Vector3(1,1,1);		
 			}
-			if(move==0)
-				ViewTriggerCollider.transform.localScale=new Vector3(0.05f,0.05f,0.05f);	
-			if(crouch==true && move!=0)
-				ViewTriggerCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);	
-			if(crouch==false && move!=0)
-				ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
+		//	if(move==0)
+				//ViewTriggerCollider.transform.localScale=new Vector3(0.05f,0.05f,0.05f);	
+			//if(crouch==true && move!=0)
+			//	ViewTriggerCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);	
+		//	if(crouch==false && move!=0)
+			//	ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
 
 
 
 	
         }
 
-
+//		void OnTriggerEnter2D(Collider2D col)
+//		{
+//			if (col.tag == "Ombre")
+//				ViewTrigger.transform.localScale = new Vector3 (0.8f, 1, 1);
+//
+//			if(col.tag=="lumiere")
+//				ViewTrigger.transform.localScale = new Vector3 (8, 1, 1);
+//			
+//		}
+//
+//		void OnTriggerExit2D(Collider2D col)
+//		{
+//			if (col.tag == "Ombre")
+//				ViewTrigger.transform.localScale = new Vector3 (4, 1, 1);
+//
+//			if(col.tag=="lumiere")
+//				ViewTrigger.transform.localScale = new Vector3 (4, 1, 1);
+//
+//		}
         private void Flip()
         {
             // Switch the way the player is labelled as facing.

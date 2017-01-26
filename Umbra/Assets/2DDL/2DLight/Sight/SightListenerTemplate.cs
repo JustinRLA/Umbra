@@ -9,7 +9,7 @@ public class SightListenerTemplate : MonoBehaviour {
 	// ** DECLARE PUBLIC METHODS FOR LISTENERS
 
 	// *** READ FIRST: http://jacksondunstan.com/articles/3335  (UnityEvents vs C# native Events performance)
-	bool detect =false;
+//	bool detect =false;
 	public GameObject EnnemyBase;
 	public bool iSeeYou;
 	private bool check = false;
@@ -55,12 +55,12 @@ public class SightListenerTemplate : MonoBehaviour {
 //			//print()
 //			print ("I SawYousdfmjkfnhjusdbhdfbhsf");
 //		}
-		print(transform.parent.name);
+//		print(transform.parent.name);
 
 		if (go.tag == "Player")
 		{
 			iSeeYou = true;
-
+			if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)
 			StartCoroutine (InSight ());
 			}
 //	if (go.tag == "ennemy")
@@ -70,12 +70,12 @@ public class SightListenerTemplate : MonoBehaviour {
 //		//			print ("I SawYou");
 //		//		
 		if (go.layer == LayerMask.NameToLayer ("Player"))
-			print ("I Saw You");
+			//print ("I Saw You");
 //		if (go.layer == LayerMask.NameToLayer ("ennemy"))
 //			print ("I Saw You");
 
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
-			print (go.name + " --> OnEnter() event");
+		//	print (go.name + " --> OnEnter() event");
 			go.GetComponent<SpriteRenderer>().color = Color.green;
 		}
 	}
@@ -84,9 +84,9 @@ public class SightListenerTemplate : MonoBehaviour {
 		if (go.tag == "Player")
 		{
 			StopCoroutine (InSight ());
-			print(Vector3.Distance(go.transform.position,transform.position));
+//			print(Vector3.Distance(go.transform.position,transform.position));
 			//print()
-			print ("I SawYou");
+		//	print ("I SawYou");
 			iSeeYou = false;
 			throwSuspicious = false;
 			throwAlert = false;
@@ -94,7 +94,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
-			print (go.name + " --> OnExit() event");
+			//print (go.name + " --> OnExit() event");
 			go.GetComponent<SpriteRenderer>().color = Color.white;
 
 
