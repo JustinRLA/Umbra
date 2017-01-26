@@ -25,11 +25,11 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public Transform NavPointThree;
 	public Transform CurrentNavPoint;
 	public GameObject CurrentNavPointGo;
-	float OriginalSpeed;
+	public float OriginalSpeed;
 	Vector2 dir;
 	Vector2 target;
-
 	Vector3 NewPos;
+	GameObject myLight;
 
 	// SoundDetection Part
 	int AlertCondition;
@@ -51,7 +51,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 	void Start () {
 		StartCoroutine (MyAttack());
 		//InvokeRepeating ("throwdagger", 1f, attackdelay);
-
+		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
+	
 		CurrentNavPoint = NavPointOne;
 		CurrentNavPointGo = CurrentNavPoint.gameObject;
 		OriginalSpeed = speed;
@@ -65,7 +66,20 @@ public class EnnnemyPatrol : MonoBehaviour {
 //	// Update is called once per frame
 //
 	void Update () {
-
+		if (Alert == true)
+			GetComponent<SpriteRenderer> ().color = new Color (0, 1, 1, 1);
+		if (Suspicious == true)
+			GetComponent<SpriteRenderer> ().color = new Color (1, 0, 1, 1);
+		if (Alert == false && Suspicious==false)
+			GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1);
+	
+		if (Alert == true)
+		{
+		if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+			flip ();
+		if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+			flip ();
+		}
 //		StartCoroutine(MyAttack());
 		// to make the script work with a transform.right. work pretty much as well as the 
 		//official solution, we can consider this one as well
@@ -126,17 +140,47 @@ public class EnnnemyPatrol : MonoBehaviour {
 			CurrentNavPoint = ThePlayer;
 		}
 
-		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<4)
-		{
+
+//		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<4)
+//		{
+//			speed = 0;
+//		}
+//		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)>=4)
+//		{
+//			speed = OriginalSpeed;
+//		}
+//
+		if(Alert==true) 
+			{
+			if((transform.position.x-CurrentNavPoint.position.x) <5 ||  (transform.position.x-CurrentNavPoint.position.x)>-5)
 			speed = 0;
+			if ( (transform.position.x-CurrentNavPoint.position.x) >5 || (transform.position.x-CurrentNavPoint.position.x)<=-5)
+			speed = OriginalSpeed;
 		}
-		if(Suspicious==true && Vector3.Distance(transform.position, CurrentNavPoint.position)<4)
+
+
+//		if(Alert==true && (transform.position.x-CurrentNavPoint.position.x)>=3 || Alert==true && (transform.position.x-CurrentNavPoint.position.x)>-3)
+//		{
+//			speed = OriginalSpeed;
+//		}
+//
+//		if(Suspicious==true && Vector3.Distance(transform.position, CurrentNavPoint.position)<4)
+//		{
+//			speed = 0;
+//		}
+//
+//		if(Suspicious==true && Vector3.Distance(transform.position, CurrentNavPoint.position)>=4)
+//		{
+//			speed = OriginalSpeed;
+//		}
+
+			if(Suspicious==true)
 		{
+			if( (transform.position.x-CurrentNavPoint.position.x) <5 || (transform.position.x-CurrentNavPoint.position.x) > -5)
 			speed = 0;
-		}
-		if(Suspicious==true && (transform.position.x-CurrentNavPoint.position.x)<4)
-		{
-			speed = 0;
+
+			if((transform.position.x-CurrentNavPoint.position.x)>=5 || (transform.position.x-CurrentNavPoint.position.x) <=-5)
+			speed = OriginalSpeed;
 		}
 		if(InRange==true)
 		{
@@ -213,7 +257,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 			speed = 0;
 				CurrentNavPoint = NavPointTwo;
 				CurrentNavPointGo = NavPoitnTwoGo;
-
+				NavPoitnTwoGo.GetComponent<Collider2D> ().enabled = true;
+				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = false;
 			yield return new WaitForSeconds (waitingTimeNavOne);
 				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = false;
 			//Basically if the targer pos is back and the sprite is not flipped, he will flip
@@ -232,6 +277,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 		if (NavPointIGot==2)
 		{
 			speed = 0;
+				NavPoitnTwoGo.GetComponent<Collider2D> ().enabled = false;
+				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = true;
 
 
 				if(NavPoitnThreeGo==null)
@@ -299,11 +346,14 @@ public class EnnnemyPatrol : MonoBehaviour {
 //
 	IEnumerator SuspicousMode()
 	{
+		NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
+		NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
+
 		Suspicious = true; 
 		//speed = 7;
 		PhantomPlayer.transform.position = MyPlayer.transform.position;
 		CurrentNavPoint = PhamomPoint;
-		CurrentNavPointGo = PhantomPlayer;
+		CurrentNavPointGo = null;
 //		if (transform.position == CurrentNavPoint.position)
 //			speed = 0;
 	
@@ -315,16 +365,25 @@ public class EnnnemyPatrol : MonoBehaviour {
 		Suspicious=false;
 		if(Suspicious==false)
 		{
-			if((Vector3.Distance(CurrentNavPoint.position,NavPointOne.position))>(Vector3.Distance(CurrentNavPoint.position,NavPointTwo.position)))
+			if((Vector3.Distance(transform.position,NavPointOne.position))>(Vector3.Distance(transform.position,NavPointTwo.position)))
 			{
 		CurrentNavPoint = NavPointOne;
 		CurrentNavPointGo = NavPoitnOneGo;
+				NavPointIGot = 2;
+				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
+				NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
+
 			}
-			if((Vector3.Distance(CurrentNavPoint.position,NavPointOne.position))<=(Vector3.Distance(CurrentNavPoint.position,NavPointTwo.position)))
+			if((Vector3.Distance(transform.position,NavPointOne.position))<=(Vector3.Distance(transform.position,NavPointTwo.position)))
 				
 			{
 				CurrentNavPoint = NavPointTwo;
 				CurrentNavPointGo = NavPoitnTwoGo;
+				NavPointIGot = 1;
+				NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
+				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;
+
+
 			}
 
 		}
@@ -342,7 +401,12 @@ public class EnnnemyPatrol : MonoBehaviour {
 //
 	IEnumerator AlerMode()
 	{	
+		Suspicious = false;
 		Alert = true;
+
+		NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
+		NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
+
 
 	if (CurrentNavPoint.position.x-transform.position.x <1 && isFLippe==false)
 		flip ();
@@ -351,7 +415,6 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 		print ("How Many");
 		Alert = true;
-		Suspicious = false;
 		yield return new WaitForSeconds(10f);
 		Alert=false;
 

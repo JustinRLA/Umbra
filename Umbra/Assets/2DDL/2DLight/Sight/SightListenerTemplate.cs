@@ -11,13 +11,14 @@ public class SightListenerTemplate : MonoBehaviour {
 	// *** READ FIRST: http://jacksondunstan.com/articles/3335  (UnityEvents vs C# native Events performance)
 	bool detect =false;
 	public GameObject EnnemyBase;
-
+	public bool iSeeYou;
 	private bool check = false;
 
 	public void Start()
 	{
-		print (gameObject.name);
+		//print (gameObject.name);
 		//EnnemyBase=
+//		print(transform.parent.name);
 
 		if(!check)
 		{
@@ -33,16 +34,32 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	}
 
+	void Update()
+	{
+		if (transform.parent.GetComponent<EnnnemyPatrol> () == null)
+			iSeeYou = false;
+
+
+			
+	}
 
 
 	public void myListener_onEnter(GameObject go){
 		//Filter by Hash
+		//print(go);
+//		if (go.tag == "ennemy")
+//		{
+//			print(Vector3.Distance(go.transform.position,transform.position));
+//			//print()
+//			print ("I SawYousdfmjkfnhjusdbhdfbhsf");
+//		}
+		print(transform.parent.name);
 
 		if (go.tag == "Player")
 		{
-			print(Vector3.Distance(go.transform.position,transform.position));
-			//print()
-			print ("I SawYou");
+			iSeeYou = true;
+
+			StartCoroutine (InSight ());
 			}
 //	if (go.tag == "ennemy")
 //		print ("I SawYou");
@@ -62,6 +79,16 @@ public class SightListenerTemplate : MonoBehaviour {
 	}
 
 	public void myListener_onExit(GameObject go){
+		if (go.tag == "Player")
+		{
+			StopCoroutine (InSight ());
+			print(Vector3.Distance(go.transform.position,transform.position));
+			//print()
+			print ("I SawYou");
+			iSeeYou = false;
+		}
+
+
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 			print (go.name + " --> OnExit() event");
 			go.GetComponent<SpriteRenderer>().color = Color.white;
@@ -95,4 +122,11 @@ public class SightListenerTemplate : MonoBehaviour {
 		print("tt--list");
 	}
 
+	IEnumerator InSight()
+	{
+		if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)
+		transform.parent.GetComponent<EnnnemyPatrol>().Suspicious=true;
+		yield return new WaitForSeconds (5f);
+		transform.parent.GetComponent<EnnnemyPatrol>().Alert=true;
+	}
 }
