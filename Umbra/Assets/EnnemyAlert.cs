@@ -58,7 +58,7 @@ public class EnnemyAlert : MonoBehaviour {
 		IEnumerator SuspicousMode()
 		{
 		Suspicious = true;
-
+		print ("Testing");
 			yield return new WaitForSeconds(10f);
 			Suspicious=false;
 			//return null;
@@ -66,6 +66,8 @@ public class EnnemyAlert : MonoBehaviour {
 		}
 		IEnumerator AlerMode()
 		{
+		print ("Testing");
+
 		Alert = true;
 		Suspicious = false;
 			yield return new WaitForSeconds(10f);

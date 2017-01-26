@@ -37,6 +37,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	public void myListener_onEnter(GameObject go){
 		//Filter by Hash
+
 		if (go.tag == "Player")
 		{
 			print(Vector3.Distance(go.transform.position,transform.position));
