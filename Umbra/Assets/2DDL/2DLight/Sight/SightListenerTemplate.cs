@@ -9,10 +9,16 @@ public class SightListenerTemplate : MonoBehaviour {
 	// ** DECLARE PUBLIC METHODS FOR LISTENERS
 
 	// *** READ FIRST: http://jacksondunstan.com/articles/3335  (UnityEvents vs C# native Events performance)
+	bool detect =false;
+	public GameObject EnnemyBase;
 
 	private bool check = false;
+
 	public void Start()
 	{
+		print (gameObject.name);
+		//EnnemyBase=
+
 		if(!check)
 		{
 			check = true;
@@ -31,6 +37,23 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	public void myListener_onEnter(GameObject go){
 		//Filter by Hash
+		if (go.tag == "Player")
+		{
+			print(Vector3.Distance(go.transform.position,transform.position));
+			//print()
+			print ("I SawYou");
+			}
+//	if (go.tag == "ennemy")
+//		print ("I SawYou");
+//
+//		//		if (go.tag == "Untagged")
+//		//			print ("I SawYou");
+//		//		
+		if (go.layer == LayerMask.NameToLayer ("Player"))
+			print ("I Saw You");
+//		if (go.layer == LayerMask.NameToLayer ("ennemy"))
+//			print ("I Saw You");
+
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 			print (go.name + " --> OnEnter() event");
 			go.GetComponent<SpriteRenderer>().color = Color.green;
@@ -45,8 +68,26 @@ public class SightListenerTemplate : MonoBehaviour {
 	}
 
 	public void myListener_onInside(GameObject go){
-		if(gameObject.GetHashCode() == go.GetHashCode())
-			print (go.name + " --> OnInside() event");
+		
+//		if (go.tag == "Player")
+//			print ("I SawYou");
+//		
+//		if (go.tag == "ennemy")
+//			print ("I SawYou");
+//		
+////		if (go.tag == "Untagged")
+////			print ("I SawYou");
+////		
+//		if (go.layer == LayerMask.NameToLayer ("Player"))
+//			print ("I Saw You");
+//		if (go.layer == LayerMask.NameToLayer ("ennemy"))
+//			print ("I Saw You");
+//		if (go.layer == LayerMask.NameToLayer ("default"))
+//			print ("I Saw You");
+		
+		
+//		if(gameObject.GetHashCode() == go.GetHashCode())
+//			print (go.name + " --> OnInside() event");
 	}
 
 	public void myListener_TT(){

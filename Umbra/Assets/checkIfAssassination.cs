@@ -3,21 +3,39 @@ using System.Collections;
 
 public class checkIfAssassination : MonoBehaviour {
 	
-	public bool canAssassinate;
+	public GameObject AssassinFeedback;
+	bool canAssassinate;
+	public GameObject ActualEnnemy;
+
 
 	// Use this for initialization
 	void Start () {
-	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+		if(canAssassinate==true)
+		{
+			AssassinFeedback.SetActive (true);
+			if (Input.GetKeyDown (KeyCode.E))
+			{
+				print ("I kill you");	
+				ActualEnnemy.GetComponent<EnnnemyPatrol> ().enabled = false;
+				ActualEnnemy.GetComponent<DeadScript> ().enabled = true;
+			}
+		}
+		else
+			AssassinFeedback.SetActive (false);
+		
+
 	}
 	void OnTriggerEnter2D (Collider2D col) {
 		if (col.tag == "ennemy") {
-			if (col.GetComponent<EnnemyAlert> ().Alert == false)
+			if (col.GetComponent<EnnnemyPatrol> ().Alert == false)
+			{
 				canAssassinate = true;
+				ActualEnnemy = col.gameObject;
+			}
 		} else
 			canAssassinate = false;
 	}

@@ -9,17 +9,17 @@ public class MyAssassination : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		myCheckifAssassination=TriggerAssassination.GetComponent<checkIfAssassination> ();	
+//		myCheckifAssassination=TriggerAssassination.GetComponent<checkIfAssassination> ();	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(myCheckifAssassination.canAssassinate==true)
-		{
-			AssassinFeedback.SetActive (true);
-			if (Input.GetKeyDown (KeyCode.E))
-				print ("I kill you");	
-		}
-
-	}
+//		if(myCheckifAssassination.canAssassinate==true)
+//		{
+//			AssassinFeedback.SetActive (true);
+//			if (Input.GetKeyDown (KeyCode.E))
+//				print ("I kill you");	
+//		}
+//
+}
 }
