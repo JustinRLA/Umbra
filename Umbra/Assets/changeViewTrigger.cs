@@ -36,6 +36,6 @@ public class changeViewTrigger : MonoBehaviour {
 
 
 	}
-	u
+
 
 }

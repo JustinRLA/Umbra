@@ -39,13 +39,13 @@ public class DragAndDropScript : MonoBehaviour {
 	}
 	void Update()
 	{
+		
 		//MymousePos = Camera.main.ScreenPointToRay (Input.mousePosition);
 		//Vector2 MymousePos = Camera.main.ScreenToViewportPoint (Input.mousePosition);
-		if (Input.GetKeyDown (KeyCode.LeftControl)&&dragging==false)
+		if (Input.GetKeyDown (KeyCode.Q)&&dragging==false)
 		{		//Vector2 MymousePos = Input.mousePosition;
 			Vector2 MyPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			Cache.SetActive (true);
-
 			Instantiate (myCyube, MyPos,Quaternion.identity);
 		//	CurrentGameObject = myCyube;
 		//	dragging = true;

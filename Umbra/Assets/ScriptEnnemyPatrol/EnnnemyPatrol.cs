@@ -3,18 +3,31 @@ using System.Collections;
 using MonsterLove.StateMachine;
 
 public class EnnnemyPatrol : MonoBehaviour {
+	public float timerState;
+
 	//PatrolPart
 	public GameObject NavPoitnOneGo;
 	public GameObject NavPoitnTwoGo;
 	public GameObject NavPoitnThreeGo;
+
+	public Transform CurrentNavPoint;
+	public GameObject CurrentNavPointGo;
+
+
+	public Transform NavPointOne_Right;
+	public Transform NavPointTwo_Left;
+	public Transform NavPointThree_EvenMoreLeft;
+
+
 	public int waitingTimeNavOne;
 	public int waitingTimeNavTwo;
 	public int waitingTimeNavThree;
-	flipIfNecessary myflipIsNecessary;
+
+
+
 	public bool alertcondition=false;
 	public bool suspiciousCondition=false;
 
-	public float timerState;
 	public GameObject PhantomPlayer;
 	public Transform PhamomPoint;
 
@@ -22,20 +35,19 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 	public int FlipScale;
 	bool isFLippe=false;
+
 	public int NavPointIGot;
+
 	public float speed;
-	public Transform NavPointOne;
-	public Transform NavPointTwo;
-	public Transform NavPointThree;
-	public Transform CurrentNavPoint;
-	public GameObject CurrentNavPointGo;
 	public float OriginalSpeed;
-	Vector2 dir;
+
 	Vector2 target;
 	Vector3 NewPos;
+
 	GameObject myLight;
 	SightListenerTemplate mySighListernetTemplate;
 	public GameObject mySighListerner;
+
 	public float delay = 10f;
 	// SoundDetection Part
 	bool AlertCondition;
@@ -50,39 +62,63 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 	public bool Alert=false;
 	public bool Suspicious=false;
+
 	public	float SoundLevel;
+
 	public int attackdelay=1;
-	StateMachine<States> fsm;
+
+	public Transform RightLimit;
+	public Transform LeftLimit;
+
 //
 //	// Use this for initialization
-	public enum States
-	{
-		Normal,
-		isSuspicious,
-		IsAlert,
 
-	}
+
 	void Start () {
+		gameObject.tag="Dead Ennemy";
+
 		//fsm=StateMachine<States>.Initialize.this;
 		mySighListernetTemplate = mySighListerner.GetComponent<SightListenerTemplate> ();
 		StartCoroutine (MyAttack());
 		//InvokeRepeating ("throwdagger", 1f, attackdelay);
 		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
 	
-		CurrentNavPoint = NavPointOne;
+		CurrentNavPoint = NavPointOne_Right;
 		CurrentNavPointGo = CurrentNavPoint.gameObject;
 		OriginalSpeed = speed;
-		NavPoitnOneGo = NavPointOne.gameObject;
-		NavPoitnTwoGo = NavPointTwo.gameObject;
+		NavPoitnOneGo = NavPointOne_Right.gameObject;
+		NavPoitnTwoGo = NavPointTwo_Left.gameObject;
 
-		if(NavPointThree!=null)
-		NavPoitnThreeGo = NavPointThree.gameObject;
+		if(NavPointThree_EvenMoreLeft!=null)
+			NavPoitnThreeGo = NavPointThree_EvenMoreLeft.gameObject;
 		InvokeRepeating ("flipAlert",5f,1f);
 	}
 //	
 //	// Update is called once per frame
 //
 	void Update () {
+
+		if(Alert==true )
+		{
+			if(ThePlayer.position.x >= LeftLimit.position.x|| CurrentNavPoint.position.x <= RightLimit.position.x)
+				CurrentNavPoint = ThePlayer;
+		
+			if (ThePlayer.position.x < LeftLimit.position.x)
+			CurrentNavPoint = LeftLimit;
+		
+			if (ThePlayer.position.x > RightLimit.position.x)
+			CurrentNavPoint = RightLimit;
+		}
+
+		if(Suspicious==true )
+		{
+	
+			if (CurrentNavPoint.position.x < LeftLimit.position.x)
+				CurrentNavPoint = LeftLimit;
+
+			if (CurrentNavPoint.position.x > RightLimit.position.x)
+				CurrentNavPoint = RightLimit;
+		}
 		if (somethingHappen == false && timerState>-2)
 			timerState -= Time.deltaTime;
 //		if (mySighListernetTemplate.throwSuspicious == true)
@@ -129,8 +165,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 		float direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
 //		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
-		Vector3 movPos = new Vector3 (transform.position.x + ((direction/100)*speed) , transform.position.y,transform.position.z);
-		transform.position = movPos;
+		Vector3 movPos = new Vector3 (transform.position.x + ((direction/100)*speed* Time.deltaTime) , transform.position.y,transform.position.z);
+		transform.position = movPos ;
 
 		// A test for moving on the x pos with the vector 2 dont work so far  
 //		transform.Translate(speed,0,0);
@@ -159,10 +195,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 //		NewPos.x = dir.x * Time.deltaTime;
 //		transform.position = NewPos;
 
-		if(Alert==true)
-		{
-			CurrentNavPoint = ThePlayer;
-		}
+	
 
 
 //		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<4)
@@ -219,6 +252,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			}	
 			else
 				suspiciousCondition=false;
+			}
 			//print ((SoundListerner / SoundLevel));
 			if ((SoundListerner - DistranctionsSoud) / SoundLevel > 8) {
 				//StopCoroutine (SuspicousMode ());
@@ -229,8 +263,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			else
 				AlertCondition = false;
 		}
-		else
-		{
+
 			if(Alert==false && mySighListernetTemplate.throwAlert==false)
 			{
 				if (mySighListernetTemplate.throwSuspicious==true)
@@ -243,6 +276,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			else
 				suspiciousCondition=false;
 			//print ((SoundListerner / SoundLevel));
+
 			if ( mySighListernetTemplate.throwAlert == true) {
 				//StopCoroutine (SuspicousMode ());
 				//alertcondition = true;
@@ -251,8 +285,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 			} 
 			else
 				AlertCondition = false;
-		}
-		}
+		
+
 
 	
 		
@@ -291,19 +325,21 @@ public class EnnnemyPatrol : MonoBehaviour {
 				flip ();
 			if(timerState>0 &&  timerState<1)
 			{
-			if((Vector3.Distance(transform.position,NavPointOne.position))>(Vector3.Distance(transform.position,NavPointTwo.position)))
+				Suspicious = false;
+
+				if((Vector3.Distance(transform.position,NavPointOne_Right.position))>(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
 			{
-				CurrentNavPoint = NavPointOne;
+					CurrentNavPoint = NavPointOne_Right;
 				CurrentNavPointGo = NavPoitnOneGo;
 				NavPointIGot = 2;
 				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 				NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
 
 			}
-			if((Vector3.Distance(transform.position,NavPointOne.position))<=(Vector3.Distance(transform.position,NavPointTwo.position)))
+				if((Vector3.Distance(transform.position,NavPointOne_Right.position))<=(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
 
 			{
-				CurrentNavPoint = NavPointTwo;
+					CurrentNavPoint = NavPointTwo_Left;
 				CurrentNavPointGo = NavPoitnTwoGo;
 				NavPointIGot = 1;
 				NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
@@ -315,8 +351,6 @@ public class EnnnemyPatrol : MonoBehaviour {
 			}
 
 		}
-		if (timerState < 0)
-			Suspicious = false;
 	}
 
 //	void throwdagger()
@@ -378,7 +412,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			if (NavPointIGot==1)
 		{
 			speed = 0;
-				CurrentNavPoint = NavPointTwo;
+				CurrentNavPoint = NavPointTwo_Left;
 				CurrentNavPointGo = NavPoitnTwoGo;
 				NavPoitnTwoGo.GetComponent<Collider2D> ().enabled = true;
 				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = false;
@@ -406,7 +440,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 				if(NavPoitnThreeGo==null)
 			{
-					CurrentNavPoint = NavPointOne;
+					CurrentNavPoint = NavPointOne_Right;
 				CurrentNavPointGo=NavPoitnOneGo;
 				yield return new WaitForSeconds(waitingTimeNavTwo);
 
@@ -419,7 +453,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			if(NavPoitnThreeGo!=null)	
 			{
 				CurrentNavPointGo=NavPoitnThreeGo;
-				CurrentNavPoint = NavPointThree;
+					CurrentNavPoint = NavPointThree_EvenMoreLeft;
 
 
 				yield return new WaitForSeconds(waitingTimeNavTwo);
@@ -439,7 +473,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 		if (NavPointIGot==3)
 		{
 			speed = 0;
-			CurrentNavPoint = NavPointOne;
+				CurrentNavPoint = NavPointOne_Right;
 
 
 			CurrentNavPointGo = NavPoitnOneGo;
@@ -505,19 +539,19 @@ public class EnnnemyPatrol : MonoBehaviour {
 		Suspicious=false;
 		if(Suspicious==false)
 		{
-			if((Vector3.Distance(transform.position,NavPointOne.position))>(Vector3.Distance(transform.position,NavPointTwo.position)))
+			if((Vector3.Distance(transform.position,NavPointOne_Right.position))>(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
 			{
-		CurrentNavPoint = NavPointOne;
+				CurrentNavPoint = NavPointOne_Right;
 		CurrentNavPointGo = NavPoitnOneGo;
 				NavPointIGot = 2;
 				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 				NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
 
 			}
-			if((Vector3.Distance(transform.position,NavPointOne.position))<=(Vector3.Distance(transform.position,NavPointTwo.position)))
+			if((Vector3.Distance(transform.position,NavPointOne_Right.position))<=(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
 				
 			{
-				CurrentNavPoint = NavPointTwo;
+				CurrentNavPoint = NavPointTwo_Left;
 				CurrentNavPointGo = NavPoitnTwoGo;
 				NavPointIGot = 1;
 				NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;

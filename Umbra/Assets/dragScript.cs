@@ -28,7 +28,10 @@ public class dragScript : MonoBehaviour {
 		dragging = false;
 		MyOverlay.SetActive (false);
 		//GetComponent<dragScript> ().enabled = false;
-		Destroy(GameObject.Find("OldCube"));
+		//Destroy(GameObject.Find("OldCube"));
+		transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - 0.01f);
+		Time.timeScale =1f;
+
 		Destroy (GetComponent<dragScript> ());
 			gameObject.name=("OldCube");
 	}
@@ -43,7 +46,8 @@ public class dragScript : MonoBehaviour {
 	}
 	void Update()
 	{
-			
+		Time.timeScale =0f;
+
 		if (dragging)
 		{		distance = Vector3.Distance(transform.position, Camera.main.transform.position);
 
