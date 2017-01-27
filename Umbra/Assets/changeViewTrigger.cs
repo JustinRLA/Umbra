@@ -13,7 +13,7 @@ public class changeViewTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerEnter2D(Collider2D col)
-	{
+	{		
 		if (col.gameObject == PlayerCenter)
 		{
 			if (MyLight == true)
@@ -36,5 +36,6 @@ public class changeViewTrigger : MonoBehaviour {
 
 
 	}
+	u
 
 }

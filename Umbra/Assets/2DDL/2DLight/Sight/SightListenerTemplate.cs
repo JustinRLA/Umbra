@@ -60,7 +60,7 @@ public class SightListenerTemplate : MonoBehaviour {
 		if (go.tag == "Player")
 		{
 			iSeeYou = true;
-			if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)
+			//if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)
 			StartCoroutine (InSight ());
 			}
 //	if (go.tag == "ennemy")
@@ -134,7 +134,8 @@ public class SightListenerTemplate : MonoBehaviour {
 		throwSuspicious = true;
 		yield return new WaitForSeconds (5f);
 		throwAlert = true;
-	
+		throwSuspicious = false;
+
 	
 	}
 }
