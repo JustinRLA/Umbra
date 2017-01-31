@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
 
     public class PlatformerCharacter2D : MonoBehaviour
@@ -26,6 +27,7 @@ using UnityEngine;
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 		public bool Climb;
+	bool canBeSilenced;
 
 
         private void Awake()
@@ -40,6 +42,25 @@ using UnityEngine;
 			m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
         }
+
+	public void StartCorou()
+	{
+		StartCoroutine (FastPlayer ());
+
+	}
+
+	IEnumerator FastPlayer()
+	{
+
+		m_MaxSpeed = 12f;
+		m_JumpForce = 600f;   
+		canBeSilenced = true;
+		yield return new WaitForSeconds (10f);
+		canBeSilenced = false;
+		m_MaxSpeed = 10f;
+		m_JumpForce = 400f;   
+
+	}
 
 
 
@@ -115,7 +136,7 @@ using UnityEngine;
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 			}
 
-			if(move==0||crouch==true||m_Grounded==false)
+		if(move==0||crouch==true||m_Grounded==false||canBeSilenced==true)
 			{
 				RunCircleCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);	
 

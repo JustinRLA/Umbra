@@ -13,6 +13,8 @@ public class RuneManagerScript : MonoBehaviour
 	public float timerEnvironment;
 	public float timerUmbra;
 	LureScript myLureScript;
+	public GameObject ThePlayer;
+	PlatformerCharacter2D myPlatformCharacter;
 
 	public int UmbraRune;
 	public int EnvironmentRune;
@@ -25,6 +27,7 @@ public class RuneManagerScript : MonoBehaviour
 		Cursor.visible = false;
 		myBlindEnnemyRune = GetComponent<BlindEnnemyRune> ();
 		myLureScript=GetComponent<LureScript>();
+		myPlatformCharacter = ThePlayer.GetComponent<PlatformerCharacter2D> ();
 	}
 	
 	// Update is called once per frame
@@ -43,15 +46,15 @@ public class RuneManagerScript : MonoBehaviour
 
 		if(Input.GetKeyDown (KeyCode.E))
 		{
-//			if(TypeRuneUsed==1)
-//			{
-//				if(UmbraRune==1)
-//
+			if(TypeRuneUsed==1)
+			{
+				if (UmbraRune == 1)
+					myPlatformCharacter.StartCorou ();
 //				if(UmbraRune==2)
 //
 //
 //
-//			}
+			}
 //
 			if(TypeRuneUsed==2)
 			{
