@@ -39,6 +39,7 @@ public class EnnemyIsBlind : MonoBehaviour {
 		myBlindEnmnemyRune.CanClick = false;
 		MyLight.SetActive(false);
 		Cursor.visible = false;
+		Time.timeScale = 1f;
 		yield return new WaitForSeconds (10f);
 		MyLight.SetActive (true);
 	}

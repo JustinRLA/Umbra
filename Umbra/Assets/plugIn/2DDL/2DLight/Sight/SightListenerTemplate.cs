@@ -16,9 +16,14 @@ public class SightListenerTemplate : MonoBehaviour {
 	public bool throwSuspicious;
 	public bool throwAlert;
 	public GameObject mySight;
+	public GameObject RuneManager;
+	LureScript myLureScript;
+	public bool IsawTheLure=false;
+	public GameObject LurePlayer;
 
 	public void Start()
 	{
+		myLureScript = RuneManager.GetComponent<LureScript> ();
 		//print (gameObject.name);
 		//EnnemyBase=
 //		print(transform.parent.name);
@@ -39,7 +44,9 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	void Update()
 	{
-
+		if (myLureScript.Active== false)
+			IsawTheLure = false;
+		
 		if(mySight==null)
 		{
 			iSeeYou = false;
@@ -65,10 +72,25 @@ public class SightListenerTemplate : MonoBehaviour {
 //			//print()
 //			print ("I SawYousdfmjkfnhjusdbhdfbhsf");
 //		}
+		//&& EnnemyBase.GetComponent<EnnnemyPatrol> ().Alert == false
 //		print(transform.parent.name);
 
+		if(throwAlert==false || throwSuspicious==false)
+		{
+			if (go.tag == "LurePlayer" ) {
+
+
+				print ("SAWWWWWWWWWWWWWWWWWWWWWWW");
+				IsawTheLure = true;
+				EnnemyBase.GetComponent<EnnnemyPatrol> ().Suspicious = true;
+			} 
+//			else
+//				IsawTheLure = false;
+
+		}
 		if (go.tag == "Player")
 		{
+			IsawTheLure=false;
 			iSeeYou = true;
 			//if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)
 			StartCoroutine (InSight ());

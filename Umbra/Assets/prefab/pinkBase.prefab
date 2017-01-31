@@ -21,8 +21,7 @@ GameObject:
   - component: {fileID: 4000012924713374}
   - component: {fileID: 61000013841589210}
   - component: {fileID: 114000013637328812}
-  - component: {fileID: 114274638534724912}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: pinkBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +39,7 @@ GameObject:
   - component: {fileID: 212862785220128472}
   - component: {fileID: 95418810094366438}
   - component: {fileID: 114937511977005682}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: Ombre (2)
   m_TagString: Ombre
   m_Icon: {fileID: 0}
@@ -54,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011999828746}
   m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 29.862673, y: 7.3124447, z: 0.22934246}
+  m_LocalPosition: {x: 14.2, y: 3.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4586285132319244}
@@ -85,9 +84,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.03}
+  m_Offset: {x: -1.19, y: -1.07}
   serializedVersion: 2
-  m_Size: {x: 1.24, y: 1.16}
+  m_Size: {x: 3.95, y: 3.76}
 --- !u!95 &95418810094366438
 Animator:
   serializedVersion: 3
@@ -111,26 +110,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011999828746}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 197ae11a493b9964d8a0cab591eaa63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dragging: 1
---- !u!114 &114274638534724912
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011999828746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c2397c043a2b2548b00b92160f52ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerCenter: {fileID: 0}
-  ViewTriger: {fileID: 0}
-  MyLight: 0
+  RuneMangerMy: {fileID: 0}
 --- !u!114 &114937511977005682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,7 +142,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 553dc1370e05a3d45b361fe9c550db19, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

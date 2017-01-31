@@ -11,6 +11,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 	public Transform CurrentNavPoint;
 	public GameObject CurrentNavPointGo;
+	public Transform LurePlayer;
 
 
 	public Transform NavPointOne_Right;
@@ -67,12 +68,17 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 	public Transform RightLimit;
 	public Transform LeftLimit;
+	public GameObject RuneManager;
+	RuneManagerScript myRunemanagerScript;
+	LureScript myLureScript;
 
 //
 //	// Use this for initialization
 
 
 	void Start () {
+		myLureScript = RuneManager.GetComponent<LureScript> ();
+		myRunemanagerScript = RuneManager.GetComponent<RuneManagerScript> ();
 		gameObject.tag="Dead Ennemy";
 
 		//fsm=StateMachine<States>.Initialize.this;
@@ -96,8 +102,15 @@ public class EnnnemyPatrol : MonoBehaviour {
 //
 	void Update () {
 
+
+
 		if(Alert==true )
 		{
+			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+				flip ();
+			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+				flip ();
+			
 			if(ThePlayer.position.x >= LeftLimit.position.x|| CurrentNavPoint.position.x <= RightLimit.position.x)
 				CurrentNavPoint = ThePlayer;
 		
@@ -106,16 +119,41 @@ public class EnnnemyPatrol : MonoBehaviour {
 		
 			if (ThePlayer.position.x > RightLimit.position.x)
 			CurrentNavPoint = RightLimit;
+		
 		}
 
 		if(Suspicious==true )
 		{
-	
+//					if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+//						flip ();
+//					if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+//						flip ();
+
+
+			if(mySighListernetTemplate.IsawTheLure==true)
+			{
+				if(LurePlayer.position.x >= LeftLimit.position.x|| LurePlayer.position.x <= RightLimit.position.x)
+					CurrentNavPoint = LurePlayer;
+
+				if (LurePlayer.position.x < LeftLimit.position.x)
+					CurrentNavPoint = LeftLimit;
+
+				if (LurePlayer.position.x > RightLimit.position.x)
+					CurrentNavPoint = RightLimit;
+
+				timerState = myLureScript.timer;
+			}
+			else
+			{
+				if(PhamomPoint.position.x >= LeftLimit.position.x|| PhamomPoint.position.x <= RightLimit.position.x)
+					CurrentNavPoint = PhamomPoint;
+				
 			if (CurrentNavPoint.position.x < LeftLimit.position.x)
 				CurrentNavPoint = LeftLimit;
 
 			if (CurrentNavPoint.position.x > RightLimit.position.x)
 				CurrentNavPoint = RightLimit;
+		}
 		}
 		if (somethingHappen == false && timerState>-2)
 			timerState -= Time.deltaTime;
@@ -129,7 +167,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 //			StartCoroutine (AlerMode ());
 //
 //		}
-
+	
 
 		if (Alert == true)
 			GetComponent<SpriteRenderer> ().color = new Color (0, 1, 1, 1);
@@ -310,8 +348,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-			CurrentNavPoint = PhamomPoint;
-			CurrentNavPointGo = null;
+//			CurrentNavPoint = PhamomPoint;
+//			CurrentNavPointGo = null;
 
 			if (CurrentNavPoint.position.x-transform.position.x <1 && isFLippe==false)
 				flip ();
@@ -321,8 +359,15 @@ public class EnnnemyPatrol : MonoBehaviour {
 	}
 		if(timerState>-1 &&  timerState<0)
 		{
+
+
 			Suspicious = false;
+			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+				flip ();
+			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+				flip ();
 			
+			speed = OriginalSpeed;
 			if((Vector3.Distance(transform.position,NavPointOne_Right.position))>(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
 			{
 				CurrentNavPoint = NavPointOne_Right;
@@ -366,6 +411,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			}	
 		}	
 	}	
+
 	void OnTriggerEnter2D (Collider2D col) {
 		//detect soundCollider
 		if (col.tag == "suspiciouis Sound")

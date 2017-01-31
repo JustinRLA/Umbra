@@ -7,7 +7,12 @@ public class RuneManagerScript : MonoBehaviour
 
 	ShadowInstantiate myShadowInstantiate;
 	BlindEnnemyRune myBlindEnnemyRune;
+	MarkEnnemy myMarkEnnemy;
 
+	public float timerAssassination;
+	public float timerEnvironment;
+	public float timerUmbra;
+	LureScript myLureScript;
 
 	public int UmbraRune;
 	public int EnvironmentRune;
@@ -15,10 +20,11 @@ public class RuneManagerScript : MonoBehaviour
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
+		myMarkEnnemy = GetComponent<MarkEnnemy> ();
 		myShadowInstantiate = GetComponent<ShadowInstantiate> ();
 		Cursor.visible = false;
 		myBlindEnnemyRune = GetComponent<BlindEnnemyRune> ();
-
+		myLureScript=GetComponent<LureScript>();
 	}
 	
 	// Update is called once per frame
@@ -59,8 +65,11 @@ public class RuneManagerScript : MonoBehaviour
 			{
 				if (AssassinationRune == 1)
 					myBlindEnnemyRune.EnnemyBlinded ();
-//				if(AssassinationRune==2)
-//
+				if (AssassinationRune == 2)
+					myLureScript.StartLure ();
+				if (AssassinationRune == 3)
+					myMarkEnnemy.EnemyMarkedStart ();
+
 			}
 //
 //
