@@ -64,21 +64,10 @@ public class SightListenerTemplate : MonoBehaviour {
 
 
 	public void myListener_onEnter(GameObject go){
-		//Filter by Hash
-		//print(go);
-//		if (go.tag == "ennemy")
-//		{
-//			print(Vector3.Distance(go.transform.position,transform.position));
-//			//print()
-//			print ("I SawYousdfmjkfnhjusdbhdfbhsf");
-//		}
-		//&& EnnemyBase.GetComponent<EnnnemyPatrol> ().Alert == false
-//		print(transform.parent.name);
-
+		
 		if(throwAlert==false || throwSuspicious==false)
 		{
 			if (go.tag == "LurePlayer" ) {
-
 
 				print ("SAWWWWWWWWWWWWWWWWWWWWWWW");
 				IsawTheLure = true;
@@ -88,29 +77,33 @@ public class SightListenerTemplate : MonoBehaviour {
 //				IsawTheLure = false;
 
 		}
+
+
+
 		if (go.tag == "Player")
 		{
+			print ("One");
 			IsawTheLure=false;
 			iSeeYou = true;
 			//if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)
 			StartCoroutine (InSight ());
-			}
+		}
+		else
+			StopCoroutine (InSight ());
+		
+
 //	if (go.tag == "ennemy")
 //		print ("I SawYou");
 //
 //		//		if (go.tag == "Untagged")
 //		//			print ("I SawYou");
-//		//		
-		if (go.layer == LayerMask.NameToLayer ("Player"))
-			//print ("I Saw You");
+
 //		if (go.layer == LayerMask.NameToLayer ("ennemy"))
 //			print ("I Saw You");
 
-		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 		//	print (go.name + " --> OnEnter() event");
-			go.GetComponent<SpriteRenderer>().color = Color.green;
 		}
-	}
+	
 
 	public void myListener_onExit(GameObject go){
 		if (go.tag == "Player")
@@ -165,8 +158,12 @@ public class SightListenerTemplate : MonoBehaviour {
 		if(throwAlert==false)
 		throwSuspicious = true;
 		yield return new WaitForSeconds (5f);
+		if(iSeeYou==true)
 		throwAlert = true;
 		throwSuspicious = false;
+		print ("throoooooooooooo");
+		yield return new WaitForSeconds (1f);
+		throwAlert = false;
 
 	
 	}

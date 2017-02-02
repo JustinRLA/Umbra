@@ -79,7 +79,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 	void Start () {
 		myLureScript = RuneManager.GetComponent<LureScript> ();
 		myRunemanagerScript = RuneManager.GetComponent<RuneManagerScript> ();
-		gameObject.tag="Dead Ennemy";
+		gameObject.tag="ennemy";
 
 		//fsm=StateMachine<States>.Initialize.this;
 		mySighListernetTemplate = mySighListerner.GetComponent<SightListenerTemplate> ();
@@ -362,11 +362,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 
 			Suspicious = false;
-			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
-				flip ();
-			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-				flip ();
-			
+
 			speed = OriginalSpeed;
 			if((Vector3.Distance(transform.position,NavPointOne_Right.position))>(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
 			{
@@ -388,6 +384,11 @@ public class EnnnemyPatrol : MonoBehaviour {
 				
 				
 			}
+			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+				flip ();
+			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+				flip ();
+			
 			
 		}
 		

@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class DragShadow : MonoBehaviour {
 	//GameObject TheRealSPrite;
-
+	Ray ray;
 	public bool dragging = true;
 	private float distance;
 	GameObject MyOverlay;
 	public GameObject RuneMangerMy;
-
+	Vector2 rayPoint;
 
 	//	Vector2 MymousePos;
 
@@ -30,8 +30,8 @@ public class DragShadow : MonoBehaviour {
 		//GetComponent<dragScript> ().enabled = false;
 		//Destroy(GameObject.Find("OldCube"));
 		transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - 0.01f);
-		Time.timeScale =1f;
 		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
+		Time.timeScale =1f;
 		Destroy (GetComponent<DragShadow> ());
 			gameObject.name=("OldCube");
 	}
@@ -47,20 +47,18 @@ public class DragShadow : MonoBehaviour {
 	}
 	void Update()
 	{
-		Time.timeScale =0.1f;
+	//	Time.timeScale =0.1f;
 
 		if (dragging)
 		{		distance = Vector3.Distance(transform.position, Camera.main.transform.position);
 
 
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			//Vector3 rayPoint = ray.GetPoint(distance);
-			Vector2 rayPoint = ray.GetPoint(distance);
+			rayPoint = ray.GetPoint(distance);
 
 			transform.position = rayPoint;
 		}
 	}
-
-
 
 }

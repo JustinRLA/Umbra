@@ -4,7 +4,7 @@ using System.Collections;
 public class checkIfAssassination : MonoBehaviour {
 	
 	public GameObject AssassinFeedback;
-	bool canAssassinate;
+	public bool canAssassinate;
 	public GameObject ActualEnnemy;
 
 
@@ -17,7 +17,7 @@ public class checkIfAssassination : MonoBehaviour {
 		if(canAssassinate==true)
 		{
 			AssassinFeedback.SetActive (true);
-			if (Input.GetKeyDown (KeyCode.E))
+			if (Input.GetKeyDown (KeyCode.R))
 			{
 				print ("I kill you");	
 				ActualEnnemy.GetComponent<EnnnemyPatrol> ().enabled = false;
@@ -30,7 +30,9 @@ public class checkIfAssassination : MonoBehaviour {
 
 	}
 	void OnTriggerEnter2D (Collider2D col) {
+
 		if (col.tag == "ennemy") {
+			print ("See");
 			if (col.GetComponent<EnnnemyPatrol> ().Alert == false)
 			{
 				canAssassinate = true;

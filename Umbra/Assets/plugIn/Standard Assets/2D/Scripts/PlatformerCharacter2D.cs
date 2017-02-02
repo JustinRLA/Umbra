@@ -49,16 +49,37 @@ using System.Collections;
 
 	}
 
+	public void StartShadowCorou()
+	{
+		StartCoroutine (ShadowPlayer ());
+
+	}
+
+	IEnumerator ShadowPlayer()
+	{
+		gameObject.layer = 7;
+		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 0.5f);
+		yield return new WaitForSeconds (10f);
+		gameObject.layer = 8;
+		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1f);
+
+
+	}
+
+
 	IEnumerator FastPlayer()
 	{
 
 		m_MaxSpeed = 12f;
 		m_JumpForce = 600f;   
+		GetComponent<SpriteRenderer> ().color = new Color (1, 0, 1, 1f);
 		canBeSilenced = true;
 		yield return new WaitForSeconds (10f);
 		canBeSilenced = false;
 		m_MaxSpeed = 10f;
 		m_JumpForce = 400f;   
+		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1f);
+
 
 	}
 

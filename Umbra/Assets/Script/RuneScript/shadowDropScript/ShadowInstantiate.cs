@@ -41,6 +41,8 @@ public class ShadowInstantiate : MonoBehaviour {
 
 	public void InstantiateTheShadow()
 	{
+
+		Time.timeScale = 1f;
 		Cache.SetActive (true);
 		MyPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		Instantiate (myCyube, MyPos,Quaternion.identity);

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class RuneManagerScript : MonoBehaviour 
 {
-
 	ShadowInstantiate myShadowInstantiate;
 	BlindEnnemyRune myBlindEnnemyRune;
 	MarkEnnemy myMarkEnnemy;
+	SolidifcationEnabled mySolidicationEnabled;
+	LineRendererTest myLineRenderer;
 
 	public float timerAssassination;
 	public float timerEnvironment;
@@ -16,12 +17,14 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject ThePlayer;
 	PlatformerCharacter2D myPlatformCharacter;
 
-	public int UmbraRune;
-	public int EnvironmentRune;
-	public int AssassinationRune;
+	public int DefFune;
+	public int OffenseRune;
+	public int TacticRune;
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
+		myLineRenderer = GetComponent<LineRendererTest> ();
+		mySolidicationEnabled = GetComponent<SolidifcationEnabled> ();
 		myMarkEnnemy = GetComponent<MarkEnnemy> ();
 		myShadowInstantiate = GetComponent<ShadowInstantiate> ();
 		Cursor.visible = false;
@@ -48,29 +51,30 @@ public class RuneManagerScript : MonoBehaviour
 		{
 			if(TypeRuneUsed==1)
 			{
-				if (UmbraRune == 1)
-					myPlatformCharacter.StartCorou ();
-//				if(UmbraRune==2)
-//
-//
-//
+				if (DefFune == 1)
+					myShadowInstantiate.InstantiateTheShadow();
+				
+				if (DefFune == 1)
+				myLureScript.StartLure ();
 			}
 //
 			if(TypeRuneUsed==2)
 			{
-				if(EnvironmentRune==1)
-					myShadowInstantiate.InstantiateTheShadow();
-//				if(EnvironmentRune==2)
-//
+				if (TacticRune == 1)
+					myLineRenderer.IsActivated ();
+				if (TacticRune == 2)
+					mySolidicationEnabled.SolidificationStart ();
+				
+
+						
+						//
 //
 			}
 			if(TypeRuneUsed==3)
 			{
-				if (AssassinationRune == 1)
-					myBlindEnnemyRune.EnnemyBlinded ();
-				if (AssassinationRune == 2)
-					myLureScript.StartLure ();
-				if (AssassinationRune == 3)
+				if (OffenseRune == 1)
+					print ("Piege");
+				if (OffenseRune == 2)
 					myMarkEnnemy.EnemyMarkedStart ();
 
 			}

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4000012924713374}
   - component: {fileID: 61000013841589210}
   - component: {fileID: 114000013637328812}
+  - component: {fileID: 114811195832286468}
   m_Layer: 10
   m_Name: pinkBase
   m_TagString: Untagged
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011999828746}
   m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 14.2, y: 3.45, z: 0}
+  m_LocalPosition: {x: 14.2, y: 2.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4586285132319244}
@@ -110,13 +111,25 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011999828746}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 197ae11a493b9964d8a0cab591eaa63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dragging: 1
   RuneMangerMy: {fileID: 0}
+--- !u!114 &114811195832286468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011999828746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640c2a6613656924aa90cf92de4da2fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RuneManager: {fileID: 0}
 --- !u!114 &114937511977005682
 MonoBehaviour:
   m_ObjectHideFlags: 1
