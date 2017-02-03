@@ -17,7 +17,7 @@ public class MarkEnnemy : MonoBehaviour {
 	}
 	public void EnemyMarkedStart()
 	{
-		print ("Done");
+		//print ("Done");
 		Cache.SetActive (true);
 		Cursor.visible = true;
 		Time.timeScale =0.1f;

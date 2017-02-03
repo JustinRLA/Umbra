@@ -10,13 +10,16 @@ public class LureScript : MonoBehaviour {
 	public GameObject ThePlayerShadow;
 		public bool EnnemyDistracted;
 		public GameObject RuneManager;
+	RuneManagerScript myRuneManagerScript;
+
 	public bool Active=false;
 	public float timer;
 
 
 	// Use this for initialization
 	void Start () {
-		
+		myRuneManagerScript = GetComponent<RuneManagerScript> ();
+
 	}
 	
 	// Update is called once per frame
@@ -29,9 +32,10 @@ public class LureScript : MonoBehaviour {
 		//	{
 		Active=true;
 
+
 			ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = true;
 			ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = true;
-				RuneManager.GetComponent<RuneManagerScript> ().timerUmbra = 30;
+		RuneManager.GetComponent<RuneManagerScript> ().timerTactic = 30;
 			ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = false;
 			ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = false;
 			ThePlayerShadow.SetActive (true);
@@ -40,6 +44,7 @@ public class LureScript : MonoBehaviour {
 		}
 		IEnumerator DistractEnnemy()
 		{
+		
 			EnnemyDistracted = true;
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = false;
 		ThePlayer.GetComponent<Rigidbody2D> ().isKinematic = true;
@@ -51,6 +56,7 @@ public class LureScript : MonoBehaviour {
 		ThePlayerShadow.transform.parent = null;
 
 			yield return new WaitForSeconds(5f);
+		myRuneManagerScript.timerDef = myRuneManagerScript.ActualDef;
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = true;
 
 		ThePlayer.GetComponent<Collider2D> ().enabled = true;

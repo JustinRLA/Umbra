@@ -6,16 +6,17 @@ public class EnnemyMarked : MonoBehaviour {
 	MarkEnnemy myMarkEnmnemyRune;
 	public GameObject RuneManager;
 	public GameObject VireLight;
-
+	RuneManagerScript myRuneManager;
 	// Use this for initialization
 	void Start () {
 		myMarkEnmnemyRune = RuneManager.GetComponent<MarkEnnemy> ();
-
+		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
-
+		if (Input.GetMouseButtonDown (1) && myMarkEnmnemyRune.CanBeClick == true)
+			CancelEvent ();
 	}
 
 	void OnMouseEnter()
@@ -29,11 +30,25 @@ public class EnnemyMarked : MonoBehaviour {
 	void OnMouseDown()
 	{
 		if (myMarkEnmnemyRune.CanBeClick == true)
+		{
 			StartCoroutine (MarkEvent());
+		myRuneManager.RuneModeEnabled = false;
+			myRuneManager.timerOffense = myRuneManager.ActualOffense;
+		}
+
+
 	}
+	void CancelEvent()
+	{
+		Cursor.visible = false;
+		Time.timeScale = 1f;
+
+	}
+
 
 	IEnumerator MarkEvent()
 	{
+		myRuneManager.timerOffense = myRuneManager.ActualOffense;
 		VireLight.SetActive (true);
 		gameObject.layer = 13;
 		myMarkEnmnemyRune.CanBeClick = false;

@@ -18,6 +18,7 @@ public class LineRendererTest : MonoBehaviour {
 	RaycastHit2D hit;
 	public bool goThrougt=false;
 	public float timeDIstance;
+	RuneManagerScript myRuneManagerScript;
 
 	Material TestMat;
 	Color ColorBadStart= Color.red;
@@ -27,6 +28,7 @@ public class LineRendererTest : MonoBehaviour {
 	public	bool touchedBadThing=false;
 	void Start()
 	{
+		myRuneManagerScript = GetComponent<RuneManagerScript> ();
 		myPlayer = GameObject.Find("2DCharacter");
 		PlayerMy = myPlayer.transform;
 
@@ -38,6 +40,8 @@ public class LineRendererTest : MonoBehaviour {
 
 		void Update () 
 	{
+		if(	ActivateThisShit == true)
+			{
 		gothrought ();
 
 		myRaycast = Physics2D.Linecast (mousePos, PlayerPos);
@@ -136,6 +140,7 @@ public class LineRendererTest : MonoBehaviour {
 		else
 			TouchGood = false;
 		}
+		}
 			//line.GetComponent<Renderer> ().material.color = Color.red;
 			//line.SetColors(Color.red, Color.red);
 		//}
@@ -175,11 +180,14 @@ public class LineRendererTest : MonoBehaviour {
 		// Following method adds collider to created line
 	IEnumerator StopGoThrought()
 	{
+		TouchGood = false;
+		myRuneManagerScript.timerTactic = myRuneManagerScript.ActualTactic;
+		Time.timeScale = 1f;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = true;
 		yield return new WaitForSeconds (timeDIstance / 15);
 		goThrougt = false;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
-
+		GetComponent<LineRendererTest> ().enabled = false;
 	}
 
 
@@ -191,26 +199,26 @@ public class LineRendererTest : MonoBehaviour {
 
 	}
 
-		private void addColliderToLine()
-		{
-		BoxCollider2D col = gameObject.AddComponent<BoxCollider2D> ();
-	//BoxCollider2D col = new GameObject("Collider").AddComponent<BoxCollider2D> ();
-		col.GetComponent<Collider2D> ().isTrigger = true;
-	
-			col.transform.parent = line.transform; // Collider is added as child object of line
-			float lineLength = Vector3.Distance (startPos, endPos); // length of line
-			col.size = new Vector3 (lineLength, 0.1f, 1f); // size of collider is set where X is length of line, Y is width of line, Z will be set as per requirement
-			Vector3 midPoint = (startPos + endPos)/2;
-			col.transform.position = midPoint; // setting position of collider object
-			// Following lines calculate the angle between startPos and endPos
-			float angle = (Mathf.Abs (startPos.y - endPos.y) / Mathf.Abs (startPos.x - endPos.x));
-			if((startPos.y<endPos.y && startPos.x>endPos.x) || (endPos.y<startPos.y && endPos.x>startPos.x))
-			{
-				angle*=-1;
-			}
-			angle = Mathf.Rad2Deg * Mathf.Atan (angle);
-			col.transform.Rotate (0, 0, angle);
-		}
+//		private void addColliderToLine()
+//		{
+//		BoxCollider2D col = gameObject.AddComponent<BoxCollider2D> ();
+//	//BoxCollider2D col = new GameObject("Collider").AddComponent<BoxCollider2D> ();
+//		col.GetComponent<Collider2D> ().isTrigger = true;
+//	
+//			col.transform.parent = line.transform; // Collider is added as child object of line
+//			float lineLength = Vector3.Distance (startPos, endPos); // length of line
+//			col.size = new Vector3 (lineLength, 0.1f, 1f); // size of collider is set where X is length of line, Y is width of line, Z will be set as per requirement
+//			Vector3 midPoint = (startPos + endPos)/2;
+//			col.transform.position = midPoint; // setting position of collider object
+//			// Following lines calculate the angle between startPos and endPos
+//			float angle = (Mathf.Abs (startPos.y - endPos.y) / Mathf.Abs (startPos.x - endPos.x));
+//			if((startPos.y<endPos.y && startPos.x>endPos.x) || (endPos.y<startPos.y && endPos.x>startPos.x))
+//			{
+//				angle*=-1;
+//			}
+//			angle = Mathf.Rad2Deg * Mathf.Atan (angle);
+//			col.transform.Rotate (0, 0, angle);
+//		}
 	void OnTriggerEnter2D(Collider2D col)
 	{
 

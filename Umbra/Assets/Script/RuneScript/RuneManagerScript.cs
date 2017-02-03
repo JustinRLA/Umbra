@@ -9,10 +9,16 @@ public class RuneManagerScript : MonoBehaviour
 	MarkEnnemy myMarkEnnemy;
 	SolidifcationEnabled mySolidicationEnabled;
 	LineRendererTest myLineRenderer;
+	EnableTrapMode myenabledTrapMode;
+	public bool RuneModeEnabled;
+	public float timerTactic; 
+	public float timerOffense;
+	public float timerDef;
 
-	public float timerAssassination;
-	public float timerEnvironment;
-	public float timerUmbra;
+	public float ActualDef;
+	public float ActualOffense;
+	public float ActualTactic;
+
 	LureScript myLureScript;
 	public GameObject ThePlayer;
 	PlatformerCharacter2D myPlatformCharacter;
@@ -31,10 +37,27 @@ public class RuneManagerScript : MonoBehaviour
 		myBlindEnnemyRune = GetComponent<BlindEnnemyRune> ();
 		myLureScript=GetComponent<LureScript>();
 		myPlatformCharacter = ThePlayer.GetComponent<PlatformerCharacter2D> ();
+		myenabledTrapMode = GetComponent<EnableTrapMode> ();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if(timerDef>0)
+		{
+			timerDef -= Time.deltaTime;
+		}
+		if(timerTactic>0)
+		{
+			timerDef -= Time.deltaTime;
+		}
+		if(timerOffense>0)
+		{
+			timerDef -= Time.deltaTime;
+		}
+		if (Input.GetKeyDown (KeyCode.E))
+			RuneModeEnabled = true;
+
 
 		// RuneUmbra
 		if (Input.GetKeyDown (KeyCode.Alpha1))
@@ -47,36 +70,52 @@ public class RuneManagerScript : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Alpha3))
 			TypeRuneUsed = 3;
 
-		if(Input.GetKeyDown (KeyCode.E))
+		if(RuneModeEnabled==true)
 		{
-			if(TypeRuneUsed==1)
+			if(Input.GetKeyDown (KeyCode.Alpha1))
 			{
-				if (DefFune == 1)
+				if (DefFune == 1 && timerDef >= 0.1f)
+				{
+					myShadowInstantiate.enabled = true;
 					myShadowInstantiate.InstantiateTheShadow();
+				}
 				
-				if (DefFune == 1)
-				myLureScript.StartLure ();
-			}
-//
-			if(TypeRuneUsed==2)
-			{
-				if (TacticRune == 1)
-					myLineRenderer.IsActivated ();
-				if (TacticRune == 2)
-					mySolidicationEnabled.SolidificationStart ();
-				
+				if (DefFune == 1 && timerDef >= 0.1f)
+				{
+					myLureScript.enabled = true;
+					myLureScript.StartLure ();
+				}
 
-						
-						//
-//
 			}
-			if(TypeRuneUsed==3)
+//
+			if(Input.GetKeyDown (KeyCode.Alpha2))
 			{
-				if (OffenseRune == 1)
-					print ("Piege");
-				if (OffenseRune == 2)
+				if (TacticRune == 1 && timerTactic >=0.1f)
+				{
+					myLineRenderer.enabled =true;
+					myLineRenderer.IsActivated ();
+				}
+				if (TacticRune == 2 && timerTactic >=0.1f)
+				{
+					mySolidicationEnabled.enabled = true;
+					mySolidicationEnabled.SolidificationStart ();
+				}
+
+
+			}
+			if(Input.GetKeyDown (KeyCode.Alpha3))
+			{
+				if (OffenseRune == 1 && timerOffense >=0.1f)
+				{
+					myenabledTrapMode.enabled = true;
+					myenabledTrapMode.EnabledTrapMode ();
+				}	
+				if (OffenseRune == 2  && timerOffense >=0.1f)
+				{
+					myMarkEnnemy.enabled = true;
 					myMarkEnnemy.EnemyMarkedStart ();
 
+				}	
 			}
 //
 //
