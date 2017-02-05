@@ -181,7 +181,7 @@ public class LineRendererTest : MonoBehaviour {
 	IEnumerator StopGoThrought()
 	{
 		TouchGood = false;
-		myRuneManagerScript.timerTactic = myRuneManagerScript.ActualTactic;
+		myRuneManagerScript.timerTactic = 0;
 		Time.timeScale = 1f;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = true;
 		yield return new WaitForSeconds (timeDIstance / 15);

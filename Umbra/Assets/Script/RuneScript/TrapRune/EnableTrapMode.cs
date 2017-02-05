@@ -39,7 +39,8 @@ public class EnableTrapMode : MonoBehaviour {
 				{
 					Instantiate (Trapping, myraycast.point,transform.rotation);
 					Time.timeScale = 1f;
-					myRuneManager.timerOffense = myRuneManager.ActualOffense;
+					myRuneManager.timerOffense = 0;
+
 					GetComponent<EnableTrapMode> ().enabled = false;
 
 				}	

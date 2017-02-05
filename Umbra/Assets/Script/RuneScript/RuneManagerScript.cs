@@ -43,17 +43,17 @@ public class RuneManagerScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if(timerDef>0)
+		if(timerDef>ActualDef)
 		{
-			timerDef -= Time.deltaTime;
+			timerDef += Time.deltaTime;
 		}
-		if(timerTactic>0)
+		if(timerTactic>ActualTactic)
 		{
-			timerDef -= Time.deltaTime;
+			timerDef += Time.deltaTime;
 		}
-		if(timerOffense>0)
+		if(timerOffense>ActualOffense)
 		{
-			timerDef -= Time.deltaTime;
+			timerDef += Time.deltaTime;
 		}
 		if (Input.GetKeyDown (KeyCode.E))
 			RuneModeEnabled = true;
@@ -74,13 +74,13 @@ public class RuneManagerScript : MonoBehaviour
 		{
 			if(Input.GetKeyDown (KeyCode.Alpha1))
 			{
-				if (DefFune == 1 && timerDef >= 0.1f)
+				if (DefFune == 1 && timerDef >= ActualDef)
 				{
 					myShadowInstantiate.enabled = true;
 					myShadowInstantiate.InstantiateTheShadow();
 				}
 				
-				if (DefFune == 1 && timerDef >= 0.1f)
+				if (DefFune == 1 && timerDef >= ActualDef)
 				{
 					myLureScript.enabled = true;
 					myLureScript.StartLure ();
@@ -90,12 +90,12 @@ public class RuneManagerScript : MonoBehaviour
 //
 			if(Input.GetKeyDown (KeyCode.Alpha2))
 			{
-				if (TacticRune == 1 && timerTactic >=0.1f)
+				if (TacticRune == 1 && timerTactic >=ActualTactic)
 				{
 					myLineRenderer.enabled =true;
 					myLineRenderer.IsActivated ();
 				}
-				if (TacticRune == 2 && timerTactic >=0.1f)
+				if (TacticRune == 2 && timerTactic >=ActualTactic)
 				{
 					mySolidicationEnabled.enabled = true;
 					mySolidicationEnabled.SolidificationStart ();
@@ -105,12 +105,12 @@ public class RuneManagerScript : MonoBehaviour
 			}
 			if(Input.GetKeyDown (KeyCode.Alpha3))
 			{
-				if (OffenseRune == 1 && timerOffense >=0.1f)
+				if (OffenseRune == 1 && timerOffense >=ActualOffense)
 				{
 					myenabledTrapMode.enabled = true;
 					myenabledTrapMode.EnabledTrapMode ();
 				}	
-				if (OffenseRune == 2  && timerOffense >=0.1f)
+				if (OffenseRune == 2  && timerOffense >=ActualOffense)
 				{
 					myMarkEnnemy.enabled = true;
 					myMarkEnnemy.EnemyMarkedStart ();

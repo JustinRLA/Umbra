@@ -9,8 +9,9 @@ public class solifyShadow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		mymyRuneManagerScript = RuneManager.GetComponent<RuneManagerScript> ();
 		RuneManager = GameObject.Find ("RuneManager");
+
+		mymyRuneManagerScript = RuneManager.GetComponent<RuneManagerScript> ();
 		MySolid = RuneManager.GetComponent<SolidifcationEnabled> ();
 
 	}
@@ -37,7 +38,7 @@ public class solifyShadow : MonoBehaviour {
 
 	IEnumerator SolidicationEvent()
 	{
-		
+		mymyRuneManagerScript.timerTactic = 0;
 		GetComponent<Collider2D> ().isTrigger = false;
 		Time.timeScale = 1f;
 		Cursor.visible = false;

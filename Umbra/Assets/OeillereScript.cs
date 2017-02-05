@@ -13,9 +13,9 @@ public class OeillereScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (IsInside && Input.GetKey (KeyCode.E)) {
-			gameObject.layer = 2;
+			gameObject.layer = 1;
 		} else
-			gameObject.layer = 5;
+			gameObject.layer = 0;
 		
 	}
 

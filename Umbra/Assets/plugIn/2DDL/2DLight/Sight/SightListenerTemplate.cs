@@ -20,9 +20,15 @@ public class SightListenerTemplate : MonoBehaviour {
 	LureScript myLureScript;
 	public bool IsawTheLure=false;
 	public GameObject LurePlayer;
-
+	public bool Ennemy;
+	public GameObject PlayerView;
+	Collider2D ViewCol;
 	public void Start()
 	{
+
+		if (Ennemy == false)
+			ViewCol = PlayerView.GetComponent<Collider2D> ();
+		
 		myLureScript = RuneManager.GetComponent<LureScript> ();
 		//print (gameObject.name);
 		//EnnemyBase=
@@ -44,6 +50,9 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	void Update()
 	{
+		if(Ennemy==true)
+		{
+
 		if (myLureScript.Active== false)
 			IsawTheLure = false;
 		
@@ -59,12 +68,13 @@ public class SightListenerTemplate : MonoBehaviour {
 
 		if (transform.parent.GetComponent<EnnnemyPatrol> ().Alert == true)
 			throwSuspicious = false;
-
+		}
 	}
 
 
 	public void myListener_onEnter(GameObject go){
-		
+		if(Ennemy==true)
+		{
 		if(throwAlert==false || throwSuspicious==false)
 		{
 			if (go.tag == "LurePlayer" ) {
@@ -91,6 +101,16 @@ public class SightListenerTemplate : MonoBehaviour {
 		else
 			StopCoroutine (InSight ());
 		
+		}
+		else
+		{
+			if (go.tag == "Player")
+			{
+				ViewCol.transform.localScale = new Vector3 (4,1,1);
+			}
+
+		}
+
 
 //	if (go.tag == "ennemy")
 //		print ("I SawYou");
@@ -106,6 +126,9 @@ public class SightListenerTemplate : MonoBehaviour {
 	
 
 	public void myListener_onExit(GameObject go){
+		if(Ennemy==true)
+		{
+			
 		if (go.tag == "Player")
 		{
 			StopCoroutine (InSight ());
@@ -122,7 +145,16 @@ public class SightListenerTemplate : MonoBehaviour {
 			//print (go.name + " --> OnExit() event");
 			go.GetComponent<SpriteRenderer>().color = Color.white;
 
+			}
+		}
+		else
+		{
 
+			if (go.tag == "Player")
+			{
+				ViewCol.transform.localScale = new Vector3 (1,1,1);
+
+			}
 		}
 	}
 

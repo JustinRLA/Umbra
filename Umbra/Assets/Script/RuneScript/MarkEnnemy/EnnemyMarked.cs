@@ -33,7 +33,7 @@ public class EnnemyMarked : MonoBehaviour {
 		{
 			StartCoroutine (MarkEvent());
 		myRuneManager.RuneModeEnabled = false;
-			myRuneManager.timerOffense = myRuneManager.ActualOffense;
+			myRuneManager.timerOffense = 0;
 		}
 
 
