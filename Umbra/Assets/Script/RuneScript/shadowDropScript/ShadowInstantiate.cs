@@ -11,6 +11,7 @@ public class ShadowInstantiate : MonoBehaviour {
 	GameObject CurrentGameObject;
 	public GameObject Cache;
 	Vector2 MyPos;
+	public GameObject myRuneManager;
 
 	Transform InstantiateTransform;
 //	Vector2 MymousePos;
@@ -41,7 +42,7 @@ public class ShadowInstantiate : MonoBehaviour {
 
 	public void InstantiateTheShadow()
 	{
-
+		myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		Time.timeScale = 1f;
 		Cache.SetActive (true);
 		MyPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
