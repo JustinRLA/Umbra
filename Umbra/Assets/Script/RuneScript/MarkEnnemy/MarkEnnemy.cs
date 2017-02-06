@@ -20,7 +20,7 @@ public class MarkEnnemy : MonoBehaviour {
 		//print ("Done");
 		Cache.SetActive (true);
 		Cursor.visible = true;
-		Time.timeScale =0.1f;
+		//Time.timeScale =0.1f;
 
 		CanBeClick = true;
 	}

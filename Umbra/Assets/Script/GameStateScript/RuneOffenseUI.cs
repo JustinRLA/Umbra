@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RuneTactUI : MonoBehaviour {
+
+public class RuneOffenseUI : MonoBehaviour {
 	Image image;
-	
 	float ratio;
-	
+	public GameObject FullImage;
+
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManager;
-	public GameObject FullImage;
 
 	// Use this for initialization
 	void Start () {
-		
+
 		image = GetComponent<Image> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		ratio = myRuneManager.timerTactic / myRuneManager.ActualTactic;
-		print (ratio);
+		ratio = myRuneManager.timerOffense / myRuneManager.ActualOffense;
+//		print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
 			FullImage.SetActive (true);

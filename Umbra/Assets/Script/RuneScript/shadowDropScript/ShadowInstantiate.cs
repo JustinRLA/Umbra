@@ -53,45 +53,14 @@ public class ShadowInstantiate : MonoBehaviour {
 	void Update()
 	{
 		
-		//MymousePos = Camera.main.ScreenPointToRay (Input.mousePosition);
-		//Vector2 MymousePos = Camera.main.ScreenToViewportPoint (Input.mousePosition);
 		if (dragging==false)
-		{		//Vector2 MymousePos = Input.mousePosition;
 			MyPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			//Cache.SetActive (true);
-			//Instantiate (myCyube, MyPos,Quaternion.identity);
-		//	CurrentGameObject = myCyube;
-		//	dragging = true;
-//			print ("buttonPress");
-//			Ray MyRay = Camera.main.ScreenPointToRay (Input.mousePosition);
-//		RaycastHit hit;
-//		if(Physics.Raycast(MyRay,out hit))
-//		{
-//			Instantiate(myCyube, hit.point, Quaternion.identity);
 //		}
 		}
 
 
-		//if (dragging)
-		//{		distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-			
-
-			//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		////Vector3 rayPoint = ray.GetPoint(distance);
-			//Vector2 rayPoint = ray.GetPoint(distance);
-
-			//CurrentGameObject.transform.position = rayPoint;
 		}
 	}
-		//IEnumerator CreateObject()
-		//{
-//		Ray MyRay = Camera.main.ScreenPointToRay (Input.mousePosition);
-//		RaycastHit hit;
-//		if(Physics.Raycast(MyRay,out hit))
-//			{
-//				Instantiate(myCyube, hit.point, Quaternion.identity);
-//			}
-		//yield return null;
 
 		
 

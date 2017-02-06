@@ -32,12 +32,19 @@ public class DragShadow : MonoBehaviour {
 		transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - 0.01f);
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
-
+		RuneMangerMy.GetComponent<RuneManagerScript> ().timerDef = 0;
 		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
 
 		gameObject.name=("OldCube");
+	}
+	void CancelThis()
+	{
+		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
+		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
+		Destroy (gameObject);
 	}
 
 	void OnMouseUp()
@@ -52,7 +59,9 @@ public class DragShadow : MonoBehaviour {
 	void Update()
 	{
 	//	Time.timeScale =0.1f;
-		if(Input.GetMouseButtonDown(1) && dragging)
+		if (Input.GetMouseButtonDown (1) && dragging)
+			CancelThis ();
+
 
 		if (dragging)
 		{		distance = Vector3.Distance(transform.position, Camera.main.transform.position);

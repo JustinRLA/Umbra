@@ -25,7 +25,7 @@ public class RuneDefUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		ratio = myRuneManager.timerDef / myRuneManager.ActualDef;
-		print (ratio);
+//		print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
 			FullImage.SetActive (true);

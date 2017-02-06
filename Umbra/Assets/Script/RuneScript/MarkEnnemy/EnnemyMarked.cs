@@ -60,7 +60,7 @@ public class EnnemyMarked : MonoBehaviour {
 		myMarkEnmnemyRune.CanBeClick = false;
 		Cursor.visible = false;
 		Time.timeScale = 1f;
-		yield return new WaitForSeconds (10f);
+		yield return new WaitForSeconds (25f);
 		gameObject.layer = 11;
 		VireLight.SetActive (false);
 

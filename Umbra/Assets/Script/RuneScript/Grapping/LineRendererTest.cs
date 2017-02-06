@@ -15,6 +15,8 @@ public class LineRendererTest : MonoBehaviour {
 	public Material GOodMat;
 	public Material InMat;
 	public Transform HitTransformPoint;
+//	public GameObject ObjHit;
+
 	RaycastHit2D hit;
 	public bool goThrougt=false;
 	public float timeDIstance;
@@ -40,9 +42,10 @@ public class LineRendererTest : MonoBehaviour {
 
 		void Update () 
 	{
+		gothrought ();
+
 		if(	ActivateThisShit == true)
 			{
-		gothrought ();
 
 		myRaycast = Physics2D.Linecast (mousePos, PlayerPos);
 
@@ -50,6 +53,7 @@ public class LineRendererTest : MonoBehaviour {
 		{
 					createLine();
 		}
+
 		if(line !=null)
 		{
 		mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -57,6 +61,14 @@ public class LineRendererTest : MonoBehaviour {
 		line.SetPosition(0,PlayerMy.position);
 		startPos = PlayerMy.position;
 		}
+			if(Input.GetMouseButtonDown(1))
+			{
+			if(line)
+			{
+					Destroy (line);	
+				Cancelation();
+			}
+			}
 			if(Input.GetMouseButtonDown(0))
 			{
 				if(line)
@@ -76,6 +88,7 @@ public class LineRendererTest : MonoBehaviour {
 					//PlayerMy.GetComponent<Rigidbody2D>().AddForce((HitTransformPoint.position-PlayerMy.position)*20000*Time.smoothDeltaTime);
 					goThrougt=true;
 					timeDIstance = Vector3.Distance (PlayerMy.position,HitTransformPoint.position);
+						print (timeDIstance);
 					print ("SomethingHappe");
 					ActivateThisShit = false;
 					StartCoroutine (StopGoThrought());
@@ -89,8 +102,7 @@ public class LineRendererTest : MonoBehaviour {
 
 				}
 			}
-//			else if(Input.GetMouseButton(0))
-//			{
+
 				if(line)
 				{
 			
@@ -116,20 +128,8 @@ public class LineRendererTest : MonoBehaviour {
 				//}
 
 			}
-//		if(Physics.Raycast(PlayerMy.position,PlayerMy.position-endPos, out myRaycast))
-//		{
-//			print("Work MOtherfucker");
-//			if(myRaycast.transform.gameObject.tag=="Player")
-//				print("Work MOtherfucker");
-//
-//			if(myRaycast.transform.gameObject.tag=="Untagged")
-//				print("Work MOtherfucker");
-//		}
 		PlayerPos = new Vector3(PlayerMy.position.x, PlayerMy.position.y,0);
-		// On mouse down new line will be created 
-		//			if(Input.GetMouseButtonDown(0))
-			if(Input.GetMouseButtonDown(1))
-				Cancelation();
+
 		if(myRaycast.collider==true)
 		{
 		if (myRaycast.collider.tag == "Untagged")
@@ -143,9 +143,6 @@ public class LineRendererTest : MonoBehaviour {
 			TouchGood = false;
 		}
 		}
-			//line.GetComponent<Renderer> ().material.color = Color.red;
-			//line.SetColors(Color.red, Color.red);
-		//}
 
 		}
 		// Following method creates line runtime using Line Renderer component
@@ -157,21 +154,8 @@ public class LineRendererTest : MonoBehaviour {
 //		if (touchedBadThing == false)
 //		{
 			line = new GameObject("Line").AddComponent<LineRenderer>();
-		//line.material =  new Material(Shader.Find("Unlit/Texture"));
 			line.material =  OutMat;
-//			line.SetColors(Color.black, Color.black);
 			line.material.color = Color.red;
-//
-//		}
-//		if (touchedBadThing == true)
-//		{
-//			line = new GameObject("Line").AddComponent<LineRenderer>();
-//
-////			line.material =  new Material(Shader.Find("Unlit/Texture"));
-////			line.SetColors(Color.red, Color.red);
-//			line.material=InMat;
-//
-//		}
 
 			line.SetVertexCount(2);
 			line.SetWidth(0.1f,0.1f);
@@ -189,7 +173,9 @@ public class LineRendererTest : MonoBehaviour {
 		myRuneManagerScript.timerTactic = 0;
 		Time.timeScale = 1f;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = true;
-		yield return new WaitForSeconds (timeDIstance / 15);
+	yield return new WaitForSeconds (timeDIstance / 15);
+	//	yield return new WaitForSeconds (timeDIstance);
+		print ("end");
 		goThrougt = false;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
 		GetComponent<LineRendererTest> ().enabled = false;
@@ -198,7 +184,8 @@ public class LineRendererTest : MonoBehaviour {
 
 	void gothrought()
 	{
-		if(goThrougt==true)
+		print ("testinggg");
+	if(goThrougt==true)
 			PlayerMy.transform.Translate((HitTransformPoint.position-PlayerMy.position)*2*Time.smoothDeltaTime);
 		
 

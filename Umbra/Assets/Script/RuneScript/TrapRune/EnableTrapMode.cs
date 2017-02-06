@@ -38,7 +38,7 @@ public class EnableTrapMode : MonoBehaviour {
 
 		if(myraycast)
 		{
-			if (myraycast.collider.tag == "Ombre")
+			if (myraycast.collider.tag == "TrapPlacement")
 				CanInstantiate = true;
 			else
 				CanInstantiate = false;
