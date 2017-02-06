@@ -26,6 +26,16 @@ public class EnableTrapMode : MonoBehaviour {
 		Mousepos = (Input.mousePosition);
 		Mousepos.z = 0;
 
+		if(Input.GetMouseButton(1))
+		{
+			
+			myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
+			myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+			Time.timeScale = 1f;
+			GetComponent<EnableTrapMode> ().enabled = false;
+			
+		}	
+
 		if(myraycast)
 		{
 			if (myraycast.collider.tag == "Ombre")
@@ -37,7 +47,11 @@ public class EnableTrapMode : MonoBehaviour {
 			{
 				if(Input.GetMouseButton(0))
 				{
+
 					Instantiate (Trapping, myraycast.point,transform.rotation);
+					myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
+					myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
 					Time.timeScale = 1f;
 					myRuneManager.timerOffense = 0;
 

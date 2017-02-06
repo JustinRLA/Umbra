@@ -88,9 +88,13 @@ public class EnnnemyPatrol : MonoBehaviour {
 		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
 	
 		CurrentNavPoint = NavPointOne_Right;
+
 		CurrentNavPointGo = CurrentNavPoint.gameObject;
+
 		OriginalSpeed = speed;
 		NavPoitnOneGo = NavPointOne_Right.gameObject;
+
+		if(NavPointTwo_Left!=null)
 		NavPoitnTwoGo = NavPointTwo_Left.gameObject;
 
 		if(NavPointThree_EvenMoreLeft!=null)
@@ -332,6 +336,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			Alert = true;
 			Suspicious = false;
 			CurrentNavPointGo = null;
+			if(NavPointTwo_Left !=null)
 			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
 		}
@@ -345,7 +350,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 				PhantomPlayer.transform.position = MyPlayer.transform.position;
 			PhamomPoint.position = ThePlayer.position;
 			}
-
+			if(NavPointTwo_Left !=null)
 			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
 //			CurrentNavPoint = PhamomPoint;
@@ -364,23 +369,24 @@ public class EnnnemyPatrol : MonoBehaviour {
 			Suspicious = false;
 
 			speed = OriginalSpeed;
-			if((Vector3.Distance(transform.position,NavPointOne_Right.position))>(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
+			if((Vector3.Distance(transform.position,NavPointOne_Right.position))>(Vector3.Distance(transform.position,NavPointTwo_Left.position))||NavPointTwo_Left==null)
 			{
 				CurrentNavPoint = NavPointOne_Right;
 				CurrentNavPointGo = NavPoitnOneGo;
 				NavPointIGot = 2;
+				if(NavPointTwo_Left !=null)
 				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 				NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
 				
 			}
-			if((Vector3.Distance(transform.position,NavPointOne_Right.position))<=(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
+			if((Vector3.Distance(transform.position,NavPointOne_Right.position))<=(Vector3.Distance(transform.position,NavPointTwo_Left.position)) && NavPointTwo_Left!=null)
 				
 			{
 				CurrentNavPoint = NavPointTwo_Left;
 				CurrentNavPointGo = NavPoitnTwoGo;
 				NavPointIGot = 1;
 				NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;
+				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;è
 				
 				
 			}

@@ -128,6 +128,8 @@ public class LineRendererTest : MonoBehaviour {
 		PlayerPos = new Vector3(PlayerMy.position.x, PlayerMy.position.y,0);
 		// On mouse down new line will be created 
 		//			if(Input.GetMouseButtonDown(0))
+			if(Input.GetMouseButtonDown(1))
+				Cancelation();
 		if(myRaycast.collider==true)
 		{
 		if (myRaycast.collider.tag == "Untagged")
@@ -180,6 +182,9 @@ public class LineRendererTest : MonoBehaviour {
 		// Following method adds collider to created line
 	IEnumerator StopGoThrought()
 	{
+		myRuneManagerScript.RuneActivated = false;
+		myRuneManagerScript.RuneModeEnabled = false;
+
 		TouchGood = false;
 		myRuneManagerScript.timerTactic = 0;
 		Time.timeScale = 1f;
@@ -197,6 +202,16 @@ public class LineRendererTest : MonoBehaviour {
 			PlayerMy.transform.Translate((HitTransformPoint.position-PlayerMy.position)*2*Time.smoothDeltaTime);
 		
 
+	}
+	void Cancelation()
+	{
+		myRuneManagerScript.RuneActivated = false;
+		myRuneManagerScript.RuneModeEnabled = false;
+		
+		Time.timeScale = 1f;
+		GetComponent<LineRendererTest> ().enabled = false;
+
+		
 	}
 
 //		private void addColliderToLine()

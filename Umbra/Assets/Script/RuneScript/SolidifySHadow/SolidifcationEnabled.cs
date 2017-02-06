@@ -18,9 +18,10 @@ public class SolidifcationEnabled : MonoBehaviour {
 
 	public void SolidificationStart()
 	{
+		GetComponent<RuneManagerScript> ().RuneActivated = true;
+
 	MyCache.SetActive (true);
 	Cursor.visible = true;
-	Time.timeScale =0.1f;
 
 		CanClickable = true;
 	}

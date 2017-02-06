@@ -56,6 +56,9 @@ public class LureScript : MonoBehaviour {
 		ThePlayerShadow.transform.parent = null;
 
 			yield return new WaitForSeconds(5f);
+		myRuneManagerScript.RuneActivated = false;
+		myRuneManagerScript.RuneModeEnabled = false;
+
 		myRuneManagerScript.timerDef = 0;
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = true;
 

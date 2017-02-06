@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class RuneOffenseUI : MonoBehaviour {
 	Image image;
 	float ratio;
+	public GameObject FullImage;
 
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManager;
@@ -24,5 +25,10 @@ public class RuneOffenseUI : MonoBehaviour {
 		ratio = myRuneManager.timerOffense / myRuneManager.ActualOffense;
 		print (ratio);
 		image.fillAmount = ratio;
+		if (ratio >= 1)
+			FullImage.SetActive (true);
+		else
+			FullImage.SetActive (false);
+
 	}
 }

@@ -31,15 +31,21 @@ public class EnnemyMarked : MonoBehaviour {
 	{
 		if (myMarkEnmnemyRune.CanBeClick == true)
 		{
+			myRuneManager.RuneActivated = false;
 			StartCoroutine (MarkEvent());
 		myRuneManager.RuneModeEnabled = false;
 			myRuneManager.timerOffense = 0;
+			Time.timeScale = 1f;
+
 		}
 
 
 	}
 	void CancelEvent()
 	{
+		myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
+		myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
 		Cursor.visible = false;
 		Time.timeScale = 1f;
 

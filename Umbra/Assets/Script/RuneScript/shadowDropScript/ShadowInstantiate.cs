@@ -42,7 +42,8 @@ public class ShadowInstantiate : MonoBehaviour {
 
 	public void InstantiateTheShadow()
 	{
-		myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+		//myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+		myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;
 		Time.timeScale = 1f;
 		Cache.SetActive (true);
 		MyPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);

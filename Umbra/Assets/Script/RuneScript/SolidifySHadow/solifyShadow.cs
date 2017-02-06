@@ -31,14 +31,19 @@ public class solifyShadow : MonoBehaviour {
 	void CancelAction()
 	{
 
-		Time.timeScale = 1f;
 		Cursor.visible = false;
+		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
+		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
 	}
 
 
 	IEnumerator SolidicationEvent()
 	{
 		mymyRuneManagerScript.timerTactic = 0;
+		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
+		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
 		GetComponent<Collider2D> ().isTrigger = false;
 		Time.timeScale = 1f;
 		Cursor.visible = false;

@@ -19,6 +19,7 @@ public class RuneManagerScript : MonoBehaviour
 	public float ActualDef;
 	public float ActualOffense;
 	public float ActualTactic;
+	public bool RuneActivated;
 
 	LureScript myLureScript;
 	public GameObject ThePlayer;
@@ -82,12 +83,13 @@ public class RuneManagerScript : MonoBehaviour
 		if (RuneModeEnabled == true) { 
 			Time.timeScale = 0.1f;
 			if (Input.GetKeyDown (KeyCode.Alpha1)) {
-				if (DefFune == 1 && timerDef >= ActualDef) {
+
+				if (DefFune == 1 && timerDef >= ActualDef && RuneActivated==false) {
 					myShadowInstantiate.enabled = true;
 					myShadowInstantiate.InstantiateTheShadow ();
 				}
 				
-				if (DefFune == 2 && timerDef >= ActualDef) {
+				if (DefFune == 2 && timerDef >= ActualDef && RuneActivated==false) {
 					myLureScript.enabled = true;
 					myLureScript.StartLure ();
 				}
@@ -95,11 +97,11 @@ public class RuneManagerScript : MonoBehaviour
 			}
 //
 			if (Input.GetKeyDown (KeyCode.Alpha2)) {
-				if (TacticRune == 1 && timerTactic >= ActualTactic) {
+				if (TacticRune == 1 && timerTactic >= ActualTactic && RuneActivated==false) {
 					myLineRenderer.enabled = true;
 					myLineRenderer.IsActivated ();
 				}
-				if (TacticRune == 2 && timerTactic >= ActualTactic) {
+				if (TacticRune == 2 && timerTactic >= ActualTactic && RuneActivated==false) {
 					mySolidicationEnabled.enabled = true;
 					mySolidicationEnabled.SolidificationStart ();
 				}
@@ -107,11 +109,11 @@ public class RuneManagerScript : MonoBehaviour
 
 			}
 			if (Input.GetKeyDown (KeyCode.Alpha3)) {
-				if (OffenseRune == 1 && timerOffense >= ActualOffense) {
+				if (OffenseRune == 1 && timerOffense >= ActualOffense && RuneActivated==false) {
 					myenabledTrapMode.enabled = true;
 					myenabledTrapMode.EnabledTrapMode ();
 				}	
-				if (OffenseRune == 2 && timerOffense >= ActualOffense) {
+				if (OffenseRune == 2 && timerOffense >= ActualOffense && RuneActivated==false) {
 					myMarkEnnemy.enabled = true;
 					myMarkEnnemy.EnemyMarkedStart ();
 
