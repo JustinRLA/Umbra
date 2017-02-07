@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +20,9 @@ public class RuneManagerScript : MonoBehaviour
 	public float ActualOffense;
 	public float ActualTactic;
 	public bool RuneActivated;
+	public GameObject myCam;
+	public GameObject myCamTwo;
+	public GameObject myCamThree;
 
 	LureScript myLureScript;
 	public GameObject ThePlayer;
@@ -81,6 +84,8 @@ public class RuneManagerScript : MonoBehaviour
 //			TypeRuneUsed = 3;
 
 		if (RuneModeEnabled == true) { 
+			//myCam.GetComponent<Camera>().Size=1;
+			myCam.GetComponent<ColorCorrectionCurves>().enabled=true;
 			Time.timeScale = 0.1f;
 			if (Input.GetKeyDown (KeyCode.Alpha1)) {
 
@@ -124,8 +129,12 @@ public class RuneManagerScript : MonoBehaviour
 //
 //
 //
-		} else
+		}
+		else {
+			myCam.GetComponent<ColorCorrectionCurves>().enabled=false;
+
 			Time.timeScale = 1;
+		}
 }
 
 }

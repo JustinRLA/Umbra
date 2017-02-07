@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.ImageEffects
-{
+//namespace UnityStandardAssets.ImageEffects
+//{
     [ExecuteInEditMode]
     [AddComponentMenu ("Image Effects/Color Adjustments/Color Correction (Curves, Saturation)")]
     public class ColorCorrectionCurves : PostEffectsBase
@@ -176,6 +176,6 @@ namespace UnityStandardAssets.ImageEffects
 
                 RenderTexture.ReleaseTemporary (renderTarget2Use);
             }
-        }
+//        }
     }
 }

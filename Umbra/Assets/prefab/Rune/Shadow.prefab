@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 61000013841589210}
   - component: {fileID: 114000013637328812}
   - component: {fileID: 114811195832286468}
+  - component: {fileID: 114047454937326068}
   m_Layer: 10
   m_Name: Shadow
   m_TagString: Untagged
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011999828746}
   m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 14.2, y: 2.74, z: 0}
+  m_LocalPosition: {x: 24.062462, y: 9.339382, z: -14.426956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4586285132319244}
@@ -118,6 +119,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragging: 1
   RuneMangerMy: {fileID: 0}
+--- !u!114 &114047454937326068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011999828746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97254e19939eec45a90056a4db97281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BeforeDestroy: 15
 --- !u!114 &114811195832286468
 MonoBehaviour:
   m_ObjectHideFlags: 1

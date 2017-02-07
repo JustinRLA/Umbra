@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OeillereScript : MonoBehaviour {
 	bool IsInside;
+	public GameObject Base;
 
 	// Use this for initialization
 	void Start () {
@@ -13,9 +14,9 @@ public class OeillereScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (IsInside && Input.GetKey (KeyCode.T)) {
-			gameObject.layer = 1;
+			Base.layer = 1;
 		} else
-			gameObject.layer = 0;
+			Base.layer = 0;
 		
 	}
 

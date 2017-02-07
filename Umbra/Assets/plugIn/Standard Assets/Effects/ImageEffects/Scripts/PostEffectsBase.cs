@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.ImageEffects
-{
+//namespace UnityStandardAssets.ImageEffects
+//{
     [ExecuteInEditMode]
     [RequireComponent (typeof(Camera))]
     public class PostEffectsBase : MonoBehaviour
@@ -239,5 +239,5 @@ namespace UnityStandardAssets.ImageEffects
 
             GL.PopMatrix();
         }
-    }
+//    }
 }
