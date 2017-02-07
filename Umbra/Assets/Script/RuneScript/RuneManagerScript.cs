@@ -34,6 +34,9 @@ public class RuneManagerScript : MonoBehaviour
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
+		
+
+		//myCam.GetComponent<Animator> ().Stop ();
 		if(IsTesting==false)
 		{
 		myRuneSetter = GameObject.Find ("RuneSetter");
@@ -68,23 +71,38 @@ public class RuneManagerScript : MonoBehaviour
 		{
 			timerOffense += Time.deltaTime;
 		}
-		if (Input.GetKeyDown (KeyCode.E) )
+
+		if (RuneModeEnabled == true)
+		{
+			myCam.GetComponent<Animator> ().speed = 13;
+
+			myCam.GetComponent<Animator> ().SetBool ("Blue",true);
+		}
+
+		if ( RuneModeEnabled == false)
+		{
+			myCam.GetComponent<Animator> ().speed = 2;
+
+			myCam.GetComponent<Animator> ().SetBool ("Blue",false);
+		}
+		//if (Input.GetKeyDown (KeyCode.E) && RuneModeEnabled == false)
+			//myCam.GetComponent<Animator> ().speed = 10.0f;
+
+	//	if (Input.GetKeyDown (KeyCode.E) && RuneModeEnabled == true)
+		//	myCam.GetComponent<Animator> (). = -10.0f;
+
+
+
+	//	myCam.GetComponent<Animator> ().SetBool ("Blue",true);
+
+		if (Input.GetKeyDown (KeyCode.Q) && RuneModeEnabled==false)
 			RuneModeEnabled = true;
 
+		if (Input.GetKeyDown (KeyCode.T) && RuneModeEnabled==true)
+			RuneModeEnabled = false;
 		
-		// RuneUmbra
-//		if (Input.GetKeyDown (KeyCode.Alpha1))
-//			TypeRuneUsed = 1;
-//		// Rune Environnement
-//		if (Input.GetKeyDown (KeyCode.Alpha2))
-//			TypeRuneUsed = 2;
-//
-//		// Rune Assassination
-//		if (Input.GetKeyDown (KeyCode.Alpha3))
-//			TypeRuneUsed = 3;
-
+		
 		if (RuneModeEnabled == true) { 
-			//myCam.GetComponent<Camera>().Size=1;
 			myCam.GetComponent<ColorCorrectionCurves>().enabled=true;
 			Time.timeScale = 0.1f;
 			if (Input.GetKeyDown (KeyCode.Alpha1)) {
