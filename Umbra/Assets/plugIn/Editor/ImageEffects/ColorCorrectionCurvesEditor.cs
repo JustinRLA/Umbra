@@ -2,8 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace UnityStandardAssets.ImageEffects
-{
+
     [CustomEditor (typeof(ColorCorrectionCurves))]
     class ColorCorrectionCurvesEditor : Editor {
         SerializedObject serObj;
@@ -119,6 +118,6 @@ namespace UnityStandardAssets.ImageEffects
 
             if (!applyCurveChanges)
                 serObj.ApplyModifiedProperties ();
-        }
+        
     }
 }

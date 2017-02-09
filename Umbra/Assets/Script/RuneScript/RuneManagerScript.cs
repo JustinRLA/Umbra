@@ -23,6 +23,11 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject myCam;
 	public GameObject myCamTwo;
 	public GameObject myCamThree;
+	public GameObject myCamFour;
+	Animator animCamOne;
+	Animator animCamTwo;
+	Animator animCamThree;
+	Animator animCamFour;
 
 	LureScript myLureScript;
 	public GameObject ThePlayer;
@@ -34,7 +39,10 @@ public class RuneManagerScript : MonoBehaviour
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
-		
+		animCamOne=myCam.GetComponent<Animator>();
+		animCamTwo=myCamTwo.GetComponent<Animator>();
+		animCamThree=myCamThree.GetComponent<Animator>();
+		animCamFour=myCamFour.GetComponent<Animator>();
 
 		//myCam.GetComponent<Animator> ().Stop ();
 		if(IsTesting==false)
@@ -72,18 +80,25 @@ public class RuneManagerScript : MonoBehaviour
 			timerOffense += Time.deltaTime;
 		}
 
-		if (RuneModeEnabled == true)
-		{
-			myCam.GetComponent<Animator> ().speed = 13;
 
-			myCam.GetComponent<Animator> ().SetBool ("Blue",true);
-		}
 
 		if ( RuneModeEnabled == false)
 		{
-			myCam.GetComponent<Animator> ().speed = 2;
+			animCamOne.speed = 2;
+			animCamTwo.speed = 2;
+			animCamThree.speed = 2;
+			animCamFour.speed = 2;
 
-			myCam.GetComponent<Animator> ().SetBool ("Blue",false);
+
+			myCamFour.GetComponent<BloomOptimized>().enabled=false;
+			myCamFour.GetComponent<Grayscale>().enabled=false;
+			
+			Time.timeScale = 1;
+			animCamOne.SetBool ("Blue",false);
+			animCamTwo.SetBool ("Blue",false);
+			animCamOne.SetBool ("Blue",false);
+			animCamThree.SetBool ("Blue",false);
+
 		}
 		//if (Input.GetKeyDown (KeyCode.E) && RuneModeEnabled == false)
 			//myCam.GetComponent<Animator> ().speed = 10.0f;
@@ -96,14 +111,30 @@ public class RuneManagerScript : MonoBehaviour
 	//	myCam.GetComponent<Animator> ().SetBool ("Blue",true);
 
 		if (Input.GetKeyDown (KeyCode.Q) && RuneModeEnabled==false)
+		{
 			RuneModeEnabled = true;
+			myCam.GetComponent<BloomOptimized>().enabled=true;
+			myCam.GetComponent<Grayscale>().enabled=true;
 
+		}
 		if (Input.GetKeyDown (KeyCode.T) && RuneModeEnabled==true)
 			RuneModeEnabled = false;
 		
 		
 		if (RuneModeEnabled == true) { 
-			myCam.GetComponent<ColorCorrectionCurves>().enabled=true;
+			animCamOne.speed = 13;
+			animCamTwo.speed = 13;
+			animCamThree.speed = 13;
+			animCamFour.speed = 13;
+			
+			
+
+			Time.timeScale = 1;
+			animCamOne.SetBool ("Blue",true);
+			animCamTwo.SetBool ("Blue",true);
+			animCamOne.SetBool ("Blue",true);
+			animCamThree.SetBool ("Blue",true);
+
 			Time.timeScale = 0.1f;
 			if (Input.GetKeyDown (KeyCode.Alpha1)) {
 
@@ -148,11 +179,7 @@ public class RuneManagerScript : MonoBehaviour
 //
 //
 		}
-		else {
-			myCam.GetComponent<ColorCorrectionCurves>().enabled=false;
 
-			Time.timeScale = 1;
-		}
 }
 
 }

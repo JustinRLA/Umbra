@@ -32,7 +32,7 @@ public class ChangeRunePoint : MonoBehaviour {
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = false;
 			playerMy.GetComponent<Platformer2DUserControl> ().enabled = false;
 			ReceiveInfo ();
-
+			Cursor.visible=true;
 		}
 	}
 	public void SendInfo()
@@ -40,7 +40,10 @@ public class ChangeRunePoint : MonoBehaviour {
 		RuneManager.GetComponent<RuneManagerScript> ().DefFune= myTempoDefRune;
 		RuneManager.GetComponent<RuneManagerScript> ().OffenseRune=myTempoOffRune ;
 	 RuneManager.GetComponent<RuneManagerScript> ().TacticRune=myTempoTacticRune ;
-
+		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+		UIMode.SetActive (false);
+		Cursor.visible=false;
 	}
 
 	public void ReceiveInfo()

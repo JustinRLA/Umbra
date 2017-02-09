@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.ImageEffects
-{
     [ExecuteInEditMode]
     [RequireComponent (typeof(Camera))]
     [AddComponentMenu ("Image Effects/Bloom and Glow/Bloom (Optimized)")]
@@ -104,6 +102,6 @@ namespace UnityStandardAssets.ImageEffects
             Graphics.Blit (source, destination, fastBloomMaterial, 0);
 
             RenderTexture.ReleaseTemporary (rt);
-        }
+        
     }
 }
