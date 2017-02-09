@@ -12,7 +12,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public Transform CurrentNavPoint;
 	public GameObject CurrentNavPointGo;
 	public Transform LurePlayer;
-
+	public GameObject SawLureFeedback;
 
 	public Transform NavPointOne_Right;
 	public Transform NavPointTwo_Left;
@@ -23,7 +23,9 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public int waitingTimeNavTwo;
 	public int waitingTimeNavThree;
 
-
+	public GameObject Proj;
+	public Transform ProjStartPos;
+	public GameObject ProjStartObj;
 
 	public bool alertcondition=false;
 	public bool suspiciousCondition=false;
@@ -48,6 +50,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 	SightListenerTemplate mySighListernetTemplate;
 	public GameObject mySighListerner;
 
+
 	public float delay = 10f;
 	// SoundDetection Part
 
@@ -71,10 +74,17 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public GameObject RuneManager;
 	RuneManagerScript myRunemanagerScript;
 	LureScript myLureScript;
-	public bool LureAttention;
-//
-//	// Use this for initialization
 
+	public bool LureAttention;
+	Vector3 ProjDir;
+	float angle;
+
+//	// Use this for initialization
+	public void Respawn()
+	{
+		gameObject.tag="ennemy";
+
+	}
 
 	void Start () {
 		myLureScript = RuneManager.GetComponent<LureScript> ();
@@ -105,6 +115,10 @@ public class EnnnemyPatrol : MonoBehaviour {
 //	// Update is called once per frame
 //
 	void Update () {
+		
+		ProjDir = ThePlayer.position - ProjStartObj.transform.position;
+		angle = Mathf.Atan2 (ProjDir.x, ProjDir.y) * Mathf.Rad2Deg;
+		ProjStartObj.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 
 		if(NavPointTwo_Left==null && Alert==false && Suspicious == false)
 		{
@@ -134,7 +148,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			if(mySighListernetTemplate.IsawTheLure==true)
 			{
 				LureAttention = true;
-
+				SawLureFeedback.SetActive (true);
 				if(LurePlayer.position.x >= LeftLimit.position.x|| LurePlayer.position.x <= RightLimit.position.x)
 					CurrentNavPoint = LurePlayer;
 
@@ -148,6 +162,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 			}
 			else
 			{
+				SawLureFeedback.SetActive (false);
+
 				LureAttention = false;
 
 				if(PhamomPoint.position.x >= LeftLimit.position.x|| PhamomPoint.position.x <= RightLimit.position.x)

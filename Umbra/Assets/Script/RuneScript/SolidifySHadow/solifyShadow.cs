@@ -6,6 +6,10 @@ public class solifyShadow : MonoBehaviour {
 	SolidifcationEnabled MySolid;
 	public GameObject RuneManager;
 	RuneManagerScript mymyRuneManagerScript;
+	public float colorRedOver;
+	public float colorGreenOver;
+	public float colorBlueOver;
+
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +30,13 @@ public class solifyShadow : MonoBehaviour {
 	{
 		if (MySolid.CanClickable == true)
 			StartCoroutine (SolidicationEvent ());
+	}
+
+	void OnMouseOver()
+	{
+		print ("Enter");
+		if (MySolid.CanClickable == true)
+			GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver,1);
 	}
 
 	void CancelAction()

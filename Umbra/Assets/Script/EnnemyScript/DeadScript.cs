@@ -13,4 +13,10 @@ public class DeadScript : MonoBehaviour {
 	void Update () {
 	
 	}
+	public void EnnemyDeath()
+	{
+		print("Im Dead");
+		gameObject.tag="Dead Ennemy";
+
+	}
 }

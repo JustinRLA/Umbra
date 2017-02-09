@@ -17,7 +17,7 @@ using System.Collections;
 
 		//public GameObject ViewTrigger;
 //		CircleCollider2D ViewTriggerCollider;
-
+	public bool TruePlayer;
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
@@ -33,6 +33,7 @@ using System.Collections;
 
         private void Awake()
         {
+		if(TruePlayer==true)
 		myRuneManScript = MyRuneMan.GetComponent<RuneManagerScript> ();
 			RunCircleCollider = RunTrigger.GetComponent<CircleCollider2D> ();
 		//	ViewTriggerCollider = ViewTrigger.GetComponent<CircleCollider2D> ();
@@ -43,6 +44,10 @@ using System.Collections;
 			m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
         }
+	public void Death()
+	{
+
+	}
 
 	public void StartCorou()
 	{
@@ -181,15 +186,11 @@ using System.Collections;
 	
         }
 
-//		void OnTriggerEnter2D(Collider2D col)
-//		{
-//			if (col.tag == "Ombre")
-//				ViewTrigger.transform.localScale = new Vector3 (0.8f, 1, 1);
-//
-//			if(col.tag=="lumiere")
-//				ViewTrigger.transform.localScale = new Vector3 (8, 1, 1);
-//			
-//		}
+		void OnTriggerEnter2D(Collider2D col)
+		{
+		if (col.tag == "Proj")
+			Death ();
+		}
 //
 //		void OnTriggerExit2D(Collider2D col)
 //		{
