@@ -116,9 +116,6 @@ public class EnnnemyPatrol : MonoBehaviour {
 //
 	void Update () {
 		
-		ProjDir = ThePlayer.position - ProjStartObj.transform.position;
-		angle = Mathf.Atan2 (ProjDir.x, ProjDir.y) * Mathf.Rad2Deg;
-		ProjStartObj.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 
 		if(NavPointTwo_Left==null && Alert==false && Suspicious == false)
 		{
@@ -352,8 +349,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 		yield return new WaitForSeconds (attackdelay);
 		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<8)
 		{
-			GetComponent<AudioSource> ().Play();
-			attackdelay = 2;
+				Instantiate (Proj, ProjStartPos.position, ProjStartPos.rotation);
+				attackdelay = 2;
 			}	
 		}	
 	}	

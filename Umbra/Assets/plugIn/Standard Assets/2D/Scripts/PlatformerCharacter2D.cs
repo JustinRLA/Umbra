@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
     public class PlatformerCharacter2D : MonoBehaviour
     {
@@ -46,7 +46,7 @@ using System.Collections;
         }
 	public void Death()
 	{
-
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 
 	public void StartCorou()
@@ -113,7 +113,7 @@ using System.Collections;
 
         public void Move(float move, bool crouch, bool jump)
         {
-		if(myRuneManScript.RuneModeEnabled==false)
+		if(myRuneManScript.RuneModeEnabled==false && TruePlayer==true)
 		{
 			// If crouching, check to see if the character can stand up
 			if (!crouch && m_Anim.GetBool("Crouch"))
@@ -179,6 +179,75 @@ using System.Collections;
 			//if(crouch==true && move!=0)
 			//	ViewTriggerCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);	
 		//	if(crouch==false && move!=0)
+			//	ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
+
+		}
+		if(TruePlayer==false)
+		{
+			// If crouching, check to see if the character can stand up
+			if (!crouch && m_Anim.GetBool("Crouch"))
+			{
+				// If the character has a ceiling preventing them from standing up, keep them crouching
+				if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+				{
+					crouch = true;
+				}
+			}
+
+			// Set whether or not the character is crouching in the animator
+			m_Anim.SetBool("Crouch", crouch);
+
+			//only control the player if grounded or airControl is turned on
+			if (m_Grounded || m_AirControl)
+			{
+				// Reduce the speed if crouching by the crouchSpeed multiplier
+				move = (crouch ? move*m_CrouchSpeed : move);
+
+				// The Speed animator parameter is set to the absolute value of the horizontal input.
+				m_Anim.SetFloat("Speed", Mathf.Abs(move));
+
+				// Move the character
+				m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed
+					, m_Rigidbody2D.velocity.y);
+				if(Climb==false)
+				{
+					// If the input is moving the player right and the player is facing left...
+					if (move > 0 && !m_FacingRight)
+					{
+						// ... flip the player.
+						Flip();
+					}
+					// Otherwise if the input is moving the player left and the player is facing right...
+					else if (move < 0 && m_FacingRight)
+					{
+						// ... flip the player.
+						Flip();
+					}
+				}
+			}
+			// If the player should jump...
+			if (m_Grounded && jump && m_Anim.GetBool("Ground"))
+			{
+				// Add a vertical force to the player.
+				m_Grounded = false;
+				m_Anim.SetBool("Ground", false);
+				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			}
+
+//			if(move==0||crouch==true||m_Grounded==false||canBeSilenced==true)
+//			{
+//				RunCircleCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);	
+//
+//			}
+//			else
+//			{
+//				RunCircleCollider.transform.localScale=new Vector3(1,1,1);		
+//			}
+			//	if(move==0)
+			//ViewTriggerCollider.transform.localScale=new Vector3(0.05f,0.05f,0.05f);	
+			//if(crouch==true && move!=0)
+			//	ViewTriggerCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);	
+			//	if(crouch==false && move!=0)
 			//	ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
 
 		}

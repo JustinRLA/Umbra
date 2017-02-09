@@ -8,11 +8,12 @@ public class WeaponBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+	//	transform.localScale = new Vector3 (1,);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		rb.velocity = transform.right * 50;
+		rb.velocity = transform.right * 20;
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
