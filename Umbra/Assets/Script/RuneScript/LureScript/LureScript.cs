@@ -50,12 +50,14 @@ public class LureScript : MonoBehaviour {
 		ThePlayer.GetComponent<Rigidbody2D> ().isKinematic = true;
 		//timer += Time.deltaTime;
 		timer = 10;
-
+		//ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 150;
 		ThePlayer.GetComponent<Collider2D> ().enabled = false;
 		ThePlayer.GetComponent<CircleCollider2D> ().enabled = false;
 		ThePlayerShadow.transform.parent = null;
 
 			yield return new WaitForSeconds(5f);
+		ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
 

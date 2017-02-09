@@ -71,7 +71,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public GameObject RuneManager;
 	RuneManagerScript myRunemanagerScript;
 	LureScript myLureScript;
-
+	public bool LureAttention;
 //
 //	// Use this for initialization
 
@@ -128,12 +128,13 @@ public class EnnnemyPatrol : MonoBehaviour {
 			CurrentNavPoint = RightLimit;
 		
 		}
-
 		if(Suspicious==true )
 		{
 
 			if(mySighListernetTemplate.IsawTheLure==true)
 			{
+				LureAttention = true;
+
 				if(LurePlayer.position.x >= LeftLimit.position.x|| LurePlayer.position.x <= RightLimit.position.x)
 					CurrentNavPoint = LurePlayer;
 
@@ -147,6 +148,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 			}
 			else
 			{
+				LureAttention = false;
+
 				if(PhamomPoint.position.x >= LeftLimit.position.x|| PhamomPoint.position.x <= RightLimit.position.x)
 					CurrentNavPoint = PhamomPoint;
 				
@@ -201,7 +204,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			else
 				speed = 0;
 		}
-		if(InRange==true)
+		if(InRange==true && LureAttention==false)
 		{
 			SoundLevel = Vector3.Distance (ThePlayer.transform.position, transform.position);
 			if(Alert==false && mySighListernetTemplate.throwAlert==false)

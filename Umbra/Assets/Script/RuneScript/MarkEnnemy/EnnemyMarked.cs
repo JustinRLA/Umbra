@@ -7,29 +7,50 @@ public class EnnemyMarked : MonoBehaviour {
 	public GameObject RuneManager;
 	public GameObject VireLight;
 	RuneManagerScript myRuneManager;
+	public float colorRedOver;
+	public float colorBlueOver;
+	public float colorGreenOver;
+	public GameObject myCam;
+	public GameObject myMainCam;
+
+
 	// Use this for initialization
 	void Start () {
 		myMarkEnmnemyRune = RuneManager.GetComponent<MarkEnnemy> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
+
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (1) && myMarkEnmnemyRune.CanBeClick == true)
+		if (Input.GetMouseButtonDown (1) && myMarkEnmnemyRune.CanBeClicked == true)
 			CancelEvent ();
+
+		//GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver);
+
 	}
 
 	void OnMouseEnter()
 	{
+		print ("Enter");
+	//	GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver);
+	}
+	void OnMouseOver()
+	{
+		print ("Enter");
+		if (myMarkEnmnemyRune.CanBeClicked == true)
+		GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver,1);
 	}
 
 	void OnMouseExit()
 	{
+		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
+
 	}
 
 	void OnMouseDown()
 	{
-		if (myMarkEnmnemyRune.CanBeClick == true)
+		if (myMarkEnmnemyRune.CanBeClicked == true)
 		{
 			myRuneManager.RuneActivated = false;
 			StartCoroutine (MarkEvent());
@@ -45,6 +66,7 @@ public class EnnemyMarked : MonoBehaviour {
 	{
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
 
 		Cursor.visible = false;
 		Time.timeScale = 1f;
@@ -54,10 +76,15 @@ public class EnnemyMarked : MonoBehaviour {
 
 	IEnumerator MarkEvent()
 	{
+		myMainCam.GetComponent<Grayscale> ().enabled = false;
+		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
+
+		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
+		myCam.GetComponent<ColorCorrectionCurves> ().enabled = false;
 		myRuneManager.timerOffense = myRuneManager.ActualOffense;
 		VireLight.SetActive (true);
 		gameObject.layer = 13;
-		myMarkEnmnemyRune.CanBeClick = false;
+		myMarkEnmnemyRune.CanBeClicked = false;
 		Cursor.visible = false;
 		Time.timeScale = 1f;
 		yield return new WaitForSeconds (25f);

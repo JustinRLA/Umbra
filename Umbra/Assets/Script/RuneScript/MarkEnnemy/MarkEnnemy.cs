@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MarkEnnemy : MonoBehaviour {
 	public GameObject Cache;
-	public bool CanBeClick;
+	public bool CanBeClicked;
+	public GameObject myCamOne;
+	public GameObject myCamTwo;
 
 	// Use this for initialization
 	void Start () {
@@ -16,13 +18,19 @@ public class MarkEnnemy : MonoBehaviour {
 		
 	}
 	public void EnemyMarkedStart()
-	{
+	{		
+		print ("Blue");
+		myCamOne.GetComponent<Grayscale> ().enabled = false;
+		myCamTwo.GetComponent<ColorCorrectionCurves> ().enabled = true;
+
+
+		CanBeClicked = true;
+
 		//print ("Done");
 		Cache.SetActive (true);
 		Cursor.visible = true;
-		//Time.timeScale =0.1f;
 
-		CanBeClick = true;
+
 	}
 
 

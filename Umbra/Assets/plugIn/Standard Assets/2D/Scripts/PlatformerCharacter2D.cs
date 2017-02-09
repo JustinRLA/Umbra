@@ -28,11 +28,12 @@ using System.Collections;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 		public bool Climb;
 	bool canBeSilenced;
-
+	public GameObject MyRuneMan;
+	RuneManagerScript myRuneManScript;
 
         private void Awake()
         {
-			
+		myRuneManScript = MyRuneMan.GetComponent<RuneManagerScript> ();
 			RunCircleCollider = RunTrigger.GetComponent<CircleCollider2D> ();
 		//	ViewTriggerCollider = ViewTrigger.GetComponent<CircleCollider2D> ();
             // Setting up references.
@@ -107,7 +108,8 @@ using System.Collections;
 
         public void Move(float move, bool crouch, bool jump)
         {
-			
+		if(myRuneManScript.RuneModeEnabled==false)
+		{
 			// If crouching, check to see if the character can stand up
 			if (!crouch && m_Anim.GetBool("Crouch"))
 			{
@@ -131,7 +133,8 @@ using System.Collections;
 				m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
 				// Move the character
-				m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+			m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed
+				, m_Rigidbody2D.velocity.y);
 				if(Climb==false)
 				{
 				// If the input is moving the player right and the player is facing left...
@@ -173,7 +176,7 @@ using System.Collections;
 		//	if(crouch==false && move!=0)
 			//	ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
 
-
+		}
 
 	
         }

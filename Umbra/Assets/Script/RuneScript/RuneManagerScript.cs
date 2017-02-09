@@ -96,7 +96,7 @@ public class RuneManagerScript : MonoBehaviour
 			Time.timeScale = 1;
 			animCamOne.SetBool ("Blue",false);
 			animCamTwo.SetBool ("Blue",false);
-			animCamOne.SetBool ("Blue",false);
+			animCamFour.SetBool ("Blue",false);
 			animCamThree.SetBool ("Blue",false);
 
 		}
@@ -112,14 +112,18 @@ public class RuneManagerScript : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.Q) && RuneModeEnabled==false)
 		{
+			
 			RuneModeEnabled = true;
 			myCam.GetComponent<BloomOptimized>().enabled=true;
 			myCam.GetComponent<Grayscale>().enabled=true;
 
 		}
 		if (Input.GetKeyDown (KeyCode.T) && RuneModeEnabled==true)
+		{
 			RuneModeEnabled = false;
-		
+		myCam.GetComponent<BloomOptimized>().enabled=false;
+		myCam.GetComponent<Grayscale>().enabled=false;
+		}
 		
 		if (RuneModeEnabled == true) { 
 			animCamOne.speed = 13;
@@ -129,21 +133,23 @@ public class RuneManagerScript : MonoBehaviour
 			
 			
 
-			Time.timeScale = 1;
+		//	Time.timeScale = 1;
 			animCamOne.SetBool ("Blue",true);
 			animCamTwo.SetBool ("Blue",true);
-			animCamOne.SetBool ("Blue",true);
+			animCamFour.SetBool ("Blue",true);
 			animCamThree.SetBool ("Blue",true);
 
 			Time.timeScale = 0.1f;
 			if (Input.GetKeyDown (KeyCode.Alpha1)) {
 
 				if (DefFune == 1 && timerDef >= ActualDef && RuneActivated==false) {
+					// Rune D'ombre
 					myShadowInstantiate.enabled = true;
 					myShadowInstantiate.InstantiateTheShadow ();
 				}
 				
 				if (DefFune == 2 && timerDef >= ActualDef && RuneActivated==false) {
+					// Rune de Lure
 					myLureScript.enabled = true;
 					myLureScript.StartLure ();
 				}
@@ -151,11 +157,13 @@ public class RuneManagerScript : MonoBehaviour
 			}
 //
 			if (Input.GetKeyDown (KeyCode.Alpha2)) {
+				// rune d'accrochage
 				if (TacticRune == 1 && timerTactic >= ActualTactic && RuneActivated==false) {
 					myLineRenderer.enabled = true;
 					myLineRenderer.IsActivated ();
 				}
 				if (TacticRune == 2 && timerTactic >= ActualTactic && RuneActivated==false) {
+					// rune solidification Ombre
 					mySolidicationEnabled.enabled = true;
 					mySolidicationEnabled.SolidificationStart ();
 				}
@@ -163,11 +171,14 @@ public class RuneManagerScript : MonoBehaviour
 
 			}
 			if (Input.GetKeyDown (KeyCode.Alpha3)) {
+				// Rune de piege
 				if (OffenseRune == 1 && timerOffense >= ActualOffense && RuneActivated==false) {
 					myenabledTrapMode.enabled = true;
 					myenabledTrapMode.EnabledTrapMode ();
 				}	
 				if (OffenseRune == 2 && timerOffense >= ActualOffense && RuneActivated==false) {
+					// rune de marquage
+					print("Blue");
 					myMarkEnnemy.enabled = true;
 					myMarkEnnemy.EnemyMarkedStart ();
 
