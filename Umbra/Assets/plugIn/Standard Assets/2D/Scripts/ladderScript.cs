@@ -10,6 +10,8 @@ public class ladderScript : MonoBehaviour {
 	GameObject ThePlayer;
 	Animator animPlayer;
 	public bool RightLadder;
+		public Transform maxxY;
+
 		PlatformerCharacter2D myPLatformCharacter;
 
 
@@ -27,18 +29,29 @@ public class ladderScript : MonoBehaviour {
 		//transform.parent.position = transform.position - transform.localPosition;
 		if (canClimb == true) {
 			ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
-			if (Input.GetKey (KeyCode.W))
+				if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space)==false && ThePlayer.transform.position.y<maxxY.position.y)
 				ThePlayer.transform.Translate (Vector2.up * Time.deltaTime);
 			if (Input.GetKey (KeyCode.S))
 				ThePlayer.transform.Translate (Vector2.down * Time.deltaTime);
-			if (Input.GetKey (KeyCode.Space))
-				canClimb = false;	
-			animPlayer.SetBool ("Climb", true);
+				if (Input.GetKey (KeyCode.Space))
+					JumpFromLader ();		
+
+					animPlayer.SetBool ("Climb", true);
 				myPLatformCharacter.Climb = true;
-			
+
+				if (Input.GetKey (KeyCode.E))
+					StartCoroutine (ReturnToNormal ());
+
+
 		}
-		else
-			StartCoroutine (ReturnToNormal ());
+			else
+			{
+				
+				ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
+			animPlayer.SetBool ("Climb", false);
+			myPLatformCharacter.Climb = false;
+
+			}
 	
 			
 	}
@@ -60,14 +73,27 @@ public class ladderScript : MonoBehaviour {
 
 		}
 
-}
+		}void JumpFromLader()
+		{
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
+
+			StartCoroutine (ReturnToNormal ());
+
+		}
+
 	IEnumerator ReturnToNormal()
 	{
+			
 		ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		animPlayer.SetBool ("Climb", false);
 			myPLatformCharacter.Climb = false;
+			GetComponent<Collider2D> ().enabled = false;
 
-		yield return null;
+			canClimb = false;
+
+			yield return new WaitForSeconds(1f);
+			GetComponent<Collider2D> ().enabled = true;
+
 	}
 }
 
