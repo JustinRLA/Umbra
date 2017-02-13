@@ -10,6 +10,7 @@ public class EnableTrapMode : MonoBehaviour {
 	bool ScriptIsActivaed=false;
 	public GameObject Trapping;
 	RuneManagerScript myRuneManager;
+	public GameObject gameCam;
 
 
 	// Use this for initialization
@@ -32,6 +33,8 @@ public class EnableTrapMode : MonoBehaviour {
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 			Time.timeScale = 1f;
+			gameCam.GetComponent<BloomOptimized> ().enabled = false;
+
 			GetComponent<EnableTrapMode> ().enabled = false;
 			
 		}	
@@ -54,6 +57,7 @@ public class EnableTrapMode : MonoBehaviour {
 
 					Time.timeScale = 1f;
 					myRuneManager.timerOffense = 0;
+					gameCam.GetComponent<BloomOptimized> ().enabled = false;
 
 					GetComponent<EnableTrapMode> ().enabled = false;
 

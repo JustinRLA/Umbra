@@ -10,7 +10,7 @@ public class DragShadow : MonoBehaviour {
 	GameObject MyOverlay;
 	public GameObject RuneMangerMy;
 	Vector2 rayPoint;
-
+	public GameObject mainCamMy;
 	//	Vector2 MymousePos;
 
 	void OnMouseEnter()
@@ -34,6 +34,7 @@ public class DragShadow : MonoBehaviour {
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().timerDef = 0;
 		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
+		mainCamMy.GetComponent<BloomOptimized> ().enabled = false;
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
 
@@ -44,6 +45,7 @@ public class DragShadow : MonoBehaviour {
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
+		mainCamMy.GetComponent<BloomOptimized> ().enabled = false;
 		Destroy (gameObject);
 	}
 
@@ -53,6 +55,7 @@ public class DragShadow : MonoBehaviour {
 	}
 	void Start()
 	{
+		mainCamMy = GameObject.Find ("Main Camera");
 		RuneMangerMy=GameObject.Find ("RuneManager");
 		MyOverlay = GameObject.Find ("BlackOverlay");
 	}

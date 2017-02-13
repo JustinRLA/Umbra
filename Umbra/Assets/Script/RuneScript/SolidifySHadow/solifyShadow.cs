@@ -9,11 +9,13 @@ public class solifyShadow : MonoBehaviour {
 	public float colorRedOver;
 	public float colorGreenOver;
 	public float colorBlueOver;
+	public GameObject myMainCam;
 
 
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
+		myMainCam = GameObject.Find ("Main Camera");
 
 		mymyRuneManagerScript = RuneManager.GetComponent<RuneManagerScript> ();
 		MySolid = RuneManager.GetComponent<SolidifcationEnabled> ();
@@ -41,10 +43,11 @@ public class solifyShadow : MonoBehaviour {
 
 	void CancelAction()
 	{
-
+		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
 		Cursor.visible = false;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
 
 	}
 
@@ -54,6 +57,7 @@ public class solifyShadow : MonoBehaviour {
 		mymyRuneManagerScript.timerTactic = 0;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
 
 		GetComponent<Collider2D> ().isTrigger = false;
 		Time.timeScale = 1f;

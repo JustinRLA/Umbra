@@ -11,6 +11,8 @@ public class LureScript : MonoBehaviour {
 		public bool EnnemyDistracted;
 		public GameObject RuneManager;
 	RuneManagerScript myRuneManagerScript;
+	public GameObject myCam;
+	public bool inLureMode;
 
 	public bool Active=false;
 	public float timer;
@@ -23,14 +25,13 @@ public class LureScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
 	public void StartLure () {
 		//	if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W)) 
 		//	{
 		Active=true;
+		inLureMode = true;
 
 
 			ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = true;
@@ -42,9 +43,59 @@ public class LureScript : MonoBehaviour {
 				StartCoroutine (DistractEnnemy ());
 	//}
 		}
+
+	void Update()
+	{
+		if(Input.GetMouseButtonDown(1) && inLureMode==true)
+		{
+			StartCoroutine (DistractEnnemFast());
+		}
+	}
+
+	IEnumerator DistractEnnemFast()
+	{
+		inLureMode = false;
+		ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		myCam.GetComponent<BloomOptimized> ().enabled = false;
+		myRuneManagerScript.RuneActivated = false;
+
+		myRuneManagerScript.timerDef = 0;
+		ThePlayer.GetComponent<BoxCollider2D> ().enabled = true;
+
+		ThePlayer.GetComponent<Collider2D> ().enabled = true;
+		ThePlayer.GetComponent<CircleCollider2D> ().enabled = true;
+		ThePlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
+
+		Time.timeScale = 1.0f;
+		timer = 10;
+
+		ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
+		ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = false;
+		ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = false;
+		yield return new WaitForSeconds(2f);
+		timer = 8;
+		yield return new WaitForSeconds(2f);
+		timer = 6;
+		yield return new WaitForSeconds(2f);
+		timer = 4;
+		yield return new WaitForSeconds(2f);
+		timer = 2;
+		yield return new WaitForSeconds(2f);
+
+		ThePlayerShadow.transform.parent = ThePlayer.transform;
+		EnnemyDistracted = false;
+		ThePlayerShadow.transform.position = ThePlayer.transform.position;
+		ThePlayerShadow.SetActive (false);
+		Active = false;
+		GetComponent<LureScript> ().enabled = false;
+
+	}
+
+
+
 		IEnumerator DistractEnnemy()
 		{
-		
 			EnnemyDistracted = true;
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = false;
 		ThePlayer.GetComponent<Rigidbody2D> ().isKinematic = true;
@@ -53,13 +104,15 @@ public class LureScript : MonoBehaviour {
 		//ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 150;
 		ThePlayer.GetComponent<Collider2D> ().enabled = false;
 		ThePlayer.GetComponent<CircleCollider2D> ().enabled = false;
+		myRuneManagerScript.RuneModeEnabled = false;
 		ThePlayerShadow.transform.parent = null;
+		inLureMode = true;
 
 			yield return new WaitForSeconds(5f);
+		inLureMode = false;
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
-
+		myCam.GetComponent<BloomOptimized> ().enabled = false;
 		myRuneManagerScript.RuneActivated = false;
-		myRuneManagerScript.RuneModeEnabled = false;
 
 		myRuneManagerScript.timerDef = 0;
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = true;
@@ -90,6 +143,7 @@ public class LureScript : MonoBehaviour {
 			ThePlayerShadow.transform.position = ThePlayer.transform.position;
 			ThePlayerShadow.SetActive (false);
 		Active = false;
+		GetComponent<LureScript> ().enabled = false;
 		}
 
 }

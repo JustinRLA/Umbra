@@ -28,8 +28,11 @@ public class LineRendererTest : MonoBehaviour {
 	public bool TouchGood=false;
 	public bool ActivateThisShit=true;
 	public	bool touchedBadThing=false;
+
+	public GameObject MainCamera;
 	void Start()
 	{
+		MainCamera = GameObject.Find ("Main Camera");
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
 		myPlayer = GameObject.Find("2DCharacter");
 		PlayerMy = myPlayer.transform;
@@ -178,6 +181,8 @@ public class LineRendererTest : MonoBehaviour {
 		print ("end");
 		goThrougt = false;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
+		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
+
 		GetComponent<LineRendererTest> ().enabled = false;
 	}
 
@@ -194,7 +199,7 @@ public class LineRendererTest : MonoBehaviour {
 	{
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
-		
+		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
 		Time.timeScale = 1f;
 		GetComponent<LineRendererTest> ().enabled = false;
 

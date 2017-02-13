@@ -12,6 +12,8 @@ public class ShadowInstantiate : MonoBehaviour {
 	public GameObject Cache;
 	Vector2 MyPos;
 	public GameObject myRuneManager;
+	public GameObject myMainCam;
+
 
 	Transform InstantiateTransform;
 //	Vector2 MymousePos;

@@ -90,8 +90,8 @@ public class RuneManagerScript : MonoBehaviour
 			animCamFour.speed = 2;
 
 
-			myCamFour.GetComponent<BloomOptimized>().enabled=false;
-			myCamFour.GetComponent<Grayscale>().enabled=false;
+			myCam.GetComponent<BloomOptimized>().enabled=false;
+			//myCamFour.GetComponent<Grayscale>().enabled=false;
 			
 			Time.timeScale = 1;
 			animCamOne.SetBool ("Blue",false);
@@ -140,7 +140,7 @@ public class RuneManagerScript : MonoBehaviour
 			animCamThree.SetBool ("Blue",true);
 
 			Time.timeScale = 0.1f;
-			if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			if (Input.GetKeyDown (KeyCode.Alpha2)) {
 
 				if (DefFune == 1 && timerDef >= ActualDef && RuneActivated==false) {
 					// Rune D'ombre
@@ -156,7 +156,7 @@ public class RuneManagerScript : MonoBehaviour
 
 			}
 //
-			if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			if (Input.GetKeyDown (KeyCode.Alpha3)) {
 				// rune d'accrochage
 				if (TacticRune == 1 && timerTactic >= ActualTactic && RuneActivated==false) {
 					myLineRenderer.enabled = true;
@@ -170,7 +170,7 @@ public class RuneManagerScript : MonoBehaviour
 
 
 			}
-			if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			if (Input.GetKeyDown (KeyCode.Alpha1)) {
 				// Rune de piege
 				if (OffenseRune == 1 && timerOffense >= ActualOffense && RuneActivated==false) {
 					myenabledTrapMode.enabled = true;

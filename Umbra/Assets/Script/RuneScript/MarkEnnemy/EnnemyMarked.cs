@@ -68,7 +68,7 @@ public class EnnemyMarked : MonoBehaviour {
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
-
+		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
 		Cursor.visible = false;
 		Time.timeScale = 1f;
 
