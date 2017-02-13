@@ -30,9 +30,9 @@ public class ladderScript : MonoBehaviour {
 		if (canClimb == true) {
 			ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
 				if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space)==false && ThePlayer.transform.position.y<maxxY.position.y)
-				ThePlayer.transform.Translate (Vector2.up * Time.deltaTime);
+				ThePlayer.transform.Translate (Vector2.up * 2*Time.deltaTime);
 			if (Input.GetKey (KeyCode.S))
-				ThePlayer.transform.Translate (Vector2.down * Time.deltaTime);
+				ThePlayer.transform.Translate (Vector2.down * 2*Time.deltaTime);
 				if (Input.GetKey (KeyCode.Space))
 					JumpFromLader ();		
 
@@ -76,7 +76,8 @@ public class ladderScript : MonoBehaviour {
 		}void JumpFromLader()
 		{
 			ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
-			ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
+			//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
+			ThePlayer.GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 20);
 
 			StartCoroutine (ReturnToNormal ());
 

@@ -46,6 +46,7 @@ using UnityEngine.SceneManagement;
         }
 	public void Death()
 	{
+		print ("Bouhhhhhhhhhhhhhhhjhbhyb");
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 
@@ -113,6 +114,8 @@ using UnityEngine.SceneManagement;
 
         public void Move(float move, bool crouch, bool jump)
         {
+		if(MyRuneMan != null)
+		{
 		if(myRuneManScript.RuneModeEnabled==false && TruePlayer==true)
 		{
 			// If crouching, check to see if the character can stand up
@@ -180,7 +183,7 @@ using UnityEngine.SceneManagement;
 			//	ViewTriggerCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);	
 		//	if(crouch==false && move!=0)
 			//	ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
-
+			}
 		}
 		if(TruePlayer==false)
 		{

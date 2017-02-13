@@ -6,9 +6,11 @@ public class FollowPlayer : MonoBehaviour {
 	Vector3 ProjDir;
 	float angle;
 	public Transform ThePlayer;
+	public GameObject MyPlayer;
 	// Use this for initialization
 	void Start () {
-		
+		MyPlayer = GameObject.Find ("2DCharacter");
+		ThePlayer = MyPlayer.transform;
 	}
 	
 	// Update is called once per frame

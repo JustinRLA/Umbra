@@ -17,6 +17,8 @@ public class DeadScript : MonoBehaviour {
 	{
 		print("Im Dead");
 		gameObject.tag="Dead Ennemy";
+		gameObject.GetComponent<BoxCollider2D> ().isTrigger = true;
+
 
 	}
 }

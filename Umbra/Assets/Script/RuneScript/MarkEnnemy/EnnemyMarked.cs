@@ -16,6 +16,7 @@ public class EnnemyMarked : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		RuneManager = GameObject.Find ("RuneManager");
 		myMarkEnmnemyRune = RuneManager.GetComponent<MarkEnnemy> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 

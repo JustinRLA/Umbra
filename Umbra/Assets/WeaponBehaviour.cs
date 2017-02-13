@@ -18,10 +18,8 @@ public class WeaponBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "Player")
-			col.GetComponent<PlatformerCharacter2D> ().Death ();
 
-		if (col.tag == "Untagged")
+		if (col.tag == "bloc")
 			Destroy (gameObject);
 
 }

@@ -13,7 +13,7 @@ public class OeillereScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (IsInside && Input.GetKey (KeyCode.T)) {
+		if (IsInside && Input.GetKey (KeyCode.E)) {
 			Base.layer = 1;
 		} else
 			Base.layer = 0;

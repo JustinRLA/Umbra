@@ -17,11 +17,15 @@ public class checkIfAssassination : MonoBehaviour {
 		if(canAssassinate==true)
 		{
 			AssassinFeedback.SetActive (true);
-			if (Input.GetKeyDown (KeyCode.R))
+			if (Input.GetKeyDown (KeyCode.E))
 			{
 				print ("I kill you");	
 				ActualEnnemy.GetComponent<EnnnemyPatrol> ().enabled = false;
 				ActualEnnemy.GetComponent<DeadScript> ().enabled = true;
+				ActualEnnemy.GetComponent<DeadScript> ().EnnemyDeath();
+				AssassinFeedback.SetActive (false);
+
+
 			}
 		}
 		else

@@ -87,6 +87,10 @@ public class EnnnemyPatrol : MonoBehaviour {
 	}
 
 	void Start () {
+		MyPlayer = GameObject.Find ("2DCharacter");
+		ThePlayer = MyPlayer.transform;
+		RuneManager = GameObject.Find ("RuneManager");
+
 		myLureScript = RuneManager.GetComponent<LureScript> ();
 		myRunemanagerScript = RuneManager.GetComponent<RuneManagerScript> ();
 		gameObject.tag="ennemy";

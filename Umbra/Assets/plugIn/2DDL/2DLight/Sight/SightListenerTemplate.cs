@@ -25,7 +25,9 @@ public class SightListenerTemplate : MonoBehaviour {
 	Collider2D ViewCol;
 	public void Start()
 	{
-
+		PlayerView = GameObject.Find ("ViewTrigger");
+			LurePlayer=GameObject.Find("2DCharacterShadow");
+		RuneManager = GameObject.Find ("RuneManager");
 		if (Ennemy == false)
 			ViewCol = PlayerView.GetComponent<Collider2D> ();
 		

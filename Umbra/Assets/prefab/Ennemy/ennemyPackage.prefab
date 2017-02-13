@@ -208,14 +208,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4876922608129666}
   - component: {fileID: 212306021896614866}
+  - component: {fileID: 61392955395569308}
   - component: {fileID: 61345443181700414}
   - component: {fileID: 50466364155558772}
   - component: {fileID: 114781763769104126}
-  - component: {fileID: 61392955395569308}
   - component: {fileID: 82399046387334042}
   - component: {fileID: 114089563634939028}
   - component: {fileID: 114248862634090288}
-  - component: {fileID: 114844145586400980}
   - component: {fileID: 114625310271272996}
   m_Layer: 11
   m_Name: EnnemyTestPatrol
@@ -503,7 +502,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1900221647554584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.424988, y: 6.145011, z: 0}
+  m_LocalPosition: {x: 81.52, y: 16.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4876922608129666}
@@ -1145,6 +1144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThePlayer: {fileID: 0}
+  MyPlayer: {fileID: 0}
 --- !u!114 &114248862634090288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1175,6 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThePlayer: {fileID: 0}
+  MyPlayer: {fileID: 0}
 --- !u!114 &114346216735195262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1377,19 +1378,6 @@ MonoBehaviour:
   LeftLimit: {fileID: 4045748995843940}
   RuneManager: {fileID: 0}
   LureAttention: 0
---- !u!114 &114844145586400980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1725649282022978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf7f891b66de9648b081daf7f87a86a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RuneManager: {fileID: 0}
-  MyLight: {fileID: 1959276040606098}
 --- !u!114 &114871584740638490
 MonoBehaviour:
   m_ObjectHideFlags: 1
