@@ -13,6 +13,12 @@ public class LureScript : MonoBehaviour {
 	RuneManagerScript myRuneManagerScript;
 	public GameObject myCam;
 	public bool inLureMode;
+	public GameObject myCamPivot;
+	public GameObject myOwnLureCam;
+	public GameObject CamOne;
+	public GameObject CamTwo;
+	public GameObject CamThree;
+
 
 	public bool Active=false;
 	public float timer;
@@ -28,12 +34,22 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		myCam.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamOne.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamTwo.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamThree.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+
+		myCam.GetComponent<NoiseAndScratches> ().enabled = true;
+		CamOne.GetComponent<NoiseAndScratches> ().enabled = true;
+		CamTwo.GetComponent<NoiseAndScratches> ().enabled = true;
+		CamThree.GetComponent<NoiseAndScratches> ().enabled = true;
+
 		//	if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W)) 
-		//	{
+		//myOwnLureCam.SetActive(true);
+
 		Active=true;
 		inLureMode = true;
-
-
+		//myCamPivot.SetActive (false);
 			ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = true;
 			ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = true;
 		RuneManager.GetComponent<RuneManagerScript> ().timerTactic = 30;
@@ -54,6 +70,17 @@ public class LureScript : MonoBehaviour {
 
 	IEnumerator DistractEnnemFast()
 	{
+		myCam.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamOne.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamTwo.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamThree.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		myCam.GetComponent<NoiseAndScratches> ().enabled = false;
+		CamOne.GetComponent<NoiseAndScratches> ().enabled = false;
+		CamTwo.GetComponent<NoiseAndScratches> ().enabled = false;
+		CamThree.GetComponent<NoiseAndScratches> ().enabled = false;
+	//	myOwnLureCam.SetActive(false);
+
+	//	myCamPivot.SetActive (true);
 		inLureMode = false;
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		myCam.GetComponent<BloomOptimized> ().enabled = false;
@@ -73,6 +100,7 @@ public class LureScript : MonoBehaviour {
 		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 		ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = false;
 		ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = false;
+
 		yield return new WaitForSeconds(2f);
 		timer = 8;
 		yield return new WaitForSeconds(2f);
@@ -109,6 +137,18 @@ public class LureScript : MonoBehaviour {
 		inLureMode = true;
 
 			yield return new WaitForSeconds(5f);
+		myCam.GetComponent<NoiseAndScratches> ().enabled = false;
+		CamOne.GetComponent<NoiseAndScratches> ().enabled = false;
+		CamTwo.GetComponent<NoiseAndScratches> ().enabled = false;
+		CamThree.GetComponent<NoiseAndScratches> ().enabled = false;
+		myCam.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamOne.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamTwo.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+		CamThree.GetComponent<Animator> ().SetBool ("MegaBlue", false);
+
+		//myOwnLureCam.SetActive(false);
+
+		//myCamPivot.SetActive (true);
 		inLureMode = false;
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		myCam.GetComponent<BloomOptimized> ().enabled = false;
@@ -128,15 +168,15 @@ public class LureScript : MonoBehaviour {
 		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 			ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = false;
 			ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = false;
-			yield return new WaitForSeconds(2f);
+			yield return new WaitForSeconds(4f);
+		timer = 14;
+		yield return new WaitForSeconds(4f);
+		timer = 12;
+		yield return new WaitForSeconds(4f);
 		timer = 8;
-		yield return new WaitForSeconds(2f);
-		timer = 6;
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(4f);
 		timer = 4;
-		yield return new WaitForSeconds(2f);
-		timer = 2;
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(4f);
 
 		ThePlayerShadow.transform.parent = ThePlayer.transform;
 			EnnemyDistracted = false;

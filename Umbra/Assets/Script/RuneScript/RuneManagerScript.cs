@@ -94,10 +94,12 @@ public class RuneManagerScript : MonoBehaviour
 			//myCamFour.GetComponent<Grayscale>().enabled=false;
 			
 			Time.timeScale = 1;
+		
 			animCamOne.SetBool ("Blue",false);
 			animCamTwo.SetBool ("Blue",false);
 			animCamFour.SetBool ("Blue",false);
 			animCamThree.SetBool ("Blue",false);
+
 
 		}
 		//if (Input.GetKeyDown (KeyCode.E) && RuneModeEnabled == false)
@@ -112,10 +114,14 @@ public class RuneManagerScript : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.Q) && RuneModeEnabled==false)
 		{
-			
+			animCamOne.SetBool ("Blue",true);
+			animCamTwo.SetBool ("Blue",true);
+			animCamFour.SetBool ("Blue",true);
+			animCamThree.SetBool ("Blue",true);
+
 			RuneModeEnabled = true;
 			myCam.GetComponent<BloomOptimized>().enabled=true;
-			myCam.GetComponent<Grayscale>().enabled=true;
+			//myCam.GetComponent<Grayscale>().enabled=true;
 
 		}
 		if (Input.GetKeyDown (KeyCode.T) && RuneModeEnabled==true)
@@ -123,6 +129,7 @@ public class RuneManagerScript : MonoBehaviour
 			RuneModeEnabled = false;
 		myCam.GetComponent<BloomOptimized>().enabled=false;
 		myCam.GetComponent<Grayscale>().enabled=false;
+		
 		}
 		
 		if (RuneModeEnabled == true) { 
@@ -134,10 +141,7 @@ public class RuneManagerScript : MonoBehaviour
 			
 
 		//	Time.timeScale = 1;
-			animCamOne.SetBool ("Blue",true);
-			animCamTwo.SetBool ("Blue",true);
-			animCamFour.SetBool ("Blue",true);
-			animCamThree.SetBool ("Blue",true);
+		
 
 			Time.timeScale = 0.1f;
 			if (Input.GetKeyDown (KeyCode.Alpha2)) {
@@ -152,6 +156,16 @@ public class RuneManagerScript : MonoBehaviour
 					// Rune de Lure
 					myLureScript.enabled = true;
 					myLureScript.StartLure ();
+					animCamOne.SetBool ("Blue",false);
+					animCamTwo.SetBool ("Blue",false);
+					animCamFour.SetBool ("Blue",false);
+					animCamThree.SetBool ("Blue",false);
+
+					animCamOne.SetBool ("MegaBlue",true);
+					animCamTwo.SetBool ("MegaBlue",true);
+					animCamFour.SetBool ("MegaBlue",true);
+					animCamThree.SetBool ("MegaBlue",true);
+
 				}
 
 			}

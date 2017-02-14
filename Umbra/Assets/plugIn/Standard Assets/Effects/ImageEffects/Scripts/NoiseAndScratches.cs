@@ -2,8 +2,7 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace UnityStandardAssets.ImageEffects
-{
+
     [ExecuteInEditMode]
     [RequireComponent (typeof(Camera))]
     [AddComponentMenu("Image Effects/Noise/Noise and Scratches")]
@@ -139,4 +138,4 @@ namespace UnityStandardAssets.ImageEffects
             Graphics.Blit (source, destination, mat);
         }
     }
-}
+

@@ -83,7 +83,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public void Respawn()
 	{
 		gameObject.tag="ennemy";
-
+		GetComponent<Rigidbody2D> ().isKinematic = false;
+		GetComponent<BoxCollider2D> ().isTrigger = false;
 	}
 
 	void Start () {
@@ -386,6 +387,11 @@ public class EnnnemyPatrol : MonoBehaviour {
 		if (col.tag == "suspiciouis Sound")
 			InRange = true;
 
+		if (col.tag == "falseSoundTrigger")
+		{
+			mySighListernetTemplate.IsawTheLure = true;
+			Suspicious = true;
+		}
 		if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnThreeGo)
 		{
 			NavPointIGot = 3;

@@ -12,7 +12,7 @@ public class ShadowInstantiate : MonoBehaviour {
 	public GameObject Cache;
 	Vector2 MyPos;
 	public GameObject myRuneManager;
-	public GameObject myMainCam;
+	//public GameObject myMainCam;
 
 
 	Transform InstantiateTransform;
