@@ -6,7 +6,7 @@ public class checkIfAssassination : MonoBehaviour {
 	public GameObject AssassinFeedback;
 	public bool canAssassinate;
 	public GameObject ActualEnnemy;
-
+	public GameObject OtherEnnemy;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +35,18 @@ public class checkIfAssassination : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D col) {
 
+		if (col.tag == "ennemyClone") {
+			if (col.GetComponent<ClonePatrol> ().Alert == false)
+			{
+				canAssassinate = true;
+				OtherEnnemy = col.gameObject;
+			}
+		}
+
+//		else
+//			canAssassinate = false;
+		
+
 		if (col.tag == "ennemy") {
 			print ("See");
 			if (col.GetComponent<EnnnemyPatrol> ().Alert == false)
@@ -42,14 +54,18 @@ public class checkIfAssassination : MonoBehaviour {
 				canAssassinate = true;
 				ActualEnnemy = col.gameObject;
 			}
-		} else
-			canAssassinate = false;
+		} 
+//		else
+//			canAssassinate = false;
 	}
 	void OnTriggerExit2D (Collider2D col) {
 		if(col.tag=="ennemy")
 		{
 			canAssassinate=false;
 		}
+		if (col.tag == "ennemyClone") {
+				canAssassinate = true;
+			}
+		}
 
 		}
-}

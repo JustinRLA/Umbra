@@ -36,7 +36,7 @@ public class solifyShadow : MonoBehaviour {
 
 	void OnMouseOver()
 	{
-		print ("Enter");
+//		print ("Enter");
 		if (MySolid.CanClickable == true)
 			GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver,1);
 	}

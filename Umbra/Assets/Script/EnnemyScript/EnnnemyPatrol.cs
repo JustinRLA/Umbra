@@ -13,6 +13,13 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public GameObject CurrentNavPointGo;
 	public Transform LurePlayer;
 	public GameObject SawLureFeedback;
+	public Transform returnPoint;
+
+	public bool CloneIsUp;
+	public bool CloneIsDown;
+
+	public Transform UpPoint;
+	public Transform DownPoint;
 
 	public Transform NavPointOne_Right;
 	public Transform NavPointTwo_Left;
@@ -26,6 +33,17 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public GameObject Proj;
 	public Transform ProjStartPos;
 	public GameObject ProjStartObj;
+
+	public GameObject TeleportPointLeft;
+	Collider2D TeleportPointLeftCol;
+
+	public GameObject TeleportPointRight;
+	Collider2D TeleportPointRightCol;
+
+	public Transform TeleportPointLeftTransform;
+	public Transform TeleportPointRightTransform;
+
+
 
 	public bool alertcondition=false;
 	public bool suspiciousCondition=false;
@@ -57,7 +75,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public int DistranctionsSoud;
 	int SoundListerner=50;
 	public bool somethingHappen;
-
+	public bool isAClone;
+	float direction;
 	bool InRange=false;
 
 	public Transform ThePlayer;
@@ -88,6 +107,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 	}
 
 	void Start () {
+		TeleportPointLeftCol = TeleportPointLeft.GetComponent<Collider2D> ();
+		TeleportPointRightCol = TeleportPointRight.GetComponent < Collider2D> ();
 		MyPlayer = GameObject.Find ("2DCharacter");
 		ThePlayer = MyPlayer.transform;
 		RuneManager = GameObject.Find ("RuneManager");
@@ -127,8 +148,12 @@ public class EnnnemyPatrol : MonoBehaviour {
 			if (Vector3.Distance (CurrentNavPoint.position, transform.position) < 2)
 				speed = 0;
 		}
+
 		if(Alert==true )
 		{
+			if(ThePlayer.position.y<UpPoint.position.y)
+			{
+
 			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
 				flip ();
 			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
@@ -142,7 +167,34 @@ public class EnnnemyPatrol : MonoBehaviour {
 		
 			if (ThePlayer.position.x > RightLimit.position.x)
 			CurrentNavPoint = RightLimit;
-		
+				TeleportPointLeftCol.enabled = false;
+				TeleportPointRightCol.enabled = false;
+
+
+				if (trapped == false) {
+					if ((transform.position.x - CurrentNavPoint.position.x) < 5 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+						speed = 0;
+					if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+						speed = OriginalSpeed;
+				}
+				else
+					speed = 0;
+				
+			}
+			else
+			{
+				if(Vector3.Distance(TeleportPointLeftTransform.position,transform.position)<Vector3.Distance(TeleportPointRightTransform.position,transform.position))
+				{
+					TeleportPointLeftCol.enabled = true;
+					CurrentNavPoint = TeleportPointLeftTransform;
+				}
+				else
+				{
+					TeleportPointRightCol.enabled = true;
+					CurrentNavPoint = TeleportPointRightTransform;
+				}
+
+			}
 		}
 		if(Suspicious==true )
 		{
@@ -164,9 +216,13 @@ public class EnnnemyPatrol : MonoBehaviour {
 			}
 			else
 			{
+				
 				SawLureFeedback.SetActive (false);
-
 				LureAttention = false;
+
+				if(PhamomPoint.position.y<UpPoint.position.y)
+				{
+
 
 				if(PhamomPoint.position.x >= LeftLimit.position.x|| PhamomPoint.position.x <= RightLimit.position.x)
 					CurrentNavPoint = PhamomPoint;
@@ -176,7 +232,33 @@ public class EnnnemyPatrol : MonoBehaviour {
 
 			if (CurrentNavPoint.position.x > RightLimit.position.x)
 				CurrentNavPoint = RightLimit;
+
+					if (trapped == false) {
+						if( (transform.position.x-CurrentNavPoint.position.x) <5 || (transform.position.x-CurrentNavPoint.position.x) > -5)
+							speed = 0;
+
+						if((transform.position.x-CurrentNavPoint.position.x)>=5 || (transform.position.x-CurrentNavPoint.position.x) <=-5)
+							speed = OriginalSpeed;
+					}
+					else
+						speed = 0;
+					
 		}
+				else
+				{
+					if(Vector3.Distance(TeleportPointLeftTransform.position,transform.position)<Vector3.Distance(TeleportPointRightTransform.position,transform.position))
+					{
+						TeleportPointLeftCol.enabled = true;
+						CurrentNavPoint = TeleportPointLeftTransform;
+					}
+					else
+					{
+						TeleportPointRightCol.enabled = true;
+						CurrentNavPoint = TeleportPointRightTransform;
+					}
+				}
+
+				}
 		}
 		if (somethingHappen == false && timerState>-2)
 			timerState -= Time.deltaTime;
@@ -192,36 +274,54 @@ public class EnnnemyPatrol : MonoBehaviour {
 	
 	
 		//the actual way to make ennemy move toward a specific Point
-
-		float direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
-//		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
-		Vector3 movPos = new Vector3 (transform.position.x + ((direction/100)*speed* Time.deltaTime) , transform.position.y,transform.position.z);
-		transform.position = movPos ;
-
-		if(Alert==true) 
-			{
-			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 5 || (transform.position.x - CurrentNavPoint.position.x) > -5)
-					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
-					speed = OriginalSpeed;
-			}
-			else
-				speed = 0;
-		}	
-
-			if(Suspicious==true)
+		if(Suspicious==true)
 		{
-			if (trapped == false) {
-			if( (transform.position.x-CurrentNavPoint.position.x) <5 || (transform.position.x-CurrentNavPoint.position.x) > -5)
-			speed = 0;
-
-			if((transform.position.x-CurrentNavPoint.position.x)>=5 || (transform.position.x-CurrentNavPoint.position.x) <=-5)
-			speed = OriginalSpeed;
-			}
-			else
-				speed = 0;
+		direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
+//		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
+		Vector3 movPos = new Vector3 (transform.position.x + ((direction/100)*speed*2* Time.deltaTime) , transform.position.y,transform.position.z);
+		transform.position = movPos ;
 		}
+		if(Alert==true)
+		{
+			direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
+			//		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
+			Vector3 movPos = new Vector3 (transform.position.x + ((direction/100)*speed*4* Time.deltaTime) , transform.position.y,transform.position.z);
+			transform.position = movPos ;
+		}
+		if(Alert==false && Suspicious==false)
+		{
+			direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
+			//		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
+			Vector3 movPos = new Vector3 (transform.position.x + ((direction/100)*speed* Time.deltaTime) , transform.position.y,transform.position.z);
+			transform.position = movPos ;
+		}
+
+
+
+//		if(Alert==true) 
+//			{
+//			if (trapped == false) {
+//				if ((transform.position.x - CurrentNavPoint.position.x) < 5 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+//					speed = 0;
+//				if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+//					speed = OriginalSpeed;
+//			}
+//			else
+//				speed = 0;
+//		}	
+
+//			if(Suspicious==true)
+//		{
+//			if (trapped == false) {
+//			if( (transform.position.x-CurrentNavPoint.position.x) <5 || (transform.position.x-CurrentNavPoint.position.x) > -5)
+//			speed = 0;
+//
+//			if((transform.position.x-CurrentNavPoint.position.x)>=5 || (transform.position.x-CurrentNavPoint.position.x) <=-5)
+//			speed = OriginalSpeed;
+//			}
+//			else
+//				speed = 0;
+//		}
 		if(InRange==true && LureAttention==false)
 		{
 			SoundLevel = Vector3.Distance (ThePlayer.transform.position, transform.position);
@@ -274,13 +374,18 @@ public class EnnnemyPatrol : MonoBehaviour {
 		}
 		if(timerState>0 && timerState<=15)
 		{
+
 			Suspicious = true;
 				Alert = false;
 			if(timerState>14 &&  timerState<15)
 			{
+				
 				PhantomPlayer.transform.position = MyPlayer.transform.position;
 			PhamomPoint.position = ThePlayer.position;
+
 			}
+		//	if(PhamomPoint.position.y<
+
 			if(NavPointTwo_Left !=null)
 			{
 			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
@@ -292,7 +397,9 @@ public class EnnnemyPatrol : MonoBehaviour {
 			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
 				flip ();
 		
-	}
+				
+			}
+	//}
 		if(timerState>-1 &&  timerState<0)
 		{
 

@@ -20,7 +20,8 @@ public class SightListenerTemplate : MonoBehaviour {
 	LureScript myLureScript;
 	public bool IsawTheLure=false;
 	public GameObject LurePlayer;
-	public bool Ennemy;
+	public int TypeOfObj;
+	// 1= Ennemy....2= ennemy clone....3= Light
 	public GameObject PlayerView;
 	Collider2D ViewCol;
 	public void Start()
@@ -28,7 +29,7 @@ public class SightListenerTemplate : MonoBehaviour {
 		PlayerView = GameObject.Find ("ViewTrigger");
 			//LurePlayer=GameObject.Find("2DCharacterShadow");
 		RuneManager = GameObject.Find ("RuneManager");
-		if (Ennemy == false)
+		if (TypeOfObj == 3)
 			ViewCol = PlayerView.GetComponent<Collider2D> ();
 		
 		myLureScript = RuneManager.GetComponent<LureScript> ();
@@ -52,7 +53,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	void Update()
 	{
-		if(Ennemy==true)
+		if(TypeOfObj==1)
 		{
 
 		if (myLureScript.Active== false)
@@ -71,11 +72,32 @@ public class SightListenerTemplate : MonoBehaviour {
 		if (transform.parent.GetComponent<EnnnemyPatrol> ().Alert == true)
 			throwSuspicious = false;
 		}
+		if(TypeOfObj==2)
+		{
+
+			if (myLureScript.Active== false)
+				IsawTheLure = false;
+
+			if(mySight==null)
+			{
+				iSeeYou = false;
+				throwSuspicious = false;
+				throwAlert = false;
+			}
+
+			if (transform.parent.GetComponent<ClonePatrol> () == null)
+				iSeeYou = false;
+
+			if (transform.parent.GetComponent<ClonePatrol> ().Alert == true)
+				throwSuspicious = false;
+		}
+
+
 	}
 
 
 	public void myListener_onEnter(GameObject go){
-		if(Ennemy==true)
+		if(TypeOfObj==1)
 		{
 		if(throwAlert==false || throwSuspicious==false)
 		{
@@ -104,7 +126,7 @@ public class SightListenerTemplate : MonoBehaviour {
 			StopCoroutine (InSight ());
 		
 		}
-		else
+		if(TypeOfObj==3)
 		{
 			if (go.tag == "Player")
 			{
@@ -128,7 +150,7 @@ public class SightListenerTemplate : MonoBehaviour {
 	
 
 	public void myListener_onExit(GameObject go){
-		if(Ennemy==true)
+		if(TypeOfObj==1)
 		{
 			
 		if (go.tag == "Player")
@@ -142,6 +164,19 @@ public class SightListenerTemplate : MonoBehaviour {
 			throwAlert = false;
 		}
 
+			if(TypeOfObj==2)
+			{
+
+				if (go.tag == "Player")
+				{
+					StopCoroutine (InSight ());
+					//			print(Vector3.Distance(go.transform.position,transform.position));
+					//print()
+					//	print ("I SawYou");
+					iSeeYou = false;
+					throwSuspicious = false;
+					throwAlert = false;
+				}
 
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 			//print (go.name + " --> OnExit() event");
@@ -149,9 +184,8 @@ public class SightListenerTemplate : MonoBehaviour {
 
 			}
 		}
-		else
+		if(TypeOfObj==3)
 		{
-
 			if (go.tag == "Player")
 			{
 				ViewCol.transform.localScale = new Vector3 (1,1,1);
@@ -159,7 +193,7 @@ public class SightListenerTemplate : MonoBehaviour {
 			}
 		}
 	}
-
+	}
 	public void myListener_onInside(GameObject go){
 		
 //		if (go.tag == "Player")
@@ -198,7 +232,5 @@ public class SightListenerTemplate : MonoBehaviour {
 		print ("throoooooooooooo");
 		yield return new WaitForSeconds (1f);
 		throwAlert = false;
-
-	
 	}
 }

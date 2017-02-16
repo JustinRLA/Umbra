@@ -9,6 +9,7 @@ public class StartCondition : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Cursor.visible = true;
 		mySetRune = SetRunner.GetComponent<SetRune> ();
 
 	}

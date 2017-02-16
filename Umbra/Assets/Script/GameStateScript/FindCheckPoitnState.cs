@@ -10,8 +10,11 @@ public class FindCheckPoitnState : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if(Savesystem != null){
+
 	Savesystem = GameObject.Find ("SaveSystem");
 	Checkpointstate = Savesystem.GetComponent<SaveSystem> ().SavePoint;
+		}
 
 	}
 	
@@ -20,6 +23,7 @@ public class FindCheckPoitnState : MonoBehaviour {
 
 		if (restartObject.GetComponent<RestartGame> ().restart == true)
 		{
+			if(Savesystem!=null)
 			Savesystem.GetComponent<SaveSystem> ().SavePoint = 0;
 			SceneManager.LoadScene ("Chapter One");
 				
