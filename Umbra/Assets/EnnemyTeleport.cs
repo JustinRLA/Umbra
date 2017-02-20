@@ -28,11 +28,19 @@ public class EnnemyTeleport : MonoBehaviour {
 				col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint = col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint_RegularLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.transform;
+<<<<<<< HEAD
 //				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
 
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
 //				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+=======
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
+
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+>>>>>>> origin/master
 				col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit_RegularLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit_RegularLevel;
 
@@ -51,11 +59,19 @@ public class EnnemyTeleport : MonoBehaviour {
 					col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint = col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint_RegularLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.transform;
+<<<<<<< HEAD
 					//col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
 
 					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
 					//col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+=======
+					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
+
+					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
+					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
+					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+>>>>>>> origin/master
 					col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit_RegularLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit_RegularLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().EnnemyLevel = 2;
@@ -67,11 +83,19 @@ public class EnnemyTeleport : MonoBehaviour {
 					col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint = col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint_UpLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_UpLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.transform;
+<<<<<<< HEAD
 					//col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
 
 					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_UpLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
 					//col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+=======
+					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
+
+					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_UpLevel;
+					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
+					col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+>>>>>>> origin/master
 					col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit_UpLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit_UpLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().EnnemyLevel = 3;
@@ -90,11 +114,19 @@ public class EnnemyTeleport : MonoBehaviour {
 				col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint = col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint_RegularLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.transform;
+<<<<<<< HEAD
 				//col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
 
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
 				//col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+=======
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
+
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_RegularLevel;
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+>>>>>>> origin/master
 				col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit_RegularLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit_RegularLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().EnnemyLevel = 2;
@@ -107,11 +139,19 @@ public class EnnemyTeleport : MonoBehaviour {
 				col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint = col.GetComponent<EnnnemyPatrolUpgraded> ().DownPoint_DownLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_DownLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.transform;
+<<<<<<< HEAD
 				//col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
 
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_DownLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
 				//col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+=======
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeftCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_Actual.GetComponent<Collider2D> ();
+
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointLeft_DownLevel;
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightTransform_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.transform;
+				col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRightCol_Actual = col.GetComponent<EnnnemyPatrolUpgraded> ().TeleportPointRight_Actual.GetComponent<Collider2D> ();
+>>>>>>> origin/master
 				col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().LeftLimit_DownLevel;
 				col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit = col.GetComponent<EnnnemyPatrolUpgraded> ().RightLimit_DownLevel;
 					col.GetComponent<EnnnemyPatrolUpgraded> ().EnnemyLevel = 1;
