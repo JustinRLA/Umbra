@@ -28,6 +28,12 @@ public class RuneManagerScript : MonoBehaviour
 	Animator animCamTwo;
 	Animator animCamThree;
 	Animator animCamFour;
+	public GameObject textleure;
+	public GameObject textaccrochage;
+	public GameObject texttrappe;
+	public GameObject textSolid;
+	public GameObject textMark;
+	public GameObject textOmbre;
 
 	LureScript myLureScript;
 	public GameObject ThePlayer;
@@ -39,6 +45,7 @@ public class RuneManagerScript : MonoBehaviour
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
+
 		animCamOne=myCam.GetComponent<Animator>();
 		animCamTwo=myCamTwo.GetComponent<Animator>();
 		animCamThree=myCamThree.GetComponent<Animator>();
@@ -67,6 +74,37 @@ public class RuneManagerScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+		if(OffenseRune==1)
+		{
+			texttrappe.SetActive(true);
+			textMark.SetActive(false);
+		}
+		if(OffenseRune==2)
+		{
+			texttrappe.SetActive(false);
+			textMark.SetActive(true);
+		}
+		if(DefFune==1)
+		{
+			textleure.SetActive(false);
+			textOmbre.SetActive(true);
+		}
+		if(DefFune==2)
+		{
+			textleure.SetActive(true);
+			textOmbre.SetActive(false);
+		}
+		if(TacticRune==1)
+		{
+			textSolid.SetActive(false);
+			textaccrochage.SetActive(true);
+		}
+		if(TacticRune==2)
+		{
+			textSolid.SetActive(true);
+			textaccrochage.SetActive(false);
+		}
+
 		if(timerDef<ActualDef)
 		{
 			timerDef += Time.deltaTime;

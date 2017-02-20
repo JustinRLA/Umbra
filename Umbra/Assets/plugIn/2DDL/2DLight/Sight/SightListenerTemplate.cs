@@ -66,10 +66,10 @@ public class SightListenerTemplate : MonoBehaviour {
 		throwAlert = false;
 		}
 
-		if (transform.parent.GetComponent<EnnnemyPatrol> () == null)
+			if (EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> () == null)
 			iSeeYou = false;
 
-		if (transform.parent.GetComponent<EnnnemyPatrol> ().Alert == true)
+			if (EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert == true)
 			throwSuspicious = false;
 		}
 		if(TypeOfObj==2)
@@ -105,7 +105,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 				print ("SAWWWWWWWWWWWWWWWWWWWWWWW");
 				IsawTheLure = true;
-				EnnemyBase.GetComponent<EnnnemyPatrol> ().Suspicious = true;
+					EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Suspicious = true;
 			} 
 //			else
 //				IsawTheLure = false;

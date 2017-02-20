@@ -12,13 +12,18 @@ public class EnnemyMarked : MonoBehaviour {
 	public float colorGreenOver;
 	public GameObject myCam;
 	public GameObject myMainCam;
-
+	public GameObject ennemyBase;
+	public GameObject StateObj;
 
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
 		myMarkEnmnemyRune = RuneManager.GetComponent<MarkEnnemy> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
+		myMainCam=GameObject.Find("Main Camera");
+		myCam=GameObject.Find("Main Camera (1)");
+
+
 
 	}
 
@@ -40,12 +45,12 @@ public class EnnemyMarked : MonoBehaviour {
 	{
 		print ("Enter");
 		if (myMarkEnmnemyRune.CanBeClicked == true)
-		GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver,1);
+			ennemyBase.GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver,1);
 	}
 
 	void OnMouseExit()
 	{
-		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
+		ennemyBase.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
 
 	}
 

@@ -11,11 +11,13 @@ public class EnableTrapMode : MonoBehaviour {
 	public GameObject Trapping;
 	RuneManagerScript myRuneManager;
 	public GameObject gameCam;
+	public GameObject trapcam;
 
 
 	// Use this for initialization
 	void Start () {
 		myRuneManager = GetComponent<RuneManagerScript> ();
+		trapcam = GameObject.Find ("Main CameraTrapRegion");
 	}
 	
 	// Update is called once per frame
@@ -34,6 +36,7 @@ public class EnableTrapMode : MonoBehaviour {
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 			Time.timeScale = 1f;
 			gameCam.GetComponent<BloomOptimized> ().enabled = false;
+			trapcam.SetActive (false);
 
 			GetComponent<EnableTrapMode> ().enabled = false;
 			
@@ -48,7 +51,7 @@ public class EnableTrapMode : MonoBehaviour {
 
 			if(CanInstantiate==true)
 			{
-				if(Input.GetMouseButton(0))
+				if(Input.GetMouseButton(0) && ScriptIsActivaed==true)
 				{
 
 					Instantiate (Trapping, myraycast.point,transform.rotation);
@@ -58,6 +61,8 @@ public class EnableTrapMode : MonoBehaviour {
 					Time.timeScale = 1f;
 					myRuneManager.timerOffense = 0;
 					gameCam.GetComponent<BloomOptimized> ().enabled = false;
+					ScriptIsActivaed=false;
+					trapcam.SetActive (false);
 
 					GetComponent<EnableTrapMode> ().enabled = false;
 
@@ -72,7 +77,7 @@ public class EnableTrapMode : MonoBehaviour {
 		Time.timeScale = 0.1f;
 		Cursor.visible = true;
 		ScriptIsActivaed = true;
-
+		trapcam.SetActive (true);
 	}
 
 }

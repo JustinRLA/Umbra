@@ -28,6 +28,7 @@ public class LineRendererTest : MonoBehaviour {
 	public bool TouchGood=false;
 	public bool ActivateThisShit=true;
 	public	bool touchedBadThing=false;
+	public GameObject CamGrap;
 
 	public GameObject MainCamera;
 	void Start()
@@ -49,7 +50,7 @@ public class LineRendererTest : MonoBehaviour {
 
 		if(	ActivateThisShit == true)
 			{
-
+			CamGrap.SetActive (true);
 		myRaycast = Physics2D.Linecast (mousePos, PlayerPos);
 
 				if(line == null)
@@ -70,6 +71,18 @@ public class LineRendererTest : MonoBehaviour {
 			{
 					Destroy (line);	
 				Cancelation();
+			}
+			}
+
+			if(Input.GetMouseButtonDown(0))
+			{
+				if(TouchGood==false || touchedBadThing==true)
+				{
+				if(line)
+				{
+					Destroy (line);	
+					Cancelation();
+				}
 			}
 			}
 			if(Input.GetMouseButtonDown(0))
@@ -182,6 +195,8 @@ public class LineRendererTest : MonoBehaviour {
 		goThrougt = false;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
 		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
+		ActivateThisShit = false;
+		CamGrap.SetActive (false);
 
 		GetComponent<LineRendererTest> ().enabled = false;
 	}
@@ -201,9 +216,10 @@ public class LineRendererTest : MonoBehaviour {
 		myRuneManagerScript.RuneModeEnabled = false;
 		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
 		Time.timeScale = 1f;
+		ActivateThisShit = false;
+		CamGrap.SetActive (false);
 		GetComponent<LineRendererTest> ().enabled = false;
 
-		
 	}
 
 //		private void addColliderToLine()

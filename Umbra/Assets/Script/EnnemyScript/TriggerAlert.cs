@@ -18,8 +18,8 @@ public class TriggerAlert : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col) {
 		if (col.tag == "Player") 
 		{
-			EnnemyBase.GetComponent<EnnnemyPatrol> ().Alert=true;
-			EnnemyBase.GetComponent<EnnnemyPatrol> ().timerState = 30;
+			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert=true;
+			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
 
 		}
 		}

@@ -20,7 +20,7 @@ public class checkIfAssassination : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.E))
 			{
 				print ("I kill you");	
-				ActualEnnemy.GetComponent<EnnnemyPatrol> ().enabled = false;
+				ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().enabled = false;
 				ActualEnnemy.GetComponent<DeadScript> ().enabled = true;
 				ActualEnnemy.GetComponent<DeadScript> ().EnnemyDeath();
 				AssassinFeedback.SetActive (false);
@@ -49,7 +49,7 @@ public class checkIfAssassination : MonoBehaviour {
 
 		if (col.tag == "ennemy") {
 			print ("See");
-			if (col.GetComponent<EnnnemyPatrol> ().Alert == false)
+			if (col.GetComponent<EnnnemyPatrolUpgraded> ().Alert == false)
 			{
 				canAssassinate = true;
 				ActualEnnemy = col.gameObject;

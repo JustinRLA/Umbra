@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 4716923541422588}
   - component: {fileID: 61547243862564316}
   - component: {fileID: 114007424945022616}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: AssassinTrigger
   m_TagString: assassinTrigger
   m_Icon: {fileID: 0}
@@ -748,8 +748,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355076429119180}
-  m_LocalRotation: {x: -0, y: -0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 5.328429, y: -4.7834454, z: 15.465906}
+  m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
+  m_LocalPosition: {x: 5.328429, y: -4.83, z: 15.465906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4971228060952138}
@@ -1438,7 +1438,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.68}
+  m_Size: {x: 0.4, y: 0.68}
 --- !u!61 &61742553227891994
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1604,6 +1604,7 @@ MonoBehaviour:
   AssassinFeedback: {fileID: 1426205289327166}
   canAssassinate: 0
   ActualEnnemy: {fileID: 0}
+  OtherEnnemy: {fileID: 0}
 --- !u!114 &114051593041056312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1649,7 +1650,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294901961
+    m_Bits: 4294443211
   RunTrigger: {fileID: 1597233184600790}
   TruePlayer: 1
   Climb: 0

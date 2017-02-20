@@ -17,7 +17,7 @@ public class TrapEnnemy : MonoBehaviour {
 
 		if (col.tag == "ennemy")
 		{
-			col.GetComponent<EnnnemyPatrol> ().StartCorTrap ();
+			col.GetComponent<EnnnemyPatrolUpgraded> ().StartCorTrap ();
 			Destroy (gameObject);
 		}
 

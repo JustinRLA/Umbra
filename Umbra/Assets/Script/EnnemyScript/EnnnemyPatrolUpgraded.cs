@@ -8,32 +8,38 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public GameObject NavPoitnOneGo;
 	public GameObject NavPoitnTwoGo;
 	public GameObject NavPoitnThreeGo;
-
+	public bool lookRight;
 	public Transform CurrentNavPoint;
 	public GameObject CurrentNavPointGo;
 	public Transform LurePlayer;
 	public GameObject SawLureFeedback;
 	public Transform returnPoint;
+	public GameObject FliPBase;
+	public GameObject StateObj;
 
-	public bool CloneIsUp;
-	public bool CloneIsDown;
-
+	public bool PlayerIsUp;
+	public bool PlayerIsDown;
+	Vector3 movPos;
 
 
 	public Transform UpPoint;
+	public Transform UpPoint_UpLevel;
+
 	public Transform UpPoint_RegularLevel;
 	public Transform UpPoint_DownLev;
 
 
 	public Transform DownPoint;
+	public Transform DownPoint_DownLevel;
 	public Transform DownPoint_RegularLevel;
 	public Transform DownPoint_UpLevel;
 
 	public Transform NavPointOne_Right;
 	public Transform NavPointTwo_Left;
 	public Transform NavPointThree_EvenMoreLeft;
+	public bool backHome;
 
-
+	public bool navRight;
 	public int waitingTimeNavOne;
 	public int waitingTimeNavTwo;
 	public int waitingTimeNavThree;
@@ -48,37 +54,29 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public GameObject TeleportPointLeft_Actual;
 	public GameObject TeleportPointRight_Actual;
 
-	public Collider2D TeleportPointLeftCol_Actual;
-	public Collider2D TeleportPointRightCol_Actual;
 
 
 
 
 	public GameObject TeleportPointLeft_RegularLevel;
-	Collider2D TeleportPointLeftCol_RegularLevel;
 
 	public GameObject TeleportPointRight_RegularLevel;
-	Collider2D TeleportPointRightCol_RegularLevel;
 
 	public Transform TeleportPointLeftTransform_RegularLevel;
 	public Transform TeleportPointRightTransform_RegularLevel;
 
 
 	public GameObject TeleportPointLeft_UpLevel;
-	Collider2D TeleportPointLeftCol_UpLevel;
 
 	public GameObject TeleportPointRight_UpLevel;
-	Collider2D TeleportPointRightCol_UpLevel;
 
 	public Transform TeleportPointLeftTransform_UpLevel;
 	public Transform TeleportPointRightTransform_UpLevel;
 
 
 	public GameObject TeleportPointLeft_DownLevel;
-	Collider2D TeleportPointLeftCol_DownLevel;
 
 	public GameObject TeleportPointRight_DownLevel;
-	Collider2D TeleportPointRightCol_DownLevel;
 
 	public Transform TeleportPointLeftTransform_DownLevel;
 	public Transform TeleportPointRightTransform_DownLevel;
@@ -92,9 +90,12 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public Transform PhamomPoint;
 
 	public GameObject MyPlayer;
+	public Transform regularSpawnPoint;
+	public Transform UpSpawmnPoint;
+	public Transform DownSpawnPoint;
 
 	public int FlipScale;
-	bool isFLippe=false;
+	public bool isFLippe=false;
 
 	public int NavPointIGot;
 
@@ -157,6 +158,56 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 	}
 
+	void goDownFloor()
+	{
+		EnnemyLevel=1;
+		transform.position=DownSpawnPoint.position;
+		UpPoint=UpPoint_DownLev;
+		TeleportPointLeft_Actual= TeleportPointLeft_DownLevel;
+		TeleportPointLeftTransform_Actual=TeleportPointLeftTransform_DownLevel;
+		
+		TeleportPointRight_Actual= TeleportPointRight_DownLevel;
+		TeleportPointRightTransform_Actual=TeleportPointRightTransform_DownLevel;
+		DownPoint=DownPoint_DownLevel;
+		LeftLimit=LeftLimit_DownLevel;
+		RightLimit=RightLimit_DownLevel;
+		
+	}
+
+
+	void goNormalFlood()
+	{
+		backHome=false;
+		EnnemyLevel=2;
+		transform.position=regularSpawnPoint.position;
+		UpPoint=UpPoint_RegularLevel;
+		TeleportPointLeft_Actual= TeleportPointLeft_RegularLevel;
+		TeleportPointLeftTransform_Actual=TeleportPointLeftTransform_RegularLevel;
+
+		TeleportPointRight_Actual= TeleportPointRight_RegularLevel;
+		TeleportPointRightTransform_Actual=TeleportPointRightTransform_RegularLevel;
+		DownPoint=DownPoint_RegularLevel;
+		LeftLimit=LeftLimit_RegularLevel;
+		RightLimit=RightLimit_RegularLevel;
+
+	}
+
+	void goUpFloor()
+	{
+		EnnemyLevel=3;
+		transform.position=UpSpawmnPoint.position;
+		UpPoint=UpPoint_UpLevel;
+		TeleportPointLeft_Actual=TeleportPointLeft_UpLevel;
+		TeleportPointLeftTransform_Actual=TeleportPointLeftTransform_UpLevel;
+
+		TeleportPointRight_Actual= TeleportPointRight_RegularLevel;
+		TeleportPointRightTransform_Actual=TeleportPointRightTransform_UpLevel;
+		DownPoint=DownPoint_UpLevel;
+		LeftLimit=LeftLimit_UpLevel;
+		RightLimit=RightLimit_UpLevel;
+
+
+	}
 	public void Respawn()
 	{
 		gameObject.tag="ennemy";
@@ -165,16 +216,19 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	}
 
 	void Start () {
-		EnnemyLevel = 1;
+		UpPoint = UpPoint_RegularLevel;
+			DownPoint=DownPoint_RegularLevel;
+		
+		EnnemyLevel = 2;
+		RightLimit = RightLimit_RegularLevel;
+		LeftLimit = LeftLimit_RegularLevel;
 
-		TeleportPointLeftCol_RegularLevel = TeleportPointLeft_RegularLevel.GetComponent<Collider2D> ();
-		TeleportPointRightCol_RegularLevel = TeleportPointRight_RegularLevel.GetComponent < Collider2D> ();
 
-		TeleportPointLeftCol_UpLevel=TeleportPointLeft_UpLevel.GetComponent<Collider2D> ();
-		TeleportPointRightCol_UpLevel=TeleportPointRight_UpLevel.GetComponent<Collider2D> ();
+		TeleportPointLeft_Actual= TeleportPointLeft_RegularLevel;
+		TeleportPointLeftTransform_Actual=TeleportPointLeftTransform_RegularLevel;
 
-		TeleportPointLeftCol_DownLevel=TeleportPointLeft_DownLevel.GetComponent<Collider2D> ();
-		TeleportPointRightCol_DownLevel=TeleportPointRight_DownLevel.GetComponent<Collider2D> ();
+		TeleportPointRight_Actual= TeleportPointRight_RegularLevel;
+		TeleportPointRightTransform_Actual=TeleportPointRightTransform_RegularLevel;
 
 		MyPlayer = GameObject.Find ("2DCharacter");
 		ThePlayer = MyPlayer.transform;
@@ -207,198 +261,409 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //	
 //	// Update is called once per frame
 //
-	void Update () {
+	void AlertInMode()
+	{
+		Alert = true;
+		Suspicious = false;
+		backHome = false;
+
+		if(ThePlayer.position.y<UpPoint.position.y && ThePlayer.position.y>DownPoint.position.y)
+		{
+
+			PlayerIsUp = false;
+			PlayerIsDown = false;
+			if (CurrentNavPoint.position.x-transform.position.x <0)
+			{
+				lookRight=false;
+				flip ();
+			}
+			if (CurrentNavPoint.position.x-transform.position.x >0)
+			{
+				lookRight=true;
+				flip ();
+			}
+
+
+			if(ThePlayer.position.x >= LeftLimit.position.x|| CurrentNavPoint.position.x <= RightLimit.position.x)
+				CurrentNavPoint = ThePlayer;
+
+			if (ThePlayer.position.x < LeftLimit.position.x)
+				CurrentNavPoint = LeftLimit;
+
+			if (ThePlayer.position.x > RightLimit.position.x)
+				CurrentNavPoint = RightLimit;
+
+			//					TeleportPointLeftCol_RegularLevel.enabled = false;
+			//					TeleportPointRightCol_RegularLevel.enabled = false;
+			//
+			//					TeleportPointLeftCol_DownLevel.enabled = false;
+			//					TeleportPointRightCol_DownLevel.enabled = false;
+
+
+			if (trapped == false) {
+				if ((transform.position.x - CurrentNavPoint.position.x) < 5 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+					speed = 0;
+				if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+					speed = OriginalSpeed;
+			}
+			else
+				speed = 0;
+		}
+
+
+		if(ThePlayer.position.y > UpPoint.position.y)
+		{
+			PlayerIsUp = true;
+			if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
+				CurrentNavPoint=TeleportPointLeftTransform_Actual;
+			else
+				CurrentNavPoint=TeleportPointRightTransform_Actual;
+
+			if (CurrentNavPoint.position.x-transform.position.x <0)
+			{
+				lookRight=false;
+				flip ();
+			}
+			if (CurrentNavPoint.position.x-transform.position.x >0)
+			{
+				lookRight=true;
+				flip ();
+			}
+
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==1)
+					goNormalFlood();
+
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==2)
+					goUpFloor();
+
+			if (trapped == false) {
+				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+					speed = 0;
+				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+					speed = OriginalSpeed;
+			}
+			else
+				speed = 0;
+
+
+		}
+
+		if(ThePlayer.position.y<DownPoint.position.y)
+		{
+			PlayerIsDown = true;
+			if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
+				CurrentNavPoint = TeleportPointLeftTransform_Actual;
+			else
+				CurrentNavPoint = TeleportPointRightTransform_Actual;
+
+				if (CurrentNavPoint.position.x-transform.position.x <0)
+				{
+					lookRight=false;
+				flip ();
+				}
+				if (CurrentNavPoint.position.x-transform.position.x >0)
+				{
+					lookRight=true;
+					flip ();
+				}
+
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==3)
+					goNormalFlood();
+
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==2)
+					goDownFloor();
+	
+			if (trapped == false) {
+				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+					speed = 0;
+				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+					speed = OriginalSpeed;
+			}
+			else
+				speed = 0;
+
+		}
+	}
+
+	void InSuspiciousMode()
+	{
+		Alert = false;
+		Suspicious = true;
+		backHome = false;
+
+		if(mySighListernetTemplate.IsawTheLure==true)
+		{
+			LureAttention = true;
+			SawLureFeedback.SetActive (true);
+			if(LurePlayer.position.x >= LeftLimit.position.x|| LurePlayer.position.x <= RightLimit.position.x)
+				CurrentNavPoint = LurePlayer;
+
+			if (LurePlayer.position.x < LeftLimit.position.x)
+				CurrentNavPoint = LeftLimit;
+
+			if (LurePlayer.position.x > RightLimit.position.x)
+				CurrentNavPoint = RightLimit;
+
+			timerState = myLureScript.timer;
+		}
+		else
+		{
+
+			SawLureFeedback.SetActive (false);
+			LureAttention = false;
+			backHome = false;
+
+			if(PhamomPoint.position.y<UpPoint.position.y && PhamomPoint.position.y>DownPoint.position.y)
+			{
+				PlayerIsUp = false;
+				PlayerIsDown = false;
+				if (CurrentNavPoint.position.x-transform.position.x <0)
+				{
+					lookRight=false;
+					flip ();
+				}
+				if (CurrentNavPoint.position.x-transform.position.x >0)
+				{
+					lookRight=true;
+					flip ();
+				}
+
+				if(PhamomPoint.position.x >= LeftLimit.position.x|| CurrentNavPoint.position.x <= RightLimit.position.x)
+					CurrentNavPoint = PhamomPoint;
+
+				if (PhamomPoint.position.x < LeftLimit.position.x)
+					CurrentNavPoint = LeftLimit;
+
+				if (PhamomPoint.position.x > RightLimit.position.x)
+					CurrentNavPoint = RightLimit;
+
+				//					TeleportPointLeftCol_RegularLevel.enabled = false;
+				//					TeleportPointRightCol_RegularLevel.enabled = false;
+				//
+				//					TeleportPointLeftCol_DownLevel.enabled = false;
+				//					TeleportPointRightCol_DownLevel.enabled = false;
+
+
+				if (trapped == false) {
+					if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+						speed = 0;
+					if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+						speed = OriginalSpeed;
+				}
+				else
+					speed = 0;
+			}
+
+
+			if(PhamomPoint.position.y > UpPoint.position.y)
+			{
+				PlayerIsUp = true;
+				if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
+					CurrentNavPoint = TeleportPointLeftTransform_Actual;
+					else
+						CurrentNavPoint = TeleportPointRightTransform_Actual;
+
+
+					if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+					{
+						lookRight=false;
+						flip ();
+					}
+					if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+					{
+						lookRight=true;
+						flip ();
+					}
+					if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==1)
+						goNormalFlood();
+					
+					if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==2)
+						goUpFloor();
+			
+				if (trapped == false) {
+					if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+						speed = 0;
+					if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+						speed = OriginalSpeed;
+				}
+				else
+					speed = 0;
+
+			}
+
+			if(PhamomPoint.position.y<DownPoint.position.y)
+			{
+				PlayerIsDown = true;
+				if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
+					CurrentNavPoint = TeleportPointLeftTransform_Actual;
+				else
+					CurrentNavPoint=TeleportPointRightTransform_Actual;
+
+
+					if (CurrentNavPoint.position.x-transform.position.x <0)
+					{
+						lookRight=false;
+						flip ();
+					}
+					if (CurrentNavPoint.position.x-transform.position.x >0)
+					{
+						lookRight=true;
+						flip ();
+					}
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==3)
+					goNormalFlood();
+				
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==2)
+					goDownFloor();
+
+
+
+
+				if (trapped == false) {
+					if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+						speed = 0;
+					if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+						speed = OriginalSpeed;
+				}
+				else
+					speed = 0;
+
+			}
+		}
+
+	
+	}
+
+	void NeutralMode()
+	{
+		if(EnnemyLevel==1 || EnnemyLevel ==3)
+			backHome=true;
+
+		Suspicious = false;
+		if (trapped == false)
+			speed = OriginalSpeed;
+		else
+			speed = 0;
+		if(EnnemyLevel==2)
+		{
+			if(NavPointTwo_Left!=null)
+			{
+
+				if((Vector3.Distance(transform.position,NavPointOne_Right.position))<(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
+				{
+					CurrentNavPoint = NavPointOne_Right;
+					CurrentNavPointGo = NavPoitnOneGo;
+					NavPointIGot = 2;
+					if(NavPointTwo_Left !=null)
+						NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
+					NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
+				}
+					else	
+					{
+					CurrentNavPoint = NavPointTwo_Left;
+					CurrentNavPointGo = NavPoitnTwoGo;
+					NavPointIGot = 1;
+					NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
+					NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;
+				}
+
+			}
+
+			if(NavPointTwo_Left==null)
+
+			{
+				CurrentNavPoint = NavPointOne_Right;
+				CurrentNavPointGo = NavPoitnOneGo;
+				NavPointIGot = 2;
+
+			}
+
+
+			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+			{
+				lookRight=false;
+				flip ();
+			}
+			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+			{
+				lookRight=true;
+				flip ();
+			}
+
+
+		}
+
+		if(backHome==true)
+		{
+			PlayerIsUp = false;
+			PlayerIsDown = false;
+			if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
+			{
+				CurrentNavPoint = TeleportPointLeftTransform_Actual;
+			}
+			else
+			{
+				CurrentNavPoint = TeleportPointRightTransform_Actual;
+			}
+
+
+		if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 3)
+			goNormalFlood();
 		
 
+
+
+		}
+
+	}
+
+
+
+
+	void Update () 
+	{
 		if(NavPointTwo_Left==null && Alert==false && Suspicious == false)
 		{
 			if (Vector3.Distance (CurrentNavPoint.position, transform.position) < 2)
 				speed = 0;
 		}
 
-		if(Alert==true )
+
+		if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 3 && Alert==false && Suspicious==false)
 		{
-			if(UpPoint !=null)
-			{
-			if(ThePlayer.position.y<UpPoint.position.y)
-			{
-
-			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
-				flip ();
-			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-				flip ();
-			
-			if(ThePlayer.position.x >= LeftLimit.position.x|| CurrentNavPoint.position.x <= RightLimit.position.x)
-				CurrentNavPoint = ThePlayer;
-		
-			if (ThePlayer.position.x < LeftLimit.position.x)
-			CurrentNavPoint = LeftLimit;
-		
-			if (ThePlayer.position.x > RightLimit.position.x)
-			CurrentNavPoint = RightLimit;
-					
-					TeleportPointLeftCol_RegularLevel.enabled = false;
-					TeleportPointRightCol_RegularLevel.enabled = false;
-
-					TeleportPointLeftCol_DownLevel.enabled = false;
-					TeleportPointRightCol_DownLevel.enabled = false;
-
-
-				if (trapped == false) {
-					if ((transform.position.x - CurrentNavPoint.position.x) < 5 || (transform.position.x - CurrentNavPoint.position.x) > -5)
-						speed = 0;
-					if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
-						speed = OriginalSpeed;
-				}
-				else
-					speed = 0;
-				
-			}
+			//flip();
+			print("Close");
+			navRight =!navRight;
+			if(navRight==true)
+				CurrentNavPoint=NavPointOne_Right;
 			else
-			{
-					if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
-				{
-					TeleportPointLeftCol_Actual.enabled = true;
-						CurrentNavPoint = TeleportPointLeftTransform_Actual;
-				}
-				else
-				{
-						TeleportPointRightCol_Actual.enabled = true;
-						CurrentNavPoint = TeleportPointRightTransform_Actual;
-				}
-
-			}
-			}
-			if(DownPoint !=null)
-			{
-				if(ThePlayer.position.y>DownPoint.position.y)
-				{
-
-					if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
-						flip ();
-					if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-						flip ();
-
-					if(ThePlayer.position.x >= LeftLimit.position.x|| CurrentNavPoint.position.x <= RightLimit.position.x)
-						CurrentNavPoint = ThePlayer;
-
-					if (ThePlayer.position.x < LeftLimit.position.x)
-						CurrentNavPoint = LeftLimit;
-
-					if (ThePlayer.position.x > RightLimit.position.x)
-						CurrentNavPoint = RightLimit;
-
-					TeleportPointLeftCol_RegularLevel.enabled = false;
-					TeleportPointRightCol_RegularLevel.enabled = false;
-
-					TeleportPointLeftCol_DownLevel.enabled = false;
-					TeleportPointRightCol_DownLevel.enabled = false;
-
-
-					if (trapped == false) {
-						if ((transform.position.x - CurrentNavPoint.position.x) < 5 || (transform.position.x - CurrentNavPoint.position.x) > -5)
-							speed = 0;
-						if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
-							speed = OriginalSpeed;
-					}
-					else
-						speed = 0;
-
-				}
-				else
-				{
-					if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
-					{
-						TeleportPointLeftCol_Actual.enabled = true;
-						CurrentNavPoint = TeleportPointLeftTransform_Actual;
-					}
-					else
-					{
-						TeleportPointRightCol_Actual.enabled = true;
-						CurrentNavPoint = TeleportPointRightTransform_Actual;
-					}
-
-				}
-			}
-
-
-		
+				CurrentNavPoint=NavPointTwo_Left;
 		}
-		if(Suspicious==true )
+
+		if (CurrentNavPoint.position.x-transform.position.x <0)
 		{
-
-			if(mySighListernetTemplate.IsawTheLure==true)
-			{
-				LureAttention = true;
-				SawLureFeedback.SetActive (true);
-				if(LurePlayer.position.x >= LeftLimit.position.x|| LurePlayer.position.x <= RightLimit.position.x)
-					CurrentNavPoint = LurePlayer;
-
-				if (LurePlayer.position.x < LeftLimit.position.x)
-					CurrentNavPoint = LeftLimit;
-
-				if (LurePlayer.position.x > RightLimit.position.x)
-					CurrentNavPoint = RightLimit;
-
-				timerState = myLureScript.timer;
-			}
-			else
-			{
-				
-				SawLureFeedback.SetActive (false);
-				LureAttention = false;
-
-				if(PhamomPoint.position.y<UpPoint.position.y)
-				{
-
-
-				if(PhamomPoint.position.x >= LeftLimit.position.x|| PhamomPoint.position.x <= RightLimit.position.x)
-					CurrentNavPoint = PhamomPoint;
-				
-			if (CurrentNavPoint.position.x < LeftLimit.position.x)
-				CurrentNavPoint = LeftLimit;
-
-			if (CurrentNavPoint.position.x > RightLimit.position.x)
-				CurrentNavPoint = RightLimit;
-
-					if (trapped == false) {
-						if( (transform.position.x-CurrentNavPoint.position.x) <5 || (transform.position.x-CurrentNavPoint.position.x) > -5)
-							speed = 0;
-
-						if((transform.position.x-CurrentNavPoint.position.x)>=5 || (transform.position.x-CurrentNavPoint.position.x) <=-5)
-							speed = OriginalSpeed;
-					}
-					else
-						speed = 0;
-					
+			lookRight=false;
+			flip ();
 		}
-				else
-				{
-					if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
-					{
-						TeleportPointLeftCol_Actual.enabled = true;
-						CurrentNavPoint = TeleportPointLeftTransform_Actual;
-					}
-					else
-					{
-						TeleportPointRightCol_Actual.enabled = true;
-						CurrentNavPoint = TeleportPointRightTransform_Actual;
-					}
-				}
-
-				}
+		if (CurrentNavPoint.position.x-transform.position.x >0)
+		{
+			lookRight=true;
+			flip ();
 		}
+
+	
+
 		if (somethingHappen == false && timerState>-2)
 			timerState -= Time.deltaTime;
-
+		
 		if (Alert == true)
-			GetComponent<SpriteRenderer> ().color = new Color (0, 1, 1, 1);
+			StateObj.GetComponent<SpriteRenderer> ().color = new Color (0, 1, 1, 1);
 		
 		if (Suspicious == true)
-			GetComponent<SpriteRenderer> ().color = new Color (1, 0, 1, 1);
+			StateObj.GetComponent<SpriteRenderer> ().color = new Color (1, 0, 1, 1);
 		
 		if (Alert == false && Suspicious==false)
-			GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1);
+			StateObj.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1);
 	
 	
 		//the actual way to make ennemy move toward a specific Point
@@ -406,14 +671,14 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		{
 		direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
 //		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
-		Vector3 movPos = new Vector3 (transform.position.x + ((direction/100)*speed*2* Time.deltaTime) , transform.position.y,transform.position.z);
+		movPos = new Vector3 (transform.position.x + ((direction/100)*speed*2* Time.deltaTime) , transform.position.y,transform.position.z);
 		transform.position = movPos ;
 		}
 		if(Alert==true)
 		{
 			direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
 			//		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
-			Vector3 movPos = new Vector3 (transform.position.x + ((direction/100)*speed*4* Time.deltaTime) , transform.position.y,transform.position.z);
+			movPos = new Vector3 (transform.position.x + ((direction/100)*speed*4* Time.deltaTime) , transform.position.y,transform.position.z);
 			transform.position = movPos ;
 		}
 		if(Alert==false && Suspicious==false)
@@ -424,32 +689,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			transform.position = movPos ;
 		}
 
-
-
-//		if(Alert==true) 
-//			{
-//			if (trapped == false) {
-//				if ((transform.position.x - CurrentNavPoint.position.x) < 5 || (transform.position.x - CurrentNavPoint.position.x) > -5)
-//					speed = 0;
-//				if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
-//					speed = OriginalSpeed;
-//			}
-//			else
-//				speed = 0;
-//		}	
-
-//			if(Suspicious==true)
-//		{
-//			if (trapped == false) {
-//			if( (transform.position.x-CurrentNavPoint.position.x) <5 || (transform.position.x-CurrentNavPoint.position.x) > -5)
-//			speed = 0;
-//
-//			if((transform.position.x-CurrentNavPoint.position.x)>=5 || (transform.position.x-CurrentNavPoint.position.x) <=-5)
-//			speed = OriginalSpeed;
-//			}
-//			else
-//				speed = 0;
-//		}
 		if(InRange==true && LureAttention==false)
 		{
 			SoundLevel = Vector3.Distance (ThePlayer.transform.position, transform.position);
@@ -491,21 +730,19 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		
 		if(timerState>15)
 		{
-			Alert = true;
-			Suspicious = false;
-			CurrentNavPointGo = null;
+		AlertInMode();
+		CurrentNavPointGo = null;
 			if(NavPointTwo_Left !=null)
 			{
 			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
 		}
 		}
+
 		if(timerState>0 && timerState<=15)
 		{
-
-			Suspicious = true;
-				Alert = false;
-			if(timerState>14 &&  timerState<15)
+		InSuspiciousMode();
+		if(timerState>14 &&  timerState<15)
 			{
 				
 				PhantomPlayer.transform.position = MyPlayer.transform.position;
@@ -519,67 +756,13 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
 			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
 			}
-
-			if (CurrentNavPoint.position.x-transform.position.x <1 && isFLippe==false)
-				flip ();
-			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-				flip ();
-		
-				
+			
 			}
 	//}
 		if(timerState>-1 &&  timerState<0)
 		{
-
-
-			Suspicious = false;
-			if (trapped == false)
-				speed = OriginalSpeed;
-			else
-				speed = 0;
-			if(NavPointTwo_Left!=null)
-			{
-
-				if((Vector3.Distance(transform.position,NavPointOne_Right.position))>(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
-			{
-				CurrentNavPoint = NavPointOne_Right;
-				CurrentNavPointGo = NavPoitnOneGo;
-				NavPointIGot = 2;
-				if(NavPointTwo_Left !=null)
-				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
-				NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
-				
-			}
-				if((Vector3.Distance(transform.position,NavPointOne_Right.position))<=(Vector3.Distance(transform.position,NavPointTwo_Left.position))) 
-				
-			{
-				CurrentNavPoint = NavPointTwo_Left;
-				CurrentNavPointGo = NavPoitnTwoGo;
-				NavPointIGot = 1;
-				NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;
-				}
-				
-			}
-
-						if(NavPointTwo_Left==null)
-
-						{
-							CurrentNavPoint = NavPointOne_Right;
-							CurrentNavPointGo = NavPoitnOneGo;
-							NavPointIGot = 2;
-
-						}
-
-
-			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
-				flip ();
-			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-				flip ();
-			
-			
-		}
-		
+			NeutralMode ();
+	}
 	}
 
 	IEnumerator MyAttack()
@@ -594,7 +777,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			}	
 		}	
 	}	
-	public void StartCorTrap()
+
+		public void StartCorTrap()
 	{
 		StartCoroutine (TrapMode ());
 
@@ -611,7 +795,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 
 	void OnTriggerEnter2D (Collider2D col) {
-		
 //		if (col.tag == "Ţrap")
 //		{
 //			StartCoroutine (TrapMode ());
@@ -641,6 +824,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	
 	if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnOneGo)
 	{
+			print ("There tghere");
 		NavPointIGot = 1;
 		StartCoroutine(changenavPoint());
 	}
@@ -669,10 +853,16 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			yield return new WaitForSeconds (waitingTimeNavOne);
 				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = false;
 			//Basically if the targer pos is back and the sprite is not flipped, he will flip
-			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
-				flip ();
-			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-				flip ();
+				if (CurrentNavPoint.position.x-transform.position.x <0)
+				{
+					lookRight=false;
+					flip ();
+				}
+				if (CurrentNavPoint.position.x-transform.position.x >0)
+				{
+					lookRight=true;
+					flip ();
+				}
 			
 			speed = OriginalSpeed;
 				yield return new WaitForSeconds (3);
@@ -694,10 +884,16 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 				CurrentNavPointGo=NavPoitnOneGo;
 				yield return new WaitForSeconds(waitingTimeNavTwo);
 
-				if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
-					flip ();
-				if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-					flip ();
+					if (CurrentNavPoint.position.x-transform.position.x <0)
+					{
+						lookRight=false;
+						flip ();
+					}
+					if (CurrentNavPoint.position.x-transform.position.x >0)
+					{
+						lookRight=true;
+						flip ();
+					}
 
 			}
 			if(NavPoitnThreeGo!=null)	
@@ -708,10 +904,17 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 				yield return new WaitForSeconds(waitingTimeNavTwo);
 
-				if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
-					flip ();
-				if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
-					flip ();
+					if (CurrentNavPoint.position.x-transform.position.x <0)
+					{
+						lookRight=false;
+						flip ();
+					}
+					if (CurrentNavPoint.position.x-transform.position.x >0)
+					{
+						lookRight=true;
+						flip ();
+					}
+
 
 		}
 			speed = OriginalSpeed;
@@ -729,9 +932,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			CurrentNavPointGo = NavPoitnOneGo;
 			yield return new WaitForSeconds(waitingTimeNavThree);
 			//FlipCheckCollider.enabled = true;
-			if (CurrentNavPoint.position.x-transform.position.x <1 && isFLippe==false)
+			if (CurrentNavPoint.position.x-transform.position.x <1)
 				flip ();
-			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+			if (CurrentNavPoint.position.x-transform.position.x >0)
 				flip ();
 			speed = OriginalSpeed;
 			yield return null;
@@ -745,18 +948,39 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 		if (Alert == true)
 		{
-			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+			if (CurrentNavPoint.position.x-transform.position.x <0)
+			{
+				lookRight=false;
 				flip ();
-			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+			}
+			if (CurrentNavPoint.position.x-transform.position.x >0)
+			{
+				lookRight=true;
 				flip ();
+			}
+
 		}
 
 	}
 	void flip()
 	{
 
-			FlipScale = FlipScale * -1;
-		transform.localScale = new Vector3 (FlipScale, 1, 1);
+		if(lookRight==false)
+		{
+		GetComponent<SpriteRenderer>().flipX=true;
+		FliPBase.transform.eulerAngles=new Vector3(0,0,180);
+		}
+		else
+		{
+			GetComponent<SpriteRenderer>().flipX=false;
+			FliPBase.transform.eulerAngles=new Vector3(0,0,0);
+		}
+
+
+
+//
+//			FlipScale = FlipScale * -1;
+//		transform.localScale = new Vector3 (FlipScale, 1, 1);
 		isFLippe =! isFLippe;
 
 	}
