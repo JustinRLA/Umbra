@@ -16,6 +16,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public Transform returnPoint;
 	public GameObject FliPBase;
 	public GameObject StateObj;
+	public Transform PointToLookWIthOneNavPoint;
 
 	public bool PlayerIsUp;
 	public bool PlayerIsDown;
@@ -256,7 +257,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 		if(NavPointThree_EvenMoreLeft!=null)
 			NavPoitnThreeGo = NavPointThree_EvenMoreLeft.gameObject;
-		InvokeRepeating ("flipAlert",5f,1f);
+		//InvokeRepeating ("flipAlert",5f,1f);
 	}
 //	
 //	// Update is called once per frame
@@ -625,10 +626,24 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		if(NavPointTwo_Left==null && Alert==false && Suspicious == false)
 		{
 			if (Vector3.Distance (CurrentNavPoint.position, transform.position) < 2)
+			{
 				speed = 0;
+				print ("near");
+				if (PointToLookWIthOneNavPoint.GetComponent<lookPosition>().RightTo==false)
+			{
+				lookRight=false;
+				flip ();
+			}
+				else
+				{
+				lookRight=true;
+				flip ();
+			}
+			}
 		}
 
-
+		if(NavPointTwo_Left !=null)
+		{
 		if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 3 && Alert==false && Suspicious==false)
 		{
 			//flip();
@@ -639,17 +654,19 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			else
 				CurrentNavPoint=NavPointTwo_Left;
 		}
+			if (CurrentNavPoint.position.x-transform.position.x <0)
+			{
+				lookRight=false;
+				flip ();
+			}
+			if (CurrentNavPoint.position.x-transform.position.x >0)
+			{
+				lookRight=true;
+				flip ();
+			}
 
-		if (CurrentNavPoint.position.x-transform.position.x <0)
-		{
-			lookRight=false;
-			flip ();
 		}
-		if (CurrentNavPoint.position.x-transform.position.x >0)
-		{
-			lookRight=true;
-			flip ();
-		}
+
 
 	
 
@@ -792,176 +809,176 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		trapped = false;
 		speed = OriginalSpeed;
 	}	
-
-
-	void OnTriggerEnter2D (Collider2D col) {
-//		if (col.tag == "Ţrap")
+//
+//
+//	void OnTriggerEnter2D (Collider2D col) {
+////		if (col.tag == "Ţrap")
+////		{
+////			StartCoroutine (TrapMode ());
+////			Destroy (col.gameObject);
+////		}
+//		//detect soundCollider
+//
+//		if (col.tag == "suspiciouis Sound")
+//			InRange = true;
+//
+//		if (col.tag == "falseSoundTrigger")
 //		{
-//			StartCoroutine (TrapMode ());
-//			Destroy (col.gameObject);
+//			mySighListernetTemplate.IsawTheLure = true;
+//			Suspicious = true;
 //		}
-		//detect soundCollider
-
-		if (col.tag == "suspiciouis Sound")
-			InRange = true;
-
-		if (col.tag == "falseSoundTrigger")
-		{
-			mySighListernetTemplate.IsawTheLure = true;
-			Suspicious = true;
-		}
-		if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnThreeGo)
-		{
-			NavPointIGot = 3;
-			StartCoroutine(changenavPoint());
-		}
-
-	if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnTwoGo)
-	{
-		NavPointIGot = 2;
-		StartCoroutine(changenavPoint());
-	}
-	
-	if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnOneGo)
-	{
-			print ("There tghere");
-		NavPointIGot = 1;
-		StartCoroutine(changenavPoint());
-	}
-
-	}
-
-	void OnTriggerExit2D(Collider2D col)
-	{
-		if (col.tag == "suspiciouis Sound")
-			InRange = false;
-	}
-
-
-
-		IEnumerator changenavPoint()
-	{
-		if(Alert==false || Suspicious==false)
-		{
-			if (NavPointIGot==1)
-		{
-			speed = 0;
-				CurrentNavPoint = NavPointTwo_Left;
-				CurrentNavPointGo = NavPoitnTwoGo;
-				NavPoitnTwoGo.GetComponent<Collider2D> ().enabled = true;
-				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = false;
-			yield return new WaitForSeconds (waitingTimeNavOne);
-				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = false;
-			//Basically if the targer pos is back and the sprite is not flipped, he will flip
-				if (CurrentNavPoint.position.x-transform.position.x <0)
-				{
-					lookRight=false;
-					flip ();
-				}
-				if (CurrentNavPoint.position.x-transform.position.x >0)
-				{
-					lookRight=true;
-					flip ();
-				}
-			
-			speed = OriginalSpeed;
-				yield return new WaitForSeconds (3);
-				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = true;
-
-			yield return null;
-				
-		}
-		if (NavPointIGot==2)
-		{
-			speed = 0;
-				NavPoitnTwoGo.GetComponent<Collider2D> ().enabled = false;
-				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = true;
-
-
-				if(NavPoitnThreeGo==null)
-			{
-					CurrentNavPoint = NavPointOne_Right;
-				CurrentNavPointGo=NavPoitnOneGo;
-				yield return new WaitForSeconds(waitingTimeNavTwo);
-
-					if (CurrentNavPoint.position.x-transform.position.x <0)
-					{
-						lookRight=false;
-						flip ();
-					}
-					if (CurrentNavPoint.position.x-transform.position.x >0)
-					{
-						lookRight=true;
-						flip ();
-					}
-
-			}
-			if(NavPoitnThreeGo!=null)	
-			{
-				CurrentNavPointGo=NavPoitnThreeGo;
-					CurrentNavPoint = NavPointThree_EvenMoreLeft;
-
-
-				yield return new WaitForSeconds(waitingTimeNavTwo);
-
-					if (CurrentNavPoint.position.x-transform.position.x <0)
-					{
-						lookRight=false;
-						flip ();
-					}
-					if (CurrentNavPoint.position.x-transform.position.x >0)
-					{
-						lookRight=true;
-						flip ();
-					}
-
-
-		}
-			speed = OriginalSpeed;
-
-			yield return null;
-
-				
-		}
-		if (NavPointIGot==3)
-		{
-			speed = 0;
-				CurrentNavPoint = NavPointOne_Right;
-
-
-			CurrentNavPointGo = NavPoitnOneGo;
-			yield return new WaitForSeconds(waitingTimeNavThree);
-			//FlipCheckCollider.enabled = true;
-			if (CurrentNavPoint.position.x-transform.position.x <1)
-				flip ();
-			if (CurrentNavPoint.position.x-transform.position.x >0)
-				flip ();
-			speed = OriginalSpeed;
-			yield return null;
-
-			}
-		}
-
-	}
-
-	void flipAlert()
-	{
-		if (Alert == true)
-		{
-			if (CurrentNavPoint.position.x-transform.position.x <0)
-			{
-				lookRight=false;
-				flip ();
-			}
-			if (CurrentNavPoint.position.x-transform.position.x >0)
-			{
-				lookRight=true;
-				flip ();
-			}
-
-		}
-
-	}
+//		if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnThreeGo)
+//		{
+//			NavPointIGot = 3;
+//			StartCoroutine(changenavPoint());
+//		}
+//
+//	if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnTwoGo)
+//	{
+//		NavPointIGot = 2;
+//		StartCoroutine(changenavPoint());
+//	}
+//	
+//	if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnOneGo)
+//	{
+//			print ("There tghere");
+//		NavPointIGot = 1;
+//		StartCoroutine(changenavPoint());
+//	}
+//
+//	}
+//
+//	void OnTriggerExit2D(Collider2D col)
+//	{
+//		if (col.tag == "suspiciouis Sound")
+//			InRange = false;
+//	}
+//
+//
+//
+//		IEnumerator changenavPoint()
+//	{
+//		if(Alert==false || Suspicious==false)
+//		{
+//			if (NavPointIGot==1)
+//		{
+//			speed = 0;
+//				CurrentNavPoint = NavPointTwo_Left;
+//				CurrentNavPointGo = NavPoitnTwoGo;
+//				NavPoitnTwoGo.GetComponent<Collider2D> ().enabled = true;
+//				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = false;
+//			yield return new WaitForSeconds (waitingTimeNavOne);
+//				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = false;
+//			//Basically if the targer pos is back and the sprite is not flipped, he will flip
+//				if (CurrentNavPoint.position.x-transform.position.x <0)
+//				{
+//					lookRight=false;
+//					flip ();
+//				}
+//				if (CurrentNavPoint.position.x-transform.position.x >0)
+//				{
+//					lookRight=true;
+//					flip ();
+//				}
+//			
+//			speed = OriginalSpeed;
+//				yield return new WaitForSeconds (3);
+//				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = true;
+//
+//			yield return null;
+//				
+//		}
+//		if (NavPointIGot==2)
+//		{
+//			speed = 0;
+//				NavPoitnTwoGo.GetComponent<Collider2D> ().enabled = false;
+//				NavPoitnOneGo.GetComponent<Collider2D> ().enabled = true;
+//
+//
+//				if(NavPoitnThreeGo==null)
+//			{
+//					CurrentNavPoint = NavPointOne_Right;
+//				CurrentNavPointGo=NavPoitnOneGo;
+//				yield return new WaitForSeconds(waitingTimeNavTwo);
+//
+//					if (CurrentNavPoint.position.x-transform.position.x <0)
+//					{
+//						lookRight=false;
+//						flip ();
+//					}
+//					if (CurrentNavPoint.position.x-transform.position.x >0)
+//					{
+//						lookRight=true;
+//						flip ();
+//					}
+//
+//			}
+//			if(NavPoitnThreeGo!=null)	
+//			{
+//				CurrentNavPointGo=NavPoitnThreeGo;
+//					CurrentNavPoint = NavPointThree_EvenMoreLeft;
+//
+//
+//				yield return new WaitForSeconds(waitingTimeNavTwo);
+//
+//					if (CurrentNavPoint.position.x-transform.position.x <0)
+//					{
+//						lookRight=false;
+//						flip ();
+//					}
+//					if (CurrentNavPoint.position.x-transform.position.x >0)
+//					{
+//						lookRight=true;
+//						flip ();
+//					}
+//
+//
+//		}
+//			speed = OriginalSpeed;
+//
+//			yield return null;
+//
+//				
+//		}
+//		if (NavPointIGot==3)
+//		{
+//			speed = 0;
+//				CurrentNavPoint = NavPointOne_Right;
+//
+//
+//			CurrentNavPointGo = NavPoitnOneGo;
+//			yield return new WaitForSeconds(waitingTimeNavThree);
+//			//FlipCheckCollider.enabled = true;
+//			if (CurrentNavPoint.position.x-transform.position.x <1)
+//				flip ();
+//			if (CurrentNavPoint.position.x-transform.position.x >0)
+//				flip ();
+//			speed = OriginalSpeed;
+//			yield return null;
+//
+//			}
+//		}
+//
+//	}
+//
+//	void flipAlert()
+//	{
+//		if (Alert == true)
+//		{
+//			if (CurrentNavPoint.position.x-transform.position.x <0)
+//			{
+//				lookRight=false;
+//				flip ();
+//			}
+//			if (CurrentNavPoint.position.x-transform.position.x >0)
+//			{
+//				lookRight=true;
+//				flip ();
+//			}
+//
+//		}
+//
+//	}
 	void flip()
 	{
 

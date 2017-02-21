@@ -14,7 +14,7 @@ public class RuneTactUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		RuneManager = GameObject.Find ("RuneManager");
 		image = GetComponent<Image> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 		
