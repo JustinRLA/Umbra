@@ -34,14 +34,6 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject textSolid;
 	public GameObject textMark;
 	public GameObject textOmbre;
-	public GameObject ImageRuneOmbre;
-	public GameObject ImageRuneAccrochage;
-	public GameObject ImageRunePiege;
-	public GameObject ImageRuneSolidification;
-	public GameObject ImageRuneMarquage;
-	public GameObject ImageRuneLeurre;
-
-
 
 	LureScript myLureScript;
 	public GameObject ThePlayer;
@@ -53,12 +45,6 @@ public class RuneManagerScript : MonoBehaviour
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
-		ImageRuneLeurre = GameObject.Find ("LeureImage");
-		ImageRuneAccrochage = GameObject.Find ("AccrochageImage");
-		ImageRuneMarquage = GameObject.Find ("MaquageRuneImage");
-		ImageRuneSolidification = GameObject.Find ("solideImage");
-		ImageRuneOmbre = GameObject.Find ("OmbreRuneImage");
-		ImageRunePiege = GameObject.Find ("trapImage");
 
 		animCamOne=myCam.GetComponent<Animator>();
 		animCamTwo=myCamTwo.GetComponent<Animator>();
@@ -73,6 +59,7 @@ public class RuneManagerScript : MonoBehaviour
 		OffenseRune=myRuneSetter.GetComponent<SetRune> ().TemporaryOffenseRune;
 		TacticRune=myRuneSetter.GetComponent<SetRune> ().TemporaryTacticRune;
 		}
+
 		myLineRenderer = GetComponent<LineRendererTest> ();
 		mySolidicationEnabled = GetComponent<SolidifcationEnabled> ();
 		myMarkEnnemy = GetComponent<MarkEnnemy> ();
@@ -89,44 +76,31 @@ public class RuneManagerScript : MonoBehaviour
 	void Update () {
 		if(OffenseRune==1)
 		{
-			ImageRunePiege.SetActive(true);
-			ImageRuneMarquage.SetActive(false);
 			texttrappe.SetActive(true);
 			textMark.SetActive(false);
 		}
 		if(OffenseRune==2)
 		{
-			ImageRunePiege.SetActive(false);
-			ImageRuneMarquage.SetActive(true);
 			texttrappe.SetActive(false);
 			textMark.SetActive(true);
 		}
 		if(DefFune==1)
 		{
-			ImageRuneLeurre.SetActive(false);
-			ImageRuneOmbre.SetActive(true);
 			textleure.SetActive(false);
 			textOmbre.SetActive(true);
 		}
 		if(DefFune==2)
 		{
-			ImageRuneLeurre.SetActive(true);
-			ImageRuneOmbre.SetActive(false);
-
 			textleure.SetActive(true);
 			textOmbre.SetActive(false);
 		}
 		if(TacticRune==1)
 		{
-			ImageRuneSolidification.SetActive (false);
-			ImageRuneAccrochage.SetActive(true);
 			textSolid.SetActive(false);
 			textaccrochage.SetActive(true);
 		}
 		if(TacticRune==2)
 		{
-			ImageRuneSolidification.SetActive (true);
-			ImageRuneAccrochage.SetActive(false);
 			textSolid.SetActive(true);
 			textaccrochage.SetActive(false);
 		}
