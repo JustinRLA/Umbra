@@ -26,6 +26,11 @@ public class LureScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		myCam = GameObject.Find ("Main Camera");
+		CamOne = GameObject.Find ("Main Camera (1)");
+		CamTwo = GameObject.Find ("Main Camera (2)");
+		CamThree = GameObject.Find ("Main Camera (3)");
+
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
 
 	}
@@ -53,6 +58,8 @@ public class LureScript : MonoBehaviour {
 			ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = true;
 			ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = true;
 		RuneManager.GetComponent<RuneManagerScript> ().timerTactic = 30;
+		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
 			ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = false;
 			ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = false;
 			ThePlayerShadow.SetActive (true);

@@ -26,9 +26,9 @@ public class RuneTactUI : MonoBehaviour {
 		//print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
-			FullImage.SetActive (true);
+			image.color = new Color (1f, 1f, 1f);	
 		else
-			FullImage.SetActive (false);
+			image.color = new Color (0.5f, 0.5f, 0.5f);	
 
 	}
 }

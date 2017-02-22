@@ -21,9 +21,22 @@ public class SightListenerTemplate : MonoBehaviour {
 	public bool IsawTheLure=false;
 	public GameObject LurePlayer;
 	public int TypeOfObj;
-	// 1= Ennemy....2= ennemy clone....3= Light
+	// 1= Ennemy....2= Camera....3= Light
 	public GameObject PlayerView;
 	Collider2D ViewCol;
+	public bool inCam;
+	Vector3 Camdir;
+	float angle;
+	public Transform thePlayer;
+	public GameObject myBoute;
+	public GameObject EnnemyOne;
+	public GameObject EnnemyTwo;
+	public GameObject EnnemyThree;
+	public GameObject EnnemyFour;
+	public GameObject EnnemyFive;
+	public Material OutofSightMat;
+	public Material InSightMat;
+	public GameObject dangerLight;
 	public void Start()
 	{
 		PlayerView = GameObject.Find ("ViewTrigger");
@@ -31,7 +44,6 @@ public class SightListenerTemplate : MonoBehaviour {
 		RuneManager = GameObject.Find ("RuneManager");
 		if (TypeOfObj == 3)
 			ViewCol = PlayerView.GetComponent<Collider2D> ();
-		
 		myLureScript = RuneManager.GetComponent<LureScript> ();
 		//print (gameObject.name);
 		//EnnemyBase=
@@ -50,6 +62,10 @@ public class SightListenerTemplate : MonoBehaviour {
 		}
 
 	}
+
+	//IEnumerator Camdetection()
+
+
 
 	void Update()
 	{
@@ -75,24 +91,15 @@ public class SightListenerTemplate : MonoBehaviour {
 		if(TypeOfObj==2)
 		{
 
-			if (myLureScript.Active== false)
-				IsawTheLure = false;
-
-			if(mySight==null)
+			if(inCam==true)
 			{
-				iSeeYou = false;
-				throwSuspicious = false;
-				throwAlert = false;
-			}
-
-			if (transform.parent.GetComponent<ClonePatrol> () == null)
-				iSeeYou = false;
-
-			if (transform.parent.GetComponent<ClonePatrol> ().Alert == true)
-				throwSuspicious = false;
+//				Camdir = thePlayer.position - transform.position;
+//				angle = Mathf.Atan2 (Camdir.y, Camdir.x) * Mathf.Rad2Deg;
+//				myBoute.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+				mySight.GetComponent<Renderer>().material=InSightMat;
+				dangerLight.SetActive (true);
+				}
 		}
-
-
 	}
 
 
@@ -106,6 +113,7 @@ public class SightListenerTemplate : MonoBehaviour {
 				print ("SAWWWWWWWWWWWWWWWWWWWWWWW");
 				IsawTheLure = true;
 					EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Suspicious = true;
+
 			} 
 //			else
 //				IsawTheLure = false;
@@ -124,7 +132,16 @@ public class SightListenerTemplate : MonoBehaviour {
 		}
 		else
 			StopCoroutine (InSight ());
-		
+		}
+
+
+		if(TypeOfObj==2)
+		{
+			if (go.tag == "Player")
+			{
+				StartCoroutine (CamCoroutine ());
+				inCam = true;
+			}
 		}
 		if(TypeOfObj==3)
 		{
@@ -134,7 +151,7 @@ public class SightListenerTemplate : MonoBehaviour {
 			}
 
 		}
-
+			}
 
 //	if (go.tag == "ennemy")
 //		print ("I SawYou");
@@ -146,13 +163,13 @@ public class SightListenerTemplate : MonoBehaviour {
 //			print ("I Saw You");
 
 		//	print (go.name + " --> OnEnter() event");
-		}
+		
 	
 
 	public void myListener_onExit(GameObject go){
+			
 		if(TypeOfObj==1)
 		{
-			
 		if (go.tag == "Player")
 		{
 			StopCoroutine (InSight ());
@@ -163,27 +180,23 @@ public class SightListenerTemplate : MonoBehaviour {
 			throwSuspicious = false;
 			throwAlert = false;
 		}
+			}
 
 			if(TypeOfObj==2)
 			{
 
 				if (go.tag == "Player")
 				{
-					StopCoroutine (InSight ());
-					//			print(Vector3.Distance(go.transform.position,transform.position));
-					//print()
-					//	print ("I SawYou");
-					iSeeYou = false;
-					throwSuspicious = false;
-					throwAlert = false;
+					inCam = false;
+				StopCoroutine (CamCoroutine ());
 				}
-
+			}
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 			//print (go.name + " --> OnExit() event");
 			go.GetComponent<SpriteRenderer>().color = Color.white;
 
 			}
-		}
+
 		if(TypeOfObj==3)
 		{
 			if (go.tag == "Player")
@@ -192,8 +205,30 @@ public class SightListenerTemplate : MonoBehaviour {
 
 			}
 		}
+	
 	}
+	IEnumerator CamCoroutine()
+	{
+		yield return new WaitForSeconds (5f);
+		if(inCam==true)
+		{
+		if (EnnemyOne != null)
+			EnnemyOne.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+		
+		if (EnnemyFive != null)
+			EnnemyFive.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+		
+		if (EnnemyFour != null)
+			EnnemyFour.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+		
+		if (EnnemyThree != null)
+			EnnemyThree.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+		
+		if (EnnemyTwo != null)
+			EnnemyTwo.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+		}	
 	}
+
 	public void myListener_onInside(GameObject go){
 		
 //		if (go.tag == "Player")

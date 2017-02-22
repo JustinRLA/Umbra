@@ -302,7 +302,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 5 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -4)
 					speed = 0;
 				if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
 					speed = OriginalSpeed;
@@ -338,9 +338,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 					goUpFloor();
 
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -4)
 					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
 					speed = OriginalSpeed;
 			}
 			else
@@ -394,6 +394,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 		if(mySighListernetTemplate.IsawTheLure==true)
 		{
+			timerState = myLureScript.timer;
 			LureAttention = true;
 			SawLureFeedback.SetActive (true);
 			if(LurePlayer.position.x >= LeftLimit.position.x|| LurePlayer.position.x <= RightLimit.position.x)
@@ -404,12 +405,31 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 			if (LurePlayer.position.x > RightLimit.position.x)
 				CurrentNavPoint = RightLimit;
+			
+			if (CurrentNavPoint.position.x-transform.position.x <0)
+			{
+				lookRight=false;
+				flip ();
+			}
+			if (CurrentNavPoint.position.x-transform.position.x >0)
+			{
+				lookRight=true;
+				flip ();
+			}
 
-			timerState = myLureScript.timer;
+
+			if (trapped == false) {
+				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+					speed = 0;
+				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+					speed = OriginalSpeed;
+			}
+			else
+				speed = 0;
+			
 		}
 		else
 		{
-
 			SawLureFeedback.SetActive (false);
 			LureAttention = false;
 			backHome = false;
@@ -756,7 +776,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		}
 		}
 
-		if(timerState>0 && timerState<=15)
+		if(timerState>0 && timerState<=15 || mySighListernetTemplate.IsawTheLure==true)
 		{
 		InSuspiciousMode();
 		if(timerState>14 &&  timerState<15)
@@ -811,22 +831,23 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	}	
 //
 //
-//	void OnTriggerEnter2D (Collider2D col) {
-////		if (col.tag == "Ţrap")
-////		{
-////			StartCoroutine (TrapMode ());
-////			Destroy (col.gameObject);
-////		}
-//		//detect soundCollider
-//
-//		if (col.tag == "suspiciouis Sound")
-//			InRange = true;
-//
-//		if (col.tag == "falseSoundTrigger")
-//		{
-//			mySighListernetTemplate.IsawTheLure = true;
-//			Suspicious = true;
-//		}
+	void OnTriggerEnter2D (Collider2D col) {
+		if (col.tag == "Ţrap")
+		{
+			StartCoroutine (TrapMode ());
+			Destroy (col.gameObject);
+		}
+		//detect soundCollider
+
+		if (col.tag == "suspiciouis Sound")
+			InRange = true;
+
+		if (col.tag == "falseSoundTrigger")
+		{
+			mySighListernetTemplate.IsawTheLure = true;
+			print ("ISAWLURRRE");
+			Suspicious = true;
+		}
 //		if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnThreeGo)
 //		{
 //			NavPointIGot = 3;
@@ -845,14 +866,14 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //		NavPointIGot = 1;
 //		StartCoroutine(changenavPoint());
 //	}
-//
-//	}
-//
-//	void OnTriggerExit2D(Collider2D col)
-//	{
-//		if (col.tag == "suspiciouis Sound")
-//			InRange = false;
-//	}
+
+	}
+
+	void OnTriggerExit2D(Collider2D col)
+	{
+		if (col.tag == "suspiciouis Sound")
+			InRange = false;
+	}
 //
 //
 //

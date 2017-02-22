@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class RuneOffenseUI : MonoBehaviour {
 	Image image;
 	float ratio;
-	public GameObject FullImage;
+	//public GameObject FullImage;
+	public Material glowmaterail;
 
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManager;
@@ -27,9 +28,15 @@ public class RuneOffenseUI : MonoBehaviour {
 //		print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
-			FullImage.SetActive (true);
-		else
-			FullImage.SetActive (false);
+		{
+		//	image.material = glowmaterail;
+			image.color = new Color (1f, 1f, 1f);	
 
+		}
+		else
+		{
+			image.color = new Color (0.5f, 0.5f, 0.5f);	
+			//image.material = null;
+		}
 	}
 }
