@@ -37,6 +37,7 @@ public class SightListenerTemplate : MonoBehaviour {
 	public Material OutofSightMat;
 	public Material InSightMat;
 	public GameObject dangerLight;
+	public GameObject NoDangerLight;
 	public void Start()
 	{
 		PlayerView = GameObject.Find ("ViewTrigger");
@@ -98,9 +99,17 @@ public class SightListenerTemplate : MonoBehaviour {
 //				myBoute.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 				mySight.GetComponent<Renderer>().material=InSightMat;
 				dangerLight.SetActive (true);
+				NoDangerLight.SetActive (false);
 				}
+			else
+			{
+				dangerLight.SetActive (false);
+				NoDangerLight.SetActive(true);
+			}
+	
+			}
 		}
-	}
+
 
 
 	public void myListener_onEnter(GameObject go){
