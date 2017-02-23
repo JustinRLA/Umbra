@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OeillereScript : MonoBehaviour {
+public class OeillereScriptCheckDown : MonoBehaviour {
 	bool IsInside;
 	public GameObject Base;
+	public bool inJudaMode;
 
 	// Use this for initialization
 	void Start () {
@@ -13,11 +14,17 @@ public class OeillereScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (IsInside && Input.GetKey (KeyCode.E)) {
+		if (IsInside && Input.GetKeyDown (KeyCode.E)) 
+			inJudaMode = true;
+
+
+		if(inJudaMode==true)
+		{
 			Base.layer = 1;
-		} else
-			Base.layer = 0;
-		
+		}
+	else
+		Base.layer = 0;
+				
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -28,8 +35,10 @@ public class OeillereScript : MonoBehaviour {
 	} 	void OnTriggerExit2D(Collider2D col)
 	{
 		if (col.tag == "Player")
-			IsInside = false;
-
+		{
+			IsInside=false;
+			inJudaMode=false;
+		} 
 	} 
 
 

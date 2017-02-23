@@ -77,7 +77,7 @@ public class ladderScript : MonoBehaviour {
 		{
 			ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 			//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
-			ThePlayer.GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 20);
+			ThePlayer.GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 15);
 
 			StartCoroutine (ReturnToNormal ());
 
