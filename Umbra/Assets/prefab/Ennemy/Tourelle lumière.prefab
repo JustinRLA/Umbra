@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4050207717052230}
   - component: {fileID: 114730513687774390}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: "Tourelle lumi\xE8re"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,9 +123,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732033569885416}
-  m_LocalRotation: {x: -0, y: -0, z: -0.703485, w: 0.7107101}
-  m_LocalPosition: {x: 137.13, y: 19.85, z: 0}
-  m_LocalScale: {x: 1.4617993, y: 0.5644832, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.996361, w: 0.085233904}
+  m_LocalPosition: {x: 86.87155, y: 7.17717, z: 1.9001465}
+  m_LocalScale: {x: 1.4618005, y: 0.5644836, z: 1}
   m_Children:
   - {fileID: 4693196419346840}
   - {fileID: 4293114002065886}
@@ -134,7 +134,7 @@ Transform:
   - {fileID: 4422838208351216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.415}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -170.22101}
 --- !u!4 &4051750636291418
 Transform:
   m_ObjectHideFlags: 1
@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 1553886271726634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.000000017487}
-  m_LocalScale: {x: 0.3699202, y: 0.40775612, z: 0.32457656}
+  m_LocalScale: {x: 0.56, y: 0.72, z: 0.01}
   m_Children: []
   m_Father: {fileID: 4050207717052230}
   m_RootOrder: 2
@@ -427,7 +427,7 @@ MonoBehaviour:
   uv_Offset: {x: 0.5, y: 0.5}
   uv_Scale: {x: 0.5, y: 0.5}
   vertexWorking: 0
-  RangeAngle: 60
+  RangeAngle: 30
 --- !u!114 &114324212040614488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,7 +477,7 @@ MonoBehaviour:
   uv_Offset: {x: 0.5, y: 0.5}
   uv_Scale: {x: 0.5, y: 0.5}
   vertexWorking: 0
-  RangeAngle: 40
+  RangeAngle: 30
 --- !u!114 &114341576628321446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -591,7 +591,7 @@ MonoBehaviour:
     rgba: 0
   LightMaterial: {fileID: 2100000, guid: d52d9438d1a39354ca4d3543b8512e7f, type: 2}
   strokeRender: 0
-  LightRadius: 200
+  LightRadius: 40
   Segments: 10
   Layer:
     serializedVersion: 2
