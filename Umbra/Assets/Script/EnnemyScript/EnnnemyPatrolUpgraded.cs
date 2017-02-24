@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class EnnnemyPatrolUpgraded : MonoBehaviour {
+	public float timerBetweenPatrolOriginal;
+	public float timerBetweenPatrol;
 	public float timerState;
 	public bool trapped =false;
 	//PatrolPart
@@ -217,6 +219,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	}
 
 	void Start () {
+		timerBetweenPatrolOriginal = timerBetweenPatrol;
 		UpPoint = UpPoint_RegularLevel;
 			DownPoint=DownPoint_RegularLevel;
 		
@@ -669,21 +672,44 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			//flip();
 			print("Close");
 			navRight =!navRight;
-			if(navRight==true)
+				timerBetweenPatrol -= Time.deltaTime;
+				speed = 0;
+				if(navRight==true && timerBetweenPatrol<=0)
+				{
 				CurrentNavPoint=NavPointOne_Right;
-			else
+					timerBetweenPatrol = timerBetweenPatrolOriginal;
+					if (CurrentNavPoint.position.x-transform.position.x <0)
+					{
+						lookRight=false;
+						flip ();
+					}
+					if (CurrentNavPoint.position.x-transform.position.x >0)
+					{
+						lookRight=true;
+						flip ();
+					}
+					speed = OriginalSpeed;
+
+				}
+				if(navRight == false && timerBetweenPatrol<=0)
+				{
 				CurrentNavPoint=NavPointTwo_Left;
+					timerBetweenPatrol = timerBetweenPatrolOriginal;			
+					if (CurrentNavPoint.position.x-transform.position.x <0)
+					{
+						lookRight=false;
+						flip ();
+					}
+					if (CurrentNavPoint.position.x-transform.position.x >0)
+					{
+						lookRight=true;
+						flip ();
+					}
+					speed = OriginalSpeed;
+
+				}
 		}
-			if (CurrentNavPoint.position.x-transform.position.x <0)
-			{
-				lookRight=false;
-				flip ();
-			}
-			if (CurrentNavPoint.position.x-transform.position.x >0)
-			{
-				lookRight=true;
-				flip ();
-			}
+
 
 		}
 

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour {
 	public GameObject tempoFeedback;
+	public GameObject Player;
+
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +28,9 @@ public class EndGame : MonoBehaviour {
 	IEnumerator EndGameEnum()
 	{
 		tempoFeedback.SetActive (true);
+		Player.GetComponent<PlatformerCharacter2D> ().enabled = false;
+		Player.GetComponent<CharacterController> ().enabled = false;
+
 		yield return new WaitForSeconds (2);
 		SceneManager.LoadScene ("Main menu");
 

@@ -743,7 +743,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1003039521687694}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071006, w: -0.707113}
-  m_LocalPosition: {x: -0.54700065, y: -0, z: 0}
+  m_LocalPosition: {x: 0.51, y: 0.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4638670613820970}
@@ -972,7 +972,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992978309662438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.799999, y: 1.9496737, z: 0}
+  m_LocalPosition: {x: 14.16, y: 1.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4722869514601766}
@@ -1808,6 +1808,18 @@ MonoBehaviour:
   LurePlayer: {fileID: 0}
   TypeOfObj: 1
   PlayerView: {fileID: 0}
+  inCam: 0
+  thePlayer: {fileID: 0}
+  myBoute: {fileID: 0}
+  EnnemyOne: {fileID: 0}
+  EnnemyTwo: {fileID: 0}
+  EnnemyThree: {fileID: 0}
+  EnnemyFour: {fileID: 0}
+  EnnemyFive: {fileID: 0}
+  OutofSightMat: {fileID: 0}
+  InSightMat: {fileID: 0}
+  dangerLight: {fileID: 0}
+  NoDangerLight: {fileID: 0}
 --- !u!114 &114197516465365618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2579,7 +2591,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1859086223
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af3358cb68734df40bb2a62ba133fcc8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6008ddef4c8b01949a4e128dd09d7cdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
