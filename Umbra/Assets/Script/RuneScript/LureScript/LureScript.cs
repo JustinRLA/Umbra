@@ -13,8 +13,7 @@ public class LureScript : MonoBehaviour {
 	RuneManagerScript myRuneManagerScript;
 	public GameObject myCam;
 	public bool inLureMode;
-	public GameObject myCamPivot;
-	public GameObject myOwnLureCam;
+
 	public GameObject CamOne;
 	public GameObject CamTwo;
 	public GameObject CamThree;
@@ -39,6 +38,9 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		ThePlayerShadow.transform.position = ThePlayer.transform.position;
+		ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 0;
+
 		myCam.GetComponent<Animator> ().SetBool ("MegaBlue", false);
 		CamOne.GetComponent<Animator> ().SetBool ("MegaBlue", false);
 		CamTwo.GetComponent<Animator> ().SetBool ("MegaBlue", false);
@@ -59,6 +61,8 @@ public class LureScript : MonoBehaviour {
 			ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = true;
 		RuneManager.GetComponent<RuneManagerScript> ().timerTactic = 30;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
+		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = false;
 
 			ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = false;
 			ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = false;
@@ -118,9 +122,9 @@ public class LureScript : MonoBehaviour {
 		timer = 2;
 		yield return new WaitForSeconds(2f);
 
-		ThePlayerShadow.transform.parent = ThePlayer.transform;
+		//ThePlayerShadow.transform.parent = ThePlayer.transform;
 		EnnemyDistracted = false;
-		ThePlayerShadow.transform.position = ThePlayer.transform.position;
+		//ThePlayerShadow.transform.position = ThePlayer.transform.position;
 		ThePlayerShadow.SetActive (false);
 		Active = false;
 		GetComponent<LureScript> ().enabled = false;
@@ -139,8 +143,8 @@ public class LureScript : MonoBehaviour {
 		//ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 150;
 		ThePlayer.GetComponent<Collider2D> ().enabled = false;
 		ThePlayer.GetComponent<CircleCollider2D> ().enabled = false;
-		myRuneManagerScript.RuneModeEnabled = false;
-		ThePlayerShadow.transform.parent = null;
+		//myRuneManagerScript.RuneModeEnabled = false;
+		//ThePlayerShadow.transform.parent = null;
 		inLureMode = true;
 
 			yield return new WaitForSeconds(5f);

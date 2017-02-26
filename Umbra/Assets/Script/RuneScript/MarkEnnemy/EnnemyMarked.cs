@@ -14,7 +14,7 @@ public class EnnemyMarked : MonoBehaviour {
 	public GameObject myMainCam;
 	public GameObject ennemyBase;
 	public GameObject StateObj;
-
+	public bool isMarked;
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
@@ -82,21 +82,26 @@ public class EnnemyMarked : MonoBehaviour {
 
 	IEnumerator MarkEvent()
 	{
+		{
+			myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
+			myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
 		myMainCam.GetComponent<Grayscale> ().enabled = false;
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
-
+		isMarked = true;
 		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
 		myCam.GetComponent<ColorCorrectionCurves> ().enabled = false;
-		myRuneManager.timerOffense = myRuneManager.ActualOffense;
+		myRuneManager.timerOffense = 0;
 		VireLight.SetActive (true);
 		gameObject.layer = 13;
 		myMarkEnmnemyRune.CanBeClicked = false;
 		Cursor.visible = false;
 		Time.timeScale = 1f;
 		yield return new WaitForSeconds (25f);
+		isMarked = false;
+
 		gameObject.layer = 11;
 		VireLight.SetActive (false);
-
 	}
-
+}
 }

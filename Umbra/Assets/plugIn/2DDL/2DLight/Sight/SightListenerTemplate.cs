@@ -25,6 +25,7 @@ public class SightListenerTemplate : MonoBehaviour {
 	public GameObject PlayerView;
 	Collider2D ViewCol;
 	public bool inCam;
+	public bool LureInCam;
 	Vector3 Camdir;
 	float angle;
 	public Transform thePlayer;
@@ -94,6 +95,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 			if(inCam==true)
 			{
+				LureInCam = false;
 //				Camdir = thePlayer.position - transform.position;
 //				angle = Mathf.Atan2 (Camdir.y, Camdir.x) * Mathf.Rad2Deg;
 //				myBoute.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
@@ -113,6 +115,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 
 	public void myListener_onEnter(GameObject go){
+		print("There Something");
 		if(TypeOfObj==1)
 		{
 		if(throwAlert==false || throwSuspicious==false)
@@ -148,8 +151,15 @@ public class SightListenerTemplate : MonoBehaviour {
 		{
 			if (go.tag == "Player")
 			{
+				print ("InCam");
 				StartCoroutine (CamCoroutine ());
 				inCam = true;
+			}
+			if (go.tag == "LurePlayer")
+			{
+				print ("LureInCam");
+
+				LureInCam = true;
 			}
 		}
 		if(TypeOfObj==3)
@@ -199,6 +209,10 @@ public class SightListenerTemplate : MonoBehaviour {
 					inCam = false;
 				StopCoroutine (CamCoroutine ());
 				}
+			if (go.tag == "LurePlayer")
+			{
+				LureInCam = false;
+			}
 			}
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 			//print (go.name + " --> OnExit() event");

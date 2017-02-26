@@ -35,21 +35,13 @@ public class checkIfAssassination : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D col) {
 
-		if (col.tag == "ennemyClone") {
-			if (col.GetComponent<ClonePatrol> ().Alert == false)
-			{
-				canAssassinate = true;
-				OtherEnnemy = col.gameObject;
-			}
-		}
-
 //		else
 //			canAssassinate = false;
 		
 
 		if (col.tag == "ennemy") {
 			print ("See");
-			if (col.GetComponent<EnnnemyPatrolUpgraded> ().Alert == false)
+			if (col.GetComponent<EnnnemyPatrolUpgraded> ().Alert == false || col.GetComponent<EnnemyMarked>().isMarked==true)
 			{
 				canAssassinate = true;
 				ActualEnnemy = col.gameObject;
@@ -63,9 +55,7 @@ public class checkIfAssassination : MonoBehaviour {
 		{
 			canAssassinate=false;
 		}
-		if (col.tag == "ennemyClone") {
-				canAssassinate = true;
-			}
+	
 		}
 
 		}

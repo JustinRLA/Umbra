@@ -40,6 +40,8 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject ImageRuneSolidification;
 	public GameObject ImageRuneMarquage;
 	public GameObject ImageRuneLeurre;
+	PlatformerCharacter2D myPlatchar;
+	Platformer2DUserControl myPlatUserControl;
 
 
 
@@ -53,7 +55,8 @@ public class RuneManagerScript : MonoBehaviour
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
-
+		myPlatUserControl = ThePlayer.GetComponent<Platformer2DUserControl>();
+		myPlatformCharacter= ThePlayer.GetComponent<PlatformerCharacter2D>();
 		textaccrochage=GameObject.Find ("accorchageText");
 		textOmbre=GameObject.Find ("ombreText");
 		textSolid=GameObject.Find ("solidText");
@@ -155,6 +158,7 @@ public class RuneManagerScript : MonoBehaviour
 
 		if ( RuneModeEnabled == false)
 		{
+			
 			animCamOne.speed = 2;
 			animCamTwo.speed = 2;
 			animCamThree.speed = 2;
@@ -183,7 +187,7 @@ public class RuneManagerScript : MonoBehaviour
 
 	//	myCam.GetComponent<Animator> ().SetBool ("Blue",true);
 
-		if (Input.GetKeyDown (KeyCode.Q) && RuneModeEnabled==false)
+		if (Input.GetKeyDown (KeyCode.Q) && RuneModeEnabled==false && myPlatformCharacter.canRune==true)
 		{
 			animCamOne.SetBool ("Blue",true);
 			animCamTwo.SetBool ("Blue",true);
@@ -204,6 +208,10 @@ public class RuneManagerScript : MonoBehaviour
 		}
 		
 		if (RuneModeEnabled == true) { 
+			ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 0;
+			ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = false;
+			ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = false;
+
 			animCamOne.speed = 13;
 			animCamTwo.speed = 13;
 			animCamThree.speed = 13;
