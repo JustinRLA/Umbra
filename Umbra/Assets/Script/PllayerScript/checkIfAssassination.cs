@@ -24,7 +24,7 @@ public class checkIfAssassination : MonoBehaviour {
 				ActualEnnemy.GetComponent<DeadScript> ().enabled = true;
 				ActualEnnemy.GetComponent<DeadScript> ().EnnemyDeath();
 				AssassinFeedback.SetActive (false);
-
+				canAssassinate = false;
 
 			}
 		}
@@ -54,6 +54,7 @@ public class checkIfAssassination : MonoBehaviour {
 		if(col.tag=="ennemy")
 		{
 			canAssassinate=false;
+
 		}
 	
 		}
