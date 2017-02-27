@@ -12,7 +12,8 @@ public class DragShadow : MonoBehaviour {
 	Vector2 rayPoint;
 	public GameObject mainCamMy;
 	//	Vector2 MymousePos;
-
+	public GameObject playerMy;
+	public float moveSpeed;
 	void OnMouseEnter()
 	{
 		//	GetComponent<Renderer>().material.color = mouseOverColor;
@@ -35,8 +36,13 @@ public class DragShadow : MonoBehaviour {
 		RuneMangerMy.GetComponent<RuneManagerScript> ().timerDef = 0;
 		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
 		mainCamMy.GetComponent<BloomOptimized> ().enabled = false;
+		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
+		GetComponent<SpriteRenderer> ().enabled = false;
 
 		gameObject.name=("OldCube");
 	}
@@ -46,6 +52,10 @@ public class DragShadow : MonoBehaviour {
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
 		mainCamMy.GetComponent<BloomOptimized> ().enabled = false;
+		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+
 		Destroy (gameObject);
 	}
 
@@ -69,7 +79,7 @@ public class DragShadow : MonoBehaviour {
 		if (dragging)
 		{		distance = Vector3.Distance(transform.position, Camera.main.transform.position);
 
-
+			GetComponent<SpriteRenderer> ().enabled = true;
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			//Vector3 rayPoint = ray.GetPoint(distance);
 			rayPoint = ray.GetPoint(distance);

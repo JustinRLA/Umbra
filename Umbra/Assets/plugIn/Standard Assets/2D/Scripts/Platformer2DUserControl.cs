@@ -9,7 +9,9 @@ using UnityStandardAssets.CrossPlatformInput;
 		private PlatformerCharacter2D m_Character;
 		private bool m_Jump;
 	public bool crouch;
-
+	public GameObject feedbackEye;
+	public Transform eyeCrouch;
+	public Transform eyeWalk;
 
 		private void Awake()
 		{
@@ -26,6 +28,12 @@ using UnityStandardAssets.CrossPlatformInput;
 			}
 		if (Input.GetKeyDown (KeyCode.LeftControl))
 			crouch = !crouch;
+
+		if(crouch)
+			feedbackEye.transform.position=eyeCrouch.position;
+		else
+			feedbackEye.transform.position=eyeWalk.position;
+
 		
 		}
 

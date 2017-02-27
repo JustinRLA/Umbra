@@ -7,6 +7,7 @@ public class MarkEnnemy : MonoBehaviour {
 	public bool CanBeClicked;
 	public GameObject myCamOne;
 	public GameObject myCamTwo;
+	public GameObject myPlayer;
 
 	// Use this for initialization
 	void Start () {

@@ -14,6 +14,12 @@ public class ChangeRunePoint : MonoBehaviour {
 	public GameObject GrapRune;
 	public GameObject MarkLure;
 	public GameObject ShadowIns;
+	public GameObject YellowBCGTrap;
+	public GameObject YellowBCGmark;
+	public GameObject YellowBCGSolid;
+	public GameObject YellowBCGShadow;
+	public GameObject YellowBCGGrap;
+	public GameObject YellowBCGLure;
 
 
 	public GameObject FeedBackImage;
@@ -21,12 +27,12 @@ public class ChangeRunePoint : MonoBehaviour {
 	public GameObject playerMy;
 	// Use this for initialization
 	void Start () {
-		
+		RuneManager=GameObject.Find("RuneManager");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.B) && canChange == true)
+		if (Input.GetKeyDown (KeyCode.E) && canChange == true)
 		{
 			UIMode.SetActive (true);
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = false;
@@ -34,6 +40,8 @@ public class ChangeRunePoint : MonoBehaviour {
 			ReceiveInfo ();
 			Cursor.visible=true;
 		}
+		if (canChange == true)
+			FeedBackImage.GetComponent<SpriteRenderer> ().enabled = true;
 	}
 	public void SendInfo()
 	{
@@ -53,25 +61,61 @@ public class ChangeRunePoint : MonoBehaviour {
 		myTempoTacticRune= RuneManager.GetComponent<RuneManagerScript> ().TacticRune ;
 
 		if (myTempoDefRune == 1)
+		{
 			LureRune.SetActive (false);
+			YellowBCGLure.SetActive(false);
+			ShadowIns.SetActive (true);
+			YellowBCGShadow.SetActive(true);
+
+
+		}
 		if (myTempoDefRune == 2)
+			{
+			LureRune.SetActive (true);
+			YellowBCGLure.SetActive(true);
+
 			ShadowIns.SetActive (false);
+			YellowBCGShadow.SetActive(false);
+			}
 
 		if (myTempoTacticRune == 1)
+				{
 			SolidRune.SetActive (false);
+			YellowBCGSolid.SetActive(false);
+			GrapRune.SetActive(true);
+			YellowBCGGrap.SetActive(true);
+
+
+				}
 		if(myTempoTacticRune==2)
+					{
+			SolidRune.SetActive (true);
+			YellowBCGSolid.SetActive(true);
+
 			GrapRune.SetActive(false);
+			YellowBCGGrap.SetActive(false);
+					}
 
 
 		if (myTempoOffRune == 1)
+						{
 			MarkLure.SetActive (false);
-		if (myTempoOffRune == 2)
+			YellowBCGmark.SetActive(false);
+
+			TrapRune.SetActive (true);
+			YellowBCGTrap.SetActive(true);
+
+						}
+			if (myTempoOffRune == 2)
+							{
+			MarkLure.SetActive (true);
+			YellowBCGmark.SetActive(true);
+
+
 			TrapRune.SetActive (false);
-		
-			
-		
-
-
+			YellowBCGTrap.SetActive(false);
+							}
+	
 	}
 
 	public void MySetOffenseRuneMark()
@@ -112,6 +156,9 @@ public class ChangeRunePoint : MonoBehaviour {
 	{
 		if (col.tag == "Player")
 			canChange = false;
+		FeedBackImage.GetComponent<SpriteRenderer> ().enabled = false;
+
+
 	}
 
 }

@@ -11,6 +11,7 @@ public class LineRendererTest : MonoBehaviour {
 	private Vector3 PlayerPos;
 	public GameObject myPlayer;
 	public Transform PlayerMy;
+	public float movespeed;
 	public Material OutMat;
 	public Material GOodMat;
 	public Material InMat;
@@ -194,6 +195,9 @@ public class LineRendererTest : MonoBehaviour {
 		print ("end");
 		goThrougt = false;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
+		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
 		ActivateThisShit = false;
 		CamGrap.SetActive (false);
@@ -218,6 +222,10 @@ public class LineRendererTest : MonoBehaviour {
 		Time.timeScale = 1f;
 		ActivateThisShit = false;
 		CamGrap.SetActive (false);
+		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
+
 		GetComponent<LineRendererTest> ().enabled = false;
 
 	}

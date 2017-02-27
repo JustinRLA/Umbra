@@ -15,8 +15,11 @@ public class EnnemyMarked : MonoBehaviour {
 	public GameObject ennemyBase;
 	public GameObject StateObj;
 	public bool isMarked;
+	public GameObject PlayerMy;
+	public float PlayerSpeed;
 	// Use this for initialization
 	void Start () {
+		PlayerMy = GameObject.Find ("2DCharacter");
 		RuneManager = GameObject.Find ("RuneManager");
 		myMarkEnmnemyRune = RuneManager.GetComponent<MarkEnnemy> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
@@ -62,6 +65,10 @@ public class EnnemyMarked : MonoBehaviour {
 			StartCoroutine (MarkEvent());
 		myRuneManager.RuneModeEnabled = false;
 			myRuneManager.timerOffense = 0;
+			PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+			PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
+			PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+
 			Time.timeScale = 1f;
 
 		}
@@ -75,6 +82,10 @@ public class EnnemyMarked : MonoBehaviour {
 		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
 		Cursor.visible = false;
+		PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+
 		Time.timeScale = 1f;
 
 	}
