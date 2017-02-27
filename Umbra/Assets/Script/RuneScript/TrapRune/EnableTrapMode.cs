@@ -12,8 +12,8 @@ public class EnableTrapMode : MonoBehaviour {
 	RuneManagerScript myRuneManager;
 	public GameObject gameCam;
 	public GameObject trapcam;
-
-
+	public float movespeed;
+	public GameObject myPlayer;
 	// Use this for initialization
 	void Start () {
 		myRuneManager = GetComponent<RuneManagerScript> ();
@@ -34,6 +34,10 @@ public class EnableTrapMode : MonoBehaviour {
 			
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+			myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+			myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
+			myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
+
 			Time.timeScale = 1f;
 			gameCam.GetComponent<BloomOptimized> ().enabled = false;
 			trapcam.SetActive (false);
@@ -57,6 +61,9 @@ public class EnableTrapMode : MonoBehaviour {
 					Instantiate (Trapping, myraycast.point,transform.rotation);
 					myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 					myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+					myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+					myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
+					myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 
 					Time.timeScale = 1f;
 					myRuneManager.timerOffense = 0;

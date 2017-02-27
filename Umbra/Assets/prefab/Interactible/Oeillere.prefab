@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4464649722758994}
   - component: {fileID: 61741316931565182}
   - component: {fileID: 114648803301581794}
+  - component: {fileID: 114102430454092330}
+  - component: {fileID: 114800278356282900}
   m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
@@ -65,9 +67,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1485252402023892}
-  m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 85.661, y: 16.274, z: 0}
-  m_LocalScale: {x: 0.73859787, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000008726646, w: 1}
+  m_LocalPosition: {x: 35.227066, y: -4.4996395, z: 0}
+  m_LocalScale: {x: 0.5720649, y: 1, z: 1}
   m_Children:
   - {fileID: 4464649722758994}
   m_Father: {fileID: 0}
@@ -98,7 +100,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 1.17, y: 0.73}
+  m_Offset: {x: 1.17, y: 0.13}
   serializedVersion: 2
   m_Size: {x: 3.18, y: 1}
 --- !u!61 &61784584833131840
@@ -115,6 +117,21 @@ BoxCollider2D:
   m_Offset: {x: 1.25, y: 0.64}
   serializedVersion: 2
   m_Size: {x: 3.44, y: 1.29}
+--- !u!114 &114102430454092330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398603757528984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a1c65aa4afa024b9408b8a8169338f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Base: {fileID: 1485252402023892}
+  inJudaMode: 0
+  feedbackOeillere: {fileID: 0}
+  PlayeroNE: {fileID: 0}
 --- !u!114 &114648803301581794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +143,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f01b774fa6ab9b41bb76301a8d0d0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsInside: 0
   Base: {fileID: 1485252402023892}
+  inJudaMode: 0
+  OeillereFeedback: {fileID: 0}
+--- !u!114 &114800278356282900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398603757528984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e135a35dc69d1541b69dbf2f090c8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Base: {fileID: 1485252402023892}
+  inJudaMode: 0
+  feedbackOeillere: {fileID: 0}
 --- !u!212 &212510356251800862
 SpriteRenderer:
   m_ObjectHideFlags: 1
