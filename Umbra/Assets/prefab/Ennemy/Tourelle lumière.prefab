@@ -123,9 +123,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732033569885416}
-  m_LocalRotation: {x: -0, y: -0, z: -0.996361, w: 0.085233904}
-  m_LocalPosition: {x: 86.87155, y: 7.17717, z: 1.9001465}
-  m_LocalScale: {x: 1.4618005, y: 0.5644836, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7034912, w: 0.71070397}
+  m_LocalPosition: {x: 137.66, y: 20, z: 0}
+  m_LocalScale: {x: 0.82516176, y: 0.3186412, z: 1}
   m_Children:
   - {fileID: 4693196419346840}
   - {fileID: 4293114002065886}
@@ -415,7 +415,7 @@ MonoBehaviour:
   Segments: 5
   Layer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1025
   notifyGameObjectsReached: 1
   objectsWithinSight: 1
   intelliderConvex: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
   Segments: 5
   Layer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1025
   notifyGameObjectsReached: 1
   objectsWithinSight: 1
   intelliderConvex: 0
@@ -500,6 +500,7 @@ MonoBehaviour:
   TypeOfObj: 2
   PlayerView: {fileID: 0}
   inCam: 0
+  LureInCam: 0
   thePlayer: {fileID: 0}
   myBoute: {fileID: 0}
   EnnemyOne: {fileID: 0}
@@ -517,7 +518,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732033569885416}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbbbf4300a20df44a82d580b462f3173, type: 3}
   m_Name: 
@@ -525,6 +526,7 @@ MonoBehaviour:
   TheSightListener: {fileID: 1994281296299192}
   ThePlayer: {fileID: 0}
   MyPlayer: {fileID: 0}
+  KLurePlayer: {fileID: 0}
 --- !u!114 &114876211493540906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -595,7 +597,7 @@ MonoBehaviour:
   Segments: 10
   Layer:
     serializedVersion: 2
-    m_Bits: 4097
+    m_Bits: 5121
   notifyGameObjectsReached: 1
   objectsWithinSight: 1
   intelliderConvex: 0

@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4678116919177624}
   - component: {fileID: 212708018234622904}
+  - component: {fileID: 61908165582808706}
   m_Layer: 21
   m_Name: grapReghion 1 (2)
   m_TagString: grapRegion
@@ -210,6 +211,20 @@ BoxCollider2D:
   m_Offset: {x: 0.62500954, y: 0.6252203}
   serializedVersion: 2
   m_Size: {x: 1.2326965, y: 1.2320957}
+--- !u!61 &61908165582808706
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014027155285684}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 1.250122, y: 0.31250003}
+  serializedVersion: 2
+  m_Size: {x: 2.4999998, y: 0.62500006}
 --- !u!114 &114957447309137314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -222,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canClimb: 0
+  ThePlayer: {fileID: 0}
   RightLadder: 0
   maxxY: {fileID: 4590429587621552}
 --- !u!212 &212566904003135208
