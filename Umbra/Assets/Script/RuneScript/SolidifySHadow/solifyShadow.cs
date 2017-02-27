@@ -27,13 +27,20 @@ public class solifyShadow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(1) && MySolid.CanClickable == true)
+		{
 			CancelAction ();
+		MySolid.CanClickable = false;
+		}
 	}
 
 	void OnMouseDown()
 	{
 		if (MySolid.CanClickable == true)
+		{
 			StartCoroutine (SolidicationEvent ());
+			MySolid.CanClickable = false;
+
+		}
 	}
 
 	void OnMouseOver()
@@ -52,7 +59,7 @@ public class solifyShadow : MonoBehaviour {
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
-
+		MySolid.CanClickable = false;
 	}
 
 
@@ -72,6 +79,8 @@ public class solifyShadow : MonoBehaviour {
 
 		yield return new WaitForSeconds(10f);
 		GetComponent<Collider2D> ().isTrigger = true;
+		MySolid.CanClickable = false;
+
 		GetComponent<SpriteRenderer> ().enabled = false;
 
 //		myBlindEnmnemyRune.CanClick = false;
