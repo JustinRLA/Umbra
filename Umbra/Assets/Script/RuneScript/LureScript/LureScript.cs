@@ -189,7 +189,6 @@ public class LureScript : MonoBehaviour {
 		timer = 4;
 		yield return new WaitForSeconds(4f);
 
-		ThePlayerShadow.transform.parent = ThePlayer.transform;
 			EnnemyDistracted = false;
 			ThePlayerShadow.transform.position = ThePlayer.transform.position;
 			ThePlayerShadow.SetActive (false);

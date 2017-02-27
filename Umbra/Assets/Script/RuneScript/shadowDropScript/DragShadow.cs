@@ -14,6 +14,16 @@ public class DragShadow : MonoBehaviour {
 	//	Vector2 MymousePos;
 	public GameObject playerMy;
 	public float moveSpeed;
+
+
+	void Start()
+	{
+		playerMy = GameObject.Find ("2DCharacter");
+
+		mainCamMy = GameObject.Find ("Main Camera");
+		RuneMangerMy=GameObject.Find ("RuneManager");
+		MyOverlay = GameObject.Find ("BlackOverlay");
+	}
 	void OnMouseEnter()
 	{
 		//	GetComponent<Renderer>().material.color = mouseOverColor;
@@ -63,12 +73,7 @@ public class DragShadow : MonoBehaviour {
 	{
 		//dragging = false;
 	}
-	void Start()
-	{
-		mainCamMy = GameObject.Find ("Main Camera");
-		RuneMangerMy=GameObject.Find ("RuneManager");
-		MyOverlay = GameObject.Find ("BlackOverlay");
-	}
+
 	void Update()
 	{
 	//	Time.timeScale =0.1f;

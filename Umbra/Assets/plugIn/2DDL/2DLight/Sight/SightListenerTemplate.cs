@@ -224,7 +224,7 @@ public class SightListenerTemplate : MonoBehaviour {
 		{
 			if (go.tag == "Player")
 			{
-				ViewCol.transform.localScale = new Vector3 (1,1,1);
+				ViewCol.transform.localScale = new Vector3 (0.3f,0.3f,1);
 
 			}
 		}

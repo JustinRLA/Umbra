@@ -7,7 +7,7 @@ namespace UnityStandardAssets._2D
 
 public class ladderScript : MonoBehaviour {
 	public bool canClimb;
-	GameObject ThePlayer;
+	public GameObject ThePlayer;
 	Animator animPlayer;
 	public bool RightLadder;
 		public Transform maxxY;

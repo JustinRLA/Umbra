@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class oeillereChecjBoth : MonoBehaviour {
-	bool IsInside;
+	public bool IsInside;
 	public GameObject Base;
 	public bool inJudaMode;
-	public GameObject feedbackOeillere;
 	public GameObject PlayeroNE;
 
 	// Use this for initialization
 	void Start () {
-		feedbackOeillere=GameObject.Find("feedbackOeillere");
 		PlayeroNE=GameObject.Find("2DCharacter");
 	}
 
@@ -20,8 +18,6 @@ public class oeillereChecjBoth : MonoBehaviour {
 		if (IsInside && Input.GetKeyDown (KeyCode.E)) 
 			inJudaMode = true;
 
-		if(IsInside==true && inJudaMode==false)
-			feedbackOeillere.GetComponent<SpriteRenderer>().enabled=true;
 
 
 		if(inJudaMode==true)
@@ -43,7 +39,6 @@ public class oeillereChecjBoth : MonoBehaviour {
 
 	} 	void OnTriggerExit2D(Collider2D col)
 	{
-		feedbackOeillere.GetComponent<SpriteRenderer>().enabled=false;
 
 		if (col.tag == "Player")
 		{

@@ -16,6 +16,7 @@ public class LineRendererTest : MonoBehaviour {
 	public Material GOodMat;
 	public Material InMat;
 	public Transform HitTransformPoint;
+	public int dividable;
 //	public GameObject ObjHit;
 
 	RaycastHit2D hit;
@@ -149,7 +150,7 @@ public class LineRendererTest : MonoBehaviour {
 
 		if(myRaycast.collider==true)
 		{
-		if (myRaycast.collider.tag == "Untagged")
+		if (myRaycast.collider.tag == "bloc")
 			touchedBadThing = true;
 		else
 			touchedBadThing = false;
@@ -190,7 +191,7 @@ public class LineRendererTest : MonoBehaviour {
 		myRuneManagerScript.timerTactic = 0;
 		Time.timeScale = 1f;
 		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = true;
-	yield return new WaitForSeconds (timeDIstance / 15);
+		yield return new WaitForSeconds (timeDIstance / timeDIstance);
 	//	yield return new WaitForSeconds (timeDIstance);
 		print ("end");
 		goThrougt = false;

@@ -17,7 +17,7 @@ public class EnableTrapMode : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		myRuneManager = GetComponent<RuneManagerScript> ();
-		trapcam = GameObject.Find ("Main CameraTrapRegion");
+		//trapcam = GameObject.Find ("Main CameraTrapRegion");
 	}
 	
 	// Update is called once per frame
@@ -55,12 +55,13 @@ public class EnableTrapMode : MonoBehaviour {
 
 			if(CanInstantiate==true)
 			{
-				if(Input.GetMouseButton(0) && ScriptIsActivaed==true)
+				if(Input.GetMouseButton(0))
 				{
 
 					Instantiate (Trapping, myraycast.point,transform.rotation);
 					myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 					myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+
 					myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 					myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 					myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
@@ -68,7 +69,7 @@ public class EnableTrapMode : MonoBehaviour {
 					Time.timeScale = 1f;
 					myRuneManager.timerOffense = 0;
 					gameCam.GetComponent<BloomOptimized> ().enabled = false;
-					ScriptIsActivaed=false;
+
 					trapcam.SetActive (false);
 
 					GetComponent<EnableTrapMode> ().enabled = false;
@@ -83,7 +84,6 @@ public class EnableTrapMode : MonoBehaviour {
 	{
 		Time.timeScale = 0.1f;
 		Cursor.visible = true;
-		ScriptIsActivaed = true;
 		trapcam.SetActive (true);
 	}
 

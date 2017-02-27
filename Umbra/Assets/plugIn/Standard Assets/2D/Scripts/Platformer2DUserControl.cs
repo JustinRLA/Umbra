@@ -12,7 +12,7 @@ using UnityStandardAssets.CrossPlatformInput;
 	public GameObject feedbackEye;
 	public Transform eyeCrouch;
 	public Transform eyeWalk;
-
+	public bool truePlayer;
 		private void Awake()
 		{
 			m_Character = GetComponent<PlatformerCharacter2D>();
@@ -28,12 +28,13 @@ using UnityStandardAssets.CrossPlatformInput;
 			}
 		if (Input.GetKeyDown (KeyCode.LeftControl))
 			crouch = !crouch;
-
+		if(truePlayer==true)
+		{
 		if(crouch)
 			feedbackEye.transform.position=eyeCrouch.position;
 		else
 			feedbackEye.transform.position=eyeWalk.position;
-
+		}
 		
 		}
 

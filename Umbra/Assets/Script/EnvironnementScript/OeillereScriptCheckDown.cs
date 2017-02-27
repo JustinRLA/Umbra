@@ -6,11 +6,9 @@ public class OeillereScriptCheckDown : MonoBehaviour {
 	public bool IsInside;
 	public GameObject Base;
 	public bool inJudaMode;
-	public GameObject OeillereFeedback;
 
 	// Use this for initialization
 	void Start () {
-		OeillereFeedback=GameObject.Find("feedbackOeillere");
 		
 	}
 	
@@ -19,10 +17,6 @@ public class OeillereScriptCheckDown : MonoBehaviour {
 		if (IsInside && Input.GetKeyDown (KeyCode.E)) 
 			inJudaMode = true;
 
-		if(IsInside==true && inJudaMode==false)
-			OeillereFeedback.GetComponent<SpriteRenderer>().enabled=true;
-//		else
-//			OeillereFeedback.GetComponent<SpriteRenderer>().enabled=false;
 
 
 		if(inJudaMode==true)
@@ -39,9 +33,9 @@ public class OeillereScriptCheckDown : MonoBehaviour {
 		if (col.tag == "Player")
 			IsInside = true;
 		
-	} 	void OnTriggerExit2D(Collider2D col)
-	{			OeillereFeedback.GetComponent<SpriteRenderer>().enabled=false;
-		
+	}
+	void OnTriggerExit2D(Collider2D col)
+	{
 		if (col.tag == "Player")
 		{
 			IsInside=false;

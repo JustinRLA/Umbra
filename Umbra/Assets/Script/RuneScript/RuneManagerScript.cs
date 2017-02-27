@@ -199,11 +199,15 @@ public class RuneManagerScript : MonoBehaviour
 			//myCam.GetComponent<Grayscale>().enabled=true;
 
 		}
-		if (Input.GetKeyDown (KeyCode.Escape) && RuneModeEnabled==true)
+		if (Input.GetMouseButton(1) && RuneModeEnabled==true)
 		{
 			RuneModeEnabled = false;
 		myCam.GetComponent<BloomOptimized>().enabled=false;
 		myCam.GetComponent<Grayscale>().enabled=false;
+			ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+			ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
+			ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
+
 		
 		}
 		

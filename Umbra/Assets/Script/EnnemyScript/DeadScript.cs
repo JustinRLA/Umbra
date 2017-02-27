@@ -17,6 +17,7 @@ public class DeadScript : MonoBehaviour {
 	{
 		print("Im Dead");
 		gameObject.tag="Dead Ennemy";
+		GetComponent<SpriteRenderer> ().color = new Color (0, 0, 0);
 		GetComponent<Rigidbody2D> ().isKinematic = true;
 	GetComponent<BoxCollider2D> ().isTrigger = true;
 

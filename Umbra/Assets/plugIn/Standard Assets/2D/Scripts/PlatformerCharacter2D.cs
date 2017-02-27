@@ -31,9 +31,20 @@ using UnityEngine.SceneManagement;
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 		public bool Climb;
+	public GameObject OeillereFeedback;
+	public GameObject ActualOeillere;
+	SpriteRenderer actualOeillereSPriteRenderer;
+
 	bool canBeSilenced;
 	public GameObject MyRuneMan;
 	RuneManagerScript myRuneManScript;
+
+	void Start()
+	{
+		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
+
+	}
+
 
         private void Awake()
         {
@@ -46,11 +57,15 @@ using UnityEngine.SceneManagement;
 			m_CeilingCheck = transform.Find("CeilingCheck");
 			m_Anim = GetComponent<Animator>();
 			m_Rigidbody2D = GetComponent<Rigidbody2D>();
+	
 
         }
 	public void Death()
 	{
 		print ("Bouhhhhhhhhhhhhhhhjhbhyb");
+		actualOeillereSPriteRenderer.enabled = false;
+		ActualOeillere = null;
+
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 
@@ -94,8 +109,19 @@ using UnityEngine.SceneManagement;
 
 	}
 
-
-
+	void Update()
+	{
+	if(ActualOeillere !=null)
+	{
+		if (ActualOeillere.GetComponent<oeillereChecjBoth> ().IsInside == true)
+		{
+			actualOeillereSPriteRenderer.enabled = true;
+			print ("showFuckfgFeedback");
+		}
+		else
+			actualOeillereSPriteRenderer.enabled = false;
+	}
+	}
         private void FixedUpdate()
         {
 			m_Grounded = false;
@@ -244,8 +270,9 @@ using UnityEngine.SceneManagement;
 				m_Anim.SetBool("Ground", false);
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 			}
+	
 
-//			if(move==0||crouch==true||m_Grounded==false||canBeSilenced==true)
+					//			if(move==0||crouch==true||m_Grounded==false||canBeSilenced==true)
 //			{
 //				RunCircleCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);	
 //
@@ -270,8 +297,21 @@ using UnityEngine.SceneManagement;
 		{
 		if (col.tag == "Proj")
 			Death ();
+
+		if (col.tag == "oeillere")
+			ActualOeillere = col.gameObject;
 		}
 //
+	void OnTriggerExit2D(Collider2D col)
+	{
+
+		if (col.tag == "oeillere")
+		{
+			actualOeillereSPriteRenderer.enabled = false;
+			ActualOeillere = null;
+		}
+	}
+	//
 //		void OnTriggerExit2D(Collider2D col)
 //		{
 //			if (col.tag == "Ombre")
