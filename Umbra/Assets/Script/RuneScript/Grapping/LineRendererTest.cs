@@ -8,6 +8,8 @@ public class LineRendererTest : MonoBehaviour {
 		private Vector3 mousePos;    
 		private Vector3 startPos;    // Start position of line
 		private Vector3 endPos;    // End position of line
+	Vector3 dir;
+	public float forcedividable;
 	private Vector3 PlayerPos;
 	public GameObject myPlayer;
 	public Transform PlayerMy;
@@ -105,13 +107,18 @@ public class LineRendererTest : MonoBehaviour {
 //					HitTransformPoint.position.x = myRaycast.point.x;
 					//PlayerMy.GetComponent<Rigidbody2D>().AddForce((HitTransformPoint.position-PlayerMy.position)*20000*Time.smoothDeltaTime);
 					goThrougt=true;
+						dir =  HitTransformPoint.position-PlayerMy.position;
 					timeDIstance = Vector3.Distance (PlayerMy.position,HitTransformPoint.position);
-						print (timeDIstance);
+//						print (timeDIstance);
 					print ("SomethingHappe");
-					ActivateThisShit = false;
-					StartCoroutine (StopGoThrought());
-					Destroy (line);
+						//PlayerMy.GetComponent<Rigidbody2D>().AddForce((HitTransformPoint.position-PlayerMy.position).normalized *9550);
 
+					ActivateThisShit = false;
+						myRuneManagerScript.timerTactic = 0;
+						Time.timeScale = 1f;
+					StartCoroutine (StopGoThrought());
+						Destroy (line);
+					//	End ();
 				}
 			else
 			Destroy (line);
@@ -182,6 +189,24 @@ public class LineRendererTest : MonoBehaviour {
 		}
 	}
 		// Following method adds collider to created line
+	void End()
+	{
+		myRuneManagerScript.RuneActivated = false;
+		myRuneManagerScript.RuneModeEnabled = false;
+
+		TouchGood = false;
+		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
+		ActivateThisShit = false;
+		CamGrap.SetActive (false);
+		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
+//		print ("this is the end");
+		GetComponent<LineRendererTest> ().enabled = false;
+
+
+	}
+
 	IEnumerator StopGoThrought()
 	{
 		myRuneManagerScript.RuneActivated = false;
@@ -190,12 +215,11 @@ public class LineRendererTest : MonoBehaviour {
 		TouchGood = false;
 		myRuneManagerScript.timerTactic = 0;
 		Time.timeScale = 1f;
-		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = true;
-		yield return new WaitForSeconds (timeDIstance / timeDIstance);
+		yield return new WaitForSeconds (timeDIstance / dividable);
 	//	yield return new WaitForSeconds (timeDIstance);
 		print ("end");
 		goThrougt = false;
-		myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
+		//myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
 		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
@@ -211,7 +235,12 @@ public class LineRendererTest : MonoBehaviour {
 	{
 		print ("testinggg");
 	if(goThrougt==true)
-			PlayerMy.transform.Translate((HitTransformPoint.position-PlayerMy.position)*2*Time.smoothDeltaTime);
+		{
+			PlayerMy.GetComponent<Rigidbody2D>().AddForce(dir /forcedividable,ForceMode2D.Impulse);
+			print ("fly");
+		}
+
+		//	PlayerMy.transform.Translate((HitTransformPoint.position-PlayerMy.position)*2*Time.smoothDeltaTime);
 		
 
 	}

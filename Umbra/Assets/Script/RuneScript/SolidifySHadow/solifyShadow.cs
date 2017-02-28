@@ -35,7 +35,7 @@ public class solifyShadow : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		if (MySolid.CanClickable == true)
+		if (MySolid.CanClickable == true && PlayerMy.GetComponent<PlatformerCharacter2D> ().inShadow==false)
 		{
 			StartCoroutine (SolidicationEvent ());
 			MySolid.CanClickable = false;

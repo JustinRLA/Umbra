@@ -15,7 +15,8 @@ using UnityEngine.SceneManagement;
 	public Transform SpawnPointTwo;
 	public Transform SpawnPointThree;
 	public Transform SpawnPointFour;
-
+	public bool inShadow;
+	public bool ClimbTrue;
 		public GameObject RunTrigger;
 		CircleCollider2D RunCircleCollider;
 	public bool canRune;
@@ -31,6 +32,7 @@ using UnityEngine.SceneManagement;
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 		public bool Climb;
+	public GameObject ActualLadder;
 	public GameObject OeillereFeedback;
 	public GameObject ActualOeillere;
 	SpriteRenderer actualOeillereSPriteRenderer;
@@ -62,6 +64,9 @@ using UnityEngine.SceneManagement;
         }
 	public void Death()
 	{
+		inShadow = false;
+		ClimbTrue = false;
+
 		print ("Bouhhhhhhhhhhhhhhhjhbhyb");
 		actualOeillereSPriteRenderer.enabled = false;
 		ActualOeillere = null;
@@ -108,9 +113,65 @@ using UnityEngine.SceneManagement;
 
 
 	}
+	void JumpFromLader()
+	{
+		//canClimb = false;
+
+		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
+		//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
+		GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 15);
+		GetComponent<Animator>().SetBool ("Climb", false);
+      Climb = false;
+
+	ReturnToNormal ();
+
+	}
+
+
+	void ReturnToNormal()
+	{
+		//canClimb = false;
+
+		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+		//		ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
+		GetComponent<Animator>().SetBool ("Climb", false);
+		Climb = false;
+		//GetComponent<Collider2D> ().enabled = false;
+
+
+		//GetComponent<Collider2D> ().enabled = true;
+
+	}
+
 
 	void Update()
 	{
+		if (ClimbTrue == true) 
+		{
+			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
+			if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space)==false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder>().MaxHauteur.position.y)
+				transform.Translate (Vector2.up * 2*Time.deltaTime);
+			if (Input.GetKey (KeyCode.S))
+				transform.Translate (Vector2.down * 2*Time.deltaTime);
+			if (Input.GetKey (KeyCode.Space))
+				JumpFromLader ();		
+
+			GetComponent<Animator>().SetBool ("Climb", true);
+			Climb = true;
+
+			if (Input.GetKey (KeyCode.E))
+				ReturnToNormal ();
+		}
+		else
+		{
+			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
+			GetComponent<Animator>().SetBool ("Climb", false);
+			Climb = false;
+
+		}
+
+
 	if(ActualOeillere !=null)
 	{
 		if (ActualOeillere.GetComponent<oeillereChecjBoth> ().IsInside == true)
@@ -295,32 +356,40 @@ using UnityEngine.SceneManagement;
 
 		void OnTriggerEnter2D(Collider2D col)
 		{
+		if (col.tag == "Ladder")
+		{
+			ClimbTrue = true;
+			ActualLadder = col.gameObject;
+		}
+		
 		if (col.tag == "Proj")
 			Death ();
 
 		if (col.tag == "oeillere")
 			ActualOeillere = col.gameObject;
+
+		if (col.tag == "Ombre")
+			inShadow = true;
+		
 		}
 //
 	void OnTriggerExit2D(Collider2D col)
 	{
-
+		if (col.tag == "Ladder")
+			ClimbTrue = false;
+		
 		if (col.tag == "oeillere")
 		{
 			actualOeillereSPriteRenderer.enabled = false;
 			ActualOeillere = null;
 		}
+		if (col.tag == "Ombre")
+			inShadow = false;
+		
+			
+	
 	}
 	//
-//		void OnTriggerExit2D(Collider2D col)
-//		{
-//			if (col.tag == "Ombre")
-//				ViewTrigger.transform.localScale = new Vector3 (4, 1, 1);
-//
-//			if(col.tag=="lumiere")
-//				ViewTrigger.transform.localScale = new Vector3 (4, 1, 1);
-//
-//		}
         private void Flip()
         {
             // Switch the way the player is labelled as facing.

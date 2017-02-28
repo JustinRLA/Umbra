@@ -44,14 +44,6 @@ public class ladderScript : MonoBehaviour {
 
 
 		}
-			else
-			{
-				
-				ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
-			animPlayer.SetBool ("Climb", false);
-			myPLatformCharacter.Climb = false;
-
-			}
 	
 			
 	}
@@ -67,17 +59,18 @@ public class ladderScript : MonoBehaviour {
 		if(col.tag=="Player")
 		{
 			canClimb = false;
-
-
-
-
 		}
 
-		}void JumpFromLader()
+		}
+		void JumpFromLader()
 		{
+			canClimb = false;
+
 			ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 			//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
 			ThePlayer.GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 15);
+			animPlayer.SetBool ("Climb", false);
+			myPLatformCharacter.Climb = false;
 
 			StartCoroutine (ReturnToNormal ());
 
@@ -85,13 +78,15 @@ public class ladderScript : MonoBehaviour {
 
 	IEnumerator ReturnToNormal()
 	{
-			
+			canClimb = false;
+
+			ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
+
 //		ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		animPlayer.SetBool ("Climb", false);
 			myPLatformCharacter.Climb = false;
 			GetComponent<Collider2D> ().enabled = false;
 
-			canClimb = false;
 
 			yield return new WaitForSeconds(1f);
 			GetComponent<Collider2D> ().enabled = true;

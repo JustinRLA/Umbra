@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 212700446754403914}
   - component: {fileID: 61648603478254548}
   - component: {fileID: 50212580394890846}
-  - component: {fileID: 114957447309137314}
+  - component: {fileID: 114664501469207026}
   m_Layer: 17
   m_Name: MurGrimpable (2)
   m_TagString: Ladder
@@ -115,8 +115,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1911110865764016}
   m_LocalRotation: {x: -0, y: -0, z: 0.00000873208, w: 1}
-  m_LocalPosition: {x: 174.88, y: 14.5, z: 0}
-  m_LocalScale: {x: 0.29989758, y: 1.36929, z: 1.21646}
+  m_LocalPosition: {x: 131.4, y: 10.59, z: 0}
+  m_LocalScale: {x: 0.29989758, y: 2.690776, z: 1.21646}
   m_Children:
   - {fileID: 4228432130626550}
   - {fileID: 4678116919177624}
@@ -225,7 +225,7 @@ BoxCollider2D:
   m_Offset: {x: 1.250122, y: 0.31250003}
   serializedVersion: 2
   m_Size: {x: 2.4999998, y: 0.62500006}
---- !u!114 &114957447309137314
+--- !u!114 &114664501469207026
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -233,13 +233,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1103345328007644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5b32372de57d54699a6346abc5ae92, type: 3}
+  m_Script: {fileID: 11500000, guid: ba131f67b9cea8e41bfaa7364df8a5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canClimb: 0
-  ThePlayer: {fileID: 0}
-  RightLadder: 0
-  maxxY: {fileID: 4590429587621552}
+  MaxHauteur: {fileID: 4590429587621552}
 --- !u!212 &212566904003135208
 SpriteRenderer:
   m_ObjectHideFlags: 1
