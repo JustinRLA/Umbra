@@ -578,17 +578,17 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 					CurrentNavPoint = NavPointOne_Right;
 					CurrentNavPointGo = NavPoitnOneGo;
 					NavPointIGot = 2;
-					if(NavPointTwo_Left !=null)
-						NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
-					NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
+				//	if(NavPointTwo_Left !=null)
+//						NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
+				//	NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
 				}
 					else	
 					{
 					CurrentNavPoint = NavPointTwo_Left;
 					CurrentNavPointGo = NavPoitnTwoGo;
 					NavPointIGot = 1;
-					NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-					NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;
+				//	NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
+					//NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;
 				}
 
 			}

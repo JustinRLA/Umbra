@@ -13,9 +13,17 @@ public class EnableTrapMode : MonoBehaviour {
 	public GameObject gameCam;
 	public GameObject trapcam;
 	public float movespeed;
+	public GameObject nowherepointObj;
 	public GameObject myPlayer;
+	public GameObject ThisTrap;
+	public GameObject Demotrap;
+	public Transform NowherePoint;
+	public GameObject myTrapZone;
 	// Use this for initialization
 	void Start () {
+		Demotrap = GameObject.Find ("TrapDemo");
+		nowherepointObj=GameObject.Find("NowherePoint");
+		NowherePoint = nowherepointObj.transform;
 		myRuneManager = GetComponent<RuneManagerScript> ();
 		//trapcam = GameObject.Find ("Main CameraTrapRegion");
 	}
@@ -41,7 +49,11 @@ public class EnableTrapMode : MonoBehaviour {
 			Time.timeScale = 1f;
 			gameCam.GetComponent<BloomOptimized> ().enabled = false;
 			trapcam.SetActive (false);
-
+			if(myTrapZone != null)
+			{
+				myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
+				Demotrap.transform.position = NowherePoint.position;
+			}
 			GetComponent<EnableTrapMode> ().enabled = false;
 			
 		}	
@@ -49,15 +61,44 @@ public class EnableTrapMode : MonoBehaviour {
 		if(myraycast)
 		{
 			if (myraycast.collider.tag == "TrapPlacement")
+			{
 				CanInstantiate = true;
+				myTrapZone = myraycast.collider.gameObject;
+			}
 			else
 				CanInstantiate = false;
+			
+		}
+
+		if( myTrapZone != null)
+		{
+		if (CanInstantiate == true)
+			{
+			myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (true);
+				Demotrap.transform.position = new Vector3 (myraycast.point.x, myTrapZone.transform.position.y, 0);
+			}
+	
+			if(CanInstantiate==false)
+			{
+			myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
+				Demotrap.transform.position = NowherePoint.position;
+
+		}
+
+
+		}
+		if( myTrapZone == null)
+		{
+				Demotrap.transform.position = NowherePoint.position;
+
+			}
+
+
 
 			if(CanInstantiate==true)
 			{
 				if(Input.GetMouseButton(0))
 				{
-
 					Instantiate (Trapping, myraycast.point,transform.rotation);
 					myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 					myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
@@ -65,7 +106,11 @@ public class EnableTrapMode : MonoBehaviour {
 					myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 					myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 					myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
-
+				if(myTrapZone != null)
+				{
+					myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
+					Demotrap.transform.position = NowherePoint.position;
+				}
 					Time.timeScale = 1f;
 					myRuneManager.timerOffense = 0;
 					gameCam.GetComponent<BloomOptimized> ().enabled = false;
@@ -77,7 +122,7 @@ public class EnableTrapMode : MonoBehaviour {
 				}	
 			}
 		}
-	}
+
 
 
 	public void EnabledTrapMode()

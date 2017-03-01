@@ -20,7 +20,7 @@ public class LineRendererTest : MonoBehaviour {
 	public Transform HitTransformPoint;
 	public int dividable;
 //	public GameObject ObjHit;
-
+	public GameObject TheBeam;
 	RaycastHit2D hit;
 	public bool goThrougt=false;
 	public float timeDIstance;
@@ -64,6 +64,8 @@ public class LineRendererTest : MonoBehaviour {
 
 		if(line !=null)
 		{
+					
+
 		mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		mousePos.z = 0;
 		line.SetPosition(0,PlayerMy.position);
@@ -102,6 +104,9 @@ public class LineRendererTest : MonoBehaviour {
 
 				if (TouchGood == true && touchedBadThing == false)
 				{
+						if(TheBeam!=null)
+						TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
+
 					HitTransformPoint.position = new Vector3 (myRaycast.point.x, myRaycast.point.y, 0);
 //					HitTransformPoint.position.y = myRaycast.point.y;
 //					HitTransformPoint.position.x = myRaycast.point.x;
@@ -163,10 +168,21 @@ public class LineRendererTest : MonoBehaviour {
 			touchedBadThing = false;
 
 		if (myRaycast.collider.tag == "grapRegion")
+						{			
 			TouchGood = true;
+							TheBeam=myRaycast.collider.gameObject;
+						}
 		else
 			TouchGood = false;
-		}
+
+				if (TouchGood == true && TheBeam != null && touchedBadThing==false)
+					TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (true);
+				if(TheBeam!=null)
+				{
+				if(TouchGood==false || touchedBadThing==true)
+					TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
+				}
+				}
 		}
 
 		}
@@ -195,13 +211,17 @@ public class LineRendererTest : MonoBehaviour {
 		myRuneManagerScript.RuneModeEnabled = false;
 
 		TouchGood = false;
-		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
+		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
+
+		MainCamera.GetComponent<BloomOptimized> ().enabled =false;
 		ActivateThisShit = false;
 		CamGrap.SetActive (false);
 		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 //		print ("this is the end");
+		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
+
 		GetComponent<LineRendererTest> ().enabled = false;
 
 
@@ -211,12 +231,19 @@ public class LineRendererTest : MonoBehaviour {
 	{
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
+		CamGrap.SetActive (false);
 
 		TouchGood = false;
+		if(TheBeam!=null)
+		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
+
 		myRuneManagerScript.timerTactic = 0;
 		Time.timeScale = 1f;
 		yield return new WaitForSeconds (timeDIstance / dividable);
 	//	yield return new WaitForSeconds (timeDIstance);
+		if(TheBeam!=null)
+		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
+
 		print ("end");
 		goThrougt = false;
 		//myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
@@ -248,6 +275,9 @@ public class LineRendererTest : MonoBehaviour {
 	{
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
+		if(TheBeam!=null)
+		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
+
 		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
 		Time.timeScale = 1f;
 		ActivateThisShit = false;
@@ -255,6 +285,8 @@ public class LineRendererTest : MonoBehaviour {
 		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
+		if(TheBeam!=null)
+		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
 
 		GetComponent<LineRendererTest> ().enabled = false;
 

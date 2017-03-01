@@ -21,7 +21,8 @@ public class LureScript : MonoBehaviour {
 
 	public bool Active=false;
 	public float timer;
-
+	public GameObject imageTimer;
+	public GameObject canvaTimer;
 
 	// Use this for initialization
 	void Start () {
@@ -45,7 +46,6 @@ public class LureScript : MonoBehaviour {
 		CamOne.GetComponent<Animator> ().SetBool ("MegaBlue", false);
 		CamTwo.GetComponent<Animator> ().SetBool ("MegaBlue", false);
 		CamThree.GetComponent<Animator> ().SetBool ("MegaBlue", false);
-
 		myCam.GetComponent<NoiseAndScratches> ().enabled = true;
 		CamOne.GetComponent<NoiseAndScratches> ().enabled = true;
 		CamTwo.GetComponent<NoiseAndScratches> ().enabled = true;
@@ -53,10 +53,11 @@ public class LureScript : MonoBehaviour {
 
 		//	if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W)) 
 		//myOwnLureCam.SetActive(true);
-
+		canvaTimer.SetActive(true);
 		Active=true;
 		inLureMode = true;
 		//myCamPivot.SetActive (false);
+		imageTimer.GetComponent<timerLure>().fraction=7;
 			ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = true;
 			ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = true;
 		RuneManager.GetComponent<RuneManagerScript> ().timerTactic = 30;
@@ -127,6 +128,8 @@ public class LureScript : MonoBehaviour {
 		//ThePlayerShadow.transform.position = ThePlayer.transform.position;
 		ThePlayerShadow.SetActive (false);
 		Active = false;
+		canvaTimer.SetActive(false);
+
 		GetComponent<LureScript> ().enabled = false;
 
 	}
@@ -147,7 +150,7 @@ public class LureScript : MonoBehaviour {
 		//ThePlayerShadow.transform.parent = null;
 		inLureMode = true;
 
-			yield return new WaitForSeconds(5f);
+			yield return new WaitForSeconds(7f);
 		myCam.GetComponent<NoiseAndScratches> ().enabled = false;
 		CamOne.GetComponent<NoiseAndScratches> ().enabled = false;
 		CamTwo.GetComponent<NoiseAndScratches> ().enabled = false;
@@ -193,6 +196,8 @@ public class LureScript : MonoBehaviour {
 			ThePlayerShadow.transform.position = ThePlayer.transform.position;
 			ThePlayerShadow.SetActive (false);
 		Active = false;
+		canvaTimer.SetActive(false);
+
 		GetComponent<LureScript> ().enabled = false;
 		}
 
