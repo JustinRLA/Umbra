@@ -13,9 +13,15 @@ public class CheckPointChange : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter(Collider col)
+	void OnTriggerEnter2D(Collider2D col)
 	{
+		//print ("Check");
+
 		if (col.tag == "Player")
+		{
 			CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
+			//print ("Check");
+		}
+
 	}
 }

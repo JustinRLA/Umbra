@@ -115,7 +115,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 
 	public void myListener_onEnter(GameObject go){
-		print("There Something");
+//		print("There Something");
 		if(TypeOfObj==1)
 		{
 		if(throwAlert==false || throwSuspicious==false)
@@ -136,7 +136,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 		if (go.tag == "Player")
 		{
-			print ("One");
+//			print ("One");
 			IsawTheLure=false;
 			iSeeYou = true;
 			//if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)

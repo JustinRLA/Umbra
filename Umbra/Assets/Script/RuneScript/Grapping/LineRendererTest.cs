@@ -115,7 +115,7 @@ public class LineRendererTest : MonoBehaviour {
 						dir =  HitTransformPoint.position-PlayerMy.position;
 					timeDIstance = Vector3.Distance (PlayerMy.position,HitTransformPoint.position);
 //						print (timeDIstance);
-					print ("SomethingHappe");
+//					print ("SomethingHappe");
 						//PlayerMy.GetComponent<Rigidbody2D>().AddForce((HitTransformPoint.position-PlayerMy.position).normalized *9550);
 
 					ActivateThisShit = false;

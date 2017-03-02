@@ -15,6 +15,7 @@ using UnityEngine.SceneManagement;
 	public Transform SpawnPointTwo;
 	public Transform SpawnPointThree;
 	public Transform SpawnPointFour;
+	public GameObject checkPointManager;
 	public bool inShadow;
 	public bool ClimbTrue;
 		public GameObject RunTrigger;
@@ -67,12 +68,23 @@ using UnityEngine.SceneManagement;
 	{
 		inShadow = false;
 		ClimbTrue = false;
+		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 0)
+			transform.position = SpawnPointOne.transform.position;
 
-		print ("Bouhhhhhhhhhhhhhhhjhbhyb");
+		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 1)
+			transform.position = SpawnPointTwo.transform.position;
+
+		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 2)
+			transform.position = SpawnPointThree.transform.position;
+
+		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 3)
+			transform.position = SpawnPointFour.transform.position;
+
+//		print ("Bouhhhhhhhhhhhhhhhjhbhyb");
 		actualOeillereSPriteRenderer.enabled = false;
 		ActualOeillere = null;
 
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		//SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 
 	public void StartCorou()
@@ -178,7 +190,7 @@ using UnityEngine.SceneManagement;
 		if (ActualOeillere.GetComponent<oeillereChecjBoth> ().IsInside == true)
 		{
 			actualOeillereSPriteRenderer.enabled = true;
-			print ("showFuckfgFeedback");
+//			print ("showFuckfgFeedback");
 		}
 		else
 			actualOeillereSPriteRenderer.enabled = false;

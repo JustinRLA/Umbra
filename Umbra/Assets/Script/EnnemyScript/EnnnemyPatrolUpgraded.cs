@@ -651,7 +651,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			if (Vector3.Distance (CurrentNavPoint.position, transform.position) < 2)
 			{
 				speed = 0;
-				print ("near");
+//				print ("near");
 				if (PointToLookWIthOneNavPoint.GetComponent<lookPosition>().RightTo==false)
 			{
 				lookRight=false;
@@ -670,7 +670,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 3 && Alert==false && Suspicious==false)
 		{
 			//flip();
-			print("Close");
+//			print("Close");
 			navRight =!navRight;
 				timerBetweenPatrol -= Time.deltaTime;
 				speed = 0;
@@ -795,11 +795,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		{
 		AlertInMode();
 		CurrentNavPointGo = null;
-			if(NavPointTwo_Left !=null)
-			{
-			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
-			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-		}
+		
 		}
 
 		if(timerState>0 && timerState<=15 || mySighListernetTemplate.IsawTheLure==true)
