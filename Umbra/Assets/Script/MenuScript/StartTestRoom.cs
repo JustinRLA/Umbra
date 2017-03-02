@@ -8,7 +8,7 @@ public class StartTestRoom : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SceneManager.LoadScene ("Test_Scene");
+		SceneManager.LoadScene ("Niveau_1");
 
 	}
 	
