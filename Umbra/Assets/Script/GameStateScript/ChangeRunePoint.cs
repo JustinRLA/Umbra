@@ -32,24 +32,29 @@ public class ChangeRunePoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.E) && canChange == true)
+		if (Input.GetKeyDown (KeyCode.E) && canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true)
 		{
 			UIMode.SetActive (true);
+
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = false;
 			playerMy.GetComponent<Platformer2DUserControl> ().enabled = false;
 			ReceiveInfo ();
 			Cursor.visible=true;
 		}
-		if (canChange == true)
+		if (canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true)
 			FeedBackImage.GetComponent<SpriteRenderer> ().enabled = true;
 	}
 	public void SendInfo()
 	{
+		RuneManager.GetComponent<RuneManagerScript> ().enabled = true;
+
 		RuneManager.GetComponent<RuneManagerScript> ().DefFune= myTempoDefRune;
 		RuneManager.GetComponent<RuneManagerScript> ().OffenseRune=myTempoOffRune ;
 	 RuneManager.GetComponent<RuneManagerScript> ().TacticRune=myTempoTacticRune ;
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+
 		UIMode.SetActive (false);
 		Cursor.visible=false;
 	}
@@ -115,6 +120,7 @@ public class ChangeRunePoint : MonoBehaviour {
 			TrapRune.SetActive (false);
 			YellowBCGTrap.SetActive(false);
 							}
+		RuneManager.GetComponent<RuneManagerScript> ().enabled = false;
 	
 	}
 

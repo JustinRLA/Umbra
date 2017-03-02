@@ -20,6 +20,7 @@ using UnityEngine.SceneManagement;
 		public GameObject RunTrigger;
 		CircleCollider2D RunCircleCollider;
 	public bool canRune;
+	public bool canChangeRune;
 		//public GameObject ViewTrigger;
 //		CircleCollider2D ViewTriggerCollider;
 	public bool TruePlayer;
@@ -206,9 +207,16 @@ using UnityEngine.SceneManagement;
         public void Move(float move, bool crouch, bool jump)
         {
 		if (move == 0)
+		{
 			canRune = true;
+			canChangeRune = true;
+		}
 		else
+		{
 			canRune = false;
+			canChangeRune = false;
+		}		
+
 		if(MyRuneMan != null)
 		{
 		if(myRuneManScript.RuneModeEnabled==false && TruePlayer==true)
