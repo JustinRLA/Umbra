@@ -814,11 +814,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			}
 		//	if(PhamomPoint.position.y<
 
-			if(NavPointTwo_Left !=null)
-			{
-			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
-			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-			}
+	
 			
 			}
 	//}
