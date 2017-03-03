@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerAlert : MonoBehaviour {
 	public GameObject EnnemyBase;
+	public GameObject mySignListener;
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +17,13 @@ public class TriggerAlert : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {
-		if (col.tag == "Player") 
+		if (col.tag == "Player" || col.tag == "ViewTrigger") 
 		{
-			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert=true;
-			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+			//EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert=true;
+			//EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+			mySignListener.GetComponent <SightListenerTemplate>().throwAlert=true;
+			print ("fuckkkkkkkkkPart2");
+
 
 		}
 		}

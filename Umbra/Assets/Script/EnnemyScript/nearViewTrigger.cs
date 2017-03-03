@@ -5,6 +5,7 @@ using UnityEngine;
 public class nearViewTrigger : MonoBehaviour {
 	public GameObject MySight;
 	public GameObject EnnemyBase;
+	public GameObject mySignListener;
 
 	// Use this for initialization
 	void Start () {
@@ -17,9 +18,12 @@ public class nearViewTrigger : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D col) {
 		//print ("fuckkkkkkkkk");
-		if (col.tag == "Player" && MySight.GetComponent<SightListenerTemplate>().iSeeYou==true) {
-			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert = true;
-			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+		if (col.tag == "ViewTrigger" && MySight.GetComponent<SightListenerTemplate>().iSeeYou==true) {
+//			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+//			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert = true;
+			mySignListener.GetComponent <SightListenerTemplate>().throwAlert=true;
+
+			print ("fuckkkkkkkkk");
 	}
 	}
 }

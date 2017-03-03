@@ -239,7 +239,10 @@ public class LineRendererTest : MonoBehaviour {
 
 		myRuneManagerScript.timerTactic = 0;
 		Time.timeScale = 1f;
+		myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 0;
 		yield return new WaitForSeconds (timeDIstance / dividable);
+		myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 3;
+
 	//	yield return new WaitForSeconds (timeDIstance);
 		if(TheBeam!=null)
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);

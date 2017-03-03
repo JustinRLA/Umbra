@@ -13,7 +13,7 @@ public class WeaponBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rb.velocity = transform.right * 20;
+		rb.velocity = transform.right * 23;
 	}
 
 	void OnTriggerEnter2D(Collider2D col)

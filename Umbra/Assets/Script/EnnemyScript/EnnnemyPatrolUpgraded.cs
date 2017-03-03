@@ -824,12 +824,13 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 		while(true)
 		{
-		yield return new WaitForSeconds (attackdelay);
-		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<8)
+		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<10)
 		{
 				Instantiate (Proj, ProjStartPos.position, ProjStartPos.rotation);
 				attackdelay = 2;
 			}	
+			yield return new WaitForSeconds (attackdelay);
+
 		}	
 	}	
 
