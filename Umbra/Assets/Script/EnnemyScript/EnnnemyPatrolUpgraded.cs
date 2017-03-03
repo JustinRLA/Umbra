@@ -824,10 +824,11 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 		while(true)
 		{
-		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<10)
+		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<15)
 		{
 				Instantiate (Proj, ProjStartPos.position, ProjStartPos.rotation);
 				attackdelay = 2;
+				print ("Attack");
 			}	
 			yield return new WaitForSeconds (attackdelay);
 
@@ -894,6 +895,11 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			InRange = false;
 	}
 //
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Player")
+			col.gameObject.GetComponent<PlatformerCharacter2D> ().Death ();
+	}
 //
 //
 //		IEnumerator changenavPoint()

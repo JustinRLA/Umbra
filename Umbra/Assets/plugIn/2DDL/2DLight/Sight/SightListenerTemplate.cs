@@ -35,9 +35,11 @@ public class SightListenerTemplate : MonoBehaviour {
 	public GameObject EnnemyThree;
 	public GameObject EnnemyFour;
 	public GameObject EnnemyFive;
-	public Material OutofSightMat;
-	public Material InSightMat;
+	//public Material OutofSightMat;
+	//public Material InSightMat;
 	public GameObject dangerLight;
+	public GameObject SuspiciousLight;
+
 	public GameObject NoDangerLight;
 	public void Start()
 	{
@@ -99,14 +101,18 @@ public class SightListenerTemplate : MonoBehaviour {
 //				Camdir = thePlayer.position - transform.position;
 //				angle = Mathf.Atan2 (Camdir.y, Camdir.x) * Mathf.Rad2Deg;
 //				myBoute.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
-				mySight.GetComponent<Renderer>().material=InSightMat;
-				dangerLight.SetActive (true);
-				NoDangerLight.SetActive (false);
+				//mySight.GetComponent<Renderer>().material=InSightMat;
+				dangerLight.GetComponent<MeshRenderer> ().enabled = false;
+				SuspiciousLight.GetComponent<MeshRenderer> ().enabled = true;
+				NoDangerLight.GetComponent<MeshRenderer> ().enabled = false;
+
 				}
 			else
 			{
-				dangerLight.SetActive (false);
-				NoDangerLight.SetActive(true);
+				dangerLight.GetComponent<MeshRenderer> ().enabled = false;
+				SuspiciousLight.GetComponent<MeshRenderer> ().enabled = false;
+				NoDangerLight.GetComponent<MeshRenderer> ().enabled = true;
+
 			}
 	
 			}

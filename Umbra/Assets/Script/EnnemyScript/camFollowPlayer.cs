@@ -19,7 +19,7 @@ public class camFollowPlayer : MonoBehaviour {
 		mySightListener = TheSightListener.GetComponent<SightListenerTemplate> ();
 		MyPlayer = GameObject.Find ("2DCharacter");
 		ThePlayer = MyPlayer.transform;
-
+		DontDestroyOnLoad (gameObject);
 	}
 	
 	// Update is called once per frame

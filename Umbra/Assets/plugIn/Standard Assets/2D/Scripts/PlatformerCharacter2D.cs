@@ -11,16 +11,12 @@ using UnityEngine.SceneManagement;
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
-	public Transform SpawnPointOne;
-	public Transform SpawnPointTwo;
-	public Transform SpawnPointThree;
-	public Transform SpawnPointFour;
-	public GameObject checkPointManager;
 	public bool inShadow;
 	public bool ClimbTrue;
 		public GameObject RunTrigger;
 		CircleCollider2D RunCircleCollider;
 	public bool canRune;
+	public GameObject DeathManager;
 	public bool canChangeRune;
 		//public GameObject ViewTrigger;
 //		CircleCollider2D ViewTriggerCollider;
@@ -68,21 +64,10 @@ using UnityEngine.SceneManagement;
 	{
 		inShadow = false;
 		ClimbTrue = false;
-		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 0)
-			transform.position = SpawnPointOne.transform.position;
-
-		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 1)
-			transform.position = SpawnPointTwo.transform.position;
-
-		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 2)
-			transform.position = SpawnPointThree.transform.position;
-
-		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 3)
-			transform.position = SpawnPointFour.transform.position;
-
 //		print ("Bouhhhhhhhhhhhhhhhjhbhyb");
 		actualOeillereSPriteRenderer.enabled = false;
 		ActualOeillere = null;
+		DeathManager.GetComponent<DeathManagerScript> ().PlayerDeath ();
 
 		//SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}

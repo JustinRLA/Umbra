@@ -40,7 +40,7 @@ public class checkIfAssassination : MonoBehaviour {
 		
 
 		if (col.tag == "ennemy") {
-			print ("See");
+//			print ("See");
 			if (col.GetComponent<EnnnemyPatrolUpgraded> ().Alert == false || col.GetComponent<EnnemyMarked>().isMarked==true)
 			{
 				canAssassinate = true;
