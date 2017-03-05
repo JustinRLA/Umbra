@@ -6,7 +6,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public float timerBetweenPatrol;
 	public float timerState;
 	public bool trapped =false;
+	RaycastHit2D MortalRay;
+	public Transform RayStartPoint;
 	//PatrolPart
+	public Transform rayPointOf;
 	public GameObject NavPoitnOneGo;
 	public GameObject NavPoitnTwoGo;
 	public GameObject NavPoitnThreeGo;
@@ -136,6 +139,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public int attackdelay=1;
 	public Transform RightLimit;
 	public Transform LeftLimit;
+	Vector3 myPos;
+	Vector3 PlayerPos;
 
 
 
@@ -219,6 +224,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	}
 
 	void Start () {
+//		RayStartPoint.position = transform.position;
 		timerBetweenPatrolOriginal = timerBetweenPatrol;
 		UpPoint = UpPoint_RegularLevel;
 			DownPoint=DownPoint_RegularLevel;
@@ -244,7 +250,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 		//fsm=StateMachine<States>.Initialize.this;
 		mySighListernetTemplate = mySighListerner.GetComponent<SightListenerTemplate> ();
-		StartCoroutine (MyAttack());
+		//StartCoroutine (MyAttack());
 		//InvokeRepeating ("throwdagger", 1f, attackdelay);
 		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
 	
@@ -270,10 +276,36 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		Alert = true;
 		Suspicious = false;
 		backHome = false;
+		if(Vector3.Distance(transform.position, ThePlayer.position)<5)
+		{
+			PlayerPos = new Vector3 (ThePlayer.position.x, ThePlayer.position.y, 0);
+			myPos = new Vector3 (rayPointOf.position.x, rayPointOf.position.y, 0);
+			//Vector3 dir;
+			//dir=RayStartPoint
+
+				MortalRay = Physics2D.Linecast (myPos,PlayerPos);
+			//print (MortalRay.collider.name);
+			if(MortalRay.collider==true)
+			{	
+				print("touchThis");
+				if (MortalRay.collider.tag == "bloc")
+				print ("Safw");
+			if (MortalRay.collider.tag == "trapPlacement")
+				print ("Safw");
+				if (MortalRay.collider.tag == "Player")
+					print ("Safw");
+			}
+//			else
+//			{
+//				MyPlayer.GetComponent <PlatformerCharacter2D> ().Death ();
+//				print (MortalRay.collider.name);
+//
+//			}
+		}
+
 
 		if(ThePlayer.position.y<UpPoint.position.y && ThePlayer.position.y>DownPoint.position.y)
 		{
-
 			PlayerIsUp = false;
 			PlayerIsDown = false;
 			if (CurrentNavPoint.position.x-transform.position.x <0)
@@ -281,7 +313,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 				lookRight=false;
 				flip ();
 			}
-			if (CurrentNavPoint.position.x-transform.position.x >0)
+			else
 			{
 				lookRight=true;
 				flip ();
@@ -307,7 +339,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			if (trapped == false) {
 				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -4)
 					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -4)
 					speed = OriginalSpeed;
 			}
 			else
@@ -341,9 +373,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 					goUpFloor();
 
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -4)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) >= -4)
 					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 5 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -4)
 					speed = OriginalSpeed;
 			}
 			else
@@ -391,6 +423,13 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	void InSuspiciousMode()
 	{
+		if(timerState>14 &&  timerState<15)
+		{
+
+			PhantomPlayer.transform.position = MyPlayer.transform.position;
+			PhamomPoint.position = ThePlayer.position;
+
+		}
 		Alert = false;
 		Suspicious = true;
 		backHome = false;
@@ -562,8 +601,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 		if(EnnemyLevel==1 || EnnemyLevel ==3)
 			backHome=true;
-
-		Suspicious = false;
+		print ("that suspiciopus");
+			Suspicious = false;
 		if (trapped == false)
 			speed = OriginalSpeed;
 		else
@@ -646,6 +685,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	void Update () 
 	{
+		//PlayerPos = new Vector3 (ThePlayer.position.x, ThePlayer.position.y, 0);
+		//myPos = transform.position;
+		Debug.DrawRay(myPos, PlayerPos);
+
 		if(NavPointTwo_Left==null && Alert==false && Suspicious == false)
 		{
 			if (Vector3.Distance (CurrentNavPoint.position, transform.position) < 2)
@@ -801,17 +844,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		if(timerState>0 && timerState<=15 || mySighListernetTemplate.IsawTheLure==true)
 		{
 		InSuspiciousMode();
-		if(timerState>14 &&  timerState<15)
-			{
-				
-				PhantomPlayer.transform.position = MyPlayer.transform.position;
-			PhamomPoint.position = ThePlayer.position;
-
-			}
-		//	if(PhamomPoint.position.y<
-
-	
-			
 			}
 	//}
 		if(timerState>-1 &&  timerState<0)
