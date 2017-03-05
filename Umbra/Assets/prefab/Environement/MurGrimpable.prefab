@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1996943067661374}
   m_IsPrefabParent: 1
+--- !u!1 &1796992579905950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4416849484247332}
+  m_Layer: 17
+  m_Name: MinHauteur
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1832510144488712
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,7 +52,7 @@ GameObject:
   - component: {fileID: 212067432577172150}
   - component: {fileID: 61945567585683248}
   - component: {fileID: 50965142569651940}
-  - component: {fileID: 114208150548783194}
+  - component: {fileID: 114323045504139488}
   m_Layer: 17
   m_Name: MurGrimpable
   m_TagString: Ladder
@@ -55,8 +70,22 @@ Transform:
   m_LocalPosition: {x: 34.69, y: 6.35, z: 0}
   m_LocalScale: {x: 1.9606316, y: 8.27988, z: 1}
   m_Children:
+  - {fileID: 4416849484247332}
   - {fileID: 4898303789646490}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4416849484247332
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796992579905950}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000008726646, w: 1}
+  m_LocalPosition: {x: 0.75999916, y: 1.2169999, z: 0}
+  m_LocalScale: {x: 0.51003975, y: 0.14248638, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4204426662484918}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4898303789646490
@@ -70,7 +99,7 @@ Transform:
   m_LocalScale: {x: 0.51003975, y: 0.14248638, z: 1}
   m_Children: []
   m_Father: {fileID: 4204426662484918}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50965142569651940
 Rigidbody2D:
@@ -106,7 +135,7 @@ BoxCollider2D:
   m_Offset: {x: 0.62500954, y: 0.6252203}
   serializedVersion: 2
   m_Size: {x: 1.2326965, y: 1.2320957}
---- !u!114 &114208150548783194
+--- !u!114 &114323045504139488
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,12 +143,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1996943067661374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5b32372de57d54699a6346abc5ae92, type: 3}
+  m_Script: {fileID: 11500000, guid: ba131f67b9cea8e41bfaa7364df8a5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canClimb: 0
-  RightLadder: 0
-  maxxY: {fileID: 4898303789646490}
+  MaxHauteur: {fileID: 4898303789646490}
+  MinHauteur: {fileID: 4416849484247332}
 --- !u!212 &212067432577172150
 SpriteRenderer:
   m_ObjectHideFlags: 1
