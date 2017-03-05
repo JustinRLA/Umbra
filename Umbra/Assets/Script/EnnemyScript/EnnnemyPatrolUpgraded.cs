@@ -287,13 +287,17 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			//print (MortalRay.collider.name);
 			if(MortalRay.collider==true)
 			{	
-				print("touchThis");
-				if (MortalRay.collider.tag == "bloc")
-				print ("Safw");
-			if (MortalRay.collider.tag == "trapPlacement")
-				print ("Safw");
+print (MortalRay.collider.name);
+//				print("touchThis");
+//				if (MortalRay.collider.tag == "bloc")
+//				print ("Safw");
+//			if (MortalRay.collider.tag == "trapPlacement")
+//				print ("Safw");
 				if (MortalRay.collider.tag == "Player")
-					print ("Safw");
+	MyPlayer.GetComponent <PlatformerCharacter2D> ().Death ();
+
+				if (MortalRay.collider.tag == "bloc")
+					print ("Safe");
 			}
 //			else
 //			{
@@ -808,7 +812,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 				suspiciousCondition=false;
 			}
 			if ((SoundListerner - DistranctionsSoud) / SoundLevel > 8) {
-				timerState = 30;
+				timerState = 24;
 			} 
 		}
 
@@ -825,7 +829,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 				suspiciousCondition=false;
 
 			if ( mySighListernetTemplate.throwAlert == true) {
-				timerState = 30;
+				timerState = 24;
 			} 
 
 		

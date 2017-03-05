@@ -17,6 +17,8 @@ public class EnableTrapMode : MonoBehaviour {
 	public GameObject myPlayer;
 	public GameObject ThisTrap;
 	public GameObject Demotrap;
+	public GameObject[] AllTrap;
+
 	public Transform NowherePoint;
 	public GameObject myTrapZone;
 	// Use this for initialization
@@ -49,6 +51,9 @@ public class EnableTrapMode : MonoBehaviour {
 			Time.timeScale = 1f;
 			gameCam.GetComponent<BloomOptimized> ().enabled = false;
 			trapcam.SetActive (false);
+			foreach (GameObject TrapRegion in AllTrap)
+				TrapRegion.GetComponent<Collider2D> ().isTrigger = true;
+			
 			if(myTrapZone != null)
 			{
 				myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
@@ -111,6 +116,10 @@ public class EnableTrapMode : MonoBehaviour {
 					myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
 					Demotrap.transform.position = NowherePoint.position;
 				}
+
+				foreach (GameObject TrapRegion in AllTrap)
+					TrapRegion.GetComponent<Collider2D> ().isTrigger = true;
+				
 					Time.timeScale = 1f;
 					myRuneManager.timerOffense = 0;
 					gameCam.GetComponent<BloomOptimized> ().enabled = false;
@@ -130,6 +139,11 @@ public class EnableTrapMode : MonoBehaviour {
 		Time.timeScale = 0.1f;
 		Cursor.visible = true;
 		trapcam.SetActive (true);
+
+		AllTrap = GameObject.FindGameObjectsWithTag ("TrapRegion");
+
+		foreach (GameObject TrapRegion in AllTrap)
+			TrapRegion.GetComponent<Collider2D> ().isTrigger = false;
 	}
 
 }

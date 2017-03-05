@@ -17,6 +17,7 @@ public class LureScript : MonoBehaviour {
 	public GameObject CamOne;
 	public GameObject CamTwo;
 	public GameObject CamThree;
+	public GameObject PlayerCam;
 
 
 	public bool Active=false;
@@ -39,6 +40,7 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = true;
 		ThePlayerShadow.transform.position = ThePlayer.transform.position;
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 0;
 
@@ -107,6 +109,7 @@ public class LureScript : MonoBehaviour {
 
 		Time.timeScale = 1.0f;
 		timer = 10;
+		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = false;
 
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
@@ -151,6 +154,8 @@ public class LureScript : MonoBehaviour {
 		inLureMode = true;
 
 			yield return new WaitForSeconds(7f);
+		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = false;
+
 		myCam.GetComponent<NoiseAndScratches> ().enabled = false;
 		CamOne.GetComponent<NoiseAndScratches> ().enabled = false;
 		CamTwo.GetComponent<NoiseAndScratches> ().enabled = false;
@@ -177,11 +182,11 @@ public class LureScript : MonoBehaviour {
 
 			Time.timeScale = 1.0f;
 		timer = 10;
-
+		ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = false;
+		ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = false;
+		yield return new WaitForSeconds (1f);
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
-			ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = false;
-			ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = false;
 			yield return new WaitForSeconds(4f);
 		timer = 14;
 		yield return new WaitForSeconds(4f);

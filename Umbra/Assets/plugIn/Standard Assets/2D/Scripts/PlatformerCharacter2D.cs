@@ -23,13 +23,12 @@ using UnityEngine.SceneManagement;
 	public bool TruePlayer;
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-        private bool m_Grounded;            // Whether or not the player is grounded.
+	public bool m_Grounded;            // Whether or not the player is grounded.
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-		public bool Climb;
 	public GameObject ActualLadder;
 	public GameObject OeillereFeedback;
 	public GameObject ActualOeillere;
@@ -114,12 +113,13 @@ using UnityEngine.SceneManagement;
 	void JumpFromLader()
 	{
 		//canClimb = false;
+		StartCoroutine(ChangeLadderCol());
 
 		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
 		GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 15);
 		GetComponent<Animator>().SetBool ("Climb", false);
-      Climb = false;
+		ClimbTrue = false;
 
 	ReturnToNormal ();
 
@@ -129,12 +129,11 @@ using UnityEngine.SceneManagement;
 	void ReturnToNormal()
 	{
 		//canClimb = false;
-
 		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 
 		//		ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		GetComponent<Animator>().SetBool ("Climb", false);
-		Climb = false;
+		ClimbTrue = false;
 		//GetComponent<Collider2D> ().enabled = false;
 
 
@@ -150,13 +149,12 @@ using UnityEngine.SceneManagement;
 			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
 			if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space)==false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder>().MaxHauteur.position.y)
 				transform.Translate (Vector2.up * 2*Time.deltaTime);
-			if (Input.GetKey (KeyCode.S))
+			if (Input.GetKey (KeyCode.S) && transform.position.y > ActualLadder.GetComponent<maxHauteurLadder>().MinHauteur.position.y)
 				transform.Translate (Vector2.down * 2*Time.deltaTime);
 			if (Input.GetKey (KeyCode.Space))
 				JumpFromLader ();		
 
 			GetComponent<Animator>().SetBool ("Climb", true);
-			Climb = true;
 
 			if (Input.GetKey (KeyCode.E))
 				ReturnToNormal ();
@@ -165,7 +163,6 @@ using UnityEngine.SceneManagement;
 		{
 			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 			GetComponent<Animator>().SetBool ("Climb", false);
-			Climb = false;
 
 		}
 
@@ -190,7 +187,7 @@ using UnityEngine.SceneManagement;
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
 			for (int i = 0; i < colliders.Length; i++)
 			{
-				if (colliders[i].gameObject != gameObject)
+			if (colliders[i].gameObject != gameObject && ClimbTrue==false)
 					m_Grounded = true;
 			}
 			m_Anim.SetBool("Ground", m_Grounded);
@@ -243,7 +240,7 @@ using UnityEngine.SceneManagement;
 				// Move the character
 			m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed
 				, m_Rigidbody2D.velocity.y);
-				if(Climb==false)
+					if(ClimbTrue==false)
 				{
 				// If the input is moving the player right and the player is facing left...
 				if (move > 0 && !m_FacingRight)
@@ -312,7 +309,7 @@ using UnityEngine.SceneManagement;
 				// Move the character
 				m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed
 					, m_Rigidbody2D.velocity.y);
-				if(Climb==false)
+				if(ClimbTrue==false)
 				{
 					// If the input is moving the player right and the player is facing left...
 					if (move > 0 && !m_FacingRight)
@@ -395,6 +392,15 @@ using UnityEngine.SceneManagement;
 	
 	}
 	//
+
+	IEnumerator ChangeLadderCol()
+	{
+		ActualLadder.GetComponent<Collider2D> ().enabled = false;
+		yield return new WaitForSeconds (1f);
+		ActualLadder.GetComponent<Collider2D> ().enabled = true;
+
+	}
+
         private void Flip()
         {
             // Switch the way the player is labelled as facing.

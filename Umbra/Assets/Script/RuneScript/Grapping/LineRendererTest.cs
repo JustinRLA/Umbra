@@ -25,7 +25,7 @@ public class LineRendererTest : MonoBehaviour {
 	public bool goThrougt=false;
 	public float timeDIstance;
 	RuneManagerScript myRuneManagerScript;
-
+	public GameObject[] theBeams;
 	Material TestMat;
 	Color ColorBadStart= Color.red;
 	Color ColorBadEnd= Color.red;
@@ -45,7 +45,13 @@ public class LineRendererTest : MonoBehaviour {
 	}
 	public void IsActivated()
 	{
+		theBeams = GameObject.FindGameObjectsWithTag ("grapRegion");
+
+		foreach (GameObject grapRegion in theBeams)
+			grapRegion.GetComponent<Collider2D> ().isTrigger = false;
+
 		ActivateThisShit = true;
+
 	}
 
 		void Update () 
@@ -169,6 +175,7 @@ public class LineRendererTest : MonoBehaviour {
 
 		if (myRaycast.collider.tag == "grapRegion")
 						{			
+					print ("touchBeam");
 			TouchGood = true;
 							TheBeam=myRaycast.collider.gameObject;
 						}
@@ -232,7 +239,9 @@ public class LineRendererTest : MonoBehaviour {
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
 		CamGrap.SetActive (false);
-
+		foreach (GameObject grapRegion in theBeams)
+			grapRegion.GetComponent<Collider2D> ().isTrigger = true;
+		
 		TouchGood = false;
 		if(TheBeam!=null)
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
@@ -290,7 +299,9 @@ public class LineRendererTest : MonoBehaviour {
 		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 		if(TheBeam!=null)
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
-
+		foreach (GameObject grapRegion in theBeams)
+			grapRegion.GetComponent<Collider2D> ().isTrigger = true;
+		
 		GetComponent<LineRendererTest> ().enabled = false;
 
 	}

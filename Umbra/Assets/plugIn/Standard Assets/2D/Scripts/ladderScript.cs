@@ -37,7 +37,7 @@ public class ladderScript : MonoBehaviour {
 					JumpFromLader ();		
 
 					animPlayer.SetBool ("Climb", true);
-				myPLatformCharacter.Climb = true;
+				myPLatformCharacter.ClimbTrue = true;
 
 				if (Input.GetKey (KeyCode.E))
 					StartCoroutine (ReturnToNormal ());
@@ -70,7 +70,7 @@ public class ladderScript : MonoBehaviour {
 			//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
 			ThePlayer.GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 15);
 			animPlayer.SetBool ("Climb", false);
-			myPLatformCharacter.Climb = false;
+			myPLatformCharacter.ClimbTrue = false;
 
 			StartCoroutine (ReturnToNormal ());
 
@@ -84,7 +84,7 @@ public class ladderScript : MonoBehaviour {
 
 //		ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		animPlayer.SetBool ("Climb", false);
-			myPLatformCharacter.Climb = false;
+			myPLatformCharacter.ClimbTrue = false;
 			GetComponent<Collider2D> ().enabled = false;
 
 
