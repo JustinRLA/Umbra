@@ -84,7 +84,7 @@ public class DragShadow : MonoBehaviour {
 
 		if (dragging)
 		{		distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-			gameObject.layer = 23;
+			//gameObject.layer = 23;
 			GetComponent<SpriteRenderer> ().enabled = true;
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			//Vector3 rayPoint = ray.GetPoint(distance);
