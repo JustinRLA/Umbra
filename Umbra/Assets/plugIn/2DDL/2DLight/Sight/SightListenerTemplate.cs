@@ -39,7 +39,7 @@ public class SightListenerTemplate : MonoBehaviour {
 	//public Material InSightMat;
 	public GameObject dangerLight;
 	public GameObject SuspiciousLight;
-
+	public bool InAlert;
 	public GameObject NoDangerLight;
 	public void Start()
 	{
@@ -95,23 +95,24 @@ public class SightListenerTemplate : MonoBehaviour {
 		if(TypeOfObj==2)
 		{
 
-			if(inCam==true)
+			if(inCam==true && InAlert==false)
 			{
 				LureInCam = false;
 //				Camdir = thePlayer.position - transform.position;
 //				angle = Mathf.Atan2 (Camdir.y, Camdir.x) * Mathf.Rad2Deg;
 //				myBoute.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 				//mySight.GetComponent<Renderer>().material=InSightMat;
-				dangerLight.GetComponent<MeshRenderer> ().enabled = false;
-				SuspiciousLight.GetComponent<MeshRenderer> ().enabled = true;
-				NoDangerLight.GetComponent<MeshRenderer> ().enabled = false;
+				dangerLight.SetActive(false);
+				SuspiciousLight.SetActive(true);
+				NoDangerLight.SetActive(false);
 
 				}
-			else
+			if(inCam==false && InAlert==false)
+				
 			{
-				dangerLight.GetComponent<MeshRenderer> ().enabled = false;
-				SuspiciousLight.GetComponent<MeshRenderer> ().enabled = false;
-				NoDangerLight.GetComponent<MeshRenderer> ().enabled = true;
+				dangerLight.SetActive(false);
+				SuspiciousLight.SetActive(false);
+				NoDangerLight.SetActive(true);
 
 			}
 	
@@ -255,6 +256,13 @@ public class SightListenerTemplate : MonoBehaviour {
 		
 		if (EnnemyTwo != null)
 			EnnemyTwo.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+			InAlert = true;
+			inCam = false;
+
+			dangerLight.SetActive (true);
+			SuspiciousLight.SetActive (false);
+			NoDangerLight.SetActive (false);
+
 		}	
 	}
 

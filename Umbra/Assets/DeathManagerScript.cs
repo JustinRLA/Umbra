@@ -18,7 +18,7 @@ public class DeathManagerScript : MonoBehaviour {
 	void Start () {
 		Scene CurrentScene = SceneManager.GetActiveScene();
 		string scenename = CurrentScene.name;
-		if (scenename == "Niveau_1")
+		if (scenename == "Niveau_1" ||scenename == "Niveau_1_test" )
 			ThePlayer = GameObject.Find ("2DCharacter");
 	}
 	

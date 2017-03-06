@@ -17,15 +17,9 @@ public class checkIfAssassination : MonoBehaviour {
 		if(canAssassinate==true)
 		{
 			AssassinFeedback.SetActive (true);
-			if (Input.GetKeyDown (KeyCode.E))
+			if (Input.GetKeyDown (KeyCode.E) && ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded>().Alert==false)
 			{
-				print ("I kill you");	
-				ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().enabled = false;
-				ActualEnnemy.GetComponent<DeadScript> ().enabled = true;
-				ActualEnnemy.GetComponent<DeadScript> ().EnnemyDeath();
-				AssassinFeedback.SetActive (false);
-				canAssassinate = false;
-
+				Assassination();
 			}
 		}
 		else
@@ -50,6 +44,21 @@ public class checkIfAssassination : MonoBehaviour {
 //		else
 //			canAssassinate = false;
 	}
+
+	void Assassination()
+	{
+		print ("I kill you");	
+		ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().Alert = false;
+		ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().isdead = true;
+		ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().enabled = false;
+		ActualEnnemy.GetComponent<DeadScript> ().enabled = true;
+		ActualEnnemy.GetComponent<DeadScript> ().EnnemyDeath();
+		AssassinFeedback.SetActive (false);
+		canAssassinate = false;
+
+
+	}
+
 	void OnTriggerExit2D (Collider2D col) {
 		if(col.tag=="ennemy")
 		{

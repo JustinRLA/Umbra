@@ -12,6 +12,9 @@ public class solifyShadow : MonoBehaviour {
 	public GameObject myMainCam;
 	public GameObject PlayerMy;
 	public float movespeed;
+	public GameObject[] AllShadow;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -60,6 +63,15 @@ public class solifyShadow : MonoBehaviour {
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		MySolid.CanClickable = false;
+
+		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
+
+		foreach (GameObject Ombre in AllShadow)
+		{
+			Ombre.GetComponent<Collider2D> ().isTrigger = true;
+			Ombre.layer = 10;
+		}
+
 	}
 
 
@@ -76,12 +88,23 @@ public class solifyShadow : MonoBehaviour {
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+		gameObject.tag="SolidOmbre";
+
+		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
+
+		foreach (GameObject Ombre in AllShadow)
+		{
+			Ombre.GetComponent<Collider2D> ().isTrigger = true;
+			Ombre.layer = 10;
+		}
+		gameObject.layer = 10;
 
 		yield return new WaitForSeconds(10f);
 		GetComponent<Collider2D> ().isTrigger = true;
 		MySolid.CanClickable = false;
 
 		GetComponent<SpriteRenderer> ().enabled = false;
+		gameObject.tag="Ombre";
 
 //		myBlindEnmnemyRune.CanClick = false;
 //		MyLight.SetActive(false);

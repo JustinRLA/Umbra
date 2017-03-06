@@ -9,6 +9,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	RaycastHit2D MortalRay;
 	public Transform RayStartPoint;
 	//PatrolPart
+	public bool isdead=false;
 	public Transform rayPointOf;
 	public GameObject NavPoitnOneGo;
 	public GameObject NavPoitnTwoGo;
@@ -22,7 +23,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public GameObject FliPBase;
 	public GameObject StateObj;
 	public Transform PointToLookWIthOneNavPoint;
-
+	public GameObject SolidOmbreTouch;
 	public bool PlayerIsUp;
 	public bool PlayerIsDown;
 	Vector3 movPos;
@@ -293,7 +294,7 @@ print (MortalRay.collider.name);
 //				print ("Safw");
 //			if (MortalRay.collider.tag == "trapPlacement")
 //				print ("Safw");
-				if (MortalRay.collider.tag == "Player")
+				if (MortalRay.collider.tag == "Player" || isdead==false)
 	MyPlayer.GetComponent <PlatformerCharacter2D> ().Death ();
 
 				if (MortalRay.collider.tag == "bloc")
@@ -689,6 +690,17 @@ print (MortalRay.collider.name);
 
 	void Update () 
 	{
+//		if(SolidOmbreTouch =! null)
+//		{
+//			if(SolidOmbreTouch.tag=="Ombre")
+//			{
+//				if(QualityLevel
+//				LeftLimit=left
+//			}
+//
+//		}
+
+
 		//PlayerPos = new Vector3 (ThePlayer.position.x, ThePlayer.position.y, 0);
 		//myPos = transform.position;
 		Debug.DrawRay(myPos, PlayerPos);
@@ -933,8 +945,14 @@ print (MortalRay.collider.name);
 //
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Player")
+		if (col.gameObject.tag == "Player" )
 			col.gameObject.GetComponent<PlatformerCharacter2D> ().Death ();
+
+//		if(col.gameObject.tag=="SolidOmbre")
+//		{
+//
+//
+//		}
 	}
 //
 //

@@ -49,8 +49,8 @@ public class DragShadow : MonoBehaviour {
 		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
-		gameObject.layer = 10;
-		GetComponent<Collider2D> ().isTrigger = true;
+		//gameObject.layer = 10;
+		//GetComponent<Collider2D> ().isTrigger = true;
 
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());

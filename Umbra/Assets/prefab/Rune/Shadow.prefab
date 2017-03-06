@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114811195832286468}
   - component: {fileID: 114047454937326068}
   - component: {fileID: 212895868439034304}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4486901634615120}
   - component: {fileID: 198051987219729066}
   - component: {fileID: 199289428240268186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spiral_01.1 Tornado (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4523135954149246}
   - component: {fileID: 198237346364829976}
   - component: {fileID: 199366534721915128}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: particle glow slave birth trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4599694889490866}
   - component: {fileID: 198079753531018376}
   - component: {fileID: 199221224605798818}
-  m_Layer: 1
+  m_Layer: 10
   m_Name: particle master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4744085005244146}
   - component: {fileID: 198180623486808562}
   - component: {fileID: 199697109880605628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: particle glow slave birth dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,6 +277,7 @@ MonoBehaviour:
   myMainCam: {fileID: 0}
   PlayerMy: {fileID: 0}
   movespeed: 0
+  AllShadow: []
 --- !u!114 &114937511977005682
 MonoBehaviour:
   m_ObjectHideFlags: 1

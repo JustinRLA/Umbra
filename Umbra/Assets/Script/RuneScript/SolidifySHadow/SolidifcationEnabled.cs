@@ -5,6 +5,7 @@ using UnityEngine;
 public class SolidifcationEnabled : MonoBehaviour {
 	public bool CanClickable=false;
 	public GameObject MyCache;
+	public GameObject[] AllShadow;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,14 @@ public class SolidifcationEnabled : MonoBehaviour {
 
 	public void SolidificationStart()
 	{
-		GetComponent<RuneManagerScript> ().RuneActivated = true;
+		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
+
+		foreach (GameObject Ombre in AllShadow)
+		{
+			Ombre.GetComponent<Collider2D> ().isTrigger = false;
+			Ombre.layer = 23;
+		}
+
 
 	MyCache.SetActive (true);
 	Cursor.visible = true;
