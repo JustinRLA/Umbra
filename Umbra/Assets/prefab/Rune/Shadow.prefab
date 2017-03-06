@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114811195832286468}
   - component: {fileID: 114047454937326068}
   - component: {fileID: 212895868439034304}
-  m_Layer: 10
+  m_Layer: 23
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0.1, y: -0.23}
   serializedVersion: 2
@@ -245,6 +245,8 @@ MonoBehaviour:
   dragging: 1
   RuneMangerMy: {fileID: 0}
   mainCamMy: {fileID: 0}
+  playerMy: {fileID: 0}
+  moveSpeed: 0
 --- !u!114 &114047454937326068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -273,6 +275,8 @@ MonoBehaviour:
   colorGreenOver: 0
   colorBlueOver: 0
   myMainCam: {fileID: 0}
+  PlayerMy: {fileID: 0}
+  movespeed: 0
 --- !u!114 &114937511977005682
 MonoBehaviour:
   m_ObjectHideFlags: 1
