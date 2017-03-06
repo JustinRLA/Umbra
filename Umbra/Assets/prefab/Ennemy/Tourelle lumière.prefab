@@ -142,8 +142,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732033569885416}
   m_LocalRotation: {x: -0, y: -0, z: -0.7619814, w: -0.6475989}
-  m_LocalPosition: {x: -5.07, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 38.84, y: -0.5, z: 0}
+  m_LocalScale: {x: 1.4500006, y: 0.55000013, z: 1}
   m_Children:
   - {fileID: 4693196419346840}
   - {fileID: 4293114002065886}
@@ -153,7 +153,7 @@ Transform:
   - {fileID: 4116214773875316}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -260.722}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -151.55801}
 --- !u!4 &4051750636291418
 Transform:
   m_ObjectHideFlags: 1
@@ -643,8 +643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TheSightListener: {fileID: 1994281296299192}
-  ThePlayer: {fileID: 0}
-  MyPlayer: {fileID: 0}
+  ThePlayer: {fileID: 4134549487070432, guid: b5f033517a32ef14da61ba16132c1ce0, type: 2}
+  MyPlayer: {fileID: 1014189160392212, guid: b5f033517a32ef14da61ba16132c1ce0, type: 2}
   KLurePlayer: {fileID: 0}
 --- !u!114 &114876211493540906
 MonoBehaviour:
@@ -724,7 +724,7 @@ MonoBehaviour:
   lightMode: 0
   recalculateNormals: 1
   flipXYtoXZ: 0
-  debugLines: 1
+  debugLines: 0
   uv_Offset: {x: 0.5, y: 0.5}
   uv_Scale: {x: 0.5, y: 0.5}
   vertexWorking: 0
