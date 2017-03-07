@@ -38,43 +38,8 @@ public class DeathManagerScript : MonoBehaviour {
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 		ThePlayer = GameObject.Find ("2DCharacter");
 
-		if (CheckPointState == 0)
-		{
-			ThePlayer.transform.position = SpawnPointOne.position;
-			print ("SpawnOne");
-		}
-		if (CheckPointState == 1)
-		{
-			ThePlayer.transform.position = SpawnPointTwo.position;
-			print ("Spawn2");
-		}
-		if (CheckPointState == 2)
-			ThePlayer.transform.position = SpawnPointThree.position;
-
-		if (CheckPointState == 3)
-			ThePlayer.transform.position = SpawnPointFour.position;
-		//StartCoroutine(Try());
 	}
 
-	IEnumerator Try()
-	{
-		yield return new WaitForSeconds (2f);
-	if (CheckPointState == 0)
-	{
-		ThePlayer.transform.position = SpawnPointOne.position;
-		print ("SpawnOne");
-	}
-	if (CheckPointState == 1)
-	{
-		ThePlayer.transform.position = SpawnPointTwo.position;
-		print ("Spawn2");
-	}
-	if (CheckPointState == 2)
-		ThePlayer.transform.position = SpawnPointThree.position;
-
-	if (CheckPointState == 3)
-		ThePlayer.transform.position = SpawnPointFour.position;
-	}
 
 
 }

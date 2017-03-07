@@ -6,13 +6,6 @@ using UnityEngine.UI;
 public class RuneTutorialSettling : MonoBehaviour {
 	public GameObject myRuneManager;
 
-	public GameObject OffenseRuneUI;
-	public GameObject DefRuneUI;
-	public GameObject TacticRuneUI;
-	public bool DeavtivaedOffense;
-	public bool DeavtivaeDefe;
-	public bool DeavtivaeTactic;
-
 	public int defsetter;
 	public int tacticSetter;
 	public int OffenseSet;
@@ -35,9 +28,6 @@ public class RuneTutorialSettling : MonoBehaviour {
 			myRuneManager.GetComponent<RuneManagerScript> ().DefFune = defsetter;
 			myRuneManager.GetComponent<RuneManagerScript> ().OffenseRune = OffenseSet;
 			myRuneManager.GetComponent<RuneManagerScript> ().TacticRune = tacticSetter;
-			OffenseRuneUI.GetComponent<Image> ().enabled = DeavtivaedOffense;
-			DefRuneUI.GetComponent<Image> ().enabled = DeavtivaeDefe;
-			TacticRuneUI.GetComponent<Image> ().enabled = DeavtivaeTactic;
 
 
 		}

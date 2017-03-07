@@ -112,6 +112,14 @@ public class RuneManagerScript : MonoBehaviour
 			texttrappe.SetActive(false);
 			textMark.SetActive(true);
 		}
+		if(OffenseRune==0)
+		{
+			ImageRunePiege.SetActive(false);
+			ImageRuneMarquage.SetActive(false);
+			texttrappe.SetActive(false);
+			textMark.SetActive(false);
+		}
+
 		if(DefFune==1)
 		{
 			ImageRuneLeurre.SetActive(false);
@@ -127,12 +135,27 @@ public class RuneManagerScript : MonoBehaviour
 			textleure.SetActive(true);
 			textOmbre.SetActive(false);
 		}
+		if(DefFune==0)
+		{
+			ImageRuneLeurre.SetActive(false);
+			ImageRuneOmbre.SetActive(false);
+
+			textleure.SetActive(false);
+			textOmbre.SetActive(false);
+		}
+		if(TacticRune==0)
+		{
+			ImageRuneSolidification.SetActive (false);
+			ImageRuneAccrochage.SetActive(false);
+			textSolid.SetActive(false);
+			textaccrochage.SetActive(false);
+		}
 		if(TacticRune==1)
 		{
 			ImageRuneSolidification.SetActive (false);
-			ImageRuneAccrochage.SetActive(true);
+			ImageRuneAccrochage.SetActive(false);
 			textSolid.SetActive(false);
-			textaccrochage.SetActive(true);
+			textaccrochage.SetActive(false);
 		}
 		if(TacticRune==2)
 		{
