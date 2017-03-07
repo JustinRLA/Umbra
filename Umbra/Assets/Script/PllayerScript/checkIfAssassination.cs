@@ -16,8 +16,8 @@ public class checkIfAssassination : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Alpha1))
-			Playa.GetComponent<DeathEvent> ().chooseSprite ();
+//		if(Input.GetKeyDown(KeyCode.Alpha1))
+//			Playa.GetComponent<DeathEvent> ().chooseSprite ();
 		
 
 		if(canAssassinate==true)
