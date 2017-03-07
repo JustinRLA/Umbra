@@ -27,7 +27,7 @@ public class EnableTrapMode : MonoBehaviour {
 		nowherepointObj=GameObject.Find("NowherePoint");
 		NowherePoint = nowherepointObj.transform;
 		myRuneManager = GetComponent<RuneManagerScript> ();
-		//trapcam = GameObject.Find ("Main CameraTrapRegion");
+		//trapcam = GameObject.Find ("Main CameraTrapPlacement");
 	}
 	
 	// Update is called once per frame
@@ -51,8 +51,8 @@ public class EnableTrapMode : MonoBehaviour {
 			Time.timeScale = 1f;
 			gameCam.GetComponent<BloomOptimized> ().enabled = false;
 			trapcam.SetActive (false);
-			foreach (GameObject TrapRegion in AllTrap)
-				TrapRegion.GetComponent<Collider2D> ().isTrigger = true;
+			foreach (GameObject TrapPlacement in AllTrap)
+				TrapPlacement.GetComponent<Collider2D> ().isTrigger = true;
 			
 			if(myTrapZone != null)
 			{
@@ -117,8 +117,8 @@ public class EnableTrapMode : MonoBehaviour {
 					Demotrap.transform.position = NowherePoint.position;
 				}
 
-				foreach (GameObject TrapRegion in AllTrap)
-					TrapRegion.GetComponent<Collider2D> ().isTrigger = true;
+				foreach (GameObject TrapPlacement in AllTrap)
+					TrapPlacement.GetComponent<Collider2D> ().isTrigger = true;
 				
 					Time.timeScale = 1f;
 					myRuneManager.timerOffense = 0;
@@ -140,10 +140,10 @@ public class EnableTrapMode : MonoBehaviour {
 		Cursor.visible = true;
 		trapcam.SetActive (true);
 
-		AllTrap = GameObject.FindGameObjectsWithTag ("TrapRegion");
+		AllTrap = GameObject.FindGameObjectsWithTag ("TrapPlacement");
 
-		foreach (GameObject TrapRegion in AllTrap)
-			TrapRegion.GetComponent<Collider2D> ().isTrigger = false;
+		foreach (GameObject TrapPlacement in AllTrap)
+			TrapPlacement.GetComponent<Collider2D> ().isTrigger = false;
 	}
 
 }
