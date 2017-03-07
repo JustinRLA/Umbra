@@ -187,8 +187,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010772090662610}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071067}
-  m_LocalPosition: {x: -41.535744, y: -339.09036, z: 0}
-  m_LocalScale: {x: 1.6202707, y: 0.8875661, z: 1}
+  m_LocalPosition: {x: -9.43, y: 2.57, z: 0}
+  m_LocalScale: {x: 0.4703455, y: 0.25764996, z: 0.2902882}
   m_Children: []
   m_Father: {fileID: 4050207717052230}
   m_RootOrder: 2
@@ -212,7 +212,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1093896889921822}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -245,7 +245,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d52d9438d1a39354ca4d3543b8512e7f, type: 2}
+  - {fileID: 2100000, guid: 63b314b3bae78434f82e02386d120306, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -721,12 +721,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732033569885416}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbbbf4300a20df44a82d580b462f3173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TheSightListener: {fileID: 0}
+  TheSightListener: {fileID: 1010772090662610}
   ThePlayer: {fileID: 4134549487070432, guid: b5f033517a32ef14da61ba16132c1ce0, type: 2}
   MyPlayer: {fileID: 1014189160392212, guid: b5f033517a32ef14da61ba16132c1ce0, type: 2}
   KLurePlayer: {fileID: 0}
