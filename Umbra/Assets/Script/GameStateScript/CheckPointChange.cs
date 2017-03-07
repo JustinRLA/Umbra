@@ -4,13 +4,14 @@ using System.Collections;
 public class CheckPointChange : MonoBehaviour {
 	public GameObject CheckPointManager;
 	public int AssignCheckpoint;
+	public GameObject DeathManager;
 	// Use this for initialization
 	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		DeathManager=GameObject.Find("deathManager");
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -21,6 +22,7 @@ public class CheckPointChange : MonoBehaviour {
 		{
 			CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
 			//print ("Check");
+			DeathManager.GetComponent<DeathManagerScript>().CheckPointState=CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
 		}
 
 	}

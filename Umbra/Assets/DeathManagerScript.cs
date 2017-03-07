@@ -11,6 +11,7 @@ public class DeathManagerScript : MonoBehaviour {
 	public GameObject checkPointManager;
 	public GameObject ThePlayer;
 
+	public int CheckPointState;
 
 
 
@@ -30,18 +31,23 @@ public class DeathManagerScript : MonoBehaviour {
 	public void PlayerDeath()
 	{
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		ThePlayer = GameObject.Find ("2DCharacter");
 
-		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 0)
-			ThePlayer.transform.position = SpawnPointOne.transform.position;
+		if (CheckPointState == 0)
+		{
+			ThePlayer.transform.position = SpawnPointOne.position;
+			print ("SpawnOne");
+		}
+		if (CheckPointState == 1)
+		{
+			ThePlayer.transform.position = SpawnPointTwo.position;
+			print ("Spawn2");
+		}
+		if (CheckPointState == 2)
+			ThePlayer.transform.position = SpawnPointThree.position;
 
-		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 1)
-			ThePlayer.transform.position = SpawnPointTwo.transform.position;
-
-		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 2)
-			ThePlayer.transform.position = SpawnPointThree.transform.position;
-
-		if (checkPointManager.GetComponent<CheckPointState> ().CheckpointState == 3)
-			ThePlayer.transform.position = SpawnPointFour.transform.position;
+		if (CheckPointState == 3)
+			ThePlayer.transform.position = SpawnPointFour.position;
 		
 	}
 

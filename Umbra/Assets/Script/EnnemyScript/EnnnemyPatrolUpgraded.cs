@@ -428,7 +428,7 @@ print (MortalRay.collider.name);
 
 	void InSuspiciousMode()
 	{
-		if(timerState>14 &&  timerState<15)
+		if(timerState>14 &&  timerState<=15)
 		{
 
 			PhantomPlayer.transform.position = MyPlayer.transform.position;

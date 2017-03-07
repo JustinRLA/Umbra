@@ -7,6 +7,7 @@ public class lightToThePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		thePlayer = GameObject.Find ("2DCharacter");
 		
 	}
 	
