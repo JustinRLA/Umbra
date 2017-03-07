@@ -41,7 +41,7 @@ using UnityEngine.SceneManagement;
 	void Start()
 	{
 		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
-
+		DeathManager = GameObject.Find ("deathManager");
 	}
 
 
@@ -68,7 +68,6 @@ using UnityEngine.SceneManagement;
 		ActualOeillere = null;
 		DeathManager.GetComponent<DeathManagerScript> ().PlayerDeath ();
 
-		//SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 
 	public void StartCorou()

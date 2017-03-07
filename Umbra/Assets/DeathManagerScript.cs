@@ -21,11 +21,16 @@ public class DeathManagerScript : MonoBehaviour {
 		string scenename = CurrentScene.name;
 		if (scenename == "Niveau_1" ||scenename == "Niveau_1_test" )
 			ThePlayer = GameObject.Find ("2DCharacter");
+		DontDestroyOnLoad (gameObject);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	public void SpawnPointAssignement()
+	{
+
 	}
 
 	public void PlayerDeath()
@@ -48,7 +53,28 @@ public class DeathManagerScript : MonoBehaviour {
 
 		if (CheckPointState == 3)
 			ThePlayer.transform.position = SpawnPointFour.position;
-		
+		//StartCoroutine(Try());
 	}
+
+	IEnumerator Try()
+	{
+		yield return new WaitForSeconds (2f);
+	if (CheckPointState == 0)
+	{
+		ThePlayer.transform.position = SpawnPointOne.position;
+		print ("SpawnOne");
+	}
+	if (CheckPointState == 1)
+	{
+		ThePlayer.transform.position = SpawnPointTwo.position;
+		print ("Spawn2");
+	}
+	if (CheckPointState == 2)
+		ThePlayer.transform.position = SpawnPointThree.position;
+
+	if (CheckPointState == 3)
+		ThePlayer.transform.position = SpawnPointFour.position;
+	}
+
 
 }

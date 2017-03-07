@@ -21,7 +21,10 @@ public class TriggerAlert : MonoBehaviour {
 		{
 			//EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert=true;
 			//EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+			mySignListener.GetComponent <SightListenerTemplate>().throwSuspicious=false;
+
 			mySignListener.GetComponent <SightListenerTemplate>().throwAlert=true;
+			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 24;
 			print ("fuckkkkkkkkkPart2");
 
 

@@ -18,12 +18,19 @@ public class nearViewTrigger : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D col) {
 		//print ("fuckkkkkkkkk");
-		if (col.tag == "ViewTrigger" && MySight.GetComponent<SightListenerTemplate>().iSeeYou==true) {
+		if (col.tag == "ViewTrigger" || col.tag == "Player")
+		{
+			if(MySight.GetComponent<SightListenerTemplate>().iSeeYou==true)
+			{
 //			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
 //			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert = true;
+			mySignListener.GetComponent <SightListenerTemplate>().throwSuspicious=false;
+
 			mySignListener.GetComponent <SightListenerTemplate>().throwAlert=true;
+			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 24;
 
 			print ("fuckkkkkkkkk");
 	}
+		}
 	}
 }
