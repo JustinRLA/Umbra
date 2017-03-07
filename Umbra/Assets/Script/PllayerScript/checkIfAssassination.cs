@@ -7,13 +7,19 @@ public class checkIfAssassination : MonoBehaviour {
 	public bool canAssassinate;
 	public GameObject ActualEnnemy;
 	public GameObject OtherEnnemy;
+	public GameObject Playa;
 
 	// Use this for initialization
 	void Start () {
+		Playa = GameObject.Find ("2DCharacter");
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetKeyDown(KeyCode.Alpha1))
+			Playa.GetComponent<DeathEvent> ().chooseSprite ();
+		
+
 		if(canAssassinate==true)
 		{
 			AssassinFeedback.SetActive (true);
@@ -47,6 +53,7 @@ public class checkIfAssassination : MonoBehaviour {
 
 	void Assassination()
 	{
+		Playa.GetComponent<DeathEvent> ().chooseSprite ();
 		print ("I kill you");	
 		ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().Alert = false;
 		ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().isdead = true;
