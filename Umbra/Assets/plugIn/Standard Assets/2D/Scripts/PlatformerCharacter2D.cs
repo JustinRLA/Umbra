@@ -127,6 +127,7 @@ using UnityEngine.SceneManagement;
 
 	void ReturnToNormal()
 	{
+
 		//canClimb = false;
 		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 
@@ -134,17 +135,27 @@ using UnityEngine.SceneManagement;
 		GetComponent<Animator>().SetBool ("Climb", false);
 		ClimbTrue = false;
 		//GetComponent<Collider2D> ().enabled = false;
+		StartCoroutine(ReturnJumpForce());
+
+		//GetComponent<Collider2D> ().enabled = true;
+
+	}
+	IEnumerator ReturnJumpForce()
+	{
+
+		yield return new WaitForSeconds (1f);
+		m_JumpForce = 650;
 
 
 		//GetComponent<Collider2D> ().enabled = true;
 
 	}
 
-
 	void Update()
 	{
 		if (ClimbTrue == true) 
 		{
+			m_JumpForce = 0;
 			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
 			if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space)==false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder>().MaxHauteur.position.y)
 				transform.Translate (Vector2.up * 2*Time.deltaTime);

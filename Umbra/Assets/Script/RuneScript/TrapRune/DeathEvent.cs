@@ -24,6 +24,8 @@ public class DeathEvent : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		dir=new Vector3(ActualCadre.transform.position.x-Center.position.x, ActualCadre.transform.position.y-Center.position.y,0);
+
 		if(EventTriggered)
 		{
 			dir=new Vector3(ActualCadre.transform.position.x-Center.position.x, ActualCadre.transform.position.y-Center.position.y,0);
