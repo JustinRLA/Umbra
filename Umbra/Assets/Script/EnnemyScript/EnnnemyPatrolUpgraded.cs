@@ -241,7 +241,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		TeleportPointRight_Actual= TeleportPointRight_RegularLevel;
 		TeleportPointRightTransform_Actual=TeleportPointRightTransform_RegularLevel;
 
-		MyPlayer = GameObject.Find ("2DCharacter");
+		MyPlayer = GameObject.Find("2DCharacter(Clone)");
 		ThePlayer = MyPlayer.transform;
 		RuneManager = GameObject.Find ("RuneManager");
 

@@ -28,7 +28,6 @@ GameObject:
   - component: {fileID: 61338506707039608}
   - component: {fileID: 58589064105727954}
   - component: {fileID: 114848467757930108}
-  - component: {fileID: 114521515787636590}
   - component: {fileID: 114035125408103482}
   m_Layer: 13
   m_Name: 2DCharacter
@@ -964,22 +963,6 @@ MonoBehaviour:
   ActualEnnemy: {fileID: 0}
   OtherEnnemy: {fileID: 0}
   Playa: {fileID: 0}
---- !u!114 &114521515787636590
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014189160392212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46db386b8d08d1e4fa7dedea8636941f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeathManager: {fileID: 0}
-  SpawnPointOne: {fileID: 0}
-  SpawnPointTwo: {fileID: 0}
-  SpawnPointThree: {fileID: 0}
-  SpawnPointFour: {fileID: 0}
 --- !u!114 &114589576820589842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -997,7 +980,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294779081
+    m_Bits: 4292157641
   inShadow: 0
   ClimbTrue: 0
   RunTrigger: {fileID: 1214353545722392}

@@ -17,7 +17,7 @@ public class ladderScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ThePlayer = GameObject.Find ("2DCharacter");
+			ThePlayer = GameObject.Find("2DCharacter(Clone)");
 		animPlayer = ThePlayer.GetComponent<Animator> ();
 		//ThePlayer
 			myPLatformCharacter=ThePlayer.GetComponent<PlatformerCharacter2D>();

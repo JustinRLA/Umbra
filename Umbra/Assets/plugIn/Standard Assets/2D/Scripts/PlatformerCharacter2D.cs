@@ -47,6 +47,8 @@ using UnityEngine.SceneManagement;
 
         private void Awake()
         {
+		MyRuneMan = GameObject.Find ("RuneManager");
+
 		if(TruePlayer==true)
 		myRuneManScript = MyRuneMan.GetComponent<RuneManagerScript> ();
 			RunCircleCollider = RunTrigger.GetComponent<CircleCollider2D> ();
@@ -368,6 +370,7 @@ using UnityEngine.SceneManagement;
 
 		void OnTriggerEnter2D(Collider2D col)
 		{
+		print (col.name);
 		if (col.tag == "Ladder")
 		{
 			ClimbTrue = true;

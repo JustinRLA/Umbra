@@ -6,7 +6,7 @@ public class changeViewTrigger : MonoBehaviour {
 	public GameObject ViewTriger;
 	// Use this for initialization
 	void Start () {
-		PlayerCenter = GameObject.Find ("2DCharacter");
+		PlayerCenter = GameObject.Find("2DCharacter(Clone)");
 		ViewTriger=GameObject.Find ("ViewTrigger");
 	}
 	

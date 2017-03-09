@@ -11,7 +11,7 @@ public class SpriteMoveemntAnim : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Player = GameObject.Find ("2DCharacter");
+		Player = GameObject.Find("2DCharacter(Clone)");
 		ObjectivePosition=Player.GetComponent<DeathEvent> ().EnnemyPos;
 		dir =  ObjectivePosition.position-transform.position;
 			

@@ -15,7 +15,7 @@ public class PlayerCamScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerMy = GameObject.Find ("2DCharacter");
+		PlayerMy = GameObject.Find ("2DCharacter(Clone)");
 	}
 
 	// Update is called once per frame

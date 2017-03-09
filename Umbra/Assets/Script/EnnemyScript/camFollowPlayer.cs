@@ -17,7 +17,7 @@ public class camFollowPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		mySightListener = TheSightListener.GetComponent<SightListenerTemplate> ();
-		MyPlayer = GameObject.Find ("2DCharacter");
+		MyPlayer = GameObject.Find("2DCharacter(Clone)");
 		ThePlayer = MyPlayer.transform;
 		DontDestroyOnLoad (gameObject);
 	}

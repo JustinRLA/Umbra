@@ -7,11 +7,12 @@ public class CheckPointChange : MonoBehaviour {
 	public GameObject DeathManager;
 	// Use this for initialization
 	void Start () {
+		DeathManager=GameObject.Find("deathManager");
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		DeathManager=GameObject.Find("deathManager");
 	}
 
 	void OnTriggerEnter2D(Collider2D col)

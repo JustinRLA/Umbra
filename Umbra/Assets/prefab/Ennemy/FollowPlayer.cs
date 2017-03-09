@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour {
 	public GameObject MyPlayer;
 	// Use this for initialization
 	void Start () {
-		MyPlayer = GameObject.Find ("2DCharacter");
+		MyPlayer = GameObject.Find("2DCharacter(Clone)");
 		ThePlayer = MyPlayer.transform;
 	}
 	

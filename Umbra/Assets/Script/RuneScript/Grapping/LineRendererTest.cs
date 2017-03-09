@@ -39,7 +39,7 @@ public class LineRendererTest : MonoBehaviour {
 	{
 		MainCamera = GameObject.Find ("Main Camera");
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
-		myPlayer = GameObject.Find("2DCharacter");
+		myPlayer = GameObject.Find ("2DCharacter(Clone)");
 		PlayerMy = myPlayer.transform;
 
 	}

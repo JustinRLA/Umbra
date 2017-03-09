@@ -12,19 +12,32 @@ public class CheckPointState : MonoBehaviour {
 	public Transform SpawnPointFour;
 	public GameObject DeathManager;
 
+	void Awake()
+	{		
+		DeathManager = GameObject.Find ("deathManager");
+		print ("Test");
+		DeathManager.GetComponent<DeathManagerScript> ().SpawnPointOne = SpawnPointOne;
+		DeathManager.GetComponent<DeathManagerScript> ().SpawnPointTwo = SpawnPointTwo;
+		DeathManager.GetComponent<DeathManagerScript> ().SpawnPointThree = SpawnPointThree;
+		DeathManager.GetComponent<DeathManagerScript> ().SpawnPointFour = SpawnPointFour;
+		//DeathManager.GetComponent<DeathManagerScript> ().ThePlayer = GameObject.Find ("2DCharacter(Clone)");
+		DeathManager.GetComponent<DeathManagerScript> ().FirstTime();
+
+
+	//	if(	DeathManager.GetComponent<DeathManagerScript> ().timeScene<=0)
+
+	DeathManager.GetComponent<DeathManagerScript> ().timeScene++;
+
+			
+	}
 	// Use this for initialization
 	void Start () {
+
 		if(Testing==false)
 		{
 		savesystem = GameObject.Find ("SaveSystem");
 		CheckpointState = savesystem.GetComponent<SaveSystem> ().SavePoint;
 	}
-		DeathManager = GameObject.Find ("deathManager");
-		DeathManager.GetComponent<DeathManagerScript> ().SpawnPointOne = SpawnPointOne;
-		DeathManager.GetComponent<DeathManagerScript> ().SpawnPointTwo = SpawnPointTwo;
-		DeathManager.GetComponent<DeathManagerScript> ().SpawnPointThree = SpawnPointThree;
-		DeathManager.GetComponent<DeathManagerScript> ().SpawnPointFour = SpawnPointFour;
-		DeathManager.GetComponent<DeathManagerScript> ().ThePlayer = GameObject.Find("2DCharacter");
 
 
 

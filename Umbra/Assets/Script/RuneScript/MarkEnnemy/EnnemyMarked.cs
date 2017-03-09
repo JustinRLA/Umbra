@@ -19,7 +19,7 @@ public class EnnemyMarked : MonoBehaviour {
 	public float PlayerSpeed;
 	// Use this for initialization
 	void Start () {
-		PlayerMy = GameObject.Find ("2DCharacter");
+		PlayerMy = GameObject.Find("2DCharacter(Clone)");
 		RuneManager = GameObject.Find ("RuneManager");
 		myMarkEnmnemyRune = RuneManager.GetComponent<MarkEnnemy> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();

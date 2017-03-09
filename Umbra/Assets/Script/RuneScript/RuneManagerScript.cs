@@ -55,6 +55,7 @@ public class RuneManagerScript : MonoBehaviour
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
+		ThePlayer=GameObject.Find("2DCharacter(Clone)");
 		myPlatUserControl = ThePlayer.GetComponent<Platformer2DUserControl>();
 		myPlatformCharacter= ThePlayer.GetComponent<PlatformerCharacter2D>();
 		textaccrochage=GameObject.Find ("accorchageText");

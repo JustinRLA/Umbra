@@ -10,7 +10,7 @@ public class oeillereChecjBoth : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayeroNE=GameObject.Find("2DCharacter");
+		PlayeroNE=GameObject.Find ("2DCharacter(Clone)");
 	}
 
 	// Update is called once per frame

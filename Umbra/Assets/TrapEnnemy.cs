@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TrapEnnemy : MonoBehaviour {
-
+	public GameObject ObjectArray;
+	public GameObject ParticleExplosion;
+	public GameObject PastParticle;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,8 +20,20 @@ public class TrapEnnemy : MonoBehaviour {
 		if (col.tag == "ennemy")
 		{
 			col.GetComponent<EnnnemyPatrolUpgraded> ().StartCorTrap ();
-			Destroy (gameObject);
+			PastParticle.SetActive (true);
+			GetComponent<Collider2D> ().enabled = false;
 		}
 
 	}
+	IEnumerator Countown()
+	{
+		
+		ObjectArray.SetActive (true);
+		ParticleExplosion.SetActive (true);
+		yield return new WaitForSeconds (1f);
+		ObjectArray.SetActive (false);
+		Destroy (gameObject);
+
+	}
+
 }

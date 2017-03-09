@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class lightToThePlayer : MonoBehaviour {
-	public GameObject thePlayer;
+public class StartTest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		thePlayer = GameObject.Find("2DCharacter(Clone)");
-		
+		SceneManager.LoadScene("Niveau_1_back");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = thePlayer.transform.position;
+		
 	}
 }

@@ -18,7 +18,7 @@ public class DragShadow : MonoBehaviour {
 
 	void Start()
 	{
-		playerMy = GameObject.Find ("2DCharacter");
+		playerMy = GameObject.Find("2DCharacter(Clone)");
 
 		mainCamMy = GameObject.Find ("Main Camera");
 		RuneMangerMy=GameObject.Find ("RuneManager");

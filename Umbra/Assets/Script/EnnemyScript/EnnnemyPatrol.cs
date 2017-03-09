@@ -109,7 +109,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 	void Start () {
 		TeleportPointLeftCol = TeleportPointLeft.GetComponent<Collider2D> ();
 		TeleportPointRightCol = TeleportPointRight.GetComponent < Collider2D> ();
-		MyPlayer = GameObject.Find ("2DCharacter");
+		MyPlayer = GameObject.Find("2DCharacter(Clone)");
 		ThePlayer = MyPlayer.transform;
 		RuneManager = GameObject.Find ("RuneManager");
 

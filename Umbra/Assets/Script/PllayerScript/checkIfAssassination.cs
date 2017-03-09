@@ -11,7 +11,7 @@ public class checkIfAssassination : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Playa = GameObject.Find ("2DCharacter");
+		Playa = GameObject.Find("2DCharacter(Clone)");
 	}
 
 	// Update is called once per frame
