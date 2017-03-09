@@ -7,7 +7,7 @@ public class EnableTrapMode : MonoBehaviour {
 	RaycastHit2D myraycast;
 	Ray ray;
 	public bool CanInstantiate;
-	bool ScriptIsActivaed=false;
+	//bool ScriptIsActivaed=false;
 	public GameObject Trapping;
 	RuneManagerScript myRuneManager;
 	public GameObject gameCam;

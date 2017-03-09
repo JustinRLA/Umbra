@@ -155,7 +155,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public Transform LeftLimit_DownLevel;
 
 	public GameObject RuneManager;
-	RuneManagerScript myRunemanagerScript;
 	LureScript myLureScript;
 
 	public bool LureAttention;
@@ -251,7 +250,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		RuneManager = GameObject.Find ("RuneManager");
 
 		myLureScript = RuneManager.GetComponent<LureScript> ();
-		myRunemanagerScript = RuneManager.GetComponent<RuneManagerScript> ();
 		gameObject.tag="ennemy";
 
 		//fsm=StateMachine<States>.Initialize.this;

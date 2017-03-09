@@ -35,10 +35,8 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public GameObject ProjStartObj;
 
 	public GameObject TeleportPointLeft;
-	Collider2D TeleportPointLeftCol;
 
 	public GameObject TeleportPointRight;
-	Collider2D TeleportPointRightCol;
 
 	public Transform TeleportPointLeftTransform;
 	public Transform TeleportPointRightTransform;
@@ -91,7 +89,6 @@ public class EnnnemyPatrol : MonoBehaviour {
 	public Transform RightLimit;
 	public Transform LeftLimit;
 	public GameObject RuneManager;
-	RuneManagerScript myRunemanagerScript;
 	LureScript myLureScript;
 
 	public bool LureAttention;
@@ -107,14 +104,11 @@ public class EnnnemyPatrol : MonoBehaviour {
 	}
 
 	void Start () {
-//		TeleportPointLeftCol = TeleportPointLeft.GetComponent<Collider2D> ();
-//		TeleportPointRightCol = TeleportPointRight.GetComponent < Collider2D> ();
 		MyPlayer = GameObject.Find("2DCharacter(Clone)");
 		ThePlayer = MyPlayer.transform;
 		RuneManager = GameObject.Find ("RuneManager");
 
 		myLureScript = RuneManager.GetComponent<LureScript> ();
-		myRunemanagerScript = RuneManager.GetComponent<RuneManagerScript> ();
 		gameObject.tag="ennemy";
 
 		//fsm=StateMachine<States>.Initialize.this;
@@ -167,8 +161,6 @@ public class EnnnemyPatrol : MonoBehaviour {
 		
 			if (ThePlayer.position.x > RightLimit.position.x)
 			CurrentNavPoint = RightLimit;
-				TeleportPointLeftCol.enabled = false;
-				TeleportPointRightCol.enabled = false;
 
 
 				if (trapped == false) {
@@ -185,12 +177,10 @@ public class EnnnemyPatrol : MonoBehaviour {
 			{
 				if(Vector3.Distance(TeleportPointLeftTransform.position,transform.position)<Vector3.Distance(TeleportPointRightTransform.position,transform.position))
 				{
-					TeleportPointLeftCol.enabled = true;
 					CurrentNavPoint = TeleportPointLeftTransform;
 				}
 				else
 				{
-					TeleportPointRightCol.enabled = true;
 					CurrentNavPoint = TeleportPointRightTransform;
 				}
 
@@ -248,12 +238,10 @@ public class EnnnemyPatrol : MonoBehaviour {
 				{
 					if(Vector3.Distance(TeleportPointLeftTransform.position,transform.position)<Vector3.Distance(TeleportPointRightTransform.position,transform.position))
 					{
-						TeleportPointLeftCol.enabled = true;
 						CurrentNavPoint = TeleportPointLeftTransform;
 					}
 					else
 					{
-						TeleportPointRightCol.enabled = true;
 						CurrentNavPoint = TeleportPointRightTransform;
 					}
 				}
@@ -366,11 +354,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			Alert = true;
 			Suspicious = false;
 			CurrentNavPointGo = null;
-			if(NavPointTwo_Left !=null)
-			{
-			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
-			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-		}
+	
 		}
 		if(timerState>0 && timerState<=15)
 		{
@@ -386,11 +370,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 			}
 		//	if(PhamomPoint.position.y<
 
-			if(NavPointTwo_Left !=null)
-			{
-			NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
-			NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-			}
+		
 
 			if (CurrentNavPoint.position.x-transform.position.x <1 && isFLippe==false)
 				flip ();
@@ -417,9 +397,6 @@ public class EnnnemyPatrol : MonoBehaviour {
 				CurrentNavPoint = NavPointOne_Right;
 				CurrentNavPointGo = NavPoitnOneGo;
 				NavPointIGot = 2;
-				if(NavPointTwo_Left !=null)
-				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
-				NavPoitnOneGo.GetComponent<Collider2D>().enabled = true;
 				
 			}
 				if((Vector3.Distance(transform.position,NavPointOne_Right.position))<=(Vector3.Distance(transform.position,NavPointTwo_Left.position))) 
@@ -428,8 +405,6 @@ public class EnnnemyPatrol : MonoBehaviour {
 				CurrentNavPoint = NavPointTwo_Left;
 				CurrentNavPointGo = NavPoitnTwoGo;
 				NavPointIGot = 1;
-				NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-				NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;
 				}
 				
 			}
