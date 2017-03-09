@@ -23,6 +23,7 @@ public class EnableTrapMode : MonoBehaviour {
 	public GameObject myTrapZone;
 	// Use this for initialization
 	void Start () {
+		myPlayer=GameObject.Find("2DCharacter(Clone)");
 		Demotrap = GameObject.Find ("TrapDemo");
 		nowherepointObj=GameObject.Find("NowherePoint");
 		NowherePoint = nowherepointObj.transform;

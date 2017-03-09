@@ -28,6 +28,7 @@ public class ChangeRunePoint : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		RuneManager=GameObject.Find("RuneManager");
+		FeedBackImage = GameObject.Find ("feedbackRuneChange");
 	}
 	
 	// Update is called once per frame

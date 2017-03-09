@@ -223,6 +223,11 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		GetComponent<Rigidbody2D> ().isKinematic = false;
 		GetComponent<BoxCollider2D> ().isTrigger = false;
 	}
+	void Awake()
+	{
+		MyPlayer = GameObject.Find("2DCharacter(Clone)");
+
+	}
 
 	void Start () {
 //		RayStartPoint.position = transform.position;
