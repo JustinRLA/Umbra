@@ -342,9 +342,9 @@ print (MortalRay.collider.name);
 
 
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -4)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
 					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -4)
+				if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
 					speed = OriginalSpeed;
 			}
 			else
@@ -378,9 +378,9 @@ print (MortalRay.collider.name);
 					goUpFloor();
 
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) >= -4)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) >= -2)
 					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -4)
+				if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
 					speed = OriginalSpeed;
 			}
 			else
@@ -415,9 +415,9 @@ print (MortalRay.collider.name);
 					goDownFloor();
 	
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
 					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
 					speed = OriginalSpeed;
 			}
 			else
@@ -466,9 +466,9 @@ print (MortalRay.collider.name);
 
 
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
 					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+				if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
 					speed = OriginalSpeed;
 			}
 			else
@@ -513,9 +513,9 @@ print (MortalRay.collider.name);
 
 
 				if (trapped == false) {
-					if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+					if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
 						speed = 0;
-					if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+					if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
 						speed = OriginalSpeed;
 				}
 				else
@@ -549,9 +549,9 @@ print (MortalRay.collider.name);
 						goUpFloor();
 			
 				if (trapped == false) {
-					if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+					if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
 						speed = 0;
-					if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+					if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
 						speed = OriginalSpeed;
 				}
 				else
@@ -588,9 +588,9 @@ print (MortalRay.collider.name);
 
 
 				if (trapped == false) {
-					if ((transform.position.x - CurrentNavPoint.position.x) < 4 || (transform.position.x - CurrentNavPoint.position.x) > -5)
+					if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
 						speed = 0;
-					if ((transform.position.x - CurrentNavPoint.position.x) > 4 || (transform.position.x - CurrentNavPoint.position.x) <= -5)
+					if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
 						speed = OriginalSpeed;
 				}
 				else

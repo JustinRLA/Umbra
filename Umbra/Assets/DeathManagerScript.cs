@@ -37,6 +37,15 @@ public class DeathManagerScript : MonoBehaviour {
 	{
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 		ThePlayer = GameObject.Find ("2DCharacter");
+		if(CheckPointState==0)
+		ThePlayer.transform.position = SpawnPointOne.position;
+		if(CheckPointState==1)
+			ThePlayer.transform.position = SpawnPointTwo.position;	
+		if(CheckPointState==2)
+		ThePlayer.transform.position = SpawnPointThree.position;
+		if(CheckPointState==3)
+		ThePlayer.transform.position = SpawnPointFour.position;
+
 
 	}
 

@@ -53,7 +53,7 @@ public class checkIfAssassination : MonoBehaviour {
 
 	void Assassination()
 	{
-//		Playa.GetComponent<DeathEvent> ().chooseSprite ();
+		Playa.GetComponent<DeathEvent> ().chooseSprite ();
 		print ("I kill you");	
 		ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().Alert = false;
 		ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().isdead = true;

@@ -13,7 +13,7 @@ public class solifyShadow : MonoBehaviour {
 	public GameObject PlayerMy;
 	public float movespeed;
 	public GameObject[] AllShadow;
-
+	public GameObject GrimpSurface;
 
 
 	// Use this for initialization
@@ -89,7 +89,8 @@ public class solifyShadow : MonoBehaviour {
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		gameObject.tag="SolidOmbre";
-
+		gameObject.layer = 10;
+		GrimpSurface.SetActive (true);
 		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
 
 		foreach (GameObject Ombre in AllShadow)
@@ -97,9 +98,11 @@ public class solifyShadow : MonoBehaviour {
 			Ombre.GetComponent<Collider2D> ().isTrigger = true;
 			Ombre.layer = 10;
 		}
-		gameObject.layer = 10;
+		gameObject.layer = 24;
 
 		yield return new WaitForSeconds(10f);
+		GrimpSurface.SetActive (false);
+
 		GetComponent<Collider2D> ().isTrigger = true;
 		MySolid.CanClickable = false;
 
