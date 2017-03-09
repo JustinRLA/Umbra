@@ -18,7 +18,7 @@ public class solifyShadow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerMy = GameObject.;
+		PlayerMy = GameObject.Find("2DCharacter(Clone");
 		RuneManager = GameObject.Find ("RuneManager");
 		myMainCam = GameObject.Find ("Main Camera");
 

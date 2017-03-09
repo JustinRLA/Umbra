@@ -62,7 +62,7 @@ public class DeathManagerScript : MonoBehaviour {
 			Instantiate (ThePlayer, SpawnPointThree.position, SpawnPointThree.rotation);
 		if(CheckPointState==4)
 			Instantiate (ThePlayer, SpawnPointFour.position, SpawnPointFour.rotation);
-	//	StartCoroutine(Timer());
+StartCoroutine(Timer());
 
 	}
 
