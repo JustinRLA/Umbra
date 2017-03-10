@@ -184,9 +184,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732033569885416}
-  m_LocalRotation: {x: 0, y: 0, z: -0.8002606, w: 0.59965247}
-  m_LocalPosition: {x: 118.14788, y: 24.152327, z: 0}
-  m_LocalScale: {x: 1, y: 0.3, z: 0.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38159353, w: 0.9243303}
+  m_LocalPosition: {x: -14.751457, y: 7.5768433, z: -0.329}
+  m_LocalScale: {x: 1, y: 0.30000013, z: 0.1}
   m_Children:
   - {fileID: 4919697461596210}
   - {fileID: 4004594741430388}
@@ -198,7 +198,7 @@ Transform:
   - {fileID: 4360120929126724}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -106.31}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.865}
 --- !u!4 &4051750636291418
 Transform:
   m_ObjectHideFlags: 1
@@ -218,7 +218,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010772090662610}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071067}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071067}
   m_LocalPosition: {x: -9.43, y: 2.57, z: 0}
   m_LocalScale: {x: 0.4703455, y: 0.25764996, z: 0.2902882}
   m_Children: []
@@ -572,8 +572,7 @@ MonoBehaviour:
   throwSuspicious: 0
   throwAlert: 0
   mySight: {fileID: 0}
-  RuneManager: {fileID: 1060936841745000, guid: f7ab8f642fdecf44b9c6d715c096bcf9,
-    type: 2}
+  RuneManager: {fileID: 0}
   IsawTheLure: 0
   LurePlayer: {fileID: 0}
   TypeOfObj: 2
@@ -738,8 +737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TheSightListener: {fileID: 1010772090662610}
-  ThePlayer: {fileID: 4134549487070432, guid: b5f033517a32ef14da61ba16132c1ce0, type: 2}
-  MyPlayer: {fileID: 1014189160392212, guid: b5f033517a32ef14da61ba16132c1ce0, type: 2}
+  ThePlayer: {fileID: 0}
+  MyPlayer: {fileID: 0}
   KLurePlayer: {fileID: 0}
 --- !u!212 &212085296840948198
 SpriteRenderer:
@@ -747,7 +746,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010772090662610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_MotionVectors: 1
