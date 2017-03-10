@@ -7,7 +7,6 @@ public class DragShadow : MonoBehaviour {
 	Ray ray;
 	public bool dragging = true;
 	private float distance;
-	GameObject MyOverlay;
 	public GameObject RuneMangerMy;
 	Vector2 rayPoint;
 	public GameObject mainCamMy;
@@ -22,7 +21,6 @@ public class DragShadow : MonoBehaviour {
 
 		mainCamMy = GameObject.Find ("Main Camera");
 		RuneMangerMy=GameObject.Find ("RuneManager");
-		MyOverlay = GameObject.Find ("BlackOverlay");
 	}
 	void OnMouseEnter()
 	{
@@ -37,7 +35,6 @@ public class DragShadow : MonoBehaviour {
 	void OnMouseDown()
 	{
 		dragging = false;
-		MyOverlay.SetActive (false);
 		//GetComponent<dragScript> ().enabled = false;
 		//Destroy(GameObject.Find("OldCube"));
 		transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - 0.01f);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SolidifcationEnabled : MonoBehaviour {
 	public bool CanClickable=false;
-	public GameObject MyCache;
+//	public GameObject MyCache;
 	public GameObject[] AllShadow;
 
 	// Use this for initialization
@@ -28,7 +28,7 @@ public class SolidifcationEnabled : MonoBehaviour {
 		}
 
 
-	MyCache.SetActive (true);
+	//MyCache.SetActive (true);
 	Cursor.visible = true;
 
 		CanClickable = true;
