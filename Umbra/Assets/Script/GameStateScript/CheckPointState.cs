@@ -11,11 +11,10 @@ public class CheckPointState : MonoBehaviour {
 	public Transform SpawnPointThree;
 	public Transform SpawnPointFour;
 	public GameObject DeathManager;
-
+	public GameObject OldCheckPointState;
+	public int Counter;
 	void Awake()
 	{		
-
-			
 	}
 	// Use this for initialization
 	void Start () {
@@ -25,7 +24,13 @@ public class CheckPointState : MonoBehaviour {
 		savesystem = GameObject.Find ("SaveSystem");
 		CheckpointState = savesystem.GetComponent<SaveSystem> ().SavePoint;
 	}
+		if (Counter >= 1)
+		{
+			OldCheckPointState=GameObject.Find("CheckPointManager");
+			Destroy (OldCheckPointState);
+		}
 
+		StartCoroutine (Rename ());
 
 
 	}
@@ -39,4 +44,12 @@ public class CheckPointState : MonoBehaviour {
 //			savesystem.GetComponent<SaveSystem> ().SavePoint=CheckpointState;
 //	}
 }
+	IEnumerator Rename()
+	{
+		yield return new WaitForSeconds (2f);
+	gameObject.name="OnlyChekPointState";
+
+
+	
+	}
 }

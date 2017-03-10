@@ -7,7 +7,6 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject ThePLayer;
 	public Transform[] SpawnPoint;
 	public GameObject[] EnnemyPack;
-	public GameObject[] LightPack;
 
 
 
@@ -18,17 +17,17 @@ public class InitializeLevel : MonoBehaviour {
 		GameManager = GameObject.Find ("CheckPointManager");
 		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
 			Instantiate (ThePLayer, SpawnPoint [0].position, SpawnPoint [0].rotation);
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
+		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 1)
 			Instantiate (ThePLayer, SpawnPoint [1].position, SpawnPoint [1].rotation);
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
+		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 2)
 			Instantiate (ThePLayer, SpawnPoint [2].position, SpawnPoint [2].rotation);
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
+		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 3)
 			Instantiate (ThePLayer, SpawnPoint [3].position, SpawnPoint [3].rotation);
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
+		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 4)
 			Instantiate (ThePLayer, SpawnPoint [4].position, SpawnPoint [4].rotation);
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
+		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 5)
 			Instantiate (ThePLayer, SpawnPoint [5].position, SpawnPoint [5].rotation);
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
+		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 6)
 			Instantiate (ThePLayer, SpawnPoint [6].position, SpawnPoint [6].rotation);
 
 		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
@@ -46,23 +45,6 @@ public class InitializeLevel : MonoBehaviour {
 		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 3)
 		{
 			EnnemyPack [3].SetActive (true);
-		}
-
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
-		{
-			LightPack [0].SetActive (true);
-		}
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 1)
-		{
-			LightPack [1].SetActive (true);
-		}	
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 2)
-		{
-			LightPack [2].SetActive (true);
-		}
-		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 3)
-		{
-			LightPack [3].SetActive (true);
 		}
 
 	}

@@ -33,7 +33,8 @@ using UnityEngine.SceneManagement;
 	public GameObject OeillereFeedback;
 	public GameObject ActualOeillere;
 	SpriteRenderer actualOeillereSPriteRenderer;
-
+	public GameObject CheckPointManager;
+	public GameObject RealCheckPointManager;
 	bool canBeSilenced;
 	public GameObject MyRuneMan;
 	RuneManagerScript myRuneManScript;
@@ -41,7 +42,7 @@ using UnityEngine.SceneManagement;
 	void Start()
 	{
 		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
-		DeathManager = GameObject.Find ("deathManager");
+		//DeathManager = GameObject.Find ("deathManager");
 	}
 
 
@@ -68,7 +69,14 @@ using UnityEngine.SceneManagement;
 //		print ("Bouhhhhhhhhhhhhhhhjhbhyb");
 		actualOeillereSPriteRenderer.enabled = false;
 		ActualOeillere = null;
-		DeathManager.GetComponent<DeathManagerScript> ().PlayerDeath ();
+	
+			RealCheckPointManager=GameObject.Find("OnlyChekPointState");
+			RealCheckPointManager.GetComponent<CheckPointState> ().Counter++;
+
+
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+
+		//DeathManager.GetComponent<DeathManagerScript> ().PlayerDeath ();
 
 	}
 
