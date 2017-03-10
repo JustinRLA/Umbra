@@ -40,6 +40,7 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		myRuneManagerScript.RuneActivated = true;
 		ThePlayer = GameObject.Find ("2DCharacter(Clone)");
 		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = true;
 		ThePlayerShadow.transform.position = ThePlayer.transform.position;
@@ -85,6 +86,8 @@ public class LureScript : MonoBehaviour {
 
 	IEnumerator DistractEnnemFast()
 	{
+		myRuneManagerScript.RuneActivated = false;
+
 		myCam.GetComponent<Animator> ().SetBool ("MegaBlue", false);
 		CamOne.GetComponent<Animator> ().SetBool ("MegaBlue", false);
 		CamTwo.GetComponent<Animator> ().SetBool ("MegaBlue", false);
@@ -155,6 +158,8 @@ public class LureScript : MonoBehaviour {
 		inLureMode = true;
 
 			yield return new WaitForSeconds(7f);
+		myRuneManagerScript.RuneActivated = false;
+
 		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = false;
 
 		myCam.GetComponent<NoiseAndScratches> ().enabled = false;

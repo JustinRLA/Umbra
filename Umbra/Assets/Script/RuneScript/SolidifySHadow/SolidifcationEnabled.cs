@@ -6,10 +6,10 @@ public class SolidifcationEnabled : MonoBehaviour {
 	public bool CanClickable=false;
 //	public GameObject MyCache;
 	public GameObject[] AllShadow;
-
+	GameObject RuneManager;
 	// Use this for initialization
 	void Start () {
-		
+		RuneManager = GameObject.Find ("RuneManager");
 	}
 	
 	// Update is called once per frame
@@ -19,6 +19,8 @@ public class SolidifcationEnabled : MonoBehaviour {
 
 	public void SolidificationStart()
 	{
+		RuneManager = GameObject.Find ("RuneManager");
+
 		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
 
 		foreach (GameObject Ombre in AllShadow)
@@ -26,7 +28,7 @@ public class SolidifcationEnabled : MonoBehaviour {
 			Ombre.GetComponent<Collider2D> ().isTrigger = false;
 			Ombre.layer = 23;
 		}
-
+		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;
 
 	//MyCache.SetActive (true);
 	Cursor.visible = true;
