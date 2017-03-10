@@ -23,7 +23,8 @@ public class CheckPointChange : MonoBehaviour {
 		{
 			CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
 			//print ("Check");
-			DeathManager.GetComponent<DeathManagerScript>().CheckPointState=CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
+			//DeathManager.GetComponent<DeathManagerScript>().CheckPointState=CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
+			PlayerPrefs.SetInt ("SaveSystem", AssignCheckpoint);
 		}
 
 	}
