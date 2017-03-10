@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4294023532789512}
   - component: {fileID: 212805219819510134}
   - component: {fileID: 61992862419037718}
-  - component: {fileID: 61061457285342076}
   m_Layer: 16
   m_Name: Oeillere
   m_TagString: Untagged
@@ -52,9 +51,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120677603189514}
-  m_LocalRotation: {x: -0, y: -0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 78.06, y: -2.74, z: 0}
-  m_LocalScale: {x: 0.9599552, y: 2.15, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
+  m_LocalPosition: {x: 107.56, y: 9.81, z: 0}
+  m_LocalScale: {x: 0.9599552, y: 2.2, z: 1}
   m_Children:
   - {fileID: 4368318305516192}
   m_Father: {fileID: 0}
@@ -73,20 +72,6 @@ Transform:
   m_Father: {fileID: 4294023532789512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61061457285342076
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1120677603189514}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 1.25, y: 0.64}
-  serializedVersion: 2
-  m_Size: {x: 3.44, y: 1.29}
 --- !u!61 &61414601750366338
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -130,6 +115,7 @@ MonoBehaviour:
   Base: {fileID: 1120677603189514}
   inJudaMode: 0
   PlayeroNE: {fileID: 0}
+  OeillereLayer: 1
 --- !u!212 &212805219819510134
 SpriteRenderer:
   m_ObjectHideFlags: 1
