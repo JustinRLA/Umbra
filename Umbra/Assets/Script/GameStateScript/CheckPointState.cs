@@ -18,7 +18,7 @@ public class CheckPointState : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		DontDestroyOnLoad (gameObject);
+		//DontDestroyOnLoad (gameObject);
 		if(Testing==false)
 		{
 		savesystem = GameObject.Find ("SaveSystem");
