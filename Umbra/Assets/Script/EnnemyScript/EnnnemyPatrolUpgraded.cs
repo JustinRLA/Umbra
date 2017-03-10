@@ -28,7 +28,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public bool PlayerIsDown;
 	Vector3 movPos;
 
-
+	public bool Safe;
 	public Transform UpPoint;
 	public Transform UpPoint_UpLevel;
 
@@ -280,35 +280,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		Alert = true;
 		Suspicious = false;
 		backHome = false;
-		if(Vector3.Distance(transform.position, ThePlayer.position)<5)
+		if(Vector3.Distance(transform.position, ThePlayer.position)<5 && Safe==false)
 		{
-			PlayerPos = new Vector3 (ThePlayer.position.x, ThePlayer.position.y, 0);
-			myPos = new Vector3 (rayPointOf.position.x, rayPointOf.position.y, 0);
-			//Vector3 dir;
-			//dir=RayStartPoint
 
-				MortalRay = Physics2D.Linecast (myPos,PlayerPos);
-			//print (MortalRay.collider.name);
-			if(MortalRay.collider==true)
-			{	
-print (MortalRay.collider.name);
-//				print("touchThis");
-//				if (MortalRay.collider.tag == "bloc")
-//				print ("Safw");
-//			if (MortalRay.collider.tag == "trapPlacement")
-//				print ("Safw");
-				if (MortalRay.collider.tag == "Player" || isdead==false)
-	MyPlayer.GetComponent <PlatformerCharacter2D> ().Death ();
-
-				if (MortalRay.collider.tag == "bloc")
-					print ("Safe");
-			}
-//			else
-//			{
-//				MyPlayer.GetComponent <PlatformerCharacter2D> ().Death ();
-//				print (MortalRay.collider.name);
-//
-//			}
+			MyPlayer.GetComponent<PlatformerCharacter2D> ().Death ();
 		}
 
 
@@ -693,6 +668,18 @@ print (MortalRay.collider.name);
 
 	void Update () 
 	{
+		PlayerPos = new Vector3 (ThePlayer.position.x, ThePlayer.position.y, 0);
+		myPos = new Vector3 (rayPointOf.position.x, rayPointOf.position.y, 0);
+		MortalRay = Physics2D.Linecast (myPos, PlayerPos);
+
+	
+		if(MortalRay.collider==true)
+		{
+			if (MortalRay.collider.tag == "bloc" || MortalRay.collider.tag == "ennemy")
+				Safe = true;
+			else
+				Safe = false;
+			
 //		if(SolidOmbreTouch =! null)
 //		{
 //			if(SolidOmbreTouch.tag=="Ombre")
@@ -702,7 +689,7 @@ print (MortalRay.collider.name);
 //			}
 //
 //		}
-
+		}
 
 		//PlayerPos = new Vector3 (ThePlayer.position.x, ThePlayer.position.y, 0);
 		//myPos = transform.position;

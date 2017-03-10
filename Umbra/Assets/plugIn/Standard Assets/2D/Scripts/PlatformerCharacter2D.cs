@@ -70,8 +70,6 @@ using UnityEngine.SceneManagement;
 		actualOeillereSPriteRenderer.enabled = false;
 		ActualOeillere = null;
 	
-			RealCheckPointManager=GameObject.Find("OnlyChekPointState");
-			RealCheckPointManager.GetComponent<CheckPointState> ().Counter++;
 
 
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
