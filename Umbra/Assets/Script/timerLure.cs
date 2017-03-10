@@ -17,7 +17,7 @@ public class timerLure : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if(fraction>0)
 		fraction-= Time.deltaTime;
 
 		ratio = 1 * (fraction/7);

@@ -41,6 +41,7 @@ using UnityEngine.SceneManagement;
 
 	void Start()
 	{
+		if(TruePlayer==true)
 		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
 		//DeathManager = GameObject.Find ("deathManager");
 	}
@@ -184,7 +185,8 @@ using UnityEngine.SceneManagement;
 
 		}
 
-
+		if(TruePlayer==true)
+		{	
 	if(ActualOeillere !=null)
 	{
 		if (ActualOeillere.GetComponent<oeillereChecjBoth> ().IsInside == true)
@@ -194,6 +196,8 @@ using UnityEngine.SceneManagement;
 		}
 		else
 			actualOeillereSPriteRenderer.enabled = false;
+			}
+
 	}
 	}
         private void FixedUpdate()
@@ -229,7 +233,7 @@ using UnityEngine.SceneManagement;
 			canChangeRune = false;
 		}		
 
-		if(MyRuneMan != null)
+		if(MyRuneMan != null && myRuneManScript!= null)
 		{
 		if(myRuneManScript.RuneModeEnabled==false && TruePlayer==true)
 		{
@@ -386,7 +390,7 @@ using UnityEngine.SceneManagement;
 		if (col.tag == "Proj")
 			Death ();
 
-		if (col.tag == "oeillere")
+		if (col.tag == "oeillere" && TruePlayer==true)
 			ActualOeillere = col.gameObject;
 
 		if (col.tag == "Ombre")
@@ -399,7 +403,7 @@ using UnityEngine.SceneManagement;
 		if (col.tag == "Ladder")
 			ClimbTrue = false;
 		
-		if (col.tag == "oeillere")
+		if (col.tag == "oeillere" && TruePlayer==true)
 		{
 			actualOeillereSPriteRenderer.enabled = false;
 			ActualOeillere = null;
