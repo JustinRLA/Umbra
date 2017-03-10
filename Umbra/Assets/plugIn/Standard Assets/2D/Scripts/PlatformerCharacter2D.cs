@@ -134,7 +134,7 @@ using UnityEngine.SceneManagement;
 	}
 
 
-	void ReturnToNormal()
+	public void ReturnToNormal()
 	{
 
 		//canClimb = false;
@@ -162,6 +162,11 @@ using UnityEngine.SceneManagement;
 
 	void Update()
 	{
+
+		if (ActualLadder == null)
+			ReturnToNormal ();
+		if(ActualLadder != null)
+		{
 		if (ClimbTrue == true) 
 		{
 			m_JumpForce = 0;
@@ -184,7 +189,7 @@ using UnityEngine.SceneManagement;
 			GetComponent<Animator>().SetBool ("Climb", false);
 
 		}
-
+		}
 		if(TruePlayer==true)
 		{	
 	if(ActualOeillere !=null)

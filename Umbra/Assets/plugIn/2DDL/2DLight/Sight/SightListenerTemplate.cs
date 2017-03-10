@@ -50,10 +50,10 @@ public class SightListenerTemplate : MonoBehaviour {
 	{
 		PlayerView = GameObject.Find ("ViewTrigger");
 			//LurePlayer=GameObject.Find("2DCharacterShadow");
-		RuneManager = GameObject.Find ("RuneManager");
+//		RuneManager = GameObject.Find ("RuneManager");
 		if (TypeOfObj == 3)
 			ViewCol = PlayerView.GetComponent<Collider2D> ();
-		myLureScript = RuneManager.GetComponent<LureScript> ();
+		//myLureScript = RuneManager.GetComponent<LureScript> ();
 		//print (gameObject.name);
 		//EnnemyBase=
 //		print(transform.parent.name);
@@ -81,8 +81,8 @@ public class SightListenerTemplate : MonoBehaviour {
 		if(TypeOfObj==1)
 		{
 
-		if (myLureScript.Active== false)
-			IsawTheLure = false;
+//		if (myLureScript.Active== false)
+//			IsawTheLure = false;
 		
 		if(mySight==null)
 		{

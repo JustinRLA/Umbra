@@ -46,6 +46,7 @@ public class LineRendererTest : MonoBehaviour {
 	}
 	public void IsActivated()
 	{
+		myRuneManagerScript.RuneActivated = true;
 		theBeams = GameObject.FindGameObjectsWithTag ("grapRegion");
 
 		foreach (GameObject grapRegion in theBeams)
@@ -229,6 +230,7 @@ public class LineRendererTest : MonoBehaviour {
 		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 //		print ("this is the end");
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
+		myRuneManagerScript.RuneActivated = false;
 
 		GetComponent<LineRendererTest> ().enabled = false;
 
@@ -266,6 +268,7 @@ public class LineRendererTest : MonoBehaviour {
 		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
 		ActivateThisShit = false;
 		CamGrap.SetActive (false);
+		myRuneManagerScript.RuneActivated = false;
 
 		GetComponent<LineRendererTest> ().enabled = false;
 	}

@@ -34,6 +34,8 @@ public class DragShadow : MonoBehaviour {
 
 	void OnMouseDown()
 	{
+		mainCamMy = GameObject.Find ("Main Camera");
+
 		dragging = false;
 		//GetComponent<dragScript> ().enabled = false;
 		//Destroy(GameObject.Find("OldCube"));
@@ -48,6 +50,7 @@ public class DragShadow : MonoBehaviour {
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		//gameObject.layer = 10;
 		//GetComponent<Collider2D> ().isTrigger = true;
+		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
@@ -57,6 +60,8 @@ public class DragShadow : MonoBehaviour {
 	}
 	void CancelThis()
 	{
+		mainCamMy = GameObject.Find ("Main Camera");
+
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
@@ -64,6 +69,7 @@ public class DragShadow : MonoBehaviour {
 		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		Destroy (gameObject);
 	}
 
