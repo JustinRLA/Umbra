@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MarkEnnemy : MonoBehaviour {
-	public GameObject Cache;
 	public bool CanBeClicked;
 	public GameObject myCamOne;
 	public GameObject myCamTwo;
@@ -27,8 +26,6 @@ public class MarkEnnemy : MonoBehaviour {
 
 		CanBeClicked = true;
 
-		//print ("Done");
-		Cache.SetActive (true);
 		Cursor.visible = true;
 
 
