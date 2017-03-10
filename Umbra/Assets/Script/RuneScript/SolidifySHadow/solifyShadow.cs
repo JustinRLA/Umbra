@@ -15,7 +15,6 @@ public class solifyShadow : MonoBehaviour {
 	public GameObject[] AllShadow;
 	public GameObject GrimpSurface;
 
-
 	// Use this for initialization
 	void Start () {
 		PlayerMy = GameObject.Find("2DCharacter(Clone)");
@@ -34,16 +33,20 @@ public class solifyShadow : MonoBehaviour {
 			CancelAction ();
 		MySolid.CanClickable = false;
 		}
+
+
 	}
 
 	void OnMouseDown()
 	{
-		if (MySolid.CanClickable == true && PlayerMy.GetComponent<PlatformerCharacter2D> ().inShadow==false)
-		{
+		if (MySolid.CanClickable == true && PlayerMy.GetComponent<PlatformerCharacter2D> ().inShadow == false) {
 			StartCoroutine (SolidicationEvent ());
 			MySolid.CanClickable = false;
 
-		}
+		} 
+		if(MySolid.CanClickable == false)
+			CancelAction ();
+	
 	}
 
 	void OnMouseOver()
@@ -55,6 +58,8 @@ public class solifyShadow : MonoBehaviour {
 
 	void CancelAction()
 	{
+		myMainCam = GameObject.Find ("Main Camera");
+
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
 		Cursor.visible = false;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
@@ -71,12 +76,14 @@ public class solifyShadow : MonoBehaviour {
 			Ombre.GetComponent<Collider2D> ().isTrigger = true;
 			Ombre.layer = 10;
 		}
-
+		mymyRuneManagerScript.RuneActivated = false;
 	}
 
 
 	IEnumerator SolidicationEvent()
 	{
+		myMainCam = GameObject.Find ("Main Camera");
+
 		mymyRuneManagerScript.timerTactic = 0;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
@@ -99,8 +106,11 @@ public class solifyShadow : MonoBehaviour {
 			Ombre.layer = 10;
 		}
 		gameObject.layer = 24;
+		mymyRuneManagerScript.RuneActivated = false;
 
 		yield return new WaitForSeconds(10f);
+		if (GrimpSurface.GetComponent<ReturnTONormal> ().isIn == true)
+			PlayerMy.GetComponent<PlatformerCharacter2D> ().ReturnToNormal ();
 		GrimpSurface.SetActive (false);
 
 		GetComponent<Collider2D> ().isTrigger = true;
