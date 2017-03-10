@@ -37,10 +37,15 @@ public class SightListenerTemplate : MonoBehaviour {
 	public GameObject EnnemyFive;
 	//public Material OutofSightMat;
 	//public Material InSightMat;
+
 	public GameObject dangerLight;
 	public GameObject SuspiciousLight;
 	public bool InAlert;
 	public GameObject NoDangerLight;
+	public GameObject NormalGlobe;
+	public GameObject DangeGlobe;
+
+
 	public void Start()
 	{
 		PlayerView = GameObject.Find ("ViewTrigger");
@@ -94,7 +99,16 @@ public class SightListenerTemplate : MonoBehaviour {
 		}
 		if(TypeOfObj==2)
 		{
-
+			if (InAlert == true)
+			{
+				DangeGlobe.SetActive (true);
+				NormalGlobe.SetActive (false);
+			}
+			if (InAlert == false)
+			{
+				DangeGlobe.SetActive (false);
+				NormalGlobe.SetActive (true);
+			}
 			if(inCam==true && InAlert==false)
 			{
 				LureInCam = false;

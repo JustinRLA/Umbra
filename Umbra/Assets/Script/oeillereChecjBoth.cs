@@ -7,6 +7,7 @@ public class oeillereChecjBoth : MonoBehaviour {
 	public GameObject Base;
 	public bool inJudaMode;
 	public GameObject PlayeroNE;
+	public int OeillereLayer;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,7 @@ public class oeillereChecjBoth : MonoBehaviour {
 		if(inJudaMode==true)
 		{
 			if(PlayeroNE.transform.position.y<=transform.position.y)
-			Base.layer = 10;
+				Base.layer = OeillereLayer;
 			else
 				Base.layer = 1;
 		}
