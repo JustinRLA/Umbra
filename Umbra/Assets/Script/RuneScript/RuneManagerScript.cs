@@ -154,9 +154,9 @@ public class RuneManagerScript : MonoBehaviour
 		if(TacticRune==1)
 		{
 			ImageRuneSolidification.SetActive (false);
-			ImageRuneAccrochage.SetActive(false);
+			ImageRuneAccrochage.SetActive(true);
 			textSolid.SetActive(false);
-			textaccrochage.SetActive(false);
+			textaccrochage.SetActive(true);
 		}
 		if(TacticRune==2)
 		{

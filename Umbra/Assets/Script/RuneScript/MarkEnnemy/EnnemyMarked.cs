@@ -81,6 +81,8 @@ public class EnnemyMarked : MonoBehaviour {
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
+		myCam.GetComponent<ColorCorrectionCurves> ().enabled = false;
+
 		Cursor.visible = false;
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;

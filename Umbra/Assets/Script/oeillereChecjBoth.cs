@@ -23,7 +23,7 @@ public class oeillereChecjBoth : MonoBehaviour {
 		if(inJudaMode==true)
 		{
 			if(PlayeroNE.transform.position.y<=transform.position.y)
-			Base.layer = 2;
+			Base.layer = 10;
 			else
 				Base.layer = 1;
 		}
