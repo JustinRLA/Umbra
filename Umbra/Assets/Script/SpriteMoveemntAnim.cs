@@ -14,7 +14,7 @@ public class SpriteMoveemntAnim : MonoBehaviour {
 		Player = GameObject.Find("2DCharacter(Clone)");
 		ObjectivePosition=Player.GetComponent<DeathEvent> ().EnnemyPos;
 		dir =  ObjectivePosition.position-transform.position;
-			
+		
 	}
 	
 	// Update is called once per frame

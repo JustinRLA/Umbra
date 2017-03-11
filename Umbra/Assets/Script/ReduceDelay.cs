@@ -17,7 +17,7 @@ public class ReduceDelay : MonoBehaviour {
 	IEnumerator Reducing()
 	{
 		
-		Time.timeScale = 0.1f;
+		Time.timeScale = 0.4f;
 		GetComponent<SpriteRenderer> ().sortingOrder = 10;
 		yield return new WaitForSeconds (1.5f);
 		GetComponent<Animator> ().SetBool ("Play", true);

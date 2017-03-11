@@ -1222,7 +1222,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1401,6 +1401,8 @@ MonoBehaviour:
   SuspiciousLight: {fileID: 0}
   InAlert: 0
   NoDangerLight: {fileID: 0}
+  NormalGlobe: {fileID: 0}
+  DangeGlobe: {fileID: 0}
 --- !u!114 &114197516465365618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1415,6 +1417,7 @@ MonoBehaviour:
   MySight: {fileID: 1697360066680564}
   EnnemyBase: {fileID: 1592845944307584}
   mySignListener: {fileID: 1697360066680564}
+  inSigght: 0
 --- !u!114 &114258728492067222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1704,6 +1707,7 @@ MonoBehaviour:
   SolidOmbreTouch: {fileID: 0}
   PlayerIsUp: 0
   PlayerIsDown: 0
+  Safe: 0
   UpPoint: {fileID: 0}
   UpPoint_UpLevel: {fileID: 4107277862633710}
   UpPoint_RegularLevel: {fileID: 4635172830437646}
