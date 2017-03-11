@@ -68,7 +68,7 @@ public class solifyShadow : MonoBehaviour {
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		MySolid.CanClickable = false;
-
+		Time.timeScale = 1;
 		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
 
 		foreach (GameObject Ombre in AllShadow)

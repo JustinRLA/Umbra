@@ -156,6 +156,7 @@ public class LureScript : MonoBehaviour {
 		//myRuneManagerScript.RuneModeEnabled = false;
 		//ThePlayerShadow.transform.parent = null;
 		inLureMode = true;
+		Time.timeScale = 1.0f;
 
 			yield return new WaitForSeconds(7f);
 		myRuneManagerScript.RuneActivated = false;

@@ -192,7 +192,6 @@ public class RuneManagerScript : MonoBehaviour
 			myCam.GetComponent<BloomOptimized>().enabled=false;
 			//myCamFour.GetComponent<Grayscale>().enabled=false;
 			
-			Time.timeScale = 1;
 		
 			animCamOne.SetBool ("Blue",false);
 			animCamTwo.SetBool ("Blue",false);
@@ -217,6 +216,7 @@ public class RuneManagerScript : MonoBehaviour
 			animCamTwo.SetBool ("Blue",true);
 			animCamFour.SetBool ("Blue",true);
 			animCamThree.SetBool ("Blue",true);
+			Time.timeScale = 0.1f;
 
 			RuneModeEnabled = true;
 			myCam.GetComponent<BloomOptimized>().enabled=true;
@@ -225,6 +225,8 @@ public class RuneManagerScript : MonoBehaviour
 		}
 		if (Input.GetMouseButton(1) && RuneModeEnabled==true)
 		{
+			Time.timeScale = 1;
+
 			RuneModeEnabled = false;
 		myCam.GetComponent<BloomOptimized>().enabled=false;
 		myCam.GetComponent<Grayscale>().enabled=false;
@@ -247,10 +249,8 @@ public class RuneManagerScript : MonoBehaviour
 			
 			
 
-		//	Time.timeScale = 1;
 		
 
-			Time.timeScale = 0.1f;
 			if (Input.GetKeyDown (KeyCode.Alpha2)) {
 
 				if (DefFune == 1 && timerDef >= ActualDef && RuneActivated==false) {

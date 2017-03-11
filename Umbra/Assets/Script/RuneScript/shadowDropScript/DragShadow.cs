@@ -61,6 +61,7 @@ public class DragShadow : MonoBehaviour {
 	void CancelThis()
 	{
 		mainCamMy = GameObject.Find ("Main Camera");
+		Time.timeScale =1f;
 
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
