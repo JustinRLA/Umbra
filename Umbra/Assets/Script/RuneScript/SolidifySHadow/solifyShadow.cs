@@ -73,7 +73,6 @@ public class solifyShadow : MonoBehaviour {
 
 		foreach (GameObject Ombre in AllShadow)
 		{
-			Ombre.GetComponent<Collider2D> ().isTrigger = true;
 			Ombre.layer = 10;
 		}
 		mymyRuneManagerScript.RuneActivated = false;
@@ -102,7 +101,6 @@ public class solifyShadow : MonoBehaviour {
 
 		foreach (GameObject Ombre in AllShadow)
 		{
-			Ombre.GetComponent<Collider2D> ().isTrigger = true;
 			Ombre.layer = 10;
 		}
 		gameObject.layer = 24;
@@ -113,8 +111,8 @@ public class solifyShadow : MonoBehaviour {
 			PlayerMy.GetComponent<PlatformerCharacter2D> ().ReturnToNormal ();
 		GrimpSurface.SetActive (false);
 
-		GetComponent<Collider2D> ().isTrigger = true;
 		MySolid.CanClickable = false;
+		gameObject.layer = 24;
 
 		GetComponent<SpriteRenderer> ().enabled = false;
 		gameObject.tag="Ombre";

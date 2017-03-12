@@ -49,7 +49,6 @@ public class DragShadow : MonoBehaviour {
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		//gameObject.layer = 10;
-		//GetComponent<Collider2D> ().isTrigger = true;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 
 		Time.timeScale =1f;

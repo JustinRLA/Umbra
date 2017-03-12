@@ -46,6 +46,8 @@ public class LineRendererTest : MonoBehaviour {
 	}
 	public void IsActivated()
 	{
+		myRuneManagerScript = GetComponent<RuneManagerScript> ();
+
 		myRuneManagerScript.RuneActivated = true;
 		theBeams = GameObject.FindGameObjectsWithTag ("grapRegion");
 

@@ -7,7 +7,7 @@ public class CheckPointChange : MonoBehaviour {
 	public GameObject DeathManager;
 	// Use this for initialization
 	void Start () {
-		DeathManager=GameObject.Find("deathManager");
+		//DeathManager=GameObject.Find("deathManager");
 
 	}
 	

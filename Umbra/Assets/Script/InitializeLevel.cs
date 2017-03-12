@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InitializeLevel : MonoBehaviour {
-	public GameObject GameManager;
+	//public GameObject GameManager;
 	public GameObject ThePLayer;
 	public Transform[] SpawnPoint;
 	public GameObject[] EnnemyPack;
 	public GameObject Cam;
 	public GameObject PlayerLight;
-	public GameObject[] LightCam;
+	//public GameObject[] LightCam;
 
 
 	void Awake()
@@ -84,18 +84,18 @@ public class InitializeLevel : MonoBehaviour {
 					EnnemyPack [2].SetActive (true);
 				}
 
-		if (PlayerPrefs.GetInt ("SaveSystem")==0)
-		{
-			LightCam [0].SetActive (true);
-		}	
-		if (PlayerPrefs.GetInt ("SaveSystem")==1)
-		{
-			LightCam [1].SetActive (true);
-		}
-		if (PlayerPrefs.GetInt ("SaveSystem")==2)
-		{
-			LightCam [2].SetActive (true);
-		}
+//		if (PlayerPrefs.GetInt ("SaveSystem")==0)
+//		{
+//			LightCam [0].SetActive (true);
+//		}	
+//		if (PlayerPrefs.GetInt ("SaveSystem")==1)
+//		{
+//			LightCam [1].SetActive (true);
+//		}
+//		if (PlayerPrefs.GetInt ("SaveSystem")==2)
+//		{
+//			LightCam [2].SetActive (true);
+//		}
 //		if (GameManager.GetComponent<CheckPointState> ().CheckpointState == 0)
 //		{
 //			EnnemyPack [0].SetActive (true);
