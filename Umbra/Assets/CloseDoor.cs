@@ -16,8 +16,10 @@ public class CloseDoor : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D col) {
 		if (col.tag == "Player")
+        { 
 			Door.GetComponent<Animator> ().SetBool ("Play", true);
 		DoorCol.SetActive (true);
-	}
+        }
+    }
 
 }
