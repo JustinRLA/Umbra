@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 4311332557052648}
   - component: {fileID: 61568983930460288}
   - component: {fileID: 114634709954159576}
+  - component: {fileID: 50907150351477166}
   m_Layer: 11
   m_Name: InstantTriggerNoMatterWhat
   m_TagString: Untagged
@@ -395,6 +396,7 @@ GameObject:
   - component: {fileID: 4742107460125912}
   - component: {fileID: 61584844564067502}
   - component: {fileID: 114197516465365618}
+  - component: {fileID: 50010517891761008}
   m_Layer: 11
   m_Name: InstantTriggerWhenSaw
   m_TagString: Untagged
@@ -974,7 +976,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992978309662438}
   m_LocalRotation: {x: -0, y: -0, z: -0.000008726646, w: 1}
-  m_LocalPosition: {x: 202.25626, y: 27.601603, z: -18.66922}
+  m_LocalPosition: {x: 93.49361, y: 13.710587, z: -18.66922}
   m_LocalScale: {x: 0.9999984, y: 0.99999964, z: 1}
   m_Children:
   - {fileID: 4722869514601766}
@@ -1211,6 +1213,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860097884436308}
   m_Mesh: {fileID: 0}
+--- !u!50 &50010517891761008
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1818630997513898}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &50385471667233136
 Rigidbody2D:
   serializedVersion: 4
@@ -1231,6 +1253,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!50 &50907150351477166
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050017404286464}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61154744590415742
 BoxCollider2D:
   m_ObjectHideFlags: 1

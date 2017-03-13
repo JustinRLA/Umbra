@@ -385,7 +385,6 @@ using UnityEngine.SceneManagement;
 
 		void OnTriggerEnter2D(Collider2D col)
 		{
-		print (col.name);
 		if (col.tag == "Ladder")
 		{
 			ClimbTrue = true;

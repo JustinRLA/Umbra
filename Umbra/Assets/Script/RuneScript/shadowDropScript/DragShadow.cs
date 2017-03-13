@@ -53,6 +53,7 @@ public class DragShadow : MonoBehaviour {
 
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
+		GetComponent<DragShadow>().enabled=false;
 		GetComponent<SpriteRenderer> ().enabled = false;
 
 		gameObject.name=("OldCube");

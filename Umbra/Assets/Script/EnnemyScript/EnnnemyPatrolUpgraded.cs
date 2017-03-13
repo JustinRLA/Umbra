@@ -584,7 +584,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 		if(EnnemyLevel==1 || EnnemyLevel ==3)
 			backHome=true;
-		print ("that suspiciopus");
+//		print ("that suspiciopus");
 			Suspicious = false;
 		if (trapped == false)
 			speed = OriginalSpeed;
@@ -815,6 +815,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			}
 			if ((SoundListerner - DistranctionsSoud) / SoundLevel > 8) {
 				timerState = 24;
+				print ("tryeeee");
 			} 
 		}
 
@@ -832,6 +833,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 			if ( mySighListernetTemplate.throwAlert == true) {
 				timerState = 24;
+			print ("tryeeee");
+
 			} 
 
 		
