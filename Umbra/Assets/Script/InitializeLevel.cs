@@ -10,6 +10,9 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject Cam;
 	public GameObject PlayerLight;
 	//public GameObject[] LightCam;
+	public GameObject[] DOors;
+	public GameObject[] ColDOors;
+
 
 
 	void Awake()
@@ -83,6 +86,27 @@ public class InitializeLevel : MonoBehaviour {
 				{
 					EnnemyPack [2].SetActive (true);
 				}
+
+		if (PlayerPrefs.GetInt ("SaveSystem")==1)
+		{
+			DOors [0].GetComponent<Animator> ().SetBool ("Play", true);
+			ColDOors [0].SetActive (true);
+
+		}	
+
+		if (PlayerPrefs.GetInt ("SaveSystem")==2)
+		{
+			DOors [1].GetComponent<Animator> ().SetBool ("Play", true);
+			ColDOors [1].SetActive (true);
+
+		}
+
+		if (PlayerPrefs.GetInt ("SaveSystem")==3)
+		{
+			DOors [2].GetComponent<Animator> ().SetBool ("Play", true);
+			ColDOors [2].SetActive (true);
+
+		}
 
 //		if (PlayerPrefs.GetInt ("SaveSystem")==0)
 //		{
