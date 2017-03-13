@@ -157,7 +157,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 		if (go.tag == "Player")
 		{
-//			print ("One");
+		print ("One");
 			IsawTheLure=false;
 			iSeeYou = true;
 			//if(transform.parent.GetComponent<EnnnemyPatrol>().Alert==false)
