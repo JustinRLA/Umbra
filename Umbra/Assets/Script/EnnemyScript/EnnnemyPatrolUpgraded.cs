@@ -7,7 +7,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public float timerState;
 	public bool trapped =false;
 	RaycastHit2D MortalRay;
-	public Transform RayStartPoint;
 	//PatrolPart
 	public bool isdead=false;
 	public Transform rayPointOf;
@@ -23,7 +22,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public GameObject FliPBase;
 	public GameObject StateObj;
 	public Transform PointToLookWIthOneNavPoint;
-	public GameObject SolidOmbreTouch;
 	public bool PlayerIsUp;
 	public bool PlayerIsDown;
 	Vector3 movPos;
@@ -51,9 +49,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public int waitingTimeNavTwo;
 	public int waitingTimeNavThree;
 
-	public GameObject Proj;
-	public Transform ProjStartPos;
-	public GameObject ProjStartObj;
 
 	public Transform TeleportPointLeftTransform_Actual;
 	public Transform TeleportPointRightTransform_Actual;
@@ -102,7 +97,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public Transform DownSpawnPoint;
 
 	public int FlipScale;
-	public bool isFLippe=false;
 
 	public int NavPointIGot;
 
@@ -158,7 +152,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	LureScript myLureScript;
 
 	public bool LureAttention;
-	Vector3 ProjDir;
 	float angle;
 
 //	// Use this for initialization
@@ -229,7 +222,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	}
 
 	void Start () {
-//		RayStartPoint.position = transform.position;
 		timerBetweenPatrolOriginal = timerBetweenPatrol;
 		UpPoint = UpPoint_RegularLevel;
 			DownPoint=DownPoint_RegularLevel;
@@ -510,12 +502,12 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 						CurrentNavPoint = TeleportPointRightTransform_Actual;
 
 
-					if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+					if (CurrentNavPoint.position.x-transform.position.x <0)
 					{
 						lookRight=false;
 						flip ();
 					}
-					if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+					if (CurrentNavPoint.position.x-transform.position.x >0 )
 					{
 						lookRight=true;
 						flip ();
@@ -625,12 +617,12 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			}
 
 
-			if (CurrentNavPoint.position.x-transform.position.x <0 && isFLippe==false)
+			if (CurrentNavPoint.position.x-transform.position.x <0)
 			{
 				lookRight=false;
 				flip ();
 			}
-			if (CurrentNavPoint.position.x-transform.position.x >0 && isFLippe==true)
+			if (CurrentNavPoint.position.x-transform.position.x >0)
 			{
 				lookRight=true;
 				flip ();
@@ -867,7 +859,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		{
 		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<15)
 		{
-				Instantiate (Proj, ProjStartPos.position, ProjStartPos.rotation);
 				attackdelay = 2;
 				print ("Attack");
 			}	
@@ -1091,7 +1082,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //
 //			FlipScale = FlipScale * -1;
 //		transform.localScale = new Vector3 (FlipScale, 1, 1);
-		isFLippe =! isFLippe;
 
 	}
 
