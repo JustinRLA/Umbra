@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnnnemyPatrolUpgraded : MonoBehaviour {
-	public float timerBetweenPatrolOriginal;
+	float timerBetweenPatrolOriginal;
 	public float timerBetweenPatrol;
 	public float timerState;
 	public bool trapped =false;
@@ -18,9 +18,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public GameObject CurrentNavPointGo;
 	public Transform LurePlayer;
 	public GameObject SawLureFeedback;
-	public Transform returnPoint;
 	public GameObject FliPBase;
-	public GameObject StateObj;
 	public Transform PointToLookWIthOneNavPoint;
 	public bool PlayerIsUp;
 	public bool PlayerIsDown;
@@ -45,9 +43,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public bool backHome;
 
 	public bool navRight;
-	public int waitingTimeNavOne;
-	public int waitingTimeNavTwo;
-	public int waitingTimeNavThree;
 
 
 	public Transform TeleportPointLeftTransform_Actual;
@@ -85,8 +80,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 
 
-	public bool alertcondition=false;
-	public bool suspiciousCondition=false;
 
 	public GameObject PhantomPlayer;
 	public Transform PhamomPoint;
@@ -96,12 +89,11 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public Transform UpSpawmnPoint;
 	public Transform DownSpawnPoint;
 
-	public int FlipScale;
 
 	public int NavPointIGot;
 
 	public float speed;
-	public float OriginalSpeed;
+	float OriginalSpeed;
 
 	Vector2 target;
 	Vector3 NewPos;
@@ -117,7 +109,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public int DistranctionsSoud;
 	int SoundListerner=50;
 	public bool somethingHappen;
-	public bool isAClone;
 	float direction;
 	bool InRange=false;
 
@@ -131,7 +122,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	public	float SoundLevel;
 
-	public int attackdelay=1;
 	public Transform RightLimit;
 	public Transform LeftLimit;
 	Vector3 myPos;
@@ -152,7 +142,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	LureScript myLureScript;
 
 	public bool LureAttention;
-	float angle;
 
 //	// Use this for initialization
 	public void setLevel()
@@ -247,7 +236,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		//fsm=StateMachine<States>.Initialize.this;
 		mySighListernetTemplate = mySighListerner.GetComponent<SightListenerTemplate> ();
 		//StartCoroutine (MyAttack());
-		//InvokeRepeating ("throwdagger", 1f, attackdelay);
 		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
 	
 		CurrentNavPoint = NavPointOne_Right;
@@ -760,14 +748,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		if (somethingHappen == false && timerState>-2)
 			timerState -= Time.deltaTime;
 		
-		if (Alert == true)
-			StateObj.GetComponent<SpriteRenderer> ().color = new Color (0, 1, 1, 1);
-		
-		if (Suspicious == true)
-			StateObj.GetComponent<SpriteRenderer> ().color = new Color (1, 0, 1, 1);
-		
-		if (Alert == false && Suspicious==false)
-			StateObj.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1);
 	
 	
 		//the actual way to make ennemy move toward a specific Point
@@ -802,8 +782,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 				{
 				timerState = 15;
 			}	
-			else
-				suspiciousCondition=false;
 			}
 			if ((SoundListerner - DistranctionsSoud) / SoundLevel > 8) {
 				timerState = 24;
@@ -815,13 +793,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			{
 				if (mySighListernetTemplate.throwSuspicious==true)
 				{
-				//	suspiciousCondition=true;
 				//StartCoroutine (SuspicousMode ());
 				timerState = 15;
 				}
 			}	
-			else
-				suspiciousCondition=false;
 
 			if ( mySighListernetTemplate.throwAlert == true) {
 				timerState = 24;
@@ -859,10 +834,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		{
 		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<15)
 		{
-				attackdelay = 2;
 				print ("Attack");
 			}	
-			yield return new WaitForSeconds (attackdelay);
 
 		}	
 	}	
@@ -1080,8 +1053,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 
 //
-//			FlipScale = FlipScale * -1;
-//		transform.localScale = new Vector3 (FlipScale, 1, 1);
 
 	}
 

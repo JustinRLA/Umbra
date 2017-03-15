@@ -107,8 +107,6 @@ public class solifyShadow : MonoBehaviour {
 		mymyRuneManagerScript.RuneActivated = false;
 
 		yield return new WaitForSeconds(10f);
-		if (GrimpSurface.GetComponent<ReturnTONormal> ().isIn == true)
-			PlayerMy.GetComponent<PlatformerCharacter2D> ().ReturnToNormal ();
 		GrimpSurface.SetActive (false);
 
 		MySolid.CanClickable = false;

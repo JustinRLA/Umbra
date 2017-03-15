@@ -40,6 +40,8 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		myRuneManagerScript = GetComponent<RuneManagerScript> ();
+
 		myRuneManagerScript.RuneActivated = true;
 		ThePlayer = GameObject.Find ("2DCharacter(Clone)");
 		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = true;
