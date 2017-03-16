@@ -740,6 +740,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	void Update () 
 	{
+		if (LurePlayer.gameObject.activeInHierarchy ==false)
+			LureAttention = false;
+
 		PlayerPos = new Vector3 (ThePlayer.position.x, ThePlayer.position.y, 0);
 		myPos = new Vector3 (rayPointOf.position.x, rayPointOf.position.y, 0);
 		MortalRay = Physics2D.Linecast (myPos, PlayerPos);
@@ -901,25 +904,31 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			somethingHappen = false;
 		else
 			somethingHappen = true;
-		
+
+		if(LureAttention==false)
+		{
 		if(timerState>15)
 		{
 		AlertInMode();
 		CurrentNavPointGo = null;
-		
 		}
-
 		if(timerState>0 && timerState<=15 && mySighListernetTemplate.IsawTheLure==false)
 		{
 		InSuspiciousMode();
 			}
-		if (mySighListernetTemplate.IsawTheLure == true)
+			if(timerState>-1 &&  timerState<0)
+			{
+				NeutralMode ();
+			}
+
+		}
+
+		if(LureAttention==true)
 			LurAttention ();
-	//}
-		if(timerState>-1 &&  timerState<0)
-		{
-			NeutralMode ();
-	}
+		
+
+		if (mySighListernetTemplate.IsawTheLure == true)
+			LureAttention = true;
 	}
 
 	IEnumerator MyAttack()
@@ -963,9 +972,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 		if (col.tag == "falseSoundTrigger")
 		{
-			mySighListernetTemplate.IsawTheLure = true;
-			print ("ISAWLURRRE");
-			Suspicious = true;
+			LureAttention = true;
 		}
 //		if (col.gameObject == CurrentNavPointGo && CurrentNavPointGo==NavPoitnThreeGo)
 //		{

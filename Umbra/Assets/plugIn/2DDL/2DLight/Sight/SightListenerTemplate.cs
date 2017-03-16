@@ -257,19 +257,40 @@ public class SightListenerTemplate : MonoBehaviour {
 		if(inCam==true)
 		{
 		if (EnnemyOne != null)
-			EnnemyOne.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
-		
-		if (EnnemyFive != null)
-			EnnemyFive.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
-		
-		if (EnnemyFour != null)
-			EnnemyFour.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
-		
-		if (EnnemyThree != null)
-			EnnemyThree.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
-		
-		if (EnnemyTwo != null)
-			EnnemyTwo.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
+			{
+				if(EnnemyOne.GetComponent<EnnnemyPatrolUpgraded> ()==true)
+			EnnemyOne.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 24;
+
+			}
+
+			if (EnnemyThree != null)
+			{
+				if(EnnemyThree.GetComponent<EnnnemyPatrolUpgraded> ()==true)
+					EnnemyThree.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 24;
+
+			}	
+			if (EnnemyTwo != null)
+			{
+				if(EnnemyTwo.GetComponent<EnnnemyPatrolUpgraded> ()==true)
+					EnnemyTwo.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 24;
+
+			}	
+			if (EnnemyFour != null)
+			{
+				if(EnnemyFour.GetComponent<EnnnemyPatrolUpgraded> ()==true)
+					EnnemyFour.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 24;
+
+			}		
+			if (EnnemyFive != null)
+			{
+				if(EnnemyFive.GetComponent<EnnnemyPatrolUpgraded> ()==true)
+					EnnemyFive.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 24;
+
+			}
+
+
+
+
 			InAlert = true;
 			inCam = false;
 

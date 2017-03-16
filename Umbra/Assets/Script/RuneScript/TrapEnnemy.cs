@@ -20,8 +20,9 @@ public class TrapEnnemy : MonoBehaviour {
 		if (col.tag == "ennemy")
 		{
 			col.GetComponent<EnnnemyPatrolUpgraded> ().StartCorTrap ();
-			PastParticle.SetActive (true);
+			PastParticle.SetActive (false);
 			GetComponent<Collider2D> ().enabled = false;
+			StartCoroutine (Countown ());
 		}
 
 	}
@@ -30,7 +31,7 @@ public class TrapEnnemy : MonoBehaviour {
 		
 		ObjectArray.SetActive (true);
 		ParticleExplosion.SetActive (true);
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (2f);
 		ObjectArray.SetActive (false);
 		Destroy (gameObject);
 
