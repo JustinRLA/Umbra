@@ -27,8 +27,6 @@ public class LineRendererTest : MonoBehaviour {
 	RuneManagerScript myRuneManagerScript;
 	public GameObject[] theBeams;
 	Material TestMat;
-	Color ColorBadStart= Color.red;
-	Color ColorBadEnd= Color.red;
 	public bool TouchGood=false;
 	public bool ActivateThisShit=true;
 	public	bool touchedBadThing=false;
@@ -79,7 +77,6 @@ public class LineRendererTest : MonoBehaviour {
 		mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		mousePos.z = 0;
 		line.SetPosition(0,PlayerMy.position);
-		startPos = PlayerMy.position;
 		}
 			if(Input.GetMouseButtonDown(1))
 			{
@@ -108,7 +105,6 @@ public class LineRendererTest : MonoBehaviour {
 					mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 					mousePos.z = 0;
 					line.SetPosition(1,mousePos);
-					endPos = mousePos;
 					//addColliderToLine();
 				Destroy (line);
 
