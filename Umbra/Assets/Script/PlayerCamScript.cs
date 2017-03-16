@@ -10,25 +10,31 @@ public class PlayerCamScript : MonoBehaviour {
 	Vector3 movPos;
 	public float PanUp;
 	public float timerLeurre;
+	PlatformerCharacter2D myPlatformCharacter;
+
 
 	public float speed;
 
 	// Use this for initialization
 	void Start () {
 		PlayerMy = GameObject.Find ("2DCharacter(Clone)");
+		myPlatformCharacter = PlayerMy.GetComponent<PlatformerCharacter2D> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.S) && PanUp > -2)
-			PanUp -= Time.deltaTime * 8;
-		if (Input.GetKey (KeyCode.W) && PanUp <2)
-			PanUp += Time.deltaTime * 8;
+		if (Input.GetKey (KeyCode.S) && PanUp > -2 && myPlatformCharacter.m_Grounded==true)
+			PanUp -= Time.smoothDeltaTime * 6;
+		if (Input.GetKey (KeyCode.W) && PanUp <2 && myPlatformCharacter.m_Grounded==true)
+			PanUp += Time.smoothDeltaTime * 6;
 		if (Input.GetKey (KeyCode.W)==false && Input.GetKey (KeyCode.S)==false && PanUp>0)
-			PanUp -= Time.deltaTime * 8;
+			PanUp -= Time.smoothDeltaTime * 6;
 		if (Input.GetKey (KeyCode.W)==false && Input.GetKey (KeyCode.S)==false && PanUp<0)
-			PanUp += Time.deltaTime * 8;
-		
+			PanUp += Time.smoothDeltaTime * 6;
+		if (myPlatformCharacter.m_Grounded==false && PanUp>0)
+			PanUp -= Time.smoothDeltaTime * 6;
+		if ( myPlatformCharacter.m_Grounded==false && PanUp<0)
+			PanUp += Time.smoothDeltaTime * 6;
 			
 
 		if(activateLeurreCam==false && timerLeurre>0)

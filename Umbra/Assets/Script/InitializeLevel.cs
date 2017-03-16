@@ -17,6 +17,7 @@ public class InitializeLevel : MonoBehaviour {
 
 	void Awake()
 	{
+		Time.timeScale = 1;
 		ThePLayer = (GameObject)Resources.Load ("2DCharacter",typeof (GameObject));
 
 	if (PlayerPrefs.GetInt ("SaveSystem")==0)
