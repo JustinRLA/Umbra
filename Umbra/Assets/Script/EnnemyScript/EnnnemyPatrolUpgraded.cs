@@ -144,6 +144,183 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public bool LureAttention;
 
 //	// Use this for initialization
+	void Awake()
+	{
+		MyPlayer = GameObject.Find("2DCharacter(Clone)");
+
+	}
+
+	void Start () {
+		timerBetweenPatrolOriginal = timerBetweenPatrol;
+		UpPoint = UpPoint_RegularLevel;
+		DownPoint=DownPoint_RegularLevel;
+
+		EnnemyLevel = 2;
+		RightLimit = RightLimit_RegularLevel;
+		LeftLimit = LeftLimit_RegularLevel;
+
+
+		TeleportPointLeft_Actual= TeleportPointLeft_RegularLevel;
+		TeleportPointLeftTransform_Actual=TeleportPointLeftTransform_RegularLevel;
+
+		TeleportPointRight_Actual= TeleportPointRight_RegularLevel;
+		TeleportPointRightTransform_Actual=TeleportPointRightTransform_RegularLevel;
+
+		MyPlayer = GameObject.Find("2DCharacter(Clone)");
+		ThePlayer = MyPlayer.transform;
+		RuneManager = GameObject.Find ("RuneManager");
+
+		myLureScript = RuneManager.GetComponent<LureScript> ();
+		gameObject.tag="ennemy";
+
+		//fsm=StateMachine<States>.Initialize.this;
+		mySighListernetTemplate = mySighListerner.GetComponent<SightListenerTemplate> ();
+		//StartCoroutine (MyAttack());
+		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
+
+		CurrentNavPoint = NavPointOne_Right;
+
+		CurrentNavPointGo = CurrentNavPoint.gameObject;
+
+		OriginalSpeed = speed;
+		NavPoitnOneGo = NavPointOne_Right.gameObject;
+
+		if(NavPointTwo_Left!=null)
+			NavPoitnTwoGo = NavPointTwo_Left.gameObject;
+
+		if(NavPointThree_EvenMoreLeft!=null)
+			NavPoitnThreeGo = NavPointThree_EvenMoreLeft.gameObject;
+		//InvokeRepeating ("flipAlert",5f,1f);
+	}
+
+	public void LurAttention()
+	{
+		print ("LureAttention");
+			timerState = myLureScript.timer;
+			LureAttention = true;
+			SawLureFeedback.SetActive (true);
+			if(LurePlayer.position.y<UpPoint.position.y && LurePlayer.position.y>DownPoint.position.y)
+			{
+				PlayerIsUp = false;
+				PlayerIsDown = false;
+				if(LurePlayer.position.x >= LeftLimit.position.x|| LurePlayer.position.x <= RightLimit.position.x)
+					CurrentNavPoint = LurePlayer;
+
+				if (LurePlayer.position.x < LeftLimit.position.x)
+					CurrentNavPoint = LeftLimit;
+
+				if (LurePlayer.position.x > RightLimit.position.x)
+					CurrentNavPoint = RightLimit;
+
+				if (CurrentNavPoint.position.x-transform.position.x <0)
+				{
+					lookRight=false;
+					flip ();
+				}
+				if (CurrentNavPoint.position.x-transform.position.x >0)
+				{
+					lookRight=true;
+					flip ();
+				}
+
+
+				//					TeleportPointLeftCol_RegularLevel.enabled = false;
+				//					TeleportPointRightCol_RegularLevel.enabled = false;
+				//
+				//					TeleportPointLeftCol_DownLevel.enabled = false;
+				//					TeleportPointRightCol_DownLevel.enabled = false;
+
+
+				if (trapped == false) {
+					if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
+						speed = 0;
+					if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
+						speed = OriginalSpeed;
+				}
+				else
+					speed = 0;
+			}
+
+
+			if(LurePlayer.position.y > UpPoint.position.y)
+			{
+				PlayerIsUp = true;
+				if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
+					CurrentNavPoint = TeleportPointLeftTransform_Actual;
+				else
+					CurrentNavPoint = TeleportPointRightTransform_Actual;
+
+
+				if (CurrentNavPoint.position.x-transform.position.x <0)
+				{
+					lookRight=false;
+					flip ();
+				}
+				if (CurrentNavPoint.position.x-transform.position.x >0 )
+				{
+					lookRight=true;
+					flip ();
+				}
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==1)
+					goNormalFlood();
+
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==2)
+					goUpFloor();
+
+				if (trapped == false) {
+					if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
+						speed = 0;
+					if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
+						speed = OriginalSpeed;
+				}
+				else
+					speed = 0;
+
+			}
+
+			if(LurePlayer.position.y<DownPoint.position.y)
+			{
+				PlayerIsDown = true;
+				if(Vector3.Distance(TeleportPointLeftTransform_Actual.position,transform.position)<Vector3.Distance(TeleportPointRightTransform_Actual.position,transform.position))
+					CurrentNavPoint = TeleportPointLeftTransform_Actual;
+				else
+					CurrentNavPoint=TeleportPointRightTransform_Actual;
+
+
+				if (CurrentNavPoint.position.x-transform.position.x <0)
+				{
+					lookRight=false;
+					flip ();
+				}
+				if (CurrentNavPoint.position.x-transform.position.x >0)
+				{
+					lookRight=true;
+					flip ();
+				}
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==3)
+					goNormalFlood();
+
+				if(Vector3.Distance (CurrentNavPoint.position, transform.position) < 5 && EnnemyLevel==2)
+					goDownFloor();
+
+
+
+
+		
+
+			if (trapped == false) {
+				if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
+					speed = 0;
+				if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
+					speed = OriginalSpeed;
+			}
+			else
+				speed = 0;
+		}
+
+
+	}
+
 	public void setLevel()
 	{
 	}
@@ -203,54 +380,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		gameObject.tag="ennemy";
 		GetComponent<Rigidbody2D> ().isKinematic = false;
 		GetComponent<BoxCollider2D> ().isTrigger = false;
-	}
-	void Awake()
-	{
-		MyPlayer = GameObject.Find("2DCharacter(Clone)");
-
-	}
-
-	void Start () {
-		timerBetweenPatrolOriginal = timerBetweenPatrol;
-		UpPoint = UpPoint_RegularLevel;
-			DownPoint=DownPoint_RegularLevel;
-		
-		EnnemyLevel = 2;
-		RightLimit = RightLimit_RegularLevel;
-		LeftLimit = LeftLimit_RegularLevel;
-
-
-		TeleportPointLeft_Actual= TeleportPointLeft_RegularLevel;
-		TeleportPointLeftTransform_Actual=TeleportPointLeftTransform_RegularLevel;
-
-		TeleportPointRight_Actual= TeleportPointRight_RegularLevel;
-		TeleportPointRightTransform_Actual=TeleportPointRightTransform_RegularLevel;
-
-		MyPlayer = GameObject.Find("2DCharacter(Clone)");
-		ThePlayer = MyPlayer.transform;
-		RuneManager = GameObject.Find ("RuneManager");
-
-		myLureScript = RuneManager.GetComponent<LureScript> ();
-		gameObject.tag="ennemy";
-
-		//fsm=StateMachine<States>.Initialize.this;
-		mySighListernetTemplate = mySighListerner.GetComponent<SightListenerTemplate> ();
-		//StartCoroutine (MyAttack());
-		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
-	
-		CurrentNavPoint = NavPointOne_Right;
-
-		CurrentNavPointGo = CurrentNavPoint.gameObject;
-
-		OriginalSpeed = speed;
-		NavPoitnOneGo = NavPointOne_Right.gameObject;
-
-		if(NavPointTwo_Left!=null)
-		NavPoitnTwoGo = NavPointTwo_Left.gameObject;
-
-		if(NavPointThree_EvenMoreLeft!=null)
-			NavPoitnThreeGo = NavPointThree_EvenMoreLeft.gameObject;
-		//InvokeRepeating ("flipAlert",5f,1f);
 	}
 //	
 //	// Update is called once per frame
@@ -397,44 +526,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		Suspicious = true;
 		backHome = false;
 
-		if(mySighListernetTemplate.IsawTheLure==true)
-		{
-			timerState = myLureScript.timer;
-			LureAttention = true;
-			SawLureFeedback.SetActive (true);
-			if(LurePlayer.position.x >= LeftLimit.position.x|| LurePlayer.position.x <= RightLimit.position.x)
-				CurrentNavPoint = LurePlayer;
 
-			if (LurePlayer.position.x < LeftLimit.position.x)
-				CurrentNavPoint = LeftLimit;
-
-			if (LurePlayer.position.x > RightLimit.position.x)
-				CurrentNavPoint = RightLimit;
-			
-			if (CurrentNavPoint.position.x-transform.position.x <0)
-			{
-				lookRight=false;
-				flip ();
-			}
-			if (CurrentNavPoint.position.x-transform.position.x >0)
-			{
-				lookRight=true;
-				flip ();
-			}
-
-
-			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
-					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
-					speed = OriginalSpeed;
-			}
-			else
-				speed = 0;
-			
-		}
-		else
-		{
 			SawLureFeedback.SetActive (false);
 			LureAttention = false;
 			backHome = false;
@@ -555,7 +647,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 					speed = 0;
 
 			}
-		}
+
 
 	
 	}
@@ -817,10 +909,12 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		
 		}
 
-		if(timerState>0 && timerState<=15 || mySighListernetTemplate.IsawTheLure==true)
+		if(timerState>0 && timerState<=15 && mySighListernetTemplate.IsawTheLure==false)
 		{
 		InSuspiciousMode();
 			}
+		if (mySighListernetTemplate.IsawTheLure == true)
+			LurAttention ();
 	//}
 		if(timerState>-1 &&  timerState<0)
 		{

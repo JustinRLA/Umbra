@@ -19,7 +19,6 @@ public class SightListenerTemplate : MonoBehaviour {
 	public GameObject RuneManager;
 	LureScript myLureScript;
 	public bool IsawTheLure=false;
-	public GameObject LurePlayer;
 	public int TypeOfObj;
 	// 1= Ennemy....2= Camera....3= Light
 	public GameObject PlayerView;
@@ -48,6 +47,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	public void Start()
 	{
+		RuneManager = GameObject.Find ("RuneManager");
 		PlayerView = GameObject.Find ("ViewTrigger");
 			//LurePlayer=GameObject.Find("2DCharacterShadow");
 //		RuneManager = GameObject.Find ("RuneManager");
