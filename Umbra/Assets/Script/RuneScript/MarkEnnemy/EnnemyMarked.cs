@@ -17,10 +17,8 @@ public class EnnemyMarked : MonoBehaviour {
 	public bool isMarked;
 	public GameObject PlayerMy;
 	public float PlayerSpeed;
-	public GameObject SecondSight;
 	// Use this for initialization
 	void Start () {
-		
 		PlayerMy = GameObject.Find("2DCharacter(Clone)");
 		RuneManager = GameObject.Find ("RuneManager");
 		myMarkEnmnemyRune = RuneManager.GetComponent<MarkEnnemy> ();
@@ -98,7 +96,6 @@ public class EnnemyMarked : MonoBehaviour {
 	IEnumerator MarkEvent()
 	{
 		{
-			SecondSight.layer = 13;
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 

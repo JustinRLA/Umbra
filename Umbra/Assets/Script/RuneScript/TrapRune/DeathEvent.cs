@@ -11,6 +11,8 @@ public class DeathEvent : MonoBehaviour {
 	public Transform LeftTransform;
 	public Transform Center;
 	Vector3 dir;
+	float timerEvent;
+	float xNumber;
 	public Transform EnnemyPos;
 	public GameObject Ennemy;
 
@@ -58,5 +60,6 @@ public class DeathEvent : MonoBehaviour {
 
 
 		EventTriggered=true;
+		timerEvent = 5;
 }
 }

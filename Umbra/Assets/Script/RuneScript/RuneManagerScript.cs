@@ -5,6 +5,7 @@ using UnityEngine;
 public class RuneManagerScript : MonoBehaviour 
 {
 	ShadowInstantiate myShadowInstantiate;
+	BlindEnnemyRune myBlindEnnemyRune;
 	MarkEnnemy myMarkEnnemy;
 	SolidifcationEnabled mySolidicationEnabled;
 	LineRendererTest myLineRenderer;
@@ -40,6 +41,7 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject ImageRuneMarquage;
 	public GameObject ImageRuneLeurre;
 	PlatformerCharacter2D myPlatchar;
+	Platformer2DUserControl myPlatUserControl;
 
 
 
@@ -54,6 +56,7 @@ public class RuneManagerScript : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		ThePlayer=GameObject.Find("2DCharacter(Clone)");
+		myPlatUserControl = ThePlayer.GetComponent<Platformer2DUserControl>();
 		myPlatformCharacter= ThePlayer.GetComponent<PlatformerCharacter2D>();
 		textaccrochage=GameObject.Find ("accorchageText");
 		textOmbre=GameObject.Find ("ombreText");
@@ -87,6 +90,7 @@ public class RuneManagerScript : MonoBehaviour
 		myMarkEnnemy = GetComponent<MarkEnnemy> ();
 		myShadowInstantiate = GetComponent<ShadowInstantiate> ();
 		Cursor.visible = false;
+		myBlindEnnemyRune = GetComponent<BlindEnnemyRune> ();
 		myLureScript=GetComponent<LureScript>();
 		myPlatformCharacter = ThePlayer.GetComponent<PlatformerCharacter2D> ();
 		myenabledTrapMode = GetComponent<EnableTrapMode> ();

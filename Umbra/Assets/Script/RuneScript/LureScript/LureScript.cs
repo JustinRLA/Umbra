@@ -119,8 +119,6 @@ public class LureScript : MonoBehaviour {
 
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
-		ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed=0;
-
 		ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = false;
 		ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = false;
 
@@ -193,8 +191,6 @@ public class LureScript : MonoBehaviour {
 
 			Time.timeScale = 1.0f;
 		timer = 10;
-		ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed=0;
-
 		ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = false;
 		ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = false;
 		yield return new WaitForSeconds (1f);
