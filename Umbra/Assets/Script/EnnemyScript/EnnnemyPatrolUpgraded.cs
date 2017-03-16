@@ -232,9 +232,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 
 				if (trapped == false) {
-					if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
+					if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
 						speed = 0;
-					if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
+					if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
 						speed = OriginalSpeed;
 				}
 				else
@@ -309,9 +309,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		
 
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
 					speed = 0;
-				if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
+				if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
 					speed = OriginalSpeed;
 			}
 			else

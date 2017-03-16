@@ -8,17 +8,22 @@ public class StartBtnSetter : MonoBehaviour {
 	public GameObject CommencerNewGame;
 	public GameObject CommencerStartedGame;
 
+
 	// Use this for initialization
 	void Start () {
 		if (PlayerPrefs.GetInt ("SaveSystem") == 0)
 		{
 			ContinueBtn.SetActive (false);
 			CommencerNewGame.SetActive (true);
+			CommencerStartedGame.SetActive (false);
+
 		}
 		else
 		{
 			ContinueBtn.SetActive (true);
 			CommencerNewGame.SetActive (false);
+			CommencerStartedGame.SetActive (true);
+
 		}
 			
 	}

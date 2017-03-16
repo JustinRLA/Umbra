@@ -227,6 +227,8 @@ using UnityEngine.SceneManagement;
 
         public void Move(float move, bool crouch, bool jump)
         {
+
+		Debug.Log ("PATPAPTAPTPATPAPTPATPATPAP");
 		if (move == 0)
 		{
 			canRune = true;
