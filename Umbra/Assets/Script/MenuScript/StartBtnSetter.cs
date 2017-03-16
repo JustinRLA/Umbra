@@ -14,11 +14,14 @@ public class StartBtnSetter : MonoBehaviour {
 		{
 			ContinueBtn.SetActive (false);
 			CommencerNewGame.SetActive (true);
+			CommencerStartedGame.SetActive (false);
+
 		}
 		else
 		{
 			ContinueBtn.SetActive (true);
 			CommencerNewGame.SetActive (false);
+			CommencerStartedGame.SetActive (true);
 		}
 			
 	}
