@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class RuneManagerScript : MonoBehaviour 
 {
@@ -63,7 +65,7 @@ public class RuneManagerScript : MonoBehaviour
 		textSolid=GameObject.Find ("solidText");
 		texttrappe=GameObject.Find ("trapText");
 		textMark=GameObject.Find ("markText");
-		textleure=GameObject.Find ("leurreText");
+	textleure=GameObject.Find ("leurreText");
 
 		ImageRuneLeurre = GameObject.Find ("LeureImage");
 		ImageRuneAccrochage = GameObject.Find ("AccrochageImage");
@@ -182,7 +184,13 @@ public class RuneManagerScript : MonoBehaviour
 
 		if ( RuneModeEnabled == false)
 		{
-			
+		texttrappe.GetComponent<Text> ().enabled = false;
+			textaccrochage.GetComponent<Text> ().enabled = false;
+			textleure.GetComponent<Text> ().enabled = false;
+			textSolid.GetComponent<Text> ().enabled = false;
+			textMark.GetComponent<Text> ().enabled = false;
+			textOmbre.GetComponent<Text> ().enabled = false;
+
 			animCamOne.speed = 2;
 			animCamTwo.speed = 2;
 			animCamThree.speed = 2;
@@ -246,7 +254,13 @@ public class RuneManagerScript : MonoBehaviour
 			animCamTwo.speed = 13;
 			animCamThree.speed = 13;
 			animCamFour.speed = 13;
-			
+			texttrappe.GetComponent<Text> ().enabled = true;
+			textaccrochage.GetComponent<Text> ().enabled = true;
+			textleure.GetComponent<Text> ().enabled = true;
+			textSolid.GetComponent<Text> ().enabled = true;
+			textMark.GetComponent<Text> ().enabled = true;
+			textOmbre.GetComponent<Text> ().enabled = true;
+
 			
 
 		
