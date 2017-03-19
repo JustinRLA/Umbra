@@ -14,7 +14,6 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject[] ColDOors;
 
 
-
 	void Awake()
 	{
 		Time.timeScale = 1;

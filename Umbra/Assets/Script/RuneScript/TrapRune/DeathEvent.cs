@@ -11,6 +11,7 @@ public class DeathEvent : MonoBehaviour {
 	public Transform LeftTransform;
 	public Transform Center;
 	Vector3 dir;
+	public int tempoKill;
 	float timerEvent;
 	float xNumber;
 	public Transform EnnemyPos;
@@ -44,6 +45,7 @@ public class DeathEvent : MonoBehaviour {
 
 	public void chooseSprite()
 	{
+		tempoKill++;
 		number=Random.Range(0,4);
 		ActualCadre = PossibleSprite [number];
 		Ennemy = AssassinTrigger.GetComponent<checkIfAssassination> ().ActualEnnemy;

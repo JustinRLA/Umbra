@@ -38,6 +38,9 @@ public class StartBtnSetter : MonoBehaviour {
 
 public void restartGame()
 			{
+		PlayerPrefs.SetInt ("Death", 0);
+		PlayerPrefs.SetInt ("Kill", 0);
+
 		PlayerPrefs.SetInt ("SaveSystem", 0);
 		SceneManager.LoadScene ("Niveau_1");
 			}

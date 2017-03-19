@@ -5,6 +5,8 @@ public class CheckPointChange : MonoBehaviour {
 	public GameObject CheckPointManager;
 	public int AssignCheckpoint;
 	public GameObject DeathManager;
+	public GameObject PlayerOne;
+	int actualKill;
 	// Use this for initialization
 	void Start () {
 		//DeathManager=GameObject.Find("deathManager");
@@ -21,6 +23,8 @@ public class CheckPointChange : MonoBehaviour {
 
 		if (col.tag == "Player")
 		{
+			actualKill = PlayerPrefs.GetInt ("Kill") + PlayerOne.GetComponent<DeathEvent> ().tempoKill;
+			PlayerPrefs.SetInt ("Kill", actualKill);
 //			CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
 			//print ("Check");
 			//DeathManager.GetComponent<DeathManagerScript>().CheckPointState=CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
