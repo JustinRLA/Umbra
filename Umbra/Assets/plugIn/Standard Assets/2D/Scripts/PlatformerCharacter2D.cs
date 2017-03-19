@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
     public class PlatformerCharacter2D : MonoBehaviour
     {
+	public int numberofDeath;
 		//Voici un commentaire test
 	[SerializeField] public float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
@@ -16,7 +17,6 @@ using UnityEngine.SceneManagement;
 		public GameObject RunTrigger;
 		CircleCollider2D RunCircleCollider;
 	public bool canRune;
-	public GameObject DeathManager;
 	public bool canChangeRune;
 		//public GameObject ViewTrigger;
 //		CircleCollider2D ViewTriggerCollider;
@@ -41,9 +41,9 @@ using UnityEngine.SceneManagement;
 
 	void Start()
 	{
+		numberofDeath = PlayerPrefs.GetInt ("Death");
 		if(TruePlayer==true)
 		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
-		//DeathManager = GameObject.Find ("deathManager");
 	}
 
 
@@ -54,8 +54,6 @@ using UnityEngine.SceneManagement;
 		if(TruePlayer==true)
 		myRuneManScript = MyRuneMan.GetComponent<RuneManagerScript> ();
 			RunCircleCollider = RunTrigger.GetComponent<CircleCollider2D> ();
-		//	ViewTriggerCollider = ViewTrigger.GetComponent<CircleCollider2D> ();
-            // Setting up references.
 			m_GroundCheck = transform.Find("GroundCheck");
 			m_CeilingCheck = transform.Find("CeilingCheck");
 			m_Anim = GetComponent<Animator>();
@@ -67,15 +65,12 @@ using UnityEngine.SceneManagement;
 	{
 		inShadow = false;
 		ClimbTrue = false;
-//		print ("Bouhhhhhhhhhhhhhhhjhbhyb");
 		actualOeillereSPriteRenderer.enabled = false;
 		ActualOeillere = null;
-	
-
-
+		numberofDeath++;
+		PlayerPrefs.SetInt("Death",numberofDeath);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 
-		//DeathManager.GetComponent<DeathManagerScript> ().PlayerDeath ();
 
 	}
 
@@ -301,12 +296,6 @@ using UnityEngine.SceneManagement;
 			{
 				RunCircleCollider.transform.localScale=new Vector3(1,1,1);		
 			}
-		//	if(move==0)
-				//ViewTriggerCollider.transform.localScale=new Vector3(0.05f,0.05f,0.05f);	
-			//if(crouch==true && move!=0)
-			//	ViewTriggerCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);	
-		//	if(crouch==false && move!=0)
-			//	ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
 			}
 		}
 		if(TruePlayer==false)
@@ -362,21 +351,6 @@ using UnityEngine.SceneManagement;
 			}
 	
 
-					//			if(move==0||crouch==true||m_Grounded==false||canBeSilenced==true)
-//			{
-//				RunCircleCollider.transform.localScale=new Vector3(0.01f,0.01f,0.01f);	
-//
-//			}
-//			else
-//			{
-//				RunCircleCollider.transform.localScale=new Vector3(1,1,1);		
-//			}
-			//	if(move==0)
-			//ViewTriggerCollider.transform.localScale=new Vector3(0.05f,0.05f,0.05f);	
-			//if(crouch==true && move!=0)
-			//	ViewTriggerCollider.transform.localScale=new Vector3(0.1f,0.1f,0.1f);	
-			//	if(crouch==false && move!=0)
-			//	ViewTriggerCollider.transform.localScale=new Vector3(0.2f,0.2f,0.2f);	
 
 		}
 

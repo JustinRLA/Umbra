@@ -10,12 +10,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	//PatrolPart
 	public bool isdead=false;
 	public Transform rayPointOf;
-	public GameObject NavPoitnOneGo;
-	public GameObject NavPoitnTwoGo;
-	public GameObject NavPoitnThreeGo;
 	public bool lookRight;
 	public Transform CurrentNavPoint;
-	public GameObject CurrentNavPointGo;
 	public Transform LurePlayer;
 	public GameObject SawLureFeedback;
 	public GameObject FliPBase;
@@ -81,7 +77,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 
 
-	public GameObject PhantomPlayer;
 	public Transform PhamomPoint;
 
 	public GameObject MyPlayer;
@@ -180,16 +175,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 		CurrentNavPoint = NavPointOne_Right;
 
-		CurrentNavPointGo = CurrentNavPoint.gameObject;
 
 		OriginalSpeed = speed;
-		NavPoitnOneGo = NavPointOne_Right.gameObject;
-
-		if(NavPointTwo_Left!=null)
-			NavPoitnTwoGo = NavPointTwo_Left.gameObject;
-
-		if(NavPointThree_EvenMoreLeft!=null)
-			NavPoitnThreeGo = NavPointThree_EvenMoreLeft.gameObject;
 		//InvokeRepeating ("flipAlert",5f,1f);
 	}
 
@@ -518,7 +505,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		if(timerState>14 &&  timerState<=15)
 		{
 
-			PhantomPlayer.transform.position = MyPlayer.transform.position;
 			PhamomPoint.position = ThePlayer.position;
 
 		}
@@ -670,7 +656,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 				if((Vector3.Distance(transform.position,NavPointOne_Right.position))<(Vector3.Distance(transform.position,NavPointTwo_Left.position)))
 				{
 					CurrentNavPoint = NavPointOne_Right;
-					CurrentNavPointGo = NavPoitnOneGo;
 					NavPointIGot = 2;
 				//	if(NavPointTwo_Left !=null)
 //						NavPoitnTwoGo.GetComponent<Collider2D>().enabled = false;
@@ -679,10 +664,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 					else	
 					{
 					CurrentNavPoint = NavPointTwo_Left;
-					CurrentNavPointGo = NavPoitnTwoGo;
 					NavPointIGot = 1;
-				//	NavPoitnOneGo.GetComponent<Collider2D>().enabled = false;
-					//NavPoitnTwoGo.GetComponent<Collider2D>().enabled = true;
 				}
 
 			}
@@ -691,7 +673,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 			{
 				CurrentNavPoint = NavPointOne_Right;
-				CurrentNavPointGo = NavPoitnOneGo;
 				NavPointIGot = 2;
 
 			}
@@ -910,7 +891,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		if(timerState>15)
 		{
 		AlertInMode();
-		CurrentNavPointGo = null;
 		}
 		if(timerState>0 && timerState<=15 && mySighListernetTemplate.IsawTheLure==false)
 		{
