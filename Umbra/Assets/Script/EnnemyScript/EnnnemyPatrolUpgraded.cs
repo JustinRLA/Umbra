@@ -142,7 +142,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	void Awake()
 	{
 		MyPlayer = GameObject.Find("2DCharacter(Clone)");
-
+		LurePlayer = GameObject.Find ("2DCharacterShadow").transform;
 	}
 
 	void Start () {
@@ -1119,7 +1119,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //	}
 	void flip()
 	{
-
+		print ("flip");
 		if(lookRight==false)
 		{
 		GetComponent<SpriteRenderer>().flipX=true;

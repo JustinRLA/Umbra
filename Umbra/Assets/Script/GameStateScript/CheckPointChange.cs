@@ -10,7 +10,7 @@ public class CheckPointChange : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//DeathManager=GameObject.Find("deathManager");
-
+		PlayerOne=GameObject.Find("2DCharacter(Clone)");
 	}
 	
 	// Update is called once per frame

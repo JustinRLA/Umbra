@@ -72,6 +72,11 @@ public class InitializeLevel : MonoBehaviour {
 //		}
 	//PlayerPrefs.SetInt ("SaveSystem",0);
 			
+		EnnemyPack [0].SetActive (false);
+		EnnemyPack [1].SetActive (false);
+		EnnemyPack [2].SetActive (false);
+
+
 		Cam.SetActive (true);
 		PlayerLight.SetActive (true);
 		if (PlayerPrefs.GetInt ("SaveSystem")==0)
