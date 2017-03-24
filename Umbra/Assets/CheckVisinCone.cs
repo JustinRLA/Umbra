@@ -48,22 +48,40 @@ public class CheckVisinCone : MonoBehaviour {
 	void Start () {
 		//player=GameObject.Find("2DCharacter(Clone)").transform;
 	//	EnnmyRay [0] = Physics2D.Linecast (player.position, EnnemyInScene [0].position);
+		if(EnnemyInScene[0]!=null)
 		PatrolOne= EnnemyInScene[0].GetComponent<EnnnemyPatrolUpgraded>();
+		if(EnnemyInScene[1]!=null)
 		PatrolTwo= EnnemyInScene[1].GetComponent<EnnnemyPatrolUpgraded>();
+		if(EnnemyInScene[2]!=null)
 		Patrolthree= EnnemyInScene[2].GetComponent<EnnnemyPatrolUpgraded>();
-		PatrolFour= EnnemyInScene[3].GetComponent<EnnnemyPatrolUpgraded>();
+
+		if(EnnemyInScene[3]!=null)
+		PatrolFour= EnnemyInScene[3].GetComponent<EnnnemyPatrolUpgraded>();	
+
+		if(EnnemyInScene[4]!=null)
 		PatrolFive= EnnemyInScene[4].GetComponent<EnnnemyPatrolUpgraded>();
+		if(EnnemyInScene[5]!=null)
 		PatrolSix= EnnemyInScene[5].GetComponent<EnnnemyPatrolUpgraded>();
+		if(EnnemyInScene[6]!=null)
 		PatrolSeven= EnnemyInScene[6].GetComponent<EnnnemyPatrolUpgraded>();
+		if(EnnemyInScene[7]!=null)
 		PatrolEight= EnnemyInScene[7].GetComponent<EnnnemyPatrolUpgraded>();
 
+		if(EnnemyInScene[0]!=null)
 		ConvisibleOne = EnnemyInScene [0].GetComponent<ConVisible> ();
+		if(EnnemyInScene[1]!=null)
 		ConvisibleTwo = EnnemyInScene [1].GetComponent<ConVisible> ();
+		if(EnnemyInScene[2]!=null)
 		ConvisibleThree = EnnemyInScene [2].GetComponent<ConVisible> ();
+		if(EnnemyInScene[3]!=null)
 		ConvisibleFour = EnnemyInScene [3].GetComponent<ConVisible> ();
+		if(EnnemyInScene[4]!=null)
 		ConvisibleFive = EnnemyInScene [4].GetComponent<ConVisible> ();
+		if(EnnemyInScene[5]!=null)
 		ConvisibleSix = EnnemyInScene [5].GetComponent<ConVisible> ();
+		if(EnnemyInScene[6]!=null)
 		ConvisibleSeven = EnnemyInScene [6].GetComponent<ConVisible> ();
+		if(EnnemyInScene[7]!=null)
 		ConvisibleEight = EnnemyInScene [7].GetComponent<ConVisible> ();
 
 
