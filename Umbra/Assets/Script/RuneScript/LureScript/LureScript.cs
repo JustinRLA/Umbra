@@ -43,7 +43,7 @@ public class LureScript : MonoBehaviour {
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
 
 		myRuneManagerScript.RuneActivated = true;
-		ThePlayer = GameObject.Find ("2DCharacter(Clone)");
+		ThePlayer = GameObject.Find("2DCharacter(Clone)");
 		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = true;
 		ThePlayerShadow.transform.position = ThePlayer.transform.position;
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 0;

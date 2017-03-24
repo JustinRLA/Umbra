@@ -6,7 +6,7 @@ public class LightFollowPlayer : MonoBehaviour {
 	public GameObject PlayerMy;
 	// Use this for initialization
 	void Start () {
-		PlayerMy = GameObject.Find("2DCharacter(Clone)");
+		PlayerMy = GameObject.Find("ThePlayer");
 	}
 	
 	// Update is called once per frame

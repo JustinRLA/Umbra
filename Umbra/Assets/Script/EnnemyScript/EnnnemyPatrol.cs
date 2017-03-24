@@ -104,7 +104,7 @@ public class EnnnemyPatrol : MonoBehaviour {
 	}
 
 	void Start () {
-		MyPlayer = GameObject.Find("2DCharacter(Clone)");
+		MyPlayer = GameObject.Find("ThePlayer");
 		ThePlayer = MyPlayer.transform;
 		RuneManager = GameObject.Find ("RuneManager");
 

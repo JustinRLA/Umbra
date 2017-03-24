@@ -27,7 +27,7 @@ public class SightListenerTemplate : MonoBehaviour {
 	public bool LureInCam;
 	Vector3 Camdir;
 	float angle;
-	public Transform thePlayer;
+	public Transform ThePlayer;
 	public GameObject myBoute;
 	public GameObject EnnemyOne;
 	public GameObject EnnemyTwo;
@@ -112,7 +112,7 @@ public class SightListenerTemplate : MonoBehaviour {
 			if(inCam==true && InAlert==false)
 			{
 				LureInCam = false;
-//				Camdir = thePlayer.position - transform.position;
+//				Camdir = ThePlayer.position - transform.position;
 //				angle = Mathf.Atan2 (Camdir.y, Camdir.x) * Mathf.Rad2Deg;
 //				myBoute.transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
 				//mySight.GetComponent<Renderer>().material=InSightMat;

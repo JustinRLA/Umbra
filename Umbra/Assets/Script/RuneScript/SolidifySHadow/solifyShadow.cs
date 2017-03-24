@@ -110,7 +110,7 @@ public class solifyShadow : MonoBehaviour {
 		GrimpSurface.SetActive (false);
 
 		MySolid.CanClickable = false;
-		gameObject.layer = 24;
+		gameObject.layer = 10;
 
 		GetComponent<SpriteRenderer> ().enabled = false;
 		gameObject.tag="Ombre";

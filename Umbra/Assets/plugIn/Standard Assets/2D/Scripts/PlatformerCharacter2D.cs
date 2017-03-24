@@ -159,7 +159,11 @@ using UnityEngine.SceneManagement;
 	{
 
 		if (ActualLadder == null)
+		{
 			ReturnToNormal ();
+			m_JumpForce = 650;
+		}
+
 		if(ActualLadder != null)
 		{
 		if (ClimbTrue == true) 
@@ -180,6 +184,7 @@ using UnityEngine.SceneManagement;
 		}
 		else
 		{
+				m_JumpForce = 650;
 			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 			GetComponent<Animator>().SetBool ("Climb", false);
 

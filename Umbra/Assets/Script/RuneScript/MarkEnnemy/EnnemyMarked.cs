@@ -106,7 +106,7 @@ public class EnnemyMarked : MonoBehaviour {
 		myCam.GetComponent<ColorCorrectionCurves> ().enabled = false;
 		myRuneManager.timerOffense = 0;
 		VireLight.SetActive (true);
-		gameObject.layer = 13;
+		gameObject.layer = 25;
 		myMarkEnmnemyRune.CanBeClicked = false;
 		Cursor.visible = false;
 		Time.timeScale = 1f;

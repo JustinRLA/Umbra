@@ -141,11 +141,14 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //	// Use this for initialization
 	void Awake()
 	{
-		MyPlayer = GameObject.Find("2DCharacter(Clone)");
 		LurePlayer = GameObject.Find ("2DCharacterShadow").transform;
+
 	}
 
 	void Start () {
+		MyPlayer = GameObject.Find("2DCharacter(Clone)");
+		ThePlayer = MyPlayer.transform;
+
 		timerBetweenPatrolOriginal = timerBetweenPatrol;
 		UpPoint = UpPoint_RegularLevel;
 		DownPoint=DownPoint_RegularLevel;
@@ -161,23 +164,17 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		TeleportPointRight_Actual= TeleportPointRight_RegularLevel;
 		TeleportPointRightTransform_Actual=TeleportPointRightTransform_RegularLevel;
 
-		MyPlayer = GameObject.Find("2DCharacter(Clone)");
-		ThePlayer = MyPlayer.transform;
 		RuneManager = GameObject.Find ("RuneManager");
 
 		myLureScript = RuneManager.GetComponent<LureScript> ();
 		gameObject.tag="ennemy";
 
-		//fsm=StateMachine<States>.Initialize.this;
 		mySighListernetTemplate = mySighListerner.GetComponent<SightListenerTemplate> ();
-		//StartCoroutine (MyAttack());
-		//dynamicLighting=myLight.GetComponent<DynamicLight2D>();
 
 		CurrentNavPoint = NavPointOne_Right;
 
 
 		OriginalSpeed = speed;
-		//InvokeRepeating ("flipAlert",5f,1f);
 	}
 
 	public void LurAttention()
@@ -731,7 +728,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	
 		if(MortalRay.collider==true)
 		{
-			if (MortalRay.collider.tag == "bloc" || MortalRay.collider.tag == "ennemy")
+			if (MortalRay.collider.tag == "bloc" || MortalRay.collider.tag == "ennemy" || MortalRay.collider.tag == "BlocOeillere")
 				Safe = true;
 			else
 				Safe = false;

@@ -17,7 +17,7 @@ public class PlayerCamScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerMy = GameObject.Find ("2DCharacter(Clone)");
+		PlayerMy = GameObject.Find("2DCharacter(Clone)");
 		myPlatformCharacter = PlayerMy.GetComponent<PlatformerCharacter2D> ();
 	}
 

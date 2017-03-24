@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 114493246266871566}
   - component: {fileID: 95033086175179080}
   - component: {fileID: 114914225671442578}
+  - component: {fileID: 114265959815586112}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -257,7 +258,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
@@ -291,7 +292,7 @@ Camera:
   far clip plane: 10000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -393,7 +394,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -3
   m_CullingMask:
     serializedVersion: 2
@@ -427,7 +428,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -661,8 +662,21 @@ MonoBehaviour:
   activateLeurreCam: 0
   Leurre: {fileID: 0}
   direction: 0
+  PanUp: 0
   timerLeurre: 0
   speed: 100
+--- !u!114 &114265959815586112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858147818415426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e7dfb689ce3244cab9ab8a027475ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenerId: 0
 --- !u!114 &114311525228863190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1248,6 +1262,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.056572, y: 15.79664}
+  m_AnchoredPosition: {x: -87.54819, y: -2.3173351}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
