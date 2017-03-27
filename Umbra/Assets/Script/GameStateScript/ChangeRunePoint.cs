@@ -27,6 +27,7 @@ public class ChangeRunePoint : MonoBehaviour {
 	public GameObject playerMy;
 	// Use this for initialization
 	void Start () {
+		playerMy=GameObject.Find("2DCharacter(Clone)");
 		RuneManager=GameObject.Find("RuneManager");
 		FeedBackImage = GameObject.Find ("feedbackRuneChange");
 	}
