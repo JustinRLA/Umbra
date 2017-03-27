@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}" SchemaVersion="75">
+	<Events>
+		<WorkUnit Name="SFX" ID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="UI" ID="{706CF11E-0A9A-46E8-98C4-BBA1DC6F06ED}" ShortID="529770802">
+					<ChildrenList>
+						<Event Name="Menu_Cancel" ID="{3C627F04-54CA-4A6C-A4A8-903F83A39E17}"/>
+						<Event Name="Menu_Click" ID="{988A43B9-39AE-4FC1-BFE9-EF56D41E0930}"/>
+						<Event Name="Menu_Hover" ID="{791118D7-99AA-4917-94D7-45F8364330EE}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Amb" ID="{93DCCD9F-4F46-4AD7-8EDB-F323A2F9AD62}" ShortID="632402050">
+					<ChildrenList>
+						<Event Name="Amb_Rain" ID="{5369A495-3A1C-4A2A-8B42-0D54C86D2EBD}">
+							<ChildrenList>
+								<Action Name="Play" ID="{85C38509-F5F0-424A-89EF-4C86BA8A5F98}" ShortID="809377462" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{3DA662E2-F4FD-469C-B3BF-DA8495099525}" Global="false">
+											<ObjectRef Name="Amb_Rain" ID="{11ED6294-86DC-4F25-9B9A-C8B84151C939}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Amb_Room" ID="{841CFC35-03CB-47EF-8CC5-EA3FF15C12C3}"/>
+						<Event Name="Amb_Alarm" ID="{F7182716-79D1-4845-9B38-54167D2FD864}"/>
+						<Event Name="Amb_Bell" ID="{5615E200-3FE5-4116-A1E7-E3F6278F7BD1}"/>
+						<Event Name="Amb_Check" ID="{9BF02086-BD0F-4729-8108-A7D7CDC6F5A2}"/>
+						<Event Name="Amb_Door" ID="{2866BFF1-BBDB-4494-A3FD-FB34F32A84DE}">
+							<ChildrenList>
+								<Action Name="Play" ID="{B30AFD19-454B-4A1D-B161-03078F4D2FED}" ShortID="484338120" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{CB396A9C-D888-44F5-8674-28C5AA90D8E6}" Global="false">
+											<ObjectRef Name="Amb_Door" ID="{ECCF7AAD-A782-4A76-844B-DD200948CEF7}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Amb_Secteur" ID="{ED30F7E8-B7D7-420C-B564-EEAD2F705B23}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="NPCs" ID="{8879A54A-F569-45BE-B841-40334734E7CE}" ShortID="533621860">
+					<ChildrenList>
+						<Event Name="NPC_Action_Death" ID="{A33ED3D1-95DE-4C00-85AF-3993E6039CD7}"/>
+						<Event Name="NPC_Action_Kill" ID="{63AB3A33-384C-4854-AC13-3269605A1C9F}">
+							<ChildrenList>
+								<Action Name="Play" ID="{94413A6D-F159-4116-A629-3AC61FC7FAE6}" ShortID="7696422" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{E0A6395B-82A6-4B72-B0EB-A23893EB5978}" Global="false">
+											<ObjectRef Name="PC_Action_Kill" ID="{FB6C4CA9-38D4-49A6-9A1E-3C95956E65A7}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="NPC_Foot_Run" ID="{B1BDA4EF-8538-4186-B912-F08590483413}"/>
+						<Event Name="NPC_Foot_Stealth" ID="{FDEF2B49-B8F7-4FF3-858B-508A383D59CC}"/>
+						<Event Name="NPC_State_Alarmed" ID="{1BBE91A0-AE5C-4E60-92DC-0A75FA6B6AA1}"/>
+						<Event Name="NPC_State_Located" ID="{21AE8267-DDC3-4E41-A895-2BB8C4FBDA9E}"/>
+						<Event Name="NPC_State_Normal" ID="{C4662E75-92A5-443F-BDEA-99F0403F6BE2}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="PC" ID="{C8F5128C-9E54-426D-9652-5CFBD638A91F}" ShortID="30569804">
+					<ChildrenList>
+						<Folder Name="Action" ID="{E7652E2B-8120-4EDF-94F0-A210CD6C4673}" ShortID="1005793338">
+							<ChildrenList>
+								<Event Name="PC_Action_Climb" ID="{958BB055-D67F-4A23-9C12-DEF7F56921D8}"/>
+								<Event Name="PC_Action_Death" ID="{15C3EB39-7F8F-461F-8B9C-9BE9EBC90A6C}"/>
+								<Event Name="PC_Action_Kill" ID="{4A52EC2A-8E5F-4EA7-93E6-92EBFE09639A}">
+									<ChildrenList>
+										<Action Name="Play" ID="{22D3F6B8-0446-4B3E-A185-D4323D56B4AB}" ShortID="799099694" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{EF2A4394-60C1-4A79-A787-CE5F74D440D0}" Global="false">
+													<ObjectRef Name="PC_Action_Kill" ID="{FB6C4CA9-38D4-49A6-9A1E-3C95956E65A7}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Action_Heartbeat" ID="{625600B3-DFA3-4888-8168-9146F183D3A1}"/>
+								<Event Name="PC_Action_Respawn" ID="{680E6AAF-58EE-44BF-B68D-1A03B5BF7EEE}"/>
+								<Event Name="PC_Action_Look" ID="{7AE73DFC-284F-4BDD-B47C-2FB522BAAB4D}"/>
+								<Event Name="PC_Action_SlowMo" ID="{FD165A1F-9D79-4CEA-9C0F-7178A6ADF75C}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Foot" ID="{7491EEC3-1F3C-4C03-AF67-269161E3E504}" ShortID="54899299">
+							<ChildrenList>
+								<Event Name="PC_Foot_Jump" ID="{610644C9-6CAC-4F28-98AA-66395D9B4CC8}">
+									<ChildrenList>
+										<Action Name="Play" ID="{1B41E21F-6408-4D59-9D37-60C0A28B4ADE}" ShortID="684949081" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{E857E3DA-2777-421A-BCA9-680379115382}" Global="false">
+													<ObjectRef Name="PC_Foot_Jump" ID="{40DD2546-F0E5-4E6A-B405-43C158BAEFAC}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Foot_Run" ID="{B590E484-D0C9-4ACC-87B2-66CD2820313A}">
+									<ChildrenList>
+										<Action Name="Play" ID="{8B2EDE34-226F-49B6-86BC-ED174F3C82B6}" ShortID="718582941" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{3031FBBD-3469-4875-B30C-7D573EBD6DC9}" Global="false">
+													<ObjectRef Name="PC_Foot_Run" ID="{5448BC35-CEB2-4068-A727-7A8238D60BD4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Foot_Land" ID="{83C6A0EA-04DE-47C3-8F03-96B3ADC72ABF}"/>
+								<Event Name="PC_Foot_Grass" ID="{58CB2155-6103-47BB-A1C2-DA5420A47CAE}">
+									<ChildrenList>
+										<Action Name="Set Switch" ID="{9C77C8EB-EFDE-40A2-B2AD-865303428F32}" ShortID="540852373" Type="SetSwitch" Scope="All" Global="false">
+											<SetItemParam>
+												<Group Name="Player_Foot_Surface" ID="{FA361B94-C2D3-4B0E-9D91-16B19017996D}"/>
+												<GroupItem Name="Grass" ID="{41A69D4F-9C31-4AC7-8FE6-C949A376F72D}"/>
+											</SetItemParam>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Foot_Stone" ID="{E3EB5665-EB51-45F5-BAD2-4DF0725F1A3B}">
+									<ChildrenList>
+										<Action Name="Set Switch" ID="{6D3F062A-CAA6-4CDC-84C4-70C07E92FCAD}" ShortID="317881560" Type="SetSwitch" Scope="All" Global="false">
+											<SetItemParam>
+												<Group Name="Player_Foot_Surface" ID="{FA361B94-C2D3-4B0E-9D91-16B19017996D}"/>
+												<GroupItem Name="Stone" ID="{B86AFD86-DF11-4E82-8C7F-36B448CB4A39}"/>
+											</SetItemParam>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Foot_Wood" ID="{FA86F1F1-BD47-4095-ACB2-32B7AE711F52}">
+									<ChildrenList>
+										<Action Name="Set Switch" ID="{85F833BA-98A5-40C0-8551-AB39D891076B}" ShortID="576736646" Type="SetSwitch" Scope="All" Global="false">
+											<SetItemParam>
+												<Group Name="Player_Foot_Surface" ID="{FA361B94-C2D3-4B0E-9D91-16B19017996D}"/>
+												<GroupItem Name="Wood" ID="{58A99030-CF40-48DE-9DA5-45DC3F64FE70}"/>
+											</SetItemParam>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Stealth_On" ID="{421E7F00-2EA9-4A38-89FD-D674AC8924BE}">
+									<ChildrenList>
+										<Action Name="Set State" ID="{95A8B5AC-F56F-4787-9B1B-07C3E15DD4F8}" ShortID="45984913" Type="SetState" Scope="All" Global="true">
+											<SetItemParam>
+												<Group Name="Foot_Stealth" ID="{ED19598D-0D14-42E6-AD54-64446D222339}"/>
+												<GroupItem Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
+											</SetItemParam>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Stealth_Off" ID="{B7313609-B364-4048-864E-B2A4FADAAD86}">
+									<ChildrenList>
+										<Action Name="Set State" ID="{48D90C98-93AF-4A40-B3AA-182F23E4FEB5}" ShortID="756689716" Type="SetState" Scope="All" Global="true">
+											<SetItemParam>
+												<Group Name="Foot_Stealth" ID="{ED19598D-0D14-42E6-AD54-64446D222339}"/>
+												<GroupItem Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
+											</SetItemParam>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Rune" ID="{AF05DE65-C85F-43EE-A220-0C9D8D5B3B56}" ShortID="936021683">
+							<ChildrenList>
+								<Event Name="PC_Rune_Accrochage_Equip" ID="{4417D34D-101D-4BC0-A5F0-48193099ADEB}"/>
+								<Event Name="PC_Rune_Accrochage_Green" ID="{A6A22B92-FAB4-4409-A0DF-5E050A03D972}"/>
+								<Event Name="PC_Rune_Accrochage_Red" ID="{BAB15F5F-6C81-4068-A2D8-D6027DD31FE3}"/>
+								<Event Name="PC_Rune_Leurre_Use" ID="{8C06E8F3-4A4C-451A-8B08-83A87A56D20B}"/>
+								<Event Name="PC_Rune_Leurre_Filter" ID="{C7717231-4681-4E8B-879B-6B0AE9683152}"/>
+								<Event Name="PC_Rune_Marquage_Use" ID="{D833D656-51E7-43B5-A584-F15E68312E42}"/>
+								<Event Name="PC_Rune_Accrochage_Use" ID="{76CE0AF6-193D-45FB-AFBE-1AA098105576}"/>
+								<Event Name="PC_Rune_Marquage_Sonar" ID="{520B6EDA-730A-4E21-8D17-F19B9C25B83E}"/>
+								<Event Name="PC_Rune_Ombre_Use" ID="{81B2DCB0-2822-4203-959C-8D1D84FBD818}"/>
+								<Event Name="PC_Rune_Ombre_Decay" ID="{ED0DF802-063B-4CEF-BD4D-7E14927A0C24}"/>
+								<Event Name="PC_Rune_Ombre_Select" ID="{0C9E8874-20C8-4A4B-9D63-FA07CAE802F0}"/>
+								<Event Name="PC_Rune_Trap_Use" ID="{A245C14A-2C29-4798-A50F-B7387A4E7862}"/>
+								<Event Name="PC_Rune_Trap_Stun" ID="{F9DBBFDC-EEEB-4505-9332-3743C3DE1A2D}"/>
+								<Event Name="PC_Rune_Solide_Use" ID="{33A61B99-8B84-41BB-94F3-79ECC86BC179}"/>
+								<Event Name="PC_Rune_Solide_End" ID="{8F7FE5D1-23BE-4706-B79A-673C42F96959}"/>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

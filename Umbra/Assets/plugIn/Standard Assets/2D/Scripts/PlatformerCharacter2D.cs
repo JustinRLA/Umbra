@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
     public class PlatformerCharacter2D : MonoBehaviour
     {
 	public bool hidden;
+	SpriteRenderer mySpriteRenderer;
 	public int numberofDeath;
 		//Voici un commentaire test
 	[SerializeField] public float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
@@ -48,6 +49,7 @@ using UnityEngine.SceneManagement;
 		numberofDeath = PlayerPrefs.GetInt ("Death");
 		if(TruePlayer==true)
 		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
+		mySpriteRenderer = GetComponent<SpriteRenderer> ();
 	}
 
 
@@ -74,7 +76,6 @@ using UnityEngine.SceneManagement;
 		numberofDeath++;
 		PlayerPrefs.SetInt("Death",numberofDeath);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
-
 
 	}
 
@@ -167,12 +168,13 @@ using UnityEngine.SceneManagement;
 		}
 		if (hidden == true) {
 			m_MaxSpeed = 0;
-			print ("Hidden");
+			mySpriteRenderer.sortingOrder = -1;
 			gameObject.layer = 26;
 		}
 			else
 		{
 			m_MaxSpeed = 10;
+			mySpriteRenderer.sortingOrder = 1;
 
 				gameObject.layer = 13;
 		}
@@ -268,7 +270,7 @@ using UnityEngine.SceneManagement;
 
 		if(MyRuneMan != null && myRuneManScript!= null)
 		{
-		if(myRuneManScript.RuneModeEnabled==false && TruePlayer==true)
+			if(myRuneManScript.RuneModeEnabled==false && TruePlayer==true  && hidden==false)
 		{
 			// If crouching, check to see if the character can stand up
 			if (!crouch && m_Anim.GetBool("Crouch"))
@@ -381,6 +383,7 @@ using UnityEngine.SceneManagement;
 				m_Grounded = false;
 				m_Anim.SetBool("Ground", false);
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+				AkSoundEngine.PostEvent ("PC_FOOT_JUMP", gameObject);
 			}
 	
 

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ReduceDelay : MonoBehaviour {
 
+	GameObject Playa;
 	// Use this for initialization
 	void Start () {
+		Playa = GameObject.Find ("2DCharacter(Clone)");
 		StartCoroutine (Reducing ());
 	}
 	
@@ -17,11 +20,13 @@ public class ReduceDelay : MonoBehaviour {
 	IEnumerator Reducing()
 	{
 		
-		Time.timeScale = 0.4f;
+		Time.timeScale = 0.04f;
 		GetComponent<SpriteRenderer> ().sortingOrder = 10;
-		yield return new WaitForSeconds (1.5f);
+		Playa.GetComponent<PlatformerCharacter2D> ().enabled = false;
+		yield return new WaitForSeconds (0.1f);
 		GetComponent<Animator> ().SetBool ("Play", true);
 		GetComponent<SpriteRenderer> ().sortingOrder = 0;
+		Playa.GetComponent<PlatformerCharacter2D> ().enabled = false;
 		Time.timeScale = 1f;
 
 	}

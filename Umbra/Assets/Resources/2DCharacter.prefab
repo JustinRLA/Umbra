@@ -45,7 +45,9 @@ GameObject:
   - component: {fileID: 58589064105727954}
   - component: {fileID: 114848467757930108}
   - component: {fileID: 114035125408103482}
-  - component: {fileID: 114600351686896528}
+  - component: {fileID: 114168402780757308}
+  - component: {fileID: 114042103868510594}
+  - component: {fileID: 114746720598708712}
   m_Layer: 13
   m_Name: 2DCharacter
   m_TagString: Player
@@ -453,7 +455,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014189160392212}
   m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: -6.899578, y: -8.611536, z: 7.322376}
+  m_LocalPosition: {x: 25.752548, y: 2.6508832, z: 7.322376}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_Children:
   - {fileID: 4223585992560926}
@@ -913,6 +915,24 @@ MonoBehaviour:
   EnnemyPos: {fileID: 4068779992786414}
   Ennemy: {fileID: 0}
   AssassinTrigger: {fileID: 0}
+--- !u!114 &114042103868510594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014189160392212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc72ef71fb4f6f47b8f322750e2ba08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_positionOffsetData:
+    positionOffset: {x: 0, y: 0, z: 0}
+    KeepMe: 0
+  isEnvironmentAware: 0
+  listenerMask: 1
+  isStaticObject: 0
+  m_posOffsetData: {fileID: 0}
 --- !u!114 &114057759524934226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -929,6 +949,25 @@ MonoBehaviour:
   eyeCrouch: {fileID: 4624573697655192}
   eyeWalk: {fileID: 4037548313722908}
   truePlayer: 1
+--- !u!114 &114168402780757308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014189160392212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018617a549bbb69479e1956e6db21f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 77b013379f320144873c62a09d1a0b5c
+  bankName: SFX
+  loadAsynchronous: 0
+  decodeBank: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
 --- !u!114 &114266232522748084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -949,6 +988,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  LayerMaskOne:
+    serializedVersion: 2
+    m_Bits: 2049
+  MarkOne: {fileID: 0}
+  MarkTwo: {fileID: 0}
+  MarkThree: {fileID: 0}
+  MarkFour: {fileID: 0}
+  MarkFive: {fileID: 0}
+  MarkSix: {fileID: 0}
+  MarkSeven: {fileID: 0}
+  MarkEight: {fileID: 0}
   CanSee: 0
   CanSeeTwo: 0
   CanSeeThree: 0
@@ -957,6 +1007,22 @@ MonoBehaviour:
   CanSeeSix: 0
   CanSeeSeven: 0
   CanSeeEight: 0
+  ConvisibleOne: {fileID: 0}
+  ConvisibleTwo: {fileID: 0}
+  ConvisibleThree: {fileID: 0}
+  ConvisibleFour: {fileID: 0}
+  ConvisibleFive: {fileID: 0}
+  ConvisibleSix: {fileID: 0}
+  ConvisibleSeven: {fileID: 0}
+  ConvisibleEight: {fileID: 0}
+  PatrolOne: {fileID: 0}
+  PatrolTwo: {fileID: 0}
+  Patrolthree: {fileID: 0}
+  PatrolFour: {fileID: 0}
+  PatrolFive: {fileID: 0}
+  PatrolSix: {fileID: 0}
+  PatrolSeven: {fileID: 0}
+  PatrolEight: {fileID: 0}
 --- !u!114 &114386420615009744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1034,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hidden: 0
   numberofDeath: 0
   m_MaxSpeed: 10
   m_JumpForce: 670
@@ -1044,6 +1111,8 @@ MonoBehaviour:
     m_Bits: 4292157643
   inShadow: 0
   ClimbTrue: 0
+  canHide: 0
+  canhideTwo: 0
   RunTrigger: {fileID: 1214353545722392}
   canRune: 0
   canChangeRune: 0
@@ -1056,7 +1125,7 @@ MonoBehaviour:
   CheckPointManager: {fileID: 0}
   RealCheckPointManager: {fileID: 0}
   MyRuneMan: {fileID: 0}
---- !u!114 &114600351686896528
+--- !u!114 &114746720598708712
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1064,17 +1133,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1014189160392212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018617a549bbb69479e1956e6db21f25, type: 3}
+  m_Script: {fileID: 11500000, guid: 6eb8e847219ec06458251780a9fb0a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
+  triggerList: f2d9e0ec
   useOtherObject: 0
-  valueGuid: 05ccf6bc1d056b46a659f5814ce2876c
-  bankName: Main
-  loadAsynchronous: 0
-  decodeBank: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
+  valueGuid: c9440661ac6c284f98aa66395d9b4cc8
+  eventID: 1143253532
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  multiPositionTypeLabel: 0
+  multiPositionArray: []
 --- !u!114 &114848467757930108
 MonoBehaviour:
   m_ObjectHideFlags: 1

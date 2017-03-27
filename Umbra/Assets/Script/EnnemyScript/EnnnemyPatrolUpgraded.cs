@@ -1116,7 +1116,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //	}
 	void flip()
 	{
-		print ("flip");
 		if(lookRight==false)
 		{
 		GetComponent<SpriteRenderer>().flipX=true;

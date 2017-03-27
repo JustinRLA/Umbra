@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{0FDCCE87-7139-4F7C-82F1-3445909F27B3}" SchemaVersion="75">
+<WwiseDocument Type="WorkUnit" ID="{78B9560E-201B-4A99-946B-5B5FB9572D52}" SchemaVersion="75">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{0FDCCE87-7139-4F7C-82F1-3445909F27B3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{78B9560E-201B-4A99-946B-5B5FB9572D52}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Player_Foot_Surface" ID="{FA361B94-C2D3-4B0E-9D91-16B19017996D}">
+					<ChildrenList>
+						<Switch Name="Grass" ID="{41A69D4F-9C31-4AC7-8FE6-C949A376F72D}"/>
+						<Switch Name="Stone" ID="{B86AFD86-DF11-4E82-8C7F-36B448CB4A39}"/>
+						<Switch Name="Wood" ID="{58A99030-CF40-48DE-9DA5-45DC3F64FE70}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
