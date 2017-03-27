@@ -13,8 +13,16 @@ public class CheckVisinCone : MonoBehaviour {
 	RaycastHit2D EnnmyRaySeven;
 	RaycastHit2D EnnmyRayEight;
 
+	public EnnemyMarked MarkOne;
+	public EnnemyMarked MarkTwo;
+	public EnnemyMarked MarkThree;
+	public EnnemyMarked MarkFour;
+	public EnnemyMarked MarkFive;
+	public EnnemyMarked MarkSix;
+	public EnnemyMarked MarkSeven;
+	public EnnemyMarked MarkEight;
 
-	Transform player;
+
 	public bool CanSee;
 	public bool CanSeeTwo;
 	public bool CanSeeThree;
@@ -25,65 +33,27 @@ public class CheckVisinCone : MonoBehaviour {
 	public bool CanSeeEight;
 
 
-	ConVisible ConvisibleOne;
-	ConVisible ConvisibleTwo;
-	ConVisible ConvisibleThree;
-	ConVisible ConvisibleFour;
-	ConVisible ConvisibleFive;
-	ConVisible ConvisibleSix;
-	ConVisible ConvisibleSeven;
-	ConVisible ConvisibleEight;
+	public ConVisible ConvisibleOne;
+	public ConVisible ConvisibleTwo;
+	public ConVisible ConvisibleThree;
+	public ConVisible ConvisibleFour;
+	public ConVisible ConvisibleFive;
+	public ConVisible ConvisibleSix;
+	public ConVisible ConvisibleSeven;
+	public ConVisible ConvisibleEight;
 
 
-	EnnnemyPatrolUpgraded PatrolOne;
-	EnnnemyPatrolUpgraded PatrolTwo;
-	EnnnemyPatrolUpgraded Patrolthree;
-	EnnnemyPatrolUpgraded PatrolFour;	
-	EnnnemyPatrolUpgraded PatrolFive;
-	EnnnemyPatrolUpgraded PatrolSix;
-	EnnnemyPatrolUpgraded PatrolSeven;
-	EnnnemyPatrolUpgraded PatrolEight;
+	public EnnnemyPatrolUpgraded PatrolOne;
+	public EnnnemyPatrolUpgraded PatrolTwo;
+	public EnnnemyPatrolUpgraded Patrolthree;
+	public EnnnemyPatrolUpgraded PatrolFour;	
+	public EnnnemyPatrolUpgraded PatrolFive;
+	public EnnnemyPatrolUpgraded PatrolSix;
+	public EnnnemyPatrolUpgraded PatrolSeven;
+	public EnnnemyPatrolUpgraded PatrolEight;
 
 	// Use this for initialization
 	void Start () {
-		//player=GameObject.Find("2DCharacter(Clone)").transform;
-	//	EnnmyRay [0] = Physics2D.Linecast (player.position, EnnemyInScene [0].position);
-		if(EnnemyInScene[0]!=null)
-		PatrolOne= EnnemyInScene[0].GetComponent<EnnnemyPatrolUpgraded>();
-		if(EnnemyInScene[1]!=null)
-		PatrolTwo= EnnemyInScene[1].GetComponent<EnnnemyPatrolUpgraded>();
-		if(EnnemyInScene[2]!=null)
-		Patrolthree= EnnemyInScene[2].GetComponent<EnnnemyPatrolUpgraded>();
-
-		if(EnnemyInScene[3]!=null)
-		PatrolFour= EnnemyInScene[3].GetComponent<EnnnemyPatrolUpgraded>();	
-
-		if(EnnemyInScene[4]!=null)
-		PatrolFive= EnnemyInScene[4].GetComponent<EnnnemyPatrolUpgraded>();
-		if(EnnemyInScene[5]!=null)
-		PatrolSix= EnnemyInScene[5].GetComponent<EnnnemyPatrolUpgraded>();
-		if(EnnemyInScene[6]!=null)
-		PatrolSeven= EnnemyInScene[6].GetComponent<EnnnemyPatrolUpgraded>();
-		if(EnnemyInScene[7]!=null)
-		PatrolEight= EnnemyInScene[7].GetComponent<EnnnemyPatrolUpgraded>();
-
-		if(EnnemyInScene[0]!=null)
-		ConvisibleOne = EnnemyInScene [0].GetComponent<ConVisible> ();
-		if(EnnemyInScene[1]!=null)
-		ConvisibleTwo = EnnemyInScene [1].GetComponent<ConVisible> ();
-		if(EnnemyInScene[2]!=null)
-		ConvisibleThree = EnnemyInScene [2].GetComponent<ConVisible> ();
-		if(EnnemyInScene[3]!=null)
-		ConvisibleFour = EnnemyInScene [3].GetComponent<ConVisible> ();
-		if(EnnemyInScene[4]!=null)
-		ConvisibleFive = EnnemyInScene [4].GetComponent<ConVisible> ();
-		if(EnnemyInScene[5]!=null)
-		ConvisibleSix = EnnemyInScene [5].GetComponent<ConVisible> ();
-		if(EnnemyInScene[6]!=null)
-		ConvisibleSeven = EnnemyInScene [6].GetComponent<ConVisible> ();
-		if(EnnemyInScene[7]!=null)
-		ConvisibleEight = EnnemyInScene [7].GetComponent<ConVisible> ();
-
 
 
 	}
@@ -99,11 +69,11 @@ public class CheckVisinCone : MonoBehaviour {
 				CanSee = false;
 			else
 				CanSee = true;
-			if (CanSee == true) {
+			if (CanSee == true || MarkOne.isMarked==true) {
 				if (PatrolOne != null)
 					ConvisibleOne.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 			}
-				else
+			if(CanSee == false && MarkOne.isMarked==false)
 			{
 				if (PatrolOne != null)
 					ConvisibleOne.HisSight.GetComponent<MeshRenderer> ().enabled = false;
@@ -122,11 +92,11 @@ public class CheckVisinCone : MonoBehaviour {
 				CanSeeTwo = false;
 			else
 				CanSeeTwo = true;
-			if (CanSeeTwo == true) {
+			if (CanSeeTwo == true || MarkTwo.isMarked==true) {
 				if (PatrolTwo != null)
 					ConvisibleTwo.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 			}
-			else
+			if(CanSeeTwo == false && MarkTwo.isMarked==false)
 			{
 				if (PatrolTwo != null)
 					ConvisibleTwo.HisSight.GetComponent<MeshRenderer> ().enabled = false;
@@ -141,11 +111,11 @@ public class CheckVisinCone : MonoBehaviour {
 					CanSeeThree = false;
 				else
 					CanSeeThree = true;
-				if (CanSeeThree == true) {
+			if (CanSeeThree == true || MarkThree.isMarked==true) {
 					if (Patrolthree != null)
 						ConvisibleThree.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 				}
-				else
+			if(CanSeeThree == false && MarkThree.isMarked==false)
 				{
 					if (Patrolthree != null)
 						ConvisibleThree.HisSight.GetComponent<MeshRenderer> ().enabled = false;
@@ -163,11 +133,11 @@ public class CheckVisinCone : MonoBehaviour {
 					CanSeeFour = false;
 				else
 					CanSeeFour = true;
-				if (CanSeeFour == true) {
+			if (CanSeeFour == true || MarkFour.isMarked==true) {
 					if (PatrolFour != null)
 						ConvisibleFour.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 				}
-				else
+			if(CanSeeFour == false && MarkFour.isMarked==false)
 				{
 					if (PatrolFour != null)
 						ConvisibleFour.HisSight.GetComponent<MeshRenderer> ().enabled = false;
@@ -185,11 +155,11 @@ public class CheckVisinCone : MonoBehaviour {
 					CanSeeFive = false;
 				else
 					CanSeeFive = true;
-				if (CanSeeSix == true) {
+			if (CanSeeFive == true || MarkFive.isMarked==true) {
 					if (PatrolFive != null)
 						ConvisibleFive.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 				}
-				else
+			if (CanSeeFive == false && MarkFive.isMarked==false) {
 				{
 					if (PatrolFive != null)
 						ConvisibleFive.HisSight.GetComponent<MeshRenderer> ().enabled = false;
@@ -197,21 +167,21 @@ public class CheckVisinCone : MonoBehaviour {
 				//	}
 
 			}
-
+		}
 			if(EnnemyInScene[5] != null)
 			{
 				//			if(EnnmyRay  !=null)
 				//			{
 				EnnmyRaySix  = Physics2D.Linecast (transform.position, EnnemyInScene [5].position);
 				if (EnnmyRaySix.collider.tag == "bloc")
-					CanSeeFive = false;
+					CanSeeSix = false;
 				else
 					CanSeeSix = true;
-				if (CanSeeSix == true) {
+				if (CanSeeSix == true || MarkSix==true) {
 					if (PatrolSix != null)
 						ConvisibleSix.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 				}
-				else
+				if (CanSeeSix == false && MarkSix==false) {
 				{
 					if (PatrolSix != null)
 						ConvisibleSix.HisSight.GetComponent<MeshRenderer> ().enabled = false;
@@ -219,7 +189,7 @@ public class CheckVisinCone : MonoBehaviour {
 				//	}
 
 			}
-
+			}
 			if(EnnemyInScene[6] != null)
 			{
 				//			if(EnnmyRay  !=null)
@@ -229,7 +199,7 @@ public class CheckVisinCone : MonoBehaviour {
 					CanSeeSeven = false;
 				else
 					CanSeeSeven = true;
-				if (CanSeeSeven == true) {
+			if (CanSeeSeven == true || MarkSeven.isMarked==true) {
 					if (PatrolSeven != null)
 						ConvisibleSeven.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 				}

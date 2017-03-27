@@ -17,6 +17,7 @@ public class EnnemyMarked : MonoBehaviour {
 	public bool isMarked;
 	public GameObject PlayerMy;
 	public float PlayerSpeed;
+
 	// Use this for initialization
 	void Start () {
 		PlayerMy = GameObject.Find("2DCharacter(Clone)");

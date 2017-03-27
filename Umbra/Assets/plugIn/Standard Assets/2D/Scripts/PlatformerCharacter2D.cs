@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
     public class PlatformerCharacter2D : MonoBehaviour
     {
+	public bool hidden;
 	public int numberofDeath;
 		//Voici un commentaire test
 	[SerializeField] public float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
@@ -14,6 +15,9 @@ using UnityEngine.SceneManagement;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 	public bool inShadow;
 	public bool ClimbTrue;
+	public bool canHide;
+	public bool canhideTwo;
+	bool canstopHidden;
 		public GameObject RunTrigger;
 		CircleCollider2D RunCircleCollider;
 	public bool canRune;
@@ -157,7 +161,27 @@ using UnityEngine.SceneManagement;
 
 	void Update()
 	{
+		if (canHide == true && canhideTwo==true && Input.GetKeyDown (KeyCode.E))
+		{
+			hidden =! hidden;
+		}
+		if (hidden == true) {
+			m_MaxSpeed = 0;
+			print ("Hidden");
+			gameObject.layer = 26;
+		}
+			else
+		{
+			m_MaxSpeed = 10;
 
+				gameObject.layer = 13;
+		}
+
+		if (canHide == false)
+			hidden = false;
+
+
+			
 		if (ActualLadder == null)
 		{
 			ReturnToNormal ();
@@ -227,13 +251,17 @@ using UnityEngine.SceneManagement;
 
         public void Move(float move, bool crouch, bool jump)
         {
+		
 		if (move == 0)
 		{
+			canhideTwo = true;
 			canRune = true;
 			canChangeRune = true;
 		}
 		else
 		{
+			canhideTwo = false;
+
 			canRune = false;
 			canChangeRune = false;
 		}		
@@ -364,6 +392,8 @@ using UnityEngine.SceneManagement;
 
 		void OnTriggerEnter2D(Collider2D col)
 		{
+		if (col.tag == "Cachette")
+			canHide = true;
 		if (col.tag == "Ladder")
 		{
 			ClimbTrue = true;
@@ -383,6 +413,9 @@ using UnityEngine.SceneManagement;
 //
 	void OnTriggerExit2D(Collider2D col)
 	{
+		if (col.tag == "Cachette")
+			canHide = false;
+		
 		if (col.tag == "Ladder")
 			ClimbTrue = false;
 		

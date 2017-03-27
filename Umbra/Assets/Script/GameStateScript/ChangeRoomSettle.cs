@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ChangeRoomSettle : MonoBehaviour {
 	public GameObject LastEnnemi;
-	public GameObject NextEnnemy;
 	public GameObject LastDecount;
-	public GameObject nextDecount;
+	public GameObject player;
+	public GameObject NextEnnemy;
 
 	// Use this for initialization
 	void Start () {
-		
+		player = GameObject.Find ("raycar");
 	}
 	
 	// Update is called once per frame
@@ -20,61 +20,96 @@ public class ChangeRoomSettle : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col) {
 		if(col.tag=="Player")
 		{
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [0] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [0] = LastDecount.GetComponent<EnnemyDecount> ().Decount [0];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [0] = null;
+			NextEnnemy.SetActive (true);
 
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [1] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [1] = LastDecount.GetComponent<EnnemyDecount> ().Decount [1];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [1] = null;
+			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [0] != null) {
+				player.GetComponent<CheckVisinCone> ().EnnemyInScene [0] = LastDecount.GetComponent<EnnemyDecount> ().Decount [0];
+				player.GetComponent<CheckVisinCone> ().PatrolOne=LastDecount.GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnnemyPatrolUpgraded>();
+				player.GetComponent<CheckVisinCone> ().ConvisibleOne=LastDecount.GetComponent<EnnemyDecount> ().Decount [0].GetComponent<ConVisible>();
+				player.GetComponent<CheckVisinCone> ().MarkOne=LastDecount.GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnemyMarked>();
 
+			}
+				else
+				player.GetComponent<CheckVisinCone>().EnnemyInScene [0] = null;
 
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [2] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [2] = LastDecount.GetComponent<EnnemyDecount> ().Decount [2];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [2] = null;
+			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [1] != null) {
+				player.GetComponent<CheckVisinCone> ().EnnemyInScene [1] = LastDecount.GetComponent<EnnemyDecount> ().Decount [1];
+				player.GetComponent<CheckVisinCone> ().PatrolTwo=LastDecount.GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnnemyPatrolUpgraded>();
+				player.GetComponent<CheckVisinCone> ().ConvisibleTwo=LastDecount.GetComponent<EnnemyDecount> ().Decount [1].GetComponent<ConVisible>();
+				player.GetComponent<CheckVisinCone> ().MarkTwo=LastDecount.GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnemyMarked>();
 
-
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [3] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [3] = LastDecount.GetComponent<EnnemyDecount> ().Decount [3];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [3] = null;
-
-
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [4] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [4] = LastDecount.GetComponent<EnnemyDecount> ().Decount [0];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [4] = null;
+			}
+				else
+				player.GetComponent<CheckVisinCone>().EnnemyInScene [1] = null;
 
 
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [0] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [0] = LastDecount.GetComponent<EnnemyDecount> ().Decount [4];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [4] = null;
+			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [2] != null) {
+				player.GetComponent<CheckVisinCone> ().EnnemyInScene [2] = LastDecount.GetComponent<EnnemyDecount> ().Decount [2];
+				player.GetComponent<CheckVisinCone> ().Patrolthree=LastDecount.GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnnemyPatrolUpgraded>();
+				player.GetComponent<CheckVisinCone> ().ConvisibleThree=LastDecount.GetComponent<EnnemyDecount> ().Decount [2].GetComponent<ConVisible>();
+				player.GetComponent<CheckVisinCone> ().MarkThree=LastDecount.GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnemyMarked>();
+
+			}
+				else
+				player.GetComponent<CheckVisinCone>().EnnemyInScene [2] = null;
 
 
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [5] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [5] = LastDecount.GetComponent<EnnemyDecount> ().Decount [5];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [5] = null;
+			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [3] != null) {
+				player.GetComponent<CheckVisinCone> ().EnnemyInScene [3] = LastDecount.GetComponent<EnnemyDecount> ().Decount [3];
+				player.GetComponent<CheckVisinCone> ().PatrolFour=LastDecount.GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnnemyPatrolUpgraded>();
+				player.GetComponent<CheckVisinCone> ().ConvisibleFour=LastDecount.GetComponent<EnnemyDecount> ().Decount [3].GetComponent<ConVisible>();
+				player.GetComponent<CheckVisinCone> ().MarkFour=LastDecount.GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnemyMarked>();
+
+			}
+				else
+				player.GetComponent<CheckVisinCone>().EnnemyInScene [3] = null;
 
 
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [6] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [6] = LastDecount.GetComponent<EnnemyDecount> ().Decount [6];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [6] = null;
+			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [4] != null) {
+				player.GetComponent<CheckVisinCone> ().EnnemyInScene [4] = LastDecount.GetComponent<EnnemyDecount> ().Decount [4];
+				player.GetComponent<CheckVisinCone> ().PatrolFive=LastDecount.GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnnemyPatrolUpgraded>();
+				player.GetComponent<CheckVisinCone> ().ConvisibleFive=LastDecount.GetComponent<EnnemyDecount> ().Decount [4].GetComponent<ConVisible>();
+				player.GetComponent<CheckVisinCone> ().MarkFive=LastDecount.GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnemyMarked>();
+
+			}
+				else
+				player.GetComponent<CheckVisinCone>().EnnemyInScene [4] = null;
 
 
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [7] != null)
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [7] = LastDecount.GetComponent<EnnemyDecount> ().Decount [7];
-			else
-				nextDecount.GetComponent<EnnemyDecount> ().Decount [7] = null;
+			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [5] != null) {
+				player.GetComponent<CheckVisinCone> ().EnnemyInScene [5] = LastDecount.GetComponent<EnnemyDecount> ().Decount [5];
+				player.GetComponent<CheckVisinCone> ().PatrolSix=LastDecount.GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnnemyPatrolUpgraded>();
+				player.GetComponent<CheckVisinCone> ().ConvisibleSix=LastDecount.GetComponent<EnnemyDecount> ().Decount [5].GetComponent<ConVisible>();
+				player.GetComponent<CheckVisinCone> ().MarkSix=LastDecount.GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnemyMarked>();
+
+			}
+				else
+				player.GetComponent<CheckVisinCone>().EnnemyInScene [5] = null;
+
+
+			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [6] != null) {
+				player.GetComponent<CheckVisinCone> ().EnnemyInScene [6] = LastDecount.GetComponent<EnnemyDecount> ().Decount [6];
+				player.GetComponent<CheckVisinCone> ().PatrolSeven=LastDecount.GetComponent<EnnemyDecount> ().Decount [6].GetComponent<EnnnemyPatrolUpgraded>();
+				player.GetComponent<CheckVisinCone> ().ConvisibleSeven=LastDecount.GetComponent<EnnemyDecount> ().Decount [6].GetComponent<ConVisible>();
+				player.GetComponent<CheckVisinCone> ().MarkSeven=LastDecount.GetComponent<EnnemyDecount> ().Decount [6].GetComponent<EnnemyMarked>();
+					
+			}
+				else
+				player.GetComponent<CheckVisinCone>().EnnemyInScene [6] = null;
+
+
+			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [7] != null) {
+				player.GetComponent<CheckVisinCone> ().EnnemyInScene [7] = LastDecount.GetComponent<EnnemyDecount> ().Decount [7];
+				player.GetComponent<CheckVisinCone> ().PatrolEight=LastDecount.GetComponent<EnnemyDecount> ().Decount [7].GetComponent<EnnnemyPatrolUpgraded>();
+				player.GetComponent<CheckVisinCone> ().ConvisibleEight=LastDecount.GetComponent<EnnemyDecount> ().Decount [7].GetComponent<ConVisible>();
+				player.GetComponent<CheckVisinCone> ().MarkEight=LastDecount.GetComponent<EnnemyDecount> ().Decount [7].GetComponent<EnnemyMarked>();
+
+			}
+				else
+				player.GetComponent<CheckVisinCone>().EnnemyInScene [7] = null;
 			
 
 			LastEnnemi.SetActive (false);
-			NextEnnemy.SetActive (true);
 
 		}
 

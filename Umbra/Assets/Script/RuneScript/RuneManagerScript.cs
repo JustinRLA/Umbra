@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class RuneManagerScript : MonoBehaviour 
 {
 	ShadowInstantiate myShadowInstantiate;
-	BlindEnnemyRune myBlindEnnemyRune;
 	MarkEnnemy myMarkEnnemy;
 	SolidifcationEnabled mySolidicationEnabled;
 	LineRendererTest myLineRenderer;
@@ -92,7 +91,6 @@ public class RuneManagerScript : MonoBehaviour
 		myMarkEnnemy = GetComponent<MarkEnnemy> ();
 		myShadowInstantiate = GetComponent<ShadowInstantiate> ();
 		Cursor.visible = false;
-		myBlindEnnemyRune = GetComponent<BlindEnnemyRune> ();
 		myLureScript=GetComponent<LureScript>();
 		myPlatformCharacter = ThePlayer.GetComponent<PlatformerCharacter2D> ();
 		myenabledTrapMode = GetComponent<EnableTrapMode> ();
@@ -240,7 +238,7 @@ public class RuneManagerScript : MonoBehaviour
 		myCam.GetComponent<Grayscale>().enabled=false;
 			ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 			ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
-			ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
+			myPlatUserControl.enabled = true;
 
 		
 		}
@@ -248,7 +246,7 @@ public class RuneManagerScript : MonoBehaviour
 		if (RuneModeEnabled == true) { 
 			ThePlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 0;
 			ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = false;
-			ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = false;
+			myPlatUserControl.enabled = false;
 
 			animCamOne.speed = 13;
 			animCamTwo.speed = 13;

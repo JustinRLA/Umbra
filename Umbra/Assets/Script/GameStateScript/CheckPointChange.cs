@@ -4,7 +4,6 @@ using System.Collections;
 public class CheckPointChange : MonoBehaviour {
 	public GameObject CheckPointManager;
 	public int AssignCheckpoint;
-	public GameObject DeathManager;
 	public GameObject PlayerOne;
 	int actualKill;
 	// Use this for initialization

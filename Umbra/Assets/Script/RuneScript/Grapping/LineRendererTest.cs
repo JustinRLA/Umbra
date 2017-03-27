@@ -6,8 +6,6 @@ public class LineRendererTest : MonoBehaviour {
 	RaycastHit2D myRaycast;
 		private LineRenderer line; // Reference to LineRenderer
 		private Vector3 mousePos;    
-		private Vector3 startPos;    // Start position of line
-		private Vector3 endPos;    // End position of line
 	Vector3 dir;
 	public float forcedividable;
 	private Vector3 PlayerPos;
@@ -27,8 +25,6 @@ public class LineRendererTest : MonoBehaviour {
 	RuneManagerScript myRuneManagerScript;
 	public GameObject[] theBeams;
 	Material TestMat;
-	Color ColorBadStart= Color.red;
-	Color ColorBadEnd= Color.red;
 	public bool TouchGood=false;
 	public bool ActivateThisShit=true;
 	public	bool touchedBadThing=false;
@@ -79,7 +75,6 @@ public class LineRendererTest : MonoBehaviour {
 		mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		mousePos.z = 0;
 		line.SetPosition(0,PlayerMy.position);
-		startPos = PlayerMy.position;
 		}
 			if(Input.GetMouseButtonDown(1))
 			{
@@ -108,7 +103,6 @@ public class LineRendererTest : MonoBehaviour {
 					mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 					mousePos.z = 0;
 					line.SetPosition(1,mousePos);
-					endPos = mousePos;
 					//addColliderToLine();
 				Destroy (line);
 
