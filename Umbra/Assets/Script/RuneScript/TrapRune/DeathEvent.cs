@@ -45,6 +45,7 @@ public class DeathEvent : MonoBehaviour {
 
 	public void chooseSprite()
 	{
+		AkSoundEngine.PostEvent ("PC_Action_Kill", gameObject);
 		tempoKill++;
 		number=Random.Range(0,4);
 		ActualCadre = PossibleSprite [number];

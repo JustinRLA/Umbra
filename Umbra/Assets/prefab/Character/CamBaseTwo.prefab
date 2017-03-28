@@ -22,12 +22,13 @@ GameObject:
   - component: {fileID: 20265387828481666}
   - component: {fileID: 92704003824032778}
   - component: {fileID: 124719237120861984}
-  - component: {fileID: 81626777287870988}
   - component: {fileID: 114707141015300994}
   - component: {fileID: 95018723075954762}
   - component: {fileID: 114549556108799290}
   - component: {fileID: 114540410259120180}
   - component: {fileID: 114311525228863190}
+  - component: {fileID: 114314194145959638}
+  - component: {fileID: 114093223847310002}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -442,13 +443,6 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!81 &81626777287870988
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1095121205252894}
-  m_Enabled: 1
 --- !u!92 &92190442773872906
 Behaviour:
   m_ObjectHideFlags: 1
@@ -630,6 +624,22 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: daf9781cad112c75d0008dfa8d76c639, type: 3}
   textureRamp: {fileID: 0}
   rampOffset: 0
+--- !u!114 &114093223847310002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1095121205252894}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc6bde01469c7b4badee5362f191d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  downsample: 2
+  blurSize: 10
+  blurIterations: 2
+  blurType: 0
+  blurShader: {fileID: 4800000, guid: f9d5fa183cd6b45eeb1491f74863cd91, type: 3}
 --- !u!114 &114114761075760672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -723,6 +733,18 @@ MonoBehaviour:
   scratchTexture: {fileID: 2800000, guid: 6205c27cc031f4e66b8ea90d1bfaa158, type: 3}
   shaderRGB: {fileID: 4800000, guid: 5d7f4c401ae8946bcb0d6ff68a9e7466, type: 3}
   shaderYUV: {fileID: 4800000, guid: 0e447868506ba49f0a73235b8a8b647a, type: 3}
+--- !u!114 &114314194145959638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1095121205252894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e7dfb689ce3244cab9ab8a027475ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenerId: 0
 --- !u!114 &114390302282552008
 MonoBehaviour:
   m_ObjectHideFlags: 1

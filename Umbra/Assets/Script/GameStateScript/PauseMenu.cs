@@ -10,9 +10,11 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject PauseUI;
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManScript;
+	public GameObject CameraOne;
 
 	// Use this for initialization
 	void Start () {
+		CameraOne = GameObject.Find ("Main Camera");
 		RuneManager = GameObject.Find ("RuneManager");
 		myRuneManScript = RuneManager.GetComponent<RuneManagerScript> ();
 
@@ -27,6 +29,7 @@ public class PauseMenu : MonoBehaviour {
 
 	void PauseBegin()
 	{
+		CameraOne.GetComponent<BlurOptimized> ().enabled = true;
 		Paused = true;
 		Cursor.visible = true;
 		Time.timeScale = 0;
@@ -38,6 +41,7 @@ public class PauseMenu : MonoBehaviour {
 	public void PauseEnd()
 	{		Cursor.visible = false;
 		
+		CameraOne.GetComponent<BlurOptimized> ().enabled = false;
 
 		Paused = false;
 		Time.timeScale = 1;

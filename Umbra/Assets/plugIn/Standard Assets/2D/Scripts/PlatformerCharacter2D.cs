@@ -321,6 +321,7 @@ using UnityEngine.SceneManagement;
 				m_Grounded = false;
 				m_Anim.SetBool("Ground", false);
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+					AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
 			}
 
 		if(move==0||crouch==true||m_Grounded==false||canBeSilenced==true)
@@ -454,5 +455,10 @@ using UnityEngine.SceneManagement;
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+	public void FootStepPlay()
+	{
+		AkSoundEngine.PostEvent ("PC_Foot_Run", gameObject);
+	}
+
     }
 
