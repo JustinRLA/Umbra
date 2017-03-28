@@ -13,6 +13,8 @@ public class CheckVisinCone : MonoBehaviour {
 	RaycastHit2D EnnmyRaySeven;
 	RaycastHit2D EnnmyRayEight;
 
+	public bool[] AlerEnnemy;
+
 	public LayerMask LayerMaskOne;
 
 
@@ -54,21 +56,35 @@ public class CheckVisinCone : MonoBehaviour {
 	public EnnnemyPatrolUpgraded PatrolSix;
 	public EnnnemyPatrolUpgraded PatrolSeven;
 	public EnnnemyPatrolUpgraded PatrolEight;
+	GameObject Playa;
+	PlatformerCharacter2D pplatformscript;
 
 
 
 	// Use this for initialization
 	void Start () {
+		Playa = GameObject.Find ("2DCharacter(Clone)");
+		pplatformscript = Playa.GetComponent<PlatformerCharacter2D> ();
 
 
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if(EnnemyInScene[0] != null)
-		{
-//			if(EnnmyRay  !=null)
-//			{
+	void Update () { 
+		
+		if (EnnemyInScene [0] != null) {
+			
+			if (PatrolOne != null)
+			{
+			if (PatrolOne.Alert == true)
+				AlerEnnemy [0] = true;
+			else
+				AlerEnnemy [0] = false;
+			}	
+			else
+				AlerEnnemy [0] = false;
+
+		
 			EnnmyRay  = Physics2D.Linecast (transform.position, EnnemyInScene [0].position,LayerMaskOne);
 
 			if (EnnmyRay.collider != null) {
@@ -87,14 +103,21 @@ public class CheckVisinCone : MonoBehaviour {
 					ConvisibleOne.HisSight.GetComponent<MeshRenderer> ().enabled = false;
 			}
 			}
-			
-		//	}
-
+	}
+		else
+			AlerEnnemy [0] = false;
+		
+		if (EnnemyInScene [1] != null) {
+			if (PatrolTwo != null)
+			{
+			if (PatrolTwo.Alert == true)
+				AlerEnnemy [1] = true;
+			else
+				AlerEnnemy [1] = false;
 		}
-		if(EnnemyInScene[1] != null)
-		{
-			//			if(EnnmyRay  !=null)
-			//			{
+		else
+			AlerEnnemy [1] = false;
+		
 			EnnmyRayTwo  = Physics2D.Linecast (transform.position, EnnemyInScene [1].position,LayerMaskOne);
 			if (EnnmyRayTwo.collider != null) {
 			if (EnnmyRayTwo.collider.tag == "bloc")
@@ -113,10 +136,19 @@ public class CheckVisinCone : MonoBehaviour {
 			}
 
 		}
-			if(EnnemyInScene[2] != null)
-			{
-				//			if(EnnmyRay  !=null)
-				//			{
+		else
+			AlerEnnemy [1] = false;
+		
+		if (EnnemyInScene [2] != null) {
+			if (Patrolthree != null){
+			if (Patrolthree.Alert == true)
+				AlerEnnemy [2] = true;
+			else
+				AlerEnnemy [2] = false;
+		}
+		else
+			AlerEnnemy [2] = false;
+		
 			EnnmyRayThree  = Physics2D.Linecast (transform.position, EnnemyInScene [2].position,LayerMaskOne);
 			if (EnnmyRayThree.collider != null) {
 				
@@ -136,9 +168,20 @@ public class CheckVisinCone : MonoBehaviour {
 			//	}
 			}
 		}
+		else
+			AlerEnnemy [2] = false;
 
-			if(EnnemyInScene[3] != null)
-			{
+
+		if (EnnemyInScene [3] != null) {
+			if (PatrolFour != null)
+			{	
+			if (PatrolFour.Alert == true)
+				AlerEnnemy [3] = true;
+			else
+				AlerEnnemy [3] = false;
+		}
+		else
+			AlerEnnemy [3] = false;
 				//			if(EnnmyRay  !=null)
 				//			{
 			EnnmyRayFour  = Physics2D.Linecast (transform.position, EnnemyInScene [3].position,LayerMaskOne);
@@ -159,9 +202,19 @@ public class CheckVisinCone : MonoBehaviour {
 				//	}
 
 			}
+		else
+			AlerEnnemy [3] = false;
 
-			if(EnnemyInScene[4] != null)
+		if (EnnemyInScene [4] != null) {
+			if (PatrolFive != null)
 			{
+			if (PatrolFive.Alert == true)
+				AlerEnnemy [4] = true;
+			else
+				AlerEnnemy [4] = false;
+		}
+		else
+			AlerEnnemy [4] = false;
 				//			if(EnnmyRay  !=null)
 				//			{
 			EnnmyRayFive  = Physics2D.Linecast (transform.position, EnnemyInScene [4].position,LayerMaskOne);
@@ -183,34 +236,56 @@ public class CheckVisinCone : MonoBehaviour {
 				}
 			}
 		}
-			if(EnnemyInScene[5] != null)
-			{
-				//			if(EnnmyRay  !=null)
-				//			{
-			EnnmyRaySix  = Physics2D.Linecast (transform.position, EnnemyInScene [5].position,LayerMaskOne);
+		else
+			AlerEnnemy [4] = false;
+
+
+		if (EnnemyInScene [5] != null) {
+			if (PatrolSix != null) {
+				if (PatrolSix.Alert == true)
+					AlerEnnemy [5] = true;
+				else
+					AlerEnnemy [5] = false;
+			}
+			else
+				AlerEnnemy [5] = false;
+			//			if(EnnmyRay  !=null)
+			//			{
+			EnnmyRaySix = Physics2D.Linecast (transform.position, EnnemyInScene [5].position, LayerMaskOne);
 			if (EnnmyRaySix.collider != null) {
 				
 				if (EnnmyRaySix.collider.tag == "bloc")
 					CanSeeSix = false;
 				else
 					CanSeeSix = true;
-				if (CanSeeSix == true || MarkSix==true) {
+				if (CanSeeSix == true || MarkSix == true) {
 					if (PatrolSix != null)
 						ConvisibleSix.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 				}
-				if (CanSeeSix == false && MarkSix==false) {
-				{
-					if (PatrolSix != null)
-						ConvisibleSix.HisSight.GetComponent<MeshRenderer> ().enabled = false;
-				}
-				//	}
+				if (CanSeeSix == false && MarkSix == false) {
+					{
+						if (PatrolSix != null)
+							ConvisibleSix.HisSight.GetComponent<MeshRenderer> ().enabled = false;
+					}
+					//	}
 
-				}}
+				}
 			}
+		} else
+			AlerEnnemy [5] = false;
+
 			if(EnnemyInScene[6] != null)
 			{
-				//			if(EnnmyRay  !=null)
-				//			{
+				if (PatrolSeven != null)
+				{
+		if (PatrolSeven.Alert == true)
+			AlerEnnemy [6] = true;
+		else
+			AlerEnnemy [6] = false;
+	}
+	else
+		AlerEnnemy [6] = false;
+	
 			EnnmyRaySeven  = Physics2D.Linecast (transform.position, EnnemyInScene [6].position,LayerMaskOne);
 			if (EnnmyRaySeven.collider != null) {
 				
@@ -230,11 +305,20 @@ public class CheckVisinCone : MonoBehaviour {
 				//	}
 			}
 			}
+else
+	AlerEnnemy [6] = false;
 
 			if(EnnemyInScene[7] != null)
 			{
-				//			if(EnnmyRay  !=null)
-				//			{
+	if (PatrolSeven != null) {
+		if (PatrolEight.Alert == true)
+			AlerEnnemy [7] = true;
+		else
+			AlerEnnemy [7] = false;
+	}
+	else
+		AlerEnnemy [7] = false;
+	
 			EnnmyRayEight  = Physics2D.Linecast (transform.position, EnnemyInScene [7].position,LayerMaskOne);
 			if (EnnmyRayEight.collider != null) {
 				
@@ -254,5 +338,15 @@ public class CheckVisinCone : MonoBehaviour {
 				//	}
 			}
 			}
+else
+	AlerEnnemy [7] = false;
+
+		if (AlerEnnemy [0] == false && AlerEnnemy [1] == false && AlerEnnemy [2] == false && AlerEnnemy [3] == false && AlerEnnemy [4] == false && AlerEnnemy [5] == false && AlerEnnemy [6] == false && AlerEnnemy [7] == false)
+			pplatformscript.canhideThree = true;
+		else
+			pplatformscript.canhideThree = false;
+		
 	}
+
+
 }

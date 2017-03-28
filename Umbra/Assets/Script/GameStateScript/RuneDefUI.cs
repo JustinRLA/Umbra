@@ -9,7 +9,7 @@ public class RuneDefUI : MonoBehaviour {
 
 	float ratio;	
 	public GameObject FullImage;
-
+	Image ImageFull;
 
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManager;
@@ -17,9 +17,10 @@ public class RuneDefUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
-
+		ImageFull = FullImage.GetComponent<Image> ();
 		image = GetComponent<Image> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
+
 		
 	}
 	
@@ -29,9 +30,9 @@ public class RuneDefUI : MonoBehaviour {
 //		print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
-			image.color = new Color (1f, 1f, 1f);	
+			ImageFull.enabled = true;
 		else
-			image.color = new Color (0.5f, 0.5f, 0.5f);	
+			ImageFull.enabled = false;
 
 	}
 }

@@ -10,12 +10,14 @@ public class RuneTactUI : MonoBehaviour {
 	
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManager;
-	public GameObject FullImage;
+	public GameObject Fullimage;
+	Image fullImage;
 
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
 		image = GetComponent<Image> ();
+		fullImage = Fullimage.GetComponent<Image> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 		
 	}
@@ -26,9 +28,8 @@ public class RuneTactUI : MonoBehaviour {
 		//print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
-			image.color = new Color (1f, 1f, 1f);	
+			fullImage.enabled = true;
 		else
-			image.color = new Color (0.5f, 0.5f, 0.5f);	
-
+			fullImage.enabled = false;
 	}
 }

@@ -41,6 +41,14 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject ImageRuneSolidification;
 	public GameObject ImageRuneMarquage;
 	public GameObject ImageRuneLeurre;
+
+	public GameObject ImageRuneOmbreFull;
+	public GameObject ImageRuneAccrochageFull;
+	public GameObject ImageRunePiegeFull;
+	public GameObject ImageRuneSolidificationFull;
+	public GameObject ImageRuneMarquageFull;
+	public GameObject ImageRuneLeurreFull;
+
 	PlatformerCharacter2D myPlatchar;
 	Platformer2DUserControl myPlatUserControl;
 
@@ -56,6 +64,7 @@ public class RuneManagerScript : MonoBehaviour
 	public int TypeRuneUsed;
 	// Use this for initialization
 	void Start () {
+		
 		ThePlayer=GameObject.Find("2DCharacter(Clone)");
 		myPlatUserControl = ThePlayer.GetComponent<Platformer2DUserControl>();
 		myPlatformCharacter= ThePlayer.GetComponent<PlatformerCharacter2D>();
@@ -72,6 +81,14 @@ public class RuneManagerScript : MonoBehaviour
 		ImageRuneSolidification = GameObject.Find ("solideImage");
 		ImageRuneOmbre = GameObject.Find ("OmbreRuneImage");
 		ImageRunePiege = GameObject.Find ("trapImage");
+
+		ImageRuneLeurreFull = GameObject.Find ("LeureImageFull");
+		ImageRuneAccrochageFull = GameObject.Find ("AccrochageImageFull");
+		ImageRuneMarquageFull = GameObject.Find ("MaquageRuneImageFull");
+		ImageRuneSolidificationFull = GameObject.Find ("solideImageFull");
+		ImageRuneOmbreFull = GameObject.Find ("OmbreRuneImageFull");
+		ImageRunePiegeFull = GameObject.Find ("trapImageFull");
+
 
 		animCamOne=myCam.GetComponent<Animator>();
 		animCamTwo=myCamTwo.GetComponent<Animator>();
@@ -102,19 +119,29 @@ public class RuneManagerScript : MonoBehaviour
 		if(OffenseRune==1)
 		{
 			ImageRunePiege.SetActive(true);
+			ImageRunePiegeFull.SetActive(true);
+			ImageRuneMarquageFull.SetActive(false);
+
 			ImageRuneMarquage.SetActive(false);
 			texttrappe.SetActive(true);
 			textMark.SetActive(false);
 		}
 		if(OffenseRune==2)
 		{
+			ImageRunePiegeFull.SetActive(false);
+
+			ImageRuneMarquageFull.SetActive(true);
+
 			ImageRunePiege.SetActive(false);
+
 			ImageRuneMarquage.SetActive(true);
 			texttrappe.SetActive(false);
 			textMark.SetActive(true);
 		}
 		if(OffenseRune==0)
 		{
+			ImageRunePiegeFull.SetActive(false);
+			ImageRuneMarquageFull.SetActive(false);
 			ImageRunePiege.SetActive(false);
 			ImageRuneMarquage.SetActive(false);
 			texttrappe.SetActive(false);
@@ -125,11 +152,17 @@ public class RuneManagerScript : MonoBehaviour
 		{
 			ImageRuneLeurre.SetActive(false);
 			ImageRuneOmbre.SetActive(true);
+
+			ImageRuneLeurreFull.SetActive(false);
+			ImageRuneOmbreFull.SetActive(true);
+
 			textleure.SetActive(false);
 			textOmbre.SetActive(true);
 		}
 		if(DefFune==2)
 		{
+			ImageRuneLeurreFull.SetActive(true);
+			ImageRuneOmbreFull.SetActive(false);
 			ImageRuneLeurre.SetActive(true);
 			ImageRuneOmbre.SetActive(false);
 
@@ -138,6 +171,10 @@ public class RuneManagerScript : MonoBehaviour
 		}
 		if(DefFune==0)
 		{
+
+			ImageRuneLeurreFull.SetActive(false);
+			ImageRuneOmbreFull.SetActive(false);
+
 			ImageRuneLeurre.SetActive(false);
 			ImageRuneOmbre.SetActive(false);
 
@@ -145,7 +182,11 @@ public class RuneManagerScript : MonoBehaviour
 			textOmbre.SetActive(false);
 		}
 		if(TacticRune==0)
-		{
+		{			
+			ImageRuneSolidificationFull.SetActive (false);
+			ImageRuneAccrochageFull.SetActive(false);
+
+			
 			ImageRuneSolidification.SetActive (false);
 			ImageRuneAccrochage.SetActive(false);
 			textSolid.SetActive(false);
@@ -153,6 +194,8 @@ public class RuneManagerScript : MonoBehaviour
 		}
 		if(TacticRune==1)
 		{
+			ImageRuneSolidificationFull.SetActive (false);
+			ImageRuneAccrochageFull.SetActive(true);
 			ImageRuneSolidification.SetActive (false);
 			ImageRuneAccrochage.SetActive(true);
 			textSolid.SetActive(false);
@@ -160,6 +203,8 @@ public class RuneManagerScript : MonoBehaviour
 		}
 		if(TacticRune==2)
 		{
+			ImageRuneSolidificationFull.SetActive (true);
+			ImageRuneAccrochageFull.SetActive(false);
 			ImageRuneSolidification.SetActive (true);
 			ImageRuneAccrochage.SetActive(false);
 			textSolid.SetActive(true);

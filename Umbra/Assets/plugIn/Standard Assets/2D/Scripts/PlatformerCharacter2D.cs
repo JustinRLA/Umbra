@@ -18,6 +18,7 @@ using UnityEngine.SceneManagement;
 	public bool ClimbTrue;
 	public bool canHide;
 	public bool canhideTwo;
+	public bool canhideThree;
 	bool canstopHidden;
 		public GameObject RunTrigger;
 		CircleCollider2D RunCircleCollider;
@@ -162,7 +163,7 @@ using UnityEngine.SceneManagement;
 
 	void Update()
 	{
-		if (canHide == true && canhideTwo==true && Input.GetKeyDown (KeyCode.E))
+		if (canHide == true && canhideTwo==true && canhideThree==true && Input.GetKeyDown (KeyCode.E))
 		{
 			hidden =! hidden;
 		}
