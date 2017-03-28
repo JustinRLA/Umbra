@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6039CD2D-2BD1-4F29-A1ED-D501BCA287C6}" SchemaVersion="75">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{6039CD2D-2BD1-4F29-A1ED-D501BCA287C6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6039CD2D-2BD1-4F29-A1ED-D501BCA287C6}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="PC" ID="{A37E6950-C31A-4324-8C5C-F834078A2018}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="PC_Foot_Climb" ID="{6A03E6DA-DA73-412A-8365-37CE5571395D}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Stealth_On" ID="{421E7F00-2EA9-4A38-89FD-D674AC8924BE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Action_Climb" ID="{958BB055-D67F-4A23-9C12-DEF7F56921D8}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Action_Respawn" ID="{680E6AAF-58EE-44BF-B68D-1A03B5BF7EEE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Foot_Jump" ID="{610644C9-6CAC-4F28-98AA-66395D9B4CC8}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Action_Death" ID="{15C3EB39-7F8F-461F-8B9C-9BE9EBC90A6C}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Action_SlowMo" ID="{FD165A1F-9D79-4CEA-9C0F-7178A6ADF75C}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Foot_Land" ID="{83C6A0EA-04DE-47C3-8F03-96B3ADC72ABF}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Action_Heartbeat" ID="{625600B3-DFA3-4888-8168-9146F183D3A1}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Foot_Run" ID="{B590E484-D0C9-4ACC-87B2-66CD2820313A}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Action_Kill" ID="{4A52EC2A-8E5F-4EA7-93E6-92EBFE09639A}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Stealth_Off" ID="{B7313609-B364-4048-864E-B2A4FADAAD86}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Action_Look" ID="{7AE73DFC-284F-4BDD-B47C-2FB522BAAB4D}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
+						<CurrentStateRef Name="Secteur3" ID="{5A5DFBC6-2121-42BC-A3DB-6F784FA51199}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

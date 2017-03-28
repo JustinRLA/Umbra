@@ -10,6 +10,22 @@
 						<State Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}">
+					<ChildrenList>
+						<State Name="None" ID="{3BCEF881-E9E3-441A-990F-8436EA94DD12}"/>
+						<State Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
+						<State Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
+						<State Name="Secteur3" ID="{5A5DFBC6-2121-42BC-A3DB-6F784FA51199}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}">
+					<ChildrenList>
+						<State Name="None" ID="{1DA321C2-B7A2-42FA-B9C2-0AE74C97C835}"/>
+						<State Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
+						<State Name="SlowMo" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
+						<State Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

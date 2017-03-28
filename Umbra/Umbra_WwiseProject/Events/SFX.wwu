@@ -100,46 +100,16 @@
 								</Event>
 								<Event Name="PC_Foot_Run" ID="{B590E484-D0C9-4ACC-87B2-66CD2820313A}">
 									<ChildrenList>
-										<Action Name="Play" ID="{8B2EDE34-226F-49B6-86BC-ED174F3C82B6}" ShortID="718582941" Type="Play" Scope="One" Global="false">
+										<Action Name="Play" ID="{A66A4D28-5574-4D23-A1CE-42D9310C08EB}" ShortID="94302692" Type="Play" Scope="One" Global="false">
 											<ElementList>
-												<Element ID="{3031FBBD-3469-4875-B30C-7D573EBD6DC9}" Global="false">
-													<ObjectRef Name="PC_Foot_Run" ID="{5448BC35-CEB2-4068-A727-7A8238D60BD4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												<Element ID="{2CB58C52-C7BA-48E6-AE94-85D5E4ECFD64}" Global="false">
+													<ObjectRef Name="PC_Foot_Run" ID="{66E41A44-0164-409F-AA46-B764A92EFA89}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="PC_Foot_Land" ID="{83C6A0EA-04DE-47C3-8F03-96B3ADC72ABF}"/>
-								<Event Name="PC_Foot_Grass" ID="{58CB2155-6103-47BB-A1C2-DA5420A47CAE}">
-									<ChildrenList>
-										<Action Name="Set Switch" ID="{9C77C8EB-EFDE-40A2-B2AD-865303428F32}" ShortID="540852373" Type="SetSwitch" Scope="All" Global="false">
-											<SetItemParam>
-												<Group Name="Player_Foot_Surface" ID="{FA361B94-C2D3-4B0E-9D91-16B19017996D}"/>
-												<GroupItem Name="Grass" ID="{41A69D4F-9C31-4AC7-8FE6-C949A376F72D}"/>
-											</SetItemParam>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="PC_Foot_Stone" ID="{E3EB5665-EB51-45F5-BAD2-4DF0725F1A3B}">
-									<ChildrenList>
-										<Action Name="Set Switch" ID="{6D3F062A-CAA6-4CDC-84C4-70C07E92FCAD}" ShortID="317881560" Type="SetSwitch" Scope="All" Global="false">
-											<SetItemParam>
-												<Group Name="Player_Foot_Surface" ID="{FA361B94-C2D3-4B0E-9D91-16B19017996D}"/>
-												<GroupItem Name="Stone" ID="{B86AFD86-DF11-4E82-8C7F-36B448CB4A39}"/>
-											</SetItemParam>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="PC_Foot_Wood" ID="{FA86F1F1-BD47-4095-ACB2-32B7AE711F52}">
-									<ChildrenList>
-										<Action Name="Set Switch" ID="{85F833BA-98A5-40C0-8551-AB39D891076B}" ShortID="576736646" Type="SetSwitch" Scope="All" Global="false">
-											<SetItemParam>
-												<Group Name="Player_Foot_Surface" ID="{FA361B94-C2D3-4B0E-9D91-16B19017996D}"/>
-												<GroupItem Name="Wood" ID="{58A99030-CF40-48DE-9DA5-45DC3F64FE70}"/>
-											</SetItemParam>
-										</Action>
-									</ChildrenList>
-								</Event>
 								<Event Name="PC_Stealth_On" ID="{421E7F00-2EA9-4A38-89FD-D674AC8924BE}">
 									<ChildrenList>
 										<Action Name="Set State" ID="{95A8B5AC-F56F-4787-9B1B-07C3E15DD4F8}" ShortID="45984913" Type="SetState" Scope="All" Global="true">
@@ -157,6 +127,17 @@
 												<Group Name="Foot_Stealth" ID="{ED19598D-0D14-42E6-AD54-64446D222339}"/>
 												<GroupItem Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
 											</SetItemParam>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Foot_Climb" ID="{6A03E6DA-DA73-412A-8365-37CE5571395D}">
+									<ChildrenList>
+										<Action Name="Play" ID="{D43B0EE0-F0DC-4982-B523-781ED4094675}" ShortID="533863030" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{E4F0BF5A-1378-4969-8B97-EAF5B16F42C1}" Global="false">
+													<ObjectRef Name="PC_Foot_Climb" ID="{386D7082-EA98-452F-816F-A8853C5F23CC}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
 										</Action>
 									</ChildrenList>
 								</Event>

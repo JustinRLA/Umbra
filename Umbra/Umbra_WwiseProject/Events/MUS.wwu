@@ -3,17 +3,72 @@
 	<Events>
 		<WorkUnit Name="MUS" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Mus_Secteur1_Alert" ID="{C6814B7A-8E6B-41C1-82CB-907D07F4336C}"/>
-				<Event Name="Mus_Secteur1_Explo" ID="{AF31897A-1132-42B2-A004-F3F5D456986C}"/>
-				<Event Name="Mus_Secteur3_SlowMo" ID="{7CB71E4C-05D2-4198-8235-F15078E41365}"/>
-				<Event Name="Mus_Secteur2_SlowMo" ID="{2805320F-6E74-43FD-B36C-34DE62F30307}"/>
-				<Event Name="Mus_Secteur2_Explo" ID="{EAA7BD23-29AA-4042-A1E5-2C8253E2F604}"/>
-				<Event Name="Mus_Secteur2_Alert" ID="{8AE5179E-A123-42C9-AC6E-ACD82418E2FD}"/>
-				<Event Name="Mus_Secteur1_SlowMo" ID="{CED625F7-E072-457F-82A0-AF179DC25010}"/>
-				<Event Name="Mus_Secteur3_Explo" ID="{EE7AB2B4-23BF-4ED0-9576-D53401FA0C34}"/>
-				<Event Name="Mus_Secteur3_Alert" ID="{5428CB94-268E-4273-9B9B-0FC045CF3F9A}"/>
+				<Event Name="Mus_Secteur1" ID="{C6814B7A-8E6B-41C1-82CB-907D07F4336C}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{3DC3F7FC-28DB-4E46-820F-2189A647D295}" ShortID="867240218" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
+								<GroupItem Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mus_Explo" ID="{AF31897A-1132-42B2-A004-F3F5D456986C}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{51C34C20-5A4B-44E1-8CBB-56BC4647624D}" ShortID="197075627" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
+								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mus_Secteur3" ID="{2805320F-6E74-43FD-B36C-34DE62F30307}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{B3C923E2-3F0D-41D5-B1B9-30325ABB0320}" ShortID="985985644" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
+								<GroupItem Name="Secteur3" ID="{5A5DFBC6-2121-42BC-A3DB-6F784FA51199}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mus_Secteur2" ID="{EAA7BD23-29AA-4042-A1E5-2C8253E2F604}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{E032E3D9-C1F6-473B-AE32-23527FCAB93F}" ShortID="230634003" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
+								<GroupItem Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mus_Alert" ID="{8AE5179E-A123-42C9-AC6E-ACD82418E2FD}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{ED2BCC80-3889-43F8-B800-2DD326BD487C}" ShortID="46923821" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
+								<GroupItem Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mus_SlowMo" ID="{CED625F7-E072-457F-82A0-AF179DC25010}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{3BB647B8-8010-4183-9A2E-BAD4002C0AA6}" ShortID="787999852" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
+								<GroupItem Name="SlowMo" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Mus_Menu" ID="{38662795-8415-457A-BF95-5843AD36745E}"/>
-				<Event Name="STOPALLMUSIC" ID="{13BA3892-5996-4738-BE32-837B6F852AF5}"/>
+				<Event Name="STOPALLMUSIC" ID="{13BA3892-5996-4738-BE32-837B6F852AF5}">
+					<ChildrenList>
+						<Action Name="Stop All" ID="{05A2E062-87D7-43DC-AEBB-144663C1B7C7}" ShortID="818622105" Type="Stop" Scope="All" Global="true"/>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

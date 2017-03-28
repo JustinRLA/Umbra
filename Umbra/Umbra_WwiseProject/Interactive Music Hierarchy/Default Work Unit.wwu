@@ -1,6 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" SchemaVersion="75">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="Secteurs" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" ShortID="162372556">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSwitchContainer Name="Secteur1" ID="{3229886E-91DE-4D52-97E5-269A423A00D7}" ShortID="266494378">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+								</Reference>
+							</ReferenceList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{BF7D1489-EC87-4FA0-8D0F-842361D81564}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{907335CA-353F-4802-9CDF-8DB1A2D04063}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+						</MusicSwitchContainer>
+						<MusicSwitchContainer Name="Secteur2" ID="{DEEF42CB-3F82-4066-87BA-12249BD74805}" ShortID="85906615">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+								</Reference>
+							</ReferenceList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{871ECA39-02DB-461D-B28B-76407B0AA5C9}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{4F2E94EB-92E8-46B5-AFB0-C12C99D365DB}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+						</MusicSwitchContainer>
+						<MusicSwitchContainer Name="Secteur3" ID="{EADC85CF-895E-487C-BD85-7A53B4C61A48}" ShortID="738421558">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+								</Reference>
+							</ReferenceList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{C204B7EF-7FE7-439B-BCA9-3D59FF29B6A7}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{525BCAE1-B2AF-4110-B8D2-F7DD83182702}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+						</MusicSwitchContainer>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{1292CEE4-EB2C-4EE7-A252-31B188EBD81F}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{6491BFB4-44E3-44AF-9779-F062967D1C8E}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ArgumentList>
+						<ArgumentRef Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Secteur1" ID="{3229886E-91DE-4D52-97E5-269A423A00D7}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Secteur2" ID="{DEEF42CB-3F82-4066-87BA-12249BD74805}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Secteur3" ID="{5A5DFBC6-2121-42BC-A3DB-6F784FA51199}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Secteur3" ID="{EADC85CF-895E-487C-BD85-7A53B4C61A48}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="None" ID="{3BCEF881-E9E3-441A-990F-8436EA94DD12}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Secteur1" ID="{3229886E-91DE-4D52-97E5-269A423A00D7}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
