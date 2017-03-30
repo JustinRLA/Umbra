@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 	public bool hidden;
 	SpriteRenderer mySpriteRenderer;
 	public int numberofDeath;
+	public GameObject AssassinTrigger;
 		//Voici un commentaire test
 	[SerializeField] public float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
@@ -24,7 +25,7 @@ using UnityEngine.SceneManagement;
 		CircleCollider2D RunCircleCollider;
 	public bool canRune;
 	public bool canChangeRune;
-		//public GameObject ViewTrigger;
+		public GameObject ViewTrigger;
 //		CircleCollider2D ViewTriggerCollider;
 	public bool TruePlayer;
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
@@ -70,6 +71,7 @@ using UnityEngine.SceneManagement;
         }
 	public void Death()
 	{
+		Time.timeScale = 1;
 		inShadow = false;
 		ClimbTrue = false;
 		actualOeillereSPriteRenderer.enabled = false;
@@ -122,7 +124,8 @@ using UnityEngine.SceneManagement;
 	void JumpFromLader()
 	{
 		//canClimb = false;
-		StartCoroutine(ChangeLadderCol());
+		//StartCoroutine(ChangeLadderCol());
+		AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
 
 		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
@@ -168,14 +171,22 @@ using UnityEngine.SceneManagement;
 			hidden =! hidden;
 		}
 		if (hidden == true) {
+			RunTrigger.layer = 26;
+			ViewTrigger.layer = 26;
 			m_MaxSpeed = 0;
 			mySpriteRenderer.sortingOrder = -1;
+			ViewTrigger.layer = 26;
+
 			gameObject.layer = 26;
 		}
 			else
 		{
+			RunTrigger.layer = 13;
+			ViewTrigger.layer = 13;
+
 			m_MaxSpeed = 10;
 			mySpriteRenderer.sortingOrder = 1;
+			ViewTrigger.layer = 13;
 
 				gameObject.layer = 13;
 		}
@@ -195,6 +206,7 @@ using UnityEngine.SceneManagement;
 		{
 		if (ClimbTrue == true) 
 		{
+				
 			m_JumpForce = 0;
 			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
 			if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space)==false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder>().MaxHauteur.position.y)
@@ -212,7 +224,7 @@ using UnityEngine.SceneManagement;
 		else
 		{
 				m_JumpForce = 650;
-			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
+				m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
 			GetComponent<Animator>().SetBool ("Climb", false);
 
 		}
@@ -437,13 +449,13 @@ using UnityEngine.SceneManagement;
 	}
 	//
 
-	IEnumerator ChangeLadderCol()
-	{
-		ActualLadder.GetComponent<Collider2D> ().enabled = false;
-		yield return new WaitForSeconds (1f);
-		ActualLadder.GetComponent<Collider2D> ().enabled = true;
-
-	}
+//	IEnumerator ChangeLadderCol()
+//	{
+//		ActualLadder.GetComponent<Collider2D> ().enabled = false;
+//		yield return new WaitForSeconds (1f);
+//		ActualLadder.GetComponent<Collider2D> ().enabled = true;
+//
+//	}
 
         private void Flip()
         {

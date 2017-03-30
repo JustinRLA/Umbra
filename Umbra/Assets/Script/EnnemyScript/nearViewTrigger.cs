@@ -29,16 +29,27 @@ public class nearViewTrigger : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D col) {
 		//print ("fuckkkkkkkkk");
-		if (col.tag == "ViewTrigger")
+		if (col.tag == "Player"  )
 		{
 			inSigght = true;
 			print ("fuckkkkkkkkk");
 
 		}
 	}
+
+	void OnTriggerStay2D (Collider2D col) {
+		//print ("fuckkkkkkkkk");
+		if (col.tag == "Player"  )
+		{
+			inSigght = true;
+			print ("fuckkkkkkkkk");
+
+		}
+	}
+
 	void OnTriggerExit2D (Collider2D col) {
 		//print ("fuckkkkkkkkk");
-		if (col.tag == "ViewTrigger")
+		if (col.tag == "Player")
 		{
 			inSigght = false;
 		}
