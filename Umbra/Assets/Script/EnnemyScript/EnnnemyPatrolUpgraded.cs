@@ -930,7 +930,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 		trapped = true;
 		speed = 0;
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (15f);
 		trapped = false;
 		speed = OriginalSpeed;
 	}	

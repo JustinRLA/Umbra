@@ -36,6 +36,8 @@ public class InitializeLevel : MonoBehaviour {
 		EnnemyPack [1].SetActive (false);
 		EnnemyPack [2].SetActive (false);
 		EnnemyPack [3].SetActive (false);
+		EnnemyPack [4].SetActive (false);
+		EnnemyPack [5].SetActive (false);
 
 
 		Cam.SetActive (true);

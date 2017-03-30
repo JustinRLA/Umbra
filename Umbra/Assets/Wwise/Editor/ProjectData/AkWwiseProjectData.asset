@@ -22,9 +22,29 @@ MonoBehaviour:
   - PhysicalPath: Events\MUS.wwu
     ParentPhysicalPath: 
     Guid: '{5A477295-C31E-4DA4-B2B5-986D076D6D3E}'
-    m_lastTimePsrt1: 1551942457
-    m_lastTimePart2: -1999342251
+    m_lastTimePsrt1: -732566827
+    m_lastTimePart2: -1999342057
     List:
+    - Name: Mus_Alert
+      Path: MUS\Mus_Alert
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Alert
+        ObjectType: 3
+      ID: 1102633101
+      Guid: 9e17e58a23a1c942ac6eacd82418e2fd
+      maxAttenuation: 0
+    - Name: Mus_Explo
+      Path: MUS\Mus_Explo
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Explo
+        ObjectType: 3
+      ID: 48865357
+      Guid: 7a8931af3211b242a004f3f5d456986c
+      maxAttenuation: 0
     - Name: Mus_Menu
       Path: MUS\Mus_Menu
       PathAndIcons:
@@ -35,95 +55,45 @@ MonoBehaviour:
       ID: -1145324244
       Guid: 9527663815847a45bf955843ad36745e
       maxAttenuation: 0
-    - Name: Mus_Secteur1_Alert
-      Path: MUS\Mus_Secteur1_Alert
+    - Name: Mus_Secteur1
+      Path: MUS\Mus_Secteur1
       PathAndIcons:
       - ElementName: MUS
         ObjectType: 12
-      - ElementName: Mus_Secteur1_Alert
+      - ElementName: Mus_Secteur1
         ObjectType: 3
-      ID: 1045103706
+      ID: -1070929931
       Guid: 7a4b81c66b8ec14182cb907d07f4336c
       maxAttenuation: 0
-    - Name: Mus_Secteur1_Explo
-      Path: MUS\Mus_Secteur1_Explo
+    - Name: Mus_Secteur2
+      Path: MUS\Mus_Secteur2
       PathAndIcons:
       - ElementName: MUS
         ObjectType: 12
-      - ElementName: Mus_Secteur1_Explo
+      - ElementName: Mus_Secteur2
         ObjectType: 3
-      ID: 277551974
-      Guid: 7a8931af3211b242a004f3f5d456986c
-      maxAttenuation: 0
-    - Name: Mus_Secteur1_SlowMo
-      Path: MUS\Mus_Secteur1_SlowMo
-      PathAndIcons:
-      - ElementName: MUS
-        ObjectType: 12
-      - ElementName: Mus_Secteur1_SlowMo
-        ObjectType: 3
-      ID: 1314238983
-      Guid: f725d6ce72e07f4582a0af179dc25010
-      maxAttenuation: 0
-    - Name: Mus_Secteur2_Alert
-      Path: MUS\Mus_Secteur2_Alert
-      PathAndIcons:
-      - ElementName: MUS
-        ObjectType: 12
-      - ElementName: Mus_Secteur2_Alert
-        ObjectType: 3
-      ID: 975926233
-      Guid: 9e17e58a23a1c942ac6eacd82418e2fd
-      maxAttenuation: 0
-    - Name: Mus_Secteur2_Explo
-      Path: MUS\Mus_Secteur2_Explo
-      PathAndIcons:
-      - ElementName: MUS
-        ObjectType: 12
-      - ElementName: Mus_Secteur2_Explo
-        ObjectType: 3
-      ID: -33960135
+      ID: -1070929930
       Guid: 23bda7eaaa294240a1e52c8253e2f604
       maxAttenuation: 0
-    - Name: Mus_Secteur2_SlowMo
-      Path: MUS\Mus_Secteur2_SlowMo
+    - Name: Mus_Secteur3
+      Path: MUS\Mus_Secteur3
       PathAndIcons:
       - ElementName: MUS
         ObjectType: 12
-      - ElementName: Mus_Secteur2_SlowMo
+      - ElementName: Mus_Secteur3
         ObjectType: 3
-      ID: 610104822
+      ID: -1070929929
       Guid: 0f320528746efd43b36c34de62f30307
       maxAttenuation: 0
-    - Name: Mus_Secteur3_Alert
-      Path: MUS\Mus_Secteur3_Alert
+    - Name: Mus_SlowMo
+      Path: MUS\Mus_SlowMo
       PathAndIcons:
       - ElementName: MUS
         ObjectType: 12
-      - ElementName: Mus_Secteur3_Alert
+      - ElementName: Mus_SlowMo
         ObjectType: 3
-      ID: -1622598844
-      Guid: 94cb28548e2673429b9b0fc045cf3f9a
-      maxAttenuation: 0
-    - Name: Mus_Secteur3_Explo
-      Path: MUS\Mus_Secteur3_Explo
-      PathAndIcons:
-      - ElementName: MUS
-        ObjectType: 12
-      - ElementName: Mus_Secteur3_Explo
-        ObjectType: 3
-      ID: -1350449880
-      Guid: b4b27aeebf23d04e9576d53401fa0c34
-      maxAttenuation: 0
-    - Name: Mus_Secteur3_SlowMo
-      Path: MUS\Mus_Secteur3_SlowMo
-      PathAndIcons:
-      - ElementName: MUS
-        ObjectType: 12
-      - ElementName: Mus_Secteur3_SlowMo
-        ObjectType: 3
-      ID: -1939229039
-      Guid: 4c1eb77cd20598418235f15078e41365
+      ID: 350380962
+      Guid: f725d6ce72e07f4582a0af179dc25010
       maxAttenuation: 0
     - Name: STOPALLMUSIC
       Path: MUS\STOPALLMUSIC
@@ -138,8 +108,8 @@ MonoBehaviour:
   - PhysicalPath: Events\SFX.wwu
     ParentPhysicalPath: 
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: 1551942457
-    m_lastTimePart2: -1999342251
+    m_lastTimePsrt1: -732496820
+    m_lastTimePart2: -1999342057
     List:
     - Name: Amb_Alarm
       Path: SFX\Amb\Amb_Alarm
@@ -443,8 +413,8 @@ MonoBehaviour:
       ID: 348181601
       Guid: 1f5a16fd799dea4c9c0f7178a6adf75c
       maxAttenuation: 0
-    - Name: PC_Foot_Grass
-      Path: SFX\PC\Foot\PC_Foot_Grass
+    - Name: PC_Foot_Climb
+      Path: SFX\PC\Foot\PC_Foot_Climb
       PathAndIcons:
       - ElementName: SFX
         ObjectType: 12
@@ -452,10 +422,10 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Foot
         ObjectType: 4
-      - ElementName: PC_Foot_Grass
+      - ElementName: PC_Foot_Climb
         ObjectType: 3
-      ID: -1616502218
-      Guid: 5521cb580361bb47a1c2da5420a47cae
+      ID: 771062343
+      Guid: dae6036a73da2a41836537ce5571395d
       maxAttenuation: 0
     - Name: PC_Foot_Jump
       Path: SFX\PC\Foot\PC_Foot_Jump
@@ -498,34 +468,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1166184207
       Guid: 84e490b5c9d0cc4a87b266cd2820313a
-      maxAttenuation: 0
-    - Name: PC_Foot_Stone
-      Path: SFX\PC\Foot\PC_Foot_Stone
-      PathAndIcons:
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: PC
-        ObjectType: 4
-      - ElementName: Foot
-        ObjectType: 4
-      - ElementName: PC_Foot_Stone
-        ObjectType: 3
-      ID: -1019584593
-      Guid: 6556ebe351ebf545bad24df0725f1a3b
-      maxAttenuation: 0
-    - Name: PC_Foot_Wood
-      Path: SFX\PC\Foot\PC_Foot_Wood
-      PathAndIcons:
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: PC
-        ObjectType: 4
-      - ElementName: Foot
-        ObjectType: 4
-      - ElementName: PC_Foot_Wood
-        ObjectType: 3
-      ID: -1687436209
-      Guid: f1f186fa47bd9540acb232b7ae711f52
       maxAttenuation: 0
     - Name: PC_Rune_Accrochage_Equip
       Path: SFX\PC\Rune\PC_Rune_Accrochage_Equip
@@ -782,8 +724,8 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1AF2D82A-9DEA-451D-A831-817BC1E3BD46}'
-    m_lastTimePsrt1: 1566732294
-    m_lastTimePart2: -1999342251
+    m_lastTimePsrt1: -732226793
+    m_lastTimePart2: -1999342057
     List:
     - Name: Foot_Stealth
       Path: Default Work Unit\Foot_Stealth
@@ -810,38 +752,71 @@ MonoBehaviour:
       - bytes: 9e7fdde8be8f234baf7f07eeefcf9c8c
       - bytes: 434c2608eccdbe44bdde1381fc737ad2
       - bytes: 7619d63e02d6a5409040b4c7db371d23
+    - Name: Music
+      Path: Default Work Unit\Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 9
+      ID: -303024426
+      Guid: 7b2522e95b89ca48bc7990e2c0efe7bf
+      values:
+      - Alert
+      - Explo
+      - None
+      - SlowMo
+      ValueIcons:
+      - ElementName: Alert
+        ObjectType: 8
+      - ElementName: Explo
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: SlowMo
+        ObjectType: 8
+      valueIDs: 819a052bc1a35ce3db3ba32c7eb3e3c0
+      ValueGuids:
+      - bytes: 31d6f98a9aef004481c0f4408fc4e323
+      - bytes: fc5289156efd6344a59660c49a19e437
+      - bytes: c221a31da2b7fa42b9c20ae74c97c835
+      - bytes: a8ad00bc5aa9f24d92480c9618bfe155
+    - Name: Secteurs
+      Path: Default Work Unit\Secteurs
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Secteurs
+        ObjectType: 9
+      ID: 2057580299
+      Guid: 49b392050577e74c9355341f1190cb9b
+      values:
+      - None
+      - Secteur1
+      - Secteur2
+      - Secteur3
+      ValueIcons:
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Secteur1
+        ObjectType: 8
+      - ElementName: Secteur2
+        ObjectType: 8
+      - ElementName: Secteur3
+        ObjectType: 8
+      valueIDs: db3ba32c492fa47a4a2fa47a4b2fa47a
+      ValueGuids:
+      - bytes: 81f8ce3be3e91a44990f8436ea94dd12
+      - bytes: b5b4df5f83cb624a9e6d3b2f3a9ebcf0
+      - bytes: b17e73badaf378469b50c0d677e5d593
+      - bytes: c6fb5d5a2121bc42a3db6f784fa51199
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{78B9560E-201B-4A99-946B-5B5FB9572D52}'
-    m_lastTimePsrt1: 1566732294
-    m_lastTimePart2: -1999342251
-    List:
-    - Name: Player_Foot_Surface
-      Path: Default Work Unit\Player_Foot_Surface
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player_Foot_Surface
-        ObjectType: 11
-      ID: 1648289661
-      Guid: 941b36fad3c20e4b9d9116b19017996d
-      values:
-      - Grass
-      - Stone
-      - Wood
-      ValueIcons:
-      - ElementName: Grass
-        ObjectType: 10
-      - ElementName: Stone
-        ObjectType: 10
-      - ElementName: Wood
-        ObjectType: 10
-      valueIDs: d92e3dfd1c6d89488a58ab7a
-      ValueGuids:
-      - bytes: 4f9da641319cc74a8fe6c949a376f72d
-      - bytes: 86fd6ab811df824e8c7f36b448cb4a39
-      - bytes: 3090a95840cfde489da545dc3f64fe70
+    m_lastTimePsrt1: -732156786
+    m_lastTimePart2: -1999342057
+    List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 

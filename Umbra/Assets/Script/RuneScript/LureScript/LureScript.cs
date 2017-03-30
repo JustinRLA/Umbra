@@ -196,15 +196,10 @@ public class LureScript : MonoBehaviour {
 		yield return new WaitForSeconds (1f);
 		ThePlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
-			yield return new WaitForSeconds(4f);
-		timer = 14;
-		yield return new WaitForSeconds(4f);
-		timer = 12;
-		yield return new WaitForSeconds(4f);
-		timer = 8;
-		yield return new WaitForSeconds(4f);
-		timer = 4;
-		yield return new WaitForSeconds(4f);
+	
+		yield return new WaitForSeconds(2f);
+		timer = 2;
+		yield return new WaitForSeconds(2f);
 
 			EnnemyDistracted = false;
 			ThePlayerShadow.transform.position = ThePlayer.transform.position;
