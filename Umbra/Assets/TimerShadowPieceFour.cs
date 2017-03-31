@@ -5,10 +5,13 @@ using UnityEngine;
 public class TimerShadowPieceFour : MonoBehaviour {
 	public GameObject ShadowOne;
 	public GameObject ShadowTwo;
+	public GameObject ShadowThree;
 
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(TimerOmbre());
+		StartCoroutine(TimerOmbreTwo());
+
 	}
 	
 	// Update is called once per frame
@@ -31,4 +34,16 @@ public class TimerShadowPieceFour : MonoBehaviour {
 
 	}
 
+	IEnumerator TimerOmbreTwo()
+	{
+		while(true)
+		{
+			ShadowThree.SetActive (true);
+			yield return new WaitForSeconds (3f);
+			ShadowThree.SetActive (false);
+			yield return new WaitForSeconds (3f);
+
+		}
+
+	}
 }

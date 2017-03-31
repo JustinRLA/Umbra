@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
     public class PlatformerCharacter2D : MonoBehaviour
     {
+	public bool canJump;
 	public bool hidden;
 	SpriteRenderer mySpriteRenderer;
 	public int numberofDeath;
@@ -123,6 +124,7 @@ using UnityEngine.SceneManagement;
 	}
 	void JumpFromLader()
 	{
+		
 		//canClimb = false;
 		//StartCoroutine(ChangeLadderCol());
 		AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
@@ -213,9 +215,11 @@ using UnityEngine.SceneManagement;
 				transform.Translate (Vector2.up * 2*Time.deltaTime);
 			if (Input.GetKey (KeyCode.S) && transform.position.y > ActualLadder.GetComponent<maxHauteurLadder>().MinHauteur.position.y)
 				transform.Translate (Vector2.down * 2*Time.deltaTime);
-			if (Input.GetKey (KeyCode.Space))
+				if (Input.GetKey (KeyCode.Space) && canJump==true)
+				{
+					canJump = false;
 				JumpFromLader ();		
-
+				}
 			GetComponent<Animator>().SetBool ("Climb", true);
 
 			if (Input.GetKey (KeyCode.E))
@@ -334,7 +338,10 @@ using UnityEngine.SceneManagement;
 				m_Anim.SetBool("Ground", false);
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 					AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
+					canJump = false;
 			}
+				if (Input.GetKeyUp (KeyCode.Space))
+					canJump = true;
 
 		if(move==0||crouch==true||m_Grounded==false||canBeSilenced==true)
 			{
