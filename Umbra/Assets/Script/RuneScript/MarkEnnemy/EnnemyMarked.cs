@@ -97,6 +97,8 @@ public class EnnemyMarked : MonoBehaviour {
 	IEnumerator MarkEvent()
 	{
 		{
+			ennemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerAttack = 1.5f;
+
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 
@@ -112,6 +114,8 @@ public class EnnemyMarked : MonoBehaviour {
 		Cursor.visible = false;
 		Time.timeScale = 1f;
 		yield return new WaitForSeconds (25f);
+			ennemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerAttack = 0f;
+
 		isMarked = false;
 
 		gameObject.layer = 11;

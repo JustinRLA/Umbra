@@ -19,7 +19,16 @@ public class CloseDoor : MonoBehaviour {
         { 
 			Door.GetComponent<Animator> ().SetBool ("Play", true);
 		DoorCol.SetActive (true);
-        }
-    }
+			StartCoroutine (delay ());
+				}
+				}
+	IEnumerator delay()
+	{
+		yield return new WaitForSeconds (0.5f);
+		AkSoundEngine.PostEvent ("Amb_Door",gameObject);
+		Destroy (gameObject);       
+				}
+	
+	
 
 }

@@ -6,7 +6,6 @@ public class checkIfAssassination : MonoBehaviour {
 	public GameObject AssassinFeedback;
 	public bool canAssassinate;
 	public GameObject ActualEnnemy;
-	public GameObject OtherEnnemy;
 	public GameObject Playa;
 
 	// Use this for initialization
@@ -23,12 +22,12 @@ public class checkIfAssassination : MonoBehaviour {
 		if(canAssassinate==true)
 		{
 			AssassinFeedback.SetActive (true);
-			if (Input.GetKeyDown (KeyCode.E) && ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded>().Alert==false)
+			if (Input.GetKeyDown (KeyCode.E))
 			{
 				Assassination();
 			}
 		}
-		else
+		if(canAssassinate==false || ActualEnnemy == null)
 			AssassinFeedback.SetActive (false);
 		
 
@@ -40,12 +39,10 @@ public class checkIfAssassination : MonoBehaviour {
 		
 
 		if (col.tag == "ennemy") {
-//			print ("See");
-			if (col.GetComponent<EnnnemyPatrolUpgraded> ().Alert == false || col.GetComponent<EnnemyMarked>().isMarked==true)
-			{
+//		
 				canAssassinate = true;
 				ActualEnnemy = col.gameObject;
-			}
+
 		} 
 //		else
 //			canAssassinate = false;

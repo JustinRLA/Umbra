@@ -22,8 +22,8 @@ MonoBehaviour:
   - PhysicalPath: Events\MUS.wwu
     ParentPhysicalPath: 
     Guid: '{5A477295-C31E-4DA4-B2B5-986D076D6D3E}'
-    m_lastTimePsrt1: 1569131946
-    m_lastTimePart2: -1999341651
+    m_lastTimePsrt1: -621471226
+    m_lastTimePart2: -1999341258
     List:
     - Name: Mus_Alert
       Path: MUS\Mus_Alert
@@ -108,8 +108,8 @@ MonoBehaviour:
   - PhysicalPath: Events\SFX.wwu
     ParentPhysicalPath: 
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: 1569131946
-    m_lastTimePart2: -1999341651
+    m_lastTimePsrt1: -621461225
+    m_lastTimePart2: -1999341258
     List:
     - Name: Amb_Alarm
       Path: SFX\Amb\Amb_Alarm
@@ -159,18 +159,6 @@ MonoBehaviour:
       ID: -1286891642
       Guid: f1bf6628dbbb9444a3fdfb34f32a84de
       maxAttenuation: 0
-    - Name: Amb_Rain
-      Path: SFX\Amb\Amb_Rain
-      PathAndIcons:
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: Amb
-        ObjectType: 4
-      - ElementName: Amb_Rain
-        ObjectType: 3
-      ID: -992925524
-      Guid: 95a469531c3a2a4a8b420d54c86d2ebd
-      maxAttenuation: 0
     - Name: Amb_Room
       Path: SFX\Amb\Amb_Room
       PathAndIcons:
@@ -183,17 +171,17 @@ MonoBehaviour:
       ID: -1092605513
       Guid: 35fc1c84cb03ef478cc5ea3ff15c12c3
       maxAttenuation: 0
-    - Name: Amb_Secteur
-      Path: SFX\Amb\Amb_Secteur
+    - Name: Amb_Shadow_Pipe
+      Path: SFX\Amb\Amb_Shadow_Pipe
       PathAndIcons:
       - ElementName: SFX
         ObjectType: 12
       - ElementName: Amb
         ObjectType: 4
-      - ElementName: Amb_Secteur
+      - ElementName: Amb_Shadow_Pipe
         ObjectType: 3
-      ID: 121508585
-      Guid: e8f730edd7b70c42b564eead2f705b23
+      ID: 897032325
+      Guid: bebca29f814cb543a39a3f9db53f7897
       maxAttenuation: 0
     - Name: Menu_Cancel
       Path: SFX\UI\Menu_Cancel
@@ -267,18 +255,6 @@ MonoBehaviour:
       ID: 888215683
       Guid: efa4bdb138858641b912f08590483413
       maxAttenuation: 0
-    - Name: NPC_Foot_Stealth
-      Path: SFX\NPCs\NPC_Foot_Stealth
-      PathAndIcons:
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: NPCs
-        ObjectType: 4
-      - ElementName: NPC_Foot_Stealth
-        ObjectType: 3
-      ID: -459546399
-      Guid: 492beffdf7b8f34f858b508a383d59cc
-      maxAttenuation: 0
     - Name: NPC_State_Alarmed
       Path: SFX\NPCs\NPC_State_Alarmed
       PathAndIcons:
@@ -328,20 +304,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1105079315
       Guid: 55b08b957fd6234a9c12def7f56921d8
-      maxAttenuation: 0
-    - Name: PC_Action_Death
-      Path: SFX\PC\Action\PC_Action_Death
-      PathAndIcons:
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: PC
-        ObjectType: 4
-      - ElementName: Action
-        ObjectType: 4
-      - ElementName: PC_Action_Death
-        ObjectType: 3
-      ID: 169793748
-      Guid: 39ebc3158f7f1f468b9c9be9ebc90a6c
       maxAttenuation: 0
     - Name: PC_Action_Heartbeat
       Path: SFX\PC\Action\PC_Action_Heartbeat
@@ -481,7 +443,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Accrochage_Equip
         ObjectType: 3
       ID: 651324617
-      Guid: 4dd317441d10c04ba5f048193099adeb
+      Guid: 5a36d538ab2d0b41acaa1f602af53062
       maxAttenuation: 0
     - Name: PC_Rune_Accrochage_Green
       Path: SFX\PC\Rune\PC_Rune_Accrochage_Green
@@ -495,7 +457,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Accrochage_Green
         ObjectType: 3
       ID: -30021124
-      Guid: 922ba2a6b4fa0944a0df5e050a03d972
+      Guid: b015b178336cea4cbce27d866cae7fab
       maxAttenuation: 0
     - Name: PC_Rune_Accrochage_Red
       Path: SFX\PC\Rune\PC_Rune_Accrochage_Red
@@ -509,7 +471,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Accrochage_Red
         ObjectType: 3
       ID: 2004937196
-      Guid: 5f5fb1ba816c6840a2d8d6027dd31fe3
+      Guid: 23e8c3bfc2ad5e44a86460eb4a15f3f3
       maxAttenuation: 0
     - Name: PC_Rune_Accrochage_Use
       Path: SFX\PC\Rune\PC_Rune_Accrochage_Use
@@ -523,7 +485,21 @@ MonoBehaviour:
       - ElementName: PC_Rune_Accrochage_Use
         ObjectType: 3
       ID: 1701807220
-      Guid: f60ace763d19fb45afbe1aa098105576
+      Guid: cff1439b14eb46489b90d67af580af11
+      maxAttenuation: 0
+    - Name: PC_Rune_Cooldown
+      Path: SFX\PC\Rune\PC_Rune_Cooldown
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Cooldown
+        ObjectType: 3
+      ID: -2038822093
+      Guid: b8a7de6a6a15d1418c57fe98efd80138
       maxAttenuation: 0
     - Name: PC_Rune_Leurre_Filter
       Path: SFX\PC\Rune\PC_Rune_Leurre_Filter
@@ -537,7 +513,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Leurre_Filter
         ObjectType: 3
       ID: 564655388
-      Guid: 317271c781468b4e879b6b0ae9683152
+      Guid: 6f7a647783b71b4d8dd82ffa46999b51
       maxAttenuation: 0
     - Name: PC_Rune_Leurre_Use
       Path: SFX\PC\Rune\PC_Rune_Leurre_Use
@@ -551,7 +527,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Leurre_Use
         ObjectType: 3
       ID: -1999344529
-      Guid: f3e8068c4c4a1a458b0883a87a56d20b
+      Guid: a8c25a958674434bb170a08a2c8327a8
       maxAttenuation: 0
     - Name: PC_Rune_Marquage_Sonar
       Path: SFX\PC\Rune\PC_Rune_Marquage_Sonar
@@ -565,7 +541,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Marquage_Sonar
         ObjectType: 3
       ID: 2135334427
-      Guid: da6e0b520a73214e8d17f19b9c25b83e
+      Guid: 5ca9cbf10a81864c9aecd40ef52e610b
       maxAttenuation: 0
     - Name: PC_Rune_Marquage_Use
       Path: SFX\PC\Rune\PC_Rune_Marquage_Use
@@ -579,7 +555,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Marquage_Use
         ObjectType: 3
       ID: 153992643
-      Guid: 56d633d8e751b543a584f15e68312e42
+      Guid: 9fc853532e375d40b451e3886d4f6772
       maxAttenuation: 0
     - Name: PC_Rune_Ombre_Decay
       Path: SFX\PC\Rune\PC_Rune_Ombre_Decay
@@ -593,7 +569,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Ombre_Decay
         ObjectType: 3
       ID: -884277146
-      Guid: 02f80ded3b06ef4cbd4d7e14927a0c24
+      Guid: 1d79f59a9651c74e922b9db02462d97f
       maxAttenuation: 0
     - Name: PC_Rune_Ombre_Select
       Path: SFX\PC\Rune\PC_Rune_Ombre_Select
@@ -607,7 +583,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Ombre_Select
         ObjectType: 3
       ID: -703850108
-      Guid: 74889e0cc8204b4a9d63fa07cae802f0
+      Guid: 653b76fe2d7da448a8967656da4bd284
       maxAttenuation: 0
     - Name: PC_Rune_Ombre_Use
       Path: SFX\PC\Rune\PC_Rune_Ombre_Use
@@ -621,7 +597,21 @@ MonoBehaviour:
       - ElementName: PC_Rune_Ombre_Use
         ObjectType: 3
       ID: 710126949
-      Guid: b0dcb28122280342959c8d1d84fbd818
+      Guid: fe9a34470dc7c34aac799a8107f16db5
+      maxAttenuation: 0
+    - Name: PC_Rune_Select
+      Path: SFX\PC\Rune\PC_Rune_Select
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Select
+        ObjectType: 3
+      ID: 966453248
+      Guid: cf32daa68d777b4aa10c38f3e6230a76
       maxAttenuation: 0
     - Name: PC_Rune_Solide_End
       Path: SFX\PC\Rune\PC_Rune_Solide_End
@@ -635,7 +625,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Solide_End
         ObjectType: 3
       ID: 1994207056
-      Guid: d1e57f8fbe230647b79a673c42f96959
+      Guid: 626410ae7ede8a4ab29ee6da24dfa8e8
       maxAttenuation: 0
     - Name: PC_Rune_Solide_Use
       Path: SFX\PC\Rune\PC_Rune_Solide_Use
@@ -649,7 +639,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Solide_Use
         ObjectType: 3
       ID: 1543771206
-      Guid: 991ba633848bbb4194f379ecc86bc179
+      Guid: 33c733c172c7f84ab820b76f7b9b87aa
       maxAttenuation: 0
     - Name: PC_Rune_Trap_Stun
       Path: SFX\PC\Rune\PC_Rune_Trap_Stun
@@ -663,7 +653,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Trap_Stun
         ObjectType: 3
       ID: 698530244
-      Guid: dcbfdbf9ebee054593323743c3de1a2d
+      Guid: 691e8978de4bc349a4b48b4d15c755d0
       maxAttenuation: 0
     - Name: PC_Rune_Trap_Use
       Path: SFX\PC\Rune\PC_Rune_Trap_Use
@@ -677,7 +667,7 @@ MonoBehaviour:
       - ElementName: PC_Rune_Trap_Use
         ObjectType: 3
       ID: -1050639811
-      Guid: 4ac145a2292c9847a50fb7387a4e7862
+      Guid: 829a7885ff8c1b439f7a002eb8ef85e6
       maxAttenuation: 0
     - Name: PC_Stealth_Off
       Path: SFX\PC\Foot\PC_Stealth_Off
@@ -861,8 +851,8 @@ MonoBehaviour:
   - /Umbra_WwiseProject
   - /Umbra_WwiseProject/Events
   - /Umbra_WwiseProject/Events/SFX
-  - /Umbra_WwiseProject/Events/SFX/PC
-  - /Umbra_WwiseProject/Events/SFX/PC/Foot
+  - /Umbra_WwiseProject/Events/SFX/Amb
+  - /Umbra_WwiseProject/Events/SFX/NPCs
   - /Umbra_WwiseProject/SoundBanks
   - /Umbra_WwiseProject/SoundBanks/TrueSoundBank
   m_lastPopulateTimePsrt1: 0

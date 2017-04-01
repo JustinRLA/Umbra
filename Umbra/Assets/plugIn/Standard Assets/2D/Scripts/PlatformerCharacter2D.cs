@@ -20,6 +20,7 @@ using UnityEngine.SceneManagement;
 	public bool ClimbTrue;
 	public bool canHide;
 	public bool canhideTwo;
+	public Transform TeleportPointDeath;
 	public bool canhideThree;
 	bool canstopHidden;
 		public GameObject RunTrigger;
@@ -45,10 +46,13 @@ using UnityEngine.SceneManagement;
 	public GameObject RealCheckPointManager;
 	bool canBeSilenced;
 	public GameObject MyRuneMan;
+	public bool dead;
+
 	RuneManagerScript myRuneManScript;
 
 	void Start()
 	{
+		TeleportPointDeath = GameObject.Find ("teleportpointDeath").transform;
 		numberofDeath = PlayerPrefs.GetInt ("Death");
 		if(TruePlayer==true)
 		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
@@ -72,6 +76,7 @@ using UnityEngine.SceneManagement;
         }
 	public void Death()
 	{
+		dead = true;
 		Time.timeScale = 1;
 		inShadow = false;
 		ClimbTrue = false;
@@ -79,10 +84,16 @@ using UnityEngine.SceneManagement;
 		ActualOeillere = null;
 		numberofDeath++;
 		PlayerPrefs.SetInt("Death",numberofDeath);
+		StartCoroutine (DeathEvent ());
+
+	}
+	IEnumerator DeathEvent()
+	{
+		transform.position = TeleportPointDeath.position;
+		yield return new WaitForSeconds (2f);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 
 	}
-
 	public void StartCorou()
 	{
 		StartCoroutine (FastPlayer ());
@@ -168,7 +179,7 @@ using UnityEngine.SceneManagement;
 
 	void Update()
 	{
-		if (canHide == true && canhideTwo==true && canhideThree==true && Input.GetKeyDown (KeyCode.E))
+		if (canHide == true && canhideTwo==true && canhideThree==true && Input.GetKeyDown (KeyCode.E) && dead==false)
 		{
 			hidden =! hidden;
 		}
@@ -206,7 +217,7 @@ using UnityEngine.SceneManagement;
 
 		if(ActualLadder != null)
 		{
-		if (ClimbTrue == true) 
+			if (ClimbTrue == true && dead==false) 
 		{
 				
 			m_JumpForce = 0;
@@ -290,7 +301,7 @@ using UnityEngine.SceneManagement;
 			if(myRuneManScript.RuneModeEnabled==false && TruePlayer==true  && hidden==false)
 		{
 			// If crouching, check to see if the character can stand up
-			if (!crouch && m_Anim.GetBool("Crouch"))
+				if (!crouch && m_Anim.GetBool("Crouch") && dead==false)
 			{
 				// If the character has a ceiling preventing them from standing up, keep them crouching
 				if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
@@ -306,7 +317,9 @@ using UnityEngine.SceneManagement;
 			if (m_Grounded || m_AirControl)
 			{
 				// Reduce the speed if crouching by the crouchSpeed multiplier
-				move = (crouch ? move*m_CrouchSpeed : move);
+					if(dead==false)
+						{
+					move = (crouch ? move*m_CrouchSpeed : move);
 
 				// The Speed animator parameter is set to the absolute value of the horizontal input.
 				m_Anim.SetFloat("Speed", Mathf.Abs(move));
@@ -329,9 +342,10 @@ using UnityEngine.SceneManagement;
 					Flip();
 					}
 				}
+						}
 			}
 			// If the player should jump...
-			if (m_Grounded && jump && m_Anim.GetBool("Ground"))
+				if (m_Grounded && jump && m_Anim.GetBool("Ground") && dead==false)
 			{
 				// Add a vertical force to the player.
 				m_Grounded = false;

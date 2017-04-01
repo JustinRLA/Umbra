@@ -20,6 +20,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public bool PlayerIsDown;
 	Vector3 movPos;
 	bool routine;
+	public float timerAttack;
+
 	public bool Safe;
 	public Transform UpPoint;
 	public Transform UpPoint_UpLevel;
@@ -371,11 +373,12 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //
 	void AlertInMode()
 	{
+		timerAttack -= Time.deltaTime;
 		routine = false;
 		Alert = true;
 		Suspicious = false;
 		backHome = false;
-		if(Vector3.Distance(transform.position, ThePlayer.position)<5 && Safe==false)
+		if(Vector3.Distance(transform.position, ThePlayer.position)<5 && Safe==false && timerAttack<=0)
 		{
 
 			MyPlayer.GetComponent<PlatformerCharacter2D> ().Death ();
