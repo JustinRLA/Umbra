@@ -68,6 +68,8 @@ public class CheckVisinCone : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		SuspiciousFeedback = GameObject.Find ("SuspiciousLune");
+		AlertFeedback = GameObject.Find ("DangerLune");
 		Playa = GameObject.Find ("2DCharacter(Clone)");
 		pplatformscript = Playa.GetComponent<PlatformerCharacter2D> ();
 
@@ -85,13 +87,11 @@ public class CheckVisinCone : MonoBehaviour {
 				AlerEnnemy [0] = true;
 			else
 				AlerEnnemy [0] = false;
+				if (PatrolOne.Suspicious == true)
+					SuspiciousEnnemy [0] = true;
+				else
+					SuspiciousEnnemy [0] = false;
 			}	
-
-			if (PatrolOne.Suspicious == true)
-				SuspiciousEnnemy [0] = true;
-			else
-				SuspiciousEnnemy [0] = false;
-			
 			else
 			{
 				AlerEnnemy [0] = false;
@@ -390,18 +390,24 @@ else
 			SuspiciousEnnemy[6]=false;
 		}
 
-			if(EnnemyInScene[7] != null)
-			{
-	if (PatrolSeven != null) {
-		if (PatrolEight.Alert == true)
-			AlerEnnemy [7] = true;
-		else
-			AlerEnnemy [7] = false;
-	}
-	else
-		AlerEnnemy [7] = false;
-	
-			EnnmyRayEight  = Physics2D.Linecast (transform.position, EnnemyInScene [7].position,LayerMaskOne);
+		if (EnnemyInScene [7] != null) {
+			if (PatrolSeven != null) {
+				if (PatrolEight.Alert == true)
+					AlerEnnemy [7] = true;
+				else
+					AlerEnnemy [7] = false;
+				
+				if (PatrolEight.Suspicious == true)
+					SuspiciousEnnemy [7] = true;
+				else
+					SuspiciousEnnemy [7] = false;
+				
+
+			} else {
+				AlerEnnemy [7] = false;
+				SuspiciousEnnemy [7] = false;
+			}
+			EnnmyRayEight = Physics2D.Linecast (transform.position, EnnemyInScene [7].position, LayerMaskOne);
 			if (EnnmyRayEight.collider != null) {
 				
 				if (EnnmyRayEight.collider.tag == "bloc")
@@ -411,30 +417,33 @@ else
 				if (CanSeeEight == true) {
 					if (PatrolEight != null)
 						ConvisibleEight.HisSight.GetComponent<MeshRenderer> ().enabled = true;
-				}
-				else
-				{
+				} else {
 					if (PatrolEight != null)
 						ConvisibleEight.HisSight.GetComponent<MeshRenderer> ().enabled = false;
 				}
 				//	}
 			}
-			}
-else
-	AlerEnnemy [7] = false;
+		} else {
+			AlerEnnemy [7] = false;
+			SuspiciousEnnemy [7] = false;
+		}
 
-		if (AlerEnnemy [0] == false && AlerEnnemy [1] == false && AlerEnnemy [2] == false && AlerEnnemy [3] == false && AlerEnnemy [4] == false && AlerEnnemy [5] == false && AlerEnnemy [6] == false && AlerEnnemy [7] == false) {
+
+		if (AlerEnnemy [0] == false && AlerEnnemy [1] == false && AlerEnnemy [2] == false && AlerEnnemy [3] == false && AlerEnnemy [4] == false && AlerEnnemy [5] == false && AlerEnnemy [6] == false && AlerEnnemy [7] == false) 
+		{
 			pplatformscript.canhideThree = true;
 			AlertFeedback.SetActive (false);
-		} else {
+		}
+		else {
+			
 			pplatformscript.canhideThree = false;
 			AlertFeedback.SetActive (true);
 		}
 			
-		if (AlerEnnemy [0] == false && AlerEnnemy [1] == false && AlerEnnemy [2] == false && AlerEnnemy [3] == false && AlerEnnemy [4] == false && AlerEnnemy [5] == false && AlerEnnemy [6] == false && AlerEnnemy [7] == false) {
-			AlertFeedback.SetActive (false);
+		if (SuspiciousEnnemy [0] == false && SuspiciousEnnemy [1] == false && SuspiciousEnnemy [2] == false && SuspiciousEnnemy [3] == false && SuspiciousEnnemy [4] == false && SuspiciousEnnemy [5] == false && SuspiciousEnnemy [6] == false && SuspiciousEnnemy [7] == false) {
+			SuspiciousFeedback.SetActive (false);
 		} else {
-			AlertFeedback.SetActive (true);
+			SuspiciousFeedback.SetActive (true);
 		}
 
 	}

@@ -14,6 +14,14 @@ public class ChangeRunePoint : MonoBehaviour {
 	public GameObject GrapRune;
 	public GameObject MarkLure;
 	public GameObject ShadowIns;
+
+	public GameObject LureRuneGlow;
+	public GameObject TrapRuneGlow;
+	public GameObject SolidRuneGlow;
+	public GameObject GrapRuneGlow;
+	public GameObject MarkLureGlow;
+	public GameObject ShadowInsGlow;
+
 	public GameObject YellowBCGTrap;
 	public GameObject YellowBCGmark;
 	public GameObject YellowBCGSolid;
@@ -30,6 +38,33 @@ public class ChangeRunePoint : MonoBehaviour {
 		playerMy=GameObject.Find("2DCharacter(Clone)");
 		RuneManager=GameObject.Find("RuneManager");
 		FeedBackImage = GameObject.Find ("feedbackRuneChange");
+
+		YellowBCGGrap= GameObject.Find ("bcg_PlateGrap");
+		YellowBCGLure = GameObject.Find ("bcg_PlateLure");
+		YellowBCGmark = GameObject.Find ("bcg_PlateMark");
+		YellowBCGShadow = GameObject.Find ("bcg_PlateOmbre");
+		YellowBCGTrap = GameObject.Find ("bcg_PlatePiege");
+		YellowBCGSolid = GameObject.Find ("bcg_PlateSolid");
+
+		LureRune= GameObject.Find ("lure");
+		TrapRune = GameObject.Find ("trap");
+		MarkLure = GameObject.Find ("Mark");
+		ShadowIns = GameObject.Find ("shadow");
+		GrapRune = GameObject.Find ("grap");
+		SolidRune = GameObject.Find ("solid");
+
+
+		LureRuneGlow= GameObject.Find ("lurefeed");
+		TrapRuneGlow = GameObject.Find ("trapfeed");
+		MarkLureGlow = GameObject.Find ("Markfeed");
+		ShadowInsGlow = GameObject.Find ("shadowfeed");
+		GrapRuneGlow = GameObject.Find ("grapfeed");
+		SolidRuneGlow = GameObject.Find ("solidfeed");
+
+			
+
+
+
 	}
 	
 	// Update is called once per frame
@@ -69,8 +104,12 @@ public class ChangeRunePoint : MonoBehaviour {
 
 		if (myTempoDefRune == 1)
 		{
+			LureRuneGlow.SetActive (false);
+
 			LureRune.SetActive (false);
 			YellowBCGLure.SetActive(false);
+			ShadowInsGlow.SetActive (true);
+
 			ShadowIns.SetActive (true);
 			YellowBCGShadow.SetActive(true);
 
@@ -80,6 +119,8 @@ public class ChangeRunePoint : MonoBehaviour {
 			{
 			LureRune.SetActive (true);
 			YellowBCGLure.SetActive(true);
+			LureRuneGlow.SetActive (true);
+			ShadowInsGlow.SetActive (false);
 
 			ShadowIns.SetActive (false);
 			YellowBCGShadow.SetActive(false);
@@ -87,9 +128,14 @@ public class ChangeRunePoint : MonoBehaviour {
 
 		if (myTempoTacticRune == 1)
 				{
+			SolidRuneGlow.SetActive (false);
+
 			SolidRune.SetActive (false);
+
 			YellowBCGSolid.SetActive(false);
 			GrapRune.SetActive(true);
+			GrapRuneGlow.SetActive(true);
+
 			YellowBCGGrap.SetActive(true);
 
 
@@ -98,6 +144,8 @@ public class ChangeRunePoint : MonoBehaviour {
 					{
 			SolidRune.SetActive (true);
 			YellowBCGSolid.SetActive(true);
+			SolidRuneGlow.SetActive (true);
+			GrapRuneGlow.SetActive(false);
 
 			GrapRune.SetActive(false);
 			YellowBCGGrap.SetActive(false);
@@ -108,6 +156,8 @@ public class ChangeRunePoint : MonoBehaviour {
 						{
 			MarkLure.SetActive (false);
 			YellowBCGmark.SetActive(false);
+			MarkLureGlow.SetActive (false);
+			TrapRuneGlow.SetActive (true);
 
 			TrapRune.SetActive (true);
 			YellowBCGTrap.SetActive(true);
@@ -117,7 +167,9 @@ public class ChangeRunePoint : MonoBehaviour {
 							{
 			MarkLure.SetActive (true);
 			YellowBCGmark.SetActive(true);
+			MarkLureGlow.SetActive (true);
 
+			TrapRuneGlow.SetActive (false);
 
 			TrapRune.SetActive (false);
 			YellowBCGTrap.SetActive(false);
