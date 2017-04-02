@@ -205,17 +205,6 @@
 					<ChildrenList>
 						<Folder Name="Action" ID="{E7652E2B-8120-4EDF-94F0-A210CD6C4673}" ShortID="1005793338">
 							<ChildrenList>
-								<Event Name="PC_Action_Climb" ID="{958BB055-D67F-4A23-9C12-DEF7F56921D8}">
-									<ChildrenList>
-										<Action Name="Play" ID="{839CF3AB-0E98-42D0-A892-2C4B8FADD5EE}" ShortID="491216335" Type="Play" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{CBF8474A-6D18-492E-AAEC-72E1C857CC43}" Global="false">
-													<ObjectRef Name="PC_Foot_Climb" ID="{386D7082-EA98-452F-816F-A8853C5F23CC}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-												</Element>
-											</ElementList>
-										</Action>
-									</ChildrenList>
-								</Event>
 								<Event Name="PC_Action_Kill" ID="{4A52EC2A-8E5F-4EA7-93E6-92EBFE09639A}">
 									<ChildrenList>
 										<Action Name="Play" ID="{22D3F6B8-0446-4B3E-A185-D4323D56B4AB}" ShortID="799099694" Type="Play" Scope="One" Global="false">
@@ -306,6 +295,13 @@
 												<GroupItem Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
 											</SetItemParam>
 										</Action>
+										<Action Name="Play" ID="{E184FAAA-1FB8-4D9F-9822-80482B0FB722}" ShortID="670127941" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{FC2D8293-BA12-4718-A8A1-336A2EB5DB61}" Global="false">
+													<ObjectRef Name="PC_Foot_Stealth_On" ID="{3FE97D34-3BCF-41CA-BCF5-378BC7E6C322}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="PC_Stealth_Off" ID="{B7313609-B364-4048-864E-B2A4FADAAD86}">
@@ -315,6 +311,13 @@
 												<Group Name="Foot_Stealth" ID="{ED19598D-0D14-42E6-AD54-64446D222339}"/>
 												<GroupItem Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
 											</SetItemParam>
+										</Action>
+										<Action Name="Play" ID="{A3B23F2D-E655-4028-BE9F-854E3CA642A9}" ShortID="725886907" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{0A7AA331-77DE-4D01-B939-EF8421571E89}" Global="false">
+													<ObjectRef Name="PC_Foot_Stealth_Off" ID="{E71D3249-5ED4-406A-B67E-1B0BFB30D7E5}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
 										</Action>
 									</ChildrenList>
 								</Event>

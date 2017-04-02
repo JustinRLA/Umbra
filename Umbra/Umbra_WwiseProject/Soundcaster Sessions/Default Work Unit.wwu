@@ -10,14 +10,6 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="PC_Stealth_On" ID="{421E7F00-2EA9-4A38-89FD-D674AC8924BE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="PC_Action_Climb" ID="{958BB055-D67F-4A23-9C12-DEF7F56921D8}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="0" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="PC_Action_Respawn" ID="{680E6AAF-58EE-44BF-B68D-1A03B5BF7EEE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
 							<Position X="0" Y="3"/>
 						</Module>
@@ -50,13 +42,17 @@
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="PC_Stealth_On" ID="{421E7F00-2EA9-4A38-89FD-D674AC8924BE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="PC_Action_Look" ID="{7AE73DFC-284F-4BDD-B47C-2FB522BAAB4D}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
 							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
+						<CurrentStateRef Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
 						<CurrentStateRef Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
