@@ -13,12 +13,16 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject[] DOors;
 	public GameObject[] ColDOors;
 	public GameObject[] DecountEnnemy;
+	public GameObject FirstSection;
+	public GameObject SecondSection;
+	public GameObject ThirdSection;
 
 	int decoountNumber;
 	GameObject raycar;
 
 	void Awake()
 	{
+		
 		decoountNumber = PlayerPrefs.GetInt ("SaveSystem");
 
 		Time.timeScale = 1;
@@ -28,6 +32,30 @@ public class InitializeLevel : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		if(decoountNumber<6)
+		{
+			SecondSection.SetActive (false);
+			ThirdSection.SetActive (false);
+			FirstSection.SetActive (true);
+
+			}
+		if(decoountNumber>=6 && decoountNumber<9)
+		{
+			FirstSection.SetActive (false);
+			ThirdSection.SetActive (false);
+			SecondSection.SetActive (true);
+
+		}
+
+		if(decoountNumber>=9)
+		{
+			FirstSection.SetActive (false);
+			SecondSection.SetActive(false);
+			ThirdSection.SetActive(true);
+
+		}
+
+
 		raycar = GameObject.Find ("raycar");
 			
 		//EnnemyPack[].SetActive (false);
@@ -39,7 +67,12 @@ public class InitializeLevel : MonoBehaviour {
 		EnnemyPack [4].SetActive (false);
 		EnnemyPack [5].SetActive (false);
 
+		EnnemyPack [6].SetActive (false);
 
+		EnnemyPack [7].SetActive (false);
+		EnnemyPack [8].SetActive (false);
+		EnnemyPack [9].SetActive (false);
+		EnnemyPack [10].SetActive (false);
 		Cam.SetActive (true);
 		PlayerLight.SetActive (true);
 		EnnemyPack [decoountNumber]. SetActive(true);
