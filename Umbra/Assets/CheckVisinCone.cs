@@ -278,15 +278,18 @@ public class CheckVisinCone : MonoBehaviour {
 					CanSeeFive = false;
 				else
 					CanSeeFive = true;
-			if (CanSeeFive == true || MarkFive.isMarked==true) {
-					if (PatrolFive != null)
+				
+				if (PatrolFive != null)
+				{
+			if (CanSeeFive == true || MarkFive.isMarked==true)
+				{
 						ConvisibleFive.HisSight.GetComponent<MeshRenderer> ().enabled = true;
 				}
-			if (CanSeeFive == false && MarkFive.isMarked==false) {
-				{
-					if (PatrolFive != null)
-						ConvisibleFive.HisSight.GetComponent<MeshRenderer> ().enabled = false;
-				}
+					if (CanSeeFive == false && MarkFive.isMarked == false) 
+						{
+							ConvisibleFive.HisSight.GetComponent<MeshRenderer> ().enabled = false;
+						}
+
 				//	}
 				}
 			}
