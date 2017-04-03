@@ -38,30 +38,30 @@ public class TileTexture : MonoBehaviour
 		theUVs[0] = new Vector2(0f, 0f);
 		theUVs[1] = new Vector2(x/max, 0f);
 
-		theUVs[11] = new Vector2(0f, y/max);
-		theUVs[10] = new Vector2(x/max, y/max);
-		theUVs[7] = new Vector2(0f, 0f);
-		theUVs[6] = new Vector2(x/max, 0f);
+//		theUVs[11] = new Vector2(0f, y/max);
+//		theUVs[10] = new Vector2(x/max, y/max);
+//		theUVs[7] = new Vector2(0f, 0f);
+//		theUVs[6] = new Vector2(x/max, 0f);
 
-		theUVs[19] = new Vector2(0f, y/max);
-		theUVs[17] = new Vector2(z/max, y/max);
-		theUVs[16] = new Vector2(0f, 0f);
-		theUVs[18] = new Vector2(z/max, 0f);
+//		theUVs[19] = new Vector2(0f, y/max);
+//		theUVs[17] = new Vector2(z/max, y/max);
+//		theUVs[16] = new Vector2(0f, 0f);
+//		theUVs[18] = new Vector2(z/max, 0f);
 
-		theUVs[23] = new Vector2(0f, y/max);
-		theUVs[21] = new Vector2(z/max, y/max);
-		theUVs[20] = new Vector2(0f, 0f);
-		theUVs[22] = new Vector2(z/max, 0f);
+//		theUVs[23] = new Vector2(0f, y/max);
+//		theUVs[21] = new Vector2(z/max, y/max);
+//		theUVs[20] = new Vector2(0f, 0f);
+//		theUVs[22] = new Vector2(z/max, 0f);
 
-		theUVs[4] = new Vector2(0f, z/max);
-		theUVs[5] = new Vector2(x/max, z/max);
-		theUVs[8] = new Vector2(0f, 0f);
-		theUVs[9] = new Vector2(x/max, 0f);
+//		theUVs[4] = new Vector2(0f, z/max);
+//		theUVs[5] = new Vector2(x/max, z/max);
+//		theUVs[8] = new Vector2(0f, 0f);
+//		theUVs[9] = new Vector2(x/max, 0f);
 
-		theUVs[15] = new Vector2(0f, 0f);
-		theUVs[13] = new Vector2(0f, 0f);
-		theUVs[12] = new Vector2(0f, 0f);
-		theUVs[14] = new Vector2(0f, 0f);		
+//		theUVs[15] = new Vector2(0f, 0f);
+//		theUVs[13] = new Vector2(0f, 0f);
+//		theUVs[12] = new Vector2(0f, 0f);
+//		theUVs[14] = new Vector2(0f, 0f);		
 
 		// Assign the mesh its new UVs
 		theMesh.uv = theUVs;
