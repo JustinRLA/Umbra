@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangeRunePoint : MonoBehaviour {
 	public bool canChange;
@@ -39,38 +40,13 @@ public class ChangeRunePoint : MonoBehaviour {
 		RuneManager=GameObject.Find("RuneManager");
 		FeedBackImage = GameObject.Find ("feedbackRuneChange");
 
-		YellowBCGGrap= GameObject.Find ("bcg_PlateGrap");
-		YellowBCGLure = GameObject.Find ("bcg_PlateLure");
-		YellowBCGmark = GameObject.Find ("bcg_PlateMark");
-		YellowBCGShadow = GameObject.Find ("bcg_PlateOmbre");
-		YellowBCGTrap = GameObject.Find ("bcg_PlatePiege");
-		YellowBCGSolid = GameObject.Find ("bcg_PlateSolid");
-
-		LureRune= GameObject.Find ("lure");
-		TrapRune = GameObject.Find ("trap");
-		MarkLure = GameObject.Find ("Mark");
-		ShadowIns = GameObject.Find ("shadow");
-		GrapRune = GameObject.Find ("grap");
-		SolidRune = GameObject.Find ("solid");
-
-
-		LureRuneGlow= GameObject.Find ("lurefeed");
-		TrapRuneGlow = GameObject.Find ("trapfeed");
-		MarkLureGlow = GameObject.Find ("Markfeed");
-		ShadowInsGlow = GameObject.Find ("shadowfeed");
-		GrapRuneGlow = GameObject.Find ("grapfeed");
-		SolidRuneGlow = GameObject.Find ("solidfeed");
-
-			
-
-
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.E) && canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true)
 		{
+
 			UIMode.SetActive (true);
 
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = false;
@@ -83,6 +59,12 @@ public class ChangeRunePoint : MonoBehaviour {
 	}
 	public void SendInfo()
 	{
+		UIMode=GameObject.Find("RuneChangeUI");
+
+		playerMy=GameObject.Find("2DCharacter(Clone)");
+		RuneManager=GameObject.Find("RuneManager");
+		FeedBackImage = GameObject.Find ("feedbackRuneChange");
+
 		RuneManager.GetComponent<RuneManagerScript> ().enabled = true;
 
 		RuneManager.GetComponent<RuneManagerScript> ().DefFune= myTempoDefRune;
@@ -91,6 +73,7 @@ public class ChangeRunePoint : MonoBehaviour {
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		print ("Shut");
 
 		UIMode.SetActive (false);
 		Cursor.visible=false;
@@ -98,81 +81,108 @@ public class ChangeRunePoint : MonoBehaviour {
 
 	public void ReceiveInfo()
 	{
+
+		YellowBCGGrap= GameObject.Find ("bcg_PlateGrap");
+		YellowBCGLure = GameObject.Find ("bcg_PlateLure");
+		YellowBCGmark = GameObject.Find ("bcg_PlatMark");
+		YellowBCGShadow = GameObject.Find ("bcg_PlateOmbre");
+		YellowBCGTrap = GameObject.Find ("bcg_PlatePiege");
+		YellowBCGSolid = GameObject.Find ("bcg_PlateSolid");
+
+		LureRune= GameObject.Find ("lureShow");
+		TrapRune = GameObject.Find ("trapShow");
+		MarkLure = GameObject.Find ("MarkShow");
+		ShadowIns = GameObject.Find ("shadowShow");
+		GrapRune = GameObject.Find ("grapShow");
+		SolidRune = GameObject.Find ("solidShow");
+
+
+		LureRuneGlow= GameObject.Find ("lurefeed");
+		TrapRuneGlow = GameObject.Find ("trapfeed");
+		MarkLureGlow = GameObject.Find ("Markfeed");
+		ShadowInsGlow = GameObject.Find ("shadowfeed");
+		GrapRuneGlow = GameObject.Find ("grapfeed");
+		SolidRuneGlow = GameObject.Find ("solidfeed");
+
+
+
+
+
 		myTempoDefRune = RuneManager.GetComponent<RuneManagerScript> ().DefFune ;
 		myTempoOffRune=RuneManager.GetComponent<RuneManagerScript> ().OffenseRune ;
 		myTempoTacticRune= RuneManager.GetComponent<RuneManagerScript> ().TacticRune ;
 
 		if (myTempoDefRune == 1)
 		{
-			LureRuneGlow.SetActive (false);
+			LureRuneGlow.GetComponent<Image> ().enabled = false;
 
-			LureRune.SetActive (false);
-			YellowBCGLure.SetActive(false);
-			ShadowInsGlow.SetActive (true);
+			LureRune.GetComponent<Image> ().enabled = false;
+			YellowBCGLure.GetComponent<Image> ().enabled = false;
+			ShadowInsGlow.GetComponent<Image> ().enabled = true;
 
-			ShadowIns.SetActive (true);
-			YellowBCGShadow.SetActive(true);
+			ShadowIns.GetComponent<Image> ().enabled = true;
+			YellowBCGShadow.GetComponent<Image> ().enabled = true;
 
 
 		}
 		if (myTempoDefRune == 2)
 			{
-			LureRune.SetActive (true);
-			YellowBCGLure.SetActive(true);
-			LureRuneGlow.SetActive (true);
-			ShadowInsGlow.SetActive (false);
+			LureRune.GetComponent<Image> ().enabled = true;
+			YellowBCGLure.GetComponent<Image> ().enabled = true;
+			LureRuneGlow.GetComponent<Image> ().enabled = true;
+			ShadowInsGlow.GetComponent<Image> ().enabled = false;
 
-			ShadowIns.SetActive (false);
-			YellowBCGShadow.SetActive(false);
+			ShadowIns.GetComponent<Image> ().enabled = false;
+			YellowBCGShadow.GetComponent<Image> ().enabled = false;
 			}
 
 		if (myTempoTacticRune == 1)
 				{
-			SolidRuneGlow.SetActive (false);
+			SolidRuneGlow.GetComponent<Image> ().enabled = false;
 
-			SolidRune.SetActive (false);
+			SolidRune.GetComponent<Image> ().enabled = false;
 
-			YellowBCGSolid.SetActive(false);
-			GrapRune.SetActive(true);
-			GrapRuneGlow.SetActive(true);
+			YellowBCGSolid.GetComponent<Image> ().enabled = false;
+			GrapRune.GetComponent<Image> ().enabled = true;
+			GrapRuneGlow.GetComponent<Image> ().enabled = true;
 
-			YellowBCGGrap.SetActive(true);
+			YellowBCGGrap.GetComponent<Image> ().enabled = true;
 
 
 				}
 		if(myTempoTacticRune==2)
 					{
-			SolidRune.SetActive (true);
-			YellowBCGSolid.SetActive(true);
-			SolidRuneGlow.SetActive (true);
-			GrapRuneGlow.SetActive(false);
+			SolidRune.GetComponent<Image> ().enabled = true;
+			YellowBCGSolid.GetComponent<Image> ().enabled = true;
+			SolidRuneGlow.GetComponent<Image> ().enabled = true;
+			GrapRuneGlow.GetComponent<Image> ().enabled = false;
 
-			GrapRune.SetActive(false);
-			YellowBCGGrap.SetActive(false);
+			GrapRune.GetComponent<Image> ().enabled = false;
+			YellowBCGGrap.GetComponent<Image> ().enabled = false;
 					}
 
 
 		if (myTempoOffRune == 1)
 						{
-			MarkLure.SetActive (false);
-			YellowBCGmark.SetActive(false);
-			MarkLureGlow.SetActive (false);
-			TrapRuneGlow.SetActive (true);
+			MarkLure.GetComponent<Image> ().enabled = false;
+			YellowBCGmark.GetComponent<Image> ().enabled = false;
+			MarkLureGlow.GetComponent<Image> ().enabled = false;
+			TrapRuneGlow.GetComponent<Image> ().enabled = true;
 
-			TrapRune.SetActive (true);
-			YellowBCGTrap.SetActive(true);
+			TrapRune.GetComponent<Image> ().enabled = true;
+			YellowBCGTrap.GetComponent<Image> ().enabled = true;
 
 						}
 			if (myTempoOffRune == 2)
 							{
-			MarkLure.SetActive (true);
-			YellowBCGmark.SetActive(true);
-			MarkLureGlow.SetActive (true);
+			MarkLure.GetComponent<Image> ().enabled = true;
+			YellowBCGmark.GetComponent<Image> ().enabled = true;
+			MarkLureGlow.GetComponent<Image> ().enabled = true;
 
-			TrapRuneGlow.SetActive (false);
+			TrapRuneGlow.GetComponent<Image> ().enabled = false;
 
-			TrapRune.SetActive (false);
-			YellowBCGTrap.SetActive(false);
+			TrapRune.GetComponent<Image> ().enabled = false;
+			YellowBCGTrap.GetComponent<Image> ().enabled = false;
 							}
 		RuneManager.GetComponent<RuneManagerScript> ().enabled = false;
 	

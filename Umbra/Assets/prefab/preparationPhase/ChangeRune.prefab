@@ -643,7 +643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1421575999578058
 GameObject:
   m_ObjectHideFlags: 1
@@ -3222,9 +3222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canChange: 0
-  myTempoDefRune: 0
-  myTempoOffRune: 0
-  myTempoTacticRune: 0
+  myTempoDefRune: 2
+  myTempoOffRune: 2
+  myTempoTacticRune: 1
   RuneManager: {fileID: 0}
   LureRune: {fileID: 1580406462902406}
   TrapRune: {fileID: 1258971261806580}
@@ -3232,6 +3232,12 @@ MonoBehaviour:
   GrapRune: {fileID: 1681281886384018}
   MarkLure: {fileID: 1110027613813906}
   ShadowIns: {fileID: 1930513399762100}
+  LureRuneGlow: {fileID: 0}
+  TrapRuneGlow: {fileID: 0}
+  SolidRuneGlow: {fileID: 0}
+  GrapRuneGlow: {fileID: 0}
+  MarkLureGlow: {fileID: 0}
+  ShadowInsGlow: {fileID: 0}
   YellowBCGTrap: {fileID: 1859556805193992}
   YellowBCGmark: {fileID: 1482742637319656}
   YellowBCGSolid: {fileID: 1107535234526118}
@@ -3239,7 +3245,7 @@ MonoBehaviour:
   YellowBCGGrap: {fileID: 1674029977930652}
   YellowBCGLure: {fileID: 1010599037671782}
   FeedBackImage: {fileID: 0}
-  UIMode: {fileID: 1404088343946984}
+  UIMode: {fileID: 0}
   playerMy: {fileID: 0}
 --- !u!114 &114397030134342148
 MonoBehaviour:

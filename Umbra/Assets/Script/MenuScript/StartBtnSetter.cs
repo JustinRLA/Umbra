@@ -32,7 +32,7 @@ public class StartBtnSetter : MonoBehaviour {
 	}
 	public void Continue()
 	{
-		SceneManager.LoadScene ("Niveau1_V2");
+		SceneManager.LoadScene ("NiveauComplete");
 	}
 
 
@@ -42,6 +42,6 @@ public void restartGame()
 		PlayerPrefs.SetInt ("Kill", 0);
 
 		PlayerPrefs.SetInt ("SaveSystem", 0);
-		SceneManager.LoadScene ("Niveau1_V2");
+		SceneManager.LoadScene ("NiveauComplete");
 			}
 }

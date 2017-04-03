@@ -253,7 +253,7 @@ public class SightListenerTemplate : MonoBehaviour {
 	}
 	IEnumerator CamCoroutine()
 	{
-		yield return new WaitForSeconds (5f);
+		yield return new WaitForSeconds (1f);
 		if(inCam==true)
 		{
 		if (EnnemyOne != null)
