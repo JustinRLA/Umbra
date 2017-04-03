@@ -1604,7 +1604,7 @@ MonoBehaviour:
   AssassinFeedback: {fileID: 1426205289327166}
   canAssassinate: 0
   ActualEnnemy: {fileID: 0}
-  OtherEnnemy: {fileID: 0}
+  Playa: {fileID: 0}
 --- !u!114 &114051593041056312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1644,6 +1644,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canJump: 0
+  hidden: 0
+  numberofDeath: 0
+  AssassinTrigger: {fileID: 0}
   m_MaxSpeed: 10
   m_JumpForce: 800
   m_CrouchSpeed: 0.25
@@ -1651,10 +1655,26 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294443211
+  inShadow: 0
+  ClimbTrue: 0
+  canHide: 0
+  canhideTwo: 0
+  TeleportPointDeath: {fileID: 0}
+  canhideThree: 0
   RunTrigger: {fileID: 1597233184600790}
+  canRune: 0
+  canChangeRune: 0
+  ViewTrigger: {fileID: 0}
   TruePlayer: 1
-  Climb: 0
+  m_Grounded: 0
+  m_FacingRight: 1
+  ActualLadder: {fileID: 0}
+  OeillereFeedback: {fileID: 0}
+  ActualOeillere: {fileID: 0}
+  CheckPointManager: {fileID: 0}
+  RealCheckPointManager: {fileID: 0}
   MyRuneMan: {fileID: 0}
+  dead: 0
 --- !u!114 &114149574309287240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1666,6 +1686,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crouch: 0
+  feedbackEye: {fileID: 0}
+  eyeCrouch: {fileID: 0}
+  eyeWalk: {fileID: 0}
+  truePlayer: 0
 --- !u!114 &114235006655549158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1777,6 +1802,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canJump: 0
+  hidden: 0
+  numberofDeath: 0
+  AssassinTrigger: {fileID: 0}
   m_MaxSpeed: 15
   m_JumpForce: 800
   m_CrouchSpeed: 1
@@ -1784,10 +1813,26 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294901961
+  inShadow: 0
+  ClimbTrue: 0
+  canHide: 0
+  canhideTwo: 0
+  TeleportPointDeath: {fileID: 0}
+  canhideThree: 0
   RunTrigger: {fileID: 1114097116838908}
+  canRune: 0
+  canChangeRune: 0
+  ViewTrigger: {fileID: 0}
   TruePlayer: 0
-  Climb: 0
+  m_Grounded: 0
+  m_FacingRight: 1
+  ActualLadder: {fileID: 0}
+  OeillereFeedback: {fileID: 0}
+  ActualOeillere: {fileID: 0}
+  CheckPointManager: {fileID: 0}
+  RealCheckPointManager: {fileID: 0}
   MyRuneMan: {fileID: 0}
+  dead: 0
 --- !u!114 &114353435838537510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1799,6 +1844,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crouch: 0
+  feedbackEye: {fileID: 0}
+  eyeCrouch: {fileID: 0}
+  eyeWalk: {fileID: 0}
+  truePlayer: 0
 --- !u!114 &114458691615273600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1944,7 +1994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a20fe0b8672864ba6d8d87d0de113d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thePlayer: {fileID: 1515380643308110}
+  ThePlayer: {fileID: 0}
+  lightDistance: 0
 --- !u!114 &114803767437237622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2636,7 +2687,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1783731295
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d88b3694c9c6efd4595ac1709d802d96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
