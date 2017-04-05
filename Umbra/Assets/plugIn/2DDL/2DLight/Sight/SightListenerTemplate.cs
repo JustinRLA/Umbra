@@ -224,16 +224,11 @@ public class SightListenerTemplate : MonoBehaviour {
 
 			if(TypeOfObj==2)
 			{
-
 				if (go.tag == "Player")
 				{
 					inCam = false;
 				StopCoroutine (CamCoroutine ());
 				}
-			if (go.tag == "LurePlayer")
-			{
-				LureInCam = false;
-			}
 			}
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 			//print (go.name + " --> OnExit() event");

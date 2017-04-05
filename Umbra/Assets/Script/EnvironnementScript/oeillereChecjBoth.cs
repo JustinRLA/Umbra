@@ -8,10 +8,13 @@ public class oeillereChecjBoth : MonoBehaviour {
 	public bool inJudaMode;
 	public GameObject PlayeroNE;
 	public int OeillereLayer;
+	public Sprite spriteOver;
+	public Sprite SpriteOriginal;
 
 	// Use this for initialization
 	void Start () {
 		PlayeroNE=GameObject.Find("2DCharacter(Clone)");
+		//SpriteOriginal = Base.GetComponent<Sprite>();
 	}
 
 	// Update is called once per frame
@@ -21,30 +24,36 @@ public class oeillereChecjBoth : MonoBehaviour {
 
 
 
-		if(inJudaMode==true)
-		{
-			if(PlayeroNE.transform.position.y<=transform.position.y)
+		if (inJudaMode == true) {
+			if (PlayeroNE.transform.position.y <= transform.position.y)
 				Base.layer = OeillereLayer;
 			else
 				Base.layer = 1;
-		}
-		else
+		} else {
 			Base.layer = 0;
 
+
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "Player")
+		if (col.tag == "Player") {
 			IsInside = true;
+			Base.GetComponent<SpriteRenderer > ().sprite = spriteOver;
+		}
 
-	} 	void OnTriggerExit2D(Collider2D col)
+	} 	
+
+	void OnTriggerExit2D(Collider2D col)
 	{
 
 		if (col.tag == "Player")
 		{
 			IsInside=false;
 			inJudaMode=false;
+			Base.GetComponent<SpriteRenderer >().sprite = SpriteOriginal;
+
 		} 
 	} 
 

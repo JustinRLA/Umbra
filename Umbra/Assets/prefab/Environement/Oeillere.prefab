@@ -51,14 +51,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120677603189514}
-  m_LocalRotation: {x: -0, y: -0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 101.67, y: -3.5, z: 0}
-  m_LocalScale: {x: 0.9599552, y: 2.2, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: -0.00000004371139}
+  m_LocalPosition: {x: 104.51, y: 4.02, z: 0}
+  m_LocalScale: {x: 0.27, y: 0.33750078, z: 1}
   m_Children:
   - {fileID: 4368318305516192}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &4368318305516192
 Transform:
   m_ObjectHideFlags: 1
@@ -85,7 +85,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 1.1070082, y: 0.13000008}
   serializedVersion: 2
-  m_Size: {x: 5.574591, y: 1}
+  m_Size: {x: 17, y: 9}
 --- !u!61 &61992862419037718
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -97,9 +97,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 1.2403252, y: 0.31250027}
+  m_Offset: {x: 0.4, y: -0.1}
   serializedVersion: 2
-  m_Size: {x: 2.4806252, y: 0.62500006}
+  m_Size: {x: 10, y: 3}
 --- !u!114 &114140667248667296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +116,8 @@ MonoBehaviour:
   inJudaMode: 0
   PlayeroNE: {fileID: 0}
   OeillereLayer: 1
+  spriteOver: {fileID: 21300000, guid: f7cc926efb4fee7469952b4dcb12fdfa, type: 3}
+  SpriteOriginal: {fileID: 21300000, guid: eccb645ad1f61194bbae14d1005f8fe9, type: 3}
 --- !u!212 &212805219819510134
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -147,7 +149,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d90a8faf6fb9540b084ef2825cc3a5dc, type: 3}
-  m_Color: {r: 1, g: 0.6, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: eccb645ad1f61194bbae14d1005f8fe9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

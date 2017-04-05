@@ -15,6 +15,8 @@ public class ChangeRunePoint : MonoBehaviour {
 	public GameObject GrapRune;
 	public GameObject MarkLure;
 	public GameObject ShadowIns;
+	public Sprite SpawnerNormal;
+	public Sprite SpawnerOver;
 
 	public GameObject LureRuneGlow;
 	public GameObject TrapRuneGlow;
@@ -218,16 +220,19 @@ public class ChangeRunePoint : MonoBehaviour {
 	{
 		if (col.tag == "Player")
 		{
+			GetComponent<SpriteRenderer> ().sprite = SpawnerOver;
 			playerMy = col.gameObject;
 			canChange = true;
 		}
 	}
 	void OnTriggerExit2D(Collider2D col)
 	{
-		if (col.tag == "Player")
+		if (col.tag == "Player") {
 			canChange = false;
-		FeedBackImage.GetComponent<SpriteRenderer> ().enabled = false;
+			FeedBackImage.GetComponent<SpriteRenderer> ().enabled = false;
+			GetComponent<SpriteRenderer> ().sprite = SpawnerNormal;
 
+		}
 
 	}
 
