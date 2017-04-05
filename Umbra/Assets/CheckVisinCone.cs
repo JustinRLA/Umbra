@@ -6,7 +6,6 @@ public class CheckVisinCone : MonoBehaviour {
 	public Transform[] EnnemyInScene;
 	public GameObject SuspiciousFeedback;
 	public GameObject AlertFeedback;
-	public GameObject SafeFeedback;
 
 	RaycastHit2D EnnmyRay;
 	RaycastHit2D EnnmyRayTwo;
