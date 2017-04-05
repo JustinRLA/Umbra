@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 114924880319277416}
   - component: {fileID: 50385471667233136}
   - component: {fileID: 114022630017005110}
+  - component: {fileID: 95024770355699268}
   m_Layer: 11
   m_Name: EnnemyTestPatrol
   m_TagString: ennemy
@@ -1410,6 +1411,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95024770355699268
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592845944307584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 843dd2b973c49074a8c81b850e344b12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114022630017005110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1752,6 +1770,7 @@ MonoBehaviour:
   PointToLookWIthOneNavPoint: {fileID: 4313404698019538}
   PlayerIsUp: 0
   PlayerIsDown: 0
+  timerAttack: 0
   Safe: 1
   UpPoint: {fileID: 4635172830437646}
   UpPoint_UpLevel: {fileID: 4107277862633710}
@@ -2224,9 +2243,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1859086223
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6008ddef4c8b01949a4e128dd09d7cdd, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 709f5ec8ad70c714ab4ecd13eda96c7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212610187765862644
 SpriteRenderer:
