@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 114035125408103482}
   - component: {fileID: 114168402780757308}
   - component: {fileID: 114042103868510594}
-  - component: {fileID: 114746720598708712}
   m_Layer: 13
   m_Name: 2DCharacter
   m_TagString: Player
@@ -455,7 +454,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014189160392212}
   m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 101.80712, y: 4.666256, z: 7.322376}
+  m_LocalPosition: {x: 31.368023, y: 13.860564, z: 7.322376}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_Children:
   - {fileID: 4223585992560926}
@@ -990,7 +989,6 @@ MonoBehaviour:
   - {fileID: 0}
   SuspiciousFeedback: {fileID: 0}
   AlertFeedback: {fileID: 0}
-  SafeFeedback: {fileID: 0}
   AlerEnnemy: 0000000000000000
   SuspiciousEnnemy: 0000000000000000
   LayerMaskOne:
@@ -1092,7 +1090,6 @@ MonoBehaviour:
   AssassinFeedback: {fileID: 1912435460326564}
   canAssassinate: 0
   ActualEnnemy: {fileID: 0}
-  OtherEnnemy: {fileID: 0}
   Playa: {fileID: 0}
 --- !u!114 &114589576820589842
 MonoBehaviour:
@@ -1120,6 +1117,7 @@ MonoBehaviour:
   ClimbTrue: 0
   canHide: 0
   canhideTwo: 0
+  TeleportPointDeath: {fileID: 0}
   canhideThree: 0
   RunTrigger: {fileID: 1214353545722392}
   canRune: 0
@@ -1134,30 +1132,7 @@ MonoBehaviour:
   CheckPointManager: {fileID: 0}
   RealCheckPointManager: {fileID: 0}
   MyRuneMan: {fileID: 0}
---- !u!114 &114746720598708712
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014189160392212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb8e847219ec06458251780a9fb0a4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  valueGuid: 6556ebe351ebf545bad24df0725f1a3b
-  eventID: -1019584593
-  soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  transitionDuration: 0
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  multiPositionTypeLabel: 0
-  multiPositionArray: []
+  dead: 0
 --- !u!114 &114848467757930108
 MonoBehaviour:
   m_ObjectHideFlags: 1
