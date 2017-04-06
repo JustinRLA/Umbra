@@ -87,6 +87,7 @@ public class EnableTrapMode : MonoBehaviour {
 			if(Input.GetMouseButton(0)){
 				ThisEvent = false;
 				Instantiate (Trapping, myraycast.point,transform.rotation);
+				AkSoundEngine.PostEvent ("PC_Rune_Trap_Use", gameObject);
 				myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 				myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 

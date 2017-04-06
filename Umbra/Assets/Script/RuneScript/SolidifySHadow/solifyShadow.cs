@@ -82,6 +82,7 @@ public class solifyShadow : MonoBehaviour {
 
 	IEnumerator SolidicationEvent()
 	{
+		AkSoundEngine.PostEvent("Rune_Solide_Use",gameObject);
 		myMainCam = GameObject.Find ("Main Camera");
 
 		mymyRuneManagerScript.timerTactic = 0;
@@ -110,6 +111,8 @@ public class solifyShadow : MonoBehaviour {
 		mymyRuneManagerScript.RuneActivated = false;
 
 		yield return new WaitForSeconds(10f);
+		AkSoundEngine.PostEvent("Rune_Solide_End",gameObject);
+
 		GrimpSurface.GetComponent<Collider2D> ().enabled = false;
 		if (GrimpSurface.GetComponent<maxHauteurLadder> ().TouchShadow == true)
 			PlayerMy.GetComponent<PlatformerCharacter2D> ().ClimbTrue = false;

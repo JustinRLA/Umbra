@@ -5,7 +5,7 @@ using UnityEngine;
 public class TileRow : MonoBehaviour {
 	public GameObject Tile;
 	SpriteRenderer sprite;
-
+	public bool bcgvisible;
 	// Use this for initialization
 	void Start () {
 		
@@ -25,6 +25,8 @@ public class TileRow : MonoBehaviour {
 				child = Instantiate(childPrefab) as GameObject;
 				child.transform.position = transform.position - (new Vector3(spriteSize.x * j, spriteSize.y * i, 0));
 				child.transform.parent = transform;
+				if (bcgvisible == true)
+					child.layer = 16;
 		}
 		}
 		// Set the parent last on the prefab to prevent transform displacement

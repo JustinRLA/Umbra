@@ -62,6 +62,7 @@ public class EnnemyMarked : MonoBehaviour {
 	{
 		if (myMarkEnmnemyRune.CanBeClicked == true)
 		{
+			AkSoundEngine.PostEvent ("PC_Rune_Marquage_Use", gameObject);
 			myRuneManager.RuneActivated = false;
 			StartCoroutine (MarkEvent());
 		myRuneManager.RuneModeEnabled = false;

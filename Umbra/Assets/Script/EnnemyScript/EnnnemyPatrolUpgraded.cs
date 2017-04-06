@@ -21,7 +21,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	Vector3 movPos;
 	bool routine;
 	public float timerAttack;
-
+	bool haveplayedAlert;
+	bool havePlayed
 	public bool Safe;
 	public Transform UpPoint;
 	public Transform UpPoint_UpLevel;
@@ -954,6 +955,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col) {
 		if (col.tag == "Ţrap")
 		{
+			AkSoundEngine.PostEvent("PC_Rune_Trap_Stunt",gameObject);
 			StartCoroutine (TrapMode ());
 			Destroy (col.gameObject);
 		}

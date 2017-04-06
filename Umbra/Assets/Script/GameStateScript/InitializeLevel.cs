@@ -16,6 +16,8 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject FirstSection;
 	public GameObject SecondSection;
 	public GameObject ThirdSection;
+	public GameObject[] BackGround;
+
 
 	int decoountNumber;
 	GameObject raycar;
@@ -32,6 +34,60 @@ public class InitializeLevel : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		if (decoountNumber > 0 && decoountNumber < 10) {
+			BackGround [0].SetActive (false);
+			BackGround [1].SetActive (false);
+			BackGround [2].SetActive (false);
+			BackGround [3].SetActive (false);
+			BackGround [4].SetActive (false);
+			BackGround [5].SetActive (false);
+			BackGround [6].SetActive (false);
+			BackGround [7].SetActive (false);
+			BackGround [8].SetActive (false);
+			BackGround [9].SetActive (false);
+			BackGround [10].SetActive (false);
+
+			BackGround [decoountNumber].SetActive (true);
+			BackGround [decoountNumber+1].SetActive (true);
+			BackGround [decoountNumber-1].SetActive (true);
+
+		}
+		if (decoountNumber==0) {
+			BackGround [0].SetActive (false);
+			BackGround [1].SetActive (false);
+			BackGround [2].SetActive (false);
+			BackGround [3].SetActive (false);
+			BackGround [4].SetActive (false);
+			BackGround [5].SetActive (false);
+			BackGround [6].SetActive (false);
+			BackGround [7].SetActive (false);
+			BackGround [8].SetActive (false);
+			BackGround [9].SetActive (false);
+			BackGround [10].SetActive (false);
+
+			BackGround [decoountNumber].SetActive (true);
+			BackGround [decoountNumber+1].SetActive (true);
+
+		}
+		if (decoountNumber==12) {
+			BackGround [0].SetActive (false);
+			BackGround [1].SetActive (false);
+			BackGround [2].SetActive (false);
+			BackGround [3].SetActive (false);
+			BackGround [4].SetActive (false);
+			BackGround [5].SetActive (false);
+			BackGround [6].SetActive (false);
+			BackGround [7].SetActive (false);
+			BackGround [8].SetActive (false);
+			BackGround [9].SetActive (false);
+			BackGround [10].SetActive (false);
+			BackGround [11].SetActive (false);
+			BackGround [12].SetActive (false);
+
+			BackGround [decoountNumber].SetActive (true);
+			BackGround [decoountNumber-1].SetActive (true);
+
+		}
 		if(decoountNumber<6)
 		{
 			SecondSection.SetActive (false);
