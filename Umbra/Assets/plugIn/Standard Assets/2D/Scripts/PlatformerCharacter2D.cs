@@ -218,31 +218,39 @@ using UnityEngine.SceneManagement;
 		if(ActualLadder != null)
 		{
 			if (ClimbTrue == true && dead==false) 
-		{
-				
-			m_JumpForce = 0;
-			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
-			if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space)==false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder>().MaxHauteur.position.y)
-				transform.Translate (Vector2.up * 2*Time.deltaTime);
-			if (Input.GetKey (KeyCode.S) && transform.position.y > ActualLadder.GetComponent<maxHauteurLadder>().MinHauteur.position.y)
-				transform.Translate (Vector2.down * 2*Time.deltaTime);
-				if (Input.GetKey (KeyCode.Space) && canJump==true)
-				{
-					canJump = false;
-				JumpFromLader ();		
+			{
+					
+				m_JumpForce = 0;
+				GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
+				if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space) == false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder> ().MaxHauteur.position.y) {
+					transform.Translate (Vector2.up * 2 * Time.deltaTime);
+					GetComponent<Animator> ().SetBool ("GrimpeBouge", true);
 				}
-			GetComponent<Animator>().SetBool ("Climb", true);
+				else if (Input.GetKey (KeyCode.S) && transform.position.y > ActualLadder.GetComponent<maxHauteurLadder> ().MinHauteur.position.y) {
+					transform.Translate (Vector2.down * 2 * Time.deltaTime);
+					GetComponent<Animator> ().SetBool ("GrimpeBouge", true);
+				}
+				else if (Input.GetKey (KeyCode.Space) && canJump == true) {
+					canJump = false;
+					JumpFromLader ();
+					GetComponent<Animator>().SetBool ("GrimpeBouge", false);
+				}
+				else {
+					GetComponent<Animator>().SetBool ("GrimpeBouge", false);
+				}
 
-			if (Input.GetKey (KeyCode.E))
-				ReturnToNormal ();
-		}
-		else
-		{
-				m_JumpForce = 650;
-				m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-			GetComponent<Animator>().SetBool ("Climb", false);
+				GetComponent<Animator>().SetBool ("Climb", true);
 
-		}
+				if (Input.GetKey (KeyCode.E))
+					ReturnToNormal ();
+			}
+			else
+			{
+					m_JumpForce = 650;
+					m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+				GetComponent<Animator>().SetBool ("Climb", false);
+
+			}
 		}
 		if(TruePlayer==true)
 		{	

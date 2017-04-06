@@ -947,9 +947,11 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<15)
 		{
 				print ("Attack");
+				GetComponent<Animator>().SetBool ("Attaque", true);
 			}	
 
-		}	
+		}
+		GetComponent<Animator>().SetBool ("Attaque", false);
 	}	
 
 		public void StartCorTrap()
