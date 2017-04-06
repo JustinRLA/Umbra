@@ -1,7 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
-	121508585	Amb_Secteur			\SFX\Amb\Amb_Secteur	
 	153992643	PC_Rune_Marquage_Use			\SFX\PC\Rune\PC_Rune_Marquage_Use	
-	169793748	PC_Action_Death			\SFX\PC\Action\PC_Action_Death	
 	267862785	Amb_Alarm			\SFX\Amb\Amb_Alarm	
 	309439191	Menu_Hover			\SFX\UI\Menu_Hover	
 	348181601	PC_Action_SlowMo			\SFX\PC\Action\PC_Action_SlowMo	
@@ -11,7 +9,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	698530244	PC_Rune_Trap_Stun			\SFX\PC\Rune\PC_Rune_Trap_Stun	
 	710126949	PC_Rune_Ombre_Use			\SFX\PC\Rune\PC_Rune_Ombre_Use	
 	760777789	Menu_Click			\SFX\UI\Menu_Click	
+	771062343	PC_Foot_Climb			\SFX\PC\Foot\PC_Foot_Climb	
 	888215683	NPC_Foot_Run			\SFX\NPCs\NPC_Foot_Run	
+	897032325	Amb_Shadow_Pipe			\SFX\Amb\Amb_Shadow_Pipe	
+	966453248	PC_Rune_Select			\SFX\PC\Rune\PC_Rune_Select	
 	1005965974	PC_Action_Heartbeat			\SFX\PC\Action\PC_Action_Heartbeat	
 	1077239935	PC_Foot_Land			\SFX\PC\Foot\PC_Foot_Land	
 	1092215814	PC_Action_Kill			\SFX\PC\Action\PC_Action_Kill	
@@ -28,32 +29,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	2004937196	PC_Rune_Accrochage_Red			\SFX\PC\Rune\PC_Rune_Accrochage_Red	
 	2135334427	PC_Rune_Marquage_Sonar			\SFX\PC\Rune\PC_Rune_Marquage_Sonar	
 	2183052938	PC_Stealth_On			\SFX\PC\Foot\PC_Stealth_On	
+	2256145203	PC_Rune_Cooldown			\SFX\PC\Rune\PC_Rune_Cooldown	
 	2295622767	PC_Rune_Leurre_Use			\SFX\PC\Rune\PC_Rune_Leurre_Use	
-	2607531087	PC_Foot_Wood			\SFX\PC\Foot\PC_Foot_Wood	
-	2678465078	PC_Foot_Grass			\SFX\PC\Foot\PC_Foot_Grass	
 	2712572047	NPC_State_Located			\SFX\NPCs\NPC_State_Located	
 	3008075654	Amb_Door			\SFX\Amb\Amb_Door	
 	3180909377	Menu_Cancel			\SFX\UI\Menu_Cancel	
-	3189887981	PC_Action_Climb			\SFX\PC\Action\PC_Action_Climb	
 	3202361783	Amb_Room			\SFX\Amb\Amb_Room	
 	3244327485	PC_Rune_Trap_Use			\SFX\PC\Rune\PC_Rune_Trap_Use	
-	3275382703	PC_Foot_Stone			\SFX\PC\Foot\PC_Foot_Stone	
-	3302041772	Amb_Rain			\SFX\Amb\Amb_Rain	
 	3410690150	PC_Rune_Ombre_Decay			\SFX\PC\Rune\PC_Rune_Ombre_Decay	
 	3551547733	NPC_State_Alarmed			\SFX\NPCs\NPC_State_Alarmed	
 	3591117188	PC_Rune_Ombre_Select			\SFX\PC\Rune\PC_Rune_Ombre_Select	
 	3752724058	NPC_Action_Kill			\SFX\NPCs\NPC_Action_Kill	
-	3835420897	NPC_Foot_Stealth			\SFX\NPCs\NPC_Foot_Stealth	
 	4154982375	PC_Action_Look			\SFX\PC\Action\PC_Action_Look	
 	4264946172	PC_Rune_Accrochage_Green			\SFX\PC\Rune\PC_Rune_Accrochage_Green	
-
-Switch Group	ID	Name			Wwise Object Path	Notes
-	1648289661	Player_Foot_Surface			\Default Work Unit\Player_Foot_Surface	
-
-Switch	ID	Name	Switch Group			Notes
-	1216965916	Stone	Player_Foot_Surface			
-	2058049674	Wood	Player_Foot_Surface			
-	4248645337	Grass	Player_Foot_Surface			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3551007341	Foot_Stealth			\Default Work Unit\Foot_Stealth	
@@ -64,47 +52,103 @@ State	ID	Name	State Group			Notes
 	2099529632	Stealth_Off	Foot_Stealth			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	94911816	Stealth_On	Foot_Stealth	\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot		
 	319642500	Stealth_On	Foot_Stealth	\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot		
 
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	36541539	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Alarm\Test_Sound\Wwise Sine	
+	41642499	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Red\Wwise Sine	
+	45844468	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Decay\Wwise Sine	
+	201836181	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Select\Wwise Sine	
+	230866630	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Solide_End\Wwise Sine	
+	300085844	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Shadow_Pipe\Test_Sound\Wwise Sine	
+	346613867	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Click\Menu_Click\Wwise Sine	
+	368816118	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Check\Test_Sound\Wwise Sine	
+	545377226	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Sonar\Wwise Sine	
+	582690596	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Use\Wwise Sine	
+	601272033	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Cooldown\Wwise Sine	
+	671640607	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Leurre_Filter\Wwise Sine	
+	704193469	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Wwise Sine	
+	710206262	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Select\Wwise Sine	
+	735539620	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Cancel\Wwise Sine	
+	803787348	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Use\Wwise Sine	
+	835219410	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Use\Wwise Sine	
+	858899636	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Equip\Wwise Sine	
+	866394520	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Stun\Wwise Sine	
+	869763770	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Land\Wwise Sine	
+	934833013	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Use\Wwise Sine	
+	1010210979	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Green\Wwise Sine	
+	1027828018	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Bell\Test_Sound\Wwise Sine	
+	1043932153	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Solide_Use\Wwise Sine	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	4240408	PC_Foot_Stone_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_01		4372
-	10858665	PC_Foot_Wood_05	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_05_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_05		5318
-	33928990	PC_Foot_Stone_12	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_12_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_12		6900
-	70610093	PC_Foot_Wood_11	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_11_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_11		5530
-	131562243	PC_Foot_Wood_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_03		5325
-	152268353	PC_Foot_Stone_08	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_08_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_08		6954
-	163656671	PC_Foot_Stone_22	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_22_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_22		4378
-	181020132	PC_Foot_Stone_07	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_07_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_07		7310
-	181858383	PC_Foot_Stone_05	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_05_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_05		7771
-	226844212	Amb_Door	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Door_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Amb_Door		75823
-	266054275	PC_Foot_Stone_04	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_04_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_04		7824
-	324254457	PC_Foot_Stone_25	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_25_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_25		5234
-	356526589	PC_Foot_Wood_06	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_06_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_06		5969
+	4240408	PC_Foot_Run_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_01		4372
+	10858665	PC_Foot_Climb_05	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_05_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_05		5318
+	15989610	NPC_State_Located_Call_04	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Located_Call_04_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Located\NPC_State_Located_Call\NPC_State_Located_Call_04		7165
+	33928990	PC_Foot_Run_12	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_12_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_12		6900
+	70610093	PC_Foot_Climb_11	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_11_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_11		5530
+	75792013	NPC_State_Normal_Talk_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_02		7027
+	92619442	NPC_State_Alarmed_07	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_07_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_07		7520
+	96734697	NPC_State_Normal_Talk_05	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_05_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_05		2638
+	134443619	NPC_State_Normal_Trigger_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal_Trigger\NPC_State_Normal_Trigger_02		3695
+	152268353	PC_Foot_Run_08	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_08_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_08		6954
+	163656671	PC_Foot_Run_22	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_22_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_22		4378
+	177863488	NPC_State_Normal_Talk_09	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_09_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_09		7838
+	181020132	PC_Foot_Run_07	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_07_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_07		7310
+	181858383	PC_Foot_Run_05	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_05_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_05		7771
+	192250492	NPC_State_Alarmed_05	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_05_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_05		6123
+	226844212	Amb_Door	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Door_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Door		75823
+	227283969	NPC_State_Located_Init_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Located_Init_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Located\NPC_State_Located_Init\NPC_State_Located_Init_02		4978
+	266054275	PC_Foot_Run_04	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_04_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_04		7824
+	285563710	NPC_State_Located_Call_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Located_Call_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Located\NPC_State_Located_Call\NPC_State_Located_Call_03		2947
+	291390751	NPC_State_Located_Init_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Located_Init_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Located\NPC_State_Located_Init\NPC_State_Located_Init_01		4956
+	324254457	PC_Foot_Run_25	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_25_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_25		5234
+	338137247	NPC_State_Located_Call_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Located_Call_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Located\NPC_State_Located_Call\NPC_State_Located_Call_02		7668
+	350158918	NPC_State_Alarmed_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_03		7629
 	378524594	PC_Foot_Jump	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Jump_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Jump		5130
-	393942531	PC_Foot_Stone_10	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_10_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_10		7149
-	410529118	PC_Foot_Stone_20	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_20_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_20		1614
-	433948522	PC_Foot_Wood_04	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_04_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_04		5786
-	550849249	PC_Foot_Stone_15	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_15_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_15		5886
-	564970914	PC_Foot_Stone_06	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_06_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_06		6791
-	567454603	PC_Foot_Stone_16	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_16_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_16		7007
+	382205775	NPC_State_Normal_Move_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Move_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Move\NPC_State_Normal_Move_02		9387
+	410529118	PC_Foot_Run_20	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_20_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_20		1614
+	416657597	NPC_State_Alarmed_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_02		5909
+	430499177	NPC_State_Normal_Move_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Move_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Move\NPC_State_Normal_Move_03		6428
+	450629393	NPC_State_Located_Init_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Located_Init_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Located\NPC_State_Located_Init\NPC_State_Located_Init_03		5020
+	461989338	NPC_State_Normal_Talk_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_01		2071
+	479162651	NPC_State_Alarmed_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_01		6669
+	506564315	NPC_State_Normal_Move_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Move_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Move\NPC_State_Normal_Move_01		7411
+	506820829	NPC_State_Normal_Talk_06	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_06_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_06		5817
+	540803706	NPC_State_Normal_Trigger_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal_Trigger\NPC_State_Normal_Trigger_03		3898
+	548906796	NPC_State_Normal_Talk_10	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_10_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_10		4883
+	550849249	PC_Foot_Run_15	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_15_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_15		5886
+	564970914	PC_Foot_Run_06	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_06_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_06		6791
+	567454603	PC_Foot_Run_16	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_16_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_16		7007
+	574519907	NPC_State_Located_Call_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Located_Call_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Located\NPC_State_Located_Call\NPC_State_Located_Call_01		8042
+	582165216	NPC_State_Normal_Talk_04	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_04_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_04		5540
 	598015897	PC_Action_Kill	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Player_Action_Kill_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Kill		11429
-	623818758	PC_Foot_Stone_17	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_17_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_17		2107
-	624713926	PC_Foot_Stone_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_02		4599
-	650912931	PC_Foot_Wood_10	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_10_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_10		6034
-	664905640	PC_Foot_Stone_11	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_11_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_11		7270
-	703969500	PC_Foot_Stone_21	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_21_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_21		3824
-	705875494	PC_Foot_Wood_09	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_09_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_09		6397
-	758753492	PC_Foot_Wood_08	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_08_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_08		5310
-	782490891	PC_Foot_Stone_23	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_23_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_23		1582
-	794925173	PC_Foot_Wood_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_01		6545
-	795502261	PC_Foot_Stone_09	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_09_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_09		8631
-	902076861	PC_Foot_Wood_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_02		5715
-	907397557	PC_Foot_Stone_18	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_18_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_18		1510
-	947589312	PC_Foot_Stone_14	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_14_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_14		6116
-	975221627	PC_Foot_Wood_07	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_07_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Wood\PC_Foot_Wood_07		6165
-	994809475	PC_Foot_Stone_24	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_24_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_24		1417
-	1003474458	PC_Foot_Stone_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_03		5219
-	1005565833	PC_Foot_Stone_13	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_13_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_13		5761
-	1053418453	Amb_Rain	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Rain_0CDD8189.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Amb_Rain		1294335
-	1059148640	PC_Foot_Stone_19	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_19_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_Stone\PC_Foot_Stone_19		2009
+	623818758	PC_Foot_Run_17	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_17_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_17		2107
+	624713926	PC_Foot_Run_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_02		4599
+	650912931	PC_Foot_Climb_10	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_10_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_10		6034
+	664905640	PC_Foot_Run_11	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_11_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_11		7270
+	703969500	PC_Foot_Run_21	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_21_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_21		3824
+	705875494	PC_Foot_Climb_09	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_09_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_09		6397
+	733584388	NPC_State_Alarmed_06	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_06_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_06		5785
+	736784849	NPC_Action_Death_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_Action_Death_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Action\NPC_Action_Death\NPC_Action_Death_01		6704
+	741816274	NPC_State_Alarmed_04	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_04_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_04		9411
+	758753492	PC_Foot_Climb_08	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_08_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_08		5310
+	783819999	PC_Foot_Stealth_On	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Stealth_On_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Stealth_On		7728
+	804981725	NPC_State_Normal_Talk_12	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_12_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_12		4873
+	817792770	NPC_State_Normal_Talk_13	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_13_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_13		5571
+	832855751	NPC_State_Normal_Talk_08	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_08_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_08		5090
+	852758004	NPC_State_Normal_Talk_11	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_11_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_11		5400
+	887680807	PC_Action_Heartbeat	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Action_Heartbeat_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Heartbeat		7344
+	902076861	PC_Foot_Climb_02	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_wood_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_02		5715
+	907397557	PC_Foot_Run_18	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_18_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_18		1510
+	911699103	NPC_State_Normal_Trigger_01	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal_Trigger\NPC_State_Normal_Trigger_01		3558
+	947589312	PC_Foot_Run_14	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_14_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_14		6116
+	953018243	NPC_State_Normal_Talk_07	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_07_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_07		5841
+	994809475	PC_Foot_Run_24	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_24_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_24		1417
+	1003474458	PC_Foot_Run_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_03		5219
+	1005565833	PC_Foot_Run_13	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_13_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_13		5761
+	1014759628	NPC_State_Normal_Talk_03	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Talk\NPC_State_Normal_Talk_03		6606
+	1015725807	PC_Foot_Stealth_Off	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Stealth_Off_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Stealth_Off		7699
+	1053418453	Amb_Rain	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Rain_0CDD8189.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Amb_Room\Amb_Rain		1294335
+	1059148640	PC_Foot_Run_19	C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\footstep_stone_19_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_19		2009
 
