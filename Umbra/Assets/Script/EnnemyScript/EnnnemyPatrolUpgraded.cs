@@ -140,6 +140,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	public bool LureAttention;
 
+	private Animator m_Anim;
+
 //	// Use this for initialization
 	void Awake()
 	{
@@ -376,7 +378,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		timerAttack -= Time.deltaTime;
 		routine = false;
 		Alert = true;
+		GetComponent<Animator>().SetBool ("Alerte", true);
 		Suspicious = false;
+		GetComponent<Animator>().SetBool ("Mefiant", false);
 		backHome = false;
 		if(Vector3.Distance(transform.position, ThePlayer.position)<5 && Safe==false && timerAttack<=0)
 		{
@@ -418,13 +422,15 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 
 			if (trapped == false) {
-				if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
+				if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2) {
 					speed = 0;
+				}
 				if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
 					speed = OriginalSpeed;
-			}
-			else
+			} else
+			{
 				speed = 0;
+			}
 		}
 
 
@@ -512,7 +518,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 		}
 		Alert = false;
+		GetComponent<Animator>().SetBool ("Alerte", false);
 		Suspicious = true;
+		GetComponent<Animator>().SetBool ("Mefiant", true);
 		backHome = false;
 
 
@@ -673,6 +681,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 //		print ("that suspiciopus");
 		Suspicious = false;
+		GetComponent<Animator>().SetBool ("Mefiant", false);
 		if (trapped == false)
 			speed = OriginalSpeed;
 		else
@@ -800,6 +809,14 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	void Update () 
 	{
+		//Animation controller pour animation de marche
+		if (speed > 0) {
+			GetComponent<Animator> ().SetBool ("Marche", true);
+		} else {
+			GetComponent<Animator>().SetBool ("Marche", false);
+		}
+
+
 		if (LurePlayer.gameObject.activeInHierarchy ==false)
 			LureAttention = false;
 
@@ -1133,8 +1150,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 		if(lookRight==false)
 		{
-		GetComponent<SpriteRenderer>().flipX=true;
-		FliPBase.transform.eulerAngles=new Vector3(0,0,180);
+			GetComponent<SpriteRenderer>().flipX=true;
+			FliPBase.transform.eulerAngles=new Vector3(0,0,180);
 		}
 		else
 		{
