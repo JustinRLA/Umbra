@@ -882,7 +882,7 @@ Animator:
   m_GameObject: {fileID: 1014189160392212}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a076a37d1fbc61f4295f3cdb00761064, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -990,6 +990,7 @@ MonoBehaviour:
   - {fileID: 0}
   SuspiciousFeedback: {fileID: 0}
   AlertFeedback: {fileID: 0}
+  SafeFeedback: {fileID: 0}
   AlerEnnemy: 0000000000000000
   SuspiciousEnnemy: 0000000000000000
   LayerMaskOne:
@@ -1091,6 +1092,7 @@ MonoBehaviour:
   AssassinFeedback: {fileID: 1912435460326564}
   canAssassinate: 0
   ActualEnnemy: {fileID: 0}
+  OtherEnnemy: {fileID: 0}
   Playa: {fileID: 0}
 --- !u!114 &114589576820589842
 MonoBehaviour:
@@ -1118,7 +1120,6 @@ MonoBehaviour:
   ClimbTrue: 0
   canHide: 0
   canhideTwo: 0
-  TeleportPointDeath: {fileID: 0}
   canhideThree: 0
   RunTrigger: {fileID: 1214353545722392}
   canRune: 0
@@ -1133,7 +1134,6 @@ MonoBehaviour:
   CheckPointManager: {fileID: 0}
   RealCheckPointManager: {fileID: 0}
   MyRuneMan: {fileID: 0}
-  dead: 0
 --- !u!114 &114746720598708712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1439,7 +1439,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1783731295
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0a6f957dc00d8504ea82c9591cd0e581, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10414e3f45f88804a92f5fd0a0b0a107, type: 3}
   m_Color: {r: 0.45882356, g: 0.39607847, b: 0.3019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0

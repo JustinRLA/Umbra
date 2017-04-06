@@ -221,27 +221,16 @@ using UnityEngine.SceneManagement;
 		{
 				
 			m_JumpForce = 0;
-				GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX;
-				if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space) == false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder> ().MaxHauteur.position.y) {
-					transform.Translate (Vector2.up * 2 * Time.deltaTime);
-					m_Rigidbody2D.velocity = Vector2.up * 2 * Time.deltaTime;
-					//GetComponent<Animator>().SetBool ("ClimbMove", true);
-				}
-				if (Input.GetKey (KeyCode.S) && transform.position.y > ActualLadder.GetComponent<maxHauteurLadder> ().MinHauteur.position.y) {
-					transform.Translate (Vector2.down * 2 * Time.deltaTime);
-					m_Rigidbody2D.velocity = Vector2.down * 2 * Time.deltaTime;
-					//GetComponent<Animator>().SetBool ("ClimbMove", true);
-				}
-				if (Input.GetKey (KeyCode.Space) && canJump == true) {
-					canJump = false;
-					JumpFromLader ();
-					//GetComponent<Animator> ().SetBool ("ClimbMove", false);
-				}
-				else
+			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
+			if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space)==false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder>().MaxHauteur.position.y)
+				transform.Translate (Vector2.up * 2*Time.deltaTime);
+			if (Input.GetKey (KeyCode.S) && transform.position.y > ActualLadder.GetComponent<maxHauteurLadder>().MinHauteur.position.y)
+				transform.Translate (Vector2.down * 2*Time.deltaTime);
+				if (Input.GetKey (KeyCode.Space) && canJump==true)
 				{
-					//GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionY;
-					//GetComponent<Animator>().SetBool ("ClimbMove", false);
-				}	
+					canJump = false;
+				JumpFromLader ();		
+				}
 			GetComponent<Animator>().SetBool ("Climb", true);
 
 			if (Input.GetKey (KeyCode.E))
