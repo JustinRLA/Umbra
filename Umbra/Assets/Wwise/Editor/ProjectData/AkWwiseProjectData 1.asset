@@ -1,0 +1,846 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddd9b212d4f65941a4021026b559ed9, type: 3}
+  m_Name: AkWwiseProjectData 1
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: 
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{74E730D8-0B1D-4956-9CCA-A5C1594518D8}'
+    m_lastTimePsrt1: 1551932436
+    m_lastTimePart2: -1999342251
+    List: []
+  - PhysicalPath: Events\MUS.wwu
+    ParentPhysicalPath: 
+    Guid: '{5A477295-C31E-4DA4-B2B5-986D076D6D3E}'
+    m_lastTimePsrt1: -232103049
+    m_lastTimePart2: -1999341217
+    List:
+    - Name: Mus_Alert
+      Path: MUS\Mus_Alert
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Alert
+        ObjectType: 3
+      ID: 1102633101
+      Guid: 9e17e58a23a1c942ac6eacd82418e2fd
+      maxAttenuation: 0
+    - Name: Mus_Explo
+      Path: MUS\Mus_Explo
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Explo
+        ObjectType: 3
+      ID: 48865357
+      Guid: 7a8931af3211b242a004f3f5d456986c
+      maxAttenuation: 0
+    - Name: Mus_Menu
+      Path: MUS\Mus_Menu
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Menu
+        ObjectType: 3
+      ID: -1145324244
+      Guid: 9527663815847a45bf955843ad36745e
+      maxAttenuation: 0
+    - Name: Mus_Secteur1
+      Path: MUS\Mus_Secteur1
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Secteur1
+        ObjectType: 3
+      ID: -1070929931
+      Guid: 7a4b81c66b8ec14182cb907d07f4336c
+      maxAttenuation: 0
+    - Name: Mus_Secteur2
+      Path: MUS\Mus_Secteur2
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Secteur2
+        ObjectType: 3
+      ID: -1070929930
+      Guid: 23bda7eaaa294240a1e52c8253e2f604
+      maxAttenuation: 0
+    - Name: Mus_Secteur3
+      Path: MUS\Mus_Secteur3
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Secteur3
+        ObjectType: 3
+      ID: -1070929929
+      Guid: 0f320528746efd43b36c34de62f30307
+      maxAttenuation: 0
+    - Name: Mus_SlowMo
+      Path: MUS\Mus_SlowMo
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_SlowMo
+        ObjectType: 3
+      ID: 350380962
+      Guid: f725d6ce72e07f4582a0af179dc25010
+      maxAttenuation: 0
+    - Name: STOPALLMUSIC
+      Path: MUS\STOPALLMUSIC
+      PathAndIcons:
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: STOPALLMUSIC
+        ObjectType: 3
+      ID: -1387100277
+      Guid: 9238ba1396593847be32837b6f852af5
+      maxAttenuation: 0
+  - PhysicalPath: Events\SFX.wwu
+    ParentPhysicalPath: 
+    Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
+    m_lastTimePsrt1: -1302208373
+    m_lastTimePart2: -1999340847
+    List:
+    - Name: Amb_Alarm
+      Path: SFX\Amb\Amb_Alarm
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Amb
+        ObjectType: 4
+      - ElementName: Amb_Alarm
+        ObjectType: 3
+      ID: 267862785
+      Guid: 162718f7d17945489b3854167d2fd864
+      maxAttenuation: 0
+    - Name: Amb_Bell
+      Path: SFX\Amb\Amb_Bell
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Amb
+        ObjectType: 4
+      - ElementName: Amb_Bell
+        ObjectType: 3
+      ID: 1871943089
+      Guid: 00e21556e53f1641a1e7e3f6278f7bd1
+      maxAttenuation: 0
+    - Name: Amb_Check
+      Path: SFX\Amb\Amb_Check
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Amb
+        ObjectType: 4
+      - ElementName: Amb_Check
+        ObjectType: 3
+      ID: 1781658170
+      Guid: 8620f09b0fbd29478108a7d7cdc6f5a2
+      maxAttenuation: 0
+    - Name: Amb_Door
+      Path: SFX\Amb\Amb_Door
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Amb
+        ObjectType: 4
+      - ElementName: Amb_Door
+        ObjectType: 3
+      ID: -1286891642
+      Guid: f1bf6628dbbb9444a3fdfb34f32a84de
+      maxAttenuation: 0
+    - Name: Amb_Room
+      Path: SFX\Amb\Amb_Room
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Amb
+        ObjectType: 4
+      - ElementName: Amb_Room
+        ObjectType: 3
+      ID: -1092605513
+      Guid: 35fc1c84cb03ef478cc5ea3ff15c12c3
+      maxAttenuation: 0
+    - Name: Amb_Shadow_Pipe
+      Path: SFX\Amb\Amb_Shadow_Pipe
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: Amb
+        ObjectType: 4
+      - ElementName: Amb_Shadow_Pipe
+        ObjectType: 3
+      ID: 897032325
+      Guid: bebca29f814cb543a39a3f9db53f7897
+      maxAttenuation: 0
+    - Name: Menu_Cancel
+      Path: SFX\UI\Menu_Cancel
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu_Cancel
+        ObjectType: 3
+      ID: -1114057919
+      Guid: 047f623cca546c4aa4a8903f83a39e17
+      maxAttenuation: 0
+    - Name: Menu_Click
+      Path: SFX\UI\Menu_Click
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu_Click
+        ObjectType: 3
+      ID: 760777789
+      Guid: b9438a98ae39c14fbfe9ef56d41e0930
+      maxAttenuation: 0
+    - Name: Menu_Hover
+      Path: SFX\UI\Menu_Hover
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu_Hover
+        ObjectType: 3
+      ID: 309439191
+      Guid: d7181179aa99174994d745f8364330ee
+      maxAttenuation: 0
+    - Name: NPC_Action_Death
+      Path: SFX\NPCs\NPC_Action_Death
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: NPCs
+        ObjectType: 4
+      - ElementName: NPC_Action_Death
+        ObjectType: 3
+      ID: 1249525624
+      Guid: d1d33ea3de95004c85af3993e6039cd7
+      maxAttenuation: 0
+    - Name: NPC_Action_Kill
+      Path: SFX\NPCs\NPC_Action_Kill
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: NPCs
+        ObjectType: 4
+      - ElementName: NPC_Action_Kill
+        ObjectType: 3
+      ID: -542243238
+      Guid: 333aab634c385448ac133269605a1c9f
+      maxAttenuation: 0
+    - Name: NPC_Foot_Run
+      Path: SFX\NPCs\NPC_Foot_Run
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: NPCs
+        ObjectType: 4
+      - ElementName: NPC_Foot_Run
+        ObjectType: 3
+      ID: 888215683
+      Guid: efa4bdb138858641b912f08590483413
+      maxAttenuation: 0
+    - Name: NPC_State_Alarmed
+      Path: SFX\NPCs\NPC_State_Alarmed
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: NPCs
+        ObjectType: 4
+      - ElementName: NPC_State_Alarmed
+        ObjectType: 3
+      ID: -743419563
+      Guid: a091be1b5cae604e92dc0a75fa6b6aa1
+      maxAttenuation: 0
+    - Name: NPC_State_Located
+      Path: SFX\NPCs\NPC_State_Located
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: NPCs
+        ObjectType: 4
+      - ElementName: NPC_State_Located
+        ObjectType: 3
+      ID: -1582395249
+      Guid: 6782ae21c3dd414ea8952bb8c4fbda9e
+      maxAttenuation: 0
+    - Name: NPC_State_Normal
+      Path: SFX\NPCs\NPC_State_Normal
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: NPCs
+        ObjectType: 4
+      - ElementName: NPC_State_Normal
+        ObjectType: 3
+      ID: 624895962
+      Guid: 752e66c4a5923f44bdea99f0403f6be2
+      maxAttenuation: 0
+    - Name: PC_Action_Heartbeat
+      Path: SFX\PC\Action\PC_Action_Heartbeat
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Action
+        ObjectType: 4
+      - ElementName: PC_Action_Heartbeat
+        ObjectType: 3
+      ID: 1005965974
+      Guid: b3005662a3df884881689146f183d3a1
+      maxAttenuation: 0
+    - Name: PC_Action_Kill
+      Path: SFX\PC\Action\PC_Action_Kill
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Action
+        ObjectType: 4
+      - ElementName: PC_Action_Kill
+        ObjectType: 3
+      ID: 1092215814
+      Guid: 2aec524a5f8ea74e93e692ebfe09639a
+      maxAttenuation: 0
+    - Name: PC_Action_Look
+      Path: SFX\PC\Action\PC_Action_Look
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Action
+        ObjectType: 4
+      - ElementName: PC_Action_Look
+        ObjectType: 3
+      ID: -139984921
+      Guid: fc3de77a4f28dd4bb47c2fb522baab4d
+      maxAttenuation: 0
+    - Name: PC_Action_Respawn
+      Path: SFX\PC\Action\PC_Action_Respawn
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Action
+        ObjectType: 4
+      - ElementName: PC_Action_Respawn
+        ObjectType: 3
+      ID: 1590111458
+      Guid: af6a0e68ee58bf44b68d1a03b5bf7eee
+      maxAttenuation: 0
+    - Name: PC_Action_SlowMo
+      Path: SFX\PC\Action\PC_Action_SlowMo
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Action
+        ObjectType: 4
+      - ElementName: PC_Action_SlowMo
+        ObjectType: 3
+      ID: 348181601
+      Guid: 1f5a16fd799dea4c9c0f7178a6adf75c
+      maxAttenuation: 0
+    - Name: PC_Foot_Climb
+      Path: SFX\PC\Foot\PC_Foot_Climb
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Foot
+        ObjectType: 4
+      - ElementName: PC_Foot_Climb
+        ObjectType: 3
+      ID: 771062343
+      Guid: dae6036a73da2a41836537ce5571395d
+      maxAttenuation: 0
+    - Name: PC_Foot_Jump
+      Path: SFX\PC\Foot\PC_Foot_Jump
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Foot
+        ObjectType: 4
+      - ElementName: PC_Foot_Jump
+        ObjectType: 3
+      ID: 1143253532
+      Guid: c9440661ac6c284f98aa66395d9b4cc8
+      maxAttenuation: 0
+    - Name: PC_Foot_Land
+      Path: SFX\PC\Foot\PC_Foot_Land
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Foot
+        ObjectType: 4
+      - ElementName: PC_Foot_Land
+        ObjectType: 3
+      ID: 1077239935
+      Guid: eaa0c683de04c3478f0396b3adc72abf
+      maxAttenuation: 0
+    - Name: PC_Foot_Run
+      Path: SFX\PC\Foot\PC_Foot_Run
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Foot
+        ObjectType: 4
+      - ElementName: PC_Foot_Run
+        ObjectType: 3
+      ID: 1166184207
+      Guid: 84e490b5c9d0cc4a87b266cd2820313a
+      maxAttenuation: 0
+    - Name: PC_Rune_Accrochage_Equip
+      Path: SFX\PC\Rune\PC_Rune_Accrochage_Equip
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Accrochage_Equip
+        ObjectType: 3
+      ID: 651324617
+      Guid: 5a36d538ab2d0b41acaa1f602af53062
+      maxAttenuation: 0
+    - Name: PC_Rune_Accrochage_Green
+      Path: SFX\PC\Rune\PC_Rune_Accrochage_Green
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Accrochage_Green
+        ObjectType: 3
+      ID: -30021124
+      Guid: b015b178336cea4cbce27d866cae7fab
+      maxAttenuation: 0
+    - Name: PC_Rune_Accrochage_Red
+      Path: SFX\PC\Rune\PC_Rune_Accrochage_Red
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Accrochage_Red
+        ObjectType: 3
+      ID: 2004937196
+      Guid: 23e8c3bfc2ad5e44a86460eb4a15f3f3
+      maxAttenuation: 0
+    - Name: PC_Rune_Accrochage_Use
+      Path: SFX\PC\Rune\PC_Rune_Accrochage_Use
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Accrochage_Use
+        ObjectType: 3
+      ID: 1701807220
+      Guid: cff1439b14eb46489b90d67af580af11
+      maxAttenuation: 0
+    - Name: PC_Rune_Cooldown
+      Path: SFX\PC\Rune\PC_Rune_Cooldown
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Cooldown
+        ObjectType: 3
+      ID: -2038822093
+      Guid: b8a7de6a6a15d1418c57fe98efd80138
+      maxAttenuation: 0
+    - Name: PC_Rune_Leurre_Filter
+      Path: SFX\PC\Rune\PC_Rune_Leurre_Filter
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Leurre_Filter
+        ObjectType: 3
+      ID: 564655388
+      Guid: 6f7a647783b71b4d8dd82ffa46999b51
+      maxAttenuation: 0
+    - Name: PC_Rune_Leurre_Use
+      Path: SFX\PC\Rune\PC_Rune_Leurre_Use
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Leurre_Use
+        ObjectType: 3
+      ID: -1999344529
+      Guid: a8c25a958674434bb170a08a2c8327a8
+      maxAttenuation: 0
+    - Name: PC_Rune_Marquage_Sonar
+      Path: SFX\PC\Rune\PC_Rune_Marquage_Sonar
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Marquage_Sonar
+        ObjectType: 3
+      ID: 2135334427
+      Guid: 5ca9cbf10a81864c9aecd40ef52e610b
+      maxAttenuation: 0
+    - Name: PC_Rune_Marquage_Use
+      Path: SFX\PC\Rune\PC_Rune_Marquage_Use
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Marquage_Use
+        ObjectType: 3
+      ID: 153992643
+      Guid: 9fc853532e375d40b451e3886d4f6772
+      maxAttenuation: 0
+    - Name: PC_Rune_Ombre_Decay
+      Path: SFX\PC\Rune\PC_Rune_Ombre_Decay
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Ombre_Decay
+        ObjectType: 3
+      ID: -884277146
+      Guid: 1d79f59a9651c74e922b9db02462d97f
+      maxAttenuation: 0
+    - Name: PC_Rune_Ombre_Select
+      Path: SFX\PC\Rune\PC_Rune_Ombre_Select
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Ombre_Select
+        ObjectType: 3
+      ID: -703850108
+      Guid: 653b76fe2d7da448a8967656da4bd284
+      maxAttenuation: 0
+    - Name: PC_Rune_Ombre_Use
+      Path: SFX\PC\Rune\PC_Rune_Ombre_Use
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Ombre_Use
+        ObjectType: 3
+      ID: 710126949
+      Guid: fe9a34470dc7c34aac799a8107f16db5
+      maxAttenuation: 0
+    - Name: PC_Rune_Select
+      Path: SFX\PC\Rune\PC_Rune_Select
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Select
+        ObjectType: 3
+      ID: 966453248
+      Guid: cf32daa68d777b4aa10c38f3e6230a76
+      maxAttenuation: 0
+    - Name: PC_Rune_Solide_End
+      Path: SFX\PC\Rune\PC_Rune_Solide_End
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Solide_End
+        ObjectType: 3
+      ID: 1994207056
+      Guid: 626410ae7ede8a4ab29ee6da24dfa8e8
+      maxAttenuation: 0
+    - Name: PC_Rune_Solide_Use
+      Path: SFX\PC\Rune\PC_Rune_Solide_Use
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Solide_Use
+        ObjectType: 3
+      ID: 1543771206
+      Guid: 33c733c172c7f84ab820b76f7b9b87aa
+      maxAttenuation: 0
+    - Name: PC_Rune_Trap_Stun
+      Path: SFX\PC\Rune\PC_Rune_Trap_Stun
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Trap_Stun
+        ObjectType: 3
+      ID: 698530244
+      Guid: 691e8978de4bc349a4b48b4d15c755d0
+      maxAttenuation: 0
+    - Name: PC_Rune_Trap_Use
+      Path: SFX\PC\Rune\PC_Rune_Trap_Use
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Rune
+        ObjectType: 4
+      - ElementName: PC_Rune_Trap_Use
+        ObjectType: 3
+      ID: -1050639811
+      Guid: 829a7885ff8c1b439f7a002eb8ef85e6
+      maxAttenuation: 0
+    - Name: PC_Stealth_Off
+      Path: SFX\PC\Foot\PC_Stealth_Off
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Foot
+        ObjectType: 4
+      - ElementName: PC_Stealth_Off
+        ObjectType: 3
+      ID: 1483073216
+      Guid: 093631b764b34840864eb2a4fadaad86
+      maxAttenuation: 0
+    - Name: PC_Stealth_On
+      Path: SFX\PC\Foot\PC_Stealth_On
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Foot
+        ObjectType: 4
+      - ElementName: PC_Stealth_On
+        ObjectType: 3
+      ID: -2111914358
+      Guid: 007f1e42a92e384a89fdd674ac8924be
+      maxAttenuation: 0
+  - PhysicalPath: Events\VO.wwu
+    ParentPhysicalPath: 
+    Guid: '{8DB8739B-74AD-4B38-AE79-DB271FE8D787}'
+    m_lastTimePsrt1: 1551942457
+    m_lastTimePart2: -1999342251
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}'
+    m_lastTimePsrt1: 1552022506
+    m_lastTimePart2: -1999342251
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{1AF2D82A-9DEA-451D-A831-817BC1E3BD46}'
+    m_lastTimePsrt1: 1569141951
+    m_lastTimePart2: -1999341651
+    List:
+    - Name: Foot_Stealth
+      Path: Default Work Unit\Foot_Stealth
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Foot_Stealth
+        ObjectType: 9
+      ID: -743959955
+      Guid: 8d5919ed140de642ad5464446d222339
+      values:
+      - None
+      - Stealth_Off
+      - Stealth_On
+      ValueIcons:
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Stealth_Off
+        ObjectType: 8
+      - ElementName: Stealth_On
+        ObjectType: 8
+      valueIDs: db3ba32ca047247dea0cb022
+      ValueGuids:
+      - bytes: 9e7fdde8be8f234baf7f07eeefcf9c8c
+      - bytes: 434c2608eccdbe44bdde1381fc737ad2
+      - bytes: 7619d63e02d6a5409040b4c7db371d23
+    - Name: Music
+      Path: Default Work Unit\Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 9
+      ID: -303024426
+      Guid: 7b2522e95b89ca48bc7990e2c0efe7bf
+      values:
+      - Alert
+      - Explo
+      - None
+      - SlowMo
+      ValueIcons:
+      - ElementName: Alert
+        ObjectType: 8
+      - ElementName: Explo
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: SlowMo
+        ObjectType: 8
+      valueIDs: 819a052bc1a35ce3db3ba32c7eb3e3c0
+      ValueGuids:
+      - bytes: 31d6f98a9aef004481c0f4408fc4e323
+      - bytes: fc5289156efd6344a59660c49a19e437
+      - bytes: c221a31da2b7fa42b9c20ae74c97c835
+      - bytes: a8ad00bc5aa9f24d92480c9618bfe155
+    - Name: Secteurs
+      Path: Default Work Unit\Secteurs
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Secteurs
+        ObjectType: 9
+      ID: 2057580299
+      Guid: 49b392050577e74c9355341f1190cb9b
+      values:
+      - None
+      - Secteur1
+      - Secteur2
+      - Secteur3
+      ValueIcons:
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Secteur1
+        ObjectType: 8
+      - ElementName: Secteur2
+        ObjectType: 8
+      - ElementName: Secteur3
+        ObjectType: 8
+      valueIDs: db3ba32c492fa47a4a2fa47a4b2fa47a
+      ValueGuids:
+      - bytes: 81f8ce3be3e91a44990f8436ea94dd12
+      - bytes: b5b4df5f83cb624a9e6d3b2f3a9ebcf0
+      - bytes: b17e73badaf378469b50c0d677e5d593
+      - bytes: c6fb5d5a2121bc42a3db6f784fa51199
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{78B9560E-201B-4A99-946B-5B5FB9572D52}'
+    m_lastTimePsrt1: 1569151960
+    m_lastTimePart2: -1999341651
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{00B0838D-1ACD-431C-8672-B7D188B67091}'
+    m_lastTimePsrt1: 1566722277
+    m_lastTimePart2: -1999342251
+    List: []
+  - PhysicalPath: SoundBanks\TrueSoundBank.wwu
+    ParentPhysicalPath: 
+    Guid: '{FB2F3DBD-0CA3-47D6-AB4D-D69615BE6D20}'
+    m_lastTimePsrt1: 1566722277
+    m_lastTimePart2: -1999342251
+    List:
+    - Name: MUS
+      Path: TrueSoundBank\MUS
+      PathAndIcons:
+      - ElementName: TrueSoundBank
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 7
+      ID: 712897226
+      Guid: b4fea06698dbbd47a1a763c52cb68c3e
+    - Name: SFX
+      Path: TrueSoundBank\SFX
+      PathAndIcons:
+      - ElementName: TrueSoundBank
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 7
+      ID: 393239870
+      Guid: 77b013379f320144873c62a09d1a0b5c
+    - Name: VO
+      Path: TrueSoundBank\VO
+      PathAndIcons:
+      - ElementName: TrueSoundBank
+        ObjectType: 12
+      - ElementName: VO
+        ObjectType: 7
+      ID: 1534528548
+      Guid: 6a0c5d057d19b14e83b1066006f500d4
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0.95

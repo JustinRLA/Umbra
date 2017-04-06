@@ -3195,6 +3195,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<RandomSequenceContainer Name="Amb_Alarm" ID="{6C9575B4-DC6A-4577-B13E-02162497CD71}" ShortID="642296934">
+											<PropertyList>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>

@@ -251,6 +251,7 @@ public class SightListenerTemplate : MonoBehaviour {
 		yield return new WaitForSeconds (1f);
 		if(inCam==true)
 		{
+			AkSoundEngine.PostEvent ("Amb_Alarm", gameObject);
 		if (EnnemyOne != null)
 			{
 				if(EnnemyOne.GetComponent<EnnnemyPatrolUpgraded> ()==true)
@@ -292,8 +293,20 @@ public class SightListenerTemplate : MonoBehaviour {
 			dangerLight.SetActive (true);
 			SuspiciousLight.SetActive (false);
 			NoDangerLight.SetActive (false);
-
+			StartCoroutine (ReturnNormalLight ());
 		}	
+	}
+
+	IEnumerator ReturnNormalLight()
+	{
+		yield return new WaitForSeconds (5f);
+		if (inCam == false) {
+
+		dangerLight.SetActive (false);
+		SuspiciousLight.SetActive (false);
+		NoDangerLight.SetActive (true);
+		}
+			
 	}
 
 	public void myListener_onInside(GameObject go){
