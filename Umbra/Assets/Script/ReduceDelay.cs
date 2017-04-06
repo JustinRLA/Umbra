@@ -19,15 +19,23 @@ public class ReduceDelay : MonoBehaviour {
 
 	IEnumerator Reducing()
 	{
-		
+		transform.position = new Vector3 (transform.position.x, transform.position.y, -1);
 		Time.timeScale = 0.04f;
 		GetComponent<SpriteRenderer> ().sortingOrder = 10;
 		Playa.GetComponent<PlatformerCharacter2D> ().enabled = false;
-		yield return new WaitForSeconds (0.1f);
+		yield return new WaitForSeconds (0.07f);
 		GetComponent<Animator> ().SetBool ("Play", true);
+
+
+	}
+
+public void ZeroFixe()
+{
+	transform.position = new Vector3 (transform.position.x, transform.position.y, 0);
 		GetComponent<SpriteRenderer> ().sortingOrder = 0;
 		Playa.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		Time.timeScale = 1f;
 
-	}
+
+}
 }
