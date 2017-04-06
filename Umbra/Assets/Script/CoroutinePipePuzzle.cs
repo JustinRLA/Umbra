@@ -22,11 +22,16 @@ public class CoroutinePipePuzzle : MonoBehaviour {
 		{
 		Pipe [4].SetActive (false);
 		Pipe [0].SetActive (true);
+			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
 
 		yield return new WaitForSeconds (timebetween);
+			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
+
 		Pipe [1].SetActive (true);
 		Pipe [5].SetActive (false);
 		yield return new WaitForSeconds (timebetween);
+			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
+
 		Pipe [2].SetActive (true);
 		Pipe [0].SetActive (false);
 			Pipe [6].SetActive (false);
@@ -35,9 +40,13 @@ public class CoroutinePipePuzzle : MonoBehaviour {
 		Pipe [3].SetActive (true);
 		Pipe [1].SetActive (false);
 		yield return new WaitForSeconds (timebetween);
+			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
+
 		Pipe [4].SetActive (true);
 		Pipe [2].SetActive (false);
 		yield return new WaitForSeconds (timebetween);
+			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
+
 		Pipe [5].SetActive (true);
 		Pipe [3].SetActive (false);
 			Pipe [6].SetActive (true);

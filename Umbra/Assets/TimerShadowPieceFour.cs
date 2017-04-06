@@ -24,7 +24,9 @@ public class TimerShadowPieceFour : MonoBehaviour {
 		while(true)
 		{
 		ShadowOne.SetActive (true);
+			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
 		yield return new WaitForSeconds (2f);
+			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
 		ShadowTwo.SetActive (true);
 		yield return new WaitForSeconds (1f);
 		ShadowOne.SetActive (false);
