@@ -17,6 +17,7 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject SecondSection;
 	public GameObject ThirdSection;
 	public GameObject[] BackGround;
+	public GameObject Runemanager;
 
 
 	int decoountNumber;
@@ -34,6 +35,27 @@ public class InitializeLevel : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		Runemanager = GameObject.Find ("RuneManager");
+		if (PlayerPrefs.GetInt ("RuneTactic") == 1)
+			Runemanager.GetComponent<RuneManagerScript> ().TacticRune = 1;
+		
+		if (PlayerPrefs.GetInt ("RuneTactic") == 2)
+			Runemanager.GetComponent<RuneManagerScript> ().TacticRune = 2;
+
+		if (PlayerPrefs.GetInt ("RuneDefense") == 1)
+			Runemanager.GetComponent<RuneManagerScript> ().DefFune = 1;
+
+		if (PlayerPrefs.GetInt ("RuneDefense") == 2)
+			Runemanager.GetComponent<RuneManagerScript> ().DefFune = 2;
+
+		if (PlayerPrefs.GetInt ("RuneOffense") == 1)
+			Runemanager.GetComponent<RuneManagerScript> ().OffenseRune = 1;
+
+		if (PlayerPrefs.GetInt ("RuneOffense") == 2)
+			Runemanager.GetComponent<RuneManagerScript> ().OffenseRune = 2;
+
+		Runemanager.GetComponent<RuneManagerScript> ().RuneSetting();
+
 		if (decoountNumber > 0 && decoountNumber < 10) {
 			BackGround [0].SetActive (false);
 			BackGround [1].SetActive (false);

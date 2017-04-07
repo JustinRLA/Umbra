@@ -63,6 +63,8 @@ public class RuneManagerScript : MonoBehaviour
 	public int TacticRune;
 	public int TypeRuneUsed;
 	// Use this for initialization
+
+
 	void Start () {
 		
 		ThePlayer=GameObject.Find("2DCharacter(Clone)");
@@ -113,9 +115,9 @@ public class RuneManagerScript : MonoBehaviour
 		myenabledTrapMode = GetComponent<EnableTrapMode> ();
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	public void RuneSetting()
+	{
 		if(OffenseRune==1)
 		{
 			ImageRunePiege.SetActive(true);
@@ -186,7 +188,7 @@ public class RuneManagerScript : MonoBehaviour
 			ImageRuneSolidificationFull.SetActive (false);
 			ImageRuneAccrochageFull.SetActive(false);
 
-			
+
 			ImageRuneSolidification.SetActive (false);
 			ImageRuneAccrochage.SetActive(false);
 			textSolid.SetActive(false);
@@ -210,6 +212,10 @@ public class RuneManagerScript : MonoBehaviour
 			textSolid.SetActive(true);
 			textaccrochage.SetActive(false);
 		}
+	}
+	// Update is called once per frame
+	void Update () {
+		
 
 		if(timerDef<ActualDef)
 		{
