@@ -25,9 +25,15 @@ public class RuneTutorialSettling : MonoBehaviour {
 		if(col.tag=="Player")
 		{
 			print ("BVugfgmgk");
+			PlayerPrefs.SetInt ("RuneOffense", OffenseSet);
+			PlayerPrefs.SetInt ("RuneDefense", defsetter);
+			PlayerPrefs.SetInt ("RuneTactic", tacticSetter);
+
+
 			myRuneManager.GetComponent<RuneManagerScript> ().DefFune = defsetter;
 			myRuneManager.GetComponent<RuneManagerScript> ().OffenseRune = OffenseSet;
 			myRuneManager.GetComponent<RuneManagerScript> ().TacticRune = tacticSetter;
+			myRuneManager.GetComponent<RuneManagerScript> ().RuneSetting ();
 
 
 		}

@@ -68,13 +68,17 @@ public class ChangeRunePoint : MonoBehaviour {
 		FeedBackImage = GameObject.Find ("feedbackRuneChange");
 
 		RuneManager.GetComponent<RuneManagerScript> ().enabled = true;
-
+		PlayerPrefs.SetInt ("RuneOffense", myTempoOffRune);
 		RuneManager.GetComponent<RuneManagerScript> ().DefFune= myTempoDefRune;
+		PlayerPrefs.SetInt ("RuneDefense", myTempoDefRune);
+		PlayerPrefs.SetInt ("RuneTactic", myTempoTacticRune);
+
 		RuneManager.GetComponent<RuneManagerScript> ().OffenseRune=myTempoOffRune ;
 	 RuneManager.GetComponent<RuneManagerScript> ().TacticRune=myTempoTacticRune ;
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		RuneManager.GetComponent<RuneManagerScript> ().RuneSetting() ;
 		print ("Shut");
 
 		UIMode.SetActive (false);
@@ -116,6 +120,7 @@ public class ChangeRunePoint : MonoBehaviour {
 
 		if (myTempoDefRune == 1)
 		{
+			PlayerPrefs.SetInt ("RuneDefense", 1);
 			LureRuneGlow.GetComponent<Image> ().enabled = false;
 
 			LureRune.GetComponent<Image> ().enabled = false;
@@ -129,6 +134,8 @@ public class ChangeRunePoint : MonoBehaviour {
 		}
 		if (myTempoDefRune == 2)
 			{
+			PlayerPrefs.SetInt ("RuneDefense", 2);
+
 			LureRune.GetComponent<Image> ().enabled = true;
 			YellowBCGLure.GetComponent<Image> ().enabled = true;
 			LureRuneGlow.GetComponent<Image> ().enabled = true;
@@ -140,6 +147,8 @@ public class ChangeRunePoint : MonoBehaviour {
 
 		if (myTempoTacticRune == 1)
 				{
+			PlayerPrefs.SetInt ("RuneTactic", 1);
+
 			SolidRuneGlow.GetComponent<Image> ().enabled = false;
 
 			SolidRune.GetComponent<Image> ().enabled = false;
@@ -154,6 +163,8 @@ public class ChangeRunePoint : MonoBehaviour {
 				}
 		if(myTempoTacticRune==2)
 					{
+			PlayerPrefs.SetInt ("RuneTactic", 2);
+
 			SolidRune.GetComponent<Image> ().enabled = true;
 			YellowBCGSolid.GetComponent<Image> ().enabled = true;
 			SolidRuneGlow.GetComponent<Image> ().enabled = true;
@@ -166,6 +177,8 @@ public class ChangeRunePoint : MonoBehaviour {
 
 		if (myTempoOffRune == 1)
 						{
+			PlayerPrefs.SetInt ("RuneOffense", 1);
+
 			MarkLure.GetComponent<Image> ().enabled = false;
 			YellowBCGmark.GetComponent<Image> ().enabled = false;
 			MarkLureGlow.GetComponent<Image> ().enabled = false;
@@ -177,6 +190,8 @@ public class ChangeRunePoint : MonoBehaviour {
 						}
 			if (myTempoOffRune == 2)
 							{
+			PlayerPrefs.SetInt ("RuneOffense", 2);
+
 			MarkLure.GetComponent<Image> ().enabled = true;
 			YellowBCGmark.GetComponent<Image> ().enabled = true;
 			MarkLureGlow.GetComponent<Image> ().enabled = true;
@@ -192,6 +207,7 @@ public class ChangeRunePoint : MonoBehaviour {
 
 	public void MySetOffenseRuneMark()
 	{
+		
 		myTempoOffRune = 2;
 	}
 	public void MySetOffenseRuneTrap()

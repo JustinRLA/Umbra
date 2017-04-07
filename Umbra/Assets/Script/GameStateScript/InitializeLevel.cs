@@ -41,18 +41,23 @@ public class InitializeLevel : MonoBehaviour {
 		
 		if (PlayerPrefs.GetInt ("RuneTactic") == 2)
 			Runemanager.GetComponent<RuneManagerScript> ().TacticRune = 2;
-
+		if (PlayerPrefs.GetInt ("RuneTactic") == 0)
+			Runemanager.GetComponent<RuneManagerScript> ().TacticRune = 0;
 		if (PlayerPrefs.GetInt ("RuneDefense") == 1)
 			Runemanager.GetComponent<RuneManagerScript> ().DefFune = 1;
 
 		if (PlayerPrefs.GetInt ("RuneDefense") == 2)
 			Runemanager.GetComponent<RuneManagerScript> ().DefFune = 2;
-
+		if (PlayerPrefs.GetInt ("RuneDefense") == 0)
+			Runemanager.GetComponent<RuneManagerScript> ().DefFune = 0;
 		if (PlayerPrefs.GetInt ("RuneOffense") == 1)
 			Runemanager.GetComponent<RuneManagerScript> ().OffenseRune = 1;
 
 		if (PlayerPrefs.GetInt ("RuneOffense") == 2)
 			Runemanager.GetComponent<RuneManagerScript> ().OffenseRune = 2;
+		if (PlayerPrefs.GetInt ("RuneOffense") == 0)
+			Runemanager.GetComponent<RuneManagerScript> ().OffenseRune = 0;
+		
 
 		Runemanager.GetComponent<RuneManagerScript> ().RuneSetting();
 
