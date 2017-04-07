@@ -507,8 +507,8 @@ using UnityEngine.SceneManagement;
 
 	void OnColliderEnter2D(Collision2D col)
 	{
-		if(col.gameObject.tag=="bloc" && m_Grounded==true)
-			AkSoundEngine.PostEvent("")
+		if (col.gameObject.tag == "bloc" && m_Grounded == true)
+			AkSoundEngine.PostEvent ("PC_Foot_Land", gameObject);
 			
 	}
     }

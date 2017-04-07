@@ -22,7 +22,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	bool routine;
 	public float timerAttack;
 	bool haveplayedAlert;
-	bool havePlayed
+	bool havePlayed;
 	public bool Safe;
 	public Transform UpPoint;
 	public Transform UpPoint_UpLevel;

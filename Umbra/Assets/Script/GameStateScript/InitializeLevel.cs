@@ -69,7 +69,7 @@ public class InitializeLevel : MonoBehaviour {
 			BackGround [decoountNumber+1].SetActive (true);
 
 		}
-		if (decoountNumber==12) {
+		if (decoountNumber==10) {
 			BackGround [0].SetActive (false);
 			BackGround [1].SetActive (false);
 			BackGround [2].SetActive (false);
@@ -81,8 +81,6 @@ public class InitializeLevel : MonoBehaviour {
 			BackGround [8].SetActive (false);
 			BackGround [9].SetActive (false);
 			BackGround [10].SetActive (false);
-			BackGround [11].SetActive (false);
-			BackGround [12].SetActive (false);
 
 			BackGround [decoountNumber].SetActive (true);
 			BackGround [decoountNumber-1].SetActive (true);
