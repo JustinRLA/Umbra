@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="120">
 	<RootPaths>
-		<ProjectRoot>C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Nikola Viel\Documents\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Nikola Viel\Documents\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Nikola Viel\Documents\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\p1059020\Documents\Umbra\Umbra\Umbra\Umbra_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Nikola Viel\Documents\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -25,6 +25,13 @@
 				<Event Id="3180909377" Name="Menu_Cancel" ObjectPath="\Events\SFX\UI\Menu_Cancel"/>
 				<Event Id="760777789" Name="Menu_Click" ObjectPath="\Events\SFX\UI\Menu_Click"/>
 				<Event Id="309439191" Name="Menu_Hover" ObjectPath="\Events\SFX\UI\Menu_Hover"/>
+				<Event Id="1102633101" Name="Mus_Alert" ObjectPath="\Events\MUS\Mus_Alert"/>
+				<Event Id="48865357" Name="Mus_Explo" ObjectPath="\Events\MUS\Mus_Explo"/>
+				<Event Id="3149643052" Name="Mus_Menu" ObjectPath="\Events\MUS\Mus_Menu"/>
+				<Event Id="3224037365" Name="Mus_Secteur1" ObjectPath="\Events\MUS\Mus_Secteur1"/>
+				<Event Id="3224037366" Name="Mus_Secteur2" ObjectPath="\Events\MUS\Mus_Secteur2"/>
+				<Event Id="3224037367" Name="Mus_Secteur3" ObjectPath="\Events\MUS\Mus_Secteur3"/>
+				<Event Id="350380962" Name="Mus_SlowMo" ObjectPath="\Events\MUS\Mus_SlowMo"/>
 				<Event Id="1249525624" Name="NPC_Action_Death" ObjectPath="\Events\SFX\NPCs\NPC_Action_Death"/>
 				<Event Id="3752724058" Name="NPC_Action_Kill" ObjectPath="\Events\SFX\NPCs\NPC_Action_Kill"/>
 				<Event Id="888215683" Name="NPC_Foot_Run" ObjectPath="\Events\SFX\NPCs\NPC_Foot_Run"/>
@@ -59,6 +66,7 @@
 				<Event Id="3244327485" Name="PC_Rune_Trap_Use" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Trap_Use"/>
 				<Event Id="1483073216" Name="PC_Stealth_Off" ObjectPath="\Events\SFX\PC\Foot\PC_Stealth_Off"/>
 				<Event Id="2183052938" Name="PC_Stealth_On" ObjectPath="\Events\SFX\PC\Foot\PC_Stealth_On"/>
+				<Event Id="2907867019" Name="STOPALLMUSIC" ObjectPath="\Events\MUS\STOPALLMUSIC"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="4240408" Language="SFX">
@@ -92,6 +100,10 @@
 				<File Id="96734697" Language="SFX">
 					<ShortName>NPC_State_Normal_Talk_05.wav</ShortName>
 					<Path>SFX\NPC_State_Normal_Talk_05_50DB02DB.wem</Path>
+				</File>
+				<File Id="102559054" Language="SFX">
+					<ShortName>Mus_Secteur2_Explo2_50bpm3-4_L4M-P1.wav</ShortName>
+					<Path>SFX\Mus_Secteur2_Explo2_50bpm3-4_L4M-P1_0CDD8189.wem</Path>
 				</File>
 				<File Id="134443619" Language="SFX">
 					<ShortName>NPC_State_Normal_02.wav</ShortName>
@@ -128,6 +140,10 @@
 				<File Id="227283969" Language="SFX">
 					<ShortName>NPC_State_Located_Init_02.wav</ShortName>
 					<Path>SFX\NPC_State_Located_Init_02_50DB02DB.wem</Path>
+				</File>
+				<File Id="242901964" Language="SFX">
+					<ShortName>Mus_Secteur2_Explo1_50bpm3-4_L4M-P0.wav</ShortName>
+					<Path>SFX\Mus_Secteur2_Explo1_50bpm3-4_L4M-P0_0CDD8189.wem</Path>
 				</File>
 				<File Id="266054275" Language="SFX">
 					<ShortName>footstep_stone_04.wav</ShortName>
@@ -225,6 +241,10 @@
 					<ShortName>Player_Action_Kill.wav</ShortName>
 					<Path>SFX\Player_Action_Kill_50DB02DB.wem</Path>
 				</File>
+				<File Id="608100684" Language="SFX">
+					<ShortName>Mus_Secteur2_Explo3_50bpm3-4_L4M-P1.wav</ShortName>
+					<Path>SFX\Mus_Secteur2_Explo3_50bpm3-4_L4M-P1_0CDD8189.wem</Path>
+				</File>
 				<File Id="623818758" Language="SFX">
 					<ShortName>footstep_stone_17.wav</ShortName>
 					<Path>SFX\footstep_stone_17_50DB02DB.wem</Path>
@@ -232,6 +252,10 @@
 				<File Id="624713926" Language="SFX">
 					<ShortName>footstep_stone_02.wav</ShortName>
 					<Path>SFX\footstep_stone_02_50DB02DB.wem</Path>
+				</File>
+				<File Id="648160448" Language="SFX">
+					<ShortName>Mus_Secteur2_Explo4_50bpm3-4_L4M-P1.wav</ShortName>
+					<Path>SFX\Mus_Secteur2_Explo4_50bpm3-4_L4M-P1_0CDD8189.wem</Path>
 				</File>
 				<File Id="650912931" Language="SFX">
 					<ShortName>footstep_wood_10.wav</ShortName>
@@ -339,40 +363,10 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
-		<SoundBank Id="712897226" Language="SFX">
-			<ObjectPath>\SoundBanks\TrueSoundBank\MUS</ObjectPath>
-			<ShortName>MUS</ShortName>
-			<Path>MUS.bnk</Path>
-			<IncludedEvents>
-				<Event Id="1102633101" Name="Mus_Alert" ObjectPath="\Events\MUS\Mus_Alert"/>
-				<Event Id="48865357" Name="Mus_Explo" ObjectPath="\Events\MUS\Mus_Explo"/>
-				<Event Id="3149643052" Name="Mus_Menu" ObjectPath="\Events\MUS\Mus_Menu"/>
-				<Event Id="3224037365" Name="Mus_Secteur1" ObjectPath="\Events\MUS\Mus_Secteur1"/>
-				<Event Id="3224037366" Name="Mus_Secteur2" ObjectPath="\Events\MUS\Mus_Secteur2"/>
-				<Event Id="3224037367" Name="Mus_Secteur3" ObjectPath="\Events\MUS\Mus_Secteur3"/>
-				<Event Id="350380962" Name="Mus_SlowMo" ObjectPath="\Events\MUS\Mus_SlowMo"/>
-				<Event Id="2907867019" Name="STOPALLMUSIC" ObjectPath="\Events\MUS\STOPALLMUSIC"/>
-			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="319367727" Language="SFX">
-					<ShortName>Umbra_Demo.wav</ShortName>
-					<Path>SFX\Umbra_Demo_0CDD8189.wem</Path>
-				</File>
-				<File Id="660947639" Language="SFX">
-					<ShortName>Umbra_Demo2.wav</ShortName>
-					<Path>SFX\Umbra_Demo2_0CDD8189.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
-		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
-		</SoundBank>
-		<SoundBank Id="1534528548" Language="SFX">
-			<ObjectPath>\SoundBanks\TrueSoundBank\VO</ObjectPath>
-			<ShortName>VO</ShortName>
-			<Path>VO.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

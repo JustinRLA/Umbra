@@ -70,6 +70,11 @@
 							</SetItemParam>
 						</Action>
 						<Action Name="Play" ID="{5F3FD892-C09E-45CB-8F10-DA313E3A56BC}" ShortID="301988159" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="60"/>
+								<Property Name="FadeCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="60"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{F2B7EACD-7D09-48B7-BD9C-FEB11D93C51F}" Global="false">
 									<ObjectRef Name="Mus_Secteur2" ID="{53AFF3BA-0FCB-495A-B90B-060671A14D68}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
