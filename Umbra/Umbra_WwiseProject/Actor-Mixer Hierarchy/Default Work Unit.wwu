@@ -137,6 +137,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="PC_Foot_Jump" ID="{40DD2546-F0E5-4E6A-B405-43C158BAEFAC}" ShortID="254017946" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-13</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1117,13 +1124,6 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Leurre_Use" ID="{05DAD9AB-BE5E-4BC3-8E2E-D41C12A468A8}" ShortID="333008143" Type="SoundFX">
-											<PropertyList>
-												<Property Name="Inclusion" Type="bool">
-													<ValueList>
-														<Value>False</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -3496,6 +3496,509 @@
 							<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="PC" ID="{5F2EF42E-57D4-44B6-A9A2-CDDFC564A4B7}" ShortID="159970749">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<ActorMixer Name="Action" ID="{FFA7BECB-AD60-4AFB-821D-A97E9872BFCF}" ShortID="139708223">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="VO_PC_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" ShortID="812120163">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="VO_PC_Death_Short" ID="{7F470A3C-6389-46E2-A79E-BB2BD8D607A2}" ShortID="489018725">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{4A73B9C8-8AFF-40FA-876A-248DD2E231C2}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="20"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{9A66582C-EA1F-49A4-88CF-4460E311A7CE}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="VO_PC_Death_Short_01" ID="{A306288E-F0BB-4AE4-8970-A8F03917C0A1}" ShortID="334352256" Type="SoundFX">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="VO_PC_Death_Short_01" ID="{C8AAD8AA-B35D-4D39-8B09-A0C6DC8FD5DB}" ShortID="970054798">
+																	<Language>SFX</Language>
+																	<AudioFile>VO_PC_Death_Short_01.wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="VO_PC_Death_Short_01" ID="{C8AAD8AA-B35D-4D39-8B09-A0C6DC8FD5DB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="VO_PC_Death_Short_02" ID="{8638B4B2-1B7C-4EDE-9028-9DEB4E2CCB5E}" ShortID="363625422" Type="SoundFX">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="VO_PC_Death_Short_02" ID="{0C7601D0-1066-41B9-8E07-FCE849C1AA45}" ShortID="1052857111">
+																	<Language>SFX</Language>
+																	<AudioFile>VO_PC_Death_Short_02.wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="VO_PC_Death_Short_02" ID="{0C7601D0-1066-41B9-8E07-FCE849C1AA45}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="VO_PC_Death_Long" ID="{4CD6089E-BFF2-471A-A539-76940CB4B295}" ShortID="704292323">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{338CBAFE-3098-4C8E-849F-666C036530A3}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{6088BAC4-36C2-4968-8C29-8A37D60E5D30}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.1"/>
+																			<Property Name="Min" Type="Real64" Value="-0.2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+														<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<RandomSequenceContainer Name="VO_PC_Death_Long_A" ID="{234DE280-421F-4CD7-B68C-271DB0ACC527}" ShortID="900330441">
+															<PropertyList>
+																<Property Name="Lowpass" Type="int16">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{FFE39A6D-A04A-42FB-AECC-4A85FE425D36}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="20"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{0B3C5E55-40C1-4F1A-B20E-480E64720F70}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="100"/>
+																					<Property Name="Min" Type="Real64" Value="-100"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="VO_PC_Death_Long_02" ID="{EE9479A1-B7FF-4AD8-96BE-532491C61E53}" ShortID="235457431" Type="SoundFX">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="VO_PC_Death_Long_02" ID="{3B9E2B06-2864-4A1F-A8D1-2B75FCD4AF4D}" ShortID="504236252">
+																			<PropertyList>
+																				<Property Name="TrimEnd" Type="Real64" Value="0.215281700477811"/>
+																			</PropertyList>
+																			<Language>SFX</Language>
+																			<AudioFile>VO_PC_Death_Long_02.wav</AudioFile>
+																			<ConvertedFileIDList>
+																				<File ID="881124872"/>
+																			</ConvertedFileIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="VO_PC_Death_Long_02" ID="{3B9E2B06-2864-4A1F-A8D1-2B75FCD4AF4D}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="VO_PC_Death_Long_01" ID="{693B08DE-399A-4499-B091-4694CE26F0E2}" ShortID="162575888" Type="SoundFX">
+																	<PropertyList>
+																		<Property Name="Lowpass" Type="int16">
+																			<ModifierList>
+																				<ModifierInfo>
+																					<Modifier Name="" ID="{9C6A65AA-284B-4FE9-AC7F-E0DAC8BB1297}"/>
+																				</ModifierInfo>
+																			</ModifierList>
+																		</Property>
+																		<Property Name="Pitch" Type="int32">
+																			<ModifierList>
+																				<ModifierInfo>
+																					<Modifier Name="" ID="{0B44F842-6369-400F-8615-C167E892EFBD}"/>
+																				</ModifierInfo>
+																			</ModifierList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="VO_PC_Death_Long_01" ID="{E863A9C3-D52C-4E57-A92A-FBEFD734BEA9}" ShortID="829171738">
+																			<PropertyList>
+																				<Property Name="TrimEnd" Type="Real64" Value="0.328329132248137"/>
+																			</PropertyList>
+																			<Language>SFX</Language>
+																			<AudioFile>VO_PC_Death_Long_01.wav</AudioFile>
+																			<ConvertedFileIDList>
+																				<File ID="143388766"/>
+																			</ConvertedFileIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="VO_PC_Death_Long_01" ID="{E863A9C3-D52C-4E57-A92A-FBEFD734BEA9}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="VO_PC_Death_Long_B" ID="{F2DFCFEC-68CB-4522-A8C2-CD610A65DEE9}" ShortID="126062832">
+															<PropertyList>
+																<Property Name="Lowpass" Type="int16">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{AF61D022-E4A4-4B21-A85E-20BE973A87FD}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="20"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{6D5F61AE-5A0E-414D-BBF3-9C3FE61B6794}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="50"/>
+																					<Property Name="Min" Type="Real64" Value="-50"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+																<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="VO_PC_Death_Long_02" ID="{514CBF21-56EB-4721-A42E-53891393A8CF}" ShortID="214134669" Type="SoundFX">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="VO_PC_Death_Long_02" ID="{7FEFA1B1-799B-420C-BA3F-CC761569A09A}" ShortID="881124872">
+																			<PropertyList>
+																				<Property Name="TrimBegin" Type="Real64" Value="0.501398024983803"/>
+																				<Property Name="TrimEnd" Type="Real64" Value="0.988906908001295"/>
+																			</PropertyList>
+																			<Language>SFX</Language>
+																			<AudioFile>VO_PC_Death_Long_02.wav</AudioFile>
+																			<ConvertedFileIDList>
+																				<File ID="504236252"/>
+																			</ConvertedFileIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="VO_PC_Death_Long_02" ID="{7FEFA1B1-799B-420C-BA3F-CC761569A09A}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="VO_PC_Death_Long_01" ID="{B83E6329-610C-4D34-8104-E77E62B20254}" ShortID="33222568" Type="SoundFX">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="VO_PC_Death_Long_01" ID="{875923CF-1211-4174-A3A1-A73452D8A362}" ShortID="143388766">
+																			<PropertyList>
+																				<Property Name="TrimBegin" Type="Real64" Value="0.609529680919987"/>
+																				<Property Name="TrimEnd" Type="Real64" Value="1.20963364512472"/>
+																			</PropertyList>
+																			<Language>SFX</Language>
+																			<AudioFile>VO_PC_Death_Long_01.wav</AudioFile>
+																			<ConvertedFileIDList>
+																				<File ID="829171738"/>
+																			</ConvertedFileIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="VO_PC_Death_Long_01" ID="{875923CF-1211-4174-A3A1-A73452D8A362}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+													</ChildrenList>
+													<Playlist>
+														<ItemRef Name="VO_PC_Death_Long_A" ID="{234DE280-421F-4CD7-B68C-271DB0ACC527}"/>
+														<ItemRef Name="VO_PC_Death_Long_B" ID="{F2DFCFEC-68CB-4522-A8C2-CD610A65DEE9}"/>
+													</Playlist>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="VO_PC_Jump" ID="{271CB49B-974E-4D15-B1FD-789FD093FF27}" ShortID="367880811">
+											<PropertyList>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{104F8247-FD7A-400E-BF47-5EDBCB2EF14E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="50"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="VO_PC_Jump_01" ID="{2923789D-B5BA-42E8-B8C8-FCD432702D6C}" ShortID="726040565" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VO_PC_Jump_01" ID="{D5550DD9-13E8-4AFC-A50D-D1E6EE0B8B20}" ShortID="206506025">
+															<Language>SFX</Language>
+															<AudioFile>VO_PC_Jump_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VO_PC_Jump_01" ID="{D5550DD9-13E8-4AFC-A50D-D1E6EE0B8B20}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VO_PC_Jump_02" ID="{A6C293D4-F6DE-4162-A290-136704CE93AC}" ShortID="146602562" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VO_PC_Jump_02" ID="{1538B37C-4342-4862-9937-C1D7F62D7E73}" ShortID="170287801">
+															<Language>SFX</Language>
+															<AudioFile>VO_PC_Jump_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VO_PC_Jump_02" ID="{1538B37C-4342-4862-9937-C1D7F62D7E73}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VO_PC_Jump_03" ID="{7AF3A6B8-8ED3-47AE-BC1A-C56917995443}" ShortID="814934671" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VO_PC_Jump_03" ID="{7D00BED8-641A-4BD9-819B-43E90487BE3F}" ShortID="637684781">
+															<Language>SFX</Language>
+															<AudioFile>VO_PC_Jump_03.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VO_PC_Jump_03" ID="{7D00BED8-641A-4BD9-819B-43E90487BE3F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VO_PC_Jump_04" ID="{59F0B1BE-75FD-4142-8AA9-45019D0EA7A4}" ShortID="15289338" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VO_PC_Jump_04" ID="{018CB577-A403-410B-8C82-7B3E3B53B7FC}" ShortID="294293325">
+															<Language>SFX</Language>
+															<AudioFile>VO_PC_Jump_04.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VO_PC_Jump_04" ID="{018CB577-A403-410B-8C82-7B3E3B53B7FC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VO_PC_Jump_05" ID="{2A7D19ED-79EE-42FB-9F74-4DC43C473C3A}" ShortID="155279122" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VO_PC_Jump_05" ID="{BA8701D8-C528-4482-BA19-DB202065C0E4}" ShortID="844877423">
+															<Language>SFX</Language>
+															<AudioFile>VO_PC_Jump_05.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VO_PC_Jump_05" ID="{BA8701D8-C528-4482-BA19-DB202065C0E4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VO_PC_Jump_06" ID="{068680EE-536A-48BC-8330-9D21D9615151}" ShortID="842686256" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VO_PC_Jump_06" ID="{2BCBF244-143C-403B-A1A7-A9646DB36E24}" ShortID="930875067">
+															<Language>SFX</Language>
+															<AudioFile>VO_PC_Jump_06.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VO_PC_Jump_06" ID="{2BCBF244-143C-403B-A1A7-A9646DB36E24}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</ActorMixer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

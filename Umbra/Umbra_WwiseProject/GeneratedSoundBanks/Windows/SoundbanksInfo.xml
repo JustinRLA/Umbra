@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="120">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Nikola Viel\Documents\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Nikola Viel\Documents\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Nikola Viel\Documents\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Nikola Viel\Documents\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,57 +16,60 @@
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="267862785" Name="Amb_Alarm" ObjectPath="\Events\SFX\Amb\Amb_Alarm"/>
-				<Event Id="1871943089" Name="Amb_Bell" ObjectPath="\Events\SFX\Amb\Amb_Bell"/>
-				<Event Id="1781658170" Name="Amb_Check" ObjectPath="\Events\SFX\Amb\Amb_Check"/>
-				<Event Id="3008075654" Name="Amb_Door" ObjectPath="\Events\SFX\Amb\Amb_Door"/>
-				<Event Id="3202361783" Name="Amb_Room" ObjectPath="\Events\SFX\Amb\Amb_Room"/>
-				<Event Id="897032325" Name="Amb_Shadow_Pipe" ObjectPath="\Events\SFX\Amb\Amb_Shadow_Pipe"/>
-				<Event Id="3180909377" Name="Menu_Cancel" ObjectPath="\Events\SFX\UI\Menu_Cancel"/>
-				<Event Id="760777789" Name="Menu_Click" ObjectPath="\Events\SFX\UI\Menu_Click"/>
-				<Event Id="309439191" Name="Menu_Hover" ObjectPath="\Events\SFX\UI\Menu_Hover"/>
-				<Event Id="1102633101" Name="Mus_Alert" ObjectPath="\Events\MUS\Mus_Alert"/>
-				<Event Id="48865357" Name="Mus_Explo" ObjectPath="\Events\MUS\Mus_Explo"/>
-				<Event Id="3149643052" Name="Mus_Menu" ObjectPath="\Events\MUS\Mus_Menu"/>
-				<Event Id="3224037365" Name="Mus_Secteur1" ObjectPath="\Events\MUS\Mus_Secteur1"/>
-				<Event Id="3224037366" Name="Mus_Secteur2" ObjectPath="\Events\MUS\Mus_Secteur2"/>
-				<Event Id="3224037367" Name="Mus_Secteur3" ObjectPath="\Events\MUS\Mus_Secteur3"/>
-				<Event Id="350380962" Name="Mus_SlowMo" ObjectPath="\Events\MUS\Mus_SlowMo"/>
-				<Event Id="1249525624" Name="NPC_Action_Death" ObjectPath="\Events\SFX\NPCs\NPC_Action_Death"/>
-				<Event Id="3752724058" Name="NPC_Action_Kill" ObjectPath="\Events\SFX\NPCs\NPC_Action_Kill"/>
-				<Event Id="888215683" Name="NPC_Foot_Run" ObjectPath="\Events\SFX\NPCs\NPC_Foot_Run"/>
-				<Event Id="3551547733" Name="NPC_State_Alarmed" ObjectPath="\Events\SFX\NPCs\NPC_State_Alarmed"/>
-				<Event Id="2712572047" Name="NPC_State_Located" ObjectPath="\Events\SFX\NPCs\NPC_State_Located"/>
-				<Event Id="624895962" Name="NPC_State_Normal" ObjectPath="\Events\SFX\NPCs\NPC_State_Normal"/>
-				<Event Id="1005965974" Name="PC_Action_Heartbeat" ObjectPath="\Events\SFX\PC\Action\PC_Action_Heartbeat"/>
-				<Event Id="1092215814" Name="PC_Action_Kill" ObjectPath="\Events\SFX\PC\Action\PC_Action_Kill"/>
-				<Event Id="4154982375" Name="PC_Action_Look" ObjectPath="\Events\SFX\PC\Action\PC_Action_Look"/>
-				<Event Id="1590111458" Name="PC_Action_Respawn" ObjectPath="\Events\SFX\PC\Action\PC_Action_Respawn"/>
-				<Event Id="348181601" Name="PC_Action_SlowMo" ObjectPath="\Events\SFX\PC\Action\PC_Action_SlowMo"/>
-				<Event Id="771062343" Name="PC_Foot_Climb" ObjectPath="\Events\SFX\PC\Foot\PC_Foot_Climb"/>
-				<Event Id="1143253532" Name="PC_Foot_Jump" ObjectPath="\Events\SFX\PC\Foot\PC_Foot_Jump"/>
-				<Event Id="1077239935" Name="PC_Foot_Land" ObjectPath="\Events\SFX\PC\Foot\PC_Foot_Land"/>
-				<Event Id="1166184207" Name="PC_Foot_Run" ObjectPath="\Events\SFX\PC\Foot\PC_Foot_Run"/>
-				<Event Id="651324617" Name="PC_Rune_Accrochage_Equip" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Accrochage_Equip"/>
-				<Event Id="4264946172" Name="PC_Rune_Accrochage_Green" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Accrochage_Green"/>
-				<Event Id="2004937196" Name="PC_Rune_Accrochage_Red" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Accrochage_Red"/>
-				<Event Id="1701807220" Name="PC_Rune_Accrochage_Use" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Accrochage_Use"/>
-				<Event Id="2256145203" Name="PC_Rune_Cooldown" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Cooldown"/>
-				<Event Id="564655388" Name="PC_Rune_Leurre_Filter" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Leurre_Filter"/>
-				<Event Id="2295622767" Name="PC_Rune_Leurre_Use" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Leurre_Use"/>
-				<Event Id="2135334427" Name="PC_Rune_Marquage_Sonar" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Marquage_Sonar"/>
-				<Event Id="153992643" Name="PC_Rune_Marquage_Use" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Marquage_Use"/>
-				<Event Id="3410690150" Name="PC_Rune_Ombre_Decay" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Ombre_Decay"/>
-				<Event Id="3591117188" Name="PC_Rune_Ombre_Select" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Ombre_Select"/>
-				<Event Id="710126949" Name="PC_Rune_Ombre_Use" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Ombre_Use"/>
-				<Event Id="966453248" Name="PC_Rune_Select" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Select"/>
-				<Event Id="1994207056" Name="PC_Rune_Solide_End" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Solide_End"/>
-				<Event Id="1543771206" Name="PC_Rune_Solide_Use" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Solide_Use"/>
-				<Event Id="698530244" Name="PC_Rune_Trap_Stun" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Trap_Stun"/>
-				<Event Id="3244327485" Name="PC_Rune_Trap_Use" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Trap_Use"/>
-				<Event Id="1483073216" Name="PC_Stealth_Off" ObjectPath="\Events\SFX\PC\Foot\PC_Stealth_Off"/>
-				<Event Id="2183052938" Name="PC_Stealth_On" ObjectPath="\Events\SFX\PC\Foot\PC_Stealth_On"/>
-				<Event Id="2907867019" Name="STOPALLMUSIC" ObjectPath="\Events\MUS\STOPALLMUSIC"/>
+				<Event Id="267862785" Name="Amb_Alarm" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Alarm"/>
+				<Event Id="1871943089" Name="Amb_Bell" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Bell"/>
+				<Event Id="1781658170" Name="Amb_Check" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Check"/>
+				<Event Id="3008075654" Name="Amb_Door" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Door"/>
+				<Event Id="3202361783" Name="Amb_Room" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Room"/>
+				<Event Id="897032325" Name="Amb_Shadow_Pipe" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Shadow_Pipe"/>
+				<Event Id="3180909377" Name="Menu_Cancel" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Cancel"/>
+				<Event Id="760777789" Name="Menu_Click" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Click"/>
+				<Event Id="309439191" Name="Menu_Hover" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Hover"/>
+				<Event Id="1102633101" Name="Mus_Alert" ObjectPath="\Events\Default Work Unit\MUS\Mus_Alert"/>
+				<Event Id="48865357" Name="Mus_Explo" ObjectPath="\Events\Default Work Unit\MUS\Mus_Explo"/>
+				<Event Id="3149643052" Name="Mus_Menu" ObjectPath="\Events\Default Work Unit\MUS\Mus_Menu"/>
+				<Event Id="3224037365" Name="Mus_Secteur1" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur1"/>
+				<Event Id="3224037366" Name="Mus_Secteur2" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur2"/>
+				<Event Id="3224037367" Name="Mus_Secteur3" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur3"/>
+				<Event Id="350380962" Name="Mus_SlowMo" ObjectPath="\Events\Default Work Unit\MUS\Mus_SlowMo"/>
+				<Event Id="1249525624" Name="NPC_Action_Death" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Action_Death"/>
+				<Event Id="3752724058" Name="NPC_Action_Kill" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Action_Kill"/>
+				<Event Id="888215683" Name="NPC_Foot_Run" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Foot_Run"/>
+				<Event Id="3551547733" Name="NPC_State_Alarmed" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_State_Alarmed"/>
+				<Event Id="2712572047" Name="NPC_State_Located" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_State_Located"/>
+				<Event Id="624895962" Name="NPC_State_Normal" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_State_Normal"/>
+				<Event Id="169793748" Name="PC_Action_Death" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Death"/>
+				<Event Id="1005965974" Name="PC_Action_Heartbeat" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Heartbeat"/>
+				<Event Id="1092215814" Name="PC_Action_Kill" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Kill"/>
+				<Event Id="4154982375" Name="PC_Action_Look" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Look"/>
+				<Event Id="1590111458" Name="PC_Action_Respawn" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Respawn"/>
+				<Event Id="348181601" Name="PC_Action_SlowMo" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_SlowMo"/>
+				<Event Id="771062343" Name="PC_Foot_Climb" ObjectPath="\Events\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb"/>
+				<Event Id="1143253532" Name="PC_Foot_Jump" ObjectPath="\Events\Default Work Unit\SFX\PC\Foot\PC_Foot_Jump"/>
+				<Event Id="1077239935" Name="PC_Foot_Land" ObjectPath="\Events\Default Work Unit\SFX\PC\Foot\PC_Foot_Land"/>
+				<Event Id="1166184207" Name="PC_Foot_Run" ObjectPath="\Events\Default Work Unit\SFX\PC\Foot\PC_Foot_Run"/>
+				<Event Id="651324617" Name="PC_Rune_Accrochage_Equip" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Equip"/>
+				<Event Id="4264946172" Name="PC_Rune_Accrochage_Green" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Green"/>
+				<Event Id="2004937196" Name="PC_Rune_Accrochage_Red" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Red"/>
+				<Event Id="1701807220" Name="PC_Rune_Accrochage_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Use"/>
+				<Event Id="2256145203" Name="PC_Rune_Cooldown" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Cooldown"/>
+				<Event Id="564655388" Name="PC_Rune_Leurre_Filter" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Leurre_Filter"/>
+				<Event Id="2295622767" Name="PC_Rune_Leurre_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Leurre_Use"/>
+				<Event Id="2135334427" Name="PC_Rune_Marquage_Sonar" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Sonar"/>
+				<Event Id="153992643" Name="PC_Rune_Marquage_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Use"/>
+				<Event Id="3410690150" Name="PC_Rune_Ombre_Decay" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Decay"/>
+				<Event Id="3591117188" Name="PC_Rune_Ombre_Select" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Select"/>
+				<Event Id="710126949" Name="PC_Rune_Ombre_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Use"/>
+				<Event Id="966453248" Name="PC_Rune_Select" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Select"/>
+				<Event Id="1994207056" Name="PC_Rune_Solide_End" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Solide_End"/>
+				<Event Id="1543771206" Name="PC_Rune_Solide_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Solide_Use"/>
+				<Event Id="698530244" Name="PC_Rune_Trap_Stun" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Stun"/>
+				<Event Id="3244327485" Name="PC_Rune_Trap_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Use"/>
+				<Event Id="1483073216" Name="PC_Stealth_Off" ObjectPath="\Events\Default Work Unit\SFX\PC\Foot\PC_Stealth_Off"/>
+				<Event Id="2183052938" Name="PC_Stealth_On" ObjectPath="\Events\Default Work Unit\SFX\PC\Foot\PC_Stealth_On"/>
+				<Event Id="2907867019" Name="STOPALLMUSIC" ObjectPath="\Events\Default Work Unit\MUS\STOPALLMUSIC"/>
+				<Event Id="3427879087" Name="VO_PC_Death" ObjectPath="\Events\Default Work Unit\VO\PC\VO_PC_Death"/>
+				<Event Id="3045087407" Name="VO_PC_Jump" ObjectPath="\Events\Default Work Unit\VO\PC\VO_PC_Jump"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="4240408" Language="SFX">
@@ -109,6 +112,10 @@
 					<ShortName>NPC_State_Normal_02.wav</ShortName>
 					<Path>SFX\NPC_State_Normal_02_50DB02DB.wem</Path>
 				</File>
+				<File Id="143388766" Language="SFX">
+					<ShortName>VO_PC_Death_Long_01.wav</ShortName>
+					<Path>SFX\VO_PC_Death_Long_01_8ABD407E.wem</Path>
+				</File>
 				<File Id="152268353" Language="SFX">
 					<ShortName>footstep_stone_08.wav</ShortName>
 					<Path>SFX\footstep_stone_08_50DB02DB.wem</Path>
@@ -116,6 +123,10 @@
 				<File Id="163656671" Language="SFX">
 					<ShortName>footstep_stone_22.wav</ShortName>
 					<Path>SFX\footstep_stone_22_50DB02DB.wem</Path>
+				</File>
+				<File Id="170287801" Language="SFX">
+					<ShortName>VO_PC_Jump_02.wav</ShortName>
+					<Path>SFX\VO_PC_Jump_02_50DB02DB.wem</Path>
 				</File>
 				<File Id="177863488" Language="SFX">
 					<ShortName>NPC_State_Normal_Talk_09.wav</ShortName>
@@ -132,6 +143,10 @@
 				<File Id="192250492" Language="SFX">
 					<ShortName>NPC_State_Alarmed_05.wav</ShortName>
 					<Path>SFX\NPC_State_Alarmed_05_50DB02DB.wem</Path>
+				</File>
+				<File Id="206506025" Language="SFX">
+					<ShortName>VO_PC_Jump_01.wav</ShortName>
+					<Path>SFX\VO_PC_Jump_01_50DB02DB.wem</Path>
 				</File>
 				<File Id="226844212" Language="SFX">
 					<ShortName>Amb_Door.wav</ShortName>
@@ -157,6 +172,10 @@
 					<ShortName>NPC_State_Located_Init_01.wav</ShortName>
 					<Path>SFX\NPC_State_Located_Init_01_50DB02DB.wem</Path>
 				</File>
+				<File Id="294293325" Language="SFX">
+					<ShortName>VO_PC_Jump_04.wav</ShortName>
+					<Path>SFX\VO_PC_Jump_04_50DB02DB.wem</Path>
+				</File>
 				<File Id="324254457" Language="SFX">
 					<ShortName>footstep_stone_25.wav</ShortName>
 					<Path>SFX\footstep_stone_25_50DB02DB.wem</Path>
@@ -168,10 +187,6 @@
 				<File Id="350158918" Language="SFX">
 					<ShortName>NPC_State_Alarmed_03.wav</ShortName>
 					<Path>SFX\NPC_State_Alarmed_03_50DB02DB.wem</Path>
-				</File>
-				<File Id="378524594" Language="SFX">
-					<ShortName>PC_Foot_Jump.wav</ShortName>
-					<Path>SFX\PC_Foot_Jump_50DB02DB.wem</Path>
 				</File>
 				<File Id="382205775" Language="SFX">
 					<ShortName>NPC_State_Normal_Move_02.wav</ShortName>
@@ -200,6 +215,10 @@
 				<File Id="479162651" Language="SFX">
 					<ShortName>NPC_State_Alarmed_01.wav</ShortName>
 					<Path>SFX\NPC_State_Alarmed_01_50DB02DB.wem</Path>
+				</File>
+				<File Id="504236252" Language="SFX">
+					<ShortName>VO_PC_Death_Long_02.wav</ShortName>
+					<Path>SFX\VO_PC_Death_Long_02_0B7C4910.wem</Path>
 				</File>
 				<File Id="506564315" Language="SFX">
 					<ShortName>NPC_State_Normal_Move_01.wav</ShortName>
@@ -253,6 +272,10 @@
 					<ShortName>footstep_stone_02.wav</ShortName>
 					<Path>SFX\footstep_stone_02_50DB02DB.wem</Path>
 				</File>
+				<File Id="637684781" Language="SFX">
+					<ShortName>VO_PC_Jump_03.wav</ShortName>
+					<Path>SFX\VO_PC_Jump_03_50DB02DB.wem</Path>
+				</File>
 				<File Id="648160448" Language="SFX">
 					<ShortName>Mus_Secteur2_Explo4_50bpm3-4_L4M-P1.wav</ShortName>
 					<Path>SFX\Mus_Secteur2_Explo4_50bpm3-4_L4M-P1_0CDD8189.wem</Path>
@@ -301,13 +324,25 @@
 					<ShortName>NPC_State_Normal_Talk_13.wav</ShortName>
 					<Path>SFX\NPC_State_Normal_Talk_13_50DB02DB.wem</Path>
 				</File>
+				<File Id="829171738" Language="SFX">
+					<ShortName>VO_PC_Death_Long_01.wav</ShortName>
+					<Path>SFX\VO_PC_Death_Long_01_6A5B7F5E.wem</Path>
+				</File>
 				<File Id="832855751" Language="SFX">
 					<ShortName>NPC_State_Normal_Talk_08.wav</ShortName>
 					<Path>SFX\NPC_State_Normal_Talk_08_50DB02DB.wem</Path>
 				</File>
+				<File Id="844877423" Language="SFX">
+					<ShortName>VO_PC_Jump_05.wav</ShortName>
+					<Path>SFX\VO_PC_Jump_05_50DB02DB.wem</Path>
+				</File>
 				<File Id="852758004" Language="SFX">
 					<ShortName>NPC_State_Normal_Talk_11.wav</ShortName>
 					<Path>SFX\NPC_State_Normal_Talk_11_50DB02DB.wem</Path>
+				</File>
+				<File Id="881124872" Language="SFX">
+					<ShortName>VO_PC_Death_Long_02.wav</ShortName>
+					<Path>SFX\VO_PC_Death_Long_02_0723CF47.wem</Path>
 				</File>
 				<File Id="887680807" Language="SFX">
 					<ShortName>PC_Action_Heartbeat.wav</ShortName>
@@ -325,6 +360,10 @@
 					<ShortName>NPC_State_Normal_01.wav</ShortName>
 					<Path>SFX\NPC_State_Normal_01_50DB02DB.wem</Path>
 				</File>
+				<File Id="930875067" Language="SFX">
+					<ShortName>VO_PC_Jump_06.wav</ShortName>
+					<Path>SFX\VO_PC_Jump_06_50DB02DB.wem</Path>
+				</File>
 				<File Id="947589312" Language="SFX">
 					<ShortName>footstep_stone_14.wav</ShortName>
 					<Path>SFX\footstep_stone_14_50DB02DB.wem</Path>
@@ -332,6 +371,10 @@
 				<File Id="953018243" Language="SFX">
 					<ShortName>NPC_State_Normal_Talk_07.wav</ShortName>
 					<Path>SFX\NPC_State_Normal_Talk_07_50DB02DB.wem</Path>
+				</File>
+				<File Id="970054798" Language="SFX">
+					<ShortName>VO_PC_Death_Short_01.wav</ShortName>
+					<Path>SFX\VO_PC_Death_Short_01_50DB02DB.wem</Path>
 				</File>
 				<File Id="994809475" Language="SFX">
 					<ShortName>footstep_stone_24.wav</ShortName>
@@ -352,6 +395,10 @@
 				<File Id="1015725807" Language="SFX">
 					<ShortName>PC_Foot_Stealth_Off.wav</ShortName>
 					<Path>SFX\PC_Foot_Stealth_Off_50DB02DB.wem</Path>
+				</File>
+				<File Id="1052857111" Language="SFX">
+					<ShortName>VO_PC_Death_Short_02.wav</ShortName>
+					<Path>SFX\VO_PC_Death_Short_02_50DB02DB.wem</Path>
 				</File>
 				<File Id="1053418453" Language="SFX">
 					<ShortName>Amb_Rain.wav</ShortName>
