@@ -385,8 +385,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		backHome = false;
 		if(Vector3.Distance(transform.position, ThePlayer.position)<5 && Safe==false && timerAttack<=0)
 		{
-
+			print ("attacking");
+			GetComponent<Animator>().SetBool ("Attaque", true);
 			MyPlayer.GetComponent<PlatformerCharacter2D> ().Death ();
+			//GetComponent<Animator>().SetBool ("Attaque", false);
 		}
 
 
@@ -892,7 +894,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			}
 			if ((SoundListerner - DistranctionsSoud) / SoundLevel > 8) {
 				timerState = 24;
-				print ("tryeeee");
+				//print ("tryeeee");
 			} 
 		}
 
@@ -907,7 +909,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 			if ( mySighListernetTemplate.throwAlert == true) {
 				timerState = 24;
-			print ("tryeeee");
+			//print ("tryeeee");
 
 			} 
 
