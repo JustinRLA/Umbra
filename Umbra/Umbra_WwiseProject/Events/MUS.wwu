@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" SchemaVersion="75">
+<WwiseDocument Type="WorkUnit" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" SchemaVersion="75" RootDocumentID="{74E730D8-0B1D-4956-9CCA-A5C1594518D8}">
 	<Events>
-		<WorkUnit Name="MUS" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" PersistMode="Standalone">
+		<WorkUnit Name="MUS" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" OwnerID="{74E730D8-0B1D-4956-9CCA-A5C1594518D8}" PersistMode="Nested">
 			<ChildrenList>
 				<Event Name="Mus_Secteur1" ID="{C6814B7A-8E6B-41C1-82CB-907D07F4336C}">
 					<ChildrenList>
@@ -69,10 +69,10 @@
 								<GroupItem Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Play" ID="{5F3FD892-C09E-45CB-8F10-DA313E3A56BC}" ShortID="301988159" Type="Play" Scope="One" Global="false">
+						<Action Name="Play" ID="{F25F3442-8C98-4747-A70F-7E792BFDC2A0}" ShortID="420592361" Type="Play" Scope="One" Global="false">
 							<ElementList>
-								<Element ID="{F2B7EACD-7D09-48B7-BD9C-FEB11D93C51F}" Global="false">
-									<ObjectRef Name="Mus_Secteur2" ID="{53AFF3BA-0FCB-495A-B90B-060671A14D68}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+								<Element ID="{C35ED86F-44A1-4895-B1A9-6BBBA9BD1512}" Global="false">
+									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -124,7 +124,7 @@
 						<Action Name="Play" ID="{721D317C-54C9-4E1F-9E0E-4F63A62DC5CB}" ShortID="758724713" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{BA6C643F-483C-442F-BEB6-0502B42454E9}" Global="false">
-									<ObjectRef Name="Mus_Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -149,7 +149,7 @@
 						<Action Name="Stop" ID="{23210BA5-6B26-40FE-B9B6-5D54DDF73CD9}" ShortID="909856155" Type="Stop" Scope="One" Global="true">
 							<ElementList>
 								<Element ID="{BCF18E7E-5C00-4528-8936-9C9647A3F236}" Global="true">
-									<ObjectRef Name="Mus_Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
 						</Action>

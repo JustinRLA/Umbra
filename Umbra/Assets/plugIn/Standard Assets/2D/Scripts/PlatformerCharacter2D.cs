@@ -90,8 +90,10 @@ using UnityEngine.SceneManagement;
 	}
 	IEnumerator DeathEvent()
 	{
-		transform.position = TeleportPointDeath.position;
-		yield return new WaitForSeconds (2f);
+		//transform.position = TeleportPointDeath.position;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        GetComponent<Animator>().SetBool("Mort", true);
+        yield return new WaitForSeconds (2f);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 
 	}

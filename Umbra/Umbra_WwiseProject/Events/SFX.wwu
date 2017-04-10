@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}" SchemaVersion="75">
+<WwiseDocument Type="WorkUnit" ID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}" SchemaVersion="75" RootDocumentID="{74E730D8-0B1D-4956-9CCA-A5C1594518D8}">
 	<Events>
-		<WorkUnit Name="SFX" ID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}" PersistMode="Standalone">
+		<WorkUnit Name="SFX" ID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}" OwnerID="{74E730D8-0B1D-4956-9CCA-A5C1594518D8}" PersistMode="Nested">
 			<ChildrenList>
 				<Folder Name="UI" ID="{706CF11E-0A9A-46E8-98C4-BBA1DC6F06ED}" ShortID="529770802">
 					<ChildrenList>
@@ -250,6 +250,7 @@
 								</Event>
 								<Event Name="PC_Action_Look" ID="{7AE73DFC-284F-4BDD-B47C-2FB522BAAB4D}"/>
 								<Event Name="PC_Action_SlowMo" ID="{FD165A1F-9D79-4CEA-9C0F-7178A6ADF75C}"/>
+								<Event Name="PC_Action_Death" ID="{132F6797-D545-45D5-AF1C-C74D46FFE288}"/>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Foot" ID="{7491EEC3-1F3C-4C03-AF67-269161E3E504}" ShortID="54899299">
@@ -257,9 +258,23 @@
 								<Event Name="PC_Foot_Jump" ID="{610644C9-6CAC-4F28-98AA-66395D9B4CC8}">
 									<ChildrenList>
 										<Action Name="Play" ID="{1B41E21F-6408-4D59-9D37-60C0A28B4ADE}" ShortID="684949081" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ElementList>
 												<Element ID="{E857E3DA-2777-421A-BCA9-680379115382}" Global="false">
 													<ObjectRef Name="PC_Foot_Jump" ID="{40DD2546-F0E5-4E6A-B405-43C158BAEFAC}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Post Event" ID="{D54978D3-DC4E-4CDA-A2D8-32192E4E1CB0}" ShortID="99662523" Type="PlayEvent" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{15B9D254-B567-4174-8142-1CA42A188ECC}" Global="false">
+													<ObjectRef Name="VO_PC_Jump" ID="{25094EC4-E6FD-4D18-A19B-C5A4C9AC281D}" WorkUnitID="{8DB8739B-74AD-4B38-AE79-DB271FE8D787}"/>
 												</Element>
 											</ElementList>
 										</Action>

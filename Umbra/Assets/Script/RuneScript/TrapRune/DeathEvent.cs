@@ -46,7 +46,8 @@ public class DeathEvent : MonoBehaviour {
 	public void chooseSprite()
 	{
 		AkSoundEngine.PostEvent ("PC_Action_Kill", gameObject);
-		tempoKill++;
+        //GetComponent<Animator>().SetBool("Ation", true);
+        tempoKill++;
 		number=Random.Range(0,4);
 		ActualCadre = PossibleSprite [number];
 		Ennemy = AssassinTrigger.GetComponent<checkIfAssassination> ().ActualEnnemy;
@@ -61,8 +62,8 @@ public class DeathEvent : MonoBehaviour {
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == false)
 			Instantiate (ActualCadre, LeftTransform.position ,transform.rotation);
 
-
 		EventTriggered=true;
-		timerEvent = 5;
+        //GetComponent<Animator>().SetBool("Ation", false);
+        timerEvent = 5;
 }
 }
