@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ChangeRunePoint : MonoBehaviour {
 	public bool canChange;
+	public GameObject OtherUI;
+
 	public int myTempoDefRune;
 	public int myTempoOffRune;
 	public int myTempoTacticRune;
@@ -38,6 +40,7 @@ public class ChangeRunePoint : MonoBehaviour {
 	public GameObject playerMy;
 	// Use this for initialization
 	void Start () {
+		OtherUI = GameObject.Find ("Cadre");
 		playerMy=GameObject.Find("2DCharacter(Clone)");
 		RuneManager=GameObject.Find("RuneManager");
 		FeedBackImage = GameObject.Find ("feedbackRuneChange");
@@ -48,7 +51,7 @@ public class ChangeRunePoint : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.E) && canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true)
 		{
-
+			OtherUI.SetActive (false);
 			UIMode.SetActive (true);
 
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = false;
@@ -80,6 +83,7 @@ public class ChangeRunePoint : MonoBehaviour {
 		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneSetting() ;
 		print ("Shut");
+		OtherUI.SetActive (true);
 
 		UIMode.SetActive (false);
 		Cursor.visible=false;
