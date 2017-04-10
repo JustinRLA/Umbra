@@ -92,7 +92,12 @@ using UnityEngine.SceneManagement;
 	{
 		//transform.position = TeleportPointDeath.position;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
         GetComponent<Animator>().SetBool("Mort", true);
+		//Play death once
+		//GetComponent<Animator>().animation["UmbraMort"].wrapMode = WrapMode.Once;
+		//GetComponent<Animator>().animation.Play("UmbraMort");
+
         yield return new WaitForSeconds (2f);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 
