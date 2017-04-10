@@ -13,21 +13,149 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
+  - PhysicalPath: Events\CutS.wwu
+    ParentPhysicalPath: Events\Default Work Unit.wwu
+    Guid: '{19E84A98-6EC0-40EB-B402-BC980F6AC5B3}'
+    m_lastTimePsrt1: -274710032
+    m_lastTimePart2: -1999339469
+    List:
+    - Name: CutS_1
+      Path: Default Work Unit\CutS\CutS_1
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_1
+        ObjectType: 3
+      ID: 219268470
+      Guid: 9cbdcfa6b12dea45a39233d73bcd6b47
+      maxAttenuation: 0
+    - Name: CutS_2
+      Path: Default Work Unit\CutS\CutS_2
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_2
+        ObjectType: 3
+      ID: 219268469
+      Guid: f323eae68803c44e91337079bc8e3663
+      maxAttenuation: 0
+    - Name: CutS_3
+      Path: Default Work Unit\CutS\CutS_3
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_3
+        ObjectType: 3
+      ID: 219268468
+      Guid: 79aa0a38da1ec84b92ec5a4cd2e903ad
+      maxAttenuation: 0
+    - Name: CutS_4
+      Path: Default Work Unit\CutS\CutS_4
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_4
+        ObjectType: 3
+      ID: 219268467
+      Guid: 39203d53dc1ef948980677ffc564b4b5
+      maxAttenuation: 0
+    - Name: CutS_5
+      Path: Default Work Unit\CutS\CutS_5
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_5
+        ObjectType: 3
+      ID: 219268466
+      Guid: 1043435b70d8f34a8d8ff07439998011
+      maxAttenuation: 0
+    - Name: CutS_6
+      Path: Default Work Unit\CutS\CutS_6
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_6
+        ObjectType: 3
+      ID: 219268465
+      Guid: abc259d0aecd224ea4844fadeb6dc12a
+      maxAttenuation: 0
+    - Name: CutS_7
+      Path: Default Work Unit\CutS\CutS_7
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_7
+        ObjectType: 3
+      ID: 219268464
+      Guid: a2385d07f316db458db8ecaa60775b6c
+      maxAttenuation: 0
+    - Name: CutS_8
+      Path: Default Work Unit\CutS\CutS_8
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_8
+        ObjectType: 3
+      ID: 219268479
+      Guid: b1ef90d672408349b5d8e7b587910188
+      maxAttenuation: 0
+    - Name: CutS_9
+      Path: Default Work Unit\CutS\CutS_9
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_9
+        ObjectType: 3
+      ID: 219268478
+      Guid: a47ce802274ca7448ec4ba30a1f501ec
+      maxAttenuation: 0
+    - Name: CutS_Start
+      Path: Default Work Unit\CutS\CutS_Start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CutS
+        ObjectType: 12
+      - ElementName: CutS_Start
+        ObjectType: 3
+      ID: 1323154943
+      Guid: c341d9241545b44a9ebfaaed947b3e90
+      maxAttenuation: 0
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{74E730D8-0B1D-4956-9CCA-A5C1594518D8}'
-    m_lastTimePsrt1: -1165102447
-    m_lastTimePart2: -1999340280
+    m_lastTimePsrt1: -274690120
+    m_lastTimePart2: -1999339469
     List: []
   - PhysicalPath: Events\MUS.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{5A477295-C31E-4DA4-B2B5-986D076D6D3E}'
-    m_lastTimePsrt1: -1165092446
-    m_lastTimePart2: -1999340280
+    m_lastTimePsrt1: -274680164
+    m_lastTimePart2: -1999339469
     List:
     - Name: Mus_Alert
-      Path: MUS\Mus_Alert
+      Path: Default Work Unit\MUS\Mus_Alert
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: MUS
         ObjectType: 12
       - ElementName: Mus_Alert
@@ -36,8 +164,10 @@ MonoBehaviour:
       Guid: 9e17e58a23a1c942ac6eacd82418e2fd
       maxAttenuation: 0
     - Name: Mus_Explo
-      Path: MUS\Mus_Explo
+      Path: Default Work Unit\MUS\Mus_Explo
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: MUS
         ObjectType: 12
       - ElementName: Mus_Explo
@@ -46,8 +176,10 @@ MonoBehaviour:
       Guid: 7a8931af3211b242a004f3f5d456986c
       maxAttenuation: 0
     - Name: Mus_Menu
-      Path: MUS\Mus_Menu
+      Path: Default Work Unit\MUS\Mus_Menu
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: MUS
         ObjectType: 12
       - ElementName: Mus_Menu
@@ -56,8 +188,10 @@ MonoBehaviour:
       Guid: 9527663815847a45bf955843ad36745e
       maxAttenuation: 0
     - Name: Mus_Secteur1
-      Path: MUS\Mus_Secteur1
+      Path: Default Work Unit\MUS\Mus_Secteur1
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: MUS
         ObjectType: 12
       - ElementName: Mus_Secteur1
@@ -66,8 +200,10 @@ MonoBehaviour:
       Guid: 7a4b81c66b8ec14182cb907d07f4336c
       maxAttenuation: 0
     - Name: Mus_Secteur2
-      Path: MUS\Mus_Secteur2
+      Path: Default Work Unit\MUS\Mus_Secteur2
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: MUS
         ObjectType: 12
       - ElementName: Mus_Secteur2
@@ -76,8 +212,10 @@ MonoBehaviour:
       Guid: 23bda7eaaa294240a1e52c8253e2f604
       maxAttenuation: 0
     - Name: Mus_Secteur3
-      Path: MUS\Mus_Secteur3
+      Path: Default Work Unit\MUS\Mus_Secteur3
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: MUS
         ObjectType: 12
       - ElementName: Mus_Secteur3
@@ -86,8 +224,10 @@ MonoBehaviour:
       Guid: 0f320528746efd43b36c34de62f30307
       maxAttenuation: 0
     - Name: Mus_SlowMo
-      Path: MUS\Mus_SlowMo
+      Path: Default Work Unit\MUS\Mus_SlowMo
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: MUS
         ObjectType: 12
       - ElementName: Mus_SlowMo
@@ -96,8 +236,10 @@ MonoBehaviour:
       Guid: f725d6ce72e07f4582a0af179dc25010
       maxAttenuation: 0
     - Name: STOPALLMUSIC
-      Path: MUS\STOPALLMUSIC
+      Path: Default Work Unit\MUS\STOPALLMUSIC
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: MUS
         ObjectType: 12
       - ElementName: STOPALLMUSIC
@@ -106,14 +248,16 @@ MonoBehaviour:
       Guid: 9238ba1396593847be32837b6f852af5
       maxAttenuation: 0
   - PhysicalPath: Events\SFX.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: -1165072444
-    m_lastTimePart2: -1999340280
+    m_lastTimePsrt1: -274670208
+    m_lastTimePart2: -1999339469
     List:
     - Name: Amb_Alarm
-      Path: SFX\Amb\Amb_Alarm
+      Path: Default Work Unit\SFX\Amb\Amb_Alarm
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: Amb
@@ -124,8 +268,10 @@ MonoBehaviour:
       Guid: 162718f7d17945489b3854167d2fd864
       maxAttenuation: 0
     - Name: Amb_Bell
-      Path: SFX\Amb\Amb_Bell
+      Path: Default Work Unit\SFX\Amb\Amb_Bell
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: Amb
@@ -136,8 +282,10 @@ MonoBehaviour:
       Guid: 00e21556e53f1641a1e7e3f6278f7bd1
       maxAttenuation: 0
     - Name: Amb_Check
-      Path: SFX\Amb\Amb_Check
+      Path: Default Work Unit\SFX\Amb\Amb_Check
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: Amb
@@ -148,8 +296,10 @@ MonoBehaviour:
       Guid: 8620f09b0fbd29478108a7d7cdc6f5a2
       maxAttenuation: 0
     - Name: Amb_Door
-      Path: SFX\Amb\Amb_Door
+      Path: Default Work Unit\SFX\Amb\Amb_Door
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: Amb
@@ -160,8 +310,10 @@ MonoBehaviour:
       Guid: f1bf6628dbbb9444a3fdfb34f32a84de
       maxAttenuation: 0
     - Name: Amb_Room
-      Path: SFX\Amb\Amb_Room
+      Path: Default Work Unit\SFX\Amb\Amb_Room
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: Amb
@@ -172,8 +324,10 @@ MonoBehaviour:
       Guid: 35fc1c84cb03ef478cc5ea3ff15c12c3
       maxAttenuation: 0
     - Name: Amb_Shadow_Pipe
-      Path: SFX\Amb\Amb_Shadow_Pipe
+      Path: Default Work Unit\SFX\Amb\Amb_Shadow_Pipe
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: Amb
@@ -184,8 +338,10 @@ MonoBehaviour:
       Guid: bebca29f814cb543a39a3f9db53f7897
       maxAttenuation: 0
     - Name: Menu_Cancel
-      Path: SFX\UI\Menu_Cancel
+      Path: Default Work Unit\SFX\UI\Menu_Cancel
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: UI
@@ -196,8 +352,10 @@ MonoBehaviour:
       Guid: 047f623cca546c4aa4a8903f83a39e17
       maxAttenuation: 0
     - Name: Menu_Click
-      Path: SFX\UI\Menu_Click
+      Path: Default Work Unit\SFX\UI\Menu_Click
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: UI
@@ -208,8 +366,10 @@ MonoBehaviour:
       Guid: b9438a98ae39c14fbfe9ef56d41e0930
       maxAttenuation: 0
     - Name: Menu_Hover
-      Path: SFX\UI\Menu_Hover
+      Path: Default Work Unit\SFX\UI\Menu_Hover
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: UI
@@ -220,8 +380,10 @@ MonoBehaviour:
       Guid: d7181179aa99174994d745f8364330ee
       maxAttenuation: 0
     - Name: NPC_Action_Death
-      Path: SFX\NPCs\NPC_Action_Death
+      Path: Default Work Unit\SFX\NPCs\NPC_Action_Death
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: NPCs
@@ -232,8 +394,10 @@ MonoBehaviour:
       Guid: d1d33ea3de95004c85af3993e6039cd7
       maxAttenuation: 0
     - Name: NPC_Action_Kill
-      Path: SFX\NPCs\NPC_Action_Kill
+      Path: Default Work Unit\SFX\NPCs\NPC_Action_Kill
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: NPCs
@@ -244,8 +408,10 @@ MonoBehaviour:
       Guid: 333aab634c385448ac133269605a1c9f
       maxAttenuation: 0
     - Name: NPC_Foot_Run
-      Path: SFX\NPCs\NPC_Foot_Run
+      Path: Default Work Unit\SFX\NPCs\NPC_Foot_Run
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: NPCs
@@ -256,8 +422,10 @@ MonoBehaviour:
       Guid: efa4bdb138858641b912f08590483413
       maxAttenuation: 0
     - Name: NPC_State_Alarmed
-      Path: SFX\NPCs\NPC_State_Alarmed
+      Path: Default Work Unit\SFX\NPCs\NPC_State_Alarmed
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: NPCs
@@ -268,8 +436,10 @@ MonoBehaviour:
       Guid: a091be1b5cae604e92dc0a75fa6b6aa1
       maxAttenuation: 0
     - Name: NPC_State_Located
-      Path: SFX\NPCs\NPC_State_Located
+      Path: Default Work Unit\SFX\NPCs\NPC_State_Located
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: NPCs
@@ -280,8 +450,10 @@ MonoBehaviour:
       Guid: 6782ae21c3dd414ea8952bb8c4fbda9e
       maxAttenuation: 0
     - Name: NPC_State_Normal
-      Path: SFX\NPCs\NPC_State_Normal
+      Path: Default Work Unit\SFX\NPCs\NPC_State_Normal
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: NPCs
@@ -291,9 +463,27 @@ MonoBehaviour:
       ID: 624895962
       Guid: 752e66c4a5923f44bdea99f0403f6be2
       maxAttenuation: 0
-    - Name: PC_Action_Heartbeat
-      Path: SFX\PC\Action\PC_Action_Heartbeat
+    - Name: PC_Action_Death
+      Path: Default Work Unit\SFX\PC\Action\PC_Action_Death
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Action
+        ObjectType: 4
+      - ElementName: PC_Action_Death
+        ObjectType: 3
+      ID: 169793748
+      Guid: 97672f1345d5d545af1cc74d46ffe288
+      maxAttenuation: 0
+    - Name: PC_Action_Heartbeat
+      Path: Default Work Unit\SFX\PC\Action\PC_Action_Heartbeat
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -306,8 +496,10 @@ MonoBehaviour:
       Guid: b3005662a3df884881689146f183d3a1
       maxAttenuation: 0
     - Name: PC_Action_Kill
-      Path: SFX\PC\Action\PC_Action_Kill
+      Path: Default Work Unit\SFX\PC\Action\PC_Action_Kill
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -320,8 +512,10 @@ MonoBehaviour:
       Guid: 2aec524a5f8ea74e93e692ebfe09639a
       maxAttenuation: 0
     - Name: PC_Action_Look
-      Path: SFX\PC\Action\PC_Action_Look
+      Path: Default Work Unit\SFX\PC\Action\PC_Action_Look
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -334,8 +528,10 @@ MonoBehaviour:
       Guid: fc3de77a4f28dd4bb47c2fb522baab4d
       maxAttenuation: 0
     - Name: PC_Action_Respawn
-      Path: SFX\PC\Action\PC_Action_Respawn
+      Path: Default Work Unit\SFX\PC\Action\PC_Action_Respawn
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -348,8 +544,10 @@ MonoBehaviour:
       Guid: af6a0e68ee58bf44b68d1a03b5bf7eee
       maxAttenuation: 0
     - Name: PC_Action_SlowMo
-      Path: SFX\PC\Action\PC_Action_SlowMo
+      Path: Default Work Unit\SFX\PC\Action\PC_Action_SlowMo
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -362,8 +560,10 @@ MonoBehaviour:
       Guid: 1f5a16fd799dea4c9c0f7178a6adf75c
       maxAttenuation: 0
     - Name: PC_Foot_Climb
-      Path: SFX\PC\Foot\PC_Foot_Climb
+      Path: Default Work Unit\SFX\PC\Foot\PC_Foot_Climb
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -376,8 +576,10 @@ MonoBehaviour:
       Guid: dae6036a73da2a41836537ce5571395d
       maxAttenuation: 0
     - Name: PC_Foot_Jump
-      Path: SFX\PC\Foot\PC_Foot_Jump
+      Path: Default Work Unit\SFX\PC\Foot\PC_Foot_Jump
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -390,8 +592,10 @@ MonoBehaviour:
       Guid: c9440661ac6c284f98aa66395d9b4cc8
       maxAttenuation: 0
     - Name: PC_Foot_Land
-      Path: SFX\PC\Foot\PC_Foot_Land
+      Path: Default Work Unit\SFX\PC\Foot\PC_Foot_Land
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -404,8 +608,10 @@ MonoBehaviour:
       Guid: eaa0c683de04c3478f0396b3adc72abf
       maxAttenuation: 0
     - Name: PC_Foot_Run
-      Path: SFX\PC\Foot\PC_Foot_Run
+      Path: Default Work Unit\SFX\PC\Foot\PC_Foot_Run
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -418,8 +624,10 @@ MonoBehaviour:
       Guid: 84e490b5c9d0cc4a87b266cd2820313a
       maxAttenuation: 0
     - Name: PC_Rune_Accrochage_Equip
-      Path: SFX\PC\Rune\PC_Rune_Accrochage_Equip
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Equip
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -432,8 +640,10 @@ MonoBehaviour:
       Guid: 5a36d538ab2d0b41acaa1f602af53062
       maxAttenuation: 0
     - Name: PC_Rune_Accrochage_Green
-      Path: SFX\PC\Rune\PC_Rune_Accrochage_Green
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Green
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -446,8 +656,10 @@ MonoBehaviour:
       Guid: b015b178336cea4cbce27d866cae7fab
       maxAttenuation: 0
     - Name: PC_Rune_Accrochage_Red
-      Path: SFX\PC\Rune\PC_Rune_Accrochage_Red
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Red
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -460,8 +672,10 @@ MonoBehaviour:
       Guid: 23e8c3bfc2ad5e44a86460eb4a15f3f3
       maxAttenuation: 0
     - Name: PC_Rune_Accrochage_Use
-      Path: SFX\PC\Rune\PC_Rune_Accrochage_Use
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Use
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -474,8 +688,10 @@ MonoBehaviour:
       Guid: cff1439b14eb46489b90d67af580af11
       maxAttenuation: 0
     - Name: PC_Rune_Cooldown
-      Path: SFX\PC\Rune\PC_Rune_Cooldown
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Cooldown
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -488,8 +704,10 @@ MonoBehaviour:
       Guid: b8a7de6a6a15d1418c57fe98efd80138
       maxAttenuation: 0
     - Name: PC_Rune_Leurre_Filter
-      Path: SFX\PC\Rune\PC_Rune_Leurre_Filter
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Leurre_Filter
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -502,8 +720,10 @@ MonoBehaviour:
       Guid: 6f7a647783b71b4d8dd82ffa46999b51
       maxAttenuation: 0
     - Name: PC_Rune_Leurre_Use
-      Path: SFX\PC\Rune\PC_Rune_Leurre_Use
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Leurre_Use
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -516,8 +736,10 @@ MonoBehaviour:
       Guid: a8c25a958674434bb170a08a2c8327a8
       maxAttenuation: 0
     - Name: PC_Rune_Marquage_Sonar
-      Path: SFX\PC\Rune\PC_Rune_Marquage_Sonar
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Sonar
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -530,8 +752,10 @@ MonoBehaviour:
       Guid: 5ca9cbf10a81864c9aecd40ef52e610b
       maxAttenuation: 0
     - Name: PC_Rune_Marquage_Use
-      Path: SFX\PC\Rune\PC_Rune_Marquage_Use
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Use
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -544,8 +768,10 @@ MonoBehaviour:
       Guid: 9fc853532e375d40b451e3886d4f6772
       maxAttenuation: 0
     - Name: PC_Rune_Ombre_Decay
-      Path: SFX\PC\Rune\PC_Rune_Ombre_Decay
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Decay
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -558,8 +784,10 @@ MonoBehaviour:
       Guid: 1d79f59a9651c74e922b9db02462d97f
       maxAttenuation: 0
     - Name: PC_Rune_Ombre_Select
-      Path: SFX\PC\Rune\PC_Rune_Ombre_Select
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Select
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -572,8 +800,10 @@ MonoBehaviour:
       Guid: 653b76fe2d7da448a8967656da4bd284
       maxAttenuation: 0
     - Name: PC_Rune_Ombre_Use
-      Path: SFX\PC\Rune\PC_Rune_Ombre_Use
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Use
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -586,8 +816,10 @@ MonoBehaviour:
       Guid: fe9a34470dc7c34aac799a8107f16db5
       maxAttenuation: 0
     - Name: PC_Rune_Select
-      Path: SFX\PC\Rune\PC_Rune_Select
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Select
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -600,8 +832,10 @@ MonoBehaviour:
       Guid: cf32daa68d777b4aa10c38f3e6230a76
       maxAttenuation: 0
     - Name: PC_Rune_Solide_End
-      Path: SFX\PC\Rune\PC_Rune_Solide_End
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Solide_End
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -614,8 +848,10 @@ MonoBehaviour:
       Guid: 626410ae7ede8a4ab29ee6da24dfa8e8
       maxAttenuation: 0
     - Name: PC_Rune_Solide_Use
-      Path: SFX\PC\Rune\PC_Rune_Solide_Use
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Solide_Use
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -628,8 +864,10 @@ MonoBehaviour:
       Guid: 33c733c172c7f84ab820b76f7b9b87aa
       maxAttenuation: 0
     - Name: PC_Rune_Trap_Stun
-      Path: SFX\PC\Rune\PC_Rune_Trap_Stun
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Stun
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -642,8 +880,10 @@ MonoBehaviour:
       Guid: 691e8978de4bc349a4b48b4d15c755d0
       maxAttenuation: 0
     - Name: PC_Rune_Trap_Use
-      Path: SFX\PC\Rune\PC_Rune_Trap_Use
+      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Use
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -656,8 +896,10 @@ MonoBehaviour:
       Guid: 829a7885ff8c1b439f7a002eb8ef85e6
       maxAttenuation: 0
     - Name: PC_Stealth_Off
-      Path: SFX\PC\Foot\PC_Stealth_Off
+      Path: Default Work Unit\SFX\PC\Foot\PC_Stealth_Off
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -670,8 +912,10 @@ MonoBehaviour:
       Guid: 093631b764b34840864eb2a4fadaad86
       maxAttenuation: 0
     - Name: PC_Stealth_On
-      Path: SFX\PC\Foot\PC_Stealth_On
+      Path: Default Work Unit\SFX\PC\Foot\PC_Stealth_On
       PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
       - ElementName: SFX
         ObjectType: 12
       - ElementName: PC
@@ -684,11 +928,39 @@ MonoBehaviour:
       Guid: 007f1e42a92e384a89fdd674ac8924be
       maxAttenuation: 0
   - PhysicalPath: Events\VO.wwu
-    ParentPhysicalPath: 
+    ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{8DB8739B-74AD-4B38-AE79-DB271FE8D787}'
-    m_lastTimePsrt1: -1165062443
-    m_lastTimePart2: -1999340280
-    List: []
+    m_lastTimePsrt1: -274650296
+    m_lastTimePart2: -1999339469
+    List:
+    - Name: VO_PC_Death
+      Path: Default Work Unit\VO\PC\VO_PC_Death
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VO
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: VO_PC_Death
+        ObjectType: 3
+      ID: -867088209
+      Guid: 195ec985b2f36f41a1b4721636583cc5
+      maxAttenuation: 0
+    - Name: VO_PC_Jump
+      Path: Default Work Unit\VO\PC\VO_PC_Jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VO
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: VO_PC_Jump
+        ObjectType: 3
+      ID: -1249879889
+      Guid: c44e0925fde6184da19bc5a4c9ac281d
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -803,18 +1075,9 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\TrueSoundBank.wwu
     ParentPhysicalPath: 
     Guid: '{FB2F3DBD-0CA3-47D6-AB4D-D69615BE6D20}'
-    m_lastTimePsrt1: -1149670904
-    m_lastTimePart2: -1999340280
+    m_lastTimePsrt1: -257964040
+    m_lastTimePart2: -1999339469
     List:
-    - Name: MUS
-      Path: TrueSoundBank\MUS
-      PathAndIcons:
-      - ElementName: TrueSoundBank
-        ObjectType: 12
-      - ElementName: MUS
-        ObjectType: 7
-      ID: 712897226
-      Guid: b4fea06698dbbd47a1a763c52cb68c3e
     - Name: SFX
       Path: TrueSoundBank\SFX
       PathAndIcons:
@@ -824,26 +1087,9 @@ MonoBehaviour:
         ObjectType: 7
       ID: 393239870
       Guid: 77b013379f320144873c62a09d1a0b5c
-    - Name: VO
-      Path: TrueSoundBank\VO
-      PathAndIcons:
-      - ElementName: TrueSoundBank
-        ObjectType: 12
-      - ElementName: VO
-        ObjectType: 7
-      ID: 1534528548
-      Guid: 6a0c5d057d19b14e83b1066006f500d4
   ExpandedItems:
   - /Umbra_WwiseProject
   - /Umbra_WwiseProject/Events
-  - /Umbra_WwiseProject/Events/MUS
-  - /Umbra_WwiseProject/Events/SFX
-  - /Umbra_WwiseProject/Events/SFX/Amb
-  - /Umbra_WwiseProject/Events/SFX/PC
-  - /Umbra_WwiseProject/Events/SFX/PC/Action
-  - /Umbra_WwiseProject/Events/SFX/PC/Foot
-  - /Umbra_WwiseProject/Events/SFX/PC/Rune
-  - /Umbra_WwiseProject/Events/SFX/UI
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
