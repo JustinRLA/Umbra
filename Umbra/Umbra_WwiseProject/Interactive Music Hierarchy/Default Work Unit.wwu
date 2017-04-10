@@ -13,384 +13,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicPlaylistContainer Name="Mus_Secteur2" ID="{53AFF3BA-0FCB-495A-B90B-060671A14D68}" ShortID="18818014">
-							<PropertyList>
-								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
-								<Property Name="Tempo" Type="Real64" Value="50"/>
-								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicSegment Name="Mus_Secteur2_Explo1_50bpm3-4_L4M-P0" ID="{6995B5EE-02C4-4D10-9087-30CCB3487D22}" ShortID="311646269">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="15600"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="Mus_Secteur2_Explo1_50bpm3-4_L4M-P0" ID="{3D12B31A-7F1B-46C5-878E-8FFEB456BA29}" ShortID="245566923">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Mus_Secteur2_Explo1_50bpm3-4_L4M-P0" ID="{63B0FEAC-F016-4376-9C79-69D467085F86}" ShortID="242901964">
-													<Language>SFX</Language>
-													<AudioFile>Mus_Secteur2_Explo1_50bpm3-4_L4M-P0.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{71816EBC-2224-4BFA-B09F-4C136CA30E65}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{A359CA4D-4B80-4EED-A811-C7060D585153}">
-													<ClipList>
-														<MusicClip Name="Mus_Secteur2_Explo1_50bpm3-4_L4M-P0" ID="{8C9EEDBA-A793-403C-9CB8-CD9A5FA16F0D}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="15400"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Mus_Secteur2_Explo1_50bpm3-4_L4M-P0" ID="{63B0FEAC-F016-4376-9C79-69D467085F86}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-									</ChildrenList>
-									<CueList>
-										<MusicCue Name="Entry Cue" ID="{B4E49254-3733-4297-A0CC-1C05CDC9D08D}"/>
-										<MusicCue Name="Exit Cue" ID="{6731280F-EEAE-44A1-8147-97E356848FB2}">
-											<PropertyList>
-												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="14400"/>
-											</PropertyList>
-										</MusicCue>
-									</CueList>
-								</MusicSegment>
-								<MusicSegment Name="Mus_Secteur2_Explo2_50bpm3-4_L4M-P1" ID="{555C3510-458D-4472-A149-F53C5E9581D6}" ShortID="341226302">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="18289.3805309735"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="Mus_Secteur2_Explo2_50bpm3-4_L4M-P1" ID="{839B9727-E983-4FBF-9D1B-1FD9A9751BB3}" ShortID="597210714">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Mus_Secteur2_Explo2_50bpm3-4_L4M-P1" ID="{AF5110B5-1CA8-444F-8F3D-4AA7141DB35D}" ShortID="102559054">
-													<Language>SFX</Language>
-													<AudioFile>Mus_Secteur2_Explo2_50bpm3-4_L4M-P1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{439C0974-9BA3-437C-B863-A8A85C7883CA}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{C6E6BD40-2073-411C-A1CC-FCFA73A952F6}">
-													<ClipList>
-														<MusicClip Name="Mus_Secteur2_Explo2_50bpm3-4_L4M-P1" ID="{8B35D45C-D135-4ADB-B68E-22B7FB274A3B}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Mus_Secteur2_Explo2_50bpm3-4_L4M-P1" ID="{AF5110B5-1CA8-444F-8F3D-4AA7141DB35D}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-									</ChildrenList>
-									<CueList>
-										<MusicCue Name="Entry Cue" ID="{35EBC7BE-651E-442E-AC9E-6CCF549801D0}">
-											<PropertyList>
-												<Property Name="TimeMs" Type="Real64" Value="1200"/>
-											</PropertyList>
-										</MusicCue>
-										<MusicCue Name="Exit Cue" ID="{F3B8DE29-D285-45FB-AB83-590AF963504F}">
-											<PropertyList>
-												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="15600"/>
-											</PropertyList>
-										</MusicCue>
-									</CueList>
-								</MusicSegment>
-								<MusicSegment Name="Mus_Secteur2_Explo3_50bpm3-4_L4M-P1" ID="{7AEB1314-6E5F-4F1D-894F-4C10B1B8D8B1}" ShortID="850243576">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="17077.4336283186"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="Mus_Secteur2_Explo3_50bpm3-4_L4M-P1" ID="{E506012A-0C23-4667-8378-4B3FD2799B60}" ShortID="388554779">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Mus_Secteur2_Explo3_50bpm3-4_L4M-P1" ID="{B2C7B6F5-C6C5-496B-9388-FD24288A033E}" ShortID="608100684">
-													<Language>SFX</Language>
-													<AudioFile>Mus_Secteur2_Explo3_50bpm3-4_L4M-P1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{AB14BFC2-BC6B-4A51-BD5E-7CF0629C66A4}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{C54016F9-8EB9-442F-B635-6A43C945E37F}">
-													<ClipList>
-														<MusicClip Name="Mus_Secteur2_Explo3_50bpm3-4_L4M-P1" ID="{7C78FA80-143E-40DB-8F06-572799C0B345}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Mus_Secteur2_Explo3_50bpm3-4_L4M-P1" ID="{B2C7B6F5-C6C5-496B-9388-FD24288A033E}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-									</ChildrenList>
-									<CueList>
-										<MusicCue Name="Entry Cue" ID="{342F2078-7817-4366-B207-4E6A9A5261D8}">
-											<PropertyList>
-												<Property Name="TimeMs" Type="Real64" Value="1200"/>
-											</PropertyList>
-										</MusicCue>
-										<MusicCue Name="Exit Cue" ID="{27DD4926-4F35-4DC2-AB94-214164019767}">
-											<PropertyList>
-												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="15600"/>
-											</PropertyList>
-										</MusicCue>
-									</CueList>
-								</MusicSegment>
-								<MusicSegment Name="Mus_Secteur2_Explo4_50bpm3-4_L4M-P1" ID="{73E1FB12-14A3-4285-B011-FC445748F8FD}" ShortID="492912312">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="15600"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="Mus_Secteur2_Explo4_50bpm3-4_L4M-P1" ID="{DC2CDB0B-6E80-4D24-B0C5-EACB57215E5F}" ShortID="969648301">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Mus_Secteur2_Explo4_50bpm3-4_L4M-P1" ID="{E3D098B8-59ED-44FA-87B2-65E18D853A65}" ShortID="648160448">
-													<Language>SFX</Language>
-													<AudioFile>Mus_Secteur2_Explo4_50bpm3-4_L4M-P1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{0EA8ACBC-0CD9-46BA-9439-63F5FB90617E}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<SequenceList>
-												<MusicTrackSequence Name="" ID="{44551F9C-4619-479A-9C7B-AF7955A3C60D}">
-													<ClipList>
-														<MusicClip Name="Mus_Secteur2_Explo4_50bpm3-4_L4M-P1" ID="{A8B28E2C-F39F-40FB-AD67-F036ECC83013}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="15400"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Mus_Secteur2_Explo4_50bpm3-4_L4M-P1" ID="{E3D098B8-59ED-44FA-87B2-65E18D853A65}"/>
-														</MusicClip>
-													</ClipList>
-												</MusicTrackSequence>
-											</SequenceList>
-										</MusicTrack>
-									</ChildrenList>
-									<CueList>
-										<MusicCue Name="Entry Cue" ID="{B3B91212-23EB-4094-A315-BBADBC9CF13A}"/>
-										<MusicCue Name="Exit Cue" ID="{57386E64-3F42-4B07-B9BD-B0A3B7B09AB7}">
-											<PropertyList>
-												<Property Name="CueType" Type="int16" Value="1"/>
-												<Property Name="TimeMs" Type="Real64" Value="14400"/>
-											</PropertyList>
-										</MusicCue>
-									</CueList>
-								</MusicSegment>
-							</ChildrenList>
-							<TransitionList>
-								<MusicTransition Name="Root" ID="{2D67F3B4-F2FE-4C14-9F5F-B50C3F27B457}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{496EB29C-336B-4B86-9AB0-8F56980EAB46}">
-											<TransitionInfo/>
-										</MusicTransition>
-									</ChildrenList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</TransitionList>
-							<Playlist>
-								<MusicPlaylistItem Name="" ID="{F2270EC0-B5ED-47CF-A336-1F0EF4186B11}" ShortID="904793987">
-									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{675AF89C-8456-440F-B607-DCE20CAE652D}" ShortID="172045223">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{6C399215-97E0-4E6D-9D7B-8233CC4F3AB0}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="1"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="Mus_Secteur2_Explo1_50bpm3-4_L4M-P0" ID="{6995B5EE-02C4-4D10-9087-30CCB3487D22}"/>
-										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{B82475C2-3CF5-41EF-8BB6-FF67FB7FFA5B}" ShortID="318239140">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlayMode" Type="int16" Value="2"/>
-											</PropertyList>
-											<ChildrenList>
-												<MusicPlaylistItem Name="" ID="{3B7D3225-4DB5-47AE-A85A-21D22BD2D3EF}" ShortID="743017768">
-													<PropertyList>
-														<Property Name="LoopCount" Type="int16">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{658CB2F1-0704-4E1C-A0FC-52BF368495B5}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="1"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-													</PropertyList>
-													<SegmentRef Name="Mus_Secteur2_Explo4_50bpm3-4_L4M-P1" ID="{73E1FB12-14A3-4285-B011-FC445748F8FD}"/>
-												</MusicPlaylistItem>
-												<MusicPlaylistItem Name="" ID="{2D8FE43A-E8C6-44A1-BC4C-960096BFFB74}" ShortID="248878643">
-													<PropertyList>
-														<Property Name="LoopCount" Type="int16">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{8458BD7C-9050-4221-94EF-F41A2D2F363D}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="2"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-													</PropertyList>
-													<SegmentRef Name="Mus_Secteur2_Explo2_50bpm3-4_L4M-P1" ID="{555C3510-458D-4472-A149-F53C5E9581D6}"/>
-												</MusicPlaylistItem>
-												<MusicPlaylistItem Name="" ID="{FD55F378-B88C-4915-A234-2C375081192B}" ShortID="564801239">
-													<PropertyList>
-														<Property Name="LoopCount" Type="int16">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{1C3CD408-A6AE-48D4-BDBA-16AE434E4F79}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="2"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-													</PropertyList>
-													<SegmentRef Name="Mus_Secteur2_Explo1_50bpm3-4_L4M-P0" ID="{6995B5EE-02C4-4D10-9087-30CCB3487D22}"/>
-												</MusicPlaylistItem>
-												<MusicPlaylistItem Name="" ID="{5B4F0ECF-D16E-4A79-9EE3-5A82E9619DD3}" ShortID="171785332">
-													<PropertyList>
-														<Property Name="LoopCount" Type="int16">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{670FF115-0D9C-438E-A15C-115E49C4086C}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="1"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-													</PropertyList>
-													<SegmentRef Name="Mus_Secteur2_Explo3_50bpm3-4_L4M-P1" ID="{7AEB1314-6E5F-4F1D-894F-4C10B1B8D8B1}"/>
-												</MusicPlaylistItem>
-											</ChildrenList>
-										</MusicPlaylistItem>
-									</ChildrenList>
-								</MusicPlaylistItem>
-							</Playlist>
-						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Mus_Secteur1" ID="{A2CB6E5F-9396-4E60-90AA-C89CA53FF2A2}" ShortID="739406321">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -443,6 +65,1554 @@
 								<MusicPlaylistItem Name="" ID="{A71D936C-FB10-40CF-9F97-BFE896FF6E3C}" ShortID="51234524"/>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<MusicSwitchContainer Name="Mus_Secteur2" ID="{D1E45A48-ECBF-4F9B-B21D-AE3C54627FC9}" ShortID="468699803">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="50"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicPlaylistContainer Name="Mus_Secteur2_Explo" ID="{5FB2D019-EC4F-4EC3-96F9-184B816544A3}" ShortID="211600406">
+									<PropertyList>
+										<Property Name="Tempo" Type="Real64" Value="50"/>
+										<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="Mus_Secteur2_Explo_A" ID="{C6DF9C69-6F7D-4460-A255-730239C538CC}" ShortID="791681620">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="18501.6447368421"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Altos_01" ID="{3C81E577-91AC-410C-B18F-C7382B684EE2}" ShortID="429335408">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Altos_01" ID="{2A7E5217-281B-4E6D-8927-19AE2FA4AB91}" ShortID="258644837">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Altos_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{43CA8BA9-581B-434E-A25C-CC3FEF531959}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{7397D201-1A4E-40E9-865E-D4A54174D735}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Altos_01" ID="{2998D832-270D-40E4-B387-298928DDC31C}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16400"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Altos_01" ID="{2A7E5217-281B-4E6D-8927-19AE2FA4AB91}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{21324E7F-E216-4A56-BE29-F2A3AEB792CA}" ShortID="566453101">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{874BA2C1-8509-46EF-B265-3794F1585B9F}" ShortID="356951277">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Bongos_01.wav</AudioFile>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{BAD860DC-2EF1-45E7-8C03-08170A06ACD7}" ShortID="644520875">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Bongos_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{42A14BCA-D54E-45C3-9541-FB241CFDA025}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{93C8C5D6-3BA6-4931-850C-E4148E7FFF05}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{D736C285-8738-4E72-B731-9BC862C88BF6}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{874BA2C1-8509-46EF-B265-3794F1585B9F}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{3E2B50D0-4C8C-4F71-B787-DE08FFB68714}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{6C7C8037-BCD7-4BE8-BF78-D7C09490ECE8}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{BAD860DC-2EF1-45E7-8C03-08170A06ACD7}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{22A57949-F9BD-4175-8C44-464D48A1715C}" ShortID="543243258">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{134A1CE2-1102-45A2-B607-4E3C59AF0D99}" ShortID="388158133">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Caisse Claire_01.wav</AudioFile>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{F348BB0C-70C2-4D9F-9035-F5BE000E1696}" ShortID="451779665">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Caisse Claire_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{3B396E4B-4391-4CE5-91BC-68AEA159D5CE}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{144201F7-DF2B-4E9B-A8D8-470C4692BE4B}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{EC532F61-6541-4B95-8EF1-79F19998435C}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{134A1CE2-1102-45A2-B607-4E3C59AF0D99}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{DE89727E-2D0D-48AA-B554-380F4EF68DD3}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{6280D245-7028-44BE-82C4-181D9D056A1F}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{F348BB0C-70C2-4D9F-9035-F5BE000E1696}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{78A2B94D-6CE0-4449-B8A2-8DD1B23E609A}" ShortID="628180981">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{D342459D-0875-4AE5-9CD0-506E405D9AB3}" ShortID="1073435110">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Cloches Tubes_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{B3285050-CFAE-4CD2-B758-EB9942BBB9EE}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{25CE2694-0D40-458E-B629-6CF0EFB37E6D}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{88DA0D18-7E2D-4982-AEBF-072FB5486CD7}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{D342459D-0875-4AE5-9CD0-506E405D9AB3}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Contrebasses_01" ID="{C76A8EE8-AFC8-4977-9DB8-A8D440A403A1}" ShortID="31468835">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Contrebasses_01" ID="{8E2F5A40-6A77-4A84-AD70-AAA789883775}" ShortID="209817201">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Contrebasses_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{33910E55-0464-4A70-AA22-7F85A6310923}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{E0F1F65A-F6FD-412A-9691-72FEDA693729}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Contrebasses_01" ID="{966641DA-813E-40DC-88A6-DD340E5D30AC}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Contrebasses_01" ID="{8E2F5A40-6A77-4A84-AD70-AAA789883775}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Gong_01" ID="{EA1A9B50-06ED-44D6-92FA-42FF8D071DA9}" ShortID="246223717">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Gong_01" ID="{9DBEB696-6958-4BC3-A3D4-AF8DC0A2A242}" ShortID="220918762">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Gong_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{7CED636D-4656-4634-B2F4-A84123203857}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{70D37633-670F-48F6-AD43-FD1B3A751A93}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Gong_01" ID="{C7D00628-A8EC-424D-B40B-7BB5AD3D6584}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Gong_01" ID="{9DBEB696-6958-4BC3-A3D4-AF8DC0A2A242}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{37257023-1C14-44BE-9264-95A7F6EF1A7A}" ShortID="337695476">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{3267385F-1EF5-4C50-9C01-3AE8CEC6528E}" ShortID="534495483">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Gros Caisse_01.wav</AudioFile>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{474B0566-62B1-4853-97A2-F17A7FF9CB20}" ShortID="769419934">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Gros Caisse_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{4461102E-DA65-41B4-BE76-9EE3D8047386}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{FD940810-EC14-4706-A0AE-467430AF8236}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{45F2C7CC-692B-4133-8CBC-CD21B2C36FFC}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{3267385F-1EF5-4C50-9C01-3AE8CEC6528E}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{5B0291DC-CCB2-4AA7-82FB-3C4C03E7950B}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{77407D71-BC6D-4683-B9CF-EFFCB19BDDA3}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{474B0566-62B1-4853-97A2-F17A7FF9CB20}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Harpe_01" ID="{6B6161EF-E935-403B-BD8C-27EB29B5E318}" ShortID="933295252">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Harpe_01" ID="{A2D674F6-7DD5-4E77-8BD7-7F7B8742EE01}" ShortID="96535794">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Harpe_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{141EB982-C123-4BCB-B7C2-D8A2ADECFCEA}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{F689B634-1BE2-4BDC-BEDF-7C436D10D5B0}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Harpe_01" ID="{4A788538-F7E9-45D7-A371-EB0AA37A0347}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Harpe_01" ID="{A2D674F6-7DD5-4E77-8BD7-7F7B8742EE01}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Violoncelles_01" ID="{B97AEFE3-A3D2-458B-9B21-818A33B71CAD}" ShortID="798711435">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Violoncelles_01" ID="{691AD725-CBB8-4368-98E2-38B85B4FB4B6}" ShortID="580703070">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Violoncelles_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{5771388C-60C6-494E-9D73-D29335FB1095}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{A908B266-D0E2-4164-8B04-320F6A26E4B4}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Violoncelles_01" ID="{A14DF8EA-37C0-4B6C-A995-4CD4F96ABD3C}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Violoncelles_01" ID="{691AD725-CBB8-4368-98E2-38B85B4FB4B6}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Violons_01" ID="{9AFCFECD-D101-4CC7-AFD0-FBF1DBC53C99}" ShortID="807712669">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Violons_01" ID="{36CE9BEA-1102-4EB0-905B-CC9CB0F4F5EA}" ShortID="979443982">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Violons_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{63DD6228-3773-415C-BFCA-5CEA2AF41BE2}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{BBE1338F-49CA-423E-A5ED-6F27CAD8A05E}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Violons_01" ID="{14F72C60-1A22-438B-9C9B-27096AA264EB}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16400"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Violons_01" ID="{36CE9BEA-1102-4EB0-905B-CC9CB0F4F5EA}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+											</ChildrenList>
+											<CueList>
+												<MusicCue Name="Entry Cue" ID="{B3C075C8-AF4C-45EB-9E48-EB6967A22DF9}">
+													<PropertyList>
+														<Property Name="TimeMs" Type="Real64" Value="1200"/>
+													</PropertyList>
+												</MusicCue>
+												<MusicCue Name="Exit Cue" ID="{DCB72E2A-DD0E-42EE-BC1F-8335B2309B92}">
+													<PropertyList>
+														<Property Name="CueType" Type="int16" Value="1"/>
+														<Property Name="TimeMs" Type="Real64" Value="16400"/>
+													</PropertyList>
+												</MusicCue>
+											</CueList>
+										</MusicSegment>
+										<MusicSegment Name="Mus_Secteur2_Explo_B" ID="{97A1780B-41BD-4959-82EB-B005DBE65AC8}" ShortID="755330365">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="19000"/>
+												<Property Name="Tempo" Type="Real64" Value="50"/>
+												<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Mus_Secteur2_Explo_B_Altos_02" ID="{AA9900F3-4AB8-4E5F-934E-2FC077A24B49}" ShortID="934969229">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_B_Altos_02" ID="{CA0A271E-702A-4AA3-B0C9-9696579F6B62}" ShortID="797600377">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_B_Altos_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{98B1E428-221E-471F-9B94-F1F717CA2EC1}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{792E6A5F-C2B8-404D-93CF-BC962FC7A04B}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_B_Altos_02" ID="{28744A7C-4302-4A1B-A8E1-21CD4DE03387}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16400"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_B_Altos_02" ID="{CA0A271E-702A-4AA3-B0C9-9696579F6B62}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_B_Contrebasses_02" ID="{E43C9C5C-8BBF-4700-9F87-619135F92D58}" ShortID="463971996">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_B_Contrebasses_02" ID="{145AC5FB-5A3D-4C79-B40D-EE0E5CB40A1B}" ShortID="652818627">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_B_Contrebasses_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{AA654CAC-28A8-4083-8AD6-BD1FB22A9475}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{3FA179B6-4CF4-4913-9DD4-34E8064E72DA}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_B_Contrebasses_02" ID="{DB29304C-5609-47DE-9009-5F2392186130}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_B_Contrebasses_02" ID="{145AC5FB-5A3D-4C79-B40D-EE0E5CB40A1B}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_B_Femme_01" ID="{F3BB4425-4776-4191-88C0-3B9516226B9A}" ShortID="796608381">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_B_Femme_01" ID="{26492A93-2922-48E1-B771-591194345E64}" ShortID="666322044">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_B_Femme_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{4847269F-C824-4AC6-9808-ACCBC0D98909}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{304BDD94-1FF7-47E0-A913-94DBB57395DF}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_B_Femme_01" ID="{683B3E73-5F74-40FB-B2C1-53AE8DDEF2D1}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_B_Femme_01" ID="{26492A93-2922-48E1-B771-591194345E64}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_B_Harpe_02" ID="{494ED9B9-C373-4AA2-B900-E399612D9977}" ShortID="641366594">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_B_Harpe_02" ID="{DE2A9196-8A2D-426E-BBAB-88B9E211D8A1}" ShortID="612761606">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_B_Harpe_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{9403C392-83E0-4F7F-A866-055EC4AEFB7E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{D85D862E-50DF-4F0E-AF6A-9D26271A747D}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_B_Harpe_02" ID="{5782F3D9-CA4F-41E3-82D8-07320C8FA88F}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_B_Harpe_02" ID="{DE2A9196-8A2D-426E-BBAB-88B9E211D8A1}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_B_Homme_01" ID="{F7FC3BA9-29B7-494A-B7C4-D4198B91D909}" ShortID="316243702">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_B_Homme_01" ID="{91A3DAEA-89C5-4DC7-B7DB-3DFEFFEB2863}" ShortID="325343203">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_B_Homme_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{0D8D297A-1ABF-4FFF-96BE-C2A0E2B3A58F}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{E5F77BB1-4A16-44F2-9E65-1584C03BD4E1}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_B_Homme_01" ID="{6B6E5C58-A576-4913-A95A-0E22734FCFD1}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_B_Homme_01" ID="{91A3DAEA-89C5-4DC7-B7DB-3DFEFFEB2863}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_B_Violoncelles_02" ID="{25B499A3-5C9A-4574-8623-DB0A95252C4E}" ShortID="876242297">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_B_Violoncelles_02" ID="{85482D1B-9C88-4B0A-B39B-966AD6808BB8}" ShortID="204832710">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_B_Violoncelles_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{7BE97D40-E029-4476-815E-8BDACA32B28D}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{34C27928-87E9-412D-9DFC-7BED4F77DD13}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_B_Violoncelles_02" ID="{4506E83D-7280-41F4-AE5B-0520E53A92AC}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_B_Violoncelles_02" ID="{85482D1B-9C88-4B0A-B39B-966AD6808BB8}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_B_Violons_02" ID="{40037250-F34B-4EAA-95E9-3D38CB92D88F}" ShortID="238663174">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_B_Violons_02" ID="{941E5E93-E27B-4B4A-B643-CA75BBA664D1}" ShortID="355334400">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_B_Violons_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{7A075F4E-73AB-4E59-A5EA-BC25F91C469B}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{D6596063-14A6-4054-AB3E-BCF1C5ABF3E6}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_B_Violons_02" ID="{C790B072-F185-4A16-826D-2097F0704C10}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16400"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_B_Violons_02" ID="{941E5E93-E27B-4B4A-B643-CA75BBA664D1}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{D188B8A7-AE24-441F-A982-DAF0F6921B30}" ShortID="122487420">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{353A6627-C4F5-4D70-BCDD-2CE5CD328ED3}" ShortID="587206059">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Cloches Tubes_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="1073435110"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{A97ED895-0BA0-4067-840B-FAE8C7A546A1}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{2596B089-822B-4EFA-BA7C-040734EB2DF0}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{12060931-2FD5-4612-AEAA-024E7E23E000}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{353A6627-C4F5-4D70-BCDD-2CE5CD328ED3}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{2D11C00A-F1FD-4FBF-8E08-9C0986EDFD95}" ShortID="552944719">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{1AFD99A1-6723-4C4C-A5C2-AB20F5813BE4}" ShortID="439973503">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Bongos_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="356951277"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{8111FB3B-211C-401C-ADD5-F754BD709322}" ShortID="94809406">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Bongos_02.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="644520875"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{10A44C4E-13AA-4D6C-837D-B08688DA191E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{0867EE8C-0F43-4559-A5A1-F817C56EB128}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{DAFEEA17-ED8D-43BE-BA47-9359F1089FA5}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{1AFD99A1-6723-4C4C-A5C2-AB20F5813BE4}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{34AD794A-9A0D-4AE3-BB4F-7AC7B64E8636}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{31994726-53E8-4F16-9B4A-75BC023F43D1}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{8111FB3B-211C-401C-ADD5-F754BD709322}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{6EBB1202-CC48-4007-91AE-8710B4EFC6F9}" ShortID="433792425">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{062009B3-5FAB-436F-A226-24B7E0C64AAB}" ShortID="853185738">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Caisse Claire_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="388158133"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{255E9573-BB84-48BF-ADA7-0A1CF25BD8A0}" ShortID="564207956">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Caisse Claire_02.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="451779665"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{7A5C2B50-7C65-470B-82E0-127BA3D349C3}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{6E97E319-6A26-4AA6-B9E8-01EBDC4B3A7E}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{5F5161ED-D46D-429A-87AC-11622E895228}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{062009B3-5FAB-436F-A226-24B7E0C64AAB}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{453A3B53-867D-4DE1-B735-8A124E4B80FC}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{84AE80A6-FEA7-45A8-A144-176CC4005755}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{255E9573-BB84-48BF-ADA7-0A1CF25BD8A0}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{BC1C5F53-924E-4C61-95A6-ACEFF7476E01}" ShortID="35942469">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{A1AC4DCD-D9E2-4B35-89AE-F471776DB973}" ShortID="611737018">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Gros Caisse_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="534495483"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{CD6481F7-F520-4CA4-B5D9-F8488D917F4A}" ShortID="28417797">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Gros Caisse_02.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="769419934"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{A1E099B3-17D7-4C12-BD74-E74666FDF314}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{D34999EB-BCB9-40BD-8781-EE9655E0FD08}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{001D005C-9D28-4F97-BBE0-7BE6EA05AB30}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{A1AC4DCD-D9E2-4B35-89AE-F471776DB973}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{2F56D0CC-73EE-47FC-A611-116EF778CF7B}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{040FF7CA-BCF4-4469-AC4E-EFE10D8388D4}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{CD6481F7-F520-4CA4-B5D9-F8488D917F4A}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+											</ChildrenList>
+											<CueList>
+												<MusicCue Name="Entry Cue" ID="{D4E47FEF-C7E1-4FE7-B764-5D96C33F379B}">
+													<PropertyList>
+														<Property Name="TimeMs" Type="Real64" Value="1200"/>
+													</PropertyList>
+												</MusicCue>
+												<MusicCue Name="Exit Cue" ID="{E064FFBC-FEC1-41FC-87CF-0A6EDD37DD6F}">
+													<PropertyList>
+														<Property Name="CueType" Type="int16" Value="1"/>
+														<Property Name="TimeMs" Type="Real64" Value="15600"/>
+													</PropertyList>
+												</MusicCue>
+											</CueList>
+										</MusicSegment>
+										<MusicSegment Name="Mus_Secteur2_Explo_C" ID="{EB4B6ACF-1C9C-416D-B489-CD3A05C76123}" ShortID="106333475">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="19335.3915662651"/>
+												<Property Name="Tempo" Type="Real64" Value="50"/>
+												<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Mus_Secteur2_Explo_C_Contrebasses_03" ID="{234B7536-2CC4-4269-B3F0-AE5D2F4EDFB7}" ShortID="2434433">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_C_Contrebasses_03" ID="{2A484FB3-7F51-4B1F-8FFC-B245388E9C2F}" ShortID="43738325">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_C_Contrebasses_03.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{D6B3DC07-E334-4DE6-84B7-6BA1C0839ED4}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{A0D823D9-7D7F-45D4-8158-B81F8F735825}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_C_Contrebasses_03" ID="{3514C51F-2FD4-4379-9D86-3FC81DB3F940}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_C_Contrebasses_03" ID="{2A484FB3-7F51-4B1F-8FFC-B245388E9C2F}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_C_Femme_02" ID="{5DE81D6D-DF79-4D75-BFD3-6E2DD33B3E8D}" ShortID="467459954">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_C_Femme_02" ID="{97140FB0-969A-450A-A352-0B38BBEF9DDD}" ShortID="919349213">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_C_Femme_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{2294D595-F19F-4DAC-A552-B45CA63D1C7C}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{16494661-AEA3-41DA-A44B-4954126607A9}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_C_Femme_02" ID="{E82F4D25-5756-4227-B714-0293E470C4FA}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16400"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_C_Femme_02" ID="{97140FB0-969A-450A-A352-0B38BBEF9DDD}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_C_Harpe_03" ID="{DA990A50-3FCF-447D-BC39-10654879B277}" ShortID="70145745">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_C_Harpe_03" ID="{9FAEE957-B0B6-4CBA-8067-BF517C9F6580}" ShortID="447483187">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_C_Harpe_03.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{8AEF2C0E-98A3-4818-8ED7-39379553F45A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{390B473E-D33E-4DAB-9F65-1E6AC29362DF}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_C_Harpe_03" ID="{79093A18-8738-4403-BBA7-DDD5A6E4FDCE}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_C_Harpe_03" ID="{9FAEE957-B0B6-4CBA-8067-BF517C9F6580}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_C_Homme_02" ID="{32A39F55-B7B2-4EEE-9498-C578A45A1346}" ShortID="138730517">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_C_Homme_02" ID="{2352B63B-1BE1-4924-A6E9-8E81A56DD14E}" ShortID="171765764">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_C_Homme_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{89D1C943-C441-422A-BF45-D0D6358B48DE}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{C50DDFBE-8A2B-4CCF-968F-99C11F33383B}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_C_Homme_02" ID="{59360593-66A7-4F0C-B7C4-DC20209432C7}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16400"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_C_Homme_02" ID="{2352B63B-1BE1-4924-A6E9-8E81A56DD14E}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_C_Violoncelles_03" ID="{ADDF153D-60A9-4425-8B3C-ADFEE50F2935}" ShortID="890060461">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_C_Violoncelles_03" ID="{D230E603-7465-4D10-95A6-7CD6642C67CE}" ShortID="490929931">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_C_Violoncelles_03.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{207D6B26-50EB-402A-AD43-EA3C01E5C38E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{31EADE55-6CBD-4940-B9A7-39B4F197E4B2}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_C_Violoncelles_03" ID="{0741C6B4-51F8-4748-874F-CEDCFFAA7DB1}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_C_Violoncelles_03" ID="{D230E603-7465-4D10-95A6-7CD6642C67CE}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{8BC64841-1C6D-4480-9CEF-9089782B7C27}" ShortID="848300796">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{023B63C6-7000-42F6-B4CF-CA97C8AA8915}" ShortID="930844088">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Cloches Tubes_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="1073435110"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{54A2B88C-C6BA-4C5B-B1EC-454DFEAC2658}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{02EB48A6-D0A5-4748-9AB7-8B3338CC15BC}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{BB72F215-6E8E-454D-ABA5-9900637B1500}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Cloches Tubes_01" ID="{023B63C6-7000-42F6-B4CF-CA97C8AA8915}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{663FC53F-2AA6-45C3-A152-5A2AF16AA46C}" ShortID="413295474">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{5E4C7AF1-D879-47EF-B749-2DB8E7076E3D}" ShortID="1048716197">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Bongos_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="356951277"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{83D28C8B-EF02-40A4-8E46-6D1F9784730A}" ShortID="492241667">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Bongos_02.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="644520875"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{57DADD46-BEAF-4FAF-A233-6B2416218DD8}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{02A600EB-E90D-4DE4-82C2-2093387AF349}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{8F48E62B-1EFB-454C-95A9-6BF7C37F32BB}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Bongos_01" ID="{5E4C7AF1-D879-47EF-B749-2DB8E7076E3D}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{0692EFC3-2258-4518-8C03-DE6B30736F67}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{B1312A9D-DFAC-48C3-A974-048CB295F203}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Bongos_02" ID="{83D28C8B-EF02-40A4-8E46-6D1F9784730A}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{644608C2-C872-4B70-8C66-8AF16B358102}" ShortID="583180337">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{791A189D-CCC2-4CA6-8862-9FE2C99556E5}" ShortID="934156262">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Caisse Claire_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="388158133"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{82904099-5FFF-4735-8B5A-88E37D7B1219}" ShortID="18514263">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Caisse Claire_02.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="451779665"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{7ED2D02E-8BA5-4EB7-8306-D119C79FC5BD}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{45EFF663-4D90-4278-96E4-7164236A42D8}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{F46A1768-9496-48A8-9D1F-1E6E961110BE}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Caisse Claire_01" ID="{791A189D-CCC2-4CA6-8862-9FE2C99556E5}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{98F36EF3-648A-4B52-8179-E809CDD2FB55}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{6645D3C1-4814-4953-BA32-2D24203FBC4D}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="17800"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Caisse Claire_02" ID="{82904099-5FFF-4735-8B5A-88E37D7B1219}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+												<MusicTrack Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{86DEBE2B-B837-43DF-BE53-C1DEC0604C30}" ShortID="643774523">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{F6BE8858-5772-44D3-8F37-9FE0E5E8F7B4}" ShortID="686729564">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Gros Caisse_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="534495483"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{B87DB6C4-2783-4811-B80B-2F37A36FA5D3}" ShortID="9483088">
+															<Language>SFX</Language>
+															<AudioFile>Mus_Secteur2_Explo_A_Gros Caisse_02.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="769419934"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{4291D6DF-67FF-4327-9C16-ECD52E6782DF}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{ADBC97B2-31B5-4DED-A21D-BE45F08B512B}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{349498B6-C2F4-4DE1-BA2B-6A89CF66C185}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Gros Caisse_01" ID="{F6BE8858-5772-44D3-8F37-9FE0E5E8F7B4}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+														<MusicTrackSequence Name="" ID="{989FB737-BCCC-4D91-B610-38E9A077BF25}">
+															<ClipList>
+																<MusicClip Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{AC254452-37B1-46B9-A855-5C24C070E6D3}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="16600"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																		<Property Name="PlayAt" Type="Real64" Value="1200"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Mus_Secteur2_Explo_A_Gros Caisse_02" ID="{B87DB6C4-2783-4811-B80B-2F37A36FA5D3}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+											</ChildrenList>
+											<CueList>
+												<MusicCue Name="Entry Cue" ID="{219358C8-CF60-490C-9F56-2DF83E77C998}">
+													<PropertyList>
+														<Property Name="TimeMs" Type="Real64" Value="1200"/>
+													</PropertyList>
+												</MusicCue>
+												<MusicCue Name="Exit Cue" ID="{EDDAABF2-AF2F-43D5-ADB5-066EAB61459A}">
+													<PropertyList>
+														<Property Name="CueType" Type="int16" Value="1"/>
+														<Property Name="TimeMs" Type="Real64" Value="15600"/>
+													</PropertyList>
+												</MusicCue>
+											</CueList>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{9913EB53-0337-4027-A9FE-86CC0B326EF3}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{48F9CAB6-D0F2-46DE-987B-EFC6F0F3C479}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{340A7988-A106-4DA3-8584-83D49565BA60}" ShortID="670338422">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{789C4708-6716-499A-924B-630F22D4C741}" ShortID="1019469872">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Mus_Secteur2_Explo_A" ID="{C6DF9C69-6F7D-4460-A255-730239C538CC}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{63F76FDC-DF10-48A7-9772-9BC721E62F40}" ShortID="745296298">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Mus_Secteur2_Explo_B" ID="{97A1780B-41BD-4959-82EB-B005DBE65AC8}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{9DC513FE-F2CB-4B18-A675-F5181DDC0573}" ShortID="2147053">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Mus_Secteur2_Explo_C" ID="{EB4B6ACF-1C9C-416D-B489-CD3A05C76123}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Playlist>
+								</MusicPlaylistContainer>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{ACB0342C-1D0A-4F81-958F-16A7174CDEE1}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{34E264FC-DBD6-48AF-8462-2C4D7C0E285D}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+						</MusicSwitchContainer>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{1292CEE4-EB2C-4EE7-A252-31B188EBD81F}">
@@ -474,7 +1644,7 @@
 								<PathElementRef Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="Mus_Secteur2" ID="{53AFF3BA-0FCB-495A-B90B-060671A14D68}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+								<AudioNodeRef Name="Mus_Secteur2" ID="{D1E45A48-ECBF-4F9B-B21D-AE3C54627FC9}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -490,7 +1660,7 @@
 								<PathElementRef Name="None" ID="{3BCEF881-E9E3-441A-990F-8436EA94DD12}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="Mus_Secteur2" ID="{53AFF3BA-0FCB-495A-B90B-060671A14D68}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+								<AudioNodeRef Name="Mus_Secteur2" ID="{D1E45A48-ECBF-4F9B-B21D-AE3C54627FC9}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>
