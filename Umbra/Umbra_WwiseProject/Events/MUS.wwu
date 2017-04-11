@@ -8,13 +8,13 @@
 						<Action Name="Set State" ID="{3DC3F7FC-28DB-4E46-820F-2189A647D295}" ShortID="867240218" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
-								<GroupItem Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
+								<GroupItem Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 							</SetItemParam>
 						</Action>
 						<Action Name="Play" ID="{B852367D-44A3-43CD-AA26-BC6ED537AB23}" ShortID="838044873" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{6D6951E5-675A-4BCD-A9BD-64FA69FD0620}" Global="false">
-									<ObjectRef Name="Mus_Secteur1" ID="{A2CB6E5F-9396-4E60-90AA-C89CA53FF2A2}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -27,13 +27,6 @@
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
-						</Action>
-						<Action Name="Stop" ID="{A5808F34-32DC-44FB-A28A-2CC208C1DC9B}" ShortID="474978189" Type="Stop" Scope="One" Global="true">
-							<ElementList>
-								<Element ID="{47CAC5D0-F37A-4112-8C40-05F81B111CB1}" Global="true">
-									<ObjectRef Name="InGame_Alert" ID="{F28B3D0A-1DE2-4F3C-B357-3AF6D3E9D196}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
 						</Action>
 						<Action Name="Resume" ID="{BCFAB3D0-B474-45E8-8D99-14C8089657B4}" ShortID="271465130" Type="Resume" Scope="One" Global="true">
 							<ElementList>
@@ -49,13 +42,13 @@
 						<Action Name="Set State" ID="{B3C923E2-3F0D-41D5-B1B9-30325ABB0320}" ShortID="985985644" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
-								<GroupItem Name="Secteur3" ID="{5A5DFBC6-2121-42BC-A3DB-6F784FA51199}"/>
+								<GroupItem Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 							</SetItemParam>
 						</Action>
 						<Action Name="Play" ID="{06CD657C-D45E-4C12-B5BD-FEFCBB2DA30F}" ShortID="289199823" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{8FD8C6CE-35DA-4C0D-97E5-C84888F63C28}" Global="false">
-									<ObjectRef Name="Mus_Secteur3" ID="{7CFA0EC4-D34D-4DBD-A13E-EB2706180DED}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -85,20 +78,6 @@
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 								<GroupItem Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
 							</SetItemParam>
-						</Action>
-						<Action Name="Pause" ID="{6F645A38-698C-4FED-8B0A-AF4593E7B2C2}" ShortID="268598583" Type="Pause" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{B7C632A2-55CE-4D7B-A4CD-8B7C382B384B}" Global="false">
-									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Play" ID="{A65EB591-3358-48CD-83DB-5757CF4AEE90}" ShortID="866129485" Type="Play" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{69451EBA-F11C-4B5B-A179-806C1A6763FA}" Global="false">
-									<ObjectRef Name="InGame_Alert" ID="{F28B3D0A-1DE2-4F3C-B357-3AF6D3E9D196}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>

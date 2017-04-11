@@ -22,6 +22,10 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="PC_Rune_Leurre_Filter" ID="{77647A6F-B783-4D1B-8DD8-2FFA46999B51}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="PC_Foot_Jump" ID="{610644C9-6CAC-4F28-98AA-66395D9B4CC8}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -61,6 +65,34 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}"/>
+							<Value>0.124688279301743</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
+						<CurrentStateRef Name="SlowMo" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
+						<CurrentStateRef Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Music" ID="{1E3AB5B2-00A9-47E8-8673-3C415546D5EF}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Mus_Secteur2_Explo" ID="{2F3EB6E4-4234-47F1-B626-6A343F8CE666}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}"/>
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>

@@ -229,13 +229,6 @@
 								</Event>
 								<Event Name="PC_Action_Respawn" ID="{680E6AAF-58EE-44BF-B68D-1A03B5BF7EEE}">
 									<ChildrenList>
-										<Action Name="Play" ID="{4E246BD5-2B6A-49F5-854E-959E7C96C8CC}" ShortID="311946502" Type="Play" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{2937CCBA-4728-450F-A391-54381049D62F}" Global="false">
-													<ObjectRef Name="PC_Action_Death" ID="{D22F2FE9-D901-44E8-ABB0-CE13564314C1}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-												</Element>
-											</ElementList>
-										</Action>
 										<Action Name="Play" ID="{98E4D4FA-FE7E-4F99-9609-8C1E044EB65B}" ShortID="851152854" Type="Play" Scope="One" Global="false">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="2"/>
@@ -272,10 +265,24 @@
 								</Event>
 								<Event Name="PC_Action_Death" ID="{132F6797-D545-45D5-AF1C-C74D46FFE288}">
 									<ChildrenList>
+										<Action Name="Stop" ID="{E15703D1-7D27-4A05-A498-79C44D66E0F1}" ShortID="196303268" Type="Stop" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{4E0856E9-F135-4FE6-8FA2-D6BF0E845115}" Global="false">
+													<ObjectRef Name="State" ID="{23E84DB6-59EF-412B-B63A-5EEED973C203}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
 										<Action Name="Play" ID="{46542404-11D5-4921-9B11-70384C519C98}" ShortID="945791994" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{BC52F802-C082-4B53-9C50-3E829923F52D}" Global="false">
 													<ObjectRef Name="VO_PC_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Play" ID="{02A0E561-A95F-4736-B593-7303C3620B02}" ShortID="780185819" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{0405A3E4-2487-430F-BFBF-B420B8D08190}" Global="false">
+													<ObjectRef Name="PC_Action_Death" ID="{D22F2FE9-D901-44E8-ABB0-CE13564314C1}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -394,10 +401,23 @@
 							<ChildrenList>
 								<Event Name="PC_Rune_Leurre_Filter" ID="{77647A6F-B783-4D1B-8DD8-2FFA46999B51}">
 									<ChildrenList>
-										<Action Name="Play" ID="{25247472-D3C2-4CB8-AD75-27EABE037E44}" ShortID="102191149" Type="Play" Scope="One" Global="false">
+										<Action Name="Set Game Parameter" ID="{8A0F1E0C-364D-4247-8FC2-01100DFC4FB1}" ShortID="128457974" Type="SetGameParameter" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+											</PropertyList>
 											<ElementList>
-												<Element ID="{1B50060B-E65E-4D28-B919-297660C8985B}" Global="false">
-													<ObjectRef Name="PC_Rune_Leurre_Filter" ID="{DB7E19E1-360C-4D8D-B837-69EF37AE412D}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												<Element ID="{BAD37D3E-3F0C-467D-A871-E40B41686522}" Global="false">
+													<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Set Game Parameter" ID="{CC2EE186-E04B-451D-9EDC-A6D30CD0C31B}" ShortID="316142281" Type="SetGameParameter" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="7"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{4A12020C-032A-4636-96BD-5B5797BEA3A9}" Global="false">
+													<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
 												</Element>
 											</ElementList>
 										</Action>
