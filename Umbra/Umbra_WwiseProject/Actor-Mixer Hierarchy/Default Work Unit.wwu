@@ -644,6 +644,26 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Foot_Stealth" ID="{ED19598D-0D14-42E6-AD54-64446D222339}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
+														<State Name="Custom State" ID="{87DE8509-EA7F-4D2A-ADEB-684F079D1F82}" ShortID="493733568">
+															<PropertyList>
+																<Property Name="Highpass" Type="int16" Value="44"/>
+																<Property Name="Lowpass" Type="int16" Value="51"/>
+																<Property Name="Pitch" Type="int32" Value="-150"/>
+																<Property Name="Volume" Type="Real64" Value="-4"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="PC_Foot_Climb" ID="{386D7082-EA98-452F-816F-A8853C5F23CC}" ShortID="565590997">
 											<PropertyList>
@@ -941,25 +961,6 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="Foot_Stealth" ID="{ED19598D-0D14-42E6-AD54-64446D222339}"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
-												<State Name="Custom State" ID="{BB5F4D74-DCA8-4F29-AB72-B450DF2DA70D}" ShortID="319642500">
-													<PropertyList>
-														<Property Name="Highpass" Type="int16" Value="44"/>
-														<Property Name="Lowpass" Type="int16" Value="51"/>
-														<Property Name="Volume" Type="Real64" Value="-4"/>
-													</PropertyList>
-												</State>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
 								</ActorMixer>
 								<ActorMixer Name="Rune" ID="{29D11DBF-E706-4103-AB88-65687082DE95}" ShortID="396452769">
 									<ReferenceList>
