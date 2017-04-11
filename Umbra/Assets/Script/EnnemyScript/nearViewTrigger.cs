@@ -32,7 +32,7 @@ public class nearViewTrigger : MonoBehaviour {
 		if (col.tag == "Player"  )
 		{
 			inSigght = true;
-			print ("fuckkkkkkkkk");
+			//print ("fuckkkkkkkkk");
 
 		}
 	}
@@ -42,7 +42,7 @@ public class nearViewTrigger : MonoBehaviour {
 		if (col.tag == "Player"  )
 		{
 			inSigght = true;
-			print ("fuckkkkkkkkk");
+			//print ("fuckkkkkkkkk");
 
 		}
 	}

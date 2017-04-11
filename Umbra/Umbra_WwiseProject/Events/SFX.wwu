@@ -250,7 +250,17 @@
 								</Event>
 								<Event Name="PC_Action_Look" ID="{7AE73DFC-284F-4BDD-B47C-2FB522BAAB4D}"/>
 								<Event Name="PC_Action_SlowMo" ID="{FD165A1F-9D79-4CEA-9C0F-7178A6ADF75C}"/>
-								<Event Name="PC_Action_Death" ID="{132F6797-D545-45D5-AF1C-C74D46FFE288}"/>
+								<Event Name="PC_Action_Death" ID="{132F6797-D545-45D5-AF1C-C74D46FFE288}">
+									<ChildrenList>
+										<Action Name="Play" ID="{46542404-11D5-4921-9B11-70384C519C98}" ShortID="945791994" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{BC52F802-C082-4B53-9C50-3E829923F52D}" Global="false">
+													<ObjectRef Name="VO_PC_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Foot" ID="{7491EEC3-1F3C-4C03-AF67-269161E3E504}" ShortID="54899299">
