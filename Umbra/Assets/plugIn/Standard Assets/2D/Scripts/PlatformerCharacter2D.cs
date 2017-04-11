@@ -52,7 +52,6 @@ using UnityEngine.SceneManagement;
 
 	void Start()
 	{
-		TeleportPointDeath = GameObject.Find ("teleportpointDeath").transform;
 		numberofDeath = PlayerPrefs.GetInt ("Death");
 		if(TruePlayer==true)
 		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
