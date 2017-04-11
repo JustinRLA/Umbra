@@ -248,7 +248,7 @@ public class SightListenerTemplate : MonoBehaviour {
 	}
 	IEnumerator CamCoroutine()
 	{
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.3f);
 		if(inCam==true)
 		{
 			AkSoundEngine.PostEvent ("Amb_Alarm", gameObject);
