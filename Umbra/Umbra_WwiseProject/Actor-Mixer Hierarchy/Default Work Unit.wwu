@@ -14,9 +14,15 @@
 					</ReferenceList>
 					<ChildrenList>
 						<ActorMixer Name="PC" ID="{FFD9FD6F-49C8-4582-832A-B2DF5F570A1E}" ShortID="961580517">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
@@ -686,6 +692,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="PC_Foot_Climb" ID="{386D7082-EA98-452F-816F-A8853C5F23CC}" ShortID="565590997">
 											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>80</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -1111,27 +1122,6 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="PC_Rune_Leurre_Use" ID="{F2AFAAE5-668A-4561-9143-AADE54844B15}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="PC_Rune_Leurre_Filter" ID="{DB7E19E1-360C-4D8D-B837-69EF37AE412D}" ShortID="824743336" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Wwise Sine" ID="{CAF52620-90D7-4831-B1E5-644AA2C6CDB7}" ShortID="671640607" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
-													<PropertyList>
-														<Property Name="SineGain" Type="Real32" Value="-28"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Wwise Sine" ID="{CAF52620-90D7-4831-B1E5-644AA2C6CDB7}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Marquage_Use" ID="{4D559557-CC59-4062-AEAE-8D062232127A}" ShortID="828571578" Type="SoundFX">

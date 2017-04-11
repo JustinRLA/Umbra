@@ -147,12 +147,12 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-0</YPos>
+														<YPos>0</YPos>
 														<Flags>5</Flags>
 													</Point>
 													<Point>
 														<XPos>82.79302</XPos>
-														<YPos>-0</YPos>
+														<YPos>0</YPos>
 														<Flags>0</Flags>
 													</Point>
 													<Point>
@@ -1683,6 +1683,45 @@
 										<Property Name="ModDepth" Type="Real32" Value="60"/>
 										<Property Name="ModFrequency" Type="Real32" Value="0.85"/>
 										<Property Name="ModPWM" Type="Real32" Value="0"/>
+										<Property Name="ModWaveform" Type="int32" Value="2"/>
+										<Property Name="WetDryMix" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{6C788311-491C-4C93-928F-B9F813F3144C}" ShortID="994021260">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{01E02F00-8CB9-42A4-BA18-E0B5F26B5C1E}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>93.6399</XPos>
+																<YPos>-0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>93.6409</XPos>
+																<YPos>44.37133</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>100</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>
@@ -1695,6 +1734,34 @@
 								<Property Name="ModDepth" Type="Real32" Value="10"/>
 								<Property Name="ModFrequency" Type="Real32" Value="5.5"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
+								<Property Name="WetDryMix" Type="Real32">
+									<RTPCList>
+										<RTPC Name="" ID="{D4333CB8-3F4B-4835-ABB0-23A32319A883}" ShortID="310812767">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{D323514C-A3A7-45F2-A7C4-B450003B6931}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="1"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>20.32256</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
