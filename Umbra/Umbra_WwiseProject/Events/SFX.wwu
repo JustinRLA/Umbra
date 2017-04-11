@@ -249,13 +249,44 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="PC_Action_Look" ID="{7AE73DFC-284F-4BDD-B47C-2FB522BAAB4D}"/>
-								<Event Name="PC_Action_SlowMo" ID="{FD165A1F-9D79-4CEA-9C0F-7178A6ADF75C}"/>
+								<Event Name="PC_Action_SlowMo" ID="{FD165A1F-9D79-4CEA-9C0F-7178A6ADF75C}">
+									<ChildrenList>
+										<Action Name="Play" ID="{E7E142F3-E6CF-44CE-B89D-1F2DAF5486EF}" ShortID="74017510" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{3C3EE0A7-DCCF-4111-85F3-55E9FE1BBCFC}" Global="false">
+													<ObjectRef Name="PC_Action_SlowMo" ID="{6DDCB285-10BF-4105-B6F7-4F30484AC449}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Set Game Parameter" ID="{2578F75B-0A02-4E81-8D7D-5F6AA8ADB377}" ShortID="428447866" Type="SetGameParameter" Scope="One" Global="true">
+											<PropertyList>
+												<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{2D6C1B1B-EF00-442F-9EE1-2F1A2EC4EA51}" Global="true">
+													<ObjectRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="PC_Action_Death" ID="{132F6797-D545-45D5-AF1C-C74D46FFE288}">
 									<ChildrenList>
 										<Action Name="Play" ID="{46542404-11D5-4921-9B11-70384C519C98}" ShortID="945791994" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{BC52F802-C082-4B53-9C50-3E829923F52D}" Global="false">
 													<ObjectRef Name="VO_PC_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PC_Action_SlowMo_End" ID="{81F04446-79F6-4C1E-853E-A741849F9B2D}">
+									<ChildrenList>
+										<Action Name="Set Game Parameter" ID="{BD33AC43-EC97-4995-977D-07C1BCED8828}" ShortID="1019099761" Type="SetGameParameter" Scope="One" Global="true">
+											<ElementList>
+												<Element ID="{00FAC2EE-B26B-47D5-95CC-111567B983C1}" Global="true">
+													<ObjectRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
 												</Element>
 											</ElementList>
 										</Action>
