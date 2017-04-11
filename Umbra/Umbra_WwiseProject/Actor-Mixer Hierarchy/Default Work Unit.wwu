@@ -127,6 +127,25 @@
 												<ActiveSource Name="PC_Action_Heartbeat" ID="{E8BC9153-B9D9-4DDC-A701-6502A4062BE1}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="PC_Action_SlowMo" ID="{6DDCB285-10BF-4105-B6F7-4F30484AC449}" ShortID="256395364" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PC_Action_SlowMo" ID="{08BCA70E-78F2-46E9-973F-9693EFB10609}" ShortID="497259216">
+													<Language>SFX</Language>
+													<AudioFile>PC_Action_SlowMo.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PC_Action_SlowMo" ID="{08BCA70E-78F2-46E9-973F-9693EFB10609}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Foot" ID="{C6055C79-CB42-4E18-8A0F-FD244B9DDCFE}" ShortID="607807331">
@@ -1230,15 +1249,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Wwise Sine" ID="{22CE34E0-FA9F-47D0-9E61-637EC5363022}" ShortID="201836181" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
-													<PropertyList>
-														<Property Name="SineGain" Type="Real32" Value="-28"/>
-													</PropertyList>
+												<AudioFileSource Name="PC_Rune_Select" ID="{EDED28E6-2B89-44D1-AD8F-B4881AC6DD3E}" ShortID="544961547">
 													<Language>SFX</Language>
-												</SourcePlugin>
+													<AudioFile>PC_Rune_Select.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Wwise Sine" ID="{22CE34E0-FA9F-47D0-9E61-637EC5363022}" Platform="Linked"/>
+												<ActiveSource Name="PC_Rune_Select" ID="{EDED28E6-2B89-44D1-AD8F-B4881AC6DD3E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Trap_Use" ID="{806B6FD2-2478-4FFC-8F96-4DFB54DACC7B}" ShortID="197980771" Type="SoundFX">
