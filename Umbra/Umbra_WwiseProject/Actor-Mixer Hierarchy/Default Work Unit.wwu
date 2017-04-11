@@ -3357,15 +3357,13 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="Wwise Sine" ID="{2804A208-87D5-49D4-915E-3C3CAB84D99F}" ShortID="735539620" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
-											<PropertyList>
-												<Property Name="SineGain" Type="Real32" Value="-28"/>
-											</PropertyList>
+										<AudioFileSource Name="Menu_Cancel" ID="{2D63D145-CB75-45CE-9FA0-BEB2D22D840E}" ShortID="918065413">
 											<Language>SFX</Language>
-										</SourcePlugin>
+											<AudioFile>Menu_Cancel.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Wwise Sine" ID="{2804A208-87D5-49D4-915E-3C3CAB84D99F}" Platform="Linked"/>
+										<ActiveSource Name="Menu_Cancel" ID="{2D63D145-CB75-45CE-9FA0-BEB2D22D840E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Menu_Hover" ID="{C79992B8-3EE4-4C49-88DE-43DF220252E3}" ShortID="523893601" Type="SoundFX">
@@ -3378,15 +3376,13 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="Wwise Sine" ID="{FB214211-C473-4E67-A1CE-210F7056EBB0}" ShortID="704193469" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
-											<PropertyList>
-												<Property Name="SineGain" Type="Real32" Value="-28"/>
-											</PropertyList>
+										<AudioFileSource Name="Menu_Hover" ID="{D3E36B76-9028-4752-B8FF-16702DB514FE}" ShortID="1035309267">
 											<Language>SFX</Language>
-										</SourcePlugin>
+											<AudioFile>Menu_Hover.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Wwise Sine" ID="{FB214211-C473-4E67-A1CE-210F7056EBB0}" Platform="Linked"/>
+										<ActiveSource Name="Menu_Hover" ID="{D3E36B76-9028-4752-B8FF-16702DB514FE}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<RandomSequenceContainer Name="Menu_Click" ID="{1DC30572-1AC2-4440-B4F4-21909FBFB53C}" ShortID="461965780">
@@ -3409,15 +3405,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Wwise Sine" ID="{BC19E92F-3F9D-4C50-8429-4ABA05A791E7}" ShortID="346613867" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
-													<PropertyList>
-														<Property Name="SineGain" Type="Real32" Value="-28"/>
-													</PropertyList>
+												<AudioFileSource Name="Menu_Click" ID="{D4AFFAAB-67F0-4B13-87E0-477BCE5DAD34}" ShortID="20331000">
 													<Language>SFX</Language>
-												</SourcePlugin>
+													<AudioFile>Menu_Click.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Wwise Sine" ID="{BC19E92F-3F9D-4C50-8429-4ABA05A791E7}" Platform="Linked"/>
+												<ActiveSource Name="Menu_Click" ID="{D4AFFAAB-67F0-4B13-87E0-477BCE5DAD34}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
