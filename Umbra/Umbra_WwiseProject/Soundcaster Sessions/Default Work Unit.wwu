@@ -10,6 +10,14 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="PC_Action_SlowMo_End" ID="{81F04446-79F6-4C1E-853E-A741849F9B2D}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Action_SlowMo" ID="{FD165A1F-9D79-4CEA-9C0F-7178A6ADF75C}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="PC_Action_Respawn" ID="{680E6AAF-58EE-44BF-B68D-1A03B5BF7EEE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
 							<Position X="0" Y="3"/>
 						</Module>
@@ -50,7 +58,12 @@
 							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
 						<CurrentStateRef Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
