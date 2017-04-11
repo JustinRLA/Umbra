@@ -26,9 +26,11 @@ using UnityStandardAssets.CrossPlatformInput;
 				// Read the jump input in Update so button presses aren't missed.
 				m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
 			}
-		if (Input.GetKeyDown (KeyCode.LeftControl))
+		if (Input.GetKeyDown (KeyCode.LeftControl)) {
 			crouch = !crouch;
-		if(truePlayer==true)
+			checkCrouch();
+		}
+			if(truePlayer==true)
 		{
 		if(crouch)
 			feedbackEye.transform.position=eyeCrouch.position;
@@ -47,6 +49,14 @@ using UnityStandardAssets.CrossPlatformInput;
 			m_Character.Move(h, crouch, m_Jump);
 			m_Jump = false;
 		}
+
+	void checkCrouch(){
+		if (crouch == true)
+			AkSoundEngine.PostEvent ("PC_Stealth_On",gameObject);
+		if (crouch == false)
+			AkSoundEngine.PostEvent ("PC_Stealth_Off",gameObject);
+	
+	}
 	}
 
 

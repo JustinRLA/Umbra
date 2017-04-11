@@ -29,6 +29,9 @@ public class LineRendererTest : MonoBehaviour {
 	public bool ActivateThisShit=true;
 	public	bool touchedBadThing=false;
 	public GameObject CamGrap;
+	bool redhaveplayed;
+	bool greenhaveplayed;
+
 
 	public GameObject MainCamera;
 	void Start()
@@ -43,7 +46,7 @@ public class LineRendererTest : MonoBehaviour {
 	public void IsActivated()
 	{
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
-
+		AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Equip", gameObject);
 		myRuneManagerScript.RuneActivated = true;
 		theBeams = GameObject.FindGameObjectsWithTag ("grapRegion");
 
@@ -143,12 +146,19 @@ public class LineRendererTest : MonoBehaviour {
 			if (touchedBadThing == true)
 			{
 				line.material = InMat;
+					if (redhaveplayed == false) {
+						AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Red", gameObject);
+						redhaveplayed = true;
+					}
 			}
 			else
 			{
-				if(TouchGood==false)
-				line.material = OutMat;
-				else
+					redhaveplayed = false;
+					if (TouchGood == false) {
+						line.material = OutMat;
+					
+					}
+						else
 					line.material = GOodMat;
 			}
 
@@ -180,9 +190,18 @@ public class LineRendererTest : MonoBehaviour {
 		else
 			TouchGood = false;
 
-				if (TouchGood == true && TheBeam != null && touchedBadThing==false)
+				if (TouchGood == true && TheBeam != null && touchedBadThing == false) {
 					TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (true);
-				if(TheBeam!=null)
+					if (greenhaveplayed == false) {
+						AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Green", gameObject);
+						greenhaveplayed = true;
+					}
+				
+				}
+							else
+								greenhaveplayed=false;
+
+					if(TheBeam!=null)
 				{
 				if(TouchGood==false || touchedBadThing==true)
 					TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
@@ -227,6 +246,7 @@ public class LineRendererTest : MonoBehaviour {
 //		print ("this is the end");
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
 		myRuneManagerScript.RuneActivated = false;
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		GetComponent<LineRendererTest> ().enabled = false;
 
@@ -266,6 +286,7 @@ public class LineRendererTest : MonoBehaviour {
 		ActivateThisShit = false;
 		CamGrap.SetActive (false);
 		myRuneManagerScript.RuneActivated = false;
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		GetComponent<LineRendererTest> ().enabled = false;
 	}

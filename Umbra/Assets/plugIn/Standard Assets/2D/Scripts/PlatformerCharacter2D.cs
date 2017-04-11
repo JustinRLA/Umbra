@@ -75,6 +75,8 @@ using UnityEngine.SceneManagement;
         }
 	public void Death()
 	{
+
+		AssassinTrigger.SetActive (false);
 		//AkSoundEngine.PostEvent ("PC_Action_Respawn", gameObject);
 		dead = true;
 		Time.timeScale = 1;
@@ -157,7 +159,11 @@ using UnityEngine.SceneManagement;
 
 	}
 
+	public void GrimpeNoise()
+	{
+		AkSoundEngine.PostEvent ("PC_Foot_Climb", gameObject);
 
+	}
 	public void ReturnToNormal()
 	{
 
@@ -511,10 +517,13 @@ using UnityEngine.SceneManagement;
 		AkSoundEngine.PostEvent ("PC_Foot_Run", gameObject);
 	}
 
-	void OnColliderEnter2D(Collision2D col)
+	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "bloc" && m_Grounded == true)
+		if (col.gameObject.tag == "bloc" && m_Grounded == true) {
 			AkSoundEngine.PostEvent ("PC_Foot_Land", gameObject);
+			print ("Land");
+
+		}
 			
 	}
     }

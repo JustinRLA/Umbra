@@ -250,8 +250,8 @@ MonoBehaviour:
   - PhysicalPath: Events\SFX.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: -168686902
-    m_lastTimePart2: -1999339281
+    m_lastTimePsrt1: 1562452705
+    m_lastTimePart2: -1999339250
     List:
     - Name: Amb_Alarm
       Path: Default Work Unit\SFX\Amb\Amb_Alarm
@@ -558,6 +558,22 @@ MonoBehaviour:
         ObjectType: 3
       ID: 348181601
       Guid: 1f5a16fd799dea4c9c0f7178a6adf75c
+      maxAttenuation: 0
+    - Name: PC_Action_SlowMo_End
+      Path: Default Work Unit\SFX\PC\Action\PC_Action_SlowMo_End
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: PC
+        ObjectType: 4
+      - ElementName: Action
+        ObjectType: 4
+      - ElementName: PC_Action_SlowMo_End
+        ObjectType: 3
+      ID: -1610440957
+      Guid: 4644f081f6791e4c853ea741849f9b2d
       maxAttenuation: 0
     - Name: PC_Foot_Climb
       Path: Default Work Unit\SFX\PC\Foot\PC_Foot_Climb
@@ -965,8 +981,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}'
-    m_lastTimePsrt1: -1164712408
-    m_lastTimePart2: -1999340280
+    m_lastTimePsrt1: 1563252670
+    m_lastTimePart2: -1999339250
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -1091,8 +1107,12 @@ MonoBehaviour:
   - /Umbra_WwiseProject
   - /Umbra_WwiseProject/Events
   - /Umbra_WwiseProject/Events/Default Work Unit
+  - /Umbra_WwiseProject/Events/Default Work Unit/MUS
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX
+  - /Umbra_WwiseProject/Events/Default Work Unit/SFX/NPCs
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX/PC
+  - /Umbra_WwiseProject/Events/Default Work Unit/SFX/PC/Action
+  - /Umbra_WwiseProject/Events/Default Work Unit/SFX/PC/Foot
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX/PC/Rune
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0

@@ -71,6 +71,7 @@ public class solifyShadow : MonoBehaviour {
 		MySolid.CanClickable = false;
 		Time.timeScale = 1;
 		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		foreach (GameObject Ombre in AllShadow)
 		{
@@ -109,6 +110,7 @@ public class solifyShadow : MonoBehaviour {
 		}
 		gameObject.layer = 24;
 		mymyRuneManagerScript.RuneActivated = false;
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		yield return new WaitForSeconds(10f);
 		AkSoundEngine.PostEvent("Rune_Solide_End",gameObject);

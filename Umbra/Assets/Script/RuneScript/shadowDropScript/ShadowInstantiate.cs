@@ -44,6 +44,7 @@ public class ShadowInstantiate : MonoBehaviour {
 
 	public void InstantiateTheShadow()
 	{
+		AkSoundEngine.PostEvent ("PC_Rune_Ombre_Select",gameObject);
 		//myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;
 		Time.timeScale = 1f;

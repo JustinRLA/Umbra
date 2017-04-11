@@ -72,6 +72,9 @@ public class EnnemyMarked : MonoBehaviour {
 			PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 
 			Time.timeScale = 1f;
+			AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+
+			myMarkEnmnemyRune.CanBeClicked = false;
 
 		}
 
@@ -91,6 +94,9 @@ public class EnnemyMarked : MonoBehaviour {
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 
 		Time.timeScale = 1f;
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+
+		myMarkEnmnemyRune.CanBeClicked = false;
 
 	}
 

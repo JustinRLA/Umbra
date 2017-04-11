@@ -50,11 +50,12 @@ public class DragShadow : MonoBehaviour {
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		//gameObject.layer = 10;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
-		GetComponent<DragShadow>().enabled=false;
 		GetComponent<SpriteRenderer> ().enabled = false;
+		GetComponent<DragShadow>().enabled=false;
 
 		gameObject.name=("OldCube");
 	}
@@ -71,6 +72,8 @@ public class DragShadow : MonoBehaviour {
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		playerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+
 		Destroy (gameObject);
 	}
 

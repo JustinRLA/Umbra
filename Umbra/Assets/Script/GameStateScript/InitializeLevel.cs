@@ -47,7 +47,14 @@ public class InitializeLevel : MonoBehaviour {
 	void Start () {
 		interzone [0].SetActive (false);
 		interzone [1].SetActive (false);
-
+		if(decoountNumber<6)
+			AkSoundEngine.PostEvent ("Mus_Secteur1", gameObject);
+		if(decoountNumber>8)
+			AkSoundEngine.PostEvent ("Mus_Secteur3", gameObject);
+		if(decoountNumber>=6 && decoountNumber<=8)
+			AkSoundEngine.PostEvent ("Mus_Secteur2", gameObject);
+		
+		
 		if (decoountNumber > 7)
 			interzone [1].SetActive(true);
 

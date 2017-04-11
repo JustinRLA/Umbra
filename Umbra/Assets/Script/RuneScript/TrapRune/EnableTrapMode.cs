@@ -112,6 +112,7 @@ public class EnableTrapMode : MonoBehaviour {
 				CanInstantiate = false;
 
 				Demotrap.transform.position = NowherePoint.position;
+				AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 				GetComponent<EnableTrapMode> ().enabled = false;
 
@@ -142,13 +143,14 @@ public class EnableTrapMode : MonoBehaviour {
 		}
 		CanInstantiate = false;
 		Demotrap.transform.position = NowherePoint.position;
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		GetComponent<EnableTrapMode> ().enabled = false;
 
 	}
 	public void EnabledTrapMode()
 	{
-		AkSoundEngine.PostEvent ("PC_Rune_Trap_Equip", gameObject);
+	//	AkSoundEngine.PostEvent ("PC_Rune_Trap_Equip", gameObject);
 
 		Time.timeScale = 0.1f;
 		Cursor.visible = true;
