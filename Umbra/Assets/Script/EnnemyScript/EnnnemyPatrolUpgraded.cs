@@ -22,7 +22,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	bool routine;
 	public float timerAttack;
 	bool haveplayedAlert;
-	bool havePlayed;
+	bool havePlayedKill;
+	bool haveplayedNeutral;
+	bool haveplayedSuspicious;
+
 	public bool Safe;
 	public Transform UpPoint;
 	public Transform UpPoint_UpLevel;
@@ -387,7 +390,12 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		{
 			print ("attacking");
 			GetComponent<Animator>().SetBool ("Attaque", true);
-			MyPlayer.GetComponent<PlatformerCharacter2D> ().Death ();
+			if(havePlayedKill==false)
+			{
+				AkSoundEngine.PostEvent ("NPC_Action_Kill", gameObject);
+			
+			}
+				MyPlayer.GetComponent<PlatformerCharacter2D> ().Death ();
 			//GetComponent<Animator>().SetBool ("Attaque", false);
 		}
 

@@ -13,8 +13,7 @@ public class CheckVisinCone : MonoBehaviour {
 	RaycastHit2D EnnmyRayFour;
 	RaycastHit2D EnnmyRayFive;
 	RaycastHit2D EnnmyRaySix;
-	RaycastHit2D EnnmyRaySeven;
-	RaycastHit2D EnnmyRayEight;
+
 
 	public bool[] AlerEnnemy;
 	public bool[] SuspiciousEnnemy;
@@ -28,8 +27,7 @@ public class CheckVisinCone : MonoBehaviour {
 	public EnnemyMarked MarkFour;
 	public EnnemyMarked MarkFive;
 	public EnnemyMarked MarkSix;
-	public EnnemyMarked MarkSeven;
-	public EnnemyMarked MarkEight;
+
 
 
 	public bool CanSee;
@@ -38,8 +36,6 @@ public class CheckVisinCone : MonoBehaviour {
 	public bool CanSeeFour;
 	public bool CanSeeFive;
 	public bool CanSeeSix;
-	public bool CanSeeSeven;
-	public bool CanSeeEight;
 
 
 	public ConVisible ConvisibleOne;
@@ -48,9 +44,8 @@ public class CheckVisinCone : MonoBehaviour {
 	public ConVisible ConvisibleFour;
 	public ConVisible ConvisibleFive;
 	public ConVisible ConvisibleSix;
-	public ConVisible ConvisibleSeven;
-	public ConVisible ConvisibleEight;
-
+	bool AlertHavePlayer;
+	bool RetrnHavePlayed;
 
 	public EnnnemyPatrolUpgraded PatrolOne;
 	public EnnnemyPatrolUpgraded PatrolTwo;
@@ -58,8 +53,7 @@ public class CheckVisinCone : MonoBehaviour {
 	public EnnnemyPatrolUpgraded PatrolFour;	
 	public EnnnemyPatrolUpgraded PatrolFive;
 	public EnnnemyPatrolUpgraded PatrolSix;
-	public EnnnemyPatrolUpgraded PatrolSeven;
-	public EnnnemyPatrolUpgraded PatrolEight;
+
 	GameObject Playa;
 	PlatformerCharacter2D pplatformscript;
 
@@ -347,94 +341,18 @@ public class CheckVisinCone : MonoBehaviour {
 					AlerEnnemy [5] = false;
 					SuspiciousEnnemy[5]=false;
 				}
-				if(EnnemyInScene[6] != null)
+
+			
+
+
+				if (AlerEnnemy [0] == false && AlerEnnemy [1] == false && AlerEnnemy [2] == false && AlerEnnemy [3] == false && AlerEnnemy [4] == false && AlerEnnemy [5] == false) 
 				{
-					if (PatrolSeven != null)
-					{
-						if (PatrolSeven.Alert == true)
-							AlerEnnemy [6] = true;
-						else
-							AlerEnnemy [6] = false;
-
-						if (PatrolSeven.Suspicious == true)
-							SuspiciousEnnemy [6] = true;
-						else
-							SuspiciousEnnemy [6] = false;
-
-					}
-					else
-					{
-						AlerEnnemy [6] = false;
-						SuspiciousEnnemy[6]=false;
-
-					}
-
-					EnnmyRaySeven  = Physics2D.Linecast (transform.position, EnnemyInScene [6].position,LayerMaskOne);
-					if (EnnmyRaySeven.collider != null) {
-
-						if (EnnmyRaySeven.collider.tag == "bloc")
-							CanSeeSeven = false;
-						else
-							CanSeeSeven = true;
-						if (CanSeeSeven == true || MarkSeven.isMarked==true) {
-							if (PatrolSeven != null)
-								ConvisibleSeven.HisSight.GetComponent<MeshRenderer> ().enabled = true;
-						}
-						else
-						{
-							if (PatrolSeven != null)
-								ConvisibleSeven.HisSight.GetComponent<MeshRenderer> ().enabled = false;
-						}
-						//	}
-					}
-				}
-				else
-				{
-					AlerEnnemy [6] = false;
-					SuspiciousEnnemy[6]=false;
-				}
-
-				if (EnnemyInScene [7] != null) {
-					if (PatrolSeven != null) {
-						if (PatrolEight.Alert == true)
-							AlerEnnemy [7] = true;
-						else
-							AlerEnnemy [7] = false;
-
-						if (PatrolEight.Suspicious == true)
-							SuspiciousEnnemy [7] = true;
-						else
-							SuspiciousEnnemy [7] = false;
+		if(AlertHavePlayer==false)
+		{
+			AkSoundEngine.PostEvent ("PC_Rune_Ombre_Select",gameObject);
 
 
-					} else {
-						AlerEnnemy [7] = false;
-						SuspiciousEnnemy [7] = false;
-					}
-					EnnmyRayEight = Physics2D.Linecast (transform.position, EnnemyInScene [7].position, LayerMaskOne);
-					if (EnnmyRayEight.collider != null) {
-
-						if (EnnmyRayEight.collider.tag == "bloc")
-							CanSeeEight = false;
-						else
-							CanSeeEight = true;
-						if (CanSeeEight == true) {
-							if (PatrolEight != null)
-								ConvisibleEight.HisSight.GetComponent<MeshRenderer> ().enabled = true;
-						} else {
-							if (PatrolEight != null)
-								ConvisibleEight.HisSight.GetComponent<MeshRenderer> ().enabled = false;
-						}
-						//	}
-					}
-				} else {
-					AlerEnnemy [7] = false;
-					SuspiciousEnnemy [7] = false;
-				}
-
-
-				if (AlerEnnemy [0] == false && AlerEnnemy [1] == false && AlerEnnemy [2] == false && AlerEnnemy [3] == false && AlerEnnemy [4] == false && AlerEnnemy [5] == false && AlerEnnemy [6] == false && AlerEnnemy [7] == false) 
-				{
+		}
 					pplatformscript.canhideThree = true;
 					AlertFeedback.SetActive (false);
 				}
@@ -444,7 +362,7 @@ public class CheckVisinCone : MonoBehaviour {
 					AlertFeedback.SetActive (true);
 				}
 
-				if (SuspiciousEnnemy [0] == false && SuspiciousEnnemy [1] == false && SuspiciousEnnemy [2] == false && SuspiciousEnnemy [3] == false && SuspiciousEnnemy [4] == false && SuspiciousEnnemy [5] == false && SuspiciousEnnemy [6] == false && SuspiciousEnnemy [7] == false) {
+				if (SuspiciousEnnemy [0] == false && SuspiciousEnnemy [1] == false && SuspiciousEnnemy [2] == false && SuspiciousEnnemy [3] == false && SuspiciousEnnemy [4] == false && SuspiciousEnnemy [5] == false) {
 					SuspiciousFeedback.SetActive (false);
 				} else {
 					SuspiciousFeedback.SetActive (true);
