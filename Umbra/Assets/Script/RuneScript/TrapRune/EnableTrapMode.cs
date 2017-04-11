@@ -148,6 +148,8 @@ public class EnableTrapMode : MonoBehaviour {
 	}
 	public void EnabledTrapMode()
 	{
+		AkSoundEngine.PostEvent ("PC_Rune_Trap_Equip", gameObject);
+
 		Time.timeScale = 0.1f;
 		Cursor.visible = true;
 		trapcam.SetActive (true);

@@ -93,7 +93,7 @@ using UnityEngine.SceneManagement;
 		//transform.position = TeleportPointDeath.position;
         //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 
-        GetComponent<Animator>().SetBool("Mort", true);
+		m_Anim.SetBool("Mort", true);
 		//Play death once
 		//GetComponent<Animator>().animation["UmbraMort"].wrapMode = WrapMode.Once;
 		//GetComponent<Animator>().animation.Play("UmbraMort");
@@ -151,7 +151,7 @@ using UnityEngine.SceneManagement;
 		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
 		GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 15);
-		GetComponent<Animator>().SetBool ("Climb", false);
+		m_Anim.SetBool ("Climb", false);
 		ClimbTrue = false;
 
 	ReturnToNormal ();
@@ -232,22 +232,22 @@ using UnityEngine.SceneManagement;
 				GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
 				if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space) == false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder> ().MaxHauteur.position.y) {
 					transform.Translate (Vector2.up * 2 * Time.deltaTime);
-					GetComponent<Animator> ().SetBool ("GrimpeBouge", true);
+					m_Anim.SetBool ("GrimpeBouge", true);
 				}
 				else if (Input.GetKey (KeyCode.S) && transform.position.y > ActualLadder.GetComponent<maxHauteurLadder> ().MinHauteur.position.y) {
 					transform.Translate (Vector2.down * 2 * Time.deltaTime);
-					GetComponent<Animator> ().SetBool ("GrimpeBouge", true);
+					m_Anim.SetBool ("GrimpeBouge", true);
 				}
 				else if (Input.GetKey (KeyCode.Space) && canJump == true) {
 					canJump = false;
 					JumpFromLader ();
-					GetComponent<Animator>().SetBool ("GrimpeBouge", false);
+					m_Anim.SetBool ("GrimpeBouge", false);
 				}
 				else {
-					GetComponent<Animator>().SetBool ("GrimpeBouge", false);
+					m_Anim.SetBool ("GrimpeBouge", false);
 				}
 
-				GetComponent<Animator>().SetBool ("Climb", true);
+				m_Anim.SetBool ("Climb", true);
 
 				if (Input.GetKey (KeyCode.E))
 					ReturnToNormal ();
@@ -256,7 +256,7 @@ using UnityEngine.SceneManagement;
 			{
 					m_JumpForce = 650;
 					m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-				GetComponent<Animator>().SetBool ("Climb", false);
+				m_Anim.SetBool ("Climb", false);
 
 			}
 		}

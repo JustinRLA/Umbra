@@ -41,7 +41,7 @@ public class LureScript : MonoBehaviour {
 
 	public void StartLure () {
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
-
+		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Use", gameObject);
 		myRuneManagerScript.RuneActivated = true;
 		ThePlayer = GameObject.Find("2DCharacter(Clone)");
 		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = true;

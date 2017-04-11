@@ -235,6 +235,7 @@ public class LineRendererTest : MonoBehaviour {
 
 	IEnumerator StopGoThrought()
 	{
+		AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Use", gameObject);
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
 		CamGrap.SetActive (false);

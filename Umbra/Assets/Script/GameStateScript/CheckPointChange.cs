@@ -41,6 +41,37 @@ public class CheckPointChange : MonoBehaviour {
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber+1].SetActive (true);
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber-1].SetActive (true);
 
+			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber].SetActive (true);
+			if(saveNumber>1)
+				initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-2].SetActive (false);
+
+			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber+1].SetActive (true);
+			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-1].SetActive (true);
+			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber].SetActive (true);
+			if(saveNumber>1)
+				initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-2].SetActive (false);
+
+			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber+1].SetActive (true);
+			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-1].SetActive (true);
+			if(initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber-1]!=null)
+			initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber-1].SetActive(false);
+			if(initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber]!=null)
+			initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber].SetActive(true);
+
+			if(initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber-1]!=null)
+				initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber-1].SetActive(false);
+			if(initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber]!=null)
+			initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber].SetActive(true);
+
+			if(initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber-1]!=null)
+				initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber-1].SetActive(false);
+			if(initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber]!=null)
+			initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber].SetActive(true);
+
+			if(initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber-1]!=null)
+				initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber-1].SetActive(false);
+			if(initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber]!=null)
+			initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber].SetActive(true);
 
 		}
 

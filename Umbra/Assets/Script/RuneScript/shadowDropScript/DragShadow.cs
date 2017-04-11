@@ -35,7 +35,7 @@ public class DragShadow : MonoBehaviour {
 	void OnMouseDown()
 	{
 		mainCamMy = GameObject.Find ("Main Camera");
-
+		AkSoundEngine.PostEvent ("PC_Rune_Ombre_Use", gameObject);
 		dragging = false;
 		//GetComponent<dragScript> ().enabled = false;
 		//Destroy(GameObject.Find("OldCube"));
