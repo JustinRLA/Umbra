@@ -401,13 +401,6 @@
 							<ChildrenList>
 								<Event Name="PC_Rune_Leurre_Filter" ID="{77647A6F-B783-4D1B-8DD8-2FFA46999B51}">
 									<ChildrenList>
-										<Action Name="Play" ID="{25247472-D3C2-4CB8-AD75-27EABE037E44}" ShortID="102191149" Type="Play" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{1B50060B-E65E-4D28-B919-297660C8985B}" Global="false">
-													<ObjectRef Name="PC_Rune_Leurre_Filter" ID="{DB7E19E1-360C-4D8D-B837-69EF37AE412D}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-												</Element>
-											</ElementList>
-										</Action>
 										<Action Name="Set Game Parameter" ID="{8A0F1E0C-364D-4247-8FC2-01100DFC4FB1}" ShortID="128457974" Type="SetGameParameter" Scope="One" Global="false">
 											<PropertyList>
 												<Property Name="GameParameterValue" Type="Real64" Value="100"/>
