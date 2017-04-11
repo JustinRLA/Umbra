@@ -68,13 +68,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="PC_Action_Kill" ID="{E55744AB-311E-4121-A9F0-CB568763D604}" ShortID="598015897">
+												<AudioFileSource Name="PC_Action_Kill" ID="{CE478965-4BB3-4E89-87FF-474E80B9BA78}" ShortID="581344660">
 													<Language>SFX</Language>
-													<AudioFile>Player_Action_Kill.wav</AudioFile>
+													<AudioFile>PC_Action_Kill.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="PC_Action_Kill" ID="{E55744AB-311E-4121-A9F0-CB568763D604}" Platform="Linked"/>
+												<ActiveSource Name="PC_Action_Kill" ID="{CE478965-4BB3-4E89-87FF-474E80B9BA78}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<RandomSequenceContainer Name="PC_Action_Respawn" ID="{FCA98856-8BD2-4662-B709-FB25D85830B3}" ShortID="469261717">
@@ -98,6 +98,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{6BBD9601-596A-4624-AF8A-31C846AE6283}" ShortID="595919956" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-33"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -137,13 +140,6 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="PC_Foot_Jump" ID="{40DD2546-F0E5-4E6A-B405-43C158BAEFAC}" ShortID="254017946" Type="SoundFX">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-13</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -172,7 +168,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="PC_Foot_Run_01" ID="{DFFDC2A9-14E3-4122-BCEB-E020B5BFCC57}" ShortID="304048926" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_01" ID="{C16D7CFB-5FE1-452C-944F-FDAC99AF9FB9}" ShortID="767924394" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -182,16 +178,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_01" ID="{AA60E1FE-71AE-42C8-BD71-32682497F3A4}" ShortID="4240408">
+														<AudioFileSource Name="PC_Foot_Run_01" ID="{D0842FA8-9397-431B-8258-10A78485C10D}" ShortID="1021636990">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_01.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_01.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_01" ID="{AA60E1FE-71AE-42C8-BD71-32682497F3A4}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_01" ID="{D0842FA8-9397-431B-8258-10A78485C10D}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_02" ID="{6FC4B4A8-7C45-4E7D-98E6-E970BEE13306}" ShortID="830696684" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_02" ID="{635B773C-CFF4-4F8F-9EFB-2BC31B116F4C}" ShortID="110606506" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -201,16 +197,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_02" ID="{A166EE90-0A9E-4625-A086-8E06CA9B286E}" ShortID="624713926">
+														<AudioFileSource Name="PC_Foot_Run_02" ID="{2121216F-0EFE-4FE9-93A3-18A4783ECEF0}" ShortID="76754816">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_02.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_02.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_02" ID="{A166EE90-0A9E-4625-A086-8E06CA9B286E}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_02" ID="{2121216F-0EFE-4FE9-93A3-18A4783ECEF0}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_03" ID="{51CF204F-7645-4E4E-8E00-2FDEDA814C48}" ShortID="966000133" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_03" ID="{4A37683E-BA11-4E52-A5A1-C863FDB7FD0B}" ShortID="98942811" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -220,16 +216,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_03" ID="{B136B54A-D507-4923-B58C-20D2D99B60AE}" ShortID="1003474458">
+														<AudioFileSource Name="PC_Foot_Run_03" ID="{52DF4DEB-59C0-4096-91D6-E97A9DDABC97}" ShortID="894411394">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_03.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_03.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_03" ID="{B136B54A-D507-4923-B58C-20D2D99B60AE}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_03" ID="{52DF4DEB-59C0-4096-91D6-E97A9DDABC97}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_04" ID="{4D938D4B-ECA4-4B1E-96F7-59AAF6FEC9D9}" ShortID="317086669" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_04" ID="{F5D7CD6D-BCDA-4620-8B60-666414837C5E}" ShortID="600765961" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -239,16 +235,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_04" ID="{0DD6D238-FC64-4813-8A73-11AEDD020AD5}" ShortID="266054275">
+														<AudioFileSource Name="PC_Foot_Run_04" ID="{53B90D3D-47A7-4F2D-B815-FB85BA8E1F79}" ShortID="468229885">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_04.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_04.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_04" ID="{0DD6D238-FC64-4813-8A73-11AEDD020AD5}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_04" ID="{53B90D3D-47A7-4F2D-B815-FB85BA8E1F79}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_05" ID="{333D3A91-9600-4522-B5A5-DD1D7D1FD3C1}" ShortID="831802896" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_05" ID="{8F5FAC61-D113-49C5-801A-BB212725055E}" ShortID="368509932" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -258,16 +254,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_05" ID="{55F1B6DB-D148-4BB5-B141-3F5F5D7CEAEE}" ShortID="181858383">
+														<AudioFileSource Name="PC_Foot_Run_05" ID="{A8F6EAEE-7B69-44B3-8D32-D1CF4E8B3B58}" ShortID="62672227">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_05.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_05.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_05" ID="{55F1B6DB-D148-4BB5-B141-3F5F5D7CEAEE}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_05" ID="{A8F6EAEE-7B69-44B3-8D32-D1CF4E8B3B58}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_06" ID="{B9A601CC-743B-4267-B812-705C24AFEFDA}" ShortID="16891209" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_06" ID="{1381A9F2-86E0-44B6-8F8E-B66743946BA5}" ShortID="962605270" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -277,16 +273,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_06" ID="{82B96131-CC72-42A7-BB63-03FF3664BAEF}" ShortID="564970914">
+														<AudioFileSource Name="PC_Foot_Run_06" ID="{868239C0-6E96-48B0-B870-BE27EA09D775}" ShortID="924241659">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_06.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_06.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_06" ID="{82B96131-CC72-42A7-BB63-03FF3664BAEF}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_06" ID="{868239C0-6E96-48B0-B870-BE27EA09D775}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_07" ID="{36872374-BE8C-483B-A1B7-6A2AA5DC0988}" ShortID="535221508" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_07" ID="{67EE40F0-E4D1-431E-9F28-851F0FBBC7DA}" ShortID="456021963" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -296,16 +292,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_07" ID="{805872D9-1094-4BE1-AAA4-CB68BD5C4EE5}" ShortID="181020132">
+														<AudioFileSource Name="PC_Foot_Run_07" ID="{4340A484-E336-402C-B90C-0D894C98568E}" ShortID="977990538">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_07.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_07.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_07" ID="{805872D9-1094-4BE1-AAA4-CB68BD5C4EE5}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_07" ID="{4340A484-E336-402C-B90C-0D894C98568E}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_08" ID="{15815374-FD50-4613-8EC7-1B58D0E11D8A}" ShortID="331507397" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_08" ID="{1A986260-D76C-45DB-9532-5DD31AA4602F}" ShortID="550591968" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -315,23 +311,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_08" ID="{8B38CA31-9319-4CE5-B7C7-A1EA4496D206}" ShortID="152268353">
+														<AudioFileSource Name="PC_Foot_Run_08" ID="{D748AAFD-91E4-47DC-91B0-DDD4791F523A}" ShortID="490238902">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_08.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_08.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_08" ID="{8B38CA31-9319-4CE5-B7C7-A1EA4496D206}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_08" ID="{D748AAFD-91E4-47DC-91B0-DDD4791F523A}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_09" ID="{B006F498-7A99-47CC-A7CE-0A14C3357E28}" ShortID="797008761" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Run_09" ID="{522E4B37-8151-4462-B0F6-7607C9CE74FD}" ShortID="869559747" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -341,23 +330,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_09" ID="{99E864A3-01EE-415D-89D6-9EA9ADD98E2A}" ShortID="795502261">
+														<AudioFileSource Name="PC_Foot_Run_09" ID="{E2CFBC7F-ADED-4C70-BCC1-1EAD291D725C}" ShortID="758512462">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_09.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_09.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_09" ID="{99E864A3-01EE-415D-89D6-9EA9ADD98E2A}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_09" ID="{E2CFBC7F-ADED-4C70-BCC1-1EAD291D725C}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_10" ID="{93AD86EF-3CAB-44AA-99E2-A3E5934B784E}" ShortID="687422326" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Run_10" ID="{D258BAD1-F2B7-4B99-B82A-5CA2988C8E6B}" ShortID="704219464" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -367,16 +349,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_10" ID="{4A88CC19-68C6-4876-B392-0CF9617D92FD}" ShortID="393942531">
+														<AudioFileSource Name="PC_Foot_Run_10" ID="{E81C329B-B096-42F8-B689-BCCD79C0EE31}" ShortID="1022851238">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_10.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_10.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_10" ID="{4A88CC19-68C6-4876-B392-0CF9617D92FD}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_10" ID="{E81C329B-B096-42F8-B689-BCCD79C0EE31}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_11" ID="{C85B9039-82ED-4140-A507-00ADCED3FD85}" ShortID="202293902" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_11" ID="{4EE69457-91D8-43DB-96F5-A1E558047C2B}" ShortID="524249692" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -386,16 +368,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_11" ID="{936E620C-DE84-4194-8EE7-C47812F04B1D}" ShortID="664905640">
+														<AudioFileSource Name="PC_Foot_Run_11" ID="{147EA1E1-D18D-43B4-A763-B346D6BCEB31}" ShortID="871855901">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_11.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_11.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_11" ID="{936E620C-DE84-4194-8EE7-C47812F04B1D}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_11" ID="{147EA1E1-D18D-43B4-A763-B346D6BCEB31}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_12" ID="{D2541609-96DB-41CD-A481-DA04D82B6F46}" ShortID="849566498" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_12" ID="{6D5864D3-BB01-4DA3-BA9D-1217EF788441}" ShortID="875836092" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -405,16 +387,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_12" ID="{55129BD6-66DD-4DD5-8D8A-DA6D9358519E}" ShortID="33928990">
+														<AudioFileSource Name="PC_Foot_Run_12" ID="{15BA1951-7F01-4FC3-88AD-7666E05AC7CE}" ShortID="842840745">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_12.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_12.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_12" ID="{55129BD6-66DD-4DD5-8D8A-DA6D9358519E}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_12" ID="{15BA1951-7F01-4FC3-88AD-7666E05AC7CE}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_13" ID="{BD867E17-6CF3-4913-98CE-57E4C2E031DC}" ShortID="831540750" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_13" ID="{3449A1E6-A2CA-4A0A-AD4A-C3F6D40D3EEE}" ShortID="220091648" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -424,16 +406,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_13" ID="{513FC2EC-D4CE-4A63-A88B-668FEE56F67F}" ShortID="1005565833">
+														<AudioFileSource Name="PC_Foot_Run_13" ID="{383C33E6-AF74-48DD-88AF-7E26B2366300}" ShortID="158080461">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_13.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_13.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_13" ID="{513FC2EC-D4CE-4A63-A88B-668FEE56F67F}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_13" ID="{383C33E6-AF74-48DD-88AF-7E26B2366300}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_14" ID="{F1123EFB-30B9-4AD1-B034-445A1D685952}" ShortID="710109706" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_14" ID="{AB70BB9D-4E50-4BDA-9FA9-33B3E16AE287}" ShortID="806179009" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -443,16 +425,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_14" ID="{F7EF66E7-5DEA-47B8-A6A4-B183755943C5}" ShortID="947589312">
+														<AudioFileSource Name="PC_Foot_Run_14" ID="{C8F5AB4B-64B5-4200-ABEB-9FBB354228DB}" ShortID="48037635">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_14.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_14.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_14" ID="{F7EF66E7-5DEA-47B8-A6A4-B183755943C5}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_14" ID="{C8F5AB4B-64B5-4200-ABEB-9FBB354228DB}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_15" ID="{672F0BE1-94B1-4EE1-8791-BB2F96F491D6}" ShortID="901556722" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_15" ID="{00D968AE-AAD7-4D63-B980-15E47AF3D6A8}" ShortID="981179612" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -462,16 +444,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_15" ID="{42D9FB58-B2A6-4F6C-A0D0-FA93039A9CF5}" ShortID="550849249">
+														<AudioFileSource Name="PC_Foot_Run_15" ID="{029F3683-11E3-4C17-8EBB-ACDFD6ABF55B}" ShortID="530974734">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_15.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_15.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_15" ID="{42D9FB58-B2A6-4F6C-A0D0-FA93039A9CF5}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_15" ID="{029F3683-11E3-4C17-8EBB-ACDFD6ABF55B}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_16" ID="{9B346129-C554-47FA-90E0-5C5910F6A2D7}" ShortID="167984158" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_16" ID="{11049034-D7B1-40DF-9D3D-44F178FEB450}" ShortID="403390446" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -481,16 +463,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_16" ID="{0BE7A59F-8649-4ABB-9842-6AA4FDD972BE}" ShortID="567454603">
+														<AudioFileSource Name="PC_Foot_Run_16" ID="{5A0587FE-F43C-493F-B700-94BED8A8A302}" ShortID="743855108">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_16.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_16.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_16" ID="{0BE7A59F-8649-4ABB-9842-6AA4FDD972BE}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_16" ID="{5A0587FE-F43C-493F-B700-94BED8A8A302}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_17" ID="{A43F3653-9B0C-4214-9742-16C69B3CD073}" ShortID="404487137" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_17" ID="{6084B7F9-B131-4E5C-9AE2-68DCDF4EAEE1}" ShortID="396714480" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -500,16 +482,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_17" ID="{B1F82074-5082-4960-84A4-41031D941A1C}" ShortID="623818758">
+														<AudioFileSource Name="PC_Foot_Run_17" ID="{9DF80CA4-69F6-4722-A818-5B1201496A97}" ShortID="120637523">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_17.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_17.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_17" ID="{B1F82074-5082-4960-84A4-41031D941A1C}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_17" ID="{9DF80CA4-69F6-4722-A818-5B1201496A97}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_18" ID="{0FD9EC23-75C4-4D74-A2D7-BEC0E68C4C69}" ShortID="310552852" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_18" ID="{9EEDF8CE-686A-41E3-B565-0E00CE77336F}" ShortID="960007005" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -519,16 +501,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_18" ID="{A41FFF46-B019-4A1B-A8E5-8C1128D81C04}" ShortID="907397557">
+														<AudioFileSource Name="PC_Foot_Run_18" ID="{C3F42349-5888-42DC-ACD4-CB1ADCB239D9}" ShortID="594222128">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_18.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_18.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_18" ID="{A41FFF46-B019-4A1B-A8E5-8C1128D81C04}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_18" ID="{C3F42349-5888-42DC-ACD4-CB1ADCB239D9}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_19" ID="{E5B550B9-2670-4B9C-AFD9-95E981197AD3}" ShortID="235919233" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_19" ID="{6D2E1CCD-007A-4738-9E9E-3ED41D1E8BB6}" ShortID="572465223" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -538,16 +520,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_19" ID="{60F87607-FCC9-44A3-9957-CFF56FC95527}" ShortID="1059148640">
+														<AudioFileSource Name="PC_Foot_Run_19" ID="{FBFD4850-A968-42C4-B8CC-40566C2EAC99}" ShortID="936663382">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_19.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_19.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_19" ID="{60F87607-FCC9-44A3-9957-CFF56FC95527}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_19" ID="{FBFD4850-A968-42C4-B8CC-40566C2EAC99}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_20" ID="{C3E517A3-DE79-4967-859D-69057D222669}" ShortID="228678910" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_20" ID="{7BBF5AED-D34B-46BD-9341-DC31444FF7AC}" ShortID="592592950" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -557,16 +539,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_20" ID="{CB857439-8EA6-43A8-9DC8-7C4AD9F8A86B}" ShortID="410529118">
+														<AudioFileSource Name="PC_Foot_Run_20" ID="{16285DAA-1E08-4C45-8801-4C3652B3BB39}" ShortID="887571879">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_20.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_20.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_20" ID="{CB857439-8EA6-43A8-9DC8-7C4AD9F8A86B}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_20" ID="{16285DAA-1E08-4C45-8801-4C3652B3BB39}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_21" ID="{E7197D5F-25AB-467C-9998-BF0A9F0DFD60}" ShortID="1073320958" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_21" ID="{808D6CC7-EB23-48CD-89DC-A894AB34C66B}" ShortID="33947612" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -576,16 +558,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_21" ID="{F90356BD-4E04-46A5-AF29-D53ED7D152C7}" ShortID="703969500">
+														<AudioFileSource Name="PC_Foot_Run_21" ID="{B50E89C8-F254-43F4-80E7-96EDD9F15ED5}" ShortID="670559798">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_21.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_21.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_21" ID="{F90356BD-4E04-46A5-AF29-D53ED7D152C7}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_21" ID="{B50E89C8-F254-43F4-80E7-96EDD9F15ED5}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_22" ID="{1243990C-085C-4E9C-A98F-4E56122A12B1}" ShortID="103500878" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_22" ID="{DA24A7BC-8E55-492E-B815-B73A3603C1C5}" ShortID="957228098" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -595,23 +577,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_22" ID="{FE666594-EDA4-4F39-A9F2-DD34AB915382}" ShortID="163656671">
+														<AudioFileSource Name="PC_Foot_Run_22" ID="{5D58D01B-9C60-4BD0-B700-655DA8B2AEA4}" ShortID="1033123932">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_22.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_22.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_22" ID="{FE666594-EDA4-4F39-A9F2-DD34AB915382}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_22" ID="{5D58D01B-9C60-4BD0-B700-655DA8B2AEA4}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_23" ID="{10E014B1-DC0C-4464-9499-F99CF5C087CF}" ShortID="639478327" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Run_23" ID="{70511321-590D-48B7-B4F5-D682070DC8E7}" ShortID="128220453" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -621,16 +596,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_23" ID="{34F5EFB0-2019-4111-9757-D9ABE35874CB}" ShortID="782490891">
+														<AudioFileSource Name="PC_Foot_Run_23" ID="{9AEFEC34-9403-4EF5-B913-A795D1202376}" ShortID="964720064">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_23.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_23.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_23" ID="{34F5EFB0-2019-4111-9757-D9ABE35874CB}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_23" ID="{9AEFEC34-9403-4EF5-B913-A795D1202376}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_24" ID="{6D2ED988-880B-42BE-BC9F-F3EEA77B3516}" ShortID="38937665" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_24" ID="{DE8915F6-6244-4C61-ADB6-BC6634A3A985}" ShortID="1044452665" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -640,16 +615,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_24" ID="{25603A25-57A1-43B8-A90E-522799532A24}" ShortID="994809475">
+														<AudioFileSource Name="PC_Foot_Run_24" ID="{4E63DBCD-F137-40DF-BC08-22855F9AF633}" ShortID="792498545">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_24.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_24.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_24" ID="{25603A25-57A1-43B8-A90E-522799532A24}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_24" ID="{4E63DBCD-F137-40DF-BC08-22855F9AF633}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_25" ID="{296EBE41-391B-4690-B0E8-EB254F813B16}" ShortID="402101795" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_25" ID="{3006EE7D-321C-4F4D-AFA8-34609AD21EC3}" ShortID="627433026" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -659,13 +634,13 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_25" ID="{81DE3AAF-40C1-4356-8C53-D8B5754FA156}" ShortID="324254457">
+														<AudioFileSource Name="PC_Foot_Run_25" ID="{B2205C93-AEF4-45AE-809B-FF6D85E124FE}" ShortID="433195464">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_25.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_25.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_25" ID="{81DE3AAF-40C1-4356-8C53-D8B5754FA156}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_25" ID="{B2205C93-AEF4-45AE-809B-FF6D85E124FE}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -685,11 +660,6 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-8</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -700,14 +670,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="PC_Foot_Climb_01" ID="{C6344754-EF4D-40C8-A725-B846E196656A}" ShortID="192651669" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_01" ID="{DB398648-32D0-4E83-9B45-6F9D5EA9D1E6}" ShortID="309502762" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -717,23 +680,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_01" ID="{C9E0BEAD-9D13-4F56-8C89-6B104484E9AF}" ShortID="794925173">
+														<AudioFileSource Name="PC_Foot_Climb_01" ID="{BD82C7EB-73C8-4243-93EE-AA86A17E63E8}" ShortID="644380282">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_01.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_01.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_01" ID="{C9E0BEAD-9D13-4F56-8C89-6B104484E9AF}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_01" ID="{BD82C7EB-73C8-4243-93EE-AA86A17E63E8}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_03" ID="{6996D296-ADEB-4F21-B245-484702CB973A}" ShortID="292765957" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_02" ID="{5045DC90-5748-42E3-9243-D6693C6D0158}" ShortID="386805458" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -743,23 +699,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_03" ID="{B2546F87-2551-4367-AE45-1FE1081A7190}" ShortID="131562243">
+														<AudioFileSource Name="PC_Foot_Climb_02" ID="{446FFC12-DF36-4A28-9B83-44F23BD49DB0}" ShortID="215179909">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_03.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_02.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_03" ID="{B2546F87-2551-4367-AE45-1FE1081A7190}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_02" ID="{446FFC12-DF36-4A28-9B83-44F23BD49DB0}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_04" ID="{40C41941-6BD7-4DC1-AD03-00E044D15362}" ShortID="305903960" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_03" ID="{940F2BDA-6F42-447E-9ECA-FF6EB21037C1}" ShortID="354853840" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -769,16 +718,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_04" ID="{508BB118-FEA1-4425-8722-20B095EE0E21}" ShortID="433948522">
+														<AudioFileSource Name="PC_Foot_Climb_03" ID="{6E4DA3D3-0614-437F-858E-87012B13A724}" ShortID="355961641">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_04.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_03.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_04" ID="{508BB118-FEA1-4425-8722-20B095EE0E21}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_03" ID="{6E4DA3D3-0614-437F-858E-87012B13A724}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_05" ID="{56FAB0E3-6971-47B5-9162-4E49A29EA4B2}" ShortID="489776598" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_04" ID="{8BA4C7FC-8592-4926-9938-1F82FC6D62B7}" ShortID="899963907" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -788,23 +737,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_05" ID="{F8EF5048-4627-467D-8E85-153393EB77B6}" ShortID="10858665">
+														<AudioFileSource Name="PC_Foot_Climb_04" ID="{00AD6D6A-DC83-403C-85C5-CE6852D7DD93}" ShortID="585143226">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_05.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_04.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_05" ID="{F8EF5048-4627-467D-8E85-153393EB77B6}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_04" ID="{00AD6D6A-DC83-403C-85C5-CE6852D7DD93}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_06" ID="{554B746D-FE9A-4122-860F-D101F898471B}" ShortID="681168341" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_05" ID="{6B066658-6942-40E5-9CB5-6877213A0C25}" ShortID="595370420" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -814,23 +756,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_06" ID="{3F2A8326-4AD4-4E83-92BE-B985755BEBAA}" ShortID="356526589">
+														<AudioFileSource Name="PC_Foot_Climb_05" ID="{24A7E4B1-26A7-413B-AC74-66CED8E335F4}" ShortID="401738738">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_06.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_05.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_06" ID="{3F2A8326-4AD4-4E83-92BE-B985755BEBAA}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_05" ID="{24A7E4B1-26A7-413B-AC74-66CED8E335F4}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_07" ID="{FF7F36B7-7AE2-4797-9343-90A340F5110A}" ShortID="240015330" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_06" ID="{CA718C55-DAC4-41AD-BE8D-4251800C063A}" ShortID="366433719" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -840,16 +775,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_07" ID="{D5467307-1611-4E4B-A5D3-CA3EF35D116D}" ShortID="975221627">
+														<AudioFileSource Name="PC_Foot_Climb_06" ID="{C32B0F87-C69C-427E-9B7D-3710998E08D7}" ShortID="580344731">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_07.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_06.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_07" ID="{D5467307-1611-4E4B-A5D3-CA3EF35D116D}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_06" ID="{C32B0F87-C69C-427E-9B7D-3710998E08D7}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_08" ID="{C5A94F81-371C-4F6E-82D7-8CABB393BB9B}" ShortID="680652917" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_07" ID="{C5685807-0DC5-4AE1-8997-1A8C187433B6}" ShortID="565413753" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -859,16 +794,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_08" ID="{41EE797E-B4B2-42F1-9687-3F5CE0128535}" ShortID="758753492">
+														<AudioFileSource Name="PC_Foot_Climb_07" ID="{08D2A20F-A43A-4E43-B7E8-8D9A287A8C4D}" ShortID="544265276">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_08.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_07.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_08" ID="{41EE797E-B4B2-42F1-9687-3F5CE0128535}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_07" ID="{08D2A20F-A43A-4E43-B7E8-8D9A287A8C4D}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_09" ID="{497328D4-2A66-49D9-9379-C44B4DD1D8FD}" ShortID="508516930" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_08" ID="{048D5FD9-C4C4-4CF4-95F4-46CE9DCFD550}" ShortID="371758547" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -878,16 +813,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_09" ID="{75CABA42-4AB7-429A-9CB3-8EDDAFCC7CA9}" ShortID="705875494">
+														<AudioFileSource Name="PC_Foot_Climb_08" ID="{789AA8BD-CEC9-4DCD-A670-E92103829FF9}" ShortID="939131074">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_09.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_08.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_09" ID="{75CABA42-4AB7-429A-9CB3-8EDDAFCC7CA9}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_08" ID="{789AA8BD-CEC9-4DCD-A670-E92103829FF9}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_10" ID="{9DDA6610-A978-41D9-A2AE-64FE9EEA4FC3}" ShortID="1055502965" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_09" ID="{8B2C7D8B-AAD6-4371-B08E-45B1A414E229}" ShortID="843266062" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -897,16 +832,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_10" ID="{299E5DD6-CF25-4B70-96D4-EB194DFF5EAF}" ShortID="650912931">
+														<AudioFileSource Name="PC_Foot_Climb_09" ID="{C71F21CB-99DF-40BC-A18D-E57DA0626807}" ShortID="948978557">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_10.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_09.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_10" ID="{299E5DD6-CF25-4B70-96D4-EB194DFF5EAF}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_09" ID="{C71F21CB-99DF-40BC-A18D-E57DA0626807}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_11" ID="{58DD4EA7-6068-41A6-85B2-6E6FEBFAD4BA}" ShortID="1047070490" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_10" ID="{B8B05815-C927-46CF-949A-7B929DAFE47D}" ShortID="1011835553" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -916,32 +851,32 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_11" ID="{8BDA9C32-A3E4-4338-93EB-71A4349DA0B0}" ShortID="70610093">
+														<AudioFileSource Name="PC_Foot_Climb_10" ID="{D4C3E67C-1824-4D49-8A77-51EF364ECC85}" ShortID="239502760">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_11.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_10.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_11" ID="{8BDA9C32-A3E4-4338-93EB-71A4349DA0B0}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_10" ID="{D4C3E67C-1824-4D49-8A77-51EF364ECC85}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_02" ID="{DE87F299-9828-4D5C-A901-C42015C43423}" ShortID="429238606" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_11" ID="{FCB36125-7673-4A80-ACFC-FF6595AAD66A}" ShortID="982966375" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{674719A5-FF3D-49E6-B3BC-537EAED38975}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_02" ID="{995156D5-D2D7-487C-A92C-44E613367F9F}" ShortID="902076861">
+														<AudioFileSource Name="PC_Foot_Climb_11" ID="{3FF1856D-CB89-48ED-95C2-23ADC265420A}" ShortID="797803312">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_02.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_11.wav</AudioFile>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_02" ID="{995156D5-D2D7-487C-A92C-44E613367F9F}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_11" ID="{3FF1856D-CB89-48ED-95C2-23ADC265420A}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -957,6 +892,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{FC0126EB-2F3B-4F51-9E91-7F8781888DC8}" ShortID="869763770" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1043,12 +981,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Wwise Sine" ID="{A7C666EC-7B9D-4AE3-B6BC-676BEA6F0902}" ShortID="934833013" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+												<AudioFileSource Name="PC_Rune_Accrochage_Use" ID="{3AC00C8C-0B48-4F97-93E1-CE85CFA56D59}" ShortID="831015991">
 													<Language>SFX</Language>
-												</SourcePlugin>
+													<AudioFile>PC_Rune_Accrochage_Use.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Wwise Sine" ID="{A7C666EC-7B9D-4AE3-B6BC-676BEA6F0902}" Platform="Linked"/>
+												<ActiveSource Name="PC_Rune_Accrochage_Use" ID="{3AC00C8C-0B48-4F97-93E1-CE85CFA56D59}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Accrochage_Equip" ID="{3FA770FC-8504-4DBF-AB58-02016490AEA0}" ShortID="112035943" Type="SoundFX">
@@ -1062,6 +1001,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{3BF766A1-4076-458A-985B-B01A13C641A2}" ShortID="858899636" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1080,6 +1022,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{686A1D79-7722-41F8-BFAD-A0FC0FF78673}" ShortID="41642499" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1098,6 +1043,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{B44F521B-F092-4F0D-9564-5915E94647B8}" ShortID="1010210979" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1116,6 +1064,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{74927EB7-F86C-48ED-9403-6F7DE4408A8A}" ShortID="601272033" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1133,12 +1084,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Wwise Sine" ID="{4C5249BA-B7EA-41CD-985C-A4DA6D5FE179}" ShortID="923786126" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+												<AudioFileSource Name="PC_Rune_Leurre_Use" ID="{F2AFAAE5-668A-4561-9143-AADE54844B15}" ShortID="616094980">
 													<Language>SFX</Language>
-												</SourcePlugin>
+													<AudioFile>PC_Rune_Leurre_Use.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Wwise Sine" ID="{4C5249BA-B7EA-41CD-985C-A4DA6D5FE179}" Platform="Linked"/>
+												<ActiveSource Name="PC_Rune_Leurre_Use" ID="{F2AFAAE5-668A-4561-9143-AADE54844B15}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Leurre_Filter" ID="{DB7E19E1-360C-4D8D-B837-69EF37AE412D}" ShortID="824743336" Type="SoundFX">
@@ -1152,6 +1104,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{CAF52620-90D7-4831-B1E5-644AA2C6CDB7}" ShortID="671640607" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1170,6 +1125,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{5FDBC43E-257A-4CC5-922D-3FFABFA82920}" ShortID="582690596" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1188,6 +1146,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{88B2BC7C-EDC1-49D6-B9A7-E5953284D600}" ShortID="545377226" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1206,6 +1167,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{EFBA921A-F6A1-461E-B619-761AD2FFEC6E}" ShortID="835219410" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1224,6 +1188,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{33271E22-9536-4B2A-AECC-FCA326EBFE54}" ShortID="45844468" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1242,6 +1209,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{2E266BCA-B9B0-460A-8D23-A3A515A84253}" ShortID="710206262" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1260,6 +1230,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{22CE34E0-FA9F-47D0-9E61-637EC5363022}" ShortID="201836181" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1278,6 +1251,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{22506C86-C4F1-4DAD-8906-E84E3E136E90}" ShortID="803787348" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1296,6 +1272,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{5F66F178-1D89-43F6-99E5-D33D5ED93990}" ShortID="866394520" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1314,6 +1293,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{7F983630-E305-4E4E-94CF-E0519E04EE40}" ShortID="1043932153" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1332,6 +1314,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{15C849A1-7701-433D-80F2-50A0936796CF}" ShortID="230866630" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -1402,7 +1387,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="PC_Foot_Run_01" ID="{12454A3C-BFE9-464F-AB0F-3080888933BD}" ShortID="62209111" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_01" ID="{DAF7243B-0B72-49EC-845A-EAD0C6BC523F}" ShortID="704490259" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1412,19 +1397,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_01" ID="{1BADB62C-F7FF-4A10-9312-B6814B2E8678}" ShortID="377513018">
+														<AudioFileSource Name="PC_Foot_Run_01" ID="{565FD934-B802-4008-81AE-62678585CD80}" ShortID="419614201">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_01.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_01.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="4240408"/>
+																<File ID="1021636990"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_01" ID="{1BADB62C-F7FF-4A10-9312-B6814B2E8678}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_01" ID="{565FD934-B802-4008-81AE-62678585CD80}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_02" ID="{F1A8B034-E9B0-451B-A3E4-27ABA35A5C5E}" ShortID="808954705" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_02" ID="{7673CF6F-813C-4749-B419-1FF465E92A59}" ShortID="157179812" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1434,19 +1419,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_02" ID="{5398D314-E1F8-488C-9AB4-F8060117629A}" ShortID="819814616">
+														<AudioFileSource Name="PC_Foot_Run_02" ID="{94C0DF1F-4269-44CF-824E-C3EBFBFA9883}" ShortID="1024506910">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_02.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_02.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="624713926"/>
+																<File ID="76754816"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_02" ID="{5398D314-E1F8-488C-9AB4-F8060117629A}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_02" ID="{94C0DF1F-4269-44CF-824E-C3EBFBFA9883}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_03" ID="{9E16B056-F216-47C4-A03A-2BD25541BCC1}" ShortID="216767" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_03" ID="{DCF233C6-B534-4DE3-848C-761412A1D511}" ShortID="749480826" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1456,19 +1441,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_03" ID="{1194CDAD-D567-4086-8B8C-D2E909B2E7AD}" ShortID="880558037">
+														<AudioFileSource Name="PC_Foot_Run_03" ID="{0EFCD883-A7DD-463C-ACA3-FDF16F7A8509}" ShortID="251136652">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_03.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_03.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="1003474458"/>
+																<File ID="894411394"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_03" ID="{1194CDAD-D567-4086-8B8C-D2E909B2E7AD}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_03" ID="{0EFCD883-A7DD-463C-ACA3-FDF16F7A8509}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_04" ID="{43FD14BD-2007-4513-A212-D8AF3018EEFF}" ShortID="275498339" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_04" ID="{BA9FBF56-5567-48CF-90CC-F83A44142328}" ShortID="1040797961" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1478,19 +1463,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_04" ID="{B6B149C5-BDF8-43D4-BEF8-A7CC9091BE13}" ShortID="32311855">
+														<AudioFileSource Name="PC_Foot_Run_04" ID="{B492C44C-EF05-4880-9ED4-60C36EF6F92E}" ShortID="57819917">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_04.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_04.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="266054275"/>
+																<File ID="468229885"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_04" ID="{B6B149C5-BDF8-43D4-BEF8-A7CC9091BE13}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_04" ID="{B492C44C-EF05-4880-9ED4-60C36EF6F92E}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_05" ID="{1E90D388-09C8-4DC5-8EA9-450CB3CDAFE8}" ShortID="994129696" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_05" ID="{337BF9FD-AE1B-4188-9599-D81A71A5249B}" ShortID="817689947" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1500,19 +1485,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_05" ID="{1455F394-6C43-429B-B458-6C6706C83CE7}" ShortID="697281276">
+														<AudioFileSource Name="PC_Foot_Run_05" ID="{B1809BEC-6A32-4643-BFC9-384761B243A1}" ShortID="605494236">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_05.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_05.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="181858383"/>
+																<File ID="62672227"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_05" ID="{1455F394-6C43-429B-B458-6C6706C83CE7}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_05" ID="{B1809BEC-6A32-4643-BFC9-384761B243A1}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_06" ID="{05F62C7D-E32F-413A-A4AB-25D02BF0769A}" ShortID="604479316" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_06" ID="{A5344E73-027D-4AFA-BA29-C6A756A0A5D2}" ShortID="373889404" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1522,19 +1507,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_06" ID="{4BD08FA3-E226-4ADE-A629-F19ABF404D5F}" ShortID="253625867">
+														<AudioFileSource Name="PC_Foot_Run_06" ID="{57E0E42F-D91F-48AF-A572-7B87B3802468}" ShortID="659562335">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_06.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_06.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="564970914"/>
+																<File ID="924241659"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_06" ID="{4BD08FA3-E226-4ADE-A629-F19ABF404D5F}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_06" ID="{57E0E42F-D91F-48AF-A572-7B87B3802468}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_07" ID="{36B4D391-D1E3-486A-8842-4E6C2ADA9761}" ShortID="254428928" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_07" ID="{2E2115D3-D645-4D66-9A1C-AA01A9020CFD}" ShortID="488384839" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1544,19 +1529,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_07" ID="{EE479871-1DD8-4BC6-858C-99EF724ED8E4}" ShortID="662680249">
+														<AudioFileSource Name="PC_Foot_Run_07" ID="{8B2A1414-BA3F-48D7-B2BF-5BCA543A94A5}" ShortID="396224810">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_07.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_07.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="181020132"/>
+																<File ID="977990538"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_07" ID="{EE479871-1DD8-4BC6-858C-99EF724ED8E4}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_07" ID="{8B2A1414-BA3F-48D7-B2BF-5BCA543A94A5}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_08" ID="{3BDFF0E9-E52E-40C7-B273-C56E3E35C756}" ShortID="648993892" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_08" ID="{BEA1C139-8A76-4894-9E39-28736F1E6100}" ShortID="545972145" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1566,26 +1551,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_08" ID="{232F9134-178C-4B8E-9671-1FC43A4BCEB0}" ShortID="720917006">
+														<AudioFileSource Name="PC_Foot_Run_08" ID="{E3C4389E-9BCA-4C73-91FB-36F7BF56D6F1}" ShortID="279930906">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_08.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_08.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="152268353"/>
+																<File ID="490238902"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_08" ID="{232F9134-178C-4B8E-9671-1FC43A4BCEB0}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_08" ID="{E3C4389E-9BCA-4C73-91FB-36F7BF56D6F1}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_09" ID="{54AE624C-A5A5-4207-84C3-F1E0231187A9}" ShortID="729928637" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Run_09" ID="{0D7C203D-41B2-4A56-91E7-034A4F6E81F9}" ShortID="479623076" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1595,26 +1573,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_09" ID="{2C180D72-175C-4D4C-B5A3-497B9D316574}" ShortID="194014105">
+														<AudioFileSource Name="PC_Foot_Run_09" ID="{0A974392-3CAB-4886-81BB-67037E666493}" ShortID="245131892">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_09.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_09.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="795502261"/>
+																<File ID="758512462"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_09" ID="{2C180D72-175C-4D4C-B5A3-497B9D316574}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_09" ID="{0A974392-3CAB-4886-81BB-67037E666493}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_10" ID="{444C0BD8-F41B-4C2D-8ED0-DF34F68F83C5}" ShortID="855965603" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Run_10" ID="{9B3B5EC1-15BE-4BF8-879B-974ADEE403D0}" ShortID="942613972" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1624,19 +1595,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_10" ID="{7B643834-1AC4-46E8-8685-4A4A8029A4B1}" ShortID="72674485">
+														<AudioFileSource Name="PC_Foot_Run_10" ID="{3031339F-55F8-4939-8D00-006AB2D6742E}" ShortID="904351654">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_10.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_10.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="393942531"/>
+																<File ID="1022851238"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_10" ID="{7B643834-1AC4-46E8-8685-4A4A8029A4B1}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_10" ID="{3031339F-55F8-4939-8D00-006AB2D6742E}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_11" ID="{C0B9445C-593E-4547-A3C9-3C175D6726B9}" ShortID="328454164" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_11" ID="{CF076EFB-C661-43C2-A77C-336D3081B0C1}" ShortID="839667942" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1646,19 +1617,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_11" ID="{2E06DFD2-280F-4EF6-A5AB-A29D4E30A121}" ShortID="404742614">
+														<AudioFileSource Name="PC_Foot_Run_11" ID="{183ABBED-5F4E-491E-8EBB-C299DEC96A2A}" ShortID="908311365">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_11.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_11.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="664905640"/>
+																<File ID="871855901"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_11" ID="{2E06DFD2-280F-4EF6-A5AB-A29D4E30A121}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_11" ID="{183ABBED-5F4E-491E-8EBB-C299DEC96A2A}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_12" ID="{436C8B58-E9A8-4F2E-8B06-4425D025F379}" ShortID="478130819" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_12" ID="{D5F793A4-DC1D-4F2F-8C58-9B7AAE3B6F5C}" ShortID="277661312" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1668,19 +1639,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_12" ID="{183F1C11-47AB-49E7-8C44-BCF0EFBFA95B}" ShortID="969831220">
+														<AudioFileSource Name="PC_Foot_Run_12" ID="{36E198CB-0399-49D9-BC27-49C99C6EA3C5}" ShortID="344104838">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_12.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_12.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="33928990"/>
+																<File ID="842840745"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_12" ID="{183F1C11-47AB-49E7-8C44-BCF0EFBFA95B}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_12" ID="{36E198CB-0399-49D9-BC27-49C99C6EA3C5}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_13" ID="{018FB107-AEA0-4B7A-9EDB-7C2928F25BFC}" ShortID="815178762" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_13" ID="{F0FE24BE-66AE-4576-985C-6D1CF0AB7164}" ShortID="291180888" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1690,19 +1661,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_13" ID="{66CB7AC0-68FD-4D6F-A7C0-43CD0C5A5473}" ShortID="734967788">
+														<AudioFileSource Name="PC_Foot_Run_13" ID="{110ADFEF-0626-42FE-BD1A-E4D593F1E1F7}" ShortID="1023300352">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_13.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_13.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="1005565833"/>
+																<File ID="158080461"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_13" ID="{66CB7AC0-68FD-4D6F-A7C0-43CD0C5A5473}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_13" ID="{110ADFEF-0626-42FE-BD1A-E4D593F1E1F7}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_14" ID="{01B61F42-8736-4FFA-B5F6-E5BE1A9B9355}" ShortID="1002988572" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_14" ID="{8E227374-81C1-45B6-9113-C3118A5E8D61}" ShortID="104647351" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1712,19 +1683,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_14" ID="{1513C338-F8F6-47C5-8AFC-810E08C348BF}" ShortID="83289411">
+														<AudioFileSource Name="PC_Foot_Run_14" ID="{9D783F0B-1B83-4282-869B-B6F78264C1B0}" ShortID="661121482">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_14.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_14.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="947589312"/>
+																<File ID="48037635"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_14" ID="{1513C338-F8F6-47C5-8AFC-810E08C348BF}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_14" ID="{9D783F0B-1B83-4282-869B-B6F78264C1B0}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_15" ID="{8A96011B-C899-4726-BF6A-E8CC9D087C60}" ShortID="800947564" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_15" ID="{BEB03C5F-B4D3-4F58-A165-88FF997F1C13}" ShortID="461277025" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1734,19 +1705,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_15" ID="{0F0880FE-F83C-4B48-8646-4C3CD42A9549}" ShortID="445824804">
+														<AudioFileSource Name="PC_Foot_Run_15" ID="{3BB3C1E1-4A19-46D5-902D-F50AC2318361}" ShortID="565289973">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_15.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_15.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="550849249"/>
+																<File ID="530974734"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_15" ID="{0F0880FE-F83C-4B48-8646-4C3CD42A9549}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_15" ID="{3BB3C1E1-4A19-46D5-902D-F50AC2318361}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_16" ID="{0F5682DD-01FD-4A19-BD9E-6F2136D3B229}" ShortID="58524908" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_16" ID="{67136E37-7499-4ECF-BA20-7EA9EEA6EF44}" ShortID="749428659" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1756,19 +1727,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_16" ID="{B16CCDF8-F49F-4922-ABEC-AF8DC0084AD6}" ShortID="145487159">
+														<AudioFileSource Name="PC_Foot_Run_16" ID="{DAE09E78-57E0-445B-972E-61C21150E63C}" ShortID="618018320">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_16.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_16.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="567454603"/>
+																<File ID="743855108"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_16" ID="{B16CCDF8-F49F-4922-ABEC-AF8DC0084AD6}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_16" ID="{DAE09E78-57E0-445B-972E-61C21150E63C}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_17" ID="{6150774A-B676-433A-8819-26987741CBD6}" ShortID="785981078" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_17" ID="{10D94A62-BC4E-45D5-B3D2-4427027804C6}" ShortID="434493293" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1778,19 +1749,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_17" ID="{5409CD9B-436E-45AE-84D2-C4DCBCBC4014}" ShortID="458632291">
+														<AudioFileSource Name="PC_Foot_Run_17" ID="{130B33BC-D2E6-4025-8286-62A5814EAE67}" ShortID="688541140">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_17.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_17.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="623818758"/>
+																<File ID="120637523"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_17" ID="{5409CD9B-436E-45AE-84D2-C4DCBCBC4014}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_17" ID="{130B33BC-D2E6-4025-8286-62A5814EAE67}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_18" ID="{E6B505EB-F5E7-47F2-BA44-FB5772B5A073}" ShortID="683420735" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_18" ID="{146310AD-4416-4F8B-B4F9-31F430784F19}" ShortID="796430370" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1800,19 +1771,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_18" ID="{0F285718-99C7-4DB0-807D-EB7BD35137CE}" ShortID="274083033">
+														<AudioFileSource Name="PC_Foot_Run_18" ID="{8BE57C75-D00D-4009-8EE8-B7DBA755D4B0}" ShortID="964278089">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_18.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_18.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="907397557"/>
+																<File ID="594222128"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_18" ID="{0F285718-99C7-4DB0-807D-EB7BD35137CE}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_18" ID="{8BE57C75-D00D-4009-8EE8-B7DBA755D4B0}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_19" ID="{9549E9D2-081E-4569-AE31-1F706E526440}" ShortID="577591307" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_19" ID="{8EBFC741-EF9E-4C75-B32A-6C8D1B4A0146}" ShortID="866293765" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1822,19 +1793,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_19" ID="{0B71ED5D-F7E6-455F-A77C-0C3DA47542EE}" ShortID="941462775">
+														<AudioFileSource Name="PC_Foot_Run_19" ID="{12D265C7-6506-42DA-A214-34AC39B76503}" ShortID="229831986">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_19.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_19.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="1059148640"/>
+																<File ID="936663382"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_19" ID="{0B71ED5D-F7E6-455F-A77C-0C3DA47542EE}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_19" ID="{12D265C7-6506-42DA-A214-34AC39B76503}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_20" ID="{C1EE4B13-6160-4042-9DDC-4556FDF1D811}" ShortID="397694568" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_20" ID="{0275BD31-612B-44E4-834B-5C097D2D8177}" ShortID="709754324" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1844,19 +1815,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_20" ID="{72A00223-6586-4162-ABCB-73DF1ABC7810}" ShortID="488423051">
+														<AudioFileSource Name="PC_Foot_Run_20" ID="{A164372C-1AAE-462D-A8D2-4ED645CCFCB5}" ShortID="354189835">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_20.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_20.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="410529118"/>
+																<File ID="887571879"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_20" ID="{72A00223-6586-4162-ABCB-73DF1ABC7810}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_20" ID="{A164372C-1AAE-462D-A8D2-4ED645CCFCB5}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_21" ID="{10A045CD-516F-434C-9789-E042E17B062F}" ShortID="517695665" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_21" ID="{0B31204D-1867-432C-AB92-3168C796DE8E}" ShortID="152238796" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1866,19 +1837,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_21" ID="{2CB43897-733D-4A33-9587-CA9B3FBC741E}" ShortID="323220880">
+														<AudioFileSource Name="PC_Foot_Run_21" ID="{FB58EBD8-1251-4D5D-94D9-0CF61A20AB83}" ShortID="420480427">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_21.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_21.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="703969500"/>
+																<File ID="670559798"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_21" ID="{2CB43897-733D-4A33-9587-CA9B3FBC741E}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_21" ID="{FB58EBD8-1251-4D5D-94D9-0CF61A20AB83}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_22" ID="{DD4B8393-5739-4486-AAEB-CDEDEC467C88}" ShortID="287023925" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_22" ID="{1759F20B-A04D-4761-B5AE-E4388DD3AEA4}" ShortID="481746326" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1888,26 +1859,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_22" ID="{2CCB93FE-AFAB-4CA7-98E7-1497FD0C7A2E}" ShortID="618164827">
+														<AudioFileSource Name="PC_Foot_Run_22" ID="{31429E20-694B-494F-B28B-BBEEB0428816}" ShortID="695100801">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_22.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_22.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="163656671"/>
+																<File ID="1033123932"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_22" ID="{2CCB93FE-AFAB-4CA7-98E7-1497FD0C7A2E}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_22" ID="{31429E20-694B-494F-B28B-BBEEB0428816}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_23" ID="{D7B176F7-261F-4A31-8FF2-1E7EC657E5CD}" ShortID="99684869" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Run_23" ID="{12FC9FF7-4859-40D6-BDE0-8EFC25025D8F}" ShortID="4149586" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1917,19 +1881,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_23" ID="{A7502F34-7454-4832-BA0A-EEDC110D95B8}" ShortID="817301693">
+														<AudioFileSource Name="PC_Foot_Run_23" ID="{D52ADB0E-26FB-4963-AB21-866C19B49D3E}" ShortID="442298513">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_23.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_23.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="782490891"/>
+																<File ID="964720064"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_23" ID="{A7502F34-7454-4832-BA0A-EEDC110D95B8}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_23" ID="{D52ADB0E-26FB-4963-AB21-866C19B49D3E}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_24" ID="{36D9CFD3-AF2F-4CEA-BB8B-4C56CF1D1D78}" ShortID="952996091" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_24" ID="{918E3F1A-0B3F-4528-BF31-7966719AB0E2}" ShortID="91534387" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1939,19 +1903,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_24" ID="{E911BBC0-8D81-4DD9-B0B4-7B028A8B7294}" ShortID="896206459">
+														<AudioFileSource Name="PC_Foot_Run_24" ID="{D934944A-1375-46BE-8A9E-A61E92AEC210}" ShortID="241005609">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_24.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_24.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="994809475"/>
+																<File ID="792498545"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_24" ID="{E911BBC0-8D81-4DD9-B0B4-7B028A8B7294}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_24" ID="{D934944A-1375-46BE-8A9E-A61E92AEC210}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_25" ID="{24A57B7F-26B1-4A1B-B111-72AF56A9D1BD}" ShortID="23056156" Type="SoundFX">
+												<Sound Name="PC_Foot_Run_25" ID="{5E4839BA-EC97-4C83-8485-2BC6281986FE}" ShortID="111696656" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1961,16 +1925,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_stone_25" ID="{D6E2679A-AED5-47D6-8A72-1662D120C80F}" ShortID="488740123">
+														<AudioFileSource Name="PC_Foot_Run_25" ID="{59E9A9AC-924E-4C87-9377-24973EE6585E}" ShortID="22160902">
 															<Language>SFX</Language>
-															<AudioFile>footstep_stone_25.wav</AudioFile>
+															<AudioFile>PC_Foot_Run_25.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="324254457"/>
+																<File ID="433195464"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_stone_25" ID="{D6E2679A-AED5-47D6-8A72-1662D120C80F}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Run_25" ID="{59E9A9AC-924E-4C87-9377-24973EE6585E}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -1990,11 +1954,6 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-8</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2005,14 +1964,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="PC_Foot_Climb_01" ID="{2BD9CCC1-2811-4DB2-858F-F0B5D84FA358}" ShortID="205076278" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_01" ID="{AC925415-A44B-45A4-A008-EB027E2BA922}" ShortID="998783188" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2022,19 +1974,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_01" ID="{23197EEF-A004-4DE0-BF4F-2FBCA8B77051}" ShortID="484591008">
+														<AudioFileSource Name="PC_Foot_Climb_01" ID="{1A00F216-E91D-497C-8523-92F6D08222FC}" ShortID="144807830">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_01.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_01.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="794925173"/>
+																<File ID="644380282"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_01" ID="{23197EEF-A004-4DE0-BF4F-2FBCA8B77051}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_01" ID="{1A00F216-E91D-497C-8523-92F6D08222FC}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_02" ID="{11A7001A-1501-4AEB-A5BD-0A651D665077}" ShortID="126588874" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_02" ID="{A8AF9399-9638-4E8F-AD41-8B812338D7E0}" ShortID="495950821" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2044,26 +1996,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_02" ID="{5B738C60-7E3F-4A1A-9C34-B580B0476DE1}" ShortID="835069197">
+														<AudioFileSource Name="PC_Foot_Climb_02" ID="{A8DE91C0-E507-45CE-A111-36DE1B6D73E2}" ShortID="997933277">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_02.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_02.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="902076861"/>
+																<File ID="215179909"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_02" ID="{5B738C60-7E3F-4A1A-9C34-B580B0476DE1}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_02" ID="{A8DE91C0-E507-45CE-A111-36DE1B6D73E2}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_03" ID="{D62CF259-70FD-46C5-B36F-1C37FD2C9A14}" ShortID="998494101" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_03" ID="{3D7A8F30-98E4-4A1F-BE6C-36455302E743}" ShortID="832550666" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2073,26 +2018,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_03" ID="{C91FD991-9E5A-4BB2-A54D-D509FCBAD193}" ShortID="710265786">
+														<AudioFileSource Name="PC_Foot_Climb_03" ID="{6E83FFD4-F250-4DE8-949C-D339FC4B8679}" ShortID="80293836">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_03.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_03.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="131562243"/>
+																<File ID="355961641"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_03" ID="{C91FD991-9E5A-4BB2-A54D-D509FCBAD193}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_03" ID="{6E83FFD4-F250-4DE8-949C-D339FC4B8679}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_04" ID="{FA10DB64-CCA5-4BAE-AF85-81E48CA82D25}" ShortID="620623962" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_04" ID="{8B42FAEF-D593-4269-A11F-B7437BE4EE58}" ShortID="258651197" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2102,19 +2040,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_04" ID="{61E9C509-83DA-456A-A7BA-F792C4F385CF}" ShortID="517664967">
+														<AudioFileSource Name="PC_Foot_Climb_04" ID="{C4561A8B-BFFE-40A0-9966-2344368217CA}" ShortID="543569827">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_04.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_04.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="433948522"/>
+																<File ID="585143226"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_04" ID="{61E9C509-83DA-456A-A7BA-F792C4F385CF}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_04" ID="{C4561A8B-BFFE-40A0-9966-2344368217CA}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_05" ID="{128485FA-FFBC-4C30-9A1B-17AC47006C71}" ShortID="107150227" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_05" ID="{C9BAABC4-A9A7-45D8-910D-09B99535DA6B}" ShortID="356740434" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2124,26 +2062,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_05" ID="{C0DFBC20-7AED-4517-B2F0-2F1C53559309}" ShortID="472295907">
+														<AudioFileSource Name="PC_Foot_Climb_05" ID="{1EC72EA8-738A-4088-8074-6A4430D18EED}" ShortID="505292276">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_05.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_05.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="10858665"/>
+																<File ID="401738738"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_05" ID="{C0DFBC20-7AED-4517-B2F0-2F1C53559309}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_05" ID="{1EC72EA8-738A-4088-8074-6A4430D18EED}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_06" ID="{4A730BF9-2691-4B0E-8655-10BE64E1648E}" ShortID="682241050" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_06" ID="{FEA69742-5B6F-483D-ACBD-3EDFEA9C017A}" ShortID="134165137" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2153,26 +2084,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_06" ID="{D726CA08-18C3-4198-A46B-9979CC3583A6}" ShortID="945860091">
+														<AudioFileSource Name="PC_Foot_Climb_06" ID="{ADCDB524-1832-4578-853A-14B9708B3C3A}" ShortID="925056428">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_06.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_06.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="356526589"/>
+																<File ID="580344731"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_06" ID="{D726CA08-18C3-4198-A46B-9979CC3583A6}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_06" ID="{ADCDB524-1832-4578-853A-14B9708B3C3A}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_07" ID="{BCEF40BA-3B78-42C4-8860-6FB0E88285D8}" ShortID="621314728" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
+												<Sound Name="PC_Foot_Climb_07" ID="{9E2F2631-8F4C-4A73-9781-ED8C4C1A05E4}" ShortID="793057871" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2182,19 +2106,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_07" ID="{487EFCAA-389A-4F71-B6E6-5424CA4ED807}" ShortID="60729728">
+														<AudioFileSource Name="PC_Foot_Climb_07" ID="{CAF52910-5C55-4748-96A1-3193D18AF352}" ShortID="973025642">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_07.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_07.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="975221627"/>
+																<File ID="544265276"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_07" ID="{487EFCAA-389A-4F71-B6E6-5424CA4ED807}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_07" ID="{CAF52910-5C55-4748-96A1-3193D18AF352}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_08" ID="{FD7E26D8-8738-436F-9D3A-0C7619063DC6}" ShortID="1058828845" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_08" ID="{309E21F8-21DC-4BF2-A51B-600EBBEBE315}" ShortID="879689940" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2204,19 +2128,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_08" ID="{99B2039F-3C5D-4E03-BAF3-28D3A8AA6FEA}" ShortID="854845338">
+														<AudioFileSource Name="PC_Foot_Climb_08" ID="{3E19E160-1FFF-48C0-A3AA-52FB45BCE43C}" ShortID="68583814">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_08.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_08.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="758753492"/>
+																<File ID="939131074"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_08" ID="{99B2039F-3C5D-4E03-BAF3-28D3A8AA6FEA}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_08" ID="{3E19E160-1FFF-48C0-A3AA-52FB45BCE43C}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_09" ID="{BEFE115E-B6AD-4ACD-B195-D5220B2A38FF}" ShortID="57182078" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_09" ID="{3D3ACFA8-32A7-47FF-A43A-ABC2A19DB6AB}" ShortID="420352220" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2226,19 +2150,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_09" ID="{D08ED8BA-EA57-469C-BE96-D14EF75E5B12}" ShortID="346255817">
+														<AudioFileSource Name="PC_Foot_Climb_09" ID="{CEF1CAC8-1500-4497-A865-136A1C448247}" ShortID="1023502891">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_09.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_09.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="705875494"/>
+																<File ID="948978557"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_09" ID="{D08ED8BA-EA57-469C-BE96-D14EF75E5B12}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_09" ID="{CEF1CAC8-1500-4497-A865-136A1C448247}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_10" ID="{D0D812B2-C02F-4D91-BC65-85F75F585763}" ShortID="797077501" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_10" ID="{D4DF7710-67C1-4A17-A760-D720D680CE57}" ShortID="351228477" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2248,19 +2172,19 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_10" ID="{E9BB5AAD-DAD6-4050-B76C-ADFDA7A8CE8F}" ShortID="526432503">
+														<AudioFileSource Name="PC_Foot_Climb_10" ID="{74532D55-7656-4650-86E0-EF0E0FB57E66}" ShortID="987516542">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_10.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_10.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="650912931"/>
+																<File ID="239502760"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_10" ID="{E9BB5AAD-DAD6-4050-B76C-ADFDA7A8CE8F}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_10" ID="{74532D55-7656-4650-86E0-EF0E0FB57E66}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_11" ID="{93754B58-A454-4B0B-A24B-AF92554F646D}" ShortID="926477052" Type="SoundFX">
+												<Sound Name="PC_Foot_Climb_11" ID="{666CD880-3BE4-4DEA-AC62-CB8412E04C78}" ShortID="22135266" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -2270,16 +2194,16 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="footstep_wood_11" ID="{130120A3-99E7-4D5D-BA17-0A7DB2E103B3}" ShortID="783147046">
+														<AudioFileSource Name="PC_Foot_Climb_11" ID="{85B8752F-F43E-417C-884A-244A2878A6A5}" ShortID="878300567">
 															<Language>SFX</Language>
-															<AudioFile>footstep_wood_11.wav</AudioFile>
+															<AudioFile>PC_Foot_Climb_11.wav</AudioFile>
 															<ConvertedFileIDList>
-																<File ID="70610093"/>
+																<File ID="797803312"/>
 															</ConvertedFileIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="footstep_wood_11" ID="{130120A3-99E7-4D5D-BA17-0A7DB2E103B3}" Platform="Linked"/>
+														<ActiveSource Name="PC_Foot_Climb_11" ID="{85B8752F-F43E-417C-884A-244A2878A6A5}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -3384,6 +3308,11 @@
 										<Sound Name="Amb_Rain" ID="{11ED6294-86DC-4F25-9B9A-C8B84151C939}" ShortID="91801773" Type="SoundFX">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-15</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3428,6 +3357,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<SourcePlugin Name="Wwise Sine" ID="{2804A208-87D5-49D4-915E-3C3CAB84D99F}" ShortID="735539620" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+											<PropertyList>
+												<Property Name="SineGain" Type="Real32" Value="-28"/>
+											</PropertyList>
 											<Language>SFX</Language>
 										</SourcePlugin>
 									</ChildrenList>
@@ -3446,6 +3378,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<SourcePlugin Name="Wwise Sine" ID="{FB214211-C473-4E67-A1CE-210F7056EBB0}" ShortID="704193469" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+											<PropertyList>
+												<Property Name="SineGain" Type="Real32" Value="-28"/>
+											</PropertyList>
 											<Language>SFX</Language>
 										</SourcePlugin>
 									</ChildrenList>
@@ -3474,6 +3409,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<SourcePlugin Name="Wwise Sine" ID="{BC19E92F-3F9D-4C50-8429-4ABA05A791E7}" ShortID="346613867" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+													<PropertyList>
+														<Property Name="SineGain" Type="Real32" Value="-28"/>
+													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
@@ -4037,7 +3975,7 @@
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -4773,6 +4711,11 @@
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
