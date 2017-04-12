@@ -107,6 +107,13 @@
 								<GroupItem Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
 							</SetItemParam>
 						</Action>
+						<Action Name="Trigger" ID="{F8C01C11-8A4C-46F2-8CCC-056985C65D6C}" ShortID="174035875" Type="Trigger" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{FC71492C-98DE-4362-93D3-A1DBD90D7FE6}" Global="false">
+									<ObjectRef Name="Alert" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Mus_Located" ID="{CED625F7-E072-457F-82A0-AF179DC25010}">
@@ -121,13 +128,6 @@
 							<ElementList>
 								<Element ID="{63541652-E8C5-4B41-9B63-E5DFBC0B5B73}" Global="false">
 									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Trigger" ID="{CADDDCED-3D0A-4DE0-A360-699891967FBB}" ShortID="208153695" Type="Trigger" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{A60C481E-8E72-45F7-ACA8-F33C8A64E044}" Global="false">
-									<ObjectRef Name="Located" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
 								</Element>
 							</ElementList>
 						</Action>

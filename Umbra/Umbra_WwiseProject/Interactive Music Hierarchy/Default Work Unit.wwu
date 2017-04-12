@@ -79,7 +79,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicPlaylistContainer Name="Mus_Secteur2_Alert" ID="{1CD58F15-883E-4594-BD18-86804B84871E}" ShortID="256466939">
+								<MusicPlaylistContainer Name="Mus_Secteur2_Located" ID="{1CD58F15-883E-4594-BD18-86804B84871E}" ShortID="256466939">
 									<PropertyList>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="50"/>
@@ -4731,7 +4731,7 @@
 										</MusicPlaylistItem>
 									</Playlist>
 								</MusicPlaylistContainer>
-								<MusicPlaylistContainer Name="Mus_Located" ID="{D847EAB5-338A-42EB-B56D-2B65A10DAA57}" ShortID="731132699">
+								<MusicPlaylistContainer Name="Mus_Alert" ID="{D847EAB5-338A-42EB-B56D-2B65A10DAA57}" ShortID="731132699">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -4748,7 +4748,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicSegment Name="Mus_Located" ID="{B1A75BB2-7529-4F2E-AF52-6CCB6F33DB06}" ShortID="76866322">
+										<MusicSegment Name="Mus_Alert" ID="{B1A75BB2-7529-4F2E-AF52-6CCB6F33DB06}" ShortID="76866322">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="62788.625"/>
 												<Property Name="Tempo" Type="Real64" Value="55"/>
@@ -4833,7 +4833,7 @@
 														<Property Name="LoopCount" Type="int16" Value="0"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
-													<SegmentRef Name="Mus_Located" ID="{B1A75BB2-7529-4F2E-AF52-6CCB6F33DB06}"/>
+													<SegmentRef Name="Mus_Alert" ID="{B1A75BB2-7529-4F2E-AF52-6CCB6F33DB06}"/>
 												</MusicPlaylistItem>
 											</ChildrenList>
 										</MusicPlaylistItem>
@@ -4925,10 +4925,10 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Mus_Secteur2_Alert" ID="{1CD58F15-883E-4594-BD18-86804B84871E}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+													<ObjectRef Name="Mus_Secteur2_Located" ID="{1CD58F15-883E-4594-BD18-86804B84871E}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 												</Reference>
 												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Mus_Located" ID="{D847EAB5-338A-42EB-B56D-2B65A10DAA57}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+													<ObjectRef Name="Mus_Alert" ID="{D847EAB5-338A-42EB-B56D-2B65A10DAA57}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo/>
@@ -4942,7 +4942,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Mus_Located" ID="{D847EAB5-338A-42EB-B56D-2B65A10DAA57}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+													<ObjectRef Name="Mus_Alert" ID="{D847EAB5-338A-42EB-B56D-2B65A10DAA57}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 												</Reference>
 												<Reference Name="SourceContextObject">
 													<ObjectRef Name="Mus_Secteur2_Explo" ID="{2F3EB6E4-4234-47F1-B626-6A343F8CE666}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -4967,7 +4967,7 @@
 							</TransitionList>
 							<StingerList>
 								<MusicStinger Name="" ID="{9473C52C-4D73-4DCD-BF74-13B7D906472A}">
-									<TriggerRef Name="Located" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
+									<TriggerRef Name="Alert" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
 									<SegmentRef Name="Mus_Located_Stinger" ID="{8E38314A-E54B-4610-B19B-EDAA8C46FE81}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</MusicStinger>
 							</StingerList>
@@ -4975,14 +4975,6 @@
 								<ArgumentRef Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 							</ArgumentList>
 							<EntryList>
-								<Entry>
-									<Path>
-										<PathElementRef Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
-									</Path>
-									<AudioNodeInfo>
-										<AudioNodeRef Name="Mus_Secteur2_Alert" ID="{1CD58F15-883E-4594-BD18-86804B84871E}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
-									</AudioNodeInfo>
-								</Entry>
 								<Entry>
 									<Path>
 										<PathElementRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
@@ -5001,10 +4993,18 @@
 								</Entry>
 								<Entry>
 									<Path>
+										<PathElementRef Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
+									</Path>
+									<AudioNodeInfo>
+										<AudioNodeRef Name="Mus_Alert" ID="{D847EAB5-338A-42EB-B56D-2B65A10DAA57}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+									</AudioNodeInfo>
+								</Entry>
+								<Entry>
+									<Path>
 										<PathElementRef Name="Located" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
 									</Path>
 									<AudioNodeInfo>
-										<AudioNodeRef Name="Mus_Located" ID="{D847EAB5-338A-42EB-B56D-2B65A10DAA57}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+										<AudioNodeRef Name="Mus_Secteur2_Located" ID="{1CD58F15-883E-4594-BD18-86804B84871E}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
 									</AudioNodeInfo>
 								</Entry>
 							</EntryList>
