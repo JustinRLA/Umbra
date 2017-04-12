@@ -6,7 +6,7 @@
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<ChildrenList>
 						<Bus Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}"/>
-						<Bus Name="SFX" ID="{674719A5-FF3D-49E6-B3BC-537EAED38975}">
+						<Bus Name="SFX_ALL" ID="{674719A5-FF3D-49E6-B3BC-537EAED38975}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<RTPCList>
@@ -45,6 +45,12 @@
 									<ObjectRef Name="Medium" ID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Bus Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}"/>
+								<Bus Name="PC" ID="{1CAE5AA5-87A2-464C-ACD7-3FC2ED76398F}"/>
+								<Bus Name="NPC" ID="{676E26A5-D301-4F71-B3F6-0D2C0832BB69}"/>
+								<Bus Name="UI" ID="{59A245FD-7A4F-4BB4-876B-3E737CF7B742}"/>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}">
 							<ReferenceList>
