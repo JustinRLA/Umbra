@@ -4839,7 +4839,7 @@
 										</MusicPlaylistItem>
 									</Playlist>
 								</MusicPlaylistContainer>
-								<MusicSegment Name="Mus_Located_Stinger" ID="{8E38314A-E54B-4610-B19B-EDAA8C46FE81}" ShortID="658428186">
+								<MusicSegment Name="Mus_Alert_Stinger" ID="{8E38314A-E54B-4610-B19B-EDAA8C46FE81}" ShortID="658428186">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="14294.1950113379"/>
 										<Property Name="Volume" Type="Real64">
@@ -4857,7 +4857,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Mus_Located_Stinger" ID="{23AD9E09-BE06-4CF0-A510-43E0B08DF776}" ShortID="86634184">
+										<MusicTrack Name="Mus_Alert_Stinger" ID="{23AD9E09-BE06-4CF0-A510-43E0B08DF776}" ShortID="86634184">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
@@ -4968,7 +4968,7 @@
 							<StingerList>
 								<MusicStinger Name="" ID="{9473C52C-4D73-4DCD-BF74-13B7D906472A}">
 									<TriggerRef Name="Alert" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
-									<SegmentRef Name="Mus_Located_Stinger" ID="{8E38314A-E54B-4610-B19B-EDAA8C46FE81}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+									<SegmentRef Name="Mus_Alert_Stinger" ID="{8E38314A-E54B-4610-B19B-EDAA8C46FE81}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</MusicStinger>
 							</StingerList>
 							<ArgumentList>

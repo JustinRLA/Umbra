@@ -154,6 +154,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Trigger" ID="{1A668B3D-4D3D-456C-B2C4-4BA89F183B85}" ShortID="715745365" Type="Trigger" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{13413F13-E9AD-4259-ADA5-59CF67C41549}" Global="false">
+											<ObjectRef Name="Alert" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="NPC_State_Located" ID="{21AE8267-DDC3-4E41-A895-2BB8C4FBDA9E}">
