@@ -37,11 +37,11 @@
 				<Event Id="309439191" Name="Menu_Hover" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Hover"/>
 				<Event Id="1102633101" Name="Mus_Alert" ObjectPath="\Events\Default Work Unit\MUS\Mus_Alert"/>
 				<Event Id="48865357" Name="Mus_Explo" ObjectPath="\Events\Default Work Unit\MUS\Mus_Explo"/>
+				<Event Id="2998987929" Name="Mus_Located" ObjectPath="\Events\Default Work Unit\MUS\Mus_Located"/>
 				<Event Id="3149643052" Name="Mus_Menu" ObjectPath="\Events\Default Work Unit\MUS\Mus_Menu"/>
 				<Event Id="3224037365" Name="Mus_Secteur1" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur1"/>
 				<Event Id="3224037366" Name="Mus_Secteur2" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur2"/>
 				<Event Id="3224037367" Name="Mus_Secteur3" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur3"/>
-				<Event Id="350380962" Name="Mus_SlowMo" ObjectPath="\Events\Default Work Unit\MUS\Mus_SlowMo"/>
 				<Event Id="1249525624" Name="NPC_Action_Death" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Action_Death"/>
 				<Event Id="3752724058" Name="NPC_Action_Kill" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Action_Kill"/>
 				<Event Id="888215683" Name="NPC_Foot_Run" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Foot_Run"/>
@@ -49,9 +49,7 @@
 				<Event Id="2712572047" Name="NPC_State_Located" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_State_Located"/>
 				<Event Id="624895962" Name="NPC_State_Normal" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_State_Normal"/>
 				<Event Id="169793748" Name="PC_Action_Death" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Death"/>
-				<Event Id="1005965974" Name="PC_Action_Heartbeat" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Heartbeat"/>
 				<Event Id="1092215814" Name="PC_Action_Kill" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Kill"/>
-				<Event Id="4154982375" Name="PC_Action_Look" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Look"/>
 				<Event Id="1590111458" Name="PC_Action_Respawn" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_Respawn"/>
 				<Event Id="348181601" Name="PC_Action_SlowMo" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_SlowMo"/>
 				<Event Id="2684526339" Name="PC_Action_SlowMo_End" ObjectPath="\Events\Default Work Unit\SFX\PC\Action\PC_Action_SlowMo_End"/>
@@ -66,7 +64,6 @@
 				<Event Id="2256145203" Name="PC_Rune_Cooldown" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Cooldown"/>
 				<Event Id="564655388" Name="PC_Rune_Leurre_Filter" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Leurre_Filter"/>
 				<Event Id="2295622767" Name="PC_Rune_Leurre_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Leurre_Use"/>
-				<Event Id="2135334427" Name="PC_Rune_Marquage_Sonar" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Sonar"/>
 				<Event Id="153992643" Name="PC_Rune_Marquage_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Use"/>
 				<Event Id="3410690150" Name="PC_Rune_Ombre_Decay" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Decay"/>
 				<Event Id="3591117188" Name="PC_Rune_Ombre_Select" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Select"/>
@@ -166,6 +163,10 @@
 				<File Id="181858383" Language="SFX">
 					<ShortName>footstep_stone_05.wav</ShortName>
 					<Path>SFX\footstep_stone_05_50DB02DB.wem</Path>
+				</File>
+				<File Id="184519738" Language="SFX">
+					<ShortName>Mus_Located_Stinger.wav</ShortName>
+					<Path>SFX\Mus_Located_Stinger_0CDD8189.wem</Path>
 				</File>
 				<File Id="192250492" Language="SFX">
 					<ShortName>NPC_State_Alarmed_05.wav</ShortName>
@@ -282,6 +283,10 @@
 				<File Id="450629393" Language="SFX">
 					<ShortName>NPC_State_Located_Init_03.wav</ShortName>
 					<Path>SFX\NPC_State_Located_Init_03_50DB02DB.wem</Path>
+				</File>
+				<File Id="461580969" Language="SFX">
+					<ShortName>PC_Rune_Solide_End.wav</ShortName>
+					<Path>SFX\PC_Rune_Solide_End_50DB02DB.wem</Path>
 				</File>
 				<File Id="461989338" Language="SFX">
 					<ShortName>NPC_State_Normal_Talk_01.wav</ShortName>
@@ -451,6 +456,10 @@
 					<ShortName>NPC_Action_Death_01.wav</ShortName>
 					<Path>SFX\NPC_Action_Death_01_50DB02DB.wem</Path>
 				</File>
+				<File Id="741349495" Language="SFX">
+					<ShortName>Mus_Located.wav</ShortName>
+					<Path>SFX\Mus_Located_0CDD8189.wem</Path>
+				</File>
 				<File Id="741816274" Language="SFX">
 					<ShortName>NPC_State_Alarmed_04.wav</ShortName>
 					<Path>SFX\NPC_State_Alarmed_04_50DB02DB.wem</Path>
@@ -583,6 +592,10 @@
 					<ShortName>PC_Foot_Climb_08.wav</ShortName>
 					<Path>SFX\PC_Foot_Climb_08_50DB02DB.wem</Path>
 				</File>
+				<File Id="945297317" Language="SFX">
+					<ShortName>PC_Rune_Solide_Use.wav</ShortName>
+					<Path>SFX\PC_Rune_Solide_Use_50DB02DB.wem</Path>
+				</File>
 				<File Id="947589312" Language="SFX">
 					<ShortName>footstep_stone_14.wav</ShortName>
 					<Path>SFX\footstep_stone_14_50DB02DB.wem</Path>
@@ -638,6 +651,10 @@
 				<File Id="1035309267" Language="SFX">
 					<ShortName>Menu_Hover.wav</ShortName>
 					<Path>SFX\Menu_Hover_50DB02DB.wem</Path>
+				</File>
+				<File Id="1041648969" Language="SFX">
+					<ShortName>PC_Rune_Ombre_Use.wav</ShortName>
+					<Path>SFX\PC_Rune_Ombre_Use_50DB02DB.wem</Path>
 				</File>
 				<File Id="1052857111" Language="SFX">
 					<ShortName>VO_PC_Death_Short_02.wav</ShortName>

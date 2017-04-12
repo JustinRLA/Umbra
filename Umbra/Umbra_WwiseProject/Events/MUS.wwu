@@ -5,24 +5,34 @@
 			<ChildrenList>
 				<Event Name="Mus_Secteur1" ID="{C6814B7A-8E6B-41C1-82CB-907D07F4336C}">
 					<ChildrenList>
+						<Action Name="Post Event" ID="{034F51CD-352C-47D9-8D04-A51C5A837CD7}" ShortID="962741286" Type="PlayEvent" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{E92DFA0C-9909-4025-A7B5-C8983D901AEC}" Global="false">
+									<ObjectRef Name="STOPALLMUSIC" ID="{13BA3892-5996-4738-BE32-837B6F852AF5}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+								</Element>
+							</ElementList>
+						</Action>
 						<Action Name="Set State" ID="{3DC3F7FC-28DB-4E46-820F-2189A647D295}" ShortID="867240218" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
 								<GroupItem Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Play" ID="{B852367D-44A3-43CD-AA26-BC6ED537AB23}" ShortID="838044873" Type="Play" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{6D6951E5-675A-4BCD-A9BD-64FA69FD0620}" Global="false">
-									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
 						<Action Name="Set State" ID="{AAD90A15-7445-41C9-950A-0C3111407D86}" ShortID="789425431" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
+						</Action>
+						<Action Name="Play" ID="{B852367D-44A3-43CD-AA26-BC6ED537AB23}" ShortID="838044873" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{6D6951E5-675A-4BCD-A9BD-64FA69FD0620}" Global="false">
+									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+								</Element>
+							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
@@ -42,6 +52,10 @@
 							</ElementList>
 						</Action>
 						<Action Name="Stop" ID="{05DE3BCA-78BA-4FA2-B85B-FF93510A7B4A}" ShortID="881083770" Type="Stop" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{7841DF1D-AFFB-4723-A348-30FF047667DB}" Global="true">
 									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
@@ -104,22 +118,32 @@
 								<GroupItem Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
 							</SetItemParam>
 						</Action>
+						<Action Name="Trigger" ID="{F8C01C11-8A4C-46F2-8CCC-056985C65D6C}" ShortID="174035875" Type="Trigger" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{FC71492C-98DE-4362-93D3-A1DBD90D7FE6}" Global="false">
+									<ObjectRef Name="Alert" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{BBB96D88-AC93-4E60-BCE6-D264123E7DAB}" ShortID="67477149" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{14479035-30BF-4F56-990A-B5FF7C875BB3}" Global="false">
+									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Mus_SlowMo" ID="{CED625F7-E072-457F-82A0-AF179DC25010}">
+				<Event Name="Mus_Located" ID="{CED625F7-E072-457F-82A0-AF179DC25010}">
 					<ChildrenList>
 						<Action Name="Set State" ID="{3BB647B8-8010-4183-9A2E-BAD4002C0AA6}" ShortID="787999852" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
-								<GroupItem Name="SlowMo" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
+								<GroupItem Name="Located" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
 							</SetItemParam>
-						</Action>
-						<Action Name="Play" ID="{1432157D-520A-43F3-BBE2-8C954012005E}" ShortID="576986348" Type="Play" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{63541652-E8C5-4B41-9B63-E5DFBC0B5B73}" Global="false">
-									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-								</Element>
-							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
