@@ -17,6 +17,7 @@ public class EnnemyMarked : MonoBehaviour {
 	public bool isMarked;
 	public GameObject PlayerMy;
 	public float PlayerSpeed;
+	public GameObject raycarVision;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +27,7 @@ public class EnnemyMarked : MonoBehaviour {
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 		myMainCam=GameObject.Find("Main Camera");
 		myCam=GameObject.Find("Main Camera (1)");
-
+		raycarVision=GameObject.Find("")
 
 
 	}

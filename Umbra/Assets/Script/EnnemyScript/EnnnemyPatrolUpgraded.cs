@@ -379,6 +379,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //
 	void AlertInMode()
 	{
+		haveplayedNeutral = false;
 		timerAttack -= Time.deltaTime;
 		routine = false;
 		Alert = true;
@@ -393,6 +394,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			if(havePlayedKill==false)
 			{
 				AkSoundEngine.PostEvent ("NPC_Action_Kill", gameObject);
+				havePlayedKill = true;
 			
 			}
 				MyPlayer.GetComponent<PlatformerCharacter2D> ().Death ();
@@ -521,12 +523,26 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	void InSuspiciousMode()
 	{
+
+		haveplayedAlert = false;
+		haveplayedNeutral = false;
 		routine = false;
 		if(timerState>14 &&  timerState<=15)
 		{
 
 			PhamomPoint.position = ThePlayer.position;
 
+		}
+
+		if (haveplayedAlert == false) {
+			AkSoundEngine.PostEvent ("NPC_State_Alarmed", gameObject);
+			haveplayedAlert = true;
+		}
+
+
+		if (haveplayedSuspicious == false) {
+			AkSoundEngine.PostEvent ("NPC_State_Located", gameObject);
+			haveplayedSuspicious = true;
 		}
 		Alert = false;
 		GetComponent<Animator>().SetBool ("Alerte", false);
@@ -664,6 +680,13 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	void NeutralMode ()
 	{
+		haveplayedAlert = false;
+		haveplayedSuspicious = false;
+		if (haveplayedNeutral == false) {
+				AkSoundEngine.PostEvent ("NPC_State_Normal", gameObject);
+			haveplayedNeutral = true;
+			}
+
 		if (EnnemyLevel == 1 || EnnemyLevel == 3)
 			backHome = true;
 		

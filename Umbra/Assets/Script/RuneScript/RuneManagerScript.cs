@@ -275,6 +275,7 @@ public class RuneManagerScript : MonoBehaviour
 			animCamThree.SetBool ("Blue",true);
 			Time.timeScale = 0.1f;
 			AkSoundEngine.PostEvent ("PC_Action_slowMo", gameObject);
+
 			RuneModeEnabled = true;
 			myCam.GetComponent<BloomOptimized>().enabled=true;
 			//myCam.GetComponent<Grayscale>().enabled=true;

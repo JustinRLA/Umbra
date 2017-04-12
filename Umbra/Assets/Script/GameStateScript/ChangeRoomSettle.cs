@@ -87,27 +87,7 @@ public class ChangeRoomSettle : MonoBehaviour {
 				player.GetComponent<CheckVisinCone>().EnnemyInScene [5] = null;
 
 
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [6] != null) {
-				player.GetComponent<CheckVisinCone> ().EnnemyInScene [6] = LastDecount.GetComponent<EnnemyDecount> ().Decount [6];
-				player.GetComponent<CheckVisinCone> ().PatrolSeven=LastDecount.GetComponent<EnnemyDecount> ().Decount [6].GetComponent<EnnnemyPatrolUpgraded>();
-				player.GetComponent<CheckVisinCone> ().ConvisibleSeven=LastDecount.GetComponent<EnnemyDecount> ().Decount [6].GetComponent<ConVisible>();
-				player.GetComponent<CheckVisinCone> ().MarkSeven=LastDecount.GetComponent<EnnemyDecount> ().Decount [6].GetComponent<EnnemyMarked>();
-					
-			}
-				else
-				player.GetComponent<CheckVisinCone>().EnnemyInScene [6] = null;
 
-
-			if (LastDecount.GetComponent<EnnemyDecount> ().Decount [7] != null) {
-				player.GetComponent<CheckVisinCone> ().EnnemyInScene [7] = LastDecount.GetComponent<EnnemyDecount> ().Decount [7];
-				player.GetComponent<CheckVisinCone> ().PatrolEight=LastDecount.GetComponent<EnnemyDecount> ().Decount [7].GetComponent<EnnnemyPatrolUpgraded>();
-				player.GetComponent<CheckVisinCone> ().ConvisibleEight=LastDecount.GetComponent<EnnemyDecount> ().Decount [7].GetComponent<ConVisible>();
-				player.GetComponent<CheckVisinCone> ().MarkEight=LastDecount.GetComponent<EnnemyDecount> ().Decount [7].GetComponent<EnnemyMarked>();
-
-			}
-				else
-				player.GetComponent<CheckVisinCone>().EnnemyInScene [7] = null;
-			
 
 			LastEnnemi.SetActive (false);
 

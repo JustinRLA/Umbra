@@ -13,7 +13,8 @@ public class CheckVisinCone : MonoBehaviour {
 	RaycastHit2D EnnmyRayFour;
 	RaycastHit2D EnnmyRayFive;
 	RaycastHit2D EnnmyRaySix;
-
+	bool thereisAnAlert;
+	bool ThereisAsuspicious;
 
 	public bool[] AlerEnnemy;
 	public bool[] SuspiciousEnnemy;
@@ -46,6 +47,7 @@ public class CheckVisinCone : MonoBehaviour {
 	public ConVisible ConvisibleSix;
 	bool AlertHavePlayer;
 	bool RetrnHavePlayed;
+	bool suspiciousHavePlayed;
 
 	public EnnnemyPatrolUpgraded PatrolOne;
 	public EnnnemyPatrolUpgraded PatrolTwo;
@@ -347,26 +349,52 @@ public class CheckVisinCone : MonoBehaviour {
 
 				if (AlerEnnemy [0] == false && AlerEnnemy [1] == false && AlerEnnemy [2] == false && AlerEnnemy [3] == false && AlerEnnemy [4] == false && AlerEnnemy [5] == false) 
 				{
-		if(AlertHavePlayer==false)
-		{
-			AkSoundEngine.PostEvent ("PC_Rune_Ombre_Select",gameObject);
 
-
-		}
+			thereisAnAlert = false;
 					pplatformscript.canhideThree = true;
 					AlertFeedback.SetActive (false);
+			AlertHavePlayer = false;
 				}
 				else {
+			thereisAnAlert = true;
+	
+			if (AlertHavePlayer==false) {
+			
+				AkSoundEngine.PostEvent ("Mus_Alert", gameObject);
+				AlertHavePlayer = true;
+				RetrnHavePlayed = false;
+				suspiciousHavePlayed = false;
+			}
 
 					pplatformscript.canhideThree = false;
 					AlertFeedback.SetActive (true);
 				}
 
-				if (SuspiciousEnnemy [0] == false && SuspiciousEnnemy [1] == false && SuspiciousEnnemy [2] == false && SuspiciousEnnemy [3] == false && SuspiciousEnnemy [4] == false && SuspiciousEnnemy [5] == false) {
-					SuspiciousFeedback.SetActive (false);
-				} else {
+				if(SuspiciousEnnemy [0] == false && SuspiciousEnnemy [1] == false && SuspiciousEnnemy [2] == false && SuspiciousEnnemy [3] == false && SuspiciousEnnemy [4] == false && SuspiciousEnnemy [5] == false) {
+					
+				SuspiciousFeedback.SetActive (false);
+			ThereisAsuspicious = false;
+			}
+			 else {
+			if (suspiciousHavePlayed==false) {
+				AkSoundEngine.PostEvent ("Mus_SlowMo", gameObject);
+				RetrnHavePlayed = true;
+				suspiciousHavePlayed = false;
+				AlertHavePlayer = false;
+			}
+
+			ThereisAsuspicious = true;
 					SuspiciousFeedback.SetActive (true);
 				}
+
+		if (thereisAnAlert == false && ThereisAsuspicious == false){
+			if (RetrnHavePlayed == false) {
+				AkSoundEngine.PostEvent ("Mus_Explo", gameObject);
+				RetrnHavePlayed = true;
+				AlertHavePlayer = false;
+				suspiciousHavePlayed = false;
+			}		
+		}
 	}
 	void Update () { 
 		

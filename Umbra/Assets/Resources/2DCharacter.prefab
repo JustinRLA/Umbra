@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 114168402780757308}
   - component: {fileID: 114042103868510594}
   - component: {fileID: 114319475921845532}
+  - component: {fileID: 114627478642136494}
   m_Layer: 13
   m_Name: 2DCharacter
   m_TagString: Player
@@ -455,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014189160392212}
   m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 259.07336, y: 16.823631, z: 7.322376}
+  m_LocalPosition: {x: 224.57768, y: 16.439407, z: 7.322376}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_Children:
   - {fileID: 4223585992560926}
@@ -1001,32 +1002,24 @@ MonoBehaviour:
   MarkFour: {fileID: 0}
   MarkFive: {fileID: 0}
   MarkSix: {fileID: 0}
-  MarkSeven: {fileID: 0}
-  MarkEight: {fileID: 0}
   CanSee: 0
   CanSeeTwo: 0
   CanSeeThree: 0
   CanSeeFour: 0
   CanSeeFive: 0
   CanSeeSix: 0
-  CanSeeSeven: 0
-  CanSeeEight: 0
   ConvisibleOne: {fileID: 0}
   ConvisibleTwo: {fileID: 0}
   ConvisibleThree: {fileID: 0}
   ConvisibleFour: {fileID: 0}
   ConvisibleFive: {fileID: 0}
   ConvisibleSix: {fileID: 0}
-  ConvisibleSeven: {fileID: 0}
-  ConvisibleEight: {fileID: 0}
   PatrolOne: {fileID: 0}
   PatrolTwo: {fileID: 0}
   Patrolthree: {fileID: 0}
   PatrolFour: {fileID: 0}
   PatrolFive: {fileID: 0}
   PatrolSix: {fileID: 0}
-  PatrolSeven: {fileID: 0}
-  PatrolEight: {fileID: 0}
 --- !u!114 &114319475921845532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1158,6 +1151,30 @@ MonoBehaviour:
   RealCheckPointManager: {fileID: 0}
   MyRuneMan: {fileID: 0}
   dead: 0
+--- !u!114 &114627478642136494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014189160392212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb8e847219ec06458251780a9fb0a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 00e21556e53f1641a1e7e3f6278f7bd1
+  eventID: 1871943089
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  multiPositionTypeLabel: 0
+  multiPositionArray: []
 --- !u!114 &114848467757930108
 MonoBehaviour:
   m_ObjectHideFlags: 1
