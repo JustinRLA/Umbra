@@ -47,8 +47,6 @@ GameObject:
   - component: {fileID: 114035125408103482}
   - component: {fileID: 114168402780757308}
   - component: {fileID: 114042103868510594}
-  - component: {fileID: 114319475921845532}
-  - component: {fileID: 114627478642136494}
   m_Layer: 13
   m_Name: 2DCharacter
   m_TagString: Player
@@ -1020,30 +1018,6 @@ MonoBehaviour:
   PatrolFour: {fileID: 0}
   PatrolFive: {fileID: 0}
   PatrolSix: {fileID: 0}
---- !u!114 &114319475921845532
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014189160392212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb8e847219ec06458251780a9fb0a4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  valueGuid: 35fc1c84cb03ef478cc5ea3ff15c12c3
-  eventID: -1092605513
-  soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  transitionDuration: 0
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  multiPositionTypeLabel: 0
-  multiPositionArray: []
 --- !u!114 &114386420615009744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1151,30 +1125,6 @@ MonoBehaviour:
   RealCheckPointManager: {fileID: 0}
   MyRuneMan: {fileID: 0}
   dead: 0
---- !u!114 &114627478642136494
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014189160392212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb8e847219ec06458251780a9fb0a4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  valueGuid: 00e21556e53f1641a1e7e3f6278f7bd1
-  eventID: 1871943089
-  soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  transitionDuration: 0
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  multiPositionTypeLabel: 0
-  multiPositionArray: []
 --- !u!114 &114848467757930108
 MonoBehaviour:
   m_ObjectHideFlags: 1

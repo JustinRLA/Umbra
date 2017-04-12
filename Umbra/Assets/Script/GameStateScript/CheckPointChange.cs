@@ -33,7 +33,7 @@ public class CheckPointChange : MonoBehaviour {
 			//print ("Check");
 			//DeathManager.GetComponent<DeathManagerScript>().CheckPointState=CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
 			PlayerPrefs.SetInt ("SaveSystem", AssignCheckpoint);
-			AkSoundEngine.PostEvent ("Amb_Check", gameObject);
+//			AkSoundEngine.PostEvent ("Amb_Check", gameObject);
 			saveNumber=PlayerPrefs.GetInt ("SaveSystem");
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber].SetActive (true);
 			if(saveNumber>1)

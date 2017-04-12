@@ -148,8 +148,8 @@ MonoBehaviour:
   - PhysicalPath: Events\MUS.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{5A477295-C31E-4DA4-B2B5-986D076D6D3E}'
-    m_lastTimePsrt1: -1389650776
-    m_lastTimePart2: -1999339192
+    m_lastTimePsrt1: 1437187284
+    m_lastTimePart2: -1999339032
     List:
     - Name: Mus_Alert
       Path: Default Work Unit\MUS\Mus_Alert
@@ -174,6 +174,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: 48865357
       Guid: 7a8931af3211b242a004f3f5d456986c
+      maxAttenuation: 0
+    - Name: Mus_Located
+      Path: Default Work Unit\MUS\Mus_Located
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 12
+      - ElementName: Mus_Located
+        ObjectType: 3
+      ID: -1295979367
+      Guid: f725d6ce72e07f4582a0af179dc25010
       maxAttenuation: 0
     - Name: Mus_Menu
       Path: Default Work Unit\MUS\Mus_Menu
@@ -223,18 +235,6 @@ MonoBehaviour:
       ID: -1070929929
       Guid: 0f320528746efd43b36c34de62f30307
       maxAttenuation: 0
-    - Name: Mus_SlowMo
-      Path: Default Work Unit\MUS\Mus_SlowMo
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: MUS
-        ObjectType: 12
-      - ElementName: Mus_SlowMo
-        ObjectType: 3
-      ID: 350380962
-      Guid: f725d6ce72e07f4582a0af179dc25010
-      maxAttenuation: 0
     - Name: STOPALLMUSIC
       Path: Default Work Unit\MUS\STOPALLMUSIC
       PathAndIcons:
@@ -250,8 +250,8 @@ MonoBehaviour:
   - PhysicalPath: Events\SFX.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: -723032029
-    m_lastTimePart2: -1999339210
+    m_lastTimePsrt1: -1177084119
+    m_lastTimePart2: -1999339042
     List:
     - Name: Amb_Alarm
       Path: Default Work Unit\SFX\Amb\Amb_Alarm
@@ -479,22 +479,6 @@ MonoBehaviour:
       ID: 169793748
       Guid: 97672f1345d5d545af1cc74d46ffe288
       maxAttenuation: 0
-    - Name: PC_Action_Heartbeat
-      Path: Default Work Unit\SFX\PC\Action\PC_Action_Heartbeat
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: PC
-        ObjectType: 4
-      - ElementName: Action
-        ObjectType: 4
-      - ElementName: PC_Action_Heartbeat
-        ObjectType: 3
-      ID: 1005965974
-      Guid: b3005662a3df884881689146f183d3a1
-      maxAttenuation: 0
     - Name: PC_Action_Kill
       Path: Default Work Unit\SFX\PC\Action\PC_Action_Kill
       PathAndIcons:
@@ -510,22 +494,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1092215814
       Guid: 2aec524a5f8ea74e93e692ebfe09639a
-      maxAttenuation: 0
-    - Name: PC_Action_Look
-      Path: Default Work Unit\SFX\PC\Action\PC_Action_Look
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: PC
-        ObjectType: 4
-      - ElementName: Action
-        ObjectType: 4
-      - ElementName: PC_Action_Look
-        ObjectType: 3
-      ID: -139984921
-      Guid: fc3de77a4f28dd4bb47c2fb522baab4d
       maxAttenuation: 0
     - Name: PC_Action_Respawn
       Path: Default Work Unit\SFX\PC\Action\PC_Action_Respawn
@@ -751,22 +719,6 @@ MonoBehaviour:
       ID: -1999344529
       Guid: a8c25a958674434bb170a08a2c8327a8
       maxAttenuation: 0
-    - Name: PC_Rune_Marquage_Sonar
-      Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Sonar
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 12
-      - ElementName: PC
-        ObjectType: 4
-      - ElementName: Rune
-        ObjectType: 4
-      - ElementName: PC_Rune_Marquage_Sonar
-        ObjectType: 3
-      ID: 2135334427
-      Guid: 5ca9cbf10a81864c9aecd40ef52e610b
-      maxAttenuation: 0
     - Name: PC_Rune_Marquage_Use
       Path: Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Use
       PathAndIcons:
@@ -981,15 +933,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}'
-    m_lastTimePsrt1: 1563252670
-    m_lastTimePart2: -1999339250
+    m_lastTimePsrt1: -1175743985
+    m_lastTimePart2: -1999339042
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1AF2D82A-9DEA-451D-A831-817BC1E3BD46}'
-    m_lastTimePsrt1: -1149640901
-    m_lastTimePart2: -1999340280
+    m_lastTimePsrt1: -1164332844
+    m_lastTimePart2: -1999339042
     List:
     - Name: Foot_Stealth
       Path: Default Work Unit\Foot_Stealth
@@ -1028,23 +980,23 @@ MonoBehaviour:
       values:
       - Alert
       - Explo
+      - Located
       - None
-      - SlowMo
       ValueIcons:
       - ElementName: Alert
         ObjectType: 8
       - ElementName: Explo
         ObjectType: 8
+      - ElementName: Located
+        ObjectType: 8
       - ElementName: None
         ObjectType: 8
-      - ElementName: SlowMo
-        ObjectType: 8
-      valueIDs: 819a052bc1a35ce3db3ba32c7eb3e3c0
+      valueIDs: 819a052bc1a35ce36d00948ddb3ba32c
       ValueGuids:
       - bytes: 31d6f98a9aef004481c0f4408fc4e323
       - bytes: fc5289156efd6344a59660c49a19e437
-      - bytes: c221a31da2b7fa42b9c20ae74c97c835
       - bytes: a8ad00bc5aa9f24d92480c9618bfe155
+      - bytes: c221a31da2b7fa42b9c20ae74c97c835
     - Name: Secteurs
       Path: Default Work Unit\Secteurs
       PathAndIcons:
@@ -1107,13 +1059,25 @@ MonoBehaviour:
   - /Umbra_WwiseProject
   - /Umbra_WwiseProject/Events
   - /Umbra_WwiseProject/Events/Default Work Unit
+  - /Umbra_WwiseProject/Events/Default Work Unit/CutS
   - /Umbra_WwiseProject/Events/Default Work Unit/MUS
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX
+  - /Umbra_WwiseProject/Events/Default Work Unit/SFX/Amb
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX/NPCs
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX/PC
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX/PC/Action
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX/PC/Foot
   - /Umbra_WwiseProject/Events/Default Work Unit/SFX/PC/Rune
+  - /Umbra_WwiseProject/Events/Default Work Unit/SFX/UI
+  - /Umbra_WwiseProject/Events/Default Work Unit/VO
+  - /Umbra_WwiseProject/Events/Default Work Unit/VO/PC
+  - /Umbra_WwiseProject/SoundBanks
+  - /Umbra_WwiseProject/SoundBanks/TrueSoundBank
+  - /Umbra_WwiseProject/States
+  - /Umbra_WwiseProject/States/Default Work Unit
+  - /Umbra_WwiseProject/States/Default Work Unit/Foot_Stealth
+  - /Umbra_WwiseProject/States/Default Work Unit/Music
+  - /Umbra_WwiseProject/States/Default Work Unit/Secteurs
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

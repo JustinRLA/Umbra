@@ -52,6 +52,8 @@ using UnityEngine.SceneManagement;
 
 	void Start()
 	{
+		AkSoundEngine.PostEvent ("Amb_Bell", gameObject);
+
 		numberofDeath = PlayerPrefs.GetInt ("Death");
 		if(TruePlayer==true)
 		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
