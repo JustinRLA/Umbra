@@ -83,7 +83,7 @@ public class solifyShadow : MonoBehaviour {
 
 	IEnumerator SolidicationEvent()
 	{
-		AkSoundEngine.PostEvent("Rune_Solide_Use",gameObject);
+		AkSoundEngine.PostEvent("PC_Rune_Solide_Use",gameObject);
 		myMainCam = GameObject.Find ("Main Camera");
 
 		mymyRuneManagerScript.timerTactic = 0;
