@@ -122,6 +122,7 @@
 													</ValueList>
 												</Property>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1184,15 +1185,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Wwise Sine" ID="{EFBA921A-F6A1-461E-B619-761AD2FFEC6E}" ShortID="835219410" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
-													<PropertyList>
-														<Property Name="SineGain" Type="Real32" Value="-28"/>
-													</PropertyList>
+												<AudioFileSource Name="PC_Rune_Ombre_Use" ID="{DC25A456-EB2E-4DDA-9F8C-87CDAB218A17}" ShortID="1041648969">
 													<Language>SFX</Language>
-												</SourcePlugin>
+													<AudioFile>PC_Rune_Ombre_Use.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Wwise Sine" ID="{EFBA921A-F6A1-461E-B619-761AD2FFEC6E}" Platform="Linked"/>
+												<ActiveSource Name="PC_Rune_Ombre_Use" ID="{DC25A456-EB2E-4DDA-9F8C-87CDAB218A17}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Ombre_Decay" ID="{0338AA95-A496-4A82-8A4B-B89BBF025804}" ShortID="805044681" Type="SoundFX">
@@ -1232,6 +1231,20 @@
 													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
+												<AudioFileSource Name="PC_Rune_Ombre_Use" ID="{D2C3A93E-8089-4E80-84ED-7D1E16AAEFF7}" ShortID="160635634">
+													<Language>SFX</Language>
+													<AudioFile>PC_Rune_Ombre_Use.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="1041648969"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="PC_Rune_Solide_Use" ID="{467DCC0A-31D2-4904-AE1E-B7E0075E6060}" ShortID="995764233">
+													<Language>SFX</Language>
+													<AudioFile>PC_Rune_Solide_Use.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="945297317"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Wwise Sine" ID="{2E266BCA-B9B0-460A-8D23-A3A515A84253}" Platform="Linked"/>
@@ -1308,15 +1321,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Wwise Sine" ID="{7F983630-E305-4E4E-94CF-E0519E04EE40}" ShortID="1043932153" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
-													<PropertyList>
-														<Property Name="SineGain" Type="Real32" Value="-28"/>
-													</PropertyList>
+												<AudioFileSource Name="PC_Rune_Solide_Use" ID="{4739AF86-4176-4456-9C21-010F91D319DF}" ShortID="945297317">
 													<Language>SFX</Language>
-												</SourcePlugin>
+													<AudioFile>PC_Rune_Solide_Use.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Wwise Sine" ID="{7F983630-E305-4E4E-94CF-E0519E04EE40}" Platform="Linked"/>
+												<ActiveSource Name="PC_Rune_Solide_Use" ID="{4739AF86-4176-4456-9C21-010F91D319DF}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Solide_End" ID="{98337FDA-FE5E-4B64-932E-67C7ECAF4CF4}" ShortID="838300822" Type="SoundFX">
