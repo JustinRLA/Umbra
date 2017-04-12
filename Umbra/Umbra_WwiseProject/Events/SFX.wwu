@@ -64,17 +64,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Amb_Bell" ID="{5615E200-3FE5-4116-A1E7-E3F6278F7BD1}">
-							<ChildrenList>
-								<Action Name="Play" ID="{7E734829-0774-4BB7-A9A4-DB12850BDB04}" ShortID="133541186" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{06271FE2-162F-47F4-AC69-8AF6DD03CD27}" Global="false">
-											<ObjectRef Name="Amb_Bell" ID="{4F6D02B9-9191-4673-BF90-0FC72C8E1CA5}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Amb_Check" ID="{9BF02086-BD0F-4729-8108-A7D7CDC6F5A2}">
 							<ChildrenList>
 								<Action Name="Play" ID="{F7D91D69-5555-4BBA-93AD-A6C79C6576F3}" ShortID="757453929" Type="Play" Scope="One" Global="false">
@@ -424,17 +413,6 @@
 											<ElementList>
 												<Element ID="{FFF55FB5-DB7A-4865-A68B-D2EA3B7E7452}" Global="false">
 													<ObjectRef Name="PC_Rune_Accrochage_Red" ID="{8A39BECE-251F-4107-B1BF-7AAB28F11B2E}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-												</Element>
-											</ElementList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="PC_Rune_Cooldown" ID="{6ADEA7B8-156A-41D1-8C57-FE98EFD80138}">
-									<ChildrenList>
-										<Action Name="Play" ID="{3E308E36-CD4D-47FC-BFAF-E820ADE62901}" ShortID="725745058" Type="Play" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{B765F96C-A8CC-46AE-8DF2-3DB719FBE1E3}" Global="false">
-													<ObjectRef Name="PC_Rune_Cooldown" ID="{49327EC3-07AC-44B9-B73D-D26F8C86AF91}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
