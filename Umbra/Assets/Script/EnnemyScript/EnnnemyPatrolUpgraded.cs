@@ -146,6 +146,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	private Animator m_Anim;
 
+    public bool faitAttaque = false;
+
 //	// Use this for initialization
 	void Awake()
 	{
@@ -395,7 +397,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		backHome = false;
 		if(Vector3.Distance(transform.position, ThePlayer.position)<5 && Safe==false && timerAttack<=0)
 		{
-			print ("attacking");
+            //Justin
+            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            faitAttaque = true;
+            print ("attacking");
 			GetComponent<Animator>().SetBool ("Attaque", true);
 			if(havePlayedKill==false)
 			{
@@ -893,21 +898,21 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	
 	
 		//the actual way to make ennemy move toward a specific Point
-		if(Suspicious==true)
+		if(Suspicious==true && !faitAttaque)
 		{
 		direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
 //		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
 		movPos = new Vector3 (transform.position.x + ((direction/100)*speed*2* Time.deltaTime) , transform.position.y,transform.position.z);
 		transform.position = movPos ;
 		}
-		if(Alert==true)
+		if(Alert== true && !faitAttaque)
 		{
 			direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
 			//		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
 			movPos = new Vector3 (transform.position.x + ((direction/100)*speed*4* Time.deltaTime) , transform.position.y,transform.position.z);
 			transform.position = movPos ;
 		}
-		if(Alert==false && Suspicious==false)
+		if(Alert==false && Suspicious== false && !faitAttaque)
 		{
 			direction = Mathf.Sign (CurrentNavPoint.position.x - transform.position.x);
 			//		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
@@ -915,7 +920,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			transform.position = movPos ;
 		}
 
-		if(InRange==true && LureAttention==false)
+		if(InRange==true && LureAttention== false)
 		{
 			SoundLevel = Vector3.Distance (ThePlayer.transform.position, transform.position);
 			if(Alert==false && mySighListernetTemplate.throwAlert==false)
@@ -931,7 +936,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			} 
 		}
 
-			if(Alert==false && mySighListernetTemplate.throwAlert==false)
+			if(Alert==false && mySighListernetTemplate.throwAlert== false)
 			{
 				if (mySighListernetTemplate.throwSuspicious==true)
 				{
