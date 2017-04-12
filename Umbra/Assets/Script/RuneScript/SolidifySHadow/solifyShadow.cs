@@ -113,7 +113,7 @@ public class solifyShadow : MonoBehaviour {
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		yield return new WaitForSeconds(10f);
-		AkSoundEngine.PostEvent("Rune_Solide_End",gameObject);
+		AkSoundEngine.PostEvent("PC_Rune_Solide_End",gameObject);
 
 		GrimpSurface.GetComponent<Collider2D> ().enabled = false;
 		if (GrimpSurface.GetComponent<maxHauteurLadder> ().TouchShadow == true)

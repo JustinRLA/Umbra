@@ -231,9 +231,15 @@ using UnityEngine.SceneManagement;
 
 		if(ActualLadder != null)
 		{
+			
+
 			if (ClimbTrue == true && dead==false) 
 			{
-					
+				if (ActualLadder.GetComponent<maxHauteurLadder> ().CheckRight == true && m_FacingRight == false)
+					Flip ();
+				else
+					if (ActualLadder.GetComponent<maxHauteurLadder> ().CheckRight == false && m_FacingRight == true)
+						Flip ();
 				m_JumpForce = 0;
 				GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
 				if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space) == false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder> ().MaxHauteur.position.y) {
@@ -502,7 +508,13 @@ using UnityEngine.SceneManagement;
 //		ActualLadder.GetComponent<Collider2D> ().enabled = true;
 //
 //	}
+	void ChangeToLeft()
+	{
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 
+	}
         private void Flip()
         {
             // Switch the way the player is labelled as facing.
