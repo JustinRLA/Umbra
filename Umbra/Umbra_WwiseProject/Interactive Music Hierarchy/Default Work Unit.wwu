@@ -1664,7 +1664,6 @@
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
-															<ReferenceList/>
 															<TransitionInfo/>
 														</MusicTransition>
 													</TransitionList>
@@ -1749,7 +1748,6 @@
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
-															<ReferenceList/>
 															<TransitionInfo/>
 														</MusicTransition>
 													</TransitionList>
@@ -2518,7 +2516,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -2537,7 +2535,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -2556,7 +2554,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -2771,7 +2769,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -2790,7 +2788,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -2809,7 +2807,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -2934,7 +2932,6 @@
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
-															<ReferenceList/>
 															<TransitionInfo/>
 														</MusicTransition>
 													</TransitionList>
@@ -2977,7 +2974,6 @@
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
-															<ReferenceList/>
 															<TransitionInfo/>
 														</MusicTransition>
 													</TransitionList>
@@ -3068,7 +3064,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -3087,7 +3083,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -3106,7 +3102,7 @@
 																				</PropertyList>
 																				<PointList>
 																					<Point>
-																						<XPos>-0</XPos>
+																						<XPos>0</XPos>
 																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
@@ -4729,6 +4725,10 @@
 									</PropertyList>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{92E4DCC4-CD0E-4DDE-AE6D-FC5666EFF2C6}">
+											<PropertyList>
+												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+											</PropertyList>
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -4758,6 +4758,14 @@
 								<Entry>
 									<Path>
 										<PathElementRef Name="None" ID="{1DA321C2-B7A2-42FA-B9C2-0AE74C97C835}"/>
+									</Path>
+									<AudioNodeInfo>
+										<AudioNodeRef Name="Mus_Secteur2_Explo" ID="{2F3EB6E4-4234-47F1-B626-6A343F8CE666}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
+									</AudioNodeInfo>
+								</Entry>
+								<Entry>
+									<Path>
+										<PathElementRef Name="SlowMo" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
 									</Path>
 									<AudioNodeInfo>
 										<AudioNodeRef Name="Mus_Secteur2_Explo" ID="{2F3EB6E4-4234-47F1-B626-6A343F8CE666}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
@@ -4796,7 +4804,7 @@
 								<PathElementRef Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="Mus_Secteur2" ID="{8244F52D-B207-41EA-9077-06265C5233A4}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
