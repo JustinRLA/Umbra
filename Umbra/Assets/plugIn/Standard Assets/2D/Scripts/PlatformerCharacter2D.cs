@@ -77,9 +77,7 @@ using UnityEngine.SceneManagement;
 	{
 
 		AssassinTrigger.SetActive (false);
-		//AkSoundEngine.PostEvent ("PC_Action_Respawn", gameObject);
 		dead = true;
-		AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
 
 		Time.timeScale = 1;
 		inShadow = false;

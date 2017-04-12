@@ -27,7 +27,6 @@ public class EnnemyMarked : MonoBehaviour {
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 		myMainCam=GameObject.Find("Main Camera");
 		myCam=GameObject.Find("Main Camera (1)");
-		raycarVision=GameObject.Find("")
 
 
 	}
