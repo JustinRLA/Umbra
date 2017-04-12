@@ -66,10 +66,23 @@
 				</Event>
 				<Event Name="Mus_Secteur3" ID="{2805320F-6E74-43FD-B36C-34DE62F30307}">
 					<ChildrenList>
+						<Action Name="Post Event" ID="{5E85922F-4577-4820-8F11-4EC56A3469ED}" ShortID="336892120" Type="PlayEvent" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{0A405FA6-A2DA-4727-A623-8519E0A49ED6}" Global="false">
+									<ObjectRef Name="STOPALLMUSIC" ID="{13BA3892-5996-4738-BE32-837B6F852AF5}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+								</Element>
+							</ElementList>
+						</Action>
 						<Action Name="Set State" ID="{B3C923E2-3F0D-41D5-B1B9-30325ABB0320}" ShortID="985985644" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
 								<GroupItem Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
+							</SetItemParam>
+						</Action>
+						<Action Name="Set State" ID="{B1480349-D7DD-47AA-BEED-C84294DDD830}" ShortID="633506393" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
+								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
 						<Action Name="Play" ID="{06CD657C-D45E-4C12-B5BD-FEFCBB2DA30F}" ShortID="289199823" Type="Play" Scope="One" Global="false">
@@ -79,20 +92,27 @@
 								</Element>
 							</ElementList>
 						</Action>
-						<Action Name="Set State" ID="{B1480349-D7DD-47AA-BEED-C84294DDD830}" ShortID="633506393" Type="SetState" Scope="All" Global="true">
-							<SetItemParam>
-								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
-								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
-							</SetItemParam>
-						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Mus_Secteur2" ID="{EAA7BD23-29AA-4042-A1E5-2C8253E2F604}">
 					<ChildrenList>
+						<Action Name="Post Event" ID="{F065A475-9FA8-4A35-8AAA-BC97F44E3B6D}" ShortID="926618716" Type="PlayEvent" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{F728FAAA-B113-4058-B4CE-10B3A12CF8C8}" Global="false">
+									<ObjectRef Name="STOPALLMUSIC" ID="{13BA3892-5996-4738-BE32-837B6F852AF5}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+								</Element>
+							</ElementList>
+						</Action>
 						<Action Name="Set State" ID="{E032E3D9-C1F6-473B-AE32-23527FCAB93F}" ShortID="230634003" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
 								<GroupItem Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
+							</SetItemParam>
+						</Action>
+						<Action Name="Set State" ID="{CAEE0925-3A99-426C-8D34-90755D6CDC98}" ShortID="773163064" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
+								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
 						<Action Name="Play" ID="{F25F3442-8C98-4747-A70F-7E792BFDC2A0}" ShortID="420592361" Type="Play" Scope="One" Global="false">
@@ -101,12 +121,6 @@
 									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
-						</Action>
-						<Action Name="Set State" ID="{CAEE0925-3A99-426C-8D34-90755D6CDC98}" ShortID="773163064" Type="SetState" Scope="All" Global="true">
-							<SetItemParam>
-								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
-								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
-							</SetItemParam>
 						</Action>
 					</ChildrenList>
 				</Event>
@@ -118,9 +132,9 @@
 								<GroupItem Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Trigger" ID="{F8C01C11-8A4C-46F2-8CCC-056985C65D6C}" ShortID="174035875" Type="Trigger" Scope="One" Global="false">
+						<Action Name="Trigger" ID="{F8C01C11-8A4C-46F2-8CCC-056985C65D6C}" ShortID="174035875" Type="Trigger" Scope="One" Global="true">
 							<ElementList>
-								<Element ID="{FC71492C-98DE-4362-93D3-A1DBD90D7FE6}" Global="false">
+								<Element ID="{FC71492C-98DE-4362-93D3-A1DBD90D7FE6}" Global="true">
 									<ObjectRef Name="Alert" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
 								</Element>
 							</ElementList>
