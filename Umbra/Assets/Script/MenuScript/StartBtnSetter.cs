@@ -44,4 +44,21 @@ public void restartGame()
 
 		PlayerPrefs.SetInt ("SaveSystem", 0);
 			}
+
+	public void HoverSound()
+	{
+		AkSoundEngine.PostEvent("Menu_Hover",gameObject);
+
+	}
+	public void ClickSound()
+	{
+		AkSoundEngine.PostEvent("Menu_Click",gameObject);
+
+	}
+	public void CancelSound()
+	{
+		AkSoundEngine.PostEvent("Menu_Cancel",gameObject);
+	}
+
+
 }
