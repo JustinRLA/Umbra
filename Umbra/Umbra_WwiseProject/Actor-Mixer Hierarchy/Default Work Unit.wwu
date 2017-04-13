@@ -3235,7 +3235,14 @@
 									</ChildrenList>
 								</ActorMixer>
 								<BlendContainer Name="Amb_Room" ID="{8620F060-9852-42EA-ADEB-B925E0EB95F5}" ShortID="308390097">
+									<PropertyList>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Rain" ID="{F45C1CFF-7FF9-4460-8893-3EF239C55945}" WorkUnitID="{9DDEA9CA-00FF-443F-9714-0256F99621A7}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
 										</Reference>
@@ -3246,6 +3253,11 @@
 									<ChildrenList>
 										<Sound Name="Amb_Rain" ID="{11ED6294-86DC-4F25-9B9A-C8B84151C939}" ShortID="91801773" Type="SoundFX">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3269,6 +3281,36 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Amb_Rain" ID="{886FA0F9-675E-418A-B4DC-463D1EF720F5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Mus_Menu" ID="{04F42BA7-9C4B-4356-85D7-BE2F75F91EAD}" ShortID="143157463" Type="SoundFX">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-18</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Mus_Menu" ID="{880C510C-2AAE-4E11-BD81-4F0098BE8349}" ShortID="721335870">
+													<Language>SFX</Language>
+													<AudioFile>Mus_Menu.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="176784398"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Mus_Menu" ID="{880C510C-2AAE-4E11-BD81-4F0098BE8349}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
