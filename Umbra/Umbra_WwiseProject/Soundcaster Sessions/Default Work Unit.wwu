@@ -130,16 +130,12 @@
 				<SoundcasterSession Name="Music" ID="{1E3AB5B2-00A9-47E8-8673-3C415546D5EF}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Mus_Secteur2" ID="{EAA7BD23-29AA-4042-A1E5-2C8253E2F604}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
-							<Position X="0" Y="0"/>
+							<ObjectRef Name="Mus_Explo" ID="{AF31897A-1132-42B2-A004-F3F5D456986C}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Mus_Secteur1" ID="{C6814B7A-8E6B-41C1-82CB-907D07F4336C}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Mus_Explo" ID="{AF31897A-1132-42B2-A004-F3F5D456986C}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
-							<Position X="0" Y="2"/>
+							<Position X="0" Y="4"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Mus_Ingame" ID="{6082B3C2-5027-4904-A0E5-7FBDF1022B0B}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
@@ -150,12 +146,20 @@
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Mus_Secteur2" ID="{EAA7BD23-29AA-4042-A1E5-2C8253E2F604}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Mus_Menu" ID="{38662795-8415-457A-BF95-5843AD36745E}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Mus_Located" ID="{CED625F7-E072-457F-82A0-AF179DC25010}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
 							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mus_Secteur3" ID="{2805320F-6E74-43FD-B36C-34DE62F30307}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+							<Position X="2" Y="4"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Mus_Menu" ID="{38662795-8415-457A-BF95-5843AD36745E}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
@@ -179,7 +183,7 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
 						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
-						<CurrentStateRef Name="MainMenu" ID="{A3698F00-6554-4266-A778-EC38FC465C75}"/>
+						<CurrentStateRef Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

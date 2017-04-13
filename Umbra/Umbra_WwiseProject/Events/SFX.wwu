@@ -110,6 +110,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Stop" ID="{0553F613-2CBD-4266-A42B-B56305F2E934}" ShortID="717022675" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{D798AD0B-DB64-48E6-AF24-17065E64BE98}" Global="false">
+											<ObjectRef Name="State" ID="{23E84DB6-59EF-412B-B63A-5EEED973C203}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="NPC_Action_Kill" ID="{63AB3A33-384C-4854-AC13-3269605A1C9F}">
