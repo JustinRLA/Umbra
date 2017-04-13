@@ -13,7 +13,9 @@ public class solifyShadow : MonoBehaviour {
 	public GameObject PlayerMy;
 	public float movespeed;
 	public GameObject[] AllShadow;
-	public GameObject GrimpSurface;
+	public GameObject GrimpSurfaceRight;
+	public GameObject GrimpSurfaceLeft;
+
 	bool colPlayer;
 
 	// Use this for initialization
@@ -99,8 +101,11 @@ public class solifyShadow : MonoBehaviour {
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		gameObject.tag="SolidOmbre";
 		gameObject.layer = 10;
-		GrimpSurface.SetActive (true);
-		GrimpSurface.GetComponent<Collider2D> ().enabled = true;
+		GrimpSurfaceLeft.SetActive (true);
+		GrimpSurfaceRight.SetActive (true);
+
+		GrimpSurfaceRight.GetComponent<Collider2D> ().enabled = true;
+		GrimpSurfaceLeft.GetComponent<Collider2D> ().enabled = true;
 
 		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
 
@@ -115,10 +120,13 @@ public class solifyShadow : MonoBehaviour {
 		yield return new WaitForSeconds(10f);
 		AkSoundEngine.PostEvent("PC_Rune_Solide_End",gameObject);
 
-		GrimpSurface.GetComponent<Collider2D> ().enabled = false;
-		if (GrimpSurface.GetComponent<maxHauteurLadder> ().TouchShadow == true)
+		GrimpSurfaceLeft.GetComponent<Collider2D> ().enabled = false;
+		GrimpSurfaceRight.GetComponent<Collider2D> ().enabled = false;
+
+		if (GrimpSurfaceLeft.GetComponent<maxHauteurLadder> ().TouchShadow == true || GrimpSurfaceRight.GetComponent<maxHauteurLadder> ().TouchShadow)
 			PlayerMy.GetComponent<PlatformerCharacter2D> ().ClimbTrue = false;
-		GrimpSurface.SetActive (false);
+		GrimpSurfaceLeft.SetActive (false);
+		GrimpSurfaceRight.SetActive (false);
 
 		MySolid.CanClickable = false;
 		gameObject.layer = 10;

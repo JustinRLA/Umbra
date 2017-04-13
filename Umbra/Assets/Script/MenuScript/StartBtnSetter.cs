@@ -35,6 +35,7 @@ public class StartBtnSetter : MonoBehaviour {
 		SceneManager.LoadScene ("NiveauComplete");
 	}
 
+	 
 
 public void restartGame()
 			{
@@ -42,6 +43,5 @@ public void restartGame()
 		PlayerPrefs.SetInt ("Kill", 0);
 
 		PlayerPrefs.SetInt ("SaveSystem", 0);
-		SceneManager.LoadScene ("NiveauComplete");
 			}
 }

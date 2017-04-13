@@ -223,7 +223,7 @@ using UnityEngine.SceneManagement;
 
 
 			
-		if (ActualLadder == null)
+		if (ActualLadder == null || ActualLadder.activeInHierarchy==false)
 		{
 			ReturnToNormal ();
 			m_JumpForce = 650;
