@@ -447,7 +447,7 @@ using UnityEngine.SceneManagement;
 				m_Grounded = false;
 				m_Anim.SetBool("Ground", false);
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-				AkSoundEngine.PostEvent ("PC_FOOT_JUMP", gameObject);
+				AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
 			}
 			if (Input.GetKeyUp (KeyCode.Space))
 				canJump = true;
