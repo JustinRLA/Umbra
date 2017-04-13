@@ -111,22 +111,11 @@
 				</Event>
 				<Event Name="Mus_Menu" ID="{38662795-8415-457A-BF95-5843AD36745E}">
 					<ChildrenList>
-						<Action Name="Post Event" ID="{8CC665B2-A13B-4FCA-8D12-566ABEE6BB8F}" ShortID="71913167" Type="PlayEvent" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{3FDDB952-7523-43E9-A6F8-5448522C2643}" Global="false">
-									<ObjectRef Name="STOPALLMUSIC" ID="{13BA3892-5996-4738-BE32-837B6F852AF5}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Play" ID="{721D317C-54C9-4E1F-9E0E-4F63A62DC5CB}" ShortID="758724713" Type="Play" Scope="One" Global="false">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{BA6C643F-483C-442F-BEB6-0502B42454E9}" Global="false">
-									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
+						<Action Name="Set State" ID="{2377E102-5928-42C6-A754-A9E754F7A0AF}" ShortID="291054203" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
+								<GroupItem Name="MainMenu" ID="{A3698F00-6554-4266-A778-EC38FC465C75}"/>
+							</SetItemParam>
 						</Action>
 					</ChildrenList>
 				</Event>
