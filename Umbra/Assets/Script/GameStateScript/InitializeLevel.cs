@@ -55,7 +55,7 @@ public class InitializeLevel : MonoBehaviour {
 			AkSoundEngine.PostEvent ("Mus_Secteur2", gameObject);
 		
 		
-		if (decoountNumber > 7)
+		if (decoountNumber >= 7)
 			interzone [1].SetActive(true);
 
 		if (decoountNumber < 7)

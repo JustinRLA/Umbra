@@ -171,6 +171,9 @@
 							</ElementList>
 						</Action>
 						<Action Name="Play" ID="{721D317C-54C9-4E1F-9E0E-4F63A62DC5CB}" ShortID="758724713" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{BA6C643F-483C-442F-BEB6-0502B42454E9}" Global="false">
 									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -182,6 +185,9 @@
 				<Event Name="STOPALLMUSIC" ID="{13BA3892-5996-4738-BE32-837B6F852AF5}">
 					<ChildrenList>
 						<Action Name="Stop" ID="{99F7DA00-5E7C-47C8-84C0-DCCBEAC9DA2C}" ShortID="581240449" Type="Stop" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{64ACFE60-8A93-46B1-85FA-ED13D7FABCAB}" Global="true">
 									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -189,6 +195,9 @@
 							</ElementList>
 						</Action>
 						<Action Name="Stop" ID="{0085997F-F0C6-48DF-84AF-BCCE17DCCDFA}" ShortID="320114502" Type="Stop" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{48CCB172-68C5-4363-BF6C-8AFA1013D7E2}" Global="true">
 									<ObjectRef Name="InGame_Alert" ID="{F28B3D0A-1DE2-4F3C-B357-3AF6D3E9D196}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -196,6 +205,10 @@
 							</ElementList>
 						</Action>
 						<Action Name="Stop" ID="{23210BA5-6B26-40FE-B9B6-5D54DDF73CD9}" ShortID="909856155" Type="Stop" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{BCF18E7E-5C00-4528-8936-9C9647A3F236}" Global="true">
 									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>

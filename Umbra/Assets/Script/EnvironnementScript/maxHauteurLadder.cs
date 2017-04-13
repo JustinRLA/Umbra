@@ -6,6 +6,8 @@ public class maxHauteurLadder : MonoBehaviour {
 	public Transform MaxHauteur;
 	public Transform MinHauteur;
 	public bool TouchShadow;
+	public bool CheckRight;
+
 	// Use this for initialization
 	void Start () {
 		
