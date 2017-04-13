@@ -7,10 +7,10 @@ public class StartBtnSetter : MonoBehaviour {
 	public GameObject ContinueBtn;
 	public GameObject CommencerNewGame;
 	public GameObject CommencerStartedGame;
-
+	GameObject MusicBase;
 	// Use this for initialization
 	void Start () {
-		
+		MusicBase = GameObject.Find ("MusicBase");
 		if (PlayerPrefs.GetInt ("SaveSystem") == 0)
 		{
 			ContinueBtn.SetActive (false);
@@ -33,6 +33,7 @@ public class StartBtnSetter : MonoBehaviour {
 	}
 	public void Continue()
 	{
+		MusicBase.GetComponent<StartMainMenu> ().StartLevelMusic ();
 		SceneManager.LoadScene ("NiveauComplete");
 	}
 

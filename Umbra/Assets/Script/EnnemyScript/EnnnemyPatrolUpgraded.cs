@@ -18,6 +18,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public Transform PointToLookWIthOneNavPoint;
 	public bool PlayerIsUp;
 	public bool PlayerIsDown;
+	public GameObject ConeSuspicious;
+	public GameObject ConeAlerte;
+	public GameObject ConeNormal;
+
 	Vector3 movPos;
 	bool routine;
 	public float timerAttack;
@@ -151,12 +155,13 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //	// Use this for initialization
 	void Awake()
 	{
-		AkSoundEngine.PostEvent ("NPC_State_Normal", gameObject);
 		LurePlayer = GameObject.Find ("2DCharacterShadow").transform;
 
 	}
 
 	void Start () {
+		AkSoundEngine.PostEvent ("NPC_State_Normal", gameObject);
+
 		routine = true;
 		MyPlayer = GameObject.Find("2DCharacter(Clone)");
 		ThePlayer = MyPlayer.transform;
@@ -188,6 +193,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 		OriginalSpeed = speed;
 	}
+
 
 	public void LurAttention()
 	{

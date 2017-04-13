@@ -105,12 +105,12 @@ public class CheckVisinCone : MonoBehaviour {
 							CanSee = true;
 						if (CanSee == true || MarkOne.isMarked==true) {
 							if (PatrolOne != null)
-								ConvisibleOne.HisSight.GetComponent<MeshRenderer> ().enabled = true;
+						ConvisibleOne.HisSight.SetActive(true);
 						}
 						if(CanSee == false && MarkOne.isMarked==false)
 						{
 							if (PatrolOne != null)
-								ConvisibleOne.HisSight.GetComponent<MeshRenderer> ().enabled = false;
+						ConvisibleOne.HisSight.SetActive(false);
 						}
 					}
 				}
@@ -148,12 +148,12 @@ public class CheckVisinCone : MonoBehaviour {
 							CanSeeTwo = true;
 						if (CanSeeTwo == true || MarkTwo.isMarked==true) {
 							if (PatrolTwo != null)
-								ConvisibleTwo.HisSight.GetComponent<MeshRenderer> ().enabled = true;
+						ConvisibleTwo.HisSight.SetActive(true);
 						}
 						if(CanSeeTwo == false && MarkTwo.isMarked==false)
 						{
 							if (PatrolTwo != null)
-								ConvisibleTwo.HisSight.GetComponent<MeshRenderer> ().enabled = false;
+						ConvisibleTwo.HisSight.SetActive(false);
 						}
 					}
 
@@ -191,12 +191,12 @@ public class CheckVisinCone : MonoBehaviour {
 							CanSeeThree = true;
 						if (CanSeeThree == true || MarkThree.isMarked==true) {
 							if (Patrolthree != null)
-								ConvisibleThree.HisSight.GetComponent<MeshRenderer> ().enabled = true;
+						ConvisibleThree.HisSight.SetActive(true);
 						}
 						if(CanSeeThree == false && MarkThree.isMarked==false)
 						{
 							if (Patrolthree != null)
-								ConvisibleThree.HisSight.GetComponent<MeshRenderer> ().enabled = false;
+						ConvisibleThree.HisSight.SetActive(false);
 						}
 						//	}
 					}
@@ -234,11 +234,11 @@ public class CheckVisinCone : MonoBehaviour {
 							CanSeeFour = true;
 						if (CanSeeFour == true || MarkFour.isMarked == true) {
 							if (PatrolFour != null)
-								ConvisibleFour.HisSight.GetComponent<MeshRenderer> ().enabled = true;
+						ConvisibleFour.HisSight.SetActive(true);
 						}
 						if (CanSeeFour == false && MarkFour.isMarked == false) {
 							if (PatrolFour != null)
-								ConvisibleFour.HisSight.GetComponent<MeshRenderer> ().enabled = false;
+						ConvisibleFour.HisSight.SetActive(false);
 						}
 					}
 					//	}
@@ -280,11 +280,11 @@ public class CheckVisinCone : MonoBehaviour {
 						{
 							if (CanSeeFive == true || MarkFive.isMarked==true)
 							{
-								ConvisibleFive.HisSight.GetComponent<MeshRenderer> ().enabled = true;
+						ConvisibleFive.HisSight.SetActive(true);
 							}
 							if (CanSeeFive == false && MarkFive.isMarked == false) 
 							{
-								ConvisibleFive.HisSight.GetComponent<MeshRenderer> ().enabled = false;
+						ConvisibleFive.HisSight.SetActive(false);
 							}
 
 							//	}
@@ -327,12 +327,12 @@ public class CheckVisinCone : MonoBehaviour {
 							CanSeeSix = true;
 						if (CanSeeSix == true || MarkSix == true) {
 							if (PatrolSix != null)
-								ConvisibleSix.HisSight.GetComponent<MeshRenderer> ().enabled = true;
+						ConvisibleSix.HisSight.SetActive(true);
 						}
 						if (CanSeeSix == false && MarkSix == false) {
 							{
 								if (PatrolSix != null)
-									ConvisibleSix.HisSight.GetComponent<MeshRenderer> ().enabled = false;
+							ConvisibleSix.HisSight.SetActive(false);
 							}
 							//	}
 

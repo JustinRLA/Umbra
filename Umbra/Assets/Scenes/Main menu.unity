@@ -5575,8 +5575,6 @@ GameObject:
   - component: {fileID: 772955525}
   - component: {fileID: 772955526}
   - component: {fileID: 772955527}
-  - component: {fileID: 772955529}
-  - component: {fileID: 772955528}
   m_Layer: 0
   m_Name: startconditionBase
   m_TagString: Untagged
@@ -5624,43 +5622,6 @@ MonoBehaviour:
   ContinueBtn: {fileID: 616889195}
   CommencerNewGame: {fileID: 1015348718}
   CommencerStartedGame: {fileID: 171696341}
---- !u!114 &772955528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 772955524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc72ef71fb4f6f47b8f322750e2ba08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_positionOffsetData:
-    positionOffset: {x: 0, y: 0, z: 0}
-    KeepMe: 0
-  isEnvironmentAware: 0
-  listenerMask: 1
-  isStaticObject: 0
-  m_posOffsetData: {fileID: 0}
---- !u!114 &772955529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 772955524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018617a549bbb69479e1956e6db21f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  valueGuid: 77b013379f320144873c62a09d1a0b5c
-  bankName: SFX
-  loadAsynchronous: 0
-  decodeBank: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 
 --- !u!1 &782478539
 GameObject:
   m_ObjectHideFlags: 0
