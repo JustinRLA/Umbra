@@ -138,6 +138,10 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Mus_Ingame" ID="{6082B3C2-5027-4904-A0E5-7FBDF1022B0B}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Mus_Alert" ID="{8AE5179E-A123-42C9-AC6E-ACD82418E2FD}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
 							<Position X="1" Y="2"/>
 						</Module>
@@ -169,6 +173,38 @@
 						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 						<CurrentStateRef Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Menu" ID="{CC03F66E-6B4D-4C65-B6A6-A4AE63C45A04}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Menu_Click" ID="{988A43B9-39AE-4FC1-BFE9-EF56D41E0930}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mus_Menu" ID="{38662795-8415-457A-BF95-5843AD36745E}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Menu_Cancel" ID="{3C627F04-54CA-4A6C-A4A8-903F83A39E17}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Menu_Hover" ID="{791118D7-99AA-4917-94D7-45F8364330EE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

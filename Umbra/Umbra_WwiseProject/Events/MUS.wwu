@@ -27,20 +27,13 @@
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Resume" ID="{BCFAB3D0-B474-45E8-8D99-14C8089657B4}" ShortID="271465130" Type="Resume" Scope="One" Global="true">
-							<ElementList>
-								<Element ID="{864C4095-6FE7-4675-86CE-AAD74B8096D1}" Global="true">
-									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Stop" ID="{05DE3BCA-78BA-4FA2-B85B-FF93510A7B4A}" ShortID="881083770" Type="Stop" Scope="One" Global="true">
+						<Action Name="Stop" ID="{05DE3BCA-78BA-4FA2-B85B-FF93510A7B4A}" ShortID="881083770" Type="Stop" Scope="One" Global="false">
 							<PropertyList>
 								<Property Name="FadeCurve" Type="int16" Value="6"/>
 								<Property Name="FadeTime" Type="Real64" Value="6"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{7841DF1D-AFFB-4723-A348-30FF047667DB}" Global="true">
+								<Element ID="{7841DF1D-AFFB-4723-A348-30FF047667DB}" Global="false">
 									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 								</Element>
 							</ElementList>
@@ -146,16 +139,6 @@
 							<ElementList>
 								<Element ID="{64ACFE60-8A93-46B1-85FA-ED13D7FABCAB}" Global="true">
 									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Stop" ID="{0085997F-F0C6-48DF-84AF-BCCE17DCCDFA}" ShortID="320114502" Type="Stop" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="2"/>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{48CCB172-68C5-4363-BF6C-8AFA1013D7E2}" Global="true">
-									<ObjectRef Name="InGame_Alert" ID="{F28B3D0A-1DE2-4F3C-B357-3AF6D3E9D196}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
 						</Action>
