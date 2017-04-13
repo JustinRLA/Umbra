@@ -10,6 +10,7 @@ public class StartBtnSetter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 		if (PlayerPrefs.GetInt ("SaveSystem") == 0)
 		{
 			ContinueBtn.SetActive (false);
@@ -48,12 +49,10 @@ public void restartGame()
 	public void HoverSound()
 	{
 		AkSoundEngine.PostEvent("Menu_Hover",gameObject);
-
 	}
 	public void ClickSound()
 	{
 		AkSoundEngine.PostEvent("Menu_Click",gameObject);
-
 	}
 	public void CancelSound()
 	{
