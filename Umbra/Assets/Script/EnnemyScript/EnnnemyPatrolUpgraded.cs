@@ -151,6 +151,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //	// Use this for initialization
 	void Awake()
 	{
+		AkSoundEngine.PostEvent ("NPC_State_Normal", gameObject);
 		LurePlayer = GameObject.Find ("2DCharacterShadow").transform;
 
 	}
