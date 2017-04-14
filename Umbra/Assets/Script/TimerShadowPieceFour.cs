@@ -6,6 +6,7 @@ public class TimerShadowPieceFour : MonoBehaviour {
 	public GameObject ShadowOne;
 	public GameObject ShadowTwo;
 	public GameObject ShadowThree;
+	public bool paprika=true;
 
 	// Use this for initialization
 	void Start () {
@@ -23,22 +24,28 @@ public class TimerShadowPieceFour : MonoBehaviour {
 	{
 		while(true)
 		{
+			print ("Pass");
 		ShadowOne.SetActive (true);
-			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
+			//AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
 		yield return new WaitForSeconds (2f);
-			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
+			print ("Pass2");
+
+			//AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
 		ShadowTwo.SetActive (true);
+
 		yield return new WaitForSeconds (1f);
 		ShadowOne.SetActive (false);
 		yield return new WaitForSeconds (2f);
 		ShadowTwo.SetActive (false);
+			yield return new WaitForSeconds (1f);
+
 		}
 
 	}
 
 	IEnumerator TimerOmbreTwo()
 	{
-		while(true)
+		while(paprika)
 		{
 			ShadowThree.SetActive (true);
 			yield return new WaitForSeconds (3f);
