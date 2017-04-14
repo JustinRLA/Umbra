@@ -92,7 +92,7 @@ public class solifyShadow : MonoBehaviour {
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
-		//GetComponent<SpriteRenderer> ().enabled = true;
+		GetComponent<SpriteRenderer> ().enabled = true;
 		GetComponent<Collider2D> ().isTrigger = false;
 		Time.timeScale = 1f;
 		Cursor.visible = false;
@@ -131,7 +131,7 @@ public class solifyShadow : MonoBehaviour {
 		MySolid.CanClickable = false;
 		gameObject.layer = 10;
 
-		//GetComponent<SpriteRenderer> ().enabled = false;
+		GetComponent<SpriteRenderer> ().enabled = false;
 		gameObject.tag="Ombre";
 
 //		myBlindEnmnemyRune.CanClick = false;
