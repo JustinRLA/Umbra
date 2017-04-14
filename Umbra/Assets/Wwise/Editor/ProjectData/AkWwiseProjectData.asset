@@ -148,8 +148,8 @@ MonoBehaviour:
   - PhysicalPath: Events\MUS.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{5A477295-C31E-4DA4-B2B5-986D076D6D3E}'
-    m_lastTimePsrt1: -1291972284
-    m_lastTimePart2: -1999338799
+    m_lastTimePsrt1: 193055983
+    m_lastTimePart2: -1999338656
     List:
     - Name: Mus_Alert
       Path: Default Work Unit\MUS\Mus_Alert
@@ -262,8 +262,8 @@ MonoBehaviour:
   - PhysicalPath: Events\SFX.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: -1910489848
-    m_lastTimePart2: -1999338844
+    m_lastTimePsrt1: 193075985
+    m_lastTimePart2: -1999338656
     List:
     - Name: Amb_Alarm
       Path: Default Work Unit\SFX\Amb\Amb_Alarm
@@ -376,6 +376,20 @@ MonoBehaviour:
         ObjectType: 3
       ID: 309439191
       Guid: d7181179aa99174994d745f8364330ee
+      maxAttenuation: 0
+    - Name: Menu_Rune_Hover
+      Path: Default Work Unit\SFX\UI\Menu_Rune_Hover
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu_Rune_Hover
+        ObjectType: 3
+      ID: 1350920896
+      Guid: ae6df40ee4eb3746ab0849a07556ec11
       maxAttenuation: 0
     - Name: NPC_Action_Death
       Path: Default Work Unit\SFX\NPCs\NPC_Action_Death
@@ -880,8 +894,8 @@ MonoBehaviour:
   - PhysicalPath: Events\VO.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{8DB8739B-74AD-4B38-AE79-DB271FE8D787}'
-    m_lastTimePsrt1: -1702477561
-    m_lastTimePart2: -1999339005
+    m_lastTimePsrt1: 193095987
+    m_lastTimePart2: -1999338656
     List:
     - Name: VO_PC_Death
       Path: Default Work Unit\VO\PC\VO_PC_Death
@@ -896,20 +910,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: -867088209
       Guid: 195ec985b2f36f41a1b4721636583cc5
-      maxAttenuation: 0
-    - Name: VO_PC_Jump
-      Path: Default Work Unit\VO\PC\VO_PC_Jump
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: VO
-        ObjectType: 12
-      - ElementName: PC
-        ObjectType: 4
-      - ElementName: VO_PC_Jump
-        ObjectType: 3
-      ID: -1249879889
-      Guid: c44e0925fde6184da19bc5a4c9ac281d
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
