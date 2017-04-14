@@ -38,6 +38,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Menu_Rune_Hover" ID="{0EF46DAE-EBE4-4637-AB08-49A07556EC11}">
+							<ChildrenList>
+								<Action Name="Play" ID="{C26EB85E-C59B-4B0F-9069-A77204F92EA3}" ShortID="130644559" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{FC972B77-7516-4FB9-8201-E2B32482A2D1}" Global="false">
+											<ObjectRef Name="Menu_Rune_Hover" ID="{9E0F9B01-CD08-41B3-8FB8-A839A19CD349}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Amb" ID="{93DCCD9F-4F46-4AD7-8EDB-F323A2F9AD62}" ShortID="632402050">
@@ -69,7 +80,7 @@
 								<Action Name="Play" ID="{F7D91D69-5555-4BBA-93AD-A6C79C6576F3}" ShortID="757453929" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{ADD7313E-C9B0-4208-AA78-20E211C12229}" Global="false">
-											<ObjectRef Name="Amb_Check" ID="{BD1DF1AE-22BE-4D36-8F2A-3B1671020B11}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+											<ObjectRef Name="Amb_Check" ID="{E589DA29-F227-45DC-95EA-F608E8022342}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -266,14 +277,7 @@
 										<Action Name="Play" ID="{46542404-11D5-4921-9B11-70384C519C98}" ShortID="945791994" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{BC52F802-C082-4B53-9C50-3E829923F52D}" Global="false">
-													<ObjectRef Name="VO_PC_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-												</Element>
-											</ElementList>
-										</Action>
-										<Action Name="Play" ID="{02A0E561-A95F-4736-B593-7303C3620B02}" ShortID="780185819" Type="Play" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{0405A3E4-2487-430F-BFBF-B420B8D08190}" Global="false">
-													<ObjectRef Name="PC_Action_Death" ID="{D22F2FE9-D901-44E8-ABB0-CE13564314C1}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+													<ObjectRef Name="PC_Action_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -288,6 +292,13 @@
 												</Element>
 											</ElementList>
 										</Action>
+										<Action Name="Stop" ID="{CAFDF652-B460-4BF4-B3C8-CD0855509221}" ShortID="414757290" Type="Stop" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{24B47F8F-D268-44D4-86E1-85CB3B79C1DD}" Global="false">
+													<ObjectRef Name="PC_Rune_Ombre_Select" ID="{D9B8548E-4E0D-4965-822F-BF388E3FF162}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
 									</ChildrenList>
 								</Event>
 							</ChildrenList>
@@ -297,23 +308,9 @@
 								<Event Name="PC_Foot_Jump" ID="{610644C9-6CAC-4F28-98AA-66395D9B4CC8}">
 									<ChildrenList>
 										<Action Name="Play" ID="{1B41E21F-6408-4D59-9D37-60C0A28B4ADE}" ShortID="684949081" Type="Play" Scope="One" Global="false">
-											<PropertyList>
-												<Property Name="Inclusion" Type="bool">
-													<ValueList>
-														<Value>False</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
 											<ElementList>
 												<Element ID="{E857E3DA-2777-421A-BCA9-680379115382}" Global="false">
-													<ObjectRef Name="PC_Foot_Jump" ID="{40DD2546-F0E5-4E6A-B405-43C158BAEFAC}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-												</Element>
-											</ElementList>
-										</Action>
-										<Action Name="Post Event" ID="{D54978D3-DC4E-4CDA-A2D8-32192E4E1CB0}" ShortID="99662523" Type="PlayEvent" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{15B9D254-B567-4174-8142-1CA42A188ECC}" Global="false">
-													<ObjectRef Name="VO_PC_Jump" ID="{25094EC4-E6FD-4D18-A19B-C5A4C9AC281D}" WorkUnitID="{8DB8739B-74AD-4B38-AE79-DB271FE8D787}"/>
+													<ObjectRef Name="PC-Foot_Jump" ID="{228A4336-5CB5-429F-8EAE-60783A80FF9E}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -475,6 +472,13 @@
 											<ElementList>
 												<Element ID="{602DD04F-C4A3-4725-881C-7BBF9E3560C8}" Global="false">
 													<ObjectRef Name="PC_Rune_Ombre_Use" ID="{E12B6BA9-75F9-4E8B-AC27-76300C636503}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{1D38AF78-3268-4CF6-A804-B594ED2E5B7D}" ShortID="343480149" Type="Stop" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{0E3A7A0B-5B2C-4466-A9DB-2FA6173433C9}" Global="false">
+													<ObjectRef Name="PC_Rune_Ombre_Select" ID="{D9B8548E-4E0D-4965-822F-BF388E3FF162}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>

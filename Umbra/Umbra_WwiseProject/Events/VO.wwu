@@ -10,18 +10,7 @@
 								<Action Name="Play" ID="{F654CDCC-6287-447B-A581-6952B3583A89}" ShortID="590640225" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{BB12E6C9-9C8E-40D8-8631-5CE5F2E854E6}" Global="false">
-											<ObjectRef Name="VO_PC_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="VO_PC_Jump" ID="{25094EC4-E6FD-4D18-A19B-C5A4C9AC281D}">
-							<ChildrenList>
-								<Action Name="Play" ID="{EF01EA6C-9CB7-4D3C-BA98-5119EB56B8EC}" ShortID="49431448" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{66815595-3DF8-461B-AE8D-6F22BCD56770}" Global="false">
-											<ObjectRef Name="VO_PC_Jump" ID="{271CB49B-974E-4D15-B1FD-789FD093FF27}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+											<ObjectRef Name="PC_Action_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>

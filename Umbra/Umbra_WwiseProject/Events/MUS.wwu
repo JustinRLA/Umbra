@@ -25,6 +25,9 @@
 							</SetItemParam>
 						</Action>
 						<Action Name="Pause" ID="{89918E07-3B35-4A3E-A7F5-6B7B7112E4FD}" ShortID="775032640" Type="Pause" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{24729173-F484-4D93-BA6B-5AFA4D95347F}" Global="true">
 									<ObjectRef Name="Mus_Secteur2" ID="{8244F52D-B207-41EA-9077-06265C5233A4}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -32,6 +35,9 @@
 							</ElementList>
 						</Action>
 						<Action Name="Pause" ID="{DFCE6550-7DC7-4720-9E03-0643A8566159}" ShortID="159142000" Type="Pause" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{FBC96F74-64D2-419E-A82A-8A3BFF28CC08}" Global="true">
 									<ObjectRef Name="Mus_Secteur3" ID="{FCCDFC4B-4B04-49BA-86EC-DFCEE1C98450}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -39,6 +45,9 @@
 							</ElementList>
 						</Action>
 						<Action Name="Pause" ID="{146300DB-22D2-48B6-8F4E-C1AF530047E7}" ShortID="482076813" Type="Pause" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{A91AEBDC-FE5C-406C-84F4-193B819D7163}" Global="true">
 									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -89,27 +98,30 @@
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Pause" ID="{927D2E70-2624-4EEE-8D8D-ECA71D63E01C}" ShortID="662912477" Type="Pause" Scope="One" Global="true">
+						<Action Name="Stop" ID="{3BAB03CB-23CA-4565-A764-8CB2E3E24500}" ShortID="539502729" Type="Stop" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="10"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{0EEB08B7-FBA1-4F1E-9278-0EA486F99A8B}" Global="true">
+								<Element ID="{DDBA8764-8A1D-4CF6-B23E-A009346CBE51}" Global="true">
 									<ObjectRef Name="Mus_Secteur1" ID="{EE76E528-86BD-42C3-9774-84068F9C5FD6}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
 						</Action>
-						<Action Name="Pause" ID="{29CA4778-57D3-4EBD-91EA-03A7E5BC5504}" ShortID="300696620" Type="Pause" Scope="One" Global="true">
+						<Action Name="Stop" ID="{F1F10A44-D7F1-4861-851C-1F8DBEB5EE55}" ShortID="370079237" Type="Stop" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="10"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{3390CBAB-7F0C-41B9-9E82-176130370675}" Global="true">
+								<Element ID="{54260656-EC7D-4D2F-B8FF-C67B87BE39D8}" Global="true">
 									<ObjectRef Name="Mus_Secteur2" ID="{8244F52D-B207-41EA-9077-06265C5233A4}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
 						</Action>
 						<Action Name="Pause" ID="{19712FC6-2A5A-4A1C-80BB-EFB9204A2DBD}" ShortID="882871577" Type="Pause" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{91600178-839F-4B69-8659-1ECAE56B49DF}" Global="true">
 									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -139,12 +151,12 @@
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Pause" ID="{C32B6451-27CF-4A59-B75B-D8B842A36B1E}" ShortID="68560947" Type="Pause" Scope="One" Global="true">
+						<Action Name="Stop" ID="{A5DD45CF-C884-4744-B5EA-3AD4A4720ECD}" ShortID="845319194" Type="Stop" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="10"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{B5294EE9-E648-40AE-99CA-5BEE626FA3ED}" Global="true">
+								<Element ID="{E88E2B22-2C0E-4B3F-B1BA-4616A3953F76}" Global="true">
 									<ObjectRef Name="Mus_Secteur1" ID="{EE76E528-86BD-42C3-9774-84068F9C5FD6}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
 								</Element>
 							</ElementList>
@@ -160,6 +172,9 @@
 							</ElementList>
 						</Action>
 						<Action Name="Pause" ID="{D7BEFC23-579B-4908-9003-C8E3CBABD9EE}" ShortID="464150201" Type="Pause" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{644C399F-465A-47C1-8724-2BBE6B321209}" Global="true">
 									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -214,6 +229,9 @@
 							</SetItemParam>
 						</Action>
 						<Action Name="Pause" ID="{DA08E76D-3548-455A-A6D1-838C767A27FF}" ShortID="857220818" Type="Pause" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{B7D073BF-B0F8-49DE-BC9B-924EEA4E3911}" Global="true">
 									<ObjectRef Name="Mus_Secteur1" ID="{EE76E528-86BD-42C3-9774-84068F9C5FD6}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -221,6 +239,9 @@
 							</ElementList>
 						</Action>
 						<Action Name="Pause" ID="{8E3AEEF6-B236-46E3-8F7B-E4C63B0FF6BA}" ShortID="518802417" Type="Pause" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{836EEAE1-7ADD-4784-981D-48D3A583E9FB}" Global="true">
 									<ObjectRef Name="Mus_Secteur2" ID="{8244F52D-B207-41EA-9077-06265C5233A4}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
@@ -228,6 +249,9 @@
 							</ElementList>
 						</Action>
 						<Action Name="Pause" ID="{FCD082FE-E831-4BA3-B17E-3578C155CCB6}" ShortID="122490544" Type="Pause" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{AD76E808-E3DC-4B79-AC63-247F86B30B25}" Global="true">
 									<ObjectRef Name="Mus_Secteur3" ID="{FCCDFC4B-4B04-49BA-86EC-DFCEE1C98450}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
