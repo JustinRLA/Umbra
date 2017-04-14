@@ -8,14 +8,17 @@ public class CoroutinePipePuzzle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (PipeCoroutine ());
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+	public void StartPipe()
+	{
+		StartCoroutine (PipeCoroutine ());
 
+	}
 	IEnumerator PipeCoroutine()
 	{
 		while (true)

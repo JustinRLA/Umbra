@@ -10,11 +10,20 @@ public class TimerShadowPieceFour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+	}
+	public void StartShadow(){
+	
 		StartCoroutine(TimerOmbre());
 		StartCoroutine(TimerOmbreTwo());
 
 	}
-	
+	public void StopShadow(){
+
+		StopCoroutine(TimerOmbre());
+		StopCoroutine(TimerOmbreTwo());
+
+	}
 	// Update is called once per frame
 	void Update () {
 		
