@@ -227,6 +227,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="NPC_Destroy" ID="{077BD2EA-1073-45D7-8B0E-4C0E877DCF20}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{B2FEED0A-45A9-4179-A482-C857A7387033}" ShortID="693469328" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{784EBDDB-8299-4765-B34C-5DFA081CB594}" Global="false">
+											<ObjectRef Name="NPC" ID="{EE9552C0-04A5-4219-B7EC-D1304928AE59}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="PC" ID="{C8F5128C-9E54-426D-9652-5CFBD638A91F}" ShortID="30569804">
