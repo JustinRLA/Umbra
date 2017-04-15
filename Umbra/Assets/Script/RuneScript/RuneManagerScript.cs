@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class RuneManagerScript : MonoBehaviour 
 {
+	public GameObject DefTimer;
+	public GameObject OffTimer;
+	public GameObject TacticTimer;
+
 	ShadowInstantiate myShadowInstantiate;
 	MarkEnnemy myMarkEnnemy;
 	SolidifcationEnabled mySolidicationEnabled;

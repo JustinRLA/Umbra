@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ShadowInstantiate : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class ShadowInstantiate : MonoBehaviour {
 	private float distance;
 	public GameObject myCyube;
 	GameObject CurrentGameObject;
-
+	GameObject FullShadow;
 	Vector2 MyPos;
 	public GameObject myRuneManager;
 	//public GameObject myMainCam;
@@ -17,7 +18,9 @@ public class ShadowInstantiate : MonoBehaviour {
 
 	Transform InstantiateTransform;
 //	Vector2 MymousePos;
-
+	void Awake()
+	{
+	}
 	void OnMouseEnter()
 	{
 		GetComponent<Renderer>().material.color = mouseOverColor;
@@ -44,6 +47,8 @@ public class ShadowInstantiate : MonoBehaviour {
 
 	public void InstantiateTheShadow()
 	{
+		FullShadow=GameObject.Find("OmbreRuneImageFull");
+		FullShadow.GetComponent<Image> ().enabled = true;
 		AkSoundEngine.PostEvent ("PC_Rune_Ombre_Select",gameObject);
 		//myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;

@@ -8,6 +8,8 @@ public class RuneOffenseUI : MonoBehaviour {
 	Image image;
 	float ratio;
 	Image imagefull;
+	public GameObject MyBase;
+
 	//public GameObject FullImage;
 
 	public GameObject RuneManager;
@@ -29,7 +31,7 @@ public class RuneOffenseUI : MonoBehaviour {
 		image.fillAmount = ratio;
 		if (ratio >= 1)
 		{
-			transform.parent.gameObject.SetActive (false);
+			MyBase.SetActive (false);
 		}
 }
 }

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class RuneTactUI : MonoBehaviour {
 	Image image;
+	public GameObject myBase;
+
 	
 	float ratio;
 	
@@ -27,7 +29,7 @@ public class RuneTactUI : MonoBehaviour {
 		image.fillAmount = ratio;
 		if (ratio >= 1)
 		{
-			transform.parent.gameObject.SetActive (false);
+			myBase.SetActive (false);
 		}
 	}
 }

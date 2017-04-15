@@ -12,6 +12,7 @@ public class RuneDefUI : MonoBehaviour {
 
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManager;
+	public GameObject myBase;
 	
 	// Use this for initialization
 	void Start () {
@@ -24,12 +25,13 @@ public class RuneDefUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		print ("SablierActifg");
 		ratio = myRuneManager.timerDef / myRuneManager.ActualDef;
 //		print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
 		{
-			transform.parent.gameObject.SetActive (false);
+			myBase.SetActive (false);
 		}
 	}
 }

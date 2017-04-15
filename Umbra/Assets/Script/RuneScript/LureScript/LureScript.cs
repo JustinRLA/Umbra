@@ -21,7 +21,6 @@ public class LureScript : MonoBehaviour {
 	public GameObject CamThree;
 	public GameObject PlayerCam;
 	GameObject FullRune;
-	public GameObject sablier;
 
 
 	public bool Active=false;
@@ -30,7 +29,10 @@ public class LureScript : MonoBehaviour {
 	public GameObject canvaTimer;
 
 	// Use this for initialization
+
+
 	void Start () {
+		GetComponent<LureScript> ().enabled = false;
 		myCam = GameObject.Find ("Main Camera");
 		CamOne = GameObject.Find ("Main Camera (1)");
 		CamTwo = GameObject.Find ("Main Camera (2)");
@@ -44,7 +46,7 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
-		FullRune=GameObject.Find("")
+		FullRune = GameObject.Find ("LeureImageFull");
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Use", gameObject);
 		myRuneManagerScript.RuneActivated = true;
@@ -96,6 +98,7 @@ public class LureScript : MonoBehaviour {
 	IEnumerator DistractEnnemFast()
 	{
 		myRuneManagerScript.RuneActivated = false;
+		FullRune.GetComponent<Image> ().enabled = false;
 
 		myCam.GetComponent<Animator> ().SetBool ("MegaBlue", false);
 		CamOne.GetComponent<Animator> ().SetBool ("MegaBlue", false);
@@ -114,6 +117,8 @@ public class LureScript : MonoBehaviour {
 		myRuneManagerScript.RuneActivated = false;
 
 		myRuneManagerScript.timerDef = 0;
+		RuneManager.GetComponent<RuneManagerScript>().DefTimer.SetActive (true);
+
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = true;
 
 		ThePlayer.GetComponent<Collider2D> ().enabled = true;
@@ -168,6 +173,8 @@ public class LureScript : MonoBehaviour {
 		Time.timeScale = 1.0f;
 
 			yield return new WaitForSeconds(7f);
+		FullRune.GetComponent<Image> ().enabled = false;
+
 		myRuneManagerScript.RuneActivated = false;
 
 		PlayerCam.GetComponent<PlayerCamScript> ().activateLeurreCam = false;
@@ -190,6 +197,7 @@ public class LureScript : MonoBehaviour {
 		myRuneManagerScript.RuneActivated = false;
 
 		myRuneManagerScript.timerDef = 0;
+		RuneManager.GetComponent<RuneManagerScript>().DefTimer.SetActive (true);
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = true;
 
 		ThePlayer.GetComponent<Collider2D> ().enabled = true;
