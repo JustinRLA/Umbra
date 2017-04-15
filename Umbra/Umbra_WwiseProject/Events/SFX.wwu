@@ -168,6 +168,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Stop" ID="{44F5D4E6-4364-4DC2-ACD0-20EB9596A984}" ShortID="939092346" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{B57A566F-1104-4255-92C6-C0996A0A94BF}" Global="false">
+											<ObjectRef Name="NPC_State_Located" ID="{1BCEB177-5751-4533-A7A0-91B6C368CED6}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="NPC_State_Located" ID="{21AE8267-DDC3-4E41-A895-2BB8C4FBDA9E}">
@@ -176,6 +183,13 @@
 									<ElementList>
 										<Element ID="{0FDD6491-04E5-47F0-A3F1-CC796A52CDF3}" Global="false">
 											<ObjectRef Name="NPC_State_Located" ID="{1BCEB177-5751-4533-A7A0-91B6C368CED6}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{85CFDF9F-AE1D-4386-9632-8718352E0EC5}" ShortID="967460026" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{58F6AD30-5013-42CB-802B-92CF18D0023F}" Global="false">
+											<ObjectRef Name="NPC_State_Alarmed" ID="{A7BD7DD8-AFE9-4617-B232-5312700776D9}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -190,24 +204,35 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Play" ID="{6E2D9F92-892E-4171-9A10-6B55FD9A79D1}" ShortID="669779223" Type="Play" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="2">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{B7C32972-768E-4144-B7F0-F68A42C335C1}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="3"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
+								<Action Name="Play" ID="{94D6B3FB-38CA-4D03-91E9-8A3CBFB31791}" ShortID="488241781" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{192123EC-40F0-42B2-9B6B-AF0A2AB46BA9}" Global="false">
-											<ObjectRef Name="NPC_State_Normal" ID="{AC547CF9-2772-48FA-9D67-A7633CECFBB8}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										<Element ID="{EEF9D836-8932-4621-990D-F8D9473D72CF}" Global="false">
+											<ObjectRef Name="NPC_State_Normal" ID="{3563743D-8FB4-40D1-9E7C-C6572BB79BB1}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{9F66E9D9-00E2-4F66-8DDA-DD95ADF5DEB7}" ShortID="788585090" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{0710F4D9-DDED-4EC8-8DD5-A21E7DA7C151}" Global="false">
+											<ObjectRef Name="NPC_State_Alarmed" ID="{A7BD7DD8-AFE9-4617-B232-5312700776D9}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{7E3FAB5E-9824-420F-B850-5B829F4385C6}" ShortID="576272641" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{4ECC1F85-467A-4744-B45C-7ED41E332A72}" Global="false">
+											<ObjectRef Name="NPC_State_Located" ID="{1BCEB177-5751-4533-A7A0-91B6C368CED6}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="NPC_Destroy" ID="{077BD2EA-1073-45D7-8B0E-4C0E877DCF20}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{B2FEED0A-45A9-4179-A482-C857A7387033}" ShortID="693469328" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{784EBDDB-8299-4765-B34C-5DFA081CB594}" Global="false">
+											<ObjectRef Name="NPC" ID="{EE9552C0-04A5-4219-B7EC-D1304928AE59}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>

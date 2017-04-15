@@ -178,7 +178,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
-						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
+						<CurrentStateRef Name="Located" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
 						<CurrentStateRef Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
@@ -223,6 +223,54 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 						<CurrentStateRef Name="MainMenu" ID="{A3698F00-6554-4266-A778-EC38FC465C75}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="NPC" ID="{C983B204-5161-4D2E-A6C1-C856A9F82E44}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="NPC_State_Alarmed" ID="{1BBE91A0-AE5C-4E60-92DC-0A75FA6B6AA1}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_State_Located" ID="{21AE8267-DDC3-4E41-A895-2BB8C4FBDA9E}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Action_Death" ID="{A33ED3D1-95DE-4C00-85AF-3993E6039CD7}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_State_Normal" ID="{C4662E75-92A5-443F-BDEA-99F0403F6BE2}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Action_Kill" ID="{63AB3A33-384C-4854-AC13-3269605A1C9F}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Destroy" ID="{077BD2EA-1073-45D7-8B0E-4C0E877DCF20}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Foot_Run" ID="{B1BDA4EF-8538-4186-B912-F08590483413}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
+						<CurrentStateRef Name="Located" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
+						<CurrentStateRef Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
