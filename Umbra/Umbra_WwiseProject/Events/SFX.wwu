@@ -49,6 +49,33 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Menu_Rune_Click" ID="{80B7A45B-51EF-4987-824B-80822EEC9414}">
+							<ChildrenList>
+								<Action Name="Play" ID="{BE19DCD2-77D5-48F1-A3E8-9B4A11105A21}" ShortID="519951187" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{F04564B0-BB69-4F3F-ACB8-23D0B206781C}" Global="false">
+											<ObjectRef Name="PC_Rune_Select" ID="{EF023C04-49D0-4FC3-BAC6-050BBFD0CFC3}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Menu_Pause_End" ID="{0E337CA9-32B8-4BB0-A1C1-087BCEB24EF3}">
+							<ChildrenList>
+								<Action Name="Resume All" ID="{FA376AD3-9604-4DB8-98AF-FCE582C0A708}" ShortID="456189880" Type="Resume" Scope="All" Global="false"/>
+							</ChildrenList>
+						</Event>
+						<Event Name="Menu_Pause" ID="{FFC8E306-C0A9-4929-87D0-36523C93D3D3}">
+							<ChildrenList>
+								<Action Name="Pause All Except" ID="{3B8BB5C3-E586-4B39-BADE-2B65A3298A48}" ShortID="95752850" Type="Pause" Scope="AllExcept" Global="false">
+									<ElementList>
+										<Element ID="{B806C862-078E-4187-AB09-7C07C6ECA6B1}" Global="false">
+											<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Amb" ID="{93DCCD9F-4F46-4AD7-8EDB-F323A2F9AD62}" ShortID="632402050">
@@ -504,13 +531,13 @@
 												</Element>
 											</ElementList>
 										</Action>
-										<Action Name="Stop" ID="{1D38AF78-3268-4CF6-A804-B594ED2E5B7D}" ShortID="343480149" Type="Stop" Scope="One" Global="false">
+										<Action Name="Stop" ID="{1D38AF78-3268-4CF6-A804-B594ED2E5B7D}" ShortID="343480149" Type="Stop" Scope="One" Global="true">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="0.5"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 											</PropertyList>
 											<ElementList>
-												<Element ID="{0E3A7A0B-5B2C-4466-A9DB-2FA6173433C9}" Global="false">
+												<Element ID="{0E3A7A0B-5B2C-4466-A9DB-2FA6173433C9}" Global="true">
 													<ObjectRef Name="PC_Rune_Ombre_Select" ID="{D9B8548E-4E0D-4965-822F-BF388E3FF162}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
