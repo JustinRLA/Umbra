@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnnemyMarked : MonoBehaviour {
 	MarkEnnemy myMarkEnmnemyRune;
@@ -18,8 +19,12 @@ public class EnnemyMarked : MonoBehaviour {
 	public GameObject PlayerMy;
 	public float PlayerSpeed;
 	public GameObject raycarVision;
-
+	GameObject FullMark;
 	// Use this for initialization
+	void Awake()
+	{
+
+	}
 	void Start () {
 		PlayerMy = GameObject.Find("2DCharacter(Clone)");
 		RuneManager = GameObject.Find ("RuneManager");
@@ -62,11 +67,15 @@ public class EnnemyMarked : MonoBehaviour {
 	{
 		if (myMarkEnmnemyRune.CanBeClicked == true)
 		{
+			FullMark = GameObject.Find ("MaquageRuneImageFull");
+			FullMark.GetComponent<Image> ().enabled = false;
+
 			AkSoundEngine.PostEvent ("PC_Rune_Marquage_Use", gameObject);
 			myRuneManager.RuneActivated = false;
 			StartCoroutine (MarkEvent());
 		myRuneManager.RuneModeEnabled = false;
 			myRuneManager.timerOffense = 0;
+			myRuneManager.OffTimer.SetActive (true);
 			PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 			PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 			PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
@@ -82,6 +91,9 @@ public class EnnemyMarked : MonoBehaviour {
 	}
 	void CancelEvent()
 	{
+		FullMark = GameObject.Find ("MaquageRuneImageFull");
+		FullMark.GetComponent<Image> ().enabled = false;
+
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);

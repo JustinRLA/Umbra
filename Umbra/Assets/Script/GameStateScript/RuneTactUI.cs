@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class RuneTactUI : MonoBehaviour {
 	Image image;
+	public GameObject myBase;
+
 	
 	float ratio;
 	
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManager;
-	public GameObject Fullimage;
 	Image fullImage;
 
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
 		image = GetComponent<Image> ();
-		fullImage = Fullimage.GetComponent<Image> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 		
 	}
@@ -28,8 +28,8 @@ public class RuneTactUI : MonoBehaviour {
 		//print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
-			fullImage.enabled = true;
-		else
-			fullImage.enabled = false;
+		{
+			myBase.SetActive (false);
+		}
 	}
 }

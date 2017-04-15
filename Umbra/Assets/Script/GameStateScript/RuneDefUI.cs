@@ -8,16 +8,15 @@ public class RuneDefUI : MonoBehaviour {
 	Image image;
 
 	float ratio;	
-	public GameObject FullImage;
 	Image ImageFull;
 
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManager;
+	public GameObject myBase;
 	
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
-		ImageFull = FullImage.GetComponent<Image> ();
 		image = GetComponent<Image> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 
@@ -26,13 +25,13 @@ public class RuneDefUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		print ("SablierActifg");
 		ratio = myRuneManager.timerDef / myRuneManager.ActualDef;
 //		print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
-			ImageFull.enabled = true;
-		else
-			ImageFull.enabled = false;
-
+		{
+			myBase.SetActive (false);
+		}
 	}
 }

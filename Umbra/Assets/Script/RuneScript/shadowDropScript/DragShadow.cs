@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class DragShadow : MonoBehaviour {
 	//GameObject TheRealSPrite;
 	Ray ray;
+	GameObject FullShadow;
+
 	public bool dragging = true;
 	private float distance;
 	public GameObject RuneMangerMy;
@@ -13,7 +15,11 @@ public class DragShadow : MonoBehaviour {
 	//	Vector2 MymousePos;
 	public GameObject playerMy;
 	public float moveSpeed;
+	void Awake()
+	{
 
+
+	}
 
 	void Start()
 	{
@@ -34,6 +40,9 @@ public class DragShadow : MonoBehaviour {
 
 	void OnMouseDown()
 	{
+		FullShadow=GameObject.Find("OmbreRuneImageFull");
+		FullShadow.GetComponent<Image> ().enabled = false;
+
 		mainCamMy = GameObject.Find ("Main Camera");
 		AkSoundEngine.PostEvent ("PC_Rune_Ombre_Use", gameObject);
 		dragging = false;
@@ -43,7 +52,8 @@ public class DragShadow : MonoBehaviour {
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().timerDef = 0;
-		RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
+			RuneMangerMy.GetComponent<ShadowInstantiate> ().enabled = false;
+		RuneMangerMy.GetComponent<RuneManagerScript> ().DefTimer.SetActive (true);
 		mainCamMy.GetComponent<BloomOptimized> ().enabled = false;
 		playerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
@@ -61,6 +71,9 @@ public class DragShadow : MonoBehaviour {
 	}
 	void CancelThis()
 	{
+		FullShadow=GameObject.Find("OmbreRuneImageFull");
+		FullShadow.GetComponent<Image> ().enabled = false;
+
 		mainCamMy = GameObject.Find ("Main Camera");
 		Time.timeScale =1f;
 

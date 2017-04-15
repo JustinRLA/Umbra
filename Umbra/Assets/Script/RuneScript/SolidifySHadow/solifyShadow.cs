@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class solifyShadow : MonoBehaviour {
 	SolidifcationEnabled MySolid;
@@ -15,7 +16,7 @@ public class solifyShadow : MonoBehaviour {
 	public GameObject[] AllShadow;
 	public GameObject GrimpSurfaceRight;
 	public GameObject GrimpSurfaceLeft;
-
+	GameObject FullRune;
 	bool colPlayer;
 
 	// Use this for initialization
@@ -61,6 +62,8 @@ public class solifyShadow : MonoBehaviour {
 
 	void CancelAction()
 	{
+		FullRune = GameObject.Find ("solideImageFull");
+		FullRune.GetComponent<Image> ().enabled = false;
 		myMainCam = GameObject.Find ("Main Camera");
 
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
@@ -85,10 +88,13 @@ public class solifyShadow : MonoBehaviour {
 
 	IEnumerator SolidicationEvent()
 	{
+		FullRune = GameObject.Find ("solideImageFull");
+		FullRune.GetComponent<Image> ().enabled = false;
 		AkSoundEngine.PostEvent("PC_Rune_Solide_Use",gameObject);
 		myMainCam = GameObject.Find ("Main Camera");
 
 		mymyRuneManagerScript.timerTactic = 0;
+		mymyRuneManagerScript.TacticTimer.SetActive (true);
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnableTrapMode : MonoBehaviour {
 	Vector3 Mousepos;
@@ -18,10 +19,15 @@ public class EnableTrapMode : MonoBehaviour {
 	public GameObject ThisTrap;
 	public GameObject Demotrap;
 	public GameObject[] AllTrap;
+	GameObject FullRune;
+
 	bool ThisEvent;
 	public Transform NowherePoint;
 	public GameObject myTrapZone;
 	// Use this for initialization
+	void Aweake()
+	{
+	}
 	void Start () {
 		myPlayer=GameObject.Find("2DCharacter(Clone)");
 		Demotrap = GameObject.Find ("TrapDemo");
@@ -86,6 +92,8 @@ public class EnableTrapMode : MonoBehaviour {
 		{
 			if(Input.GetMouseButton(0)){
 				ThisEvent = false;
+				FullRune.GetComponent<Image> ().enabled = false;
+
 				Instantiate (Trapping, myraycast.point,transform.rotation);
 				AkSoundEngine.PostEvent ("PC_Rune_Trap_Use", gameObject);
 				myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
@@ -106,6 +114,7 @@ public class EnableTrapMode : MonoBehaviour {
 
 				Time.timeScale = 1f;
 				myRuneManager.timerOffense = 0;
+				myRuneManager.OffTimer.SetActive (true);
 				gameCam.GetComponent<BloomOptimized> ().enabled = false;
 
 				trapcam.SetActive (false);
@@ -124,6 +133,7 @@ public class EnableTrapMode : MonoBehaviour {
 	void Ending()
 	{
 		ThisEvent = false;
+		FullRune.GetComponent<Image> ().enabled = false;
 
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		myRuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
@@ -150,6 +160,8 @@ public class EnableTrapMode : MonoBehaviour {
 	}
 	public void EnabledTrapMode()
 	{
+		FullRune = GameObject.Find ("trapImageFull");
+		FullRune.GetComponent<Image> ().enabled = true;
 	//	AkSoundEngine.PostEvent ("PC_Rune_Trap_Equip", gameObject);
 
 		Time.timeScale = 0.1f;

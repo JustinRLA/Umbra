@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LineRendererTest : MonoBehaviour {
 	RaycastHit2D myRaycast;
@@ -31,9 +32,10 @@ public class LineRendererTest : MonoBehaviour {
 	public GameObject CamGrap;
 	bool redhaveplayed;
 	bool greenhaveplayed;
-
+	GameObject RuneFull;
 
 	public GameObject MainCamera;
+
 	void Start()
 	{
 		
@@ -45,6 +47,8 @@ public class LineRendererTest : MonoBehaviour {
 	}
 	public void IsActivated()
 	{
+		RuneFull = GameObject.Find ("AccrochageImageFull");
+		RuneFull.GetComponent<Image> ().enabled = true;
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
 		AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Equip", gameObject);
 		myRuneManagerScript.RuneActivated = true;
@@ -267,6 +271,8 @@ public class LineRendererTest : MonoBehaviour {
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
 
 		myRuneManagerScript.timerTactic = 0;
+		RuneFull.GetComponent<Image> ().enabled = false;
+		myRuneManagerScript.TacticTimer.SetActive (true);
 		Time.timeScale = 1f;
 		myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 0;
 		yield return new WaitForSeconds (timeDIstance / dividable);
@@ -307,6 +313,8 @@ public class LineRendererTest : MonoBehaviour {
 	}
 	void Cancelation()
 	{
+		RuneFull.GetComponent<Image> ().enabled = false;
+
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
 		if(TheBeam!=null)
