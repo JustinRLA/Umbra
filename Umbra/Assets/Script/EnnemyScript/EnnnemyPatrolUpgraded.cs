@@ -190,7 +190,16 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 		CurrentNavPoint = NavPointOne_Right;
 
-
+		if (CurrentNavPoint.position.x-transform.position.x <0)
+		{
+			lookRight=false;
+			flip ();
+		}
+		if (CurrentNavPoint.position.x-transform.position.x >0)
+		{
+			lookRight=true;
+			flip ();
+		}
 		OriginalSpeed = speed;
 	}
 

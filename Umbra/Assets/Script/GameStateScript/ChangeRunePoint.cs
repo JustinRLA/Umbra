@@ -26,7 +26,6 @@ public class ChangeRunePoint : MonoBehaviour {
 		MyBorneBase = GameObject.Find ("BorneBase");
 
 		RuneManager=GameObject.Find("RuneManager");
-		FeedBackImage = GameObject.Find ("feedbackRuneChange");
 		BorneBasescript = MyBorneBase.GetComponent<BorneBase> ();
 	}
 	
@@ -41,8 +40,6 @@ public class ChangeRunePoint : MonoBehaviour {
 			BorneBasescript.ReceiveInfo ();
 			Cursor.visible=true;
 		}
-		if (canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true)
-			FeedBackImage.GetComponent<SpriteRenderer> ().enabled = true;
 	}
 
 
@@ -59,7 +56,6 @@ public class ChangeRunePoint : MonoBehaviour {
 	{
 		if (col.tag == "Player") {
 			canChange = false;
-			FeedBackImage.GetComponent<SpriteRenderer> ().enabled = false;
 			GetComponent<SpriteRenderer> ().sprite = SpawnerNormal;
 
 		}

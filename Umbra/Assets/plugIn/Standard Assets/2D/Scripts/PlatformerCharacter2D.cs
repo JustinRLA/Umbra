@@ -39,9 +39,6 @@ using UnityEngine.SceneManagement;
         private Rigidbody2D m_Rigidbody2D;
 	public bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	public GameObject ActualLadder;
-	public GameObject OeillereFeedback;
-	public GameObject ActualOeillere;
-	SpriteRenderer actualOeillereSPriteRenderer;
 	public GameObject CheckPointManager;
 	public GameObject RealCheckPointManager;
 	bool canBeSilenced;
@@ -54,8 +51,6 @@ using UnityEngine.SceneManagement;
 	{
 
 		numberofDeath = PlayerPrefs.GetInt ("Death");
-		if(TruePlayer==true)
-		actualOeillereSPriteRenderer = OeillereFeedback.GetComponent<SpriteRenderer> ();
 		mySpriteRenderer = GetComponent<SpriteRenderer> ();
 	}
 
@@ -83,8 +78,6 @@ using UnityEngine.SceneManagement;
 		Time.timeScale = 1;
 		inShadow = false;
 		ClimbTrue = false;
-		actualOeillereSPriteRenderer.enabled = false;
-		ActualOeillere = null;
 		numberofDeath++;
 		PlayerPrefs.SetInt("Death",numberofDeath);
 		StartCoroutine (DeathEvent ());
@@ -274,16 +267,7 @@ using UnityEngine.SceneManagement;
 		}
 		if(TruePlayer==true)
 		{	
-	if(ActualOeillere !=null)
-	{
-		if (ActualOeillere.GetComponent<oeillereChecjBoth> ().IsInside == true)
-		{
-			actualOeillereSPriteRenderer.enabled = true;
-//			print ("showFuckfgFeedback");
-		}
-		else
-			actualOeillereSPriteRenderer.enabled = false;
-			}
+
 
 	}
 	}
@@ -472,8 +456,6 @@ using UnityEngine.SceneManagement;
 		if (col.tag == "Proj")
 			Death ();
 
-		if (col.tag == "oeillere" && TruePlayer==true)
-			ActualOeillere = col.gameObject;
 
 		if (col.tag == "Ombre")
 			inShadow = true;
@@ -488,11 +470,7 @@ using UnityEngine.SceneManagement;
 		if (col.tag == "Ladder")
 			ClimbTrue = false;
 		
-		if (col.tag == "oeillere" && TruePlayer==true)
-		{
-			actualOeillereSPriteRenderer.enabled = false;
-			ActualOeillere = null;
-		}
+	
 		if (col.tag == "Ombre")
 			inShadow = false;
 		

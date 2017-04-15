@@ -21,17 +21,13 @@ public class checkIfAssassination : MonoBehaviour {
 
 		if(canAssassinate==true)
 		{
-			AssassinFeedback.SetActive (true);
 			if (Input.GetKeyDown (KeyCode.E))
 			{
 				Assassination();
 			}
 		}
-		if(canAssassinate==false || ActualEnnemy == null)
-			AssassinFeedback.SetActive (false);
-		
-
 	}
+
 	void OnTriggerEnter2D (Collider2D col) {
 
 //		else
@@ -42,6 +38,8 @@ public class checkIfAssassination : MonoBehaviour {
 //		
 				canAssassinate = true;
 				ActualEnnemy = col.gameObject;
+			ActualEnnemy.GetComponent<SpriteRenderer> ().color = new Color (1, 0, 0, 1);
+
 
 		} 
 //		else
@@ -71,6 +69,7 @@ public class checkIfAssassination : MonoBehaviour {
 	void OnTriggerExit2D (Collider2D col) {
 		if(col.tag=="ennemy")
 		{
+			ActualEnnemy.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1);
 			canAssassinate=false;
 
 		}
