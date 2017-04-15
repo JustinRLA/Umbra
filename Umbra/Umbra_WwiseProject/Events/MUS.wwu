@@ -64,13 +64,13 @@
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Stop" ID="{05DE3BCA-78BA-4FA2-B85B-FF93510A7B4A}" ShortID="881083770" Type="Stop" Scope="One" Global="false">
+						<Action Name="Stop" ID="{05DE3BCA-78BA-4FA2-B85B-FF93510A7B4A}" ShortID="881083770" Type="Stop" Scope="One" Global="true">
 							<PropertyList>
 								<Property Name="FadeCurve" Type="int16" Value="6"/>
 								<Property Name="FadeTime" Type="Real64" Value="6"/>
 							</PropertyList>
 							<ElementList>
-								<Element ID="{7841DF1D-AFFB-4723-A348-30FF047667DB}" Global="false">
+								<Element ID="{7841DF1D-AFFB-4723-A348-30FF047667DB}" Global="true">
 									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 								</Element>
 							</ElementList>
@@ -217,6 +217,17 @@
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 								<GroupItem Name="Located" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
 							</SetItemParam>
+						</Action>
+						<Action Name="Stop" ID="{DEC15DC2-870E-4663-99AA-0C592B3A001F}" ShortID="993671535" Type="Stop" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{8C2B4202-E922-4B5C-94DD-3F346B263C2A}" Global="true">
+									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+								</Element>
+							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
