@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class RuneOffenseUI : MonoBehaviour {
 	Image image;
 	float ratio;
-	public GameObject FullImage;
 	Image imagefull;
 	//public GameObject FullImage;
 
@@ -16,7 +15,6 @@ public class RuneOffenseUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		imagefull = FullImage.GetComponent<Image> ();
 		RuneManager = GameObject.Find ("RuneManager");
 
 		image = GetComponent<Image> ();
@@ -31,11 +29,7 @@ public class RuneOffenseUI : MonoBehaviour {
 		image.fillAmount = ratio;
 		if (ratio >= 1)
 		{
-			imagefull.enabled = true;
-
+			transform.parent.gameObject.SetActive (false);
 		}
-		else
-		{
-			imagefull.enabled = false;		}
-	}
+}
 }

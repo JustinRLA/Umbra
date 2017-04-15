@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InitializeLevel : MonoBehaviour {
 	//public GameObject GameManager;
+
 	public GameObject ThePlayer;
 	public Transform[] SpawnPoint;
 	public GameObject[] EnnemyPack;
@@ -24,6 +25,8 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject[]TrapFeedback;
 	public GameObject[]GrapRegion;
 	public GameObject[] interzone;
+	public int debugsave;
+	public bool isdebug;
 
 
 
@@ -35,6 +38,8 @@ public class InitializeLevel : MonoBehaviour {
 
 	void Awake()
 	{
+		if(isdebug==true)
+			PlayerPrefs.SetInt ("SaveSystem",debugsave);
 		
 		decoountNumber = PlayerPrefs.GetInt ("SaveSystem");
 

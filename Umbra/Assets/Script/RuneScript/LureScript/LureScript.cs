@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 //namespace UnityStandardAssets._2D
 //{
 
@@ -18,6 +20,8 @@ public class LureScript : MonoBehaviour {
 	public GameObject CamTwo;
 	public GameObject CamThree;
 	public GameObject PlayerCam;
+	GameObject FullRune;
+	public GameObject sablier;
 
 
 	public bool Active=false;
@@ -40,6 +44,7 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		FullRune=GameObject.Find("")
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Use", gameObject);
 		myRuneManagerScript.RuneActivated = true;
@@ -67,6 +72,8 @@ public class LureScript : MonoBehaviour {
 			ThePlayerShadow.GetComponent<PlatformerCharacter2D> ().enabled = true;
 			ThePlayerShadow.GetComponent<Platformer2DUserControl> ().enabled = true;
 		RuneManager.GetComponent<RuneManagerScript> ().timerTactic = 30;
+		FullRune.GetComponent<Image> ().enabled = true;
+
 		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 
 		ThePlayer.GetComponent<Platformer2DUserControl> ().enabled = false;

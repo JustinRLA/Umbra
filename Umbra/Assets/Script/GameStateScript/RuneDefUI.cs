@@ -8,7 +8,6 @@ public class RuneDefUI : MonoBehaviour {
 	Image image;
 
 	float ratio;	
-	public GameObject FullImage;
 	Image ImageFull;
 
 	public GameObject RuneManager;
@@ -17,7 +16,6 @@ public class RuneDefUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
-		ImageFull = FullImage.GetComponent<Image> ();
 		image = GetComponent<Image> ();
 		myRuneManager = RuneManager.GetComponent<RuneManagerScript> ();
 
@@ -30,9 +28,8 @@ public class RuneDefUI : MonoBehaviour {
 //		print (ratio);
 		image.fillAmount = ratio;
 		if (ratio >= 1)
-			ImageFull.enabled = true;
-		else
-			ImageFull.enabled = false;
-
+		{
+			transform.parent.gameObject.SetActive (false);
+		}
 	}
 }
