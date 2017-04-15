@@ -25,7 +25,15 @@ public class DeadScript : MonoBehaviour {
 		GetComponent<SpriteRenderer> ().color = new Color (0, 0, 0);
 		GetComponent<Rigidbody2D> ().isKinematic = true;
 	GetComponent<BoxCollider2D> ().isTrigger = true;
+		AkSoundEngine.PostEvent ("NPC_Destroy", gameObject);
+		StartCoroutine (destroydelai ());
 
 
+	}
+	IEnumerator destroydelai()
+	{
+
+		yield return new WaitForSeconds (0.5f);
+		Destroy (transform.parent.gameObject);
 	}
 }

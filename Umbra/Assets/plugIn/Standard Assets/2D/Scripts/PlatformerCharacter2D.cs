@@ -49,7 +49,7 @@ using UnityEngine.SceneManagement;
 
 	void Start()
 	{
-
+		AkSoundEngine.PostEvent ("PC_Action_Respawn", gameObject);
 		numberofDeath = PlayerPrefs.GetInt ("Death");
 		mySpriteRenderer = GetComponent<SpriteRenderer> ();
 	}
@@ -71,7 +71,7 @@ using UnityEngine.SceneManagement;
         }
 	public void Death()
 	{
-
+		AkSoundEngine.PostEvent ("PC_Action_Death", gameObject);
 		AssassinTrigger.SetActive (false);
 		dead = true;
 
