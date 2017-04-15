@@ -132,10 +132,10 @@
 						</Event>
 						<Event Name="NPC_Action_Kill" ID="{63AB3A33-384C-4854-AC13-3269605A1C9F}">
 							<ChildrenList>
-								<Action Name="Play" ID="{94413A6D-F159-4116-A629-3AC61FC7FAE6}" ShortID="7696422" Type="Play" Scope="One" Global="false">
+								<Action Name="Play" ID="{3343AB99-BBB1-40F8-AD25-3A70F49F66DE}" ShortID="355444910" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{E0A6395B-82A6-4B72-B0EB-A23893EB5978}" Global="false">
-											<ObjectRef Name="PC_Action_Kill" ID="{FB6C4CA9-38D4-49A6-9A1E-3C95956E65A7}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										<Element ID="{3E327B6F-9B46-40DD-9DA9-9AC338CB9F6E}" Global="false">
+											<ObjectRef Name="NPC_Action_Kill" ID="{D575C2F8-E322-4341-A454-CC9809DF88E4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -335,7 +335,7 @@
 										<Action Name="Play" ID="{1B41E21F-6408-4D59-9D37-60C0A28B4ADE}" ShortID="684949081" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{E857E3DA-2777-421A-BCA9-680379115382}" Global="false">
-													<ObjectRef Name="PC-Foot_Jump" ID="{228A4336-5CB5-429F-8EAE-60783A80FF9E}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+													<ObjectRef Name="PC_Foot_Jump" ID="{228A4336-5CB5-429F-8EAE-60783A80FF9E}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>

@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\CutS.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{19E84A98-6EC0-40EB-B402-BC980F6AC5B3}'
-    m_lastTimePsrt1: 920731614
-    m_lastTimePart2: -1999338991
+    m_lastTimePsrt1: -1525955867
+    m_lastTimePart2: -1999338485
     List:
     - Name: CutS_1
       Path: Default Work Unit\CutS\CutS_1
@@ -142,14 +142,14 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{74E730D8-0B1D-4956-9CCA-A5C1594518D8}'
-    m_lastTimePsrt1: -1702517565
-    m_lastTimePart2: -1999339005
+    m_lastTimePsrt1: -1525955867
+    m_lastTimePart2: -1999338485
     List: []
   - PhysicalPath: Events\MUS.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{5A477295-C31E-4DA4-B2B5-986D076D6D3E}'
-    m_lastTimePsrt1: 1519678956
-    m_lastTimePart2: -1999338590
+    m_lastTimePsrt1: -1525945982
+    m_lastTimePart2: -1999338485
     List:
     - Name: Mus_Alert
       Path: Default Work Unit\MUS\Mus_Alert
@@ -262,8 +262,8 @@ MonoBehaviour:
   - PhysicalPath: Events\SFX.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: 1519678956
-    m_lastTimePart2: -1999338590
+    m_lastTimePsrt1: -927169034
+    m_lastTimePart2: -1999338482
     List:
     - Name: Amb_Alarm
       Path: Default Work Unit\SFX\Amb\Amb_Alarm
@@ -418,6 +418,20 @@ MonoBehaviour:
         ObjectType: 3
       ID: -542243238
       Guid: 333aab634c385448ac133269605a1c9f
+      maxAttenuation: 0
+    - Name: NPC_Destroy
+      Path: Default Work Unit\SFX\NPCs\NPC_Destroy
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: NPCs
+        ObjectType: 4
+      - ElementName: NPC_Destroy
+        ObjectType: 3
+      ID: 55429609
+      Guid: ead27b077310d7458b0e4c0e877dcf20
       maxAttenuation: 0
     - Name: NPC_Foot_Run
       Path: Default Work Unit\SFX\NPCs\NPC_Foot_Run
@@ -894,8 +908,8 @@ MonoBehaviour:
   - PhysicalPath: Events\VO.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{8DB8739B-74AD-4B38-AE79-DB271FE8D787}'
-    m_lastTimePsrt1: 1519688965
-    m_lastTimePart2: -1999338590
+    m_lastTimePsrt1: -1525935967
+    m_lastTimePart2: -1999338485
     List:
     - Name: VO_PC_Death
       Path: Default Work Unit\VO\PC\VO_PC_Death
@@ -915,15 +929,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}'
-    m_lastTimePsrt1: -768696933
-    m_lastTimePart2: -1999338986
+    m_lastTimePsrt1: -1523882746
+    m_lastTimePart2: -1999338485
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1AF2D82A-9DEA-451D-A831-817BC1E3BD46}'
-    m_lastTimePsrt1: 1557974540
-    m_lastTimePart2: -1999338590
+    m_lastTimePsrt1: -1473514461
+    m_lastTimePart2: -1999338485
     List:
     - Name: Foot_Stealth
       Path: Default Work Unit\Foot_Stealth
@@ -1016,21 +1030,21 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{78B9560E-201B-4A99-946B-5B5FB9572D52}'
-    m_lastTimePsrt1: -1663163630
-    m_lastTimePart2: -1999339005
+    m_lastTimePsrt1: -1473514461
+    m_lastTimePart2: -1999338485
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{00B0838D-1ACD-431C-8672-B7D188B67091}'
-    m_lastTimePsrt1: -1663203634
-    m_lastTimePart2: -1999339005
+    m_lastTimePsrt1: -1473554523
+    m_lastTimePart2: -1999338485
     List: []
   - PhysicalPath: SoundBanks\TrueSoundBank.wwu
     ParentPhysicalPath: 
     Guid: '{FB2F3DBD-0CA3-47D6-AB4D-D69615BE6D20}'
-    m_lastTimePsrt1: -1663193633
-    m_lastTimePart2: -1999339005
+    m_lastTimePsrt1: -1473544508
+    m_lastTimePart2: -1999338485
     List:
     - Name: SFX
       Path: TrueSoundBank\SFX
