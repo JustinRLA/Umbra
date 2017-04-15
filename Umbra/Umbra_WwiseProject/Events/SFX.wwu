@@ -55,10 +55,10 @@
 					<ChildrenList>
 						<Event Name="Amb_Rain" ID="{841CFC35-03CB-47EF-8CC5-EA3FF15C12C3}">
 							<ChildrenList>
-								<Action Name="Play" ID="{BB1CB548-2756-4F0D-B825-E2D01A4FA184}" ShortID="977402175" Type="Play" Scope="One" Global="false">
+								<Action Name="Play" ID="{A1B641EB-33DF-4BBA-9DD5-37227F9305A4}" ShortID="336987579" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{054AF765-EDCC-4698-B84E-A3928714948A}" Global="false">
-											<ObjectRef Name="Amb_Room" ID="{8620F060-9852-42EA-ADEB-B925E0EB95F5}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										<Element ID="{4F5132A5-9A87-4587-9D44-9A85DB112AE1}" Global="false">
+											<ObjectRef Name="Amb_Rain" ID="{8620F060-9852-42EA-ADEB-B925E0EB95F5}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -132,10 +132,10 @@
 						</Event>
 						<Event Name="NPC_Action_Kill" ID="{63AB3A33-384C-4854-AC13-3269605A1C9F}">
 							<ChildrenList>
-								<Action Name="Play" ID="{94413A6D-F159-4116-A629-3AC61FC7FAE6}" ShortID="7696422" Type="Play" Scope="One" Global="false">
+								<Action Name="Play" ID="{3343AB99-BBB1-40F8-AD25-3A70F49F66DE}" ShortID="355444910" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{E0A6395B-82A6-4B72-B0EB-A23893EB5978}" Global="false">
-											<ObjectRef Name="PC_Action_Kill" ID="{FB6C4CA9-38D4-49A6-9A1E-3C95956E65A7}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										<Element ID="{3E327B6F-9B46-40DD-9DA9-9AC338CB9F6E}" Global="false">
+											<ObjectRef Name="NPC_Action_Kill" ID="{D575C2F8-E322-4341-A454-CC9809DF88E4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -335,7 +335,7 @@
 										<Action Name="Play" ID="{1B41E21F-6408-4D59-9D37-60C0A28B4ADE}" ShortID="684949081" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{E857E3DA-2777-421A-BCA9-680379115382}" Global="false">
-													<ObjectRef Name="PC-Foot_Jump" ID="{228A4336-5CB5-429F-8EAE-60783A80FF9E}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+													<ObjectRef Name="PC_Foot_Jump" ID="{228A4336-5CB5-429F-8EAE-60783A80FF9E}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>

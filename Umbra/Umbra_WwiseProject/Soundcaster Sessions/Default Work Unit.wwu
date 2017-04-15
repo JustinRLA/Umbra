@@ -130,6 +130,10 @@
 				<SoundcasterSession Name="Music" ID="{1E3AB5B2-00A9-47E8-8673-3C415546D5EF}">
 					<ModuleList>
 						<Module>
+							<ObjectRef Name="Amb_Rain" ID="{841CFC35-03CB-47EF-8CC5-EA3FF15C12C3}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Mus_Explo" ID="{AF31897A-1132-42B2-A004-F3F5D456986C}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
 							<Position X="0" Y="2"/>
 						</Module>
@@ -177,7 +181,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
+						<CurrentStateRef Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
 						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 						<CurrentStateRef Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
 					</CurrentStateList>

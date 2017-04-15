@@ -48,7 +48,28 @@
 							<ChildrenList>
 								<Bus Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}"/>
 								<Bus Name="PC" ID="{1CAE5AA5-87A2-464C-ACD7-3FC2ED76398F}"/>
-								<Bus Name="NPC" ID="{676E26A5-D301-4F71-B3F6-0D2C0832BB69}"/>
+								<Bus Name="NPC" ID="{676E26A5-D301-4F71-B3F6-0D2C0832BB69}">
+									<ChildrenList>
+										<Bus Name="Normal" ID="{D081C6A7-03AC-484E-A358-8A8167C9E5D3}">
+											<PropertyList>
+												<Property Name="RecoveryTime" Type="Real64" Value="1.5"/>
+											</PropertyList>
+										</Bus>
+										<Bus Name="Alarmed-located" ID="{03592E84-64E3-40D0-B1C2-AC23EF1FEFF3}">
+											<DuckingList>
+												<DuckItem>
+													<BusRef Name="Normal" ID="{D081C6A7-03AC-484E-A358-8A8167C9E5D3}"/>
+													<DuckingParam>
+														<Volume>-16</Volume>
+														<FadeInTime>0.100000001490116</FadeInTime>
+														<FadeOutTime>0.100000001490116</FadeOutTime>
+														<FadeCurve>FadeLinear</FadeCurve>
+													</DuckingParam>
+												</DuckItem>
+											</DuckingList>
+										</Bus>
+									</ChildrenList>
+								</Bus>
 								<Bus Name="UI" ID="{59A245FD-7A4F-4BB4-876B-3E737CF7B742}"/>
 							</ChildrenList>
 						</Bus>
