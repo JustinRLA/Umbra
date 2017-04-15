@@ -27,13 +27,14 @@ public class CheckPointChange : MonoBehaviour {
 
 		if (col.tag == "Player")
 		{
+			
 			actualKill = PlayerPrefs.GetInt ("Kill") + PlayerOne.GetComponent<DeathEvent> ().tempoKill;
 			PlayerPrefs.SetInt ("Kill", actualKill);
 //			CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
 			//print ("Check");
 			//DeathManager.GetComponent<DeathManagerScript>().CheckPointState=CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
 			PlayerPrefs.SetInt ("SaveSystem", AssignCheckpoint);
-//			AkSoundEngine.PostEvent ("Amb_Check", gameObject);
+			AkSoundEngine.PostEvent ("Amb_Check", gameObject);
 			saveNumber=PlayerPrefs.GetInt ("SaveSystem");
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber].SetActive (true);
 			if(saveNumber>1)
