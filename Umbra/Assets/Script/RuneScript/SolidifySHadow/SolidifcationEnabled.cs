@@ -12,6 +12,7 @@ public class SolidifcationEnabled : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
+		CanClickable=false;
 	}
 	
 	// Update is called once per frame
@@ -21,6 +22,9 @@ public class SolidifcationEnabled : MonoBehaviour {
 
 	public void SolidificationStart()
 	{
+		Cursor.visible = true;
+
+		CanClickable = true;
 		FullRune = GameObject.Find ("solideImageFull");
 		FullRune.GetComponent<Image> ().enabled = true;
 		RuneManager = GameObject.Find ("RuneManager");
@@ -31,12 +35,13 @@ public class SolidifcationEnabled : MonoBehaviour {
 		{
 			Ombre.GetComponent<Collider2D> ().isTrigger = false;
 			Ombre.layer = 23;
+			Ombre.GetComponent<solifyShadow> ().enabled = true;
+			Ombre.GetComponent<solifyShadow> ().enable = true;
+
 		}
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;
 
 	//MyCache.SetActive (true);
-	Cursor.visible = true;
 
-		CanClickable = true;
 	}
 }

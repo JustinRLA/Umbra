@@ -360,7 +360,7 @@ public class CheckVisinCone : MonoBehaviour {
 	
 			if (AlertHavePlayer==false) {
 			
-				AkSoundEngine.PostEvent ("Mus_Alert", gameObject);
+				AkSoundEngine.PostEvent ("Mus_Located", gameObject);
 				AlertHavePlayer = true;
 				RetrnHavePlayed = false;
 				suspiciousHavePlayed = false;
@@ -377,7 +377,7 @@ public class CheckVisinCone : MonoBehaviour {
 			}
 			 else {
 			if (suspiciousHavePlayed==false) {
-				AkSoundEngine.PostEvent ("Mus_Located", gameObject);
+				AkSoundEngine.PostEvent ("Mus_Alert", gameObject);
 				RetrnHavePlayed = true;
 				suspiciousHavePlayed = false;
 				AlertHavePlayer = false;

@@ -395,7 +395,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	void AlertInMode()
 	{
 		if (haveplayedAlert == false) {
-			AkSoundEngine.PostEvent ("NPC_State_Alarmed", gameObject);
+			AkSoundEngine.PostEvent ("NPC_State_Located", gameObject);
 			haveplayedAlert = true;
 		}
 		haveplayedSuspicious = false;
@@ -561,7 +561,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	
 
 		if (haveplayedSuspicious == false) {
-			AkSoundEngine.PostEvent ("NPC_State_Located", gameObject);
+			AkSoundEngine.PostEvent ("NPC_State_Alarmed", gameObject);
 			haveplayedSuspicious = true;
 		}
 		Alert = false;

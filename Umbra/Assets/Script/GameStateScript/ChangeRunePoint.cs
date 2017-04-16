@@ -34,7 +34,7 @@ public class ChangeRunePoint : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.E) && canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true)
 		{
 			UIMode.SetActive (true);
-
+			AkSoundEngine.PostEvent ("PC_Rune_Select", gameObject);
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = false;
 			playerMy.GetComponent<Platformer2DUserControl> ().enabled = false;
 			BorneBasescript.ReceiveInfo ();

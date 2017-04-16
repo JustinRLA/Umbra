@@ -20,7 +20,9 @@ public class solifyShadow : MonoBehaviour {
 	public CursorMode cursormode=CursorMode.Auto;
 	Vector2 hotspot= Vector2.zero;
 	GameObject FullRune;
+	public bool Clickable;
 	bool colPlayer;
+	public bool enable = false;
 
 	// Use this for initialization
 	void Start () {
@@ -35,8 +37,12 @@ public class solifyShadow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Cursor.SetCursor (CursorText, hotspot, cursormode);
-		if (Input.GetMouseButtonDown(1) && MySolid.CanClickable == true)
+		if (enable == true) {
+			if (MySolid.CanClickable == true && PlayerMy.GetComponent<PlatformerCharacter2D> ().inShadow == false) 
+				print ("click");
+			} 
+
+		if (Input.GetMouseButtonDown(1) && Clickable == true)
 		{
 			CancelAction ();
 		MySolid.CanClickable = false;
@@ -47,25 +53,39 @@ public class solifyShadow : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		if (MySolid.CanClickable == true && PlayerMy.GetComponent<PlatformerCharacter2D> ().inShadow == false) {
-			StartCoroutine (SolidicationEvent ());
-			MySolid.CanClickable = false;
+		if (enable == true) {
+			if (Clickable == true && PlayerMy.GetComponent<PlatformerCharacter2D> ().inShadow == false) {
+				StartCoroutine (SolidicationEvent ());
+				MySolid.CanClickable = false;
 
-		} 
-		if(MySolid.CanClickable == false)
-			CancelAction ();
-	
+			} 
+			if (MySolid.CanClickable == false)
+				CancelAction ();
+		}
 	}
 
 	void OnMouseOver()
 	{
-//		print ("Enter");
-		if (MySolid.CanClickable == true)
-			GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver,1);
+//		
+		if(enable==true)
+		{
+			Clickable = true;
+		}
+	}
+	void OnMouseExit()
+	{
+		//		
+		if(enable==true)
+		{
+			Clickable = false;
+		}
 	}
 
 	void CancelAction()
 	{
+		print ("Cancel");
+		MySolid.CanClickable = false;
+
 		FullRune = GameObject.Find ("solideImageFull");
 		FullRune.GetComponent<Image> ().enabled = false;
 		myMainCam = GameObject.Find ("Main Camera");
@@ -81,12 +101,14 @@ public class solifyShadow : MonoBehaviour {
 		Time.timeScale = 1;
 		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
-
+		mymyRuneManagerScript.RuneActivated = false;
+		enable = false;
 		foreach (GameObject Ombre in AllShadow)
 		{
 			Ombre.layer = 10;
+			Ombre.GetComponent<solifyShadow> ().enabled = false;
+
 		}
-		mymyRuneManagerScript.RuneActivated = false;
 	}
 
 
@@ -118,14 +140,10 @@ public class solifyShadow : MonoBehaviour {
 		GrimpSurfaceLeft.GetComponent<Collider2D> ().enabled = true;
 
 		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
-
-		foreach (GameObject Ombre in AllShadow)
-		{
-			Ombre.layer = 10;
-		}
 		gameObject.layer = 24;
 		mymyRuneManagerScript.RuneActivated = false;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+		enable = false;
 
 		yield return new WaitForSeconds(10f);
 		AkSoundEngine.PostEvent("PC_Rune_Solide_End",gameObject);
@@ -143,6 +161,13 @@ public class solifyShadow : MonoBehaviour {
 
 		GetComponent<SpriteRenderer> ().enabled = false;
 		gameObject.tag="Ombre";
+
+		foreach (GameObject Ombre in AllShadow)
+		{
+			Ombre.layer = 10;
+			Ombre.GetComponent<solifyShadow> ().enabled = false;
+
+		}
 
 //		myBlindEnmnemyRune.CanClick = false;
 //		MyLight.SetActive(false);
