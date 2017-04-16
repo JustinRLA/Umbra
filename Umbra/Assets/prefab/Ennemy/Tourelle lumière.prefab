@@ -183,8 +183,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732033569885416}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 66, y: -6.99, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: -24.26, y: 7.646, z: 0}
   m_LocalScale: {x: 1.0000005, y: 0.3000001, z: 0.099999994}
   m_Children:
   - {fileID: 4919697461596210}
@@ -707,7 +707,7 @@ MonoBehaviour:
   LightMaterial: {fileID: 2100000, guid: d52d9438d1a39354ca4d3543b8512e7f, type: 2}
   strokeRender: 0
   LightRadius: 200
-  Segments: 5
+  Segments: 20
   Layer:
     serializedVersion: 2
     m_Bits: 16786433
@@ -722,7 +722,7 @@ MonoBehaviour:
   uv_Offset: {x: 0.5, y: 0.5}
   uv_Scale: {x: 0.5, y: 0.5}
   vertexWorking: 0
-  RangeAngle: 30
+  RangeAngle: 80
 --- !u!212 &212085296840948198
 SpriteRenderer:
   m_ObjectHideFlags: 1

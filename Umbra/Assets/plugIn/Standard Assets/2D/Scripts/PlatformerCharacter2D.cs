@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
     {
 	public bool canJump;
 	public bool hidden;
+	bool havePlayedDeath;
+
 	SpriteRenderer mySpriteRenderer;
 	public int numberofDeath;
 	public GameObject AssassinTrigger;
@@ -71,8 +73,11 @@ using UnityEngine.SceneManagement;
         }
 	public void Death()
 	{
-		AkSoundEngine.PostEvent ("PC_Action_Death", gameObject);
-		AssassinTrigger.SetActive (false);
+		if (havePlayedDeath == false) {
+			AkSoundEngine.PostEvent ("PC_Action_Death", gameObject);
+			havePlayedDeath = true;
+		}
+			AssassinTrigger.SetActive (false);
 		dead = true;
 
 		Time.timeScale = 1;

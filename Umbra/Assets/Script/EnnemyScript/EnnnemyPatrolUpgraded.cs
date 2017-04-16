@@ -18,9 +18,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public Transform PointToLookWIthOneNavPoint;
 	public bool PlayerIsUp;
 	public bool PlayerIsDown;
-	public GameObject ConeSuspicious;
-	public GameObject ConeAlerte;
-	public GameObject ConeNormal;
 
 	Vector3 movPos;
 	bool routine;
@@ -1072,9 +1069,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 //
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Player" )
-			col.gameObject.GetComponent<PlatformerCharacter2D> ().Death ();
-
+		if (col.gameObject.tag == "Player") {
+			timerState = 24;
+			print ("PlauerTouch");
+		}
 //		if(col.gameObject.tag=="SolidOmbre")
 //		{
 //

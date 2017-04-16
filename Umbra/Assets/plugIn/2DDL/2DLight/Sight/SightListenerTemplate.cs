@@ -21,8 +21,6 @@ public class SightListenerTemplate : MonoBehaviour {
 	public bool IsawTheLure=false;
 	public int TypeOfObj;
 	// 1= Ennemy....2= Camera....3= Light
-	public GameObject PlayerView;
-	Collider2D ViewCol;
 	public bool inCam;
 	public bool LureInCam;
 	Vector3 Camdir;
@@ -48,11 +46,9 @@ public class SightListenerTemplate : MonoBehaviour {
 	public void Start()
 	{
 		RuneManager = GameObject.Find ("RuneManager");
-		PlayerView = GameObject.Find ("ViewTrigger");
 			//LurePlayer=GameObject.Find("2DCharacterShadow");
 //		RuneManager = GameObject.Find ("RuneManager");
 		if (TypeOfObj == 3)
-			ViewCol = PlayerView.GetComponent<Collider2D> ();
 		//myLureScript = RuneManager.GetComponent<LureScript> ();
 		//print (gameObject.name);
 		//EnnemyBase=
@@ -154,7 +150,6 @@ public class SightListenerTemplate : MonoBehaviour {
 		}
 
 
-
 		if (go.tag == "Player")
 		{
 		//print ("One");
@@ -170,27 +165,17 @@ public class SightListenerTemplate : MonoBehaviour {
 
 		if(TypeOfObj==2)
 		{
+			print (go.gameObject);
+
 			if (go.tag == "Player")
 			{
 				print ("InCam");
 				StartCoroutine (CamCoroutine ());
 				inCam = true;
 			}
-			if (go.tag == "LurePlayer")
-			{
-				print ("LureInCam");
-
-				LureInCam = true;
-			}
 		}
-		if(TypeOfObj==3)
-		{
-			if (go.tag == "Player")
-			{
-				ViewCol.transform.localScale = new Vector3 (4,1,1);
-			}
 
-		}
+
 			}
 
 //	if (go.tag == "ennemy")
@@ -213,7 +198,7 @@ public class SightListenerTemplate : MonoBehaviour {
 		if (go.tag == "Player")
 		{
 			StopCoroutine (InSight ());
-//			print(Vector3.Distance(go.transform.position,transform.position));
+		print(Vector3.Distance(go.transform.position,transform.position));
 			//print()
 		//	print ("I SawYou");
 			iSeeYou = false;
@@ -238,11 +223,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 		if(TypeOfObj==3)
 		{
-			if (go.tag == "Player")
-			{
-				ViewCol.transform.localScale = new Vector3 (0.3f,0.3f,1);
 
-			}
 		}
 	
 	}

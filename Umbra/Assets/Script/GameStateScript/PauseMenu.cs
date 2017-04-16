@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour {
 
 	void PauseBegin()
 	{
+		AkSoundEngine.PostEvent ("Menu_Pause", gameObject);
 		CameraOne.GetComponent<BlurOptimized> ().enabled = true;
 		Paused = true;
 		Cursor.visible = true;
@@ -39,7 +40,10 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void PauseEnd()
-	{		Cursor.visible = false;
+	{	
+		AkSoundEngine.PostEvent ("Menu_Pause_End", gameObject);
+
+		Cursor.visible = false;
 		
 		CameraOne.GetComponent<BlurOptimized> ().enabled = false;
 

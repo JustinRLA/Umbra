@@ -16,6 +16,9 @@ public class solifyShadow : MonoBehaviour {
 	public GameObject[] AllShadow;
 	public GameObject GrimpSurfaceRight;
 	public GameObject GrimpSurfaceLeft;
+	public Texture2D CursorText;
+	public CursorMode cursormode=CursorMode.Auto;
+	Vector2 hotspot= Vector2.zero;
 	GameObject FullRune;
 	bool colPlayer;
 
@@ -32,6 +35,7 @@ public class solifyShadow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Cursor.SetCursor (CursorText, hotspot, cursormode);
 		if (Input.GetMouseButtonDown(1) && MySolid.CanClickable == true)
 		{
 			CancelAction ();

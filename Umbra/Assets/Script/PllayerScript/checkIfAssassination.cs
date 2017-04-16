@@ -18,12 +18,11 @@ public class checkIfAssassination : MonoBehaviour {
 //		if(Input.GetKeyDown(KeyCode.Alpha1))
 //			Playa.GetComponent<DeathEvent> ().chooseSprite ();
 		
-
-		if(canAssassinate==true)
-		{
-			if (Input.GetKeyDown (KeyCode.E))
-			{
-				Assassination();
+		if (ActualEnnemy != null) {
+			if (canAssassinate == true) {
+				if (Input.GetKeyDown (KeyCode.E) && ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded>().Alert==false) {
+					Assassination ();
+				}
 			}
 		}
 	}

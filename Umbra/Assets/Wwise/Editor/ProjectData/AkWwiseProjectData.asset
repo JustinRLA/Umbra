@@ -262,8 +262,8 @@ MonoBehaviour:
   - PhysicalPath: Events\SFX.wwu
     ParentPhysicalPath: Events\Default Work Unit.wwu
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: 523583596
-    m_lastTimePart2: -1999338412
+    m_lastTimePsrt1: 1265001225
+    m_lastTimePart2: -1999338401
     List:
     - Name: Amb_Alarm
       Path: Default Work Unit\SFX\Amb\Amb_Alarm
@@ -376,6 +376,48 @@ MonoBehaviour:
         ObjectType: 3
       ID: 309439191
       Guid: d7181179aa99174994d745f8364330ee
+      maxAttenuation: 0
+    - Name: Menu_Pause
+      Path: Default Work Unit\SFX\UI\Menu_Pause
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu_Pause
+        ObjectType: 3
+      ID: -2124957321
+      Guid: 06e3c8ffa9c0294987d036523c93d3d3
+      maxAttenuation: 0
+    - Name: Menu_Pause_End
+      Path: Default Work Unit\SFX\UI\Menu_Pause_End
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu_Pause_End
+        ObjectType: 3
+      ID: 211604505
+      Guid: a97c330eb832b04ba1c1087bceb24ef3
+      maxAttenuation: 0
+    - Name: Menu_Rune_Click
+      Path: Default Work Unit\SFX\UI\Menu_Rune_Click
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu_Rune_Click
+        ObjectType: 3
+      ID: -1744633078
+      Guid: 5ba4b780ef518749824b80822eec9414
       maxAttenuation: 0
     - Name: Menu_Rune_Hover
       Path: Default Work Unit\SFX\UI\Menu_Rune_Hover

@@ -300,7 +300,7 @@ public class LineRendererTest : MonoBehaviour {
 
 	void gothrought()
 	{
-		print ("testinggg");
+//		print ("testinggg");
 	if(goThrougt==true)
 		{
 			PlayerMy.GetComponent<Rigidbody2D>().AddForce(dir /forcedividable,ForceMode2D.Impulse);

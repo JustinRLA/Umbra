@@ -74,7 +74,7 @@ public class CheckPointChange : MonoBehaviour {
 				initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber-1].SetActive(false);
 			if(initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber]!=null)
 			initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber].SetActive(true);
-
+			GetComponent<Collider2D> ().enabled = false;
 		}
 
 	}

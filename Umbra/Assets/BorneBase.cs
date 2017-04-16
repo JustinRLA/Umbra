@@ -194,6 +194,25 @@ public class BorneBase : MonoBehaviour {
 		RuneManager.GetComponent<RuneManagerScript> ().enabled = false;
 
 	}
+	public void ClickStart()
+	{
+		AkSoundEngine.PostEvent ("Menu_Click", gameObject);
+
+	}
+
+	public void MenuRuneHover()
+	{
+
+		AkSoundEngine.PostEvent ("Menu_Rune_Hover", gameObject);
+
+	}
+	public void MenuRuneClick()
+	{
+
+		AkSoundEngine.PostEvent ("Menu_Rune_Click", gameObject);
+
+	}
+
 
 	public void MySetOffenseRuneMark()
 	{
