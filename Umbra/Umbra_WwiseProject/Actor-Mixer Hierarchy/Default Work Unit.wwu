@@ -127,8 +127,20 @@
 														<Value>0.1</Value>
 													</ValueList>
 												</Property>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>3</Value>
@@ -2537,6 +2549,10 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="NPC_Action_Death_01" ID="{3B005A8E-2802-4BBC-8481-455268FC83E5}" ShortID="736784849">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="3.84561771137026E-02"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.503908527696793"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>NPC_Action_Death_01.wav</AudioFile>
 														</AudioFileSource>
@@ -2578,7 +2594,7 @@
 												<Property Name="OverridePriority" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismLoopCount" Type="int32" Value="1"/>
+												<Property Name="PlayMechanismLoopCount" Type="int32" Value="3"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
@@ -2885,7 +2901,7 @@
 												</Property>
 												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismLoopCount" Type="int32" Value="3"/>
+												<Property Name="PlayMechanismLoopCount" Type="int32" Value="15"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3">
@@ -3948,6 +3964,10 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Talk_01" ID="{BBC8774A-B397-48B4-8EDB-AACA3F5E27E4}" ShortID="335877008">
+																			<PropertyList>
+																				<Property Name="FadeInDuration" Type="Real64" Value="6.09226696631033E-02"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="3.71479693067703E-02"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Talk_01.wav</AudioFile>
 																		</AudioFileSource>
@@ -3967,6 +3987,10 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Talk_02" ID="{4018494A-2B55-4E22-B546-4087D55CF707}" ShortID="157366416">
+																			<PropertyList>
+																				<Property Name="FadeInDuration" Type="Real64" Value="7.88748683997409E-02"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="0.102537328919663"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Talk_02.wav</AudioFile>
 																		</AudioFileSource>
@@ -3986,6 +4010,10 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Talk_03" ID="{99B98C3C-65B2-4488-BE34-8D8ABCEEC96F}" ShortID="792365127">
+																			<PropertyList>
+																				<Property Name="FadeInDuration" Type="Real64" Value="8.06709588597344E-03"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="0.114180434078393"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Talk_03.wav</AudioFile>
 																		</AudioFileSource>
@@ -4031,6 +4059,10 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Talk_05" ID="{A365482E-767F-4C64-B473-2871773B9169}" ShortID="431169029">
+																			<PropertyList>
+																				<Property Name="FadeInDuration" Type="Real64" Value="2.92212301587302E-02"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="0.153858722060253"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Talk_05.wav</AudioFile>
 																		</AudioFileSource>
@@ -4050,6 +4082,12 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Talk_06" ID="{5CCEE2D3-121F-4F28-88E7-894A91EAB2F4}" ShortID="807259037">
+																			<PropertyList>
+																				<Property Name="FadeInDuration" Type="Real64" Value="3.06219630709427E-02"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="0.116108276643991"/>
+																				<Property Name="TrimBegin" Type="Real64" Value="2.61562601230969E-02"/>
+																				<Property Name="TrimEnd" Type="Real64" Value="0.509090136054422"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Talk_06.wav</AudioFile>
 																		</AudioFileSource>
@@ -4069,6 +4107,11 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Talk_07" ID="{2D2C6020-805E-4B36-B2D3-6318622CA125}" ShortID="758005189">
+																			<PropertyList>
+																				<Property Name="FadeInDuration" Type="Real64" Value="9.94852405247813E-03"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="0.166361429988662"/>
+																				<Property Name="TrimEnd" Type="Real64" Value="0.431655404721412"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Talk_07.wav</AudioFile>
 																		</AudioFileSource>
@@ -4088,6 +4131,12 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Talk_08" ID="{FF7FD1BC-C601-43F7-B0DC-DDA3FB10E6A7}" ShortID="841832338">
+																			<PropertyList>
+																				<Property Name="FadeInDuration" Type="Real64" Value="1.69705367265954E-02"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="0.102716406503077"/>
+																				<Property Name="TrimBegin" Type="Real64" Value="0.154521202826369"/>
+																				<Property Name="TrimEnd" Type="Real64" Value="0.637734906462585"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Talk_08.wav</AudioFile>
 																		</AudioFileSource>
@@ -4171,6 +4220,10 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Talk_12" ID="{6E25E822-39E4-47CC-AB63-21738414FE32}" ShortID="701392982">
+																			<PropertyList>
+																				<Property Name="FadeInDuration" Type="Real64" Value="3.35881316812439E-02"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="9.01576166180758E-02"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Talk_12.wav</AudioFile>
 																		</AudioFileSource>
@@ -4594,6 +4647,9 @@
 																	</ReferenceList>
 																	<ChildrenList>
 																		<AudioFileSource Name="NPC_State_Normal_Troat_15" ID="{EC3F9C6B-EF04-4D13-B27B-3726BC80F073}" ShortID="335057423">
+																			<PropertyList>
+																				<Property Name="TrimBegin" Type="Real64" Value="0.576939332280531"/>
+																			</PropertyList>
 																			<Language>SFX</Language>
 																			<AudioFile>NPC_State_Normal_Troat_15.wav</AudioFile>
 																		</AudioFileSource>

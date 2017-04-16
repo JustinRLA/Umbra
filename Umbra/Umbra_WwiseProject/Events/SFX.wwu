@@ -266,7 +266,17 @@
 						</Event>
 						<Event Name="NPC_Destroy" ID="{077BD2EA-1073-45D7-8B0E-4C0E877DCF20}">
 							<ChildrenList>
+								<Action Name="Post Event" ID="{A7A7FCCA-6070-4214-B679-18018BE8B833}" ShortID="269803477" Type="PlayEvent" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{5C922AE0-504A-4A85-B542-926A262544B3}" Global="false">
+											<ObjectRef Name="NPC_Action_Death" ID="{A33ED3D1-95DE-4C00-85AF-3993E6039CD7}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+										</Element>
+									</ElementList>
+								</Action>
 								<Action Name="Stop" ID="{B2FEED0A-45A9-4179-A482-C857A7387033}" ShortID="693469328" Type="Stop" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="2"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{784EBDDB-8299-4765-B34C-5DFA081CB594}" Global="false">
 											<ObjectRef Name="NPC" ID="{EE9552C0-04A5-4219-B7EC-D1304928AE59}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
@@ -298,6 +308,20 @@
 											<ElementList>
 												<Element ID="{429FB6A0-4AC0-45CA-B36C-63D038B4306F}" Global="false">
 													<ObjectRef Name="PC_Action_Respawn" ID="{FCA98856-8BD2-4662-B709-FB25D85830B3}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{57683AAE-5FEF-48BF-A849-6BA38E4F3010}" ShortID="197675787" Type="Stop" Scope="One" Global="true">
+											<ElementList>
+												<Element ID="{7DBA36E1-6EDA-446F-B1D2-5E68D796DC72}" Global="true">
+													<ObjectRef Name="NPC_State_Alarmed" ID="{A7BD7DD8-AFE9-4617-B232-5312700776D9}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{0CBAB840-FC48-4147-9FAF-16DAFE804E9F}" ShortID="57113232" Type="Stop" Scope="One" Global="true">
+											<ElementList>
+												<Element ID="{DFC00D27-5207-47D7-B553-234F22B9F475}" Global="true">
+													<ObjectRef Name="NPC_State_Located" ID="{1BCEB177-5751-4533-A7A0-91B6C368CED6}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
