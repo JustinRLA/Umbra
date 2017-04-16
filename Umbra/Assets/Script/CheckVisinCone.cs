@@ -378,8 +378,8 @@ public class CheckVisinCone : MonoBehaviour {
 			 else {
 			if (suspiciousHavePlayed==false) {
 				AkSoundEngine.PostEvent ("Mus_Alert", gameObject);
-				RetrnHavePlayed = true;
-				suspiciousHavePlayed = false;
+				RetrnHavePlayed = false;
+				suspiciousHavePlayed = true;
 				AlertHavePlayer = false;
 			}
 
