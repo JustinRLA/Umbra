@@ -1359,58 +1359,6 @@
 												</CustomStateList>
 											</StateInfo>
 										</RandomSequenceContainer>
-										<Sound Name="PC_Foot_Stealth_Off" ID="{E71D3249-5ED4-406A-B67E-1B0BFB30D7E5}" ShortID="681233883" Type="SoundFX">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="PC_Foot_Stealth_Off" ID="{E9B9A06D-812B-488D-95C8-E383DD585CDA}" ShortID="1015725807">
-													<Language>SFX</Language>
-													<AudioFile>PC_Foot_Stealth_Off.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="PC_Foot_Stealth_Off" ID="{E9B9A06D-812B-488D-95C8-E383DD585CDA}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="PC_Foot_Stealth_On" ID="{3FE97D34-3BCF-41CA-BCF5-378BC7E6C322}" ShortID="649654920" Type="SoundFX">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="PC_Foot_Stealth_On" ID="{A4F3906B-808C-4683-9308-3C89639B462B}" ShortID="783819999">
-													<Language>SFX</Language>
-													<AudioFile>PC_Foot_Stealth_On.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="PC_Foot_Stealth_On" ID="{A4F3906B-808C-4683-9308-3C89639B462B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<SwitchContainer Name="PC_Foot_Jump" ID="{228A4336-5CB5-429F-8EAE-60783A80FF9E}" ShortID="398015705">
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1768,6 +1716,159 @@
 												</CustomStateList>
 											</StateInfo>
 										</RandomSequenceContainer>
+										<BlendContainer Name="PC_Foot_Stealth_On" ID="{31A3988B-AB97-43E4-AB95-D36933117D1B}" ShortID="378513280">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="PC_Foot_Stealth_On" ID="{3FE97D34-3BCF-41CA-BCF5-378BC7E6C322}" ShortID="649654920" Type="SoundFX">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-7</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PC" ID="{1CAE5AA5-87A2-464C-ACD7-3FC2ED76398F}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PC_Foot_Stealth_On" ID="{A4F3906B-808C-4683-9308-3C89639B462B}" ShortID="783819999">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="6.39527064732143E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.152930385044643"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.194638671875"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.39305678013393"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>PC_Foot_Stealth_On.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="961379855"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PC_Foot_Stealth_On" ID="{A4F3906B-808C-4683-9308-3C89639B462B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="PC_Foot_Stealth_On_Foley" ID="{4D662EDA-6EF6-4639-A898-2CE2E6B4494C}" ShortID="794919694" Type="SoundFX">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-17</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PC_Foot_Stealth_On_Foley" ID="{558C5B14-DA57-4D22-AFB7-87FF667993CF}" ShortID="855836638">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="4.55102040816326E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="4.28012633624879E-02"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.150617103984451"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.306652089407192"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>PC_Foot_Stealth_On_Foley.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PC_Foot_Stealth_On_Foley" ID="{558C5B14-DA57-4D22-AFB7-87FF667993CF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="PC_Foot_Stealth_Off" ID="{00DC723A-53F9-4F41-B2C3-5ED2EA39A318}" ShortID="155186358">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="PC_Foot_Stealth_Off" ID="{E71D3249-5ED4-406A-B67E-1B0BFB30D7E5}" ShortID="681233883" Type="SoundFX">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-7</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PC" ID="{1CAE5AA5-87A2-464C-ACD7-3FC2ED76398F}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PC_Foot_Stealth_Off" ID="{E9B9A06D-812B-488D-95C8-E383DD585CDA}" ShortID="1015725807">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.514160342261905"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.89019447544643"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>PC_Foot_Stealth_Off.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PC_Foot_Stealth_Off" ID="{E9B9A06D-812B-488D-95C8-E383DD585CDA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="PC_Foot_Stealth_Off_Foley" ID="{B6B0F171-FC38-4E99-88A5-83E86E705EE0}" ShortID="280896621" Type="SoundFX">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-8</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PC_Foot_Stealth_Off_Foley" ID="{C3E30DFD-C550-46A9-8341-5A1A7FD9322A}" ShortID="1011486128">
+															<Language>SFX</Language>
+															<AudioFile>PC_Foot_Stealth_Off_Foley.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PC_Foot_Stealth_Off_Foley" ID="{C3E30DFD-C550-46A9-8341-5A1A7FD9322A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Rune" ID="{29D11DBF-E706-4103-AB88-65687082DE95}" ShortID="396452769">
@@ -2018,12 +2119,18 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{397A0C5E-ED46-47C2-9F55-C1C048A61C94}" ShortID="935691571" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+												<AudioFileSource Name="PC_Rune_Trap_Used" ID="{E2529F68-F45C-46D4-83E8-B3A4B009E463}" ShortID="954473284">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.23562891265719"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.633330622380171"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.93067186930472"/>
+													</PropertyList>
 													<Language>SFX</Language>
-												</SourcePlugin>
+													<AudioFile>PC_Rune_Trap_Used.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{397A0C5E-ED46-47C2-9F55-C1C048A61C94}" Platform="Linked"/>
+												<ActiveSource Name="PC_Rune_Trap_Used" ID="{E2529F68-F45C-46D4-83E8-B3A4B009E463}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Trap_Stun" ID="{E808CD91-6BC9-4072-BCEE-A24AFC1ABB35}" ShortID="418952646" Type="SoundFX">
@@ -2036,12 +2143,17 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Wwise Silence" ID="{C1BA176A-D378-4DD4-8434-9F334EB376AF}" ShortID="39713601" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+												<AudioFileSource Name="PC_Rune_Trap_Used" ID="{71919F8E-5068-4082-8EF0-A1A910B7C0D4}" ShortID="603523199">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="4.73751252961545E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.291731034718425"/>
+													</PropertyList>
 													<Language>SFX</Language>
-												</SourcePlugin>
+													<AudioFile>PC_Rune_Trap_Used.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Wwise Silence" ID="{C1BA176A-D378-4DD4-8434-9F334EB376AF}" Platform="Linked"/>
+												<ActiveSource Name="PC_Rune_Trap_Used" ID="{71919F8E-5068-4082-8EF0-A1A910B7C0D4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="PC_Rune_Solide_Use" ID="{400AD663-4BA6-4061-8FC6-225D7FB50409}" ShortID="170720792" Type="SoundFX">
@@ -2447,7 +2559,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>12</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2464,7 +2576,9 @@
 											<PropertyList>
 												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="OverridePriority" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismLoopCount" Type="int32" Value="1"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
@@ -2486,6 +2600,11 @@
 													</ValueList>
 												</Property>
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2507,6 +2626,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="NPC_State_Alarmed_01" ID="{CB6788CC-26B3-4353-A308-84EF7293CE72}" ShortID="479162651">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.147782228619532"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2.14384277494486E-02"/>
+																<Property Name="TrimBegin" Type="Real64" Value="8.63254024044464E-02"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>NPC_State_Alarmed_01.wav</AudioFile>
 														</AudioFileSource>
@@ -2526,6 +2650,10 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="NPC_State_Alarmed_02" ID="{436D4377-139B-4E5D-A988-4EBE67ED917E}" ShortID="416657597">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="4.14213434599282E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.248528060759569"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>NPC_State_Alarmed_02.wav</AudioFile>
 														</AudioFileSource>
@@ -2545,6 +2673,12 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="NPC_State_Alarmed_03" ID="{E2EA0151-CE5B-4E1E-B859-A6D31D6003D6}" ShortID="350158918">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="9.09712629356463E-02"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.200877720871472"/>
+																<Property Name="TrimBegin" Type="Real64" Value="5.35125076092037E-02"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.605514605331836"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>NPC_State_Alarmed_03.wav</AudioFile>
 														</AudioFileSource>
@@ -2564,6 +2698,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="NPC_State_Alarmed_04" ID="{8BC037A4-A6BB-4F43-B35B-E95046E9A618}" ShortID="741816274">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.161568419604036"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="9.48658610519112E-02"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.852310470388265"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>NPC_State_Alarmed_04.wav</AudioFile>
 														</AudioFileSource>
@@ -2635,6 +2774,12 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="NPC_State_Alarmed_07" ID="{868799AA-CCA8-421A-BDC9-8D0FB308DFD2}" ShortID="92619442">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.109539158109025"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.11560360976904"/>
+																<Property Name="TrimBegin" Type="Real64" Value="9.66521983314922E-02"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.501454346637507"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>NPC_State_Alarmed_07.wav</AudioFile>
 														</AudioFileSource>
@@ -2648,6 +2793,11 @@
 										<RandomSequenceContainer Name="NPC_State_Normal_Trigger" ID="{A1C2F7C7-1DFC-4A41-9D7C-9D98431126F1}" ShortID="601614223">
 											<PropertyList>
 												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2733,7 +2883,9 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismLoopCount" Type="int32" Value="3"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3">
@@ -2750,6 +2902,11 @@
 												</Property>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2805,6 +2962,12 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="NPC_State_Located_01" ID="{6F821CCF-34CC-4C46-A921-F5EAE2A785C4}" ShortID="98693427">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.108582115550795"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="6.25342026732326E-02"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="2.38766955661433E-02"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.384869592816168"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>NPC_State_Located_01.wav</AudioFile>
 																</AudioFileSource>
@@ -2830,6 +2993,12 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="NPC_State_Located_03" ID="{C6281B58-7139-413D-A162-31197F48DF0E}" ShortID="840050041">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="9.92194333090379E-02"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="9.34171272675737E-02"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="3.19126832280531E-02"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.39223588840298"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>NPC_State_Located_03.wav</AudioFile>
 																</AudioFileSource>
@@ -2855,6 +3024,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="NPC_State_Located_02" ID="{6C3BE965-CEFF-4881-83C1-3DEA40BB812E}" ShortID="668117076">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.118947273850016"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="8.76148212261095E-02"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.416025343172983"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>NPC_State_Located_02.wav</AudioFile>
 																</AudioFileSource>
@@ -2913,7 +3087,7 @@
 												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>4</Value>
+														<Value>16</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>

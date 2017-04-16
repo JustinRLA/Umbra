@@ -67,10 +67,20 @@
 						</Event>
 						<Event Name="Menu_Pause" ID="{FFC8E306-C0A9-4929-87D0-36523C93D3D3}">
 							<ChildrenList>
-								<Action Name="Pause All Except" ID="{3B8BB5C3-E586-4B39-BADE-2B65A3298A48}" ShortID="95752850" Type="Pause" Scope="AllExcept" Global="false">
+								<Action Name="Play" ID="{C8FD9AF3-F161-4353-854A-E015A4385368}" ShortID="787746382" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{B806C862-078E-4187-AB09-7C07C6ECA6B1}" Global="false">
+										<Element ID="{2A0BF48F-7F81-4B1B-8ABC-A89806A499FE}" Global="false">
+											<ObjectRef Name="Menu_Cancel" ID="{EC8D4F76-26E3-409C-86AA-E329B6CC3FFE}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Pause All Except" ID="{3B8BB5C3-E586-4B39-BADE-2B65A3298A48}" ShortID="95752850" Type="Pause" Scope="AllExcept" Global="true">
+									<ElementList>
+										<Element ID="{B806C862-078E-4187-AB09-7C07C6ECA6B1}" Global="true">
 											<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
+										</Element>
+										<Element ID="{31C8C017-E396-4328-93B9-AEB44C2C1356}" Global="true">
+											<ObjectRef Name="Menu_Cancel" ID="{EC8D4F76-26E3-409C-86AA-E329B6CC3FFE}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -391,7 +401,7 @@
 										<Action Name="Play" ID="{E184FAAA-1FB8-4D9F-9822-80482B0FB722}" ShortID="670127941" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{FC2D8293-BA12-4718-A8A1-336A2EB5DB61}" Global="false">
-													<ObjectRef Name="PC_Foot_Stealth_On" ID="{3FE97D34-3BCF-41CA-BCF5-378BC7E6C322}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+													<ObjectRef Name="PC_Foot_Stealth_On" ID="{31A3988B-AB97-43E4-AB95-D36933117D1B}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -408,7 +418,7 @@
 										<Action Name="Play" ID="{A3B23F2D-E655-4028-BE9F-854E3CA642A9}" ShortID="725886907" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{0A7AA331-77DE-4D01-B939-EF8421571E89}" Global="false">
-													<ObjectRef Name="PC_Foot_Stealth_Off" ID="{E71D3249-5ED4-406A-B67E-1B0BFB30D7E5}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+													<ObjectRef Name="PC_Foot_Stealth_Off" ID="{00DC723A-53F9-4F41-B2C3-5ED2EA39A318}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
