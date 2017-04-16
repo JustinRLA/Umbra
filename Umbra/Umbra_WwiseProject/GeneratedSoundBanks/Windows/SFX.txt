@@ -67,11 +67,16 @@ Event	ID	Name			Wwise Object Path	Notes
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3551007341	Foot_Stealth			\Default Work Unit\Foot_Stealth	
+	3991942870	Music			\Default Work Unit\Music	
 
 State	ID	Name	State Group			Notes
 	581962986	Stealth_On	Foot_Stealth			
 	748895195	None	Foot_Stealth			
 	2099529632	Stealth_Off	Foot_Stealth			
+	721787521	Alert	Music			
+	748895195	None	Music			
+	2375286893	Located	Music			
+	3814499265	Explo	Music			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	94911816	Stealth_On	Foot_Stealth	\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot		
@@ -91,7 +96,6 @@ Effect plug-ins	ID	Name	Type				Notes
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	575736	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Use\Wwise Silence	
 	309247936	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Decay\Wwise Silence	
-	411050685	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Alarm\Test\Wwise Silence	
 	439150802	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Shadow_Pipe\Test\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -111,6 +115,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	68525548	Menu_Hover_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_03		62986
 	74239228	NPC_State_Normal_Exhale_10	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_10_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_10		19843
 	76754816	PC_Foot_Run_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_02		1290
+	81609057	Amb_Alarm_Attack	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Alarm_Attack_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Alarm\Amb_Alarm_Attack		5568
 	82430543	Menu_Hover_17	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_17_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_17		66622
 	85994893	Mus_Explo_PERCS_Gros Caisse	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Gros Caisse_01_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_PERCS_Gros Caisse		167741
 	92619442	NPC_State_Alarmed_07	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_07_1312B62E.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_07		3465
@@ -248,6 +253,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	741816274	NPC_State_Alarmed_04	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_04_C0601ECB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_04		6819
 	743855108	PC_Foot_Run_16	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_16_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_16		6686
 	744219289	VO_CutS_2_Morg__01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\VO_CutS_2_Morg__01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\CutS\CutS_2\VO_CutS_2_Morg__01		36798
+	754047560	Amb_Alarm_Decay	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Alarm_Decay_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Alarm\Amb_Alarm_Decay		49123
 	754576286	PC_Rune_Accrochage_Equip	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Accrochage_Equip_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Equip		1997
 	758005189	NPC_State_Normal_Talk_07	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_07_4A2D077B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_07		3679
 	758512462	PC_Foot_Run_09	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_09_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_09		3684
