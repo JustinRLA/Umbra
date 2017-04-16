@@ -212,6 +212,13 @@
 				</Event>
 				<Event Name="Mus_Located" ID="{CED625F7-E072-457F-82A0-AF179DC25010}">
 					<ChildrenList>
+						<Action Name="Play" ID="{867B0BE7-63D3-40CC-B9A6-1DDDFE1572D8}" ShortID="493656395" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B3AD3277-7D65-4320-9DAC-9C7D6CBCFDA5}" Global="false">
+									<ObjectRef Name="Amb_Alarm_Decay" ID="{DD0402A7-DF55-4C83-9C12-EE7F0293C10A}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+								</Element>
+							</ElementList>
+						</Action>
 						<Action Name="Set State" ID="{3BB647B8-8010-4183-9A2E-BAD4002C0AA6}" ShortID="787999852" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
