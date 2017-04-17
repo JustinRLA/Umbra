@@ -162,6 +162,10 @@
 							<Position X="1" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="CutS_Start" ID="{24D941C3-4515-4AB4-9EBF-AAED947B3E90}" WorkUnitID="{19E84A98-6EC0-40EB-B402-BC980F6AC5B3}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Mus_Located" ID="{CED625F7-E072-457F-82A0-AF179DC25010}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
 							<Position X="2" Y="2"/>
 						</Module>
@@ -190,7 +194,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
-						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
+						<CurrentStateRef Name="Located" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
 						<CurrentStateRef Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
