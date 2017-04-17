@@ -55,6 +55,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public GameObject TeleportPointRight_Actual;
 
 
+	bool stopShadow=false;
 
 
 
@@ -203,6 +204,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	public void LurAttention()
 	{
+		stopShadow = true;
 		print ("LureAttention");
 			timerState = myLureScript.timer;
 			LureAttention = true;
@@ -871,9 +873,13 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		}
 
 
-		if (LurePlayer.gameObject.activeInHierarchy ==false)
+		if (LurePlayer.gameObject.activeInHierarchy == false) {
 			LureAttention = false;
-
+			if (stopShadow == true) {
+				timerState = 0;
+				stopShadow = false;
+			}
+		}
 		PlayerPos = new Vector3 (ThePlayer.position.x, ThePlayer.position.y, 0);
 		myPos = new Vector3 (rayPointOf.position.x, rayPointOf.position.y, 0);
 		MortalRay = Physics2D.Linecast (myPos, PlayerPos);
@@ -945,7 +951,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			}
 			if ((SoundListerner - DistranctionsSoud) / SoundLevel > 20) {
 				timerState = 24;
-				//print ("tryeeee");
+				print ("tryeeee");
 			} 
 		}
 
@@ -960,7 +966,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 			if ( mySighListernetTemplate.throwAlert == true) {
 				timerState = 24;
-			//print ("tryeeee");
+			print ("tryeeee");
 
 			} 
 

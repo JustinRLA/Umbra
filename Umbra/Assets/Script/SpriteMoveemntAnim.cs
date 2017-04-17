@@ -6,7 +6,7 @@ public class SpriteMoveemntAnim : MonoBehaviour {
 	GameObject Player;
 	public Transform StartPosition;
 	public Transform ObjectivePosition;
-	float timer=0.04f;
+	float timer=0.02f;
 	Vector3 dir;
 
 	// Use this for initialization
@@ -20,7 +20,7 @@ public class SpriteMoveemntAnim : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer -= Time.deltaTime;
-		transform.position += dir * Time.deltaTime*20;
+		transform.position += dir * Time.deltaTime*40;
 
 
 		if(timer<0)

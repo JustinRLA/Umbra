@@ -17,7 +17,7 @@ public class TriggerAlert : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {
-		if (col.tag == "Player" || col.tag == "ViewTrigger") 
+		if (col.tag == "Player") 
 		{
 			//EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert=true;
 			//EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;

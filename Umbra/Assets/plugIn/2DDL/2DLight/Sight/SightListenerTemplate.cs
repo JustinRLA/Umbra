@@ -141,7 +141,7 @@ public class SightListenerTemplate : MonoBehaviour {
 
 				print ("SAWWWWWWWWWWWWWWWWWWWWWWW");
 				IsawTheLure = true;
-					EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Suspicious = true;
+//					EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Suspicious = true;
 
 			} 
 //			else
@@ -321,6 +321,8 @@ public class SightListenerTemplate : MonoBehaviour {
 	{
 		if(throwAlert==false)
 		throwSuspicious = true;
+		print ("throoooooooooooo");
+
 		yield return new WaitForSeconds (5f);
 		if(iSeeYou==true)
 		throwAlert = true;

@@ -23,7 +23,7 @@ public class ReduceDelay : MonoBehaviour {
 		Time.timeScale = 0.04f;
 		GetComponent<SpriteRenderer> ().sortingOrder = 10;
 		Playa.GetComponent<PlatformerCharacter2D> ().enabled = false;
-		yield return new WaitForSeconds (0.07f);
+		yield return new WaitForSeconds (0.05f);
 		GetComponent<Animator> ().SetBool ("Play", true);
 
 
