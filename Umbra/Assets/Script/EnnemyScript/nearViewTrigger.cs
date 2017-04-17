@@ -7,23 +7,24 @@ public class nearViewTrigger : MonoBehaviour {
 	public GameObject EnnemyBase;
 	public GameObject mySignListener;
 	public bool inSigght;
-
+	SightListenerTemplate mySightList;
+	EnnnemyPatrolUpgraded myPatrol;
 	// Use this for initialization
 	void Start () {
-		
+		mySightList = MySight.GetComponent<SightListenerTemplate> ();
+		myPatrol = EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(MySight.GetComponent<SightListenerTemplate>().iSeeYou==true && inSigght==true)
+		if(mySightList.iSeeYou==true && inSigght==true)
 		{
 			//			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 30;
 			//			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert = true;
-			mySignListener.GetComponent <SightListenerTemplate>().throwSuspicious=false;
+			mySightList.throwSuspicious=false;
 
-			mySignListener.GetComponent <SightListenerTemplate>().throwAlert=true;
-			EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 24;
-
+			mySightList.throwAlert=true;
+			myPatrol.timerState = 24;
 		}
 
 	}
@@ -33,26 +34,21 @@ public class nearViewTrigger : MonoBehaviour {
 		{
 			inSigght = true;
 			//print ("fuckkkkkkkkk");
-
 		}
-	}
-
-	void OnTriggerStay2D (Collider2D col) {
-		//print ("fuckkkkkkkkk");
-		if (col.tag == "Player"  )
+		if (col.tag == "LurePlayer"  )
 		{
-			inSigght = true;
+			mySightList.IsawTheLure = true;
 			//print ("fuckkkkkkkkk");
-
 		}
 	}
-
+		
 	void OnTriggerExit2D (Collider2D col) {
 		//print ("fuckkkkkkkkk");
 		if (col.tag == "Player")
 		{
 			inSigght = false;
 		}
+
 	}
 
 }

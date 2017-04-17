@@ -25,6 +25,8 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject[]TrapFeedback;
 	public GameObject[]GrapRegion;
 	public GameObject[] interzone;
+	public GameObject[] Cache;
+
 	public int debugsave;
 	public bool isdebug;
 	public GameObject Compteur;
@@ -171,6 +173,33 @@ public class InitializeLevel : MonoBehaviour {
 		if (GrilleJuda [10] != null)
 			GrilleJuda [10].SetActive (false);
 	
+		if (Cache [0] != null)
+			Cache [0].SetActive (false);
+		if (Cache [1] != null)
+			Cache [1].SetActive (false);
+		if (Cache [2] != null)
+			Cache [2].SetActive (false);
+		if (Cache [3] != null)
+			Cache [3].SetActive (false);
+		if (Cache [4] != null)
+			Cache [4].SetActive (false);
+		if (Cache [5] != null)
+			Cache [5].SetActive (false);
+		if (Cache [6] != null)
+			Cache [6].SetActive (false);
+		if (Cache [7] != null)
+			Cache [7].SetActive (false);
+		if (Cache [8] != null)
+			Cache [8].SetActive (false);
+		if (Cache [9] != null)
+			Cache [9].SetActive (false);
+		if (Cache [10] != null)
+			Cache[10].SetActive (false);
+		if (Cache [decoountNumber] != null)
+			Cache [decoountNumber].SetActive (true);
+		
+
+
 		if (GrilleJuda [decoountNumber] != null)
 			GrilleJuda [decoountNumber].SetActive (true);
 

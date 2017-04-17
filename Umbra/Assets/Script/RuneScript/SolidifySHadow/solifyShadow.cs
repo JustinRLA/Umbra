@@ -133,6 +133,9 @@ public class solifyShadow : MonoBehaviour {
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		gameObject.tag="SolidOmbre";
 		gameObject.layer = 10;
+		GrimpSurfaceLeft.layer = 24;
+		GrimpSurfaceRight.layer = 24;
+
 		GrimpSurfaceLeft.SetActive (true);
 		GrimpSurfaceRight.SetActive (true);
 

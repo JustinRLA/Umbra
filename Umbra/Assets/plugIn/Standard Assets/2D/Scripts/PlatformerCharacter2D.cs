@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 	public bool canJump;
 	public bool hidden;
 	bool havePlayedDeath;
+	public GameObject WaveFoot;
 
 	SpriteRenderer mySpriteRenderer;
 	public int numberofDeath;
@@ -519,6 +520,10 @@ using UnityEngine.SceneManagement;
 
 		}
 			
+	}
+	public void StartWave()
+	{
+		Instantiate (WaveFoot, m_GroundCheck.position, m_GroundCheck.rotation);
 	}
     }
 

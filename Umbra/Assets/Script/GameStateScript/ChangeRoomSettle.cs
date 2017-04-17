@@ -10,6 +10,8 @@ public class ChangeRoomSettle : MonoBehaviour {
 	public GameObject player;
 	public GameObject NextEnnemy;
 
+	GameObject[] AllInstantiateShadow;
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("raycar");
@@ -20,6 +22,16 @@ public class ChangeRoomSettle : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D (Collider2D col) {
+		AllInstantiateShadow = GameObject.FindGameObjectsWithTag ("Ombre");
+
+		foreach (GameObject Ombre in AllInstantiateShadow)
+		{
+			if (Ombre.name == "OldCube")
+				Destroy (Ombre.gameObject);
+		}
+	
+
+
 		if(col.tag=="Player")
 		{
 			NextEnnemy.SetActive (true);

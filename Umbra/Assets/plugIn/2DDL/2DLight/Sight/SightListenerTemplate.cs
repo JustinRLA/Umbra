@@ -138,7 +138,6 @@ public class SightListenerTemplate : MonoBehaviour {
 		if(throwAlert==false || throwSuspicious==false)
 		{
 			if (go.tag == "LurePlayer" ) {
-
 				print ("SAWWWWWWWWWWWWWWWWWWWWWWW");
 				IsawTheLure = true;
 //					EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Suspicious = true;

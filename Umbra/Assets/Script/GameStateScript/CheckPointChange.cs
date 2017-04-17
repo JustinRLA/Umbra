@@ -9,6 +9,7 @@ public class CheckPointChange : MonoBehaviour {
 	public GameObject initialializer;
 
 
+
 	// Use this for initialization
 	void Start () {
 		initialializer=GameObject.Find("Initialiser");
@@ -27,7 +28,9 @@ public class CheckPointChange : MonoBehaviour {
 
 		if (col.tag == "Player")
 		{
-			
+
+		
+
 			actualKill = PlayerPrefs.GetInt ("Kill") + PlayerOne.GetComponent<DeathEvent> ().tempoKill;
 			PlayerPrefs.SetInt ("Kill", actualKill);
 //			CheckPointManager.GetComponent<CheckPointState> ().CheckpointState = AssignCheckpoint;
@@ -36,6 +39,13 @@ public class CheckPointChange : MonoBehaviour {
 			PlayerPrefs.SetInt ("SaveSystem", AssignCheckpoint);
 			AkSoundEngine.PostEvent ("Amb_Check", gameObject);
 			saveNumber=PlayerPrefs.GetInt ("SaveSystem");
+
+			if(initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber-1]!=null)
+				initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber-1].SetActive(false);
+			if(initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber]!=null)
+				initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber].SetActive(true);
+			
+
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber].SetActive (true);
 			if(saveNumber>1)
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber-2].SetActive (false);
@@ -70,8 +80,8 @@ public class CheckPointChange : MonoBehaviour {
 			if(initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber]!=null)
 			initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber].SetActive(true);
 
-			if(initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber-1]!=null)
-				initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber-1].SetActive(false);
+			if (initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber - 1] != null)
+				Destroy (initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber - 1]);
 			if(initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber]!=null)
 			initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber].SetActive(true);
 			GetComponent<Collider2D> ().enabled = false;
