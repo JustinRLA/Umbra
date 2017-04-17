@@ -36,17 +36,17 @@ public class TimerShadowPieceFour : MonoBehaviour {
 			print ("Pass");
 		ShadowOne.SetActive (true);
 			//AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (3f);
 			print ("Pass2");
 
 			//AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
 		ShadowTwo.SetActive (true);
 
-		yield return new WaitForSeconds (1f);
-		ShadowOne.SetActive (false);
 		yield return new WaitForSeconds (2f);
+		ShadowOne.SetActive (false);
+		yield return new WaitForSeconds (3f);
 		ShadowTwo.SetActive (false);
-			yield return new WaitForSeconds (1f);
+			yield return new WaitForSeconds (2f);
 
 		}
 

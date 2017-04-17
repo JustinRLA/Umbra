@@ -463,7 +463,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 					speed = 0;
 				}
 				if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
-					speed = OriginalSpeed;
+					speed = OriginalSpeed*1.5f;
 			} else
 			{
 				speed = 0;
@@ -500,7 +500,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 				if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) >= -2)
 					speed = 0;
 				if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
-					speed = OriginalSpeed;
+					speed = OriginalSpeed*1.5f;
 			}
 			else
 				speed = 0;
@@ -938,12 +938,12 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			SoundLevel = Vector3.Distance (ThePlayer.transform.position, transform.position);
 			if(Alert==false && mySighListernetTemplate.throwAlert==false)
 			{
-				if ((SoundListerner-DistranctionsSoud) / SoundLevel > 4)
+				if ((SoundListerner-DistranctionsSoud) / SoundLevel > 10)
 				{
 				timerState = 15;
 			}	
 			}
-			if ((SoundListerner - DistranctionsSoud) / SoundLevel > 8) {
+			if ((SoundListerner - DistranctionsSoud) / SoundLevel > 20) {
 				timerState = 24;
 				//print ("tryeeee");
 			} 

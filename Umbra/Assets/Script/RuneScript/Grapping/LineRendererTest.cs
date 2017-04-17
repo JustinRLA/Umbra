@@ -12,7 +12,6 @@ public class LineRendererTest : MonoBehaviour {
 	private Vector3 PlayerPos;
 	public GameObject myPlayer;
 	public Transform PlayerMy;
-	public float movespeed;
 	public Material OutMat;
 	public Material GOodMat;
 	public Material InMat;

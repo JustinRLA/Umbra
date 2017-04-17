@@ -61,7 +61,7 @@ public class DragShadow : MonoBehaviour {
 		//gameObject.layer = 10;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
-
+		gameObject.layer = 10;
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
 		GetComponent<SpriteRenderer> ().enabled = false;

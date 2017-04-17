@@ -143,14 +143,13 @@ using UnityEngine.SceneManagement;
 	}
 	void JumpFromLader()
 	{
-		
-		//canClimb = false;
-		//StartCoroutine(ChangeLadderCol());
-		AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
 
 		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
-		//ThePlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 10));
-		GetComponent<Rigidbody2D>().velocity=new Vector2(0f, 15);
+		GetComponent<Rigidbody2D>().velocity=new Vector2(0, 15);
+		AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
+
+		canJump = false;
+
 		m_Anim.SetBool ("Climb", false);
 		ClimbTrue = false;
 
@@ -249,7 +248,6 @@ using UnityEngine.SceneManagement;
 					m_Anim.SetBool ("GrimpeBouge", true);
 				}
 				else if (Input.GetKey (KeyCode.Space) && canJump == true) {
-					canJump = false;
 					JumpFromLader ();
 					m_Anim.SetBool ("GrimpeBouge", false);
 				}
