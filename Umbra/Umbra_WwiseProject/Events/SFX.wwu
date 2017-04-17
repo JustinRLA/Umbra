@@ -137,8 +137,23 @@
 						<Event Name="Amb_Shadow_Pipe" ID="{9FA2BCBE-4C81-43B5-A39A-3F9DB53F7897}">
 							<ChildrenList>
 								<Action Name="Play" ID="{E68005C0-BE3F-4431-BFEF-F63F5844AC73}" ShortID="86845177" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{09185B9D-9B33-4474-9FEB-4BEE13AEF422}" Global="false">
+											<ObjectRef Name="Amb_Shadow_Pipe" ID="{33E1FF04-53C3-4C73-819F-00241E632014}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{7F4D679C-6A9C-47B3-AE20-693B2F81A886}" ShortID="1022112106" Type="Stop" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="4.7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{C743CA01-81EF-4232-A369-C6133CDE1D8F}" Global="false">
 											<ObjectRef Name="Amb_Shadow_Pipe" ID="{33E1FF04-53C3-4C73-819F-00241E632014}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
@@ -151,13 +166,6 @@
 					<ChildrenList>
 						<Event Name="NPC_Action_Death" ID="{A33ED3D1-95DE-4C00-85AF-3993E6039CD7}">
 							<ChildrenList>
-								<Action Name="Stop" ID="{0553F613-2CBD-4266-A42B-B56305F2E934}" ShortID="717022675" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{D798AD0B-DB64-48E6-AF24-17065E64BE98}" Global="false">
-											<ObjectRef Name="State" ID="{23E84DB6-59EF-412B-B63A-5EEED973C203}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-										</Element>
-									</ElementList>
-								</Action>
 								<Action Name="Play" ID="{BEBAF9D6-70B4-4737-8612-BC2F041FD881}" ShortID="1049492857" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{8E245AB4-98CD-4928-9BFD-F014228650E5}" Global="false">
@@ -267,6 +275,9 @@
 						<Event Name="NPC_Destroy" ID="{077BD2EA-1073-45D7-8B0E-4C0E877DCF20}">
 							<ChildrenList>
 								<Action Name="Post Event" ID="{A7A7FCCA-6070-4214-B679-18018BE8B833}" ShortID="269803477" Type="PlayEvent" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{5C922AE0-504A-4A85-B542-926A262544B3}" Global="false">
 											<ObjectRef Name="NPC_Action_Death" ID="{A33ED3D1-95DE-4C00-85AF-3993E6039CD7}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
