@@ -5,13 +5,13 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" ShortID="162372556">
 					<PropertyList>
-						<Property Name="Tempo" Type="Real64" Value="50"/>
-						<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
-						<Property Name="Volume" Type="Real64">
+						<Property Name="Priority" Type="int16">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>100</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Tempo" Type="Real64" Value="50"/>
+						<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -19010,6 +19010,11 @@
 												<MusicTrack Name="Mus_Explo_A_Vlc-CB" ID="{59EA3904-B7A6-4E38-A63C-7AA6C768CA71}" ShortID="747798605">
 													<PropertyList>
 														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">

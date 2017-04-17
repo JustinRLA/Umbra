@@ -357,6 +357,13 @@
 												</Element>
 											</ElementList>
 										</Action>
+										<Action Name="Post Event" ID="{9518CC73-CF6B-4FDD-8952-5C11B9ED1660}" ShortID="444837901" Type="PlayEvent" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{3779209A-3F1F-448F-ACDE-02BDB6879A56}" Global="false">
+													<ObjectRef Name="Mus_Explo" ID="{AF31897A-1132-42B2-A004-F3F5D456986C}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
+												</Element>
+											</ElementList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="PC_Action_SlowMo_End" ID="{81F04446-79F6-4C1E-853E-A741849F9B2D}">
