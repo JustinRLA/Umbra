@@ -106,7 +106,7 @@
 								<Action Name="Play" ID="{269B21E6-7D4A-44EC-A1C0-E57F3418034B}" ShortID="416046227" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{6DE2C17E-0338-44B9-8FF6-D971BDCFA9D7}" Global="false">
-											<ObjectRef Name="Amb_Alarm_Attack" ID="{F615352B-6748-42FA-8515-6EA69E08F646}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+											<ObjectRef Name="Amb_Alarm" ID="{F615352B-6748-42FA-8515-6EA69E08F646}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -139,7 +139,7 @@
 								<Action Name="Play" ID="{E68005C0-BE3F-4431-BFEF-F63F5844AC73}" ShortID="86845177" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{09185B9D-9B33-4474-9FEB-4BEE13AEF422}" Global="false">
-											<ObjectRef Name="Amb_Shadow_Pipe" ID="{575EA314-66F2-40B6-89F2-BAB276F69474}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+											<ObjectRef Name="Amb_Shadow_Pipe" ID="{33E1FF04-53C3-4C73-819F-00241E632014}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -161,7 +161,7 @@
 								<Action Name="Play" ID="{BEBAF9D6-70B4-4737-8612-BC2F041FD881}" ShortID="1049492857" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{8E245AB4-98CD-4928-9BFD-F014228650E5}" Global="false">
-											<ObjectRef Name="NPC_Action_Death" ID="{BCC0379B-DBEF-409B-93DC-C18DE5F0A778}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+											<ObjectRef Name="NPC_Action_Death" ID="{7C3013E0-FE37-4E3A-A453-215C09F8B5BD}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -172,7 +172,7 @@
 								<Action Name="Play" ID="{3343AB99-BBB1-40F8-AD25-3A70F49F66DE}" ShortID="355444910" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{3E327B6F-9B46-40DD-9DA9-9AC338CB9F6E}" Global="false">
-											<ObjectRef Name="NPC_Action_Kill" ID="{D575C2F8-E322-4341-A454-CC9809DF88E4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+											<ObjectRef Name="NPC_Action_Kill" ID="{9F2E1F44-5F3C-4336-902B-EB48C2B09538}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -201,7 +201,7 @@
 								<Action Name="Trigger" ID="{1A668B3D-4D3D-456C-B2C4-4BA89F183B85}" ShortID="715745365" Type="Trigger" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{13413F13-E9AD-4259-ADA5-59CF67C41549}" Global="false">
-											<ObjectRef Name="Alert" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
+											<ObjectRef Name="Located" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
 										</Element>
 									</ElementList>
 								</Action>

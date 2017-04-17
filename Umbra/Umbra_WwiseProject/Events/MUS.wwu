@@ -191,13 +191,6 @@
 								<GroupItem Name="Alert" ID="{8AF9D631-EF9A-4400-81C0-F4408FC4E323}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Trigger" ID="{F8C01C11-8A4C-46F2-8CCC-056985C65D6C}" ShortID="174035875" Type="Trigger" Scope="One" Global="true">
-							<ElementList>
-								<Element ID="{FC71492C-98DE-4362-93D3-A1DBD90D7FE6}" Global="true">
-									<ObjectRef Name="Alert" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
-								</Element>
-							</ElementList>
-						</Action>
 						<Action Name="Play" ID="{BBB96D88-AC93-4E60-BCE6-D264123E7DAB}" ShortID="67477149" Type="Play" Scope="One" Global="false">
 							<PropertyList>
 								<Property Name="FadeTime" Type="Real64" Value="4"/>
@@ -212,10 +205,10 @@
 				</Event>
 				<Event Name="Mus_Located" ID="{CED625F7-E072-457F-82A0-AF179DC25010}">
 					<ChildrenList>
-						<Action Name="Play" ID="{867B0BE7-63D3-40CC-B9A6-1DDDFE1572D8}" ShortID="493656395" Type="Play" Scope="One" Global="false">
+						<Action Name="Trigger" ID="{472454CF-CBCB-4408-98CC-0FF1381F660D}" ShortID="548774052" Type="Trigger" Scope="One" Global="true">
 							<ElementList>
-								<Element ID="{B3AD3277-7D65-4320-9DAC-9C7D6CBCFDA5}" Global="false">
-									<ObjectRef Name="Amb_Alarm_Decay" ID="{DD0402A7-DF55-4C83-9C12-EE7F0293C10A}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+								<Element ID="{05C61E6E-862F-4F61-90E5-3BE68166B434}" Global="true">
+									<ObjectRef Name="Located" ID="{29A3392B-9CF5-4EF0-8C05-AB930722266F}" WorkUnitID="{EF6571EB-5FB9-45F6-BBB1-0D7819EB1672}"/>
 								</Element>
 							</ElementList>
 						</Action>
