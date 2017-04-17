@@ -55,10 +55,11 @@ public class RuneManagerScript : MonoBehaviour
 
 	PlatformerCharacter2D myPlatchar;
 	Platformer2DUserControl myPlatUserControl;
+    private Animator m_Anim;
 
 
 
-	LureScript myLureScript;
+    LureScript myLureScript;
 	public GameObject ThePlayer;
 	PlatformerCharacter2D myPlatformCharacter;
 
@@ -73,8 +74,9 @@ public class RuneManagerScript : MonoBehaviour
 		
 		ThePlayer=GameObject.Find("2DCharacter(Clone)");
 		myPlatUserControl = ThePlayer.GetComponent<Platformer2DUserControl>();
-		myPlatformCharacter= ThePlayer.GetComponent<PlatformerCharacter2D>();
-		textaccrochage=GameObject.Find ("accorchageText");
+		myPlatformCharacter = ThePlayer.GetComponent<PlatformerCharacter2D>();
+        m_Anim = ThePlayer.GetComponent<Animator>();
+        textaccrochage =GameObject.Find ("accorchageText");
 		textOmbre=GameObject.Find ("ombreText");
 		textSolid=GameObject.Find ("solidText");
 		texttrappe=GameObject.Find ("trapText");
@@ -334,15 +336,14 @@ public class RuneManagerScript : MonoBehaviour
 		
 
 			if (Input.GetKeyDown (KeyCode.Alpha2)) {
-
-				if (DefFune == 1 && timerDef >= ActualDef && RuneActivated==false) {
+                
+                if (DefFune == 1 && timerDef >= ActualDef && RuneActivated==false) {
 					// Rune D'ombre
 					ImageRuneOmbreFull.GetComponent<Image> ().enabled = true;
 
 					myShadowInstantiate.enabled = true;
 					myShadowInstantiate.InstantiateTheShadow ();
 				}
-				
 				if (DefFune == 2 && timerDef >= ActualDef && RuneActivated==false) {
 					// Rune de Lure
 					ImageRuneLeurreFull.GetComponent<Image> ().enabled = true;
@@ -358,14 +359,15 @@ public class RuneManagerScript : MonoBehaviour
 					animCamTwo.SetBool ("MegaBlue",true);
 					animCamFour.SetBool ("MegaBlue",true);
 					animCamThree.SetBool ("MegaBlue",true);
-
 				}
 
-			}
+                m_Anim.SetTrigger("Action");
+            }
 //
 			if (Input.GetKeyDown (KeyCode.Alpha3)) {
-				// rune d'accrochage
-				if (TacticRune == 1 && timerTactic >= ActualTactic && RuneActivated==false) {
+                
+                // rune d'accrochage
+                if (TacticRune == 1 && timerTactic >= ActualTactic && RuneActivated==false) {
 					ImageRuneAccrochageFull.GetComponent<Image> ().enabled = true;
 
 					myLineRenderer.enabled = true;
@@ -379,11 +381,13 @@ public class RuneManagerScript : MonoBehaviour
 					mySolidicationEnabled.SolidificationStart ();
 				}
 
+                m_Anim.SetTrigger("Action");
+            }
 
-			}
 			if (Input.GetKeyDown (KeyCode.Alpha1)) {
-				// Rune de piege
-				if (OffenseRune == 1 && timerOffense >= ActualOffense && RuneActivated==false) {
+                
+                // Rune de piege
+                if (OffenseRune == 1 && timerOffense >= ActualOffense && RuneActivated==false) {
 					ImageRunePiegeFull.GetComponent<Image> ().enabled = true;
 
 					myenabledTrapMode.enabled = true;
@@ -396,9 +400,10 @@ public class RuneManagerScript : MonoBehaviour
 					print("Blue");
 					myMarkEnnemy.enabled = true;
 					myMarkEnnemy.EnemyMarkedStart ();
+				}
 
-				}	
-			}
+                m_Anim.SetTrigger("Action");
+            }
 //
 //
 //
