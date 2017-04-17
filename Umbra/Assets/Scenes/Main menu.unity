@@ -108,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &31926411
 RectTransform:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4297667, g: 0.5514706, b: 0, a: 0.297}
+  m_Color: {r: 0.3137255, g: 0, b: 0, a: 0.297}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.74264705, b: 0.74264705, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -978,8 +978,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.5, y: -176}
-  m_SizeDelta: {x: 437.89996, y: 102.499954}
+  m_AnchoredPosition: {x: 3.4, y: -173.3}
+  m_SizeDelta: {x: 434.3, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180581515
 MonoBehaviour:
@@ -1014,7 +1014,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Creation d'ombre
+  m_Text: Ombre
 --- !u!222 &180581516
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1222,7 +1222,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.75, g: 0.80344826, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1618,8 +1618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50.7, y: -211.9}
-  m_SizeDelta: {x: 426.29996, y: 131.3}
+  m_AnchoredPosition: {x: 42.263, y: -208.7}
+  m_SizeDelta: {x: 431.1, y: 41.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &203986556
 MonoBehaviour:
@@ -1918,15 +1918,15 @@ RectTransform:
   m_GameObject: {fileID: 443784351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 2057177796}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 69, y: -227.8}
-  m_SizeDelta: {x: 1474.4, y: 234.64996}
+  m_AnchoredPosition: {x: 1.4, y: -262.6}
+  m_SizeDelta: {x: 1165.8, y: 607.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443784353
 MonoBehaviour:
@@ -1955,19 +1955,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 72
-    m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_Alignment: 1
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Creer des regions
-
-    d''ombre pour les placer
-
-    dans l''environnement
-
-'
+  m_Text: "Produit une zone d\u2019ombre\r\nUm ombre bloque les lignes de\nvision
+    des ennemis\r"
 --- !u!222 &443784354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2224,7 +2219,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.74264705, b: 0.74264705, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2881,7 +2876,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1436954462}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.31386003
+  m_Size: 0.31385997
   m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3233,7 +3228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &819390289
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3266,7 +3261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4297667, g: 0.5514706, b: 0, a: 0.297}
+  m_Color: {r: 0.3137255, g: 0, b: 0, a: 0.297}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3365,8 +3360,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.9, y: -212}
-  m_SizeDelta: {x: 407.79996, y: 116.600006}
+  m_AnchoredPosition: {x: 1.9, y: -208.9}
+  m_SizeDelta: {x: 431.6, y: 45.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871651908
 MonoBehaviour:
@@ -3401,7 +3396,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Piege
+  m_Text: Leurre
 --- !u!222 &871651909
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4022,15 +4017,15 @@ RectTransform:
   m_GameObject: {fileID: 956486764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 597894949}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 79.5, y: -278.4}
-  m_SizeDelta: {x: 1501.7001, y: 396.6}
+  m_AnchoredPosition: {x: 39, y: -298.3}
+  m_SizeDelta: {x: 1162.5, y: 607.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &956486766
 MonoBehaviour:
@@ -4059,14 +4054,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 72
-    m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_Alignment: 1
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Marque un ennemi pour pouvoir \nvoir l'ennemi en tout temps et \nvoir ce
-    qu'il voit.\nPermet aussi de l'assassiner \nen etat d'alerte\n"
+  m_Text: "Marque un ennemi\r\nUn ennemi marqu\xE9 devient \nvisible \xE0 travers
+    les murs\r\n\n"
 --- !u!222 &956486767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4387,8 +4382,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 183}
-  m_SizeDelta: {x: 350, y: 35}
+  m_AnchoredPosition: {x: 95.2, y: 182.9}
+  m_SizeDelta: {x: 430, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028580863
 MonoBehaviour:
@@ -4514,7 +4509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1063324389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4547,7 +4542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4297667, g: 0.5514706, b: 0, a: 0.297}
+  m_Color: {r: 0.3137255, g: 0, b: 0, a: 0.297}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5298,7 +5293,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6911765, g: 1, b: 0.731643, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -5388,8 +5383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 45.2, y: -183.3}
-  m_SizeDelta: {x: 407.79996, y: 116.60001}
+  m_AnchoredPosition: {x: 41.1, y: -174.4}
+  m_SizeDelta: {x: 437.1, y: 39.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1149167324
 MonoBehaviour:
@@ -5424,9 +5419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Piege
-
-'
+  m_Text: "Pi\xE8ge\n"
 --- !u!222 &1149167325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5914,8 +5907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 32.8, y: -250}
-  m_SizeDelta: {x: 1523.2002, y: 143.5}
+  m_AnchoredPosition: {x: -0.2, y: -297.6}
+  m_SizeDelta: {x: 1162.6, y: 606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1387807493
 MonoBehaviour:
@@ -5944,13 +5937,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 72
-    m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_Alignment: 1
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Creer un double qui permet \nde distraire les ennemis "
+  m_Text: "Produit un double qui peut \xEAtre contr\xF4l\xE9 pour un temps limit\xE9\r\nLe
+    double attire l\u2019attention des ennemis\r"
 --- !u!222 &1387807494
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6065,8 +6059,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273.8, y: 173.7}
-  m_SizeDelta: {x: 160, y: 70.1}
+  m_AnchoredPosition: {x: -290.6, y: 181}
+  m_SizeDelta: {x: 348, y: 46.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1419737601
 MonoBehaviour:
@@ -6095,8 +6089,8 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_Alignment: 4
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -6126,7 +6120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1434900809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6159,7 +6153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4297667, g: 0.5514706, b: 0, a: 0.297}
+  m_Color: {r: 0.3137255, g: 0, b: 0, a: 0.297}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6283,8 +6277,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30.7, y: -209.2}
-  m_SizeDelta: {x: 431.69998, y: 129.80006}
+  m_AnchoredPosition: {x: -35.7, y: -208.7}
+  m_SizeDelta: {x: 433.5, y: 38.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488823377
 MonoBehaviour:
@@ -6319,7 +6313,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Solidification d'ombre
+  m_Text: Solidification
 --- !u!222 &1488823378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6424,7 +6418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1537561856
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6457,7 +6451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4297667, g: 0.5514706, b: 0, a: 0.297}
+  m_Color: {r: 0.3137255, g: 0, b: 0, a: 0.297}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6496,7 +6490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1548670141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6529,7 +6523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4297667, g: 0.5514706, b: 0, a: 0.297}
+  m_Color: {r: 0.3137255, g: 0, b: 0, a: 0.297}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7611,15 +7605,15 @@ RectTransform:
   m_GameObject: {fileID: 1802563180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.156, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 89904495}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 77.8, y: -239.7}
-  m_SizeDelta: {x: 1501.7001, y: 754.37506}
+  m_AnchoredPosition: {x: 39.4, y: -263.4}
+  m_SizeDelta: {x: 1159.4, y: 610}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1802563182
 MonoBehaviour:
@@ -7648,14 +7642,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 72
-    m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_Alignment: 1
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Place un piege dans le nvieau\npour empecher a l'ennemi qui le \ntouche
-    de bouger pendant un \ncertains temps\n"
+  m_Text: "Place un pi\xE8ge dans le niveau\r\nUn ennemi qui rentre dans un\npi\xE8ge
+    devient temporairement\nimmobile\r\n"
 --- !u!222 &1802563183
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7838,15 +7832,15 @@ RectTransform:
   m_GameObject: {fileID: 1845076575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 2076772345}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 31, y: -225.3}
-  m_SizeDelta: {x: 1501.7001, y: 343.60004}
+  m_AnchoredPosition: {x: -37.1, y: -263.4}
+  m_SizeDelta: {x: 1156.4, y: 601.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845076577
 MonoBehaviour:
@@ -7875,13 +7869,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 72
-    m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_Alignment: 1
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Permet de lancer un \ngrappin pour atteindre \ncertaine region"
+  m_Text: "Produit un grappin pour\ns\u2019accrocher aux banni\xE8res\n\xE0 distance"
 --- !u!222 &1845076578
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8297,15 +8291,15 @@ RectTransform:
   m_GameObject: {fileID: 2021005892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 1145311373}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14.3, y: -268.7}
-  m_SizeDelta: {x: 1501.7001, y: 349.30002}
+  m_AnchoredPosition: {x: -37.9, y: -297.5}
+  m_SizeDelta: {x: 1159.4, y: 608.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021005894
 MonoBehaviour:
@@ -8334,13 +8328,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 72
-    m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_Alignment: 1
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Solidie les ombres designer\npour pouvoir se deplacer \ndessus\n"
+  m_Text: "Solidifie l\u2019ombre et la fum\xE9e\r\nUn ombre solidifi\xE9 peut\n\xEAtre
+    grimp\xE9\r\n\n"
 --- !u!222 &2021005895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8479,7 +8474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23529412, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8633,7 +8628,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.75, g: 0.80344826, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -8822,7 +8817,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6911765, g: 1, b: 0.731643, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -8912,8 +8907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.4, y: -175.6}
-  m_SizeDelta: {x: 449.20004, y: 132.40007}
+  m_AnchoredPosition: {x: -35, y: -174.9}
+  m_SizeDelta: {x: 434.6, y: 38.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081420909
 MonoBehaviour:
