@@ -5,6 +5,8 @@ using UnityEngine;
 public class ChangeRoomSettle : MonoBehaviour {
 	public GameObject LastEnnemi;
 	public GameObject LastDecount;
+	public GameObject TrueLastDecount;
+
 	public GameObject player;
 	public GameObject NextEnnemy;
 
@@ -27,6 +29,8 @@ public class ChangeRoomSettle : MonoBehaviour {
 				player.GetComponent<CheckVisinCone> ().PatrolOne=LastDecount.GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnnemyPatrolUpgraded>();
 				player.GetComponent<CheckVisinCone> ().ConvisibleOne=LastDecount.GetComponent<EnnemyDecount> ().Decount [0].GetComponent<ConVisible>();
 				player.GetComponent<CheckVisinCone> ().MarkOne=LastDecount.GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnemyMarked>();
+				LastDecount.GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
+
 
 			}
 				else
@@ -37,6 +41,8 @@ public class ChangeRoomSettle : MonoBehaviour {
 				player.GetComponent<CheckVisinCone> ().PatrolTwo=LastDecount.GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnnemyPatrolUpgraded>();
 				player.GetComponent<CheckVisinCone> ().ConvisibleTwo=LastDecount.GetComponent<EnnemyDecount> ().Decount [1].GetComponent<ConVisible>();
 				player.GetComponent<CheckVisinCone> ().MarkTwo=LastDecount.GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnemyMarked>();
+				LastDecount.GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
+
 
 			}
 				else
@@ -48,6 +54,8 @@ public class ChangeRoomSettle : MonoBehaviour {
 				player.GetComponent<CheckVisinCone> ().Patrolthree=LastDecount.GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnnemyPatrolUpgraded>();
 				player.GetComponent<CheckVisinCone> ().ConvisibleThree=LastDecount.GetComponent<EnnemyDecount> ().Decount [2].GetComponent<ConVisible>();
 				player.GetComponent<CheckVisinCone> ().MarkThree=LastDecount.GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnemyMarked>();
+				LastDecount.GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
+
 
 			}
 				else
@@ -59,6 +67,8 @@ public class ChangeRoomSettle : MonoBehaviour {
 				player.GetComponent<CheckVisinCone> ().PatrolFour=LastDecount.GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnnemyPatrolUpgraded>();
 				player.GetComponent<CheckVisinCone> ().ConvisibleFour=LastDecount.GetComponent<EnnemyDecount> ().Decount [3].GetComponent<ConVisible>();
 				player.GetComponent<CheckVisinCone> ().MarkFour=LastDecount.GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnemyMarked>();
+				LastDecount.GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
+
 
 			}
 				else
@@ -70,6 +80,7 @@ public class ChangeRoomSettle : MonoBehaviour {
 				player.GetComponent<CheckVisinCone> ().PatrolFive=LastDecount.GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnnemyPatrolUpgraded>();
 				player.GetComponent<CheckVisinCone> ().ConvisibleFive=LastDecount.GetComponent<EnnemyDecount> ().Decount [4].GetComponent<ConVisible>();
 				player.GetComponent<CheckVisinCone> ().MarkFive=LastDecount.GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnemyMarked>();
+				LastDecount.GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
 
 			}
 				else
@@ -81,12 +92,30 @@ public class ChangeRoomSettle : MonoBehaviour {
 				player.GetComponent<CheckVisinCone> ().PatrolSix=LastDecount.GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnnemyPatrolUpgraded>();
 				player.GetComponent<CheckVisinCone> ().ConvisibleSix=LastDecount.GetComponent<EnnemyDecount> ().Decount [5].GetComponent<ConVisible>();
 				player.GetComponent<CheckVisinCone> ().MarkSix=LastDecount.GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnemyMarked>();
+				LastDecount.GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
+
 
 			}
 				else
 				player.GetComponent<CheckVisinCone>().EnnemyInScene [5] = null;
 
 
+			if (TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [0] != null) 
+				TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnnemyPatrolUpgraded>().DestroyObj();
+			
+
+			if (TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [1] != null) 
+				TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnnemyPatrolUpgraded>().DestroyObj();
+			if (TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [2] != null) 
+				TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnnemyPatrolUpgraded>().DestroyObj();
+			if (TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [3] != null) 
+				TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnnemyPatrolUpgraded>().DestroyObj();
+			if (TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [4] != null) 
+				TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnnemyPatrolUpgraded>().DestroyObj();
+			if (TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [5] != null) 
+				TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnnemyPatrolUpgraded>().DestroyObj();
+			if (TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [6] != null) 
+				TrueLastDecount.GetComponent<EnnemyDecount> ().Decount [6].GetComponent<EnnnemyPatrolUpgraded>().DestroyObj();
 
 
 			LastEnnemi.SetActive (false);

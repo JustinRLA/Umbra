@@ -156,9 +156,18 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		LurePlayer = GameObject.Find ("2DCharacterShadow").transform;
 
 	}
-
-	void Start () {
+	public void NormalStart()
+	{
 		AkSoundEngine.PostEvent ("NPC_State_Normal", gameObject);
+	}
+
+
+	public void DestroyObj()
+	{
+		AkSoundEngine.PostEvent ("NPC_Destroy", gameObject);
+
+	}
+	void Start () {
 
 		routine = true;
 		MyPlayer = GameObject.Find("2DCharacter(Clone)");

@@ -27,6 +27,7 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject[] interzone;
 	public int debugsave;
 	public bool isdebug;
+	public GameObject Compteur;
 
 
 
@@ -349,12 +350,15 @@ public class InitializeLevel : MonoBehaviour {
 		PlayerLight.SetActive (true);
 		EnnemyPack [decoountNumber]. SetActive(true);
 
+			
 
 			if (DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [0] != null) {
 				raycar.GetComponent<CheckVisinCone> ().EnnemyInScene [0] = DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [0];
 				raycar.GetComponent<CheckVisinCone> ().PatrolOne=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnnemyPatrolUpgraded>();
 				raycar.GetComponent<CheckVisinCone> ().ConvisibleOne=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [0].GetComponent<ConVisible>();
 				raycar.GetComponent<CheckVisinCone> ().MarkOne=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnemyMarked>();
+			DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [0].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
+
 
 			}
 			else
@@ -365,6 +369,8 @@ public class InitializeLevel : MonoBehaviour {
 				raycar.GetComponent<CheckVisinCone> ().PatrolTwo=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnnemyPatrolUpgraded>();
 				raycar.GetComponent<CheckVisinCone> ().ConvisibleTwo=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [1].GetComponent<ConVisible>();
 				raycar.GetComponent<CheckVisinCone> ().MarkTwo=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnemyMarked>();
+			DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [1].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
+
 
 			}
 			else
@@ -376,6 +382,7 @@ public class InitializeLevel : MonoBehaviour {
 				raycar.GetComponent<CheckVisinCone> ().Patrolthree=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnnemyPatrolUpgraded>();
 				raycar.GetComponent<CheckVisinCone> ().ConvisibleThree=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [2].GetComponent<ConVisible>();
 				raycar.GetComponent<CheckVisinCone> ().MarkThree=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnemyMarked>();
+			DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [2].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
 
 			}
 			else
@@ -387,6 +394,7 @@ public class InitializeLevel : MonoBehaviour {
 				raycar.GetComponent<CheckVisinCone> ().PatrolFour=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnnemyPatrolUpgraded>();
 				raycar.GetComponent<CheckVisinCone> ().ConvisibleFour=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [3].GetComponent<ConVisible>();
 				raycar.GetComponent<CheckVisinCone> ().MarkFour=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnemyMarked>();
+			DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [3].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
 
 			}
 			else
@@ -398,6 +406,7 @@ public class InitializeLevel : MonoBehaviour {
 				raycar.GetComponent<CheckVisinCone> ().PatrolFive=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnnemyPatrolUpgraded>();
 				raycar.GetComponent<CheckVisinCone> ().ConvisibleFive=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [4].GetComponent<ConVisible>();
 				raycar.GetComponent<CheckVisinCone> ().MarkFive=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnemyMarked>();
+			DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [4].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
 
 			}
 			else
@@ -409,6 +418,7 @@ public class InitializeLevel : MonoBehaviour {
 				raycar.GetComponent<CheckVisinCone> ().PatrolSix=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnnemyPatrolUpgraded>();
 				raycar.GetComponent<CheckVisinCone> ().ConvisibleSix=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [5].GetComponent<ConVisible>();
 				raycar.GetComponent<CheckVisinCone> ().MarkSix=DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnemyMarked>();
+			DecountEnnemy [decoountNumber].GetComponent<EnnemyDecount> ().Decount [5].GetComponent<EnnnemyPatrolUpgraded>().NormalStart();
 
 			}
 			else
