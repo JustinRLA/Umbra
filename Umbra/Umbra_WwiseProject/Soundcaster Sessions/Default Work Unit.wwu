@@ -18,10 +18,6 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="NPC_State_Normal" ID="{3563743D-8FB4-40D1-9E7C-C6572BB79BB1}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-							<Position X="0" Y="4"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="PC_Rune_Accrochage_Equip" ID="{38D5365A-2DAB-410B-ACAA-1F602AF53062}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
 							<Position X="0" Y="6"/>
 						</Module>
@@ -44,10 +40,6 @@
 						<Module>
 							<ObjectRef Name="PC_Foot_Jump" ID="{610644C9-6CAC-4F28-98AA-66395D9B4CC8}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
 							<Position X="1" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="NPC_State_Alarmed" ID="{A7BD7DD8-AFE9-4617-B232-5312700776D9}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-							<Position X="1" Y="4"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="PC_Rune_Accrochage_Green" ID="{78B115B0-6C33-4CEA-BCE2-7D866CAE7FAB}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
@@ -129,7 +121,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
+						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
 						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 						<CurrentStateRef Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
 					</CurrentStateList>

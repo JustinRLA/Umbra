@@ -5,20 +5,6 @@
 			<ChildrenList>
 				<Event Name="Mus_Secteur1" ID="{C6814B7A-8E6B-41C1-82CB-907D07F4336C}">
 					<ChildrenList>
-						<Action Name="Resume" ID="{32AEA828-5C21-4DA7-B947-79226200D574}" ShortID="375665804" Type="Resume" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{D8A01BFC-2B83-4FEB-A43A-614F9073E0E4}" Global="true">
-									<ObjectRef Name="Mus_Secteur1" ID="{EE76E528-86BD-42C3-9774-84068F9C5FD6}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
 						<Action Name="Set State" ID="{3DC3F7FC-28DB-4E46-820F-2189A647D295}" ShortID="867240218" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
@@ -30,46 +16,6 @@
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
-						</Action>
-						<Action Name="Pause" ID="{89918E07-3B35-4A3E-A7F5-6B7B7112E4FD}" ShortID="775032640" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{24729173-F484-4D93-BA6B-5AFA4D95347F}" Global="true">
-									<ObjectRef Name="Mus_Secteur2" ID="{8244F52D-B207-41EA-9077-06265C5233A4}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Pause" ID="{DFCE6550-7DC7-4720-9E03-0643A8566159}" ShortID="159142000" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{FBC96F74-64D2-419E-A82A-8A3BFF28CC08}" Global="true">
-									<ObjectRef Name="Mus_Secteur3" ID="{FCCDFC4B-4B04-49BA-86EC-DFCEE1C98450}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Pause" ID="{146300DB-22D2-48B6-8F4E-C1AF530047E7}" ShortID="482076813" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{A91AEBDC-FE5C-406C-84F4-193B819D7163}" Global="true">
-									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
@@ -96,20 +42,6 @@
 				</Event>
 				<Event Name="Mus_Secteur3" ID="{2805320F-6E74-43FD-B36C-34DE62F30307}">
 					<ChildrenList>
-						<Action Name="Resume" ID="{33640094-BF20-444E-990D-D2676A5BC4D9}" ShortID="179603033" Type="Resume" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{0C5E150E-2A54-4621-B259-7D12C90B6C0C}" Global="true">
-									<ObjectRef Name="Mus_Secteur3" ID="{FCCDFC4B-4B04-49BA-86EC-DFCEE1C98450}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
 						<Action Name="Set State" ID="{B3C923E2-3F0D-41D5-B1B9-30325ABB0320}" ShortID="985985644" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
@@ -122,69 +54,10 @@
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Stop" ID="{3BAB03CB-23CA-4565-A764-8CB2E3E24500}" ShortID="539502729" Type="Stop" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{DDBA8764-8A1D-4CF6-B23E-A009346CBE51}" Global="true">
-									<ObjectRef Name="Mus_Secteur1" ID="{EE76E528-86BD-42C3-9774-84068F9C5FD6}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Stop" ID="{F1F10A44-D7F1-4861-851C-1F8DBEB5EE55}" ShortID="370079237" Type="Stop" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{54260656-EC7D-4D2F-B8FF-C67B87BE39D8}" Global="true">
-									<ObjectRef Name="Mus_Secteur2" ID="{8244F52D-B207-41EA-9077-06265C5233A4}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Pause" ID="{19712FC6-2A5A-4A1C-80BB-EFB9204A2DBD}" ShortID="882871577" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{91600178-839F-4B69-8659-1ECAE56B49DF}" Global="true">
-									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Mus_Secteur2" ID="{EAA7BD23-29AA-4042-A1E5-2C8253E2F604}">
 					<ChildrenList>
-						<Action Name="Resume" ID="{DEF33EB8-E0D6-49EF-99FF-2875AE1015A4}" ShortID="243373942" Type="Resume" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{2A302239-49B8-4E6D-8053-20C06FD4661A}" Global="true">
-									<ObjectRef Name="Mus_Secteur2" ID="{8244F52D-B207-41EA-9077-06265C5233A4}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
 						<Action Name="Set State" ID="{E032E3D9-C1F6-473B-AE32-23527FCAB93F}" ShortID="230634003" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
@@ -196,51 +69,6 @@
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
-						</Action>
-						<Action Name="Stop" ID="{A5DD45CF-C884-4744-B5EA-3AD4A4720ECD}" ShortID="845319194" Type="Stop" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{E88E2B22-2C0E-4B3F-B1BA-4616A3953F76}" Global="true">
-									<ObjectRef Name="Mus_Secteur1" ID="{EE76E528-86BD-42C3-9774-84068F9C5FD6}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Pause" ID="{C7837BBD-FA69-4E6B-8183-336C18DC8758}" ShortID="589832874" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{416BE49A-1BCF-4DE6-8B89-99C6EC31D32F}" Global="true">
-									<ObjectRef Name="Mus_Secteur3" ID="{FCCDFC4B-4B04-49BA-86EC-DFCEE1C98450}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Pause" ID="{D7BEFC23-579B-4908-9003-C8E3CBABD9EE}" ShortID="464150201" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{644C399F-465A-47C1-8724-2BBE6B321209}" Global="true">
-									<ObjectRef Name="Mus_ Menu" ID="{C53B9F89-5C29-4607-B393-839211B62478}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
@@ -299,51 +127,6 @@
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
 								<GroupItem Name="MainMenu" ID="{A3698F00-6554-4266-A778-EC38FC465C75}"/>
 							</SetItemParam>
-						</Action>
-						<Action Name="Pause" ID="{DA08E76D-3548-455A-A6D1-838C767A27FF}" ShortID="857220818" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{B7D073BF-B0F8-49DE-BC9B-924EEA4E3911}" Global="true">
-									<ObjectRef Name="Mus_Secteur1" ID="{EE76E528-86BD-42C3-9774-84068F9C5FD6}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Pause" ID="{8E3AEEF6-B236-46E3-8F7B-E4C63B0FF6BA}" ShortID="518802417" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{836EEAE1-7ADD-4784-981D-48D3A583E9FB}" Global="true">
-									<ObjectRef Name="Mus_Secteur2" ID="{8244F52D-B207-41EA-9077-06265C5233A4}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
-						</Action>
-						<Action Name="Pause" ID="{FCD082FE-E831-4BA3-B17E-3578C155CCB6}" ShortID="122490544" Type="Pause" Scope="One" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="10"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{AD76E808-E3DC-4B79-AC63-247F86B30B25}" Global="true">
-									<ObjectRef Name="Mus_Secteur3" ID="{FCCDFC4B-4B04-49BA-86EC-DFCEE1C98450}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
-								</Element>
-							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
