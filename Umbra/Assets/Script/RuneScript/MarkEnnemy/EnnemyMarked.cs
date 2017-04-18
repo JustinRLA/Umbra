@@ -20,12 +20,16 @@ public class EnnemyMarked : MonoBehaviour {
 	public float PlayerSpeed;
 	public GameObject raycarVision;
 	GameObject FullMark;
+	public Texture2D cursor;
+
 	// Use this for initialization
 	void Awake()
 	{
 
 	}
 	void Start () {
+		cursor = (Texture2D)Resources.Load ("DaggerIconRedFull");
+
 		PlayerMy = GameObject.Find("2DCharacter(Clone)");
 		RuneManager = GameObject.Find ("RuneManager");
 		myMarkEnmnemyRune = RuneManager.GetComponent<MarkEnnemy> ();
@@ -52,6 +56,8 @@ public class EnnemyMarked : MonoBehaviour {
 	}
 	void OnMouseOver()
 	{
+		Cursor.SetCursor (cursor, Vector2.zero, CursorMode.Auto);
+
 		print ("Enter");
 		if (myMarkEnmnemyRune.CanBeClicked == true)
 			ennemyBase.GetComponent<SpriteRenderer> ().color = new Color (colorRedOver, colorGreenOver, colorBlueOver,1);
@@ -59,6 +65,7 @@ public class EnnemyMarked : MonoBehaviour {
 
 	void OnMouseExit()
 	{
+		Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 		ennemyBase.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
 
 	}
@@ -91,6 +98,7 @@ public class EnnemyMarked : MonoBehaviour {
 	}
 	void CancelEvent()
 	{
+		Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 		FullMark = GameObject.Find ("MaquageRuneImageFull");
 		FullMark.GetComponent<Image> ().enabled = false;
 
@@ -116,6 +124,7 @@ public class EnnemyMarked : MonoBehaviour {
 	IEnumerator MarkEvent()
 	{
 		{
+			Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 			ennemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerAttack = 1.5f;
 
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;

@@ -52,10 +52,10 @@ public class DeathEvent : MonoBehaviour {
 		ActualCadre = PossibleSprite [number];
 		Ennemy = AssassinTrigger.GetComponent<checkIfAssassination> ().ActualEnnemy;
 
-		rightTransform.position = new Vector3 (Ennemy.transform.position.x-10, Ennemy.transform.position.y + 2, 0);
-		LeftTransform.position  = new Vector3 (Ennemy.transform.position.x+10, Ennemy.transform.position.y + 2, 0);
-		Center.position= new Vector3 (transform.position.x , transform.position.y, 0);
-		EnnemyPos.position = new Vector3 (Ennemy.transform.position.x, Ennemy.transform.position.y + 2, 0);
+		rightTransform.position = new Vector3 (Ennemy.transform.position.x-10, Ennemy.transform.position.y+0.5f, 0);
+		LeftTransform.position  = new Vector3 (Ennemy.transform.position.x+10, Ennemy.transform.position.y+0.5f, 0);
+		Center.position= new Vector3 (transform.position.x , transform.position.y+0.5f, 0);
+		EnnemyPos.position = new Vector3 (Ennemy.transform.position.x, Ennemy.transform.position.y+0.5f, 0);
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == true)
 			Instantiate (ActualCadre,rightTransform.position, transform.rotation);
 

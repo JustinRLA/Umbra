@@ -32,7 +32,7 @@ public class ReduceDelay : MonoBehaviour {
 public void ZeroFixe()
 {
 	transform.position = new Vector3 (transform.position.x, transform.position.y, 0);
-		GetComponent<SpriteRenderer> ().sortingOrder = 0;
+		GetComponent<SpriteRenderer> ().sortingOrder = -2;
 		Playa.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		Time.timeScale = 1f;
 

@@ -34,9 +34,11 @@ public class checkIfAssassination : MonoBehaviour {
 		
 
 		if (col.tag == "ennemy") {
-//		
+			ActualEnnemy = col.gameObject;
+
+			ActualEnnemy.GetComponent<SKullInDanger> ().MySkull.SetActive(true);
+
 				canAssassinate = true;
-				ActualEnnemy = col.gameObject;
 			ActualEnnemy.GetComponent<SpriteRenderer> ().color = new Color (1, 0, 0, 1);
 
 
@@ -59,6 +61,7 @@ public class checkIfAssassination : MonoBehaviour {
 		ActualEnnemy.GetComponent<EnnnemyPatrolUpgraded> ().enabled = false;
 		ActualEnnemy.GetComponent<DeadScript> ().enabled = true;
 		ActualEnnemy.GetComponent<DeadScript> ().EnnemyDeath();
+
 		AssassinFeedback.SetActive (false);
 		canAssassinate = false;
 
@@ -70,6 +73,8 @@ public class checkIfAssassination : MonoBehaviour {
 		{
 			ActualEnnemy.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1);
 			canAssassinate=false;
+			ActualEnnemy.GetComponent<SKullInDanger> ().MySkull.SetActive(false);
+
 
 		}
 	
