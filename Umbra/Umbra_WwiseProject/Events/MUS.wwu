@@ -164,6 +164,12 @@
 								</Element>
 							</ElementList>
 						</Action>
+						<Action Name="Set State" ID="{D4122003-D6C7-45B2-BEFC-015D9E857815}" ShortID="957905687" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
+								<GroupItem Name="MainMenu" ID="{A3698F00-6554-4266-A778-EC38FC465C75}"/>
+							</SetItemParam>
+						</Action>
 						<Action Name="Set State" ID="{3880E580-E568-4FF5-9D90-3E43A9AB9379}" ShortID="488149269" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
