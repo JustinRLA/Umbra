@@ -1337,6 +1337,7 @@ RectTransform:
   - {fileID: 189063680}
   - {fileID: 1419737600}
   - {fileID: 1693630442}
+  - {fileID: 1078525224}
   m_Father: {fileID: 644988237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1962,8 +1963,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Produit une zone d\u2019ombre\r\nUm ombre bloque les lignes de\nvision
-    des ennemis\r"
+  m_Text: "Produit une zone d\u2019ombre.\nUne ombre bloque la\nvision des ennemis."
 --- !u!222 &443784354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2003,7 +2003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0004272461, y: -213.4}
+  m_AnchoredPosition: {x: 0.0004272461, y: -202.76099}
   m_SizeDelta: {x: 3687, y: 1585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530885428
@@ -2025,7 +2025,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2c40e7e5e7305c4489962e9834007a3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10cf1c4d534c4d34699e8bd0677b6d06, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2925,7 +2925,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.88235295, g: 0.88235295, b: 0.88235295, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2944,8 +2944,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1436954463}
   m_HandleRect: {fileID: 1436954462}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 0.99999994
+  m_Size: 0.16218272
   m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2964,14 +2964,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5147059, g: 0.5147059, b: 0.5147059, a: 1}
+  m_Color: {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3cb38f551aae8e348a4f8ce0558998e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 742c465de147f034898eb60af79f103e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4129,8 +4129,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Marque un ennemi\r\nUn ennemi marqu\xE9 devient \nvisible \xE0 travers
-    les murs\r\n\n"
+  m_Text: "Marque un ennemi.\nUn ennemi marqu\xE9 devient\nvisible au travers des
+    surfaces.\n\n"
 --- !u!222 &956486767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4915,6 +4915,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1072330294}
+--- !u!1 &1078525223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1078525224}
+  - component: {fileID: 1078525226}
+  - component: {fileID: 1078525225}
+  m_Layer: 5
+  m_Name: "Contr\xF4les"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1078525224
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078525223}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 201873411}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 95, y: 19.77}
+  m_SizeDelta: {x: 564, y: 261.54}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1078525225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078525223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 66aeeb5c1c94c424a90efbaf8cbf343a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1078525226
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078525223}
 --- !u!1 &1138910099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6012,8 +6080,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Produit un double qui peut \xEAtre contr\xF4l\xE9 pour un temps limit\xE9\r\nLe
-    double attire l\u2019attention des ennemis\r"
+  m_Text: "Cr\xE9e un double qui peut \xEAtre\ncontr\xF4l\xE9 pour faire diversion."
 --- !u!222 &1387807494
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6269,15 +6336,15 @@ RectTransform:
   m_GameObject: {fileID: 1436954461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8875, y: 0.4125005, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.06, z: 1}
   m_Children: []
   m_Father: {fileID: 2104565207}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.8, y: 29}
-  m_SizeDelta: {x: 16.9, y: -17.1}
+  m_AnchoredPosition: {x: -0.8, y: 1.3249893}
+  m_SizeDelta: {x: 333, y: 215.65002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1436954463
 MonoBehaviour:
@@ -7359,7 +7426,7 @@ MonoBehaviour:
   m_Script: {fileID: 1367256648, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 0}
+  m_Content: {fileID: 530885427}
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 2
@@ -7717,8 +7784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Place un pi\xE8ge dans le niveau\r\nUn ennemi qui rentre dans un\npi\xE8ge
-    devient temporairement\nimmobile\r\n"
+  m_Text: "Place un pi\xE8ge sur le sol\nqui immobilise temporairement\nun ennemi.\n"
 --- !u!222 &1802563183
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7944,7 +8010,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Produit un grappin pour\ns\u2019accrocher aux banni\xE8res\n\xE0 distance"
+  m_Text: "Produit un grappin\nqui s'accroche \xE0 certaine\nsurface."
 --- !u!222 &1845076578
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8403,8 +8469,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Solidifie l\u2019ombre et la fum\xE9e\r\nUn ombre solidifi\xE9 peut\n\xEAtre
-    grimp\xE9\r\n\n"
+  m_Text: "Solidifie l\u2019ombre et la fum\xE9e.\nUne ombre solidifi\xE9e peut\n\xEAtre
+    escalad\xE9e."
 --- !u!222 &2021005895
 CanvasRenderer:
   m_ObjectHideFlags: 0
