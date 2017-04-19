@@ -18,6 +18,8 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public Transform PointToLookWIthOneNavPoint;
 	public bool PlayerIsUp;
 	public bool PlayerIsDown;
+	public GameObject TeleportParticle;
+	public GameObject TeleportParticleTest;
 
 	Vector3 movPos;
 	bool routine;
@@ -168,6 +170,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	}
 	void Start () {
+		TeleportParticle= (GameObject)Resources.Load ("Portal",typeof (GameObject));
 
 		routine = true;
 		MyPlayer = GameObject.Find("2DCharacter(Clone)");
@@ -346,6 +349,9 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	void goDownFloor()
 	{
+		
+		Instantiate (TeleportParticle, DownSpawnPoint.position, DownSpawnPoint.rotation);
+
 		EnnemyLevel=1;
 		transform.position=DownSpawnPoint.position;
 		UpPoint=UpPoint_DownLev;
@@ -362,9 +368,12 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 
 	void goNormalFlood()
-	{
+	{		print ("GoNoram");
+		
+
 		backHome=false;
 		EnnemyLevel=2;
+		Instantiate (TeleportParticle, regularSpawnPoint.position, regularSpawnPoint.rotation);
 		transform.position=regularSpawnPoint.position;
 		UpPoint=UpPoint_RegularLevel;
 		TeleportPointLeft_Actual= TeleportPointLeft_RegularLevel;
@@ -380,7 +389,10 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 
 	void goUpFloor()
 	{
+		print ("GoUP");
 		EnnemyLevel=3;
+		Instantiate (TeleportParticle, UpSpawmnPoint.position, UpSpawmnPoint.rotation);
+
 		transform.position=UpSpawmnPoint.position;
 		UpPoint=UpPoint_UpLevel;
 		TeleportPointLeft_Actual=TeleportPointLeft_UpLevel;

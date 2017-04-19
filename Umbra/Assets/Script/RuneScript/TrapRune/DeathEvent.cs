@@ -14,6 +14,9 @@ public class DeathEvent : MonoBehaviour {
 	public int tempoKill;
 	float timerEvent;
 	float xNumber;
+	public GameObject BloodRight;
+	public GameObject BloodLeft;
+
 	public Transform EnnemyPos;
 	public GameObject Ennemy;
 
@@ -56,14 +59,38 @@ public class DeathEvent : MonoBehaviour {
 		LeftTransform.position  = new Vector3 (Ennemy.transform.position.x+10, Ennemy.transform.position.y+0.5f, 0);
 		Center.position= new Vector3 (transform.position.x , transform.position.y+0.5f, 0);
 		EnnemyPos.position = new Vector3 (Ennemy.transform.position.x, Ennemy.transform.position.y+0.5f, 0);
-		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == true)
-			Instantiate (ActualCadre,rightTransform.position, transform.rotation);
+		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == true) {
+			BloodRight = (GameObject)Resources.Load ("BloodRight",typeof (GameObject));
+			Instantiate(BloodRight, new Vector3(EnnemyPos.position.x+0.5f,EnnemyPos.position.y,EnnemyPos.position.z),EnnemyPos.rotation);
+			StartCoroutine(StartRightAnim());
+
+		}
 
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == false)
-			Instantiate (ActualCadre, LeftTransform.position ,transform.rotation);
+		{
+			BloodLeft = (GameObject)Resources.Load ("BloodLeft",typeof (GameObject));
+			Instantiate(BloodLeft, new Vector3(EnnemyPos.position.x-0.5f,EnnemyPos.position.y,EnnemyPos.position.z),EnnemyPos.rotation);
+			StartCoroutine(StartLeftAnim());
 
+		}
 		EventTriggered=true;
         //GetComponent<Animator>().SetBool("Ation", false);
         timerEvent = 5;
 }
+
+	IEnumerator StartRightAnim()
+	{
+		yield return new WaitForSeconds (0.5f);
+		Instantiate (ActualCadre,rightTransform.position, transform.rotation);
+
+
+	}
+	IEnumerator StartLeftAnim()
+	{
+		yield return new WaitForSeconds (0.5f);
+		Instantiate (ActualCadre,LeftTransform.position, transform.rotation);
+
+
+	}
+
 }

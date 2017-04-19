@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1060936841745000}
+  m_IsPrefabParent: 1
+--- !u!1 &1060936841745000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4941831718137926}
+  - component: {fileID: 114680902413867898}
+  - component: {fileID: 114957693506595526}
+  - component: {fileID: 114418680841840108}
+  - component: {fileID: 114726944826388624}
+  - component: {fileID: 114858792865261220}
+  - component: {fileID: 114935996025451902}
+  - component: {fileID: 114588719967683168}
+  m_Layer: 0
+  m_Name: RuneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4941831718137926
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060936841745000}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.903494, y: -14.740707, z: 77.05722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114418680841840108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060936841745000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2336e0e951c4cb14b80ab3d65acc32c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThePlayer: {fileID: 0}
+  ThePlayerShadow: {fileID: 0}
+  EnnemyDistracted: 0
+  RuneManager: {fileID: 1060936841745000}
+  myCam: {fileID: 0}
+  inLureMode: 0
+  raycar: {fileID: 0}
+  CamOne: {fileID: 0}
+  CamTwo: {fileID: 0}
+  CamThree: {fileID: 0}
+  PlayerCam: {fileID: 0}
+  Active: 0
+  timer: 0
+  imageTimer: {fileID: 0}
+  canvaTimer: {fileID: 0}
+--- !u!114 &114588719967683168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060936841745000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd65bd6d9be74774f92df728411991ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanInstantiate: 0
+  Trapping: {fileID: 1470823340144976, guid: 5e2b3924d6e890749a3caafd8b18be86, type: 2}
+  gameCam: {fileID: 0}
+  trapcam: {fileID: 0}
+  movespeed: 0
+  nowherepointObj: {fileID: 0}
+  myPlayer: {fileID: 0}
+  ThisTrap: {fileID: 0}
+  Demotrap: {fileID: 0}
+  AllTrap: []
+  NowherePoint: {fileID: 0}
+  myTrapZone: {fileID: 0}
+--- !u!114 &114680902413867898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060936841745000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e4e5ab98149e74297cc4d48bb2dab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RuneModeEnabled: 0
+  timerTactic: 30
+  timerOffense: 30
+  timerDef: 30
+  myRuneSetter: {fileID: 0}
+  IsTesting: 1
+  ActualDef: 30
+  ActualOffense: 30
+  ActualTactic: 30
+  RuneActivated: 0
+  myCam: {fileID: 0}
+  myCamTwo: {fileID: 0}
+  myCamThree: {fileID: 0}
+  myCamFour: {fileID: 0}
+  ThePlayer: {fileID: 0}
+  DefFune: 2
+  OffenseRune: 2
+  TacticRune: 2
+  TypeRuneUsed: 3
+--- !u!114 &114726944826388624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060936841745000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc888e3e2313d34a9f9baa60f4aeb7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanBeClicked: 0
+  myCamOne: {fileID: 0}
+  myCamTwo: {fileID: 0}
+  myPlayer: {fileID: 0}
+--- !u!114 &114858792865261220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060936841745000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3d4971c6d8f174cb341eca717215ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanClickable: 0
+  AllShadow: []
+--- !u!114 &114935996025451902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060936841745000}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c008b76dfdd224abb7bcbf140ec457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forcedividable: 0
+  myPlayer: {fileID: 0}
+  PlayerMy: {fileID: 0}
+  OutMat: {fileID: 2100000, guid: c5a04b4fa491e0546a96c7b792d4d4e8, type: 2}
+  GOodMat: {fileID: 2100000, guid: 04863776b8558bc498b61cbae0ff472e, type: 2}
+  InMat: {fileID: 2100000, guid: 48b86b429c530374cae2557b5a8e78a5, type: 2}
+  HitTransformPoint: {fileID: 0}
+  dividable: 0
+  TheBeam: {fileID: 0}
+  goThrougt: 0
+  timeDIstance: 0
+  theBeams: []
+  TouchGood: 0
+  ActivateThisShit: 0
+  touchedBadThing: 0
+  CamGrap: {fileID: 0}
+  MainCamera: {fileID: 0}
+--- !u!114 &114957693506595526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060936841745000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6383a49e8603a4b44bb2f71a89251219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCyube: {fileID: 1000011999828746, guid: 305af56399a810845af9dadc10da6f8a, type: 2}
+  myRuneManager: {fileID: 1060936841745000}

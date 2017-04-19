@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 	public bool hidden;
 	bool havePlayedDeath;
 	public GameObject WaveFoot;
-
+	public GameObject LightOfDeath;
+	public GameObject ImpactofDeath;
 	SpriteRenderer mySpriteRenderer;
 	public int numberofDeath;
 	public GameObject AssassinTrigger;
@@ -77,6 +78,8 @@ using UnityEngine.SceneManagement;
 		if (havePlayedDeath == false) {
 			AkSoundEngine.PostEvent ("PC_Action_Death", gameObject);
 			havePlayedDeath = true;
+			Instantiate (LightOfDeath, new Vector3 (transform.position.x, transform.position.y + 4, transform.position.z), transform.rotation);
+			StartCoroutine (Impactdelay ());
 		}
 			AssassinTrigger.SetActive (false);
 		dead = true;
@@ -89,6 +92,13 @@ using UnityEngine.SceneManagement;
 		StartCoroutine (DeathEvent ());
 
 	}
+	IEnumerator Impactdelay()
+	{
+		yield return new WaitForSeconds (0.6f);
+		Instantiate (ImpactofDeath, new Vector3 (transform.position.x, transform.position.y - 2, transform.position.z), transform.rotation);
+
+	}
+
 	IEnumerator DeathEvent()
 	{
 		//transform.position = TeleportPointDeath.position;

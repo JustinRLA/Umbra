@@ -20,6 +20,10 @@ public class EnnemyMarked : MonoBehaviour {
 	public float PlayerSpeed;
 	public GameObject raycarVision;
 	GameObject FullMark;
+	GameObject MarkParticle;
+	GameObject MarkParticleObj;
+
+
 	public Texture2D cursor;
 
 	// Use this for initialization
@@ -28,6 +32,11 @@ public class EnnemyMarked : MonoBehaviour {
 
 	}
 	void Start () {
+		MarkParticle = (GameObject)Resources.Load ("MarkParticle",typeof (GameObject));
+		MarkParticleObj=Instantiate (MarkParticle) as GameObject;
+		MarkParticleObj.transform.parent = ennemyBase.transform;
+		MarkParticleObj.transform.position = new Vector3 (ennemyBase.transform.position.x, ennemyBase.transform.position.y + 1.8f, ennemyBase.transform.position.z);
+		MarkParticleObj.SetActive (false);
 		cursor = (Texture2D)Resources.Load ("DaggerIconRedFull");
 
 		PlayerMy = GameObject.Find("2DCharacter(Clone)");
@@ -124,6 +133,7 @@ public class EnnemyMarked : MonoBehaviour {
 	IEnumerator MarkEvent()
 	{
 		{
+			MarkParticleObj.SetActive (true);
 			Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 			ennemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerAttack = 1.5f;
 
@@ -142,6 +152,8 @@ public class EnnemyMarked : MonoBehaviour {
 		Cursor.visible = false;
 		Time.timeScale = 1f;
 		yield return new WaitForSeconds (25f);
+			MarkParticleObj.SetActive (false);
+
 			ennemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerAttack = 0f;
 
 		isMarked = false;

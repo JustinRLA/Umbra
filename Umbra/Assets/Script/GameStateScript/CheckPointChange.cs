@@ -7,11 +7,12 @@ public class CheckPointChange : MonoBehaviour {
 	int actualKill;
 	int saveNumber;
 	public GameObject initialializer;
-
-
+	public GameObject CheckPointParticle;
+	public 
 
 	// Use this for initialization
 	void Start () {
+		
 		initialializer=GameObject.Find("Initialiser");
 
 		//DeathManager=GameObject.Find("deathManager");
@@ -84,6 +85,9 @@ public class CheckPointChange : MonoBehaviour {
 				Destroy (initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber - 1]);
 			if(initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber]!=null)
 			initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber].SetActive(true);
+			CheckPointParticle=(GameObject)Resources.Load ("SpawnerParticle",typeof (GameObject));
+			Instantiate (CheckPointParticle, new Vector3(transform.position.x,transform.position.y-2, transform.position.z), Quaternion.Euler(-90,0,0));
+
 			GetComponent<Collider2D> ().enabled = false;
 		}
 
