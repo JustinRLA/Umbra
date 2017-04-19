@@ -536,6 +536,32 @@
 												</RandomSequenceContainer>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<Sound Name="PC_Action_Death_Thunder" ID="{5322E7E1-07A8-4C3A-B954-20C017C6FDE3}" ShortID="354798993" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PC_Action_Death_Thunder" ID="{CB21E451-4FE6-4762-82A2-33C00FF5B318}" ShortID="868247795">
+													<Language>SFX</Language>
+													<AudioFile>PC_Action_Death_Thunder.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PC_Action_Death_Thunder" ID="{CB21E451-4FE6-4762-82A2-33C00FF5B318}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Foot" ID="{C6055C79-CB42-4E18-8A0F-FD244B9DDCFE}" ShortID="607807331">
@@ -2508,7 +2534,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>12</Value>
+														<Value>4</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>

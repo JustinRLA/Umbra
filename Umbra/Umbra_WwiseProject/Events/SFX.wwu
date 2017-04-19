@@ -164,27 +164,6 @@
 				</Folder>
 				<Folder Name="NPCs" ID="{8879A54A-F569-45BE-B841-40334734E7CE}" ShortID="533621860">
 					<ChildrenList>
-						<Event Name="NPC_Action_Death" ID="{A33ED3D1-95DE-4C00-85AF-3993E6039CD7}">
-							<ChildrenList>
-								<Action Name="Stop" ID="{0EF45000-768D-4E9F-990A-C816A00696F6}" ShortID="853139987" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{110F5B28-1265-4C62-BBD8-68D78D233F58}" Global="false">
-											<ObjectRef Name="NPC" ID="{EE9552C0-04A5-4219-B7EC-D1304928AE59}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{BEBAF9D6-70B4-4737-8612-BC2F041FD881}" ShortID="1049492857" Type="Play" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.1"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{8E245AB4-98CD-4928-9BFD-F014228650E5}" Global="false">
-											<ObjectRef Name="NPC_Action_Death" ID="{7C3013E0-FE37-4E3A-A453-215C09F8B5BD}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="NPC_Action_Kill" ID="{63AB3A33-384C-4854-AC13-3269605A1C9F}">
 							<ChildrenList>
 								<Action Name="Play" ID="{3343AB99-BBB1-40F8-AD25-3A70F49F66DE}" ShortID="355444910" Type="Play" Scope="One" Global="false">
@@ -284,13 +263,10 @@
 						</Event>
 						<Event Name="NPC_Destroy" ID="{077BD2EA-1073-45D7-8B0E-4C0E877DCF20}">
 							<ChildrenList>
-								<Action Name="Post Event" ID="{A7A7FCCA-6070-4214-B679-18018BE8B833}" ShortID="269803477" Type="PlayEvent" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.3"/>
-									</PropertyList>
+								<Action Name="Play" ID="{1061C469-7E55-4F03-9DDB-C7BA394D2D8B}" ShortID="938661654" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{5C922AE0-504A-4A85-B542-926A262544B3}" Global="false">
-											<ObjectRef Name="NPC_Action_Death" ID="{A33ED3D1-95DE-4C00-85AF-3993E6039CD7}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+										<Element ID="{41B92B57-CCB7-4FA6-B4AF-6568A38DD96B}" Global="false">
+											<ObjectRef Name="NPC_Action_Death" ID="{7C3013E0-FE37-4E3A-A453-215C09F8B5BD}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -371,7 +347,17 @@
 								</Event>
 								<Event Name="PC_Action_Death" ID="{132F6797-D545-45D5-AF1C-C74D46FFE288}">
 									<ChildrenList>
+										<Action Name="Play" ID="{8F7E7400-E56A-477E-8F78-5F73AC0CE01B}" ShortID="98778680" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{0C24CB19-53F4-4B9D-977A-6E336796516F}" Global="false">
+													<ObjectRef Name="PC_Action_Death_Thunder" ID="{5322E7E1-07A8-4C3A-B954-20C017C6FDE3}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
 										<Action Name="Play" ID="{46542404-11D5-4921-9B11-70384C519C98}" ShortID="945791994" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.6"/>
+											</PropertyList>
 											<ElementList>
 												<Element ID="{BC52F802-C082-4B53-9C50-3E829923F52D}" Global="false">
 													<ObjectRef Name="PC_Action_Death" ID="{645D160C-59AF-4DD7-B8A4-76A4CDC9CD94}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
