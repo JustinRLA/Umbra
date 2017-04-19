@@ -70,6 +70,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4660072620512414}
+  - component: {fileID: 114861239771156718}
   m_Layer: 0
   m_Name: BloodEffectFacingLeft
   m_TagString: Untagged
@@ -163,6 +164,18 @@ Transform:
   m_Father: {fileID: 4157349427741110}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.94400007, y: 90.00001, z: -90.00001}
+--- !u!114 &114861239771156718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870921342587306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372912e7443cbc74887cfa83bcdbb2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CustomTime: 1
 --- !u!198 &198288215357740456
 ParticleSystem:
   m_ObjectHideFlags: 1

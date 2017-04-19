@@ -62,15 +62,15 @@ public class DeathEvent : MonoBehaviour {
 		Time.timeScale = 0.3f;
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == true) {
 			BloodRight = (GameObject)Resources.Load ("BloodRightEpic",typeof (GameObject));
-			Instantiate(BloodRight, new Vector3(EnnemyPos.position.x+0.5f,EnnemyPos.position.y+2,EnnemyPos.position.z),EnnemyPos.rotation);
+			Instantiate(BloodRight, new Vector3(EnnemyPos.position.x+0.5f,EnnemyPos.position.y,EnnemyPos.position.z), Quaternion.Euler(0,90,-90) );
 			StartCoroutine(StartRightAnim());
 
 		}
 
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == false)
 		{
-			BloodLeft = (GameObject)Resources.Load ("BloodLeftEpic",typeof (GameObject));
-			Instantiate(BloodLeft, new Vector3(EnnemyPos.position.x-0.5f,EnnemyPos.position.y,EnnemyPos.position.z),EnnemyPos.rotation);
+			BloodLeft = (GameObject)Resources.Load ("BloodFacingLeft",typeof (GameObject));
+			Instantiate(BloodLeft, new Vector3(EnnemyPos.position.x-0.5f,EnnemyPos.position.y,EnnemyPos.position.z),Quaternion.Euler(0,0,0));
 			StartCoroutine(StartLeftAnim()); 
 
 		}

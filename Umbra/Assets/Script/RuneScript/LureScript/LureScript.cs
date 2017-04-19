@@ -16,7 +16,7 @@ public class LureScript : MonoBehaviour {
 	public GameObject myCam;
 	public bool inLureMode;
 	public GameObject raycar;
-
+	GameObject Lurelight;
 	public GameObject CamOne;
 	public GameObject CamTwo;
 	public GameObject CamThree;
@@ -33,6 +33,7 @@ public class LureScript : MonoBehaviour {
 
 
 	void Start () {
+		Lurelight=GameObject.Find("LightLeurre");
 		GetComponent<LureScript> ().enabled = false;
 		myCam = GameObject.Find ("Main Camera");
 		CamOne = GameObject.Find ("Main Camera (1)");
@@ -50,6 +51,7 @@ public class LureScript : MonoBehaviour {
 		raycar = GameObject.Find ("raycar");
 		raycar.transform.position = gameObject.transform.position;
 		raycar.transform.parent = gameObject.transform;
+				Lurelight.SetActive (true);
 
 
 		FullRune = GameObject.Find ("LeureImageFull");
@@ -152,7 +154,7 @@ public class LureScript : MonoBehaviour {
 		yield return new WaitForSeconds(2f);
 		timer = 2;
 		yield return new WaitForSeconds(2f);
-
+		Lurelight.SetActive (false);
 		//ThePlayerShadow.transform.parent = ThePlayer.transform;
 		EnnemyDistracted = false;
 		//ThePlayerShadow.transform.position = ThePlayer.transform.position;
@@ -229,6 +231,8 @@ public class LureScript : MonoBehaviour {
 		yield return new WaitForSeconds(2f);
 
 			EnnemyDistracted = false;
+				Lurelight.SetActive (false);
+
 			ThePlayerShadow.transform.position = ThePlayer.transform.position;
 			ThePlayerShadow.SetActive (false);
 		Active = false;

@@ -11,6 +11,6 @@ public class followLureUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = LurePlayrt.transform.position;
+		transform.position = new Vector3(LurePlayrt.transform.position.x,LurePlayrt.transform.position.y,  LurePlayrt.transform.position.z+1)  ;
 	}
 }
