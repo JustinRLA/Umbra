@@ -69,7 +69,7 @@ public class DeathEvent : MonoBehaviour {
 
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == false)
 		{
-			BloodLeft = (GameObject)Resources.Load ("BloodFacingLeft",typeof (GameObject));
+			BloodLeft = (GameObject)Resources.Load ("BloodEffectFacingLeft",typeof (GameObject));
 			Instantiate(BloodLeft, new Vector3(EnnemyPos.position.x-0.5f,EnnemyPos.position.y,EnnemyPos.position.z),Quaternion.Euler(0,0,0));
 			StartCoroutine(StartLeftAnim()); 
 
