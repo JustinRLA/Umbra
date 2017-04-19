@@ -78,7 +78,7 @@ using UnityEngine.SceneManagement;
 		if (havePlayedDeath == false) {
 			AkSoundEngine.PostEvent ("PC_Action_Death", gameObject);
 			havePlayedDeath = true;
-			Instantiate (LightOfDeath, new Vector3 (transform.position.x, transform.position.y + 26, transform.position.z), transform.rotation);
+			Instantiate (LightOfDeath, new Vector3 (transform.position.x, transform.position.y + 4, transform.position.z), transform.rotation);
 			StartCoroutine (Impactdelay ());
 		}
 			AssassinTrigger.SetActive (false);

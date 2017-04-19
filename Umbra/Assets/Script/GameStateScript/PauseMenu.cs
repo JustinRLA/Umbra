@@ -11,24 +11,18 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject RuneManager;
 	RuneManagerScript myRuneManScript;
 	public GameObject CameraOne;
-	public GameObject BorneBaseObj;
-	BorneBase myBorne;
-
 
 	// Use this for initialization
 	void Start () {
-		BorneBaseObj = GameObject.Find ("BorneBase");
-
 		CameraOne = GameObject.Find ("Main Camera");
 		RuneManager = GameObject.Find ("RuneManager");
-		myBorne = BorneBaseObj.GetComponent<BorneBase> ();
 		myRuneManScript = RuneManager.GetComponent<RuneManagerScript> ();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Escape) && Paused == false && myRuneManScript.RuneActivated==false && myBorne.inBorne==false)
+		if (Input.GetKeyDown (KeyCode.Escape) && Paused == false && myRuneManScript.RuneActivated==false)
 			PauseBegin ();
 			
 	}

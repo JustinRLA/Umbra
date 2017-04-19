@@ -80,7 +80,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1144513268209536}
   serializedVersion: 5
   lengthInSec: 0.2
-  simulationSpeed: 30
+  simulationSpeed: 50
   looping: 0
   prewarm: 0
   playOnAwake: 1
@@ -127,7 +127,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -29000742
+  randomSeed: 1118484990
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -537,7 +537,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     randomizeRotationDirection: 0
-    maxNumParticles: 80000
+    maxNumParticles: 8000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -2717,7 +2717,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1955823680171062}
   serializedVersion: 5
   lengthInSec: 0.2
-  simulationSpeed: 11
+  simulationSpeed: 10
   looping: 0
   prewarm: 0
   playOnAwake: 1
@@ -2764,12 +2764,12 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 562085444
+  randomSeed: -2054376126
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
-      scalar: 0.5
+      scalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
