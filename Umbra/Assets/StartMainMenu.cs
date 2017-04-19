@@ -9,7 +9,6 @@ public class StartMainMenu : MonoBehaviour {
 	void Start () {
 		DontDestroyOnLoad (gameObject);
 		SceneManager.LoadScene("Main Menu");
-		AkSoundEngine.PostEvent("Mus_InGame",gameObject);
 
 		AkSoundEngine.PostEvent("Mus_Menu",gameObject);
 
