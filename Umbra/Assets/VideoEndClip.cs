@@ -14,15 +14,11 @@ public class VideoEndClip : MonoBehaviour {
 	void Start () {
 		GetComponent<RawImage> ().texture = EndFilm as MovieTexture;
 
-		//audio
-		audio = GetComponent<AudioSource> ();
-		audio.clip = EndFilm.audioClip;
-		//
-
 		EndFilm.Play ();
+		AkSoundEngine.PostEvent ("CutS_Start",gameObject);
+
 
 		//audio
-		audio.Play ();
 		//
 	}
 	

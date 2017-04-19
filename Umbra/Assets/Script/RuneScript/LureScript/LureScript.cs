@@ -16,7 +16,7 @@ public class LureScript : MonoBehaviour {
 	public GameObject myCam;
 	public bool inLureMode;
 	public GameObject raycar;
-	GameObject Lurelight;
+	public GameObject Lurelight;
 	public GameObject CamOne;
 	public GameObject CamTwo;
 	public GameObject CamThree;
@@ -33,7 +33,6 @@ public class LureScript : MonoBehaviour {
 
 
 	void Start () {
-		Lurelight=GameObject.Find("LightLeurre");
 		GetComponent<LureScript> ().enabled = false;
 		myCam = GameObject.Find ("Main Camera");
 		CamOne = GameObject.Find ("Main Camera (1)");
@@ -48,12 +47,11 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Filter", gameObject);
 		raycar = GameObject.Find ("raycar");
 		raycar.transform.position = gameObject.transform.position;
 		raycar.transform.parent = gameObject.transform;
 				Lurelight.SetActive (true);
-
-
 		FullRune = GameObject.Find ("LeureImageFull");
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Use", gameObject);
