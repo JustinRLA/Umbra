@@ -55,11 +55,6 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>8</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -71,6 +66,13 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="PC_Action_Kill" ID="{CE478965-4BB3-4E89-87FF-474E80B9BA78}" ShortID="581344660">
+													<PropertyList>
+														<Property Name="VolumeOffset" Type="Real64">
+															<ValueList>
+																<Value>12</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>PC_Action_Kill.wav</AudioFile>
 												</AudioFileSource>
@@ -2513,7 +2515,7 @@
 												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
