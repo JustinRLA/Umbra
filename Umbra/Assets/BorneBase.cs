@@ -18,7 +18,7 @@ public class BorneBase : MonoBehaviour {
 	public GameObject ShadowIns;
 	public Sprite SpawnerNormal;
 	public Sprite SpawnerOver;
-
+	public bool inBorne;
 	public GameObject LureRuneGlow;
 	public GameObject TrapRuneGlow;
 	public GameObject SolidRuneGlow;
@@ -40,7 +40,6 @@ public class BorneBase : MonoBehaviour {
 		playerMy=GameObject.Find("2DCharacter(Clone)");
 		RuneManager=GameObject.Find("RuneManager");
 		FeedBackImage = GameObject.Find ("feedbackRuneChange");
-
 	}
 	
 	// Update is called once per frame
@@ -73,11 +72,12 @@ public class BorneBase : MonoBehaviour {
 
 		UIMode.SetActive (false);
 		Cursor.visible=false;
+		inBorne = false;
 	}
 
 	public void ReceiveInfo()
 	{
-
+		inBorne = true;
 		YellowBCGGrap= GameObject.Find ("bcg_PlateGrap");
 		YellowBCGLure = GameObject.Find ("bcg_PlateLure");
 		YellowBCGmark = GameObject.Find ("bcg_PlatMark");
