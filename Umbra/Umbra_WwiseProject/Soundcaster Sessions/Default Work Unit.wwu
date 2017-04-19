@@ -18,6 +18,14 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="PC_Foot_Run" ID="{B590E484-D0C9-4ACC-87B2-66CD2820313A}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Rune_Select" ID="{A6DA32CF-778D-4A7B-A10C-38F3E6230A76}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="PC_Rune_Accrochage_Equip" ID="{38D5365A-2DAB-410B-ACAA-1F602AF53062}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
 							<Position X="0" Y="6"/>
 						</Module>
@@ -40,6 +48,14 @@
 						<Module>
 							<ObjectRef Name="PC_Foot_Jump" ID="{610644C9-6CAC-4F28-98AA-66395D9B4CC8}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
 							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Stealth_Off" ID="{B7313609-B364-4048-864E-B2A4FADAAD86}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Rune_Accrochage_Red" ID="{BFC3E823-ADC2-445E-A864-60EB4A15F3F3}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="1" Y="5"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="PC_Rune_Accrochage_Green" ID="{78B115B0-6C33-4CEA-BCE2-7D866CAE7FAB}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
@@ -70,44 +86,52 @@
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="PC_Rune_Accrochage_Red" ID="{BFC3E823-ADC2-445E-A864-60EB4A15F3F3}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="2" Y="6"/>
+							<ObjectRef Name="PC_Stealth_On" ID="{421E7F00-2EA9-4A38-89FD-D674AC8924BE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="2" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="PC_Rune_Marquage_Use" ID="{5353C89F-372E-405D-B451-E3886D4F6772}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="2" Y="7"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="PC_Rune_Select" ID="{A6DA32CF-778D-4A7B-A10C-38F3E6230A76}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="2" Y="8"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="PC_Foot_Run" ID="{B590E484-D0C9-4ACC-87B2-66CD2820313A}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="3" Y="3"/>
+							<Position X="2" Y="5"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="PC_Rune_Accrochage_Use" ID="{9B43F1CF-EB14-4846-9B90-D67AF580AF11}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="3" Y="6"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="PC_Rune_Ombre_Decay" ID="{9AF5791D-5196-4EC7-922B-9DB02462D97F}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="3" Y="7"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="PC_Rune_Solide_End" ID="{AE106462-DE7E-4A8A-B29E-E6DA24DFA8E8}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="3" Y="8"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="PC_Stealth_Off" ID="{B7313609-B364-4048-864E-B2A4FADAAD86}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="4" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="PC_Stealth_On" ID="{421E7F00-2EA9-4A38-89FD-D674AC8924BE}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="4" Y="3"/>
+							<Position X="2" Y="6"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="PC_Rune_Solide_Use" ID="{C133C733-C772-4AF8-B820-B76F7B9B87AA}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
-							<Position X="4" Y="6"/>
+							<Position X="2" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PC_Rune_Solide_End" ID="{AE106462-DE7E-4A8A-B29E-E6DA24DFA8E8}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="2" Y="8"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Destroy" ID="{077BD2EA-1073-45D7-8B0E-4C0E877DCF20}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Action_Kill" ID="{63AB3A33-384C-4854-AC13-3269605A1C9F}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_State_Alarmed" ID="{1BBE91A0-AE5C-4E60-92DC-0A75FA6B6AA1}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_State_Normal" ID="{C4662E75-92A5-443F-BDEA-99F0403F6BE2}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Action_Death" ID="{A33ED3D1-95DE-4C00-85AF-3993E6039CD7}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="5" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Foot_Run" ID="{B1BDA4EF-8538-4186-B912-F08590483413}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="5" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_State_Located" ID="{21AE8267-DDC3-4E41-A895-2BB8C4FBDA9E}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}"/>
+							<Position X="5" Y="3"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -121,7 +145,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
+						<CurrentStateRef Name="Stealth_Off" ID="{08264C43-CDEC-44BE-BDDE-1381FC737AD2}"/>
 						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 						<CurrentStateRef Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
 					</CurrentStateList>
@@ -173,6 +197,10 @@
 							<ObjectRef Name="STOPALLMUSIC" ID="{13BA3892-5996-4738-BE32-837B6F852AF5}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}"/>
 							<Position X="4" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="NPC_State_Located" ID="{1BCEB177-5751-4533-A7A0-91B6C368CED6}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+							<Position X="4" Y="2"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -186,8 +214,8 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
-						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
-						<CurrentStateRef Name="MainMenu" ID="{A3698F00-6554-4266-A778-EC38FC465C75}"/>
+						<CurrentStateRef Name="Located" ID="{BC00ADA8-A95A-4DF2-9248-0C9618BFE155}"/>
+						<CurrentStateRef Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
@@ -229,6 +257,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Stealth_On" ID="{3ED61976-D602-40A5-9040-B4C7DB371D23}"/>
 						<CurrentStateRef Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 						<CurrentStateRef Name="MainMenu" ID="{A3698F00-6554-4266-A778-EC38FC465C75}"/>
 					</CurrentStateList>

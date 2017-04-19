@@ -596,11 +596,22 @@
 										<Action Name="Stop" ID="{1D38AF78-3268-4CF6-A804-B594ED2E5B7D}" ShortID="343480149" Type="Stop" Scope="One" Global="true">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="0.5"/>
-												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
 											</PropertyList>
 											<ElementList>
 												<Element ID="{0E3A7A0B-5B2C-4466-A9DB-2FA6173433C9}" Global="true">
 													<ObjectRef Name="PC_Rune_Ombre_Select" ID="{D9B8548E-4E0D-4965-822F-BF388E3FF162}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Play" ID="{C9FACA3E-D401-4D28-BDD3-B65559E0A905}" ShortID="124538074" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.5"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{4527E7C2-70D3-4134-873A-8EA359DA70EE}" Global="false">
+													<ObjectRef Name="PC_Rune_Ombre_Decay" ID="{0338AA95-A496-4A82-8A4B-B89BBF025804}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -638,8 +649,22 @@
 								<Event Name="PC_Rune_Ombre_Decay" ID="{9AF5791D-5196-4EC7-922B-9DB02462D97F}">
 									<ChildrenList>
 										<Action Name="Play" ID="{6D011DA3-FAFC-4412-86CE-D13EEBC05DD5}" ShortID="316448672" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.7"/>
+											</PropertyList>
 											<ElementList>
 												<Element ID="{6F66C9A6-86CA-4384-B6C0-A5694F6FB812}" Global="false">
+													<ObjectRef Name="PC_Rune_Ombre_Decay" ID="{0338AA95-A496-4A82-8A4B-B89BBF025804}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{C004D06D-1995-45C4-9718-B051E585B016}" ShortID="83924222" Type="Stop" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="4.5"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{5C632F5A-563F-441D-B1E0-1FA5C4C8D1C7}" Global="false">
 													<ObjectRef Name="PC_Rune_Ombre_Decay" ID="{0338AA95-A496-4A82-8A4B-B89BBF025804}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
 												</Element>
 											</ElementList>

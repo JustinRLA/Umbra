@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1540E4A4-7C99-4CFC-8456-D033B570F64D}" SchemaVersion="75">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{1540E4A4-7C99-4CFC-8456-D033B570F64D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1540E4A4-7C99-4CFC-8456-D033B570F64D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Leurre" ID="{45A73D8C-DF7D-4F62-AF30-1FC7B16BD290}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="100"/>
+						<Property Name="DistortionTone" Type="Real32" Value="100"/>
+						<Property Name="DistortionType" Type="int32" Value="1"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>
