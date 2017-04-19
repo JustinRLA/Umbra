@@ -59,10 +59,6 @@ public void restartGame()
 	{
 		AkSoundEngine.PostEvent("Menu_Cancel",gameObject);
 	}
-	public void Quitter()
-	{
-		Application.Quit ();
-	}
 
 
 }
