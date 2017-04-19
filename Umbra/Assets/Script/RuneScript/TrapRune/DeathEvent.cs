@@ -59,18 +59,19 @@ public class DeathEvent : MonoBehaviour {
 		LeftTransform.position  = new Vector3 (Ennemy.transform.position.x+10, Ennemy.transform.position.y+0.5f, 0);
 		Center.position= new Vector3 (transform.position.x , transform.position.y+0.5f, 0);
 		EnnemyPos.position = new Vector3 (Ennemy.transform.position.x, Ennemy.transform.position.y+0.5f, 0);
+		Time.timeScale = 0.3f;
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == true) {
-			BloodRight = (GameObject)Resources.Load ("BloodRight",typeof (GameObject));
-			Instantiate(BloodRight, new Vector3(EnnemyPos.position.x+0.5f,EnnemyPos.position.y,EnnemyPos.position.z),EnnemyPos.rotation);
+			BloodRight = (GameObject)Resources.Load ("BloodRightEpic",typeof (GameObject));
+			Instantiate(BloodRight, new Vector3(EnnemyPos.position.x+0.5f,EnnemyPos.position.y+2,EnnemyPos.position.z),EnnemyPos.rotation);
 			StartCoroutine(StartRightAnim());
 
 		}
 
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == false)
 		{
-			BloodLeft = (GameObject)Resources.Load ("BloodLeft",typeof (GameObject));
+			BloodLeft = (GameObject)Resources.Load ("BloodLeftEpic",typeof (GameObject));
 			Instantiate(BloodLeft, new Vector3(EnnemyPos.position.x-0.5f,EnnemyPos.position.y,EnnemyPos.position.z),EnnemyPos.rotation);
-			StartCoroutine(StartLeftAnim());
+			StartCoroutine(StartLeftAnim()); 
 
 		}
 		EventTriggered=true;
