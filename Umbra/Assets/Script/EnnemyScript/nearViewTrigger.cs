@@ -5,7 +5,6 @@ using UnityEngine;
 public class nearViewTrigger : MonoBehaviour {
 	public GameObject MySight;
 	public GameObject EnnemyBase;
-	public GameObject mySignListener;
 	public bool inSigght;
 	SightListenerTemplate mySightList;
 	EnnnemyPatrolUpgraded myPatrol;

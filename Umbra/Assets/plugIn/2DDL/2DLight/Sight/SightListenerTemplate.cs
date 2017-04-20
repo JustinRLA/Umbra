@@ -41,10 +41,13 @@ public class SightListenerTemplate : MonoBehaviour {
 	public GameObject NoDangerLight;
 	public GameObject NormalGlobe;
 	public GameObject DangeGlobe;
-
+	EnnnemyPatrolUpgraded myPat;
 
 	public void Start()
 	{
+		StartCoroutine (StopStart ());
+		if(TypeOfObj==1)
+		myPat = EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ();
 		RuneManager = GameObject.Find ("RuneManager");
 			//LurePlayer=GameObject.Find("2DCharacterShadow");
 //		RuneManager = GameObject.Find ("RuneManager");
@@ -53,7 +56,7 @@ public class SightListenerTemplate : MonoBehaviour {
 		//print (gameObject.name);
 		//EnnemyBase=
 //		print(transform.parent.name);
-
+			iSeeYou=false;
 		if(!check)
 		{
 			check = true;
@@ -70,7 +73,11 @@ public class SightListenerTemplate : MonoBehaviour {
 
 	//IEnumerator Camdetection()
 
-
+	IEnumerator StopStart()
+	{
+		yield return new WaitForSeconds (1f);
+		iSeeYou = false;
+	}
 
 	void Update()
 	{
@@ -86,11 +93,10 @@ public class SightListenerTemplate : MonoBehaviour {
 		throwSuspicious = false;
 		throwAlert = false;
 		}
-
-			if (EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> () == null)
+			if (myPat == null)
 			iSeeYou = false;
 
-			if (EnnemyBase.GetComponent<EnnnemyPatrolUpgraded> ().Alert == true)
+			if (myPat.Alert == true)
 			throwSuspicious = false;
 		}
 		if(TypeOfObj==2)
@@ -137,6 +143,10 @@ public class SightListenerTemplate : MonoBehaviour {
 		{
 		if(throwAlert==false || throwSuspicious==false)
 		{
+				if (go == null)
+					iSeeYou = false;
+				if(go !=null)
+				{
 			if (go.tag == "LurePlayer" ) {
 				print ("SAWWWWWWWWWWWWWWWWWWWWWWW");
 				IsawTheLure = true;
@@ -160,12 +170,13 @@ public class SightListenerTemplate : MonoBehaviour {
 		else
 			StopCoroutine (InSight ());
 		}
-
+		}
 
 		if(TypeOfObj==2)
 		{
 			print (go.gameObject);
-
+			if (go != null) {
+				
 			if (go.tag == "Player")
 			{
 				print ("InCam");
@@ -174,7 +185,7 @@ public class SightListenerTemplate : MonoBehaviour {
 			}
 		}
 
-
+		}
 			}
 
 //	if (go.tag == "ennemy")
@@ -194,6 +205,8 @@ public class SightListenerTemplate : MonoBehaviour {
 			
 		if(TypeOfObj==1)
 		{
+			if (go != null) {
+				
 		if (go.tag == "Player")
 		{
 			StopCoroutine (InSight ());
@@ -205,15 +218,16 @@ public class SightListenerTemplate : MonoBehaviour {
 			throwAlert = false;
 		}
 			}
-
-			if(TypeOfObj==2)
-			{
-				if (go.tag == "Player")
-				{
+		}
+		if (TypeOfObj == 2) {
+			if (go != null) {
+				if (go.tag == "Player") {
+					print ("PlayerImca,");
 					inCam = false;
-				StopCoroutine (CamCoroutine ());
+					StopCoroutine (CamCoroutine ());
 				}
 			}
+		}
 		if (gameObject.GetHashCode () == go.GetHashCode ()) {
 			//print (go.name + " --> OnExit() event");
 			go.GetComponent<SpriteRenderer>().color = Color.white;

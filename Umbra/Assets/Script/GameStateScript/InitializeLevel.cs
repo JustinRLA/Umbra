@@ -59,8 +59,8 @@ public class InitializeLevel : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		if(debugMusTest==true)
-			AkSoundEngine.PostEvent("Mus_Ingame",gameObject);
+//		if(debugMusTest==true)
+//			AkSoundEngine.PostEvent("Mus_Ingame",gameObject);
 		
 		interzone [0].SetActive (false);
 		interzone [1].SetActive (false);

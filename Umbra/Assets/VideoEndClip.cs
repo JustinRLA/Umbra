@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VideoEndClip : MonoBehaviour {
 	public MovieTexture EndFilm;
@@ -17,7 +18,7 @@ public class VideoEndClip : MonoBehaviour {
 		EndFilm.Play ();
 		AkSoundEngine.PostEvent ("CutS_Start",gameObject);
 
-
+		StartCoroutine (ReturnToMain ());
 		//audio
 		//
 	}
@@ -25,5 +26,10 @@ public class VideoEndClip : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	IEnumerator ReturnToMain()
+	{
+		yield return new WaitForSeconds (90);
+		SceneManager.LoadScene ("Main Menu");
 	}
 }

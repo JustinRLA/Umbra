@@ -12,6 +12,7 @@ public class StartMainMenu : MonoBehaviour {
 		AkSoundEngine.PostEvent("Mus_InGame",gameObject);
 
 		AkSoundEngine.PostEvent("Mus_Menu",gameObject);
+		print ("Start");
 
 	}
 	

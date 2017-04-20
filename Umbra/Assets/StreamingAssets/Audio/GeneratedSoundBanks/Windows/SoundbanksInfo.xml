@@ -21,19 +21,14 @@
 				<Event Id="3008075654" Name="Amb_Door" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Door"/>
 				<Event Id="3302041772" Name="Amb_Rain" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Rain"/>
 				<Event Id="897032325" Name="Amb_Shadow_Pipe" ObjectPath="\Events\Default Work Unit\SFX\Amb\Amb_Shadow_Pipe"/>
-				<Event Id="219268470" Name="CutS_1" ObjectPath="\Events\Default Work Unit\CutS\CutS_1"/>
-				<Event Id="219268469" Name="CutS_2" ObjectPath="\Events\Default Work Unit\CutS\CutS_2"/>
-				<Event Id="219268468" Name="CutS_3" ObjectPath="\Events\Default Work Unit\CutS\CutS_3"/>
-				<Event Id="219268467" Name="CutS_4" ObjectPath="\Events\Default Work Unit\CutS\CutS_4"/>
-				<Event Id="219268466" Name="CutS_5" ObjectPath="\Events\Default Work Unit\CutS\CutS_5"/>
-				<Event Id="219268465" Name="CutS_6" ObjectPath="\Events\Default Work Unit\CutS\CutS_6"/>
-				<Event Id="219268464" Name="CutS_7" ObjectPath="\Events\Default Work Unit\CutS\CutS_7"/>
-				<Event Id="219268479" Name="CutS_8" ObjectPath="\Events\Default Work Unit\CutS\CutS_8"/>
-				<Event Id="219268478" Name="CutS_9" ObjectPath="\Events\Default Work Unit\CutS\CutS_9"/>
 				<Event Id="1323154943" Name="CutS_Start" ObjectPath="\Events\Default Work Unit\CutS\CutS_Start"/>
 				<Event Id="3180909377" Name="Menu_Cancel" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Cancel"/>
 				<Event Id="760777789" Name="Menu_Click" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Click"/>
 				<Event Id="309439191" Name="Menu_Hover" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Hover"/>
+				<Event Id="2170009975" Name="Menu_Pause" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Pause"/>
+				<Event Id="211604505" Name="Menu_Pause_End" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Pause_End"/>
+				<Event Id="2550334218" Name="Menu_Rune_Click" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Rune_Click"/>
+				<Event Id="1350920896" Name="Menu_Rune_Hover" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Rune_Hover"/>
 				<Event Id="1102633101" Name="Mus_Alert" ObjectPath="\Events\Default Work Unit\MUS\Mus_Alert"/>
 				<Event Id="48865357" Name="Mus_Explo" ObjectPath="\Events\Default Work Unit\MUS\Mus_Explo"/>
 				<Event Id="562626134" Name="Mus_Ingame" ObjectPath="\Events\Default Work Unit\MUS\Mus_Ingame"/>
@@ -42,8 +37,8 @@
 				<Event Id="3224037365" Name="Mus_Secteur1" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur1"/>
 				<Event Id="3224037366" Name="Mus_Secteur2" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur2"/>
 				<Event Id="3224037367" Name="Mus_Secteur3" ObjectPath="\Events\Default Work Unit\MUS\Mus_Secteur3"/>
-				<Event Id="1249525624" Name="NPC_Action_Death" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Action_Death"/>
 				<Event Id="3752724058" Name="NPC_Action_Kill" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Action_Kill"/>
+				<Event Id="55429609" Name="NPC_Destroy" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Destroy"/>
 				<Event Id="888215683" Name="NPC_Foot_Run" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_Foot_Run"/>
 				<Event Id="3551547733" Name="NPC_State_Alarmed" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_State_Alarmed"/>
 				<Event Id="2712572047" Name="NPC_State_Located" ObjectPath="\Events\Default Work Unit\SFX\NPCs\NPC_State_Located"/>
@@ -74,774 +69,853 @@
 				<Event Id="3244327485" Name="PC_Rune_Trap_Use" ObjectPath="\Events\Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Use"/>
 				<Event Id="1483073216" Name="PC_Stealth_Off" ObjectPath="\Events\Default Work Unit\SFX\PC\Foot\PC_Stealth_Off"/>
 				<Event Id="2183052938" Name="PC_Stealth_On" ObjectPath="\Events\Default Work Unit\SFX\PC\Foot\PC_Stealth_On"/>
+				<Event Id="608424965" Name="SFX_Scripted_Shield" ObjectPath="\Events\Default Work Unit\CutS\SFX_Scripted_Shield"/>
 				<Event Id="2907867019" Name="STOPALLMUSIC" ObjectPath="\Events\Default Work Unit\MUS\STOPALLMUSIC"/>
-				<Event Id="3427879087" Name="VO_PC_Death" ObjectPath="\Events\Default Work Unit\VO\PC\VO_PC_Death"/>
-				<Event Id="3045087407" Name="VO_PC_Jump" ObjectPath="\Events\Default Work Unit\VO\PC\VO_PC_Jump"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="4240408" Language="SFX">
-					<ShortName>footstep_stone_01.wav</ShortName>
-					<Path>SFX\footstep_stone_01_50DB02DB.wem</Path>
+				<File Id="664015" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_06.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_06_758AE448.wem</Path>
 				</File>
 				<File Id="13430912" Language="SFX">
 					<ShortName>Mus_Explo_A_Harpe_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_A_Harpe_02_0CDD8189.wem</Path>
-				</File>
-				<File Id="15989610" Language="SFX">
-					<ShortName>NPC_State_Located_Call_04.wav</ShortName>
-					<Path>SFX\NPC_State_Located_Call_04_50DB02DB.wem</Path>
+					<Path>SFX\Mus_Explo_A_Harpe_02_62CE3462.wem</Path>
 				</File>
 				<File Id="20331000" Language="SFX">
 					<ShortName>Menu_Click.wav</ShortName>
-					<Path>SFX\Menu_Click_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Click_758AE448.wem</Path>
 				</File>
 				<File Id="32774756" Language="SFX">
 					<ShortName>Menu_Hover_12.wav</ShortName>
-					<Path>SFX\Menu_Hover_12_50DB02DB.wem</Path>
-				</File>
-				<File Id="33928990" Language="SFX">
-					<ShortName>footstep_stone_12.wav</ShortName>
-					<Path>SFX\footstep_stone_12_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_12_758AE448.wem</Path>
 				</File>
 				<File Id="36326777" Language="SFX">
 					<ShortName>Mus_Explo_B_Voix_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_B_Voix_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_B_Voix_02_62CE3462.wem</Path>
 				</File>
 				<File Id="42002758" Language="SFX">
 					<ShortName>Mus_Explo_A_Vlc-CB_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_A_Vlc-CB_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_A_Vlc-CB_02_62CE3462.wem</Path>
 				</File>
 				<File Id="48037635" Language="SFX">
 					<ShortName>PC_Foot_Run_14.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_14_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_14_758AE448.wem</Path>
 				</File>
 				<File Id="55237842" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Gong_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Gong_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Gong_01_62CE3462.wem</Path>
 				</File>
 				<File Id="61608593" Language="SFX">
 					<ShortName>Menu_Hover_23.wav</ShortName>
-					<Path>SFX\Menu_Hover_23_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_23_758AE448.wem</Path>
 				</File>
 				<File Id="62672227" Language="SFX">
 					<ShortName>PC_Foot_Run_05.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_05_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_05_758AE448.wem</Path>
+				</File>
+				<File Id="68361163" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_03.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_03_758AE448.wem</Path>
 				</File>
 				<File Id="68525548" Language="SFX">
 					<ShortName>Menu_Hover_03.wav</ShortName>
-					<Path>SFX\Menu_Hover_03_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_03_758AE448.wem</Path>
 				</File>
-				<File Id="75792013" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_02.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_02_50DB02DB.wem</Path>
+				<File Id="74239228" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_10.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_10_758AE448.wem</Path>
 				</File>
 				<File Id="76754816" Language="SFX">
 					<ShortName>PC_Foot_Run_02.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_02_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_02_758AE448.wem</Path>
+				</File>
+				<File Id="81609057" Language="SFX">
+					<ShortName>Amb_Alarm_Attack.wav</ShortName>
+					<Path>SFX\Amb_Alarm_Attack_758AE448.wem</Path>
 				</File>
 				<File Id="82430543" Language="SFX">
 					<ShortName>Menu_Hover_17.wav</ShortName>
-					<Path>SFX\Menu_Hover_17_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_17_758AE448.wem</Path>
 				</File>
 				<File Id="85994893" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Gros Caisse_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Gros Caisse_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Gros Caisse_01_62CE3462.wem</Path>
 				</File>
 				<File Id="92619442" Language="SFX">
 					<ShortName>NPC_State_Alarmed_07.wav</ShortName>
-					<Path>SFX\NPC_State_Alarmed_07_50DB02DB.wem</Path>
+					<Path>SFX\NPC_State_Alarmed_07_F581E869.wem</Path>
 				</File>
-				<File Id="96734697" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_05.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_05_50DB02DB.wem</Path>
+				<File Id="98693427" Language="SFX">
+					<ShortName>NPC_State_Located_01.wav</ShortName>
+					<Path>SFX\NPC_State_Located_01_968245CD.wem</Path>
+				</File>
+				<File Id="103559447" Language="SFX">
+					<ShortName>PC_Rune_Ombre_Select.wav</ShortName>
+					<Path>SFX\PC_Rune_Ombre_Select_62CE3462.wem</Path>
+				</File>
+				<File Id="104493633" Language="SFX">
+					<ShortName>CutS_Start.wav</ShortName>
+					<Path>SFX\CutS_Start_758AE448.wem</Path>
 				</File>
 				<File Id="110852026" Language="SFX">
 					<ShortName>Mus_Explo_C_Harpe_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_C_Harpe_01_0CDD8189.wem</Path>
-				</File>
-				<File Id="113314986" Language="SFX">
-					<ShortName>VO_CutS_6_Umbra__01.wav</ShortName>
-					<Path>SFX\VO_CutS_6_Umbra__01_50DB02DB.wem</Path>
+					<Path>SFX\Mus_Explo_C_Harpe_01_62CE3462.wem</Path>
 				</File>
 				<File Id="120637523" Language="SFX">
 					<ShortName>PC_Foot_Run_17.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_17_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_17_758AE448.wem</Path>
+				</File>
+				<File Id="129252446" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_02.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_02_758AE448.wem</Path>
 				</File>
 				<File Id="134443619" Language="SFX">
 					<ShortName>NPC_State_Normal_02.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_02_50DB02DB.wem</Path>
+					<Path>SFX\NPC_State_Normal_02_758AE448.wem</Path>
 				</File>
 				<File Id="135616672" Language="SFX">
 					<ShortName>Menu_Hover_04.wav</ShortName>
-					<Path>SFX\Menu_Hover_04_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_04_758AE448.wem</Path>
 				</File>
 				<File Id="139496635" Language="SFX">
 					<ShortName>Menu_Hover_20.wav</ShortName>
-					<Path>SFX\Menu_Hover_20_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_20_758AE448.wem</Path>
 				</File>
 				<File Id="141244290" Language="SFX">
 					<ShortName>Menu_Hover_14.wav</ShortName>
-					<Path>SFX\Menu_Hover_14_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_14_758AE448.wem</Path>
 				</File>
 				<File Id="143388766" Language="SFX">
 					<ShortName>VO_PC_Death_Long_01.wav</ShortName>
-					<Path>SFX\VO_PC_Death_Long_01_8ABD407E.wem</Path>
+					<Path>SFX\VO_PC_Death_Long_01_4437A5CD.wem</Path>
+				</File>
+				<File Id="146879306" Language="SFX">
+					<ShortName>Mus_Located_Stinger_2.wav</ShortName>
+					<Path>SFX\Mus_Located_Stinger_2_62CE3462.wem</Path>
 				</File>
 				<File Id="157269927" Language="SFX">
 					<ShortName>Mus_Explo_A_Vlc-CB_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_A_Vlc-CB_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_A_Vlc-CB_01_62CE3462.wem</Path>
+				</File>
+				<File Id="157366416" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_02.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_02_8CFD9D7A.wem</Path>
 				</File>
 				<File Id="158080461" Language="SFX">
 					<ShortName>PC_Foot_Run_13.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_13_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_13_758AE448.wem</Path>
+				</File>
+				<File Id="168506108" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_03.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_03_758AE448.wem</Path>
+				</File>
+				<File Id="169359802" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_09.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_09_758AE448.wem</Path>
 				</File>
 				<File Id="170287801" Language="SFX">
 					<ShortName>VO_PC_Jump_02.wav</ShortName>
-					<Path>SFX\VO_PC_Jump_02_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Jump_02_758AE448.wem</Path>
 				</File>
 				<File Id="176784398" Language="SFX">
 					<ShortName>Mus_Menu.wav</ShortName>
-					<Path>SFX\Mus_Menu_0CDD8189.wem</Path>
-				</File>
-				<File Id="177863488" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_09.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_09_50DB02DB.wem</Path>
+					<Path>SFX\Mus_Menu_62CE3462.wem</Path>
 				</File>
 				<File Id="178246198" Language="SFX">
 					<ShortName>Menu_Hover_06.wav</ShortName>
-					<Path>SFX\Menu_Hover_06_50DB02DB.wem</Path>
-				</File>
-				<File Id="181020132" Language="SFX">
-					<ShortName>footstep_stone_07.wav</ShortName>
-					<Path>SFX\footstep_stone_07_50DB02DB.wem</Path>
-				</File>
-				<File Id="181858383" Language="SFX">
-					<ShortName>footstep_stone_05.wav</ShortName>
-					<Path>SFX\footstep_stone_05_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_06_758AE448.wem</Path>
 				</File>
 				<File Id="182207650" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Cloches Tubes_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Cloches Tubes_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Cloches Tubes_02_62CE3462.wem</Path>
 				</File>
-				<File Id="184519738" Language="SFX">
-					<ShortName>Mus_Located_Stinger.wav</ShortName>
-					<Path>SFX\Mus_Located_Stinger_0CDD8189.wem</Path>
+				<File Id="182776437" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_04.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_04_758AE448.wem</Path>
 				</File>
-				<File Id="192250492" Language="SFX">
-					<ShortName>NPC_State_Alarmed_05.wav</ShortName>
-					<Path>SFX\NPC_State_Alarmed_05_50DB02DB.wem</Path>
+				<File Id="190702804" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_04.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_04_758AE448.wem</Path>
 				</File>
 				<File Id="206506025" Language="SFX">
 					<ShortName>VO_PC_Jump_01.wav</ShortName>
-					<Path>SFX\VO_PC_Jump_01_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Jump_01_758AE448.wem</Path>
 				</File>
 				<File Id="215179909" Language="SFX">
 					<ShortName>PC_Foot_Climb_02.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_02_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Climb_02_758AE448.wem</Path>
 				</File>
 				<File Id="215891168" Language="SFX">
 					<ShortName>Mus_Explo_C_Vln-Vla_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_C_Vln-Vla_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_C_Vln-Vla_02_62CE3462.wem</Path>
 				</File>
 				<File Id="226844212" Language="SFX">
 					<ShortName>Amb_Door.wav</ShortName>
-					<Path>SFX\Amb_Door_50DB02DB.wem</Path>
-				</File>
-				<File Id="227283969" Language="SFX">
-					<ShortName>NPC_State_Located_Init_02.wav</ShortName>
-					<Path>SFX\NPC_State_Located_Init_02_50DB02DB.wem</Path>
+					<Path>SFX\Amb_Door_758AE448.wem</Path>
 				</File>
 				<File Id="231095716" Language="SFX">
 					<ShortName>Mus_Explo_C_Vlc-CB_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_C_Vlc-CB_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_C_Vlc-CB_02_62CE3462.wem</Path>
 				</File>
 				<File Id="239502760" Language="SFX">
 					<ShortName>PC_Foot_Climb_10.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_10_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Climb_10_758AE448.wem</Path>
 				</File>
-				<File Id="266054275" Language="SFX">
-					<ShortName>footstep_stone_04.wav</ShortName>
-					<Path>SFX\footstep_stone_04_50DB02DB.wem</Path>
+				<File Id="279208026" Language="SFX">
+					<ShortName>NPC_Action_Kill.wav</ShortName>
+					<Path>SFX\NPC_Action_Kill_758AE448.wem</Path>
 				</File>
-				<File Id="285563710" Language="SFX">
-					<ShortName>NPC_State_Located_Call_03.wav</ShortName>
-					<Path>SFX\NPC_State_Located_Call_03_50DB02DB.wem</Path>
-				</File>
-				<File Id="291390751" Language="SFX">
-					<ShortName>NPC_State_Located_Init_01.wav</ShortName>
-					<Path>SFX\NPC_State_Located_Init_01_50DB02DB.wem</Path>
+				<File Id="287832506" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_13.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_13_758AE448.wem</Path>
 				</File>
 				<File Id="294293325" Language="SFX">
 					<ShortName>VO_PC_Jump_04.wav</ShortName>
-					<Path>SFX\VO_PC_Jump_04_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Jump_04_758AE448.wem</Path>
 				</File>
-				<File Id="296478366" Language="SFX">
-					<ShortName>VO_CutS_9_Morg__01.wav</ShortName>
-					<Path>SFX\VO_CutS_9_Morg__01_50DB02DB.wem</Path>
+				<File Id="297007932" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_17.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_17_758AE448.wem</Path>
 				</File>
 				<File Id="304762072" Language="SFX">
 					<ShortName>Mus_Explo_B_Vlc-CB_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_B_Vlc-CB_02_0CDD8189.wem</Path>
-				</File>
-				<File Id="306152780" Language="SFX">
-					<ShortName>VO_CutS_5_Morg__01.wav</ShortName>
-					<Path>SFX\VO_CutS_5_Morg__01_50DB02DB.wem</Path>
+					<Path>SFX\Mus_Explo_B_Vlc-CB_02_62CE3462.wem</Path>
 				</File>
 				<File Id="308002232" Language="SFX">
 					<ShortName>Menu_Hover_10.wav</ShortName>
-					<Path>SFX\Menu_Hover_10_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_10_758AE448.wem</Path>
 				</File>
 				<File Id="309555285" Language="SFX">
 					<ShortName>Menu_Hover_13.wav</ShortName>
-					<Path>SFX\Menu_Hover_13_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_13_758AE448.wem</Path>
 				</File>
-				<File Id="324254457" Language="SFX">
-					<ShortName>footstep_stone_25.wav</ShortName>
-					<Path>SFX\footstep_stone_25_50DB02DB.wem</Path>
+				<File Id="322599967" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_12.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_12_758AE448.wem</Path>
 				</File>
-				<File Id="338137247" Language="SFX">
-					<ShortName>NPC_State_Located_Call_02.wav</ShortName>
-					<Path>SFX\NPC_State_Located_Call_02_50DB02DB.wem</Path>
+				<File Id="329889399" Language="SFX">
+					<ShortName>Amb_Shadow_Pipe.wav</ShortName>
+					<Path>SFX\Amb_Shadow_Pipe_62CE3462.wem</Path>
+				</File>
+				<File Id="330721418" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_07.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_07_758AE448.wem</Path>
+				</File>
+				<File Id="335057423" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_15.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_15_0FD37E51.wem</Path>
+				</File>
+				<File Id="335877008" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_01.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_01_B039B4D7.wem</Path>
 				</File>
 				<File Id="346669999" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Gros Caisse_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Gros Caisse_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Gros Caisse_02_62CE3462.wem</Path>
 				</File>
 				<File Id="350158918" Language="SFX">
 					<ShortName>NPC_State_Alarmed_03.wav</ShortName>
-					<Path>SFX\NPC_State_Alarmed_03_50DB02DB.wem</Path>
+					<Path>SFX\NPC_State_Alarmed_03_5FA2731D.wem</Path>
+				</File>
+				<File Id="354665813" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_07.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_07_758AE448.wem</Path>
 				</File>
 				<File Id="355961641" Language="SFX">
 					<ShortName>PC_Foot_Climb_03.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_03_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Climb_03_758AE448.wem</Path>
 				</File>
 				<File Id="361141607" Language="SFX">
 					<ShortName>Menu_Hover_16.wav</ShortName>
-					<Path>SFX\Menu_Hover_16_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_16_758AE448.wem</Path>
+				</File>
+				<File Id="363514328" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_11.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_11_758AE448.wem</Path>
 				</File>
 				<File Id="363629891" Language="SFX">
 					<ShortName>Menu_Hover_07.wav</ShortName>
-					<Path>SFX\Menu_Hover_07_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_07_758AE448.wem</Path>
 				</File>
-				<File Id="382205775" Language="SFX">
-					<ShortName>NPC_State_Normal_Move_02.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Move_02_50DB02DB.wem</Path>
+				<File Id="378437800" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_12.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_12_758AE448.wem</Path>
 				</File>
-				<File Id="401738738" Language="SFX">
-					<ShortName>PC_Foot_Climb_05.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_05_50DB02DB.wem</Path>
+				<File Id="378524594" Language="SFX">
+					<ShortName>PC_Foot_Jump.wav</ShortName>
+					<Path>SFX\PC_Foot_Jump_758AE448.wem</Path>
+				</File>
+				<File Id="379893627" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_13.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_13_758AE448.wem</Path>
+				</File>
+				<File Id="404626626" Language="SFX">
+					<ShortName>Mus_Alert_Stinger.wav</ShortName>
+					<Path>SFX\Mus_Alert_Stinger_62CE3462.wem</Path>
 				</File>
 				<File Id="406864249" Language="SFX">
 					<ShortName>Menu_Hover_05.wav</ShortName>
-					<Path>SFX\Menu_Hover_05_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_05_758AE448.wem</Path>
+				</File>
+				<File Id="412548111" Language="SFX">
+					<ShortName>PC_Rune_Trap_Stun.wav</ShortName>
+					<Path>SFX\PC_Rune_Trap_Stun_758AE448.wem</Path>
 				</File>
 				<File Id="416657597" Language="SFX">
 					<ShortName>NPC_State_Alarmed_02.wav</ShortName>
-					<Path>SFX\NPC_State_Alarmed_02_50DB02DB.wem</Path>
+					<Path>SFX\NPC_State_Alarmed_02_B962DCC6.wem</Path>
+				</File>
+				<File Id="417189078" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_08.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_08_758AE448.wem</Path>
 				</File>
 				<File Id="424030360" Language="SFX">
 					<ShortName>Menu_Hover_28.wav</ShortName>
-					<Path>SFX\Menu_Hover_28_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_28_758AE448.wem</Path>
 				</File>
-				<File Id="430499177" Language="SFX">
-					<ShortName>NPC_State_Normal_Move_03.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Move_03_50DB02DB.wem</Path>
+				<File Id="431169029" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_05.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_05_B4B1E2E0.wem</Path>
 				</File>
 				<File Id="433195464" Language="SFX">
 					<ShortName>PC_Foot_Run_25.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_25_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_25_758AE448.wem</Path>
 				</File>
-				<File Id="450629393" Language="SFX">
-					<ShortName>NPC_State_Located_Init_03.wav</ShortName>
-					<Path>SFX\NPC_State_Located_Init_03_50DB02DB.wem</Path>
+				<File Id="433333758" Language="SFX">
+					<ShortName>MUS_Located_Stinger.wav</ShortName>
+					<Path>SFX\MUS_Located_Stinger_62CE3462.wem</Path>
+				</File>
+				<File Id="433532390" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_01.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_01_758AE448.wem</Path>
 				</File>
 				<File Id="461580969" Language="SFX">
 					<ShortName>PC_Rune_Solide_End.wav</ShortName>
-					<Path>SFX\PC_Rune_Solide_End_50DB02DB.wem</Path>
+					<Path>SFX\PC_Rune_Solide_End_758AE448.wem</Path>
 				</File>
-				<File Id="461989338" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_01.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_01_50DB02DB.wem</Path>
+				<File Id="461900554" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_04.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_04_758AE448.wem</Path>
 				</File>
 				<File Id="468229885" Language="SFX">
 					<ShortName>PC_Foot_Run_04.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_04_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_04_758AE448.wem</Path>
 				</File>
 				<File Id="476926234" Language="SFX">
 					<ShortName>Mus_Explo_C_Voix_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_C_Voix_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_C_Voix_01_62CE3462.wem</Path>
 				</File>
 				<File Id="479162651" Language="SFX">
 					<ShortName>NPC_State_Alarmed_01.wav</ShortName>
-					<Path>SFX\NPC_State_Alarmed_01_50DB02DB.wem</Path>
+					<Path>SFX\NPC_State_Alarmed_01_8E916019.wem</Path>
 				</File>
 				<File Id="481798695" Language="SFX">
 					<ShortName>Mus_Explo_A_Vln-Vla_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_A_Vln-Vla_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_A_Vln-Vla_01_62CE3462.wem</Path>
+				</File>
+				<File Id="488257246" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_05.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_05_758AE448.wem</Path>
 				</File>
 				<File Id="490238902" Language="SFX">
 					<ShortName>PC_Foot_Run_08.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_08_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_08_758AE448.wem</Path>
+				</File>
+				<File Id="495734676" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_14.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_14_758AE448.wem</Path>
 				</File>
 				<File Id="497259216" Language="SFX">
 					<ShortName>PC_Action_SlowMo.wav</ShortName>
-					<Path>SFX\PC_Action_SlowMo_50DB02DB.wem</Path>
+					<Path>SFX\PC_Action_SlowMo_758AE448.wem</Path>
 				</File>
 				<File Id="504236252" Language="SFX">
 					<ShortName>VO_PC_Death_Long_02.wav</ShortName>
-					<Path>SFX\VO_PC_Death_Long_02_87D6EA1F.wem</Path>
+					<Path>SFX\VO_PC_Death_Long_02_F8C8744C.wem</Path>
 				</File>
-				<File Id="506564315" Language="SFX">
-					<ShortName>NPC_State_Normal_Move_01.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Move_01_50DB02DB.wem</Path>
+				<File Id="507617787" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_11.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_11_758AE448.wem</Path>
 				</File>
-				<File Id="506820829" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_06.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_06_50DB02DB.wem</Path>
+				<File Id="522636454" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_11.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_11_758AE448.wem</Path>
+				</File>
+				<File Id="523598272" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_05.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_05_758AE448.wem</Path>
 				</File>
 				<File Id="526699419" Language="SFX">
 					<ShortName>Mus_Explo_C_Vlc-CB_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_C_Vlc-CB_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_C_Vlc-CB_01_62CE3462.wem</Path>
 				</File>
 				<File Id="530974734" Language="SFX">
 					<ShortName>PC_Foot_Run_15.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_15_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_15_758AE448.wem</Path>
+				</File>
+				<File Id="532990897" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_18.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_18_758AE448.wem</Path>
 				</File>
 				<File Id="534495483" Language="SFX">
 					<ShortName>Mus_Secteur2_Explo_A_Gros Caisse_01.wav</ShortName>
-					<Path>SFX\Mus_Secteur2_Explo_A_Gros Caisse_01_0CDD8189.wem</Path>
-				</File>
-				<File Id="536571122" Language="SFX">
-					<ShortName>VO_CutS_7_Morg__01.wav</ShortName>
-					<Path>SFX\VO_CutS_7_Morg__01_50DB02DB.wem</Path>
+					<Path>SFX\Mus_Secteur2_Explo_A_Gros Caisse_01_62CE3462.wem</Path>
 				</File>
 				<File Id="540803706" Language="SFX">
 					<ShortName>NPC_State_Normal_03.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_03_50DB02DB.wem</Path>
+					<Path>SFX\NPC_State_Normal_03_758AE448.wem</Path>
+				</File>
+				<File Id="543036583" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_15.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_15_758AE448.wem</Path>
 				</File>
 				<File Id="544265276" Language="SFX">
 					<ShortName>PC_Foot_Climb_07.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_07_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Climb_07_758AE448.wem</Path>
 				</File>
 				<File Id="544961547" Language="SFX">
 					<ShortName>PC_Rune_Select.wav</ShortName>
-					<Path>SFX\PC_Rune_Select_50DB02DB.wem</Path>
+					<Path>SFX\PC_Rune_Select_758AE448.wem</Path>
 				</File>
 				<File Id="545010385" Language="SFX">
 					<ShortName>Mus_Explo_D_Harpe_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_D_Harpe_01_0CDD8189.wem</Path>
-				</File>
-				<File Id="548906796" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_10.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_10_50DB02DB.wem</Path>
-				</File>
-				<File Id="550849249" Language="SFX">
-					<ShortName>footstep_stone_15.wav</ShortName>
-					<Path>SFX\footstep_stone_15_50DB02DB.wem</Path>
+					<Path>SFX\Mus_Explo_D_Harpe_01_62CE3462.wem</Path>
 				</File>
 				<File Id="559289768" Language="SFX">
 					<ShortName>Mus_Explo_C_Harpe_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_C_Harpe_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_C_Harpe_02_62CE3462.wem</Path>
 				</File>
 				<File Id="564838257" Language="SFX">
 					<ShortName>Menu_Hover_18.wav</ShortName>
-					<Path>SFX\Menu_Hover_18_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_18_758AE448.wem</Path>
 				</File>
-				<File Id="567454603" Language="SFX">
-					<ShortName>footstep_stone_16.wav</ShortName>
-					<Path>SFX\footstep_stone_16_50DB02DB.wem</Path>
+				<File Id="565478581" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_06.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_06_758AE448.wem</Path>
 				</File>
 				<File Id="570632283" Language="SFX">
 					<ShortName>Mus_Explo_B_Vlc-CB_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_B_Vlc-CB_01_0CDD8189.wem</Path>
-				</File>
-				<File Id="574519907" Language="SFX">
-					<ShortName>NPC_State_Located_Call_01.wav</ShortName>
-					<Path>SFX\NPC_State_Located_Call_01_50DB02DB.wem</Path>
+					<Path>SFX\Mus_Explo_B_Vlc-CB_01_62CE3462.wem</Path>
 				</File>
 				<File Id="577751087" Language="SFX">
 					<ShortName>Menu_Hover_11.wav</ShortName>
-					<Path>SFX\Menu_Hover_11_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_11_758AE448.wem</Path>
 				</File>
 				<File Id="580344731" Language="SFX">
 					<ShortName>PC_Foot_Climb_06.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_06_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Climb_06_758AE448.wem</Path>
 				</File>
 				<File Id="581344660" Language="SFX">
 					<ShortName>PC_Action_Kill.wav</ShortName>
-					<Path>SFX\PC_Action_Kill_50DB02DB.wem</Path>
-				</File>
-				<File Id="582165216" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_04.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_04_50DB02DB.wem</Path>
-				</File>
-				<File Id="585143226" Language="SFX">
-					<ShortName>PC_Foot_Climb_04.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_04_50DB02DB.wem</Path>
-				</File>
-				<File Id="587780937" Language="SFX">
-					<ShortName>VO_CutS_8_Morg__01.wav</ShortName>
-					<Path>SFX\VO_CutS_8_Morg__01_50DB02DB.wem</Path>
+					<Path>SFX\PC_Action_Kill_758AE448.wem</Path>
 				</File>
 				<File Id="588601205" Language="SFX">
 					<ShortName>Menu_Hover_27.wav</ShortName>
-					<Path>SFX\Menu_Hover_27_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_27_758AE448.wem</Path>
 				</File>
 				<File Id="594222128" Language="SFX">
 					<ShortName>PC_Foot_Run_18.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_18_50DB02DB.wem</Path>
-				</File>
-				<File Id="598015897" Language="SFX">
-					<ShortName>Player_Action_Kill.wav</ShortName>
-					<Path>SFX\Player_Action_Kill_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_18_758AE448.wem</Path>
 				</File>
 				<File Id="616094980" Language="SFX">
 					<ShortName>PC_Rune_Leurre_Use.wav</ShortName>
-					<Path>SFX\PC_Rune_Leurre_Use_50DB02DB.wem</Path>
-				</File>
-				<File Id="624713926" Language="SFX">
-					<ShortName>footstep_stone_02.wav</ShortName>
-					<Path>SFX\footstep_stone_02_50DB02DB.wem</Path>
+					<Path>SFX\PC_Rune_Leurre_Use_758AE448.wem</Path>
 				</File>
 				<File Id="635535839" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Caisse Claire_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Caisse Claire_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Caisse Claire_01_62CE3462.wem</Path>
 				</File>
 				<File Id="637684781" Language="SFX">
 					<ShortName>VO_PC_Jump_03.wav</ShortName>
-					<Path>SFX\VO_PC_Jump_03_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Jump_03_758AE448.wem</Path>
 				</File>
 				<File Id="638007171" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Gong_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Gong_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Gong_02_62CE3462.wem</Path>
 				</File>
 				<File Id="644380282" Language="SFX">
 					<ShortName>PC_Foot_Climb_01.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_01_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Climb_01_758AE448.wem</Path>
 				</File>
-				<File Id="664905640" Language="SFX">
-					<ShortName>footstep_stone_11.wav</ShortName>
-					<Path>SFX\footstep_stone_11_50DB02DB.wem</Path>
+				<File Id="652222345" Language="SFX">
+					<ShortName>Mus_Located_PERCS_ThunderHigh_01.wav</ShortName>
+					<Path>SFX\Mus_Located_PERCS_ThunderHigh_01_62CE3462.wem</Path>
+				</File>
+				<File Id="668117076" Language="SFX">
+					<ShortName>NPC_State_Located_02.wav</ShortName>
+					<Path>SFX\NPC_State_Located_02_98FDB552.wem</Path>
 				</File>
 				<File Id="670054674" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Caisse Claire_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Caisse Claire_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Caisse Claire_02_62CE3462.wem</Path>
 				</File>
-				<File Id="670559798" Language="SFX">
-					<ShortName>PC_Foot_Run_21.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_21_50DB02DB.wem</Path>
-				</File>
-				<File Id="679130870" Language="SFX">
-					<ShortName>VO_CutS_3_Umbra__01.wav</ShortName>
-					<Path>SFX\VO_CutS_3_Umbra__01_50DB02DB.wem</Path>
+				<File Id="676289107" Language="SFX">
+					<ShortName>Mus_Located_PERCS_ThunderLow_01.wav</ShortName>
+					<Path>SFX\Mus_Located_PERCS_ThunderLow_01_62CE3462.wem</Path>
 				</File>
 				<File Id="683612770" Language="SFX">
 					<ShortName>Menu_Hover_08.wav</ShortName>
-					<Path>SFX\Menu_Hover_08_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_08_758AE448.wem</Path>
 				</File>
-				<File Id="703969500" Language="SFX">
-					<ShortName>footstep_stone_21.wav</ShortName>
-					<Path>SFX\footstep_stone_21_50DB02DB.wem</Path>
+				<File Id="701392982" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_12.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_12_912FE45D.wem</Path>
+				</File>
+				<File Id="702015448" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_01.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_01_758AE448.wem</Path>
 				</File>
 				<File Id="705567206" Language="SFX">
 					<ShortName>Menu_Hover_02.wav</ShortName>
-					<Path>SFX\Menu_Hover_02_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_02_758AE448.wem</Path>
+				</File>
+				<File Id="706964778" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_10.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_10_758AE448.wem</Path>
+				</File>
+				<File Id="711143890" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_02.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_02_758AE448.wem</Path>
 				</File>
 				<File Id="711225296" Language="SFX">
 					<ShortName>Menu_Hover_15.wav</ShortName>
-					<Path>SFX\Menu_Hover_15_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_15_758AE448.wem</Path>
 				</File>
 				<File Id="718459307" Language="SFX">
 					<ShortName>Mus_Explo_B_Voix_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_B_Voix_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_B_Voix_01_62CE3462.wem</Path>
 				</File>
 				<File Id="719239806" Language="SFX">
 					<ShortName>Menu_Hover_22.wav</ShortName>
-					<Path>SFX\Menu_Hover_22_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_22_758AE448.wem</Path>
+				</File>
+				<File Id="728606332" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_08.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_08_758AE448.wem</Path>
 				</File>
 				<File Id="729621728" Language="SFX">
 					<ShortName>Menu_Hover_25.wav</ShortName>
-					<Path>SFX\Menu_Hover_25_50DB02DB.wem</Path>
-				</File>
-				<File Id="733584388" Language="SFX">
-					<ShortName>NPC_State_Alarmed_06.wav</ShortName>
-					<Path>SFX\NPC_State_Alarmed_06_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_25_758AE448.wem</Path>
 				</File>
 				<File Id="736784849" Language="SFX">
 					<ShortName>NPC_Action_Death_01.wav</ShortName>
-					<Path>SFX\NPC_Action_Death_01_50DB02DB.wem</Path>
+					<Path>SFX\NPC_Action_Death_01_B1772322.wem</Path>
+				</File>
+				<File Id="737568144" Language="SFX">
+					<ShortName>PC_Rune_Accrochage_Green.wav</ShortName>
+					<Path>SFX\PC_Rune_Accrochage_Green_758AE448.wem</Path>
 				</File>
 				<File Id="741349495" Language="SFX">
 					<ShortName>Mus_Located.wav</ShortName>
-					<Path>SFX\Mus_Located_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Located_62CE3462.wem</Path>
 				</File>
 				<File Id="741816274" Language="SFX">
 					<ShortName>NPC_State_Alarmed_04.wav</ShortName>
-					<Path>SFX\NPC_State_Alarmed_04_50DB02DB.wem</Path>
+					<Path>SFX\NPC_State_Alarmed_04_5CE6C3F8.wem</Path>
 				</File>
 				<File Id="743855108" Language="SFX">
 					<ShortName>PC_Foot_Run_16.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_16_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_16_758AE448.wem</Path>
 				</File>
-				<File Id="744219289" Language="SFX">
-					<ShortName>VO_CutS_2_Morg__01.wav</ShortName>
-					<Path>SFX\VO_CutS_2_Morg__01_50DB02DB.wem</Path>
+				<File Id="754576286" Language="SFX">
+					<ShortName>PC_Rune_Accrochage_Equip.wav</ShortName>
+					<Path>SFX\PC_Rune_Accrochage_Equip_758AE448.wem</Path>
+				</File>
+				<File Id="758005189" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_07.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_07_570BDEA8.wem</Path>
 				</File>
 				<File Id="758512462" Language="SFX">
 					<ShortName>PC_Foot_Run_09.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_09_50DB02DB.wem</Path>
-				</File>
-				<File Id="761510754" Language="SFX">
-					<ShortName>VO_CutS_1_Morg__01.wav</ShortName>
-					<Path>SFX\VO_CutS_1_Morg__01_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_09_758AE448.wem</Path>
 				</File>
 				<File Id="763266189" Language="SFX">
 					<ShortName>Menu_Hover_30.wav</ShortName>
-					<Path>SFX\Menu_Hover_30_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_30_758AE448.wem</Path>
+				</File>
+				<File Id="768906688" Language="SFX">
+					<ShortName>Mus_Located_PERCS_All.wav</ShortName>
+					<Path>SFX\Mus_Located_PERCS_All_62CE3462.wem</Path>
 				</File>
 				<File Id="772259110" Language="SFX">
 					<ShortName>Mus_Explo_A_Vln-Vla_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_A_Vln-Vla_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_A_Vln-Vla_02_62CE3462.wem</Path>
 				</File>
 				<File Id="772557819" Language="SFX">
 					<ShortName>Mus_Explo_B_Vln-Vla_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_B_Vln-Vla_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_B_Vln-Vla_02_62CE3462.wem</Path>
 				</File>
-				<File Id="783819999" Language="SFX">
-					<ShortName>PC_Foot_Stealth_On.wav</ShortName>
-					<Path>SFX\PC_Foot_Stealth_On_50DB02DB.wem</Path>
+				<File Id="777012996" Language="SFX">
+					<ShortName>Amb_Check.wav</ShortName>
+					<Path>SFX\Amb_Check_5A603675.wem</Path>
+				</File>
+				<File Id="778357911" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_12.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_12_758AE448.wem</Path>
+				</File>
+				<File Id="792365127" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_03.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_03_3D299784.wem</Path>
 				</File>
 				<File Id="792498545" Language="SFX">
 					<ShortName>PC_Foot_Run_24.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_24_50DB02DB.wem</Path>
-				</File>
-				<File Id="797803312" Language="SFX">
-					<ShortName>PC_Foot_Climb_11.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_11_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_24_758AE448.wem</Path>
 				</File>
 				<File Id="799048736" Language="SFX">
 					<ShortName>Mus_Explo_B_Vln-Vla_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_B_Vln-Vla_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_B_Vln-Vla_01_62CE3462.wem</Path>
 				</File>
-				<File Id="804981725" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_12.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_12_50DB02DB.wem</Path>
-				</File>
-				<File Id="809174874" Language="SFX">
-					<ShortName>VO_CutS_4_Umbra__01.wav</ShortName>
-					<Path>SFX\VO_CutS_4_Umbra__01_50DB02DB.wem</Path>
+				<File Id="807259037" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_06.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_06_B02E5276.wem</Path>
 				</File>
 				<File Id="810069620" Language="SFX">
 					<ShortName>Menu_Hover_21.wav</ShortName>
-					<Path>SFX\Menu_Hover_21_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_21_758AE448.wem</Path>
 				</File>
-				<File Id="817792770" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_13.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_13_50DB02DB.wem</Path>
+				<File Id="818557657" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_10.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_10_758AE448.wem</Path>
 				</File>
 				<File Id="827086897" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Bongos_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Bongos_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Bongos_01_62CE3462.wem</Path>
 				</File>
 				<File Id="829171738" Language="SFX">
 					<ShortName>VO_PC_Death_Long_01.wav</ShortName>
-					<Path>SFX\VO_PC_Death_Long_01_427C0AA2.wem</Path>
+					<Path>SFX\VO_PC_Death_Long_01_56707E0D.wem</Path>
 				</File>
 				<File Id="831015991" Language="SFX">
 					<ShortName>PC_Rune_Accrochage_Use.wav</ShortName>
-					<Path>SFX\PC_Rune_Accrochage_Use_50DB02DB.wem</Path>
+					<Path>SFX\PC_Rune_Accrochage_Use_758AE448.wem</Path>
 				</File>
-				<File Id="832855751" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_08.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_08_50DB02DB.wem</Path>
+				<File Id="832865599" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_14.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_14_758AE448.wem</Path>
 				</File>
 				<File Id="835815607" Language="SFX">
 					<ShortName>Mus_Explo_D_Vlc-CB_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_D_Vlc-CB_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_D_Vlc-CB_01_62CE3462.wem</Path>
 				</File>
-				<File Id="841390406" Language="SFX">
-					<ShortName>Mus_Explo_C_Voix_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_C_Voix_02_0CDD8189.wem</Path>
+				<File Id="840050041" Language="SFX">
+					<ShortName>NPC_State_Located_03.wav</ShortName>
+					<Path>SFX\NPC_State_Located_03_050253AA.wem</Path>
+				</File>
+				<File Id="841832338" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_08.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_08_5E2B1184.wem</Path>
 				</File>
 				<File Id="842840745" Language="SFX">
 					<ShortName>PC_Foot_Run_12.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_12_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_12_758AE448.wem</Path>
+				</File>
+				<File Id="844007448" Language="SFX">
+					<ShortName>SFX_Scripted_Shield.wav</ShortName>
+					<Path>SFX\SFX_Scripted_Shield_758AE448.wem</Path>
+				</File>
+				<File Id="844873148" Language="SFX">
+					<ShortName>PC_Rune_Accrochage_Red.wav</ShortName>
+					<Path>SFX\PC_Rune_Accrochage_Red_758AE448.wem</Path>
 				</File>
 				<File Id="844877423" Language="SFX">
 					<ShortName>VO_PC_Jump_05.wav</ShortName>
-					<Path>SFX\VO_PC_Jump_05_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Jump_05_758AE448.wem</Path>
 				</File>
-				<File Id="852758004" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_11.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_11_50DB02DB.wem</Path>
+				<File Id="855836638" Language="SFX">
+					<ShortName>PC_Foot_Stealth_On_Foley.wav</ShortName>
+					<Path>SFX\PC_Foot_Stealth_On_Foley_B938285E.wem</Path>
 				</File>
 				<File Id="859267310" Language="SFX">
 					<ShortName>Menu_Hover_09.wav</ShortName>
-					<Path>SFX\Menu_Hover_09_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_09_758AE448.wem</Path>
+				</File>
+				<File Id="861395658" Language="SFX">
+					<ShortName>PC_Rune_Marquage_Use.wav</ShortName>
+					<Path>SFX\PC_Rune_Marquage_Use_758AE448.wem</Path>
+				</File>
+				<File Id="868247795" Language="SFX">
+					<ShortName>PC_Action_Death_Thunder.wav</ShortName>
+					<Path>SFX\PC_Action_Death_Thunder_758AE448.wem</Path>
+				</File>
+				<File Id="870866607" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_14.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_14_758AE448.wem</Path>
 				</File>
 				<File Id="871855901" Language="SFX">
 					<ShortName>PC_Foot_Run_11.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_11_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_11_758AE448.wem</Path>
 				</File>
 				<File Id="873241977" Language="SFX">
 					<ShortName>Mus_Explo_A_Harpe_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_A_Harpe_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_A_Harpe_01_62CE3462.wem</Path>
 				</File>
 				<File Id="881124872" Language="SFX">
 					<ShortName>VO_PC_Death_Long_02.wav</ShortName>
-					<Path>SFX\VO_PC_Death_Long_02_1D40F381.wem</Path>
-				</File>
-				<File Id="887571879" Language="SFX">
-					<ShortName>PC_Foot_Run_20.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_20_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Death_Long_02_B4C04922.wem</Path>
 				</File>
 				<File Id="887680807" Language="SFX">
 					<ShortName>PC_Action_Heartbeat.wav</ShortName>
-					<Path>SFX\PC_Action_Heartbeat_0CDD8189.wem</Path>
+					<Path>SFX\PC_Action_Heartbeat_62CE3462.wem</Path>
 				</File>
 				<File Id="894411394" Language="SFX">
 					<ShortName>PC_Foot_Run_03.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_03_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_03_758AE448.wem</Path>
 				</File>
-				<File Id="902076861" Language="SFX">
-					<ShortName>footstep_wood_02.wav</ShortName>
-					<Path>SFX\footstep_wood_02_50DB02DB.wem</Path>
+				<File Id="907719855" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_08.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_08_758AE448.wem</Path>
 				</File>
 				<File Id="911342259" Language="SFX">
 					<ShortName>Mus_Explo_D_Voix_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_D_Voix_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_D_Voix_01_62CE3462.wem</Path>
 				</File>
 				<File Id="911699103" Language="SFX">
 					<ShortName>NPC_State_Normal_01.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_01_50DB02DB.wem</Path>
+					<Path>SFX\NPC_State_Normal_01_758AE448.wem</Path>
+				</File>
+				<File Id="913441361" Language="SFX">
+					<ShortName>NPC_State_Normal_Exhale_06.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Exhale_06_758AE448.wem</Path>
 				</File>
 				<File Id="918065413" Language="SFX">
 					<ShortName>Menu_Cancel.wav</ShortName>
-					<Path>SFX\Menu_Cancel_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Cancel_758AE448.wem</Path>
+				</File>
+				<File Id="918385068" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_16.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_16_758AE448.wem</Path>
 				</File>
 				<File Id="924241659" Language="SFX">
 					<ShortName>PC_Foot_Run_06.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_06_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_06_758AE448.wem</Path>
 				</File>
 				<File Id="930092652" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Cloches Tubes_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Cloches Tubes_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Cloches Tubes_01_62CE3462.wem</Path>
 				</File>
 				<File Id="930875067" Language="SFX">
 					<ShortName>VO_PC_Jump_06.wav</ShortName>
-					<Path>SFX\VO_PC_Jump_06_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Jump_06_758AE448.wem</Path>
 				</File>
 				<File Id="936663382" Language="SFX">
 					<ShortName>PC_Foot_Run_19.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_19_50DB02DB.wem</Path>
-				</File>
-				<File Id="939131074" Language="SFX">
-					<ShortName>PC_Foot_Climb_08.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_08_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_19_758AE448.wem</Path>
 				</File>
 				<File Id="945297317" Language="SFX">
 					<ShortName>PC_Rune_Solide_Use.wav</ShortName>
-					<Path>SFX\PC_Rune_Solide_Use_50DB02DB.wem</Path>
-				</File>
-				<File Id="947589312" Language="SFX">
-					<ShortName>footstep_stone_14.wav</ShortName>
-					<Path>SFX\footstep_stone_14_50DB02DB.wem</Path>
+					<Path>SFX\PC_Rune_Solide_Use_758AE448.wem</Path>
 				</File>
 				<File Id="948978557" Language="SFX">
 					<ShortName>PC_Foot_Climb_09.wav</ShortName>
-					<Path>SFX\PC_Foot_Climb_09_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Climb_09_758AE448.wem</Path>
 				</File>
 				<File Id="952924631" Language="SFX">
 					<ShortName>Mus_Explo_D_Harpe_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_D_Harpe_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_D_Harpe_02_62CE3462.wem</Path>
 				</File>
-				<File Id="953018243" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_07.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_07_50DB02DB.wem</Path>
+				<File Id="954473284" Language="SFX">
+					<ShortName>PC_Rune_Trap_Used.wav</ShortName>
+					<Path>SFX\PC_Rune_Trap_Used_B0932E20.wem</Path>
+				</File>
+				<File Id="961379855" Language="SFX">
+					<ShortName>PC_Foot_Stealth_On.wav</ShortName>
+					<Path>SFX\PC_Foot_Stealth_On_8A929C13.wem</Path>
 				</File>
 				<File Id="964720064" Language="SFX">
 					<ShortName>PC_Foot_Run_23.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_23_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_23_758AE448.wem</Path>
 				</File>
 				<File Id="967730107" Language="SFX">
 					<ShortName>Menu_Hover_24.wav</ShortName>
-					<Path>SFX\Menu_Hover_24_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_24_758AE448.wem</Path>
 				</File>
 				<File Id="970054798" Language="SFX">
 					<ShortName>VO_PC_Death_Short_01.wav</ShortName>
-					<Path>SFX\VO_PC_Death_Short_01_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Death_Short_01_758AE448.wem</Path>
 				</File>
 				<File Id="975452161" Language="SFX">
 					<ShortName>Mus_Explo_PERCS_Bongos_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_PERCS_Bongos_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_PERCS_Bongos_02_62CE3462.wem</Path>
+				</File>
+				<File Id="977414153" Language="SFX">
+					<ShortName>NPC_State_Normal_Troat_10.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Troat_10_758AE448.wem</Path>
 				</File>
 				<File Id="977990538" Language="SFX">
 					<ShortName>PC_Foot_Run_07.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_07_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_07_758AE448.wem</Path>
 				</File>
 				<File Id="989113359" Language="SFX">
 					<ShortName>Mus_Explo_D_Voix_02.wav</ShortName>
-					<Path>SFX\Mus_Explo_D_Voix_02_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_D_Voix_02_62CE3462.wem</Path>
 				</File>
 				<File Id="997023092" Language="SFX">
 					<ShortName>Menu_Hover_01.wav</ShortName>
-					<Path>SFX\Menu_Hover_01_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_01_758AE448.wem</Path>
 				</File>
 				<File Id="999333427" Language="SFX">
 					<ShortName>Mus_Explo_C_Vln-Vla_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_C_Vln-Vla_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_C_Vln-Vla_01_62CE3462.wem</Path>
 				</File>
 				<File Id="1001605612" Language="SFX">
 					<ShortName>Menu_Hover_29.wav</ShortName>
-					<Path>SFX\Menu_Hover_29_50DB02DB.wem</Path>
-				</File>
-				<File Id="1003474458" Language="SFX">
-					<ShortName>footstep_stone_03.wav</ShortName>
-					<Path>SFX\footstep_stone_03_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_29_758AE448.wem</Path>
 				</File>
 				<File Id="1007098730" Language="SFX">
 					<ShortName>Mus_Explo_D_Vln-Vla_01.wav</ShortName>
-					<Path>SFX\Mus_Explo_D_Vln-Vla_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Explo_D_Vln-Vla_01_62CE3462.wem</Path>
 				</File>
-				<File Id="1014759628" Language="SFX">
-					<ShortName>NPC_State_Normal_Talk_03.wav</ShortName>
-					<Path>SFX\NPC_State_Normal_Talk_03_50DB02DB.wem</Path>
+				<File Id="1011486128" Language="SFX">
+					<ShortName>PC_Foot_Stealth_Off_Foley.wav</ShortName>
+					<Path>SFX\PC_Foot_Stealth_Off_Foley_758AE448.wem</Path>
 				</File>
 				<File Id="1015725807" Language="SFX">
 					<ShortName>PC_Foot_Stealth_Off.wav</ShortName>
-					<Path>SFX\PC_Foot_Stealth_Off_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Stealth_Off_EBCABDE8.wem</Path>
 				</File>
 				<File Id="1019343635" Language="SFX">
 					<ShortName>Menu_Hover_19.wav</ShortName>
-					<Path>SFX\Menu_Hover_19_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_19_758AE448.wem</Path>
 				</File>
 				<File Id="1021636990" Language="SFX">
 					<ShortName>PC_Foot_Run_01.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_01_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_01_758AE448.wem</Path>
 				</File>
 				<File Id="1022851238" Language="SFX">
 					<ShortName>PC_Foot_Run_10.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_10_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_10_758AE448.wem</Path>
+				</File>
+				<File Id="1025676270" Language="SFX">
+					<ShortName>NPC_State_Normal_Talk_09.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Talk_09_758AE448.wem</Path>
+				</File>
+				<File Id="1029422787" Language="SFX">
+					<ShortName>NPC_State_Normal_Inhale_09.wav</ShortName>
+					<Path>SFX\NPC_State_Normal_Inhale_09_758AE448.wem</Path>
 				</File>
 				<File Id="1033123932" Language="SFX">
 					<ShortName>PC_Foot_Run_22.wav</ShortName>
-					<Path>SFX\PC_Foot_Run_22_50DB02DB.wem</Path>
+					<Path>SFX\PC_Foot_Run_22_758AE448.wem</Path>
 				</File>
 				<File Id="1035485329" Language="SFX">
 					<ShortName>Menu_Hover_26.wav</ShortName>
-					<Path>SFX\Menu_Hover_26_50DB02DB.wem</Path>
+					<Path>SFX\Menu_Hover_26_758AE448.wem</Path>
 				</File>
 				<File Id="1041648969" Language="SFX">
 					<ShortName>PC_Rune_Ombre_Use.wav</ShortName>
-					<Path>SFX\PC_Rune_Ombre_Use_50DB02DB.wem</Path>
+					<Path>SFX\PC_Rune_Ombre_Use_758AE448.wem</Path>
 				</File>
 				<File Id="1052857111" Language="SFX">
 					<ShortName>VO_PC_Death_Short_02.wav</ShortName>
-					<Path>SFX\VO_PC_Death_Short_02_50DB02DB.wem</Path>
+					<Path>SFX\VO_PC_Death_Short_02_758AE448.wem</Path>
+				</File>
+				<File Id="1053009425" Language="SFX">
+					<ShortName>Menu_Rune_Hover.wav</ShortName>
+					<Path>SFX\Menu_Rune_Hover_758AE448.wem</Path>
 				</File>
 				<File Id="1073435110" Language="SFX">
 					<ShortName>Mus_Secteur2_Explo_A_Cloches Tubes_01.wav</ShortName>
-					<Path>SFX\Mus_Secteur2_Explo_A_Cloches Tubes_01_0CDD8189.wem</Path>
+					<Path>SFX\Mus_Secteur2_Explo_A_Cloches Tubes_01_62CE3462.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

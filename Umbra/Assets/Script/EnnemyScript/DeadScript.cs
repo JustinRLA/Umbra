@@ -19,7 +19,9 @@ public class DeadScript : MonoBehaviour {
 	{
 		print("Im Dead");
 		gameObject.tag="Dead Ennemy";
+		if(ViewManager!=null)
 		ViewManager.SetActive (false);
+		if(ViewBase !=null)
 		ViewBase.SetActive (false);
 
 		GetComponent<SpriteRenderer> ().color = new Color (0, 0, 0);

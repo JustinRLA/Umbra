@@ -50,22 +50,20 @@ public class CheckPointChange : MonoBehaviour {
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber].SetActive (true);
 			if(saveNumber>1)
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber-2].SetActive (false);
-			
+			if(saveNumber<10)
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber+1].SetActive (true);
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber-1].SetActive (true);
 
 			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber].SetActive (true);
-			if(saveNumber>1)
+			if(saveNumber>10)
 				initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-2].SetActive (false);
-
+			if(saveNumber<10)
 			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber+1].SetActive (true);
 			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-1].SetActive (true);
 			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber].SetActive (true);
 			if(saveNumber>1)
 				initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-2].SetActive (false);
 
-			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber+1].SetActive (true);
-			initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-1].SetActive (true);
 			if(initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber-1]!=null)
 			initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber-1].SetActive(false);
 			if(initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber]!=null)

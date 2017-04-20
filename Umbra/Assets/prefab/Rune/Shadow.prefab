@@ -153,7 +153,6 @@ GameObject:
   - component: {fileID: 4586285132319244}
   - component: {fileID: 212862785220128472}
   - component: {fileID: 95418810094366438}
-  - component: {fileID: 114937511977005682}
   m_Layer: 29
   m_Name: Ombre (2)
   m_TagString: Untagged
@@ -220,7 +219,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011999828746}
   m_LocalRotation: {x: 0, y: 0, z: 0.000008726646, w: 1}
-  m_LocalPosition: {x: 787.0228, y: -101.56025, z: 0}
+  m_LocalPosition: {x: 138.92801, y: 12.727445, z: 0}
   m_LocalScale: {x: 1.5499976, y: 1.4250003, z: 1}
   m_Children:
   - {fileID: 4586285132319244}
@@ -476,7 +475,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011999828746}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c97254e19939eec45a90056a4db97281, type: 3}
   m_Name: 
@@ -542,22 +541,10 @@ MonoBehaviour:
   AllShadow: []
   GrimpSurfaceRight: {fileID: 1907789242601424}
   GrimpSurfaceLeft: {fileID: 1103009618983626}
-  CursorText: {fileID: 0}
   cursormode: 0
   Clickable: 0
   enable: 0
---- !u!114 &114937511977005682
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1709176281352182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b5f8b5bd00b1048b61182515050e4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyBase: {fileID: 1000011999828746}
+  cursor: {fileID: 0}
 --- !u!198 &198051987219729066
 ParticleSystem:
   m_ObjectHideFlags: 1

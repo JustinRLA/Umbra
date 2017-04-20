@@ -17,6 +17,7 @@ public class LineRendererTest : MonoBehaviour {
 	public Material InMat;
 	public Transform HitTransformPoint;
 	public int dividable;
+	public LayerMask myMask;
 //	public GameObject ObjHit;
 	public GameObject TheBeam;
 	RaycastHit2D hit;
@@ -31,7 +32,12 @@ public class LineRendererTest : MonoBehaviour {
 	public GameObject CamGrap;
 	bool redhaveplayed;
 	bool greenhaveplayed;
+	public GameObject BannerBase;
+
 	GameObject RuneFull;
+	float direction;
+	Vector3 movPos;
+
 
 	public GameObject MainCamera;
 
@@ -67,7 +73,7 @@ public class LineRendererTest : MonoBehaviour {
 		if(	ActivateThisShit == true)
 			{
 			CamGrap.SetActive (true);
-		myRaycast = Physics2D.Linecast (mousePos, PlayerPos);
+			myRaycast = Physics2D.Linecast (PlayerPos,mousePos,myMask);
 
 				if(line == null)
 		{
@@ -124,14 +130,17 @@ public class LineRendererTest : MonoBehaviour {
 					goThrougt=true;
 						dir =  HitTransformPoint.position-PlayerMy.position;
 					timeDIstance = Vector3.Distance (PlayerMy.position,HitTransformPoint.position);
+						PlayerMy.GetComponent<VeryfyCol> ().enabled = true;
 //						print (timeDIstance);
 //					print ("SomethingHappe");
 						//PlayerMy.GetComponent<Rigidbody2D>().AddForce((HitTransformPoint.position-PlayerMy.position).normalized *9550);
-
+						BannerBase=TheBeam.transform.parent.gameObject;
+						PlayerMy.GetComponent<VeryfyCol>().BeamToTouch=BannerBase;
 					ActivateThisShit = false;
 						myRuneManagerScript.timerTactic = 0;
 						Time.timeScale = 1f;
-					StartCoroutine (StopGoThrought());
+						myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 0;
+
 						Destroy (line);
 					//	End ();
 				}
@@ -184,7 +193,7 @@ public class LineRendererTest : MonoBehaviour {
 		else
 			touchedBadThing = false;
 
-		if (myRaycast.collider.tag == "grapRegion")
+				if (myRaycast.collider.tag == "grapRegion" && touchedBadThing == false)
 						{			
 					print ("touchBeam");
 			TouchGood = true;
@@ -256,8 +265,16 @@ public class LineRendererTest : MonoBehaviour {
 
 	}
 
+
+	public void StopThisThing()
+	{
+		StartCoroutine (StopGoThrought ());
+	}
+
 	IEnumerator StopGoThrought()
 	{
+		yield return new WaitForSeconds (0.1f);
+
 		AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Use", gameObject);
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
@@ -273,9 +290,6 @@ public class LineRendererTest : MonoBehaviour {
 		RuneFull.GetComponent<Image> ().enabled = false;
 		myRuneManagerScript.TacticTimer.SetActive (true);
 		Time.timeScale = 1f;
-		myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 0;
-		yield return new WaitForSeconds ((timeDIstance / dividable)+1);
-		myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 3;
 
 	//	yield return new WaitForSeconds (timeDIstance);
 		if(TheBeam!=null)
@@ -283,6 +297,8 @@ public class LineRendererTest : MonoBehaviour {
 
 		print ("end");
 		goThrougt = false;
+		myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 3;
+
 		//myPlayer.GetComponent<Rigidbody2D> ().isKinematic = false;
 		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
@@ -292,6 +308,7 @@ public class LineRendererTest : MonoBehaviour {
 		CamGrap.SetActive (false);
 		myRuneManagerScript.RuneActivated = false;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+		yield return new WaitForSeconds ((timeDIstance / dividable)+1);
 
 		GetComponent<LineRendererTest> ().enabled = false;
 	}
@@ -302,7 +319,13 @@ public class LineRendererTest : MonoBehaviour {
 //		print ("testinggg");
 	if(goThrougt==true)
 		{
-			PlayerMy.GetComponent<Rigidbody2D>().AddForce((dir /forcedividable) , ForceMode2D.Impulse+1);
+
+//					direction = Mathf.Sign (HitTransformPoint.position.x - PlayerMy.transform.position.x);
+//					//		print (Mathf.Sign (CurrentNavPoint.position.x - transform.position.x));
+//					movPos = new Vector3 (transform.position.x + ((direction/100)*4* Time.deltaTime) , transform.position.y,transform.position.z);
+			PlayerMy.transform.position +=dir*Time.deltaTime ;
+
+		//	PlayerMy.GetComponent<Rigidbody2D>().AddForce((dir /forcedividable) , ForceMode2D.Impulse+1);
 			print ("fly");
 		}
 
