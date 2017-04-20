@@ -3,9 +3,17 @@
 	<SoundBanks>
 		<WorkUnit Name="TrueSoundBank" ID="{FB2F3DBD-0CA3-47D6-AB4D-D69615BE6D20}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="SFX" ID="{3713B077-329F-4401-873C-62A09D1A0B5C}">
+				<SoundBank Name="All" ID="{3713B077-329F-4401-873C-62A09D1A0B5C}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Events" ID="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}" WorkUnitID="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="SFX" ID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}" WorkUnitID="{F8BE906D-1574-4337-85C6-915E7CD03B6B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MUS" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" WorkUnitID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="CutS" ID="{D32BF5FF-8C1E-4F1E-9B9A-EA2B0E8FD622}">
+					<ObjectInclusionList>
+						<ObjectRef Name="CutS" ID="{19E84A98-6EC0-40EB-B402-BC980F6AC5B3}" WorkUnitID="{19E84A98-6EC0-40EB-B402-BC980F6AC5B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

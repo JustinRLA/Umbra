@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" SchemaVersion="75" RootDocumentID="{74E730D8-0B1D-4956-9CCA-A5C1594518D8}">
+<WwiseDocument Type="WorkUnit" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" SchemaVersion="75">
 	<Events>
-		<WorkUnit Name="MUS" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" OwnerID="{74E730D8-0B1D-4956-9CCA-A5C1594518D8}" PersistMode="Nested">
+		<WorkUnit Name="MUS" ID="{5A477295-C31E-4DA4-B2B5-986D076D6D3E}" PersistMode="Standalone">
 			<ChildrenList>
 				<Event Name="Mus_Secteur1" ID="{C6814B7A-8E6B-41C1-82CB-907D07F4336C}">
 					<ChildrenList>
@@ -154,27 +154,18 @@
 							</ElementList>
 						</Action>
 						<Action Name="Set State" ID="{D4122003-D6C7-45B2-BEFC-015D9E857815}" ShortID="957905687" Type="SetState" Scope="All" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.1"/>
-							</PropertyList>
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
 								<GroupItem Name="MainMenu" ID="{A3698F00-6554-4266-A778-EC38FC465C75}"/>
 							</SetItemParam>
 						</Action>
 						<Action Name="Set State" ID="{3880E580-E568-4FF5-9D90-3E43A9AB9379}" ShortID="488149269" Type="SetState" Scope="All" Global="true">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.1"/>
-							</PropertyList>
 							<SetItemParam>
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
 						<Action Name="Play" ID="{87CEC8E0-2E45-4CF6-9DF0-27713EDCF1B8}" ShortID="634073599" Type="Play" Scope="One" Global="false">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.2"/>
-							</PropertyList>
 							<ElementList>
 								<Element ID="{69FA35E0-8059-416F-A0DE-956123BDD3FF}" Global="false">
 									<ObjectRef Name="InGame" ID="{97C3AD9B-7E9C-45B6-A002-62FE186D6130}" WorkUnitID="{500094DC-2B3C-4DEA-BC55-1ECB0C1249BA}"/>
