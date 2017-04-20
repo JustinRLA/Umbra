@@ -274,7 +274,7 @@ public class LineRendererTest : MonoBehaviour {
 		myRuneManagerScript.TacticTimer.SetActive (true);
 		Time.timeScale = 1f;
 		myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 0;
-		yield return new WaitForSeconds (timeDIstance / dividable);
+		yield return new WaitForSeconds ((timeDIstance / dividable)+1);
 		myPlayer.GetComponent<Rigidbody2D> ().gravityScale = 3;
 
 	//	yield return new WaitForSeconds (timeDIstance);
@@ -302,7 +302,7 @@ public class LineRendererTest : MonoBehaviour {
 //		print ("testinggg");
 	if(goThrougt==true)
 		{
-			PlayerMy.GetComponent<Rigidbody2D>().AddForce(dir /forcedividable,ForceMode2D.Impulse);
+			PlayerMy.GetComponent<Rigidbody2D>().AddForce((dir /forcedividable) , ForceMode2D.Impulse+1);
 			print ("fly");
 		}
 

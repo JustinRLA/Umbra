@@ -49,8 +49,8 @@ public class LureScript : MonoBehaviour {
 	public void StartLure () {
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Filter", gameObject);
 		raycar = GameObject.Find ("raycar");
-		raycar.transform.position = gameObject.transform.position;
-		raycar.transform.parent = gameObject.transform;
+		raycar.transform.position = ThePlayerShadow.transform.position;
+		raycar.transform.parent = ThePlayerShadow.transform;
 				Lurelight.SetActive (true);
 		FullRune = GameObject.Find ("LeureImageFull");
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
@@ -103,7 +103,7 @@ public class LureScript : MonoBehaviour {
 
 	IEnumerator DistractEnnemFast()
 	{
-		raycar.transform.position = new Vector3(ThePlayer.transform.position.x,ThePlayer.transform.position.y+4,ThePlayer.transform.position.z);
+		raycar.transform.position = ThePlayer.transform.position;
 		raycar.transform.parent = ThePlayer.transform;
 
 		myRuneManagerScript.RuneActivated = false;
@@ -182,7 +182,7 @@ public class LureScript : MonoBehaviour {
 		Time.timeScale = 1.0f;
 
 			yield return new WaitForSeconds(7f);
-		raycar.transform.position = new Vector3(ThePlayer.transform.position.x,ThePlayer.transform.position.y+4,ThePlayer.transform.position.z);
+		raycar.transform.position = ThePlayer.transform.position;
 		raycar.transform.parent = ThePlayer.transform;
 
 		FullRune.GetComponent<Image> ().enabled = false;
