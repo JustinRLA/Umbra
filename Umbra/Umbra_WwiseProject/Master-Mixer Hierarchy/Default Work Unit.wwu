@@ -71,17 +71,10 @@
 								</Bus>
 								<Bus Name="UI" ID="{59A245FD-7A4F-4BB4-876B-3E737CF7B742}"/>
 								<Bus Name="AMB Ponctuel" ID="{F7FBBD40-7B31-42DA-8728-54C10DFCE3BB}"/>
+								<Bus Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}">
+									<ReferenceList/>
+								</Bus>
 							</ChildrenList>
-						</Bus>
-						<Bus Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}">
-							<ReferenceList>
-								<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
-									<ObjectRef Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-								</Reference>
-								<Reference Name="Effect1" CompanyID="4095" PluginID="65535" PluginType="15">
-									<ObjectRef Name="Medium" ID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-								</Reference>
-							</ReferenceList>
 						</Bus>
 						<Bus Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}"/>
 					</ChildrenList>
