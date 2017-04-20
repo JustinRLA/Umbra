@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 	public bool hidden;
 	bool havePlayedDeath;
 	public GameObject WaveFoot;
+	public GameObject WaveFootObj;
+
 	public GameObject LightOfDeath;
 	public GameObject ImpactofDeath;
 	SpriteRenderer mySpriteRenderer;
@@ -533,7 +535,12 @@ using UnityEngine.SceneManagement;
 	}
 	public void StartWave()
 	{
-		Instantiate (WaveFoot, m_GroundCheck.position, m_GroundCheck.rotation);
+		WaveFootObj=Instantiate (WaveFoot) as GameObject;
+		WaveFoot.transform.position = m_GroundCheck.position;
+
+		WaveFootObj.transform.parent = m_GroundCheck.transform;
+
+
 	}
     }
 
