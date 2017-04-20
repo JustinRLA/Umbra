@@ -27,10 +27,12 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject[] interzone;
 	public GameObject[] Cache;
 	public bool debugMusTest;
+	GameObject MusicBase;
 
 	public int debugsave;
 	public bool isdebug;
 	public GameObject Compteur;
+	GameObject PlayerObj;
 
 
 
@@ -42,6 +44,7 @@ public class InitializeLevel : MonoBehaviour {
 
 	void Awake()
 	{
+		MusicBase = GameObject.Find ("MusicBase");
 
 		if(isdebug==true)
 			PlayerPrefs.SetInt ("SaveSystem",debugsave);
@@ -52,6 +55,7 @@ public class InitializeLevel : MonoBehaviour {
 		ThePlayer = (GameObject)Resources.Load ("2DCharacter",typeof (GameObject));
 
 			Instantiate (ThePlayer, SpawnPoint [decoountNumber].position, SpawnPoint [decoountNumber].rotation);
+
 	}
 	// Use this for initialization
 	void Start () {
@@ -60,14 +64,23 @@ public class InitializeLevel : MonoBehaviour {
 		
 		interzone [0].SetActive (false);
 		interzone [1].SetActive (false);
-		if(decoountNumber<6)
-			AkSoundEngine.PostEvent ("Mus_Secteur1", gameObject);
-		if(decoountNumber>8)
-			AkSoundEngine.PostEvent ("Mus_Secteur3", gameObject);
-		if(decoountNumber>=6 && decoountNumber<=8)
-			AkSoundEngine.PostEvent ("Mus_Secteur2", gameObject);
-		
-		
+		if (debugMusTest == false) {
+			if (decoountNumber < 6)
+				AkSoundEngine.PostEvent ("Mus_Secteur1", MusicBase);
+			if (decoountNumber > 8)
+				AkSoundEngine.PostEvent ("Mus_Secteur3", MusicBase);
+			if (decoountNumber >= 6 && decoountNumber <= 8)
+				AkSoundEngine.PostEvent ("Mus_Secteur2", MusicBase);
+		}
+		if (debugMusTest == true) {
+			if (decoountNumber < 6)
+				AkSoundEngine.PostEvent ("Mus_Secteur1", gameObject);
+			if (decoountNumber > 8)
+				AkSoundEngine.PostEvent ("Mus_Secteur3", gameObject);
+			if (decoountNumber >= 6 && decoountNumber <= 8)
+				AkSoundEngine.PostEvent ("Mus_Secteur2", gameObject);
+		}
+
 		if (decoountNumber >= 7)
 			interzone [1].SetActive(true);
 

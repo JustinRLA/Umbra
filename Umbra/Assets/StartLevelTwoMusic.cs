@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class StartLevelTwoMusic : MonoBehaviour {
 	public GameObject camSound;
+	public bool MusTest;
+	public GameObject MusBase;
+
+
 	// Use this for initialization
 	void Start () {
 		camSound = GameObject.Find ("MainCamera");
+		if (MusTest == false)
+			MusBase = GameObject.Find ("MusicBase");
 	}
 	
 	// Update is called once per frame
@@ -15,7 +21,11 @@ public class StartLevelTwoMusic : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		AkSoundEngine.PostEvent ("Mus_Secteur2", camSound);
+		if(MusTest==false)
+			AkSoundEngine.PostEvent ("Mus_Secteur2", MusBase);
+		else
+			AkSoundEngine.PostEvent ("Mus_Secteur2", camSound);
+		
 
 	}
 }
