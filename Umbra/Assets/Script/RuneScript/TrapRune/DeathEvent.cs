@@ -69,8 +69,8 @@ public class DeathEvent : MonoBehaviour {
 
 		if (GetComponent<PlatformerCharacter2D> ().m_FacingRight == false)
 		{
-			BloodLeft = (GameObject)Resources.Load ("BloodFacingLeft",typeof (GameObject));
-			Instantiate(BloodLeft, new Vector3(EnnemyPos.position.x-0.5f,EnnemyPos.position.y,EnnemyPos.position.z),Quaternion.Euler(0,0,0));
+			BloodLeft = (GameObject)Resources.Load ("BloodEffectFacingLeft",typeof (GameObject));
+			Instantiate(BloodLeft, new Vector3(EnnemyPos.position.x-3f,EnnemyPos.position.y-1.2f,EnnemyPos.position.z),Quaternion.Euler(0,180,0) );
 			StartCoroutine(StartLeftAnim()); 
 
 		}
@@ -81,7 +81,7 @@ public class DeathEvent : MonoBehaviour {
 
 	IEnumerator StartRightAnim()
 	{
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (0.3f);
 		Instantiate (ActualCadre,rightTransform.position, transform.rotation);
 
 
