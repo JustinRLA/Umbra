@@ -13,6 +13,8 @@ using UnityEngine.SceneManagement;
 
 	public GameObject LightOfDeath;
 	public GameObject ImpactofDeath;
+	bool canPressHideBtn;
+
 	SpriteRenderer mySpriteRenderer;
 	public int numberofDeath;
 	public GameObject AssassinTrigger;
@@ -203,10 +205,21 @@ using UnityEngine.SceneManagement;
 
 	void Update()
 	{
-		if (canHide == true && canhideTwo==true && canhideThree==true && Input.GetKeyDown (KeyCode.E) && dead==false)
+		if (hidden == false && canHide == true && canhideTwo==true && canhideThree==true && Input.GetKeyDown (KeyCode.E) && dead==false && canPressHideBtn == true)
 		{
-			hidden =! hidden;
+			hidden =true;
+			canPressHideBtn = false;
 		}
+
+		if (hidden == true && canPressHideBtn == true) {
+			hidden = false;
+			canPressHideBtn = false;
+		}
+		if (Input.GetKeyUp (KeyCode.E))
+			canPressHideBtn = true;
+		
+
+
 		if (hidden == true) {
 			RunTrigger.layer = 26;
 			ViewTrigger.layer = 26;

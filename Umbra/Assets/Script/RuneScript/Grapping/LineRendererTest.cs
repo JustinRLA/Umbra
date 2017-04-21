@@ -52,6 +52,9 @@ public class LineRendererTest : MonoBehaviour {
 	}
 	public void IsActivated()
 	{
+		TheBeam = null;
+		TouchGood = false;
+		BannerBase = null;
 		RuneFull = GameObject.Find ("AccrochageImageFull");
 		RuneFull.GetComponent<Image> ().enabled = true;
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
@@ -63,16 +66,24 @@ public class LineRendererTest : MonoBehaviour {
 			grapRegion.GetComponent<Collider2D> ().isTrigger = false;
 
 		ActivateThisShit = true;
+		TheBeam = null;
+		TouchGood = false;
+		BannerBase = null;
+		touchedBadThing = true;
+		CamGrap.SetActive (true);
+
 
 	}
 
 		void Update () 
 	{
+		if (ActivateThisShit == false) {
+			TouchGood = false;
+		}
 		gothrought ();
 
 		if(	ActivateThisShit == true)
 			{
-			CamGrap.SetActive (true);
 			myRaycast = Physics2D.Linecast (PlayerPos,mousePos,myMask);
 
 				if(line == null)
@@ -157,6 +168,7 @@ public class LineRendererTest : MonoBehaviour {
 			
 			if (touchedBadThing == true)
 			{
+					TouchGood = false;
 				line.material = InMat;
 					if (redhaveplayed == false) {
 						AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Red", gameObject);
@@ -186,22 +198,35 @@ public class LineRendererTest : MonoBehaviour {
 			}
 		PlayerPos = new Vector3(PlayerMy.position.x, PlayerMy.position.y,0);
 
+			if (myRaycast.collider == null || myRaycast.collider.tag != "grapRegion") {
+				TouchGood = false;
+				TheBeam = null;
+				touchedBadThing = false;
+				BannerBase = null;
+			}
+
 		if(myRaycast.collider==true)
 		{
+
 		if (myRaycast.collider.tag == "bloc")
 			touchedBadThing = true;
 		else
 			touchedBadThing = false;
 
-				if (myRaycast.collider.tag == "grapRegion" && touchedBadThing == false)
-						{			
+				if (myRaycast.collider.tag == "grapRegion" && touchedBadThing == false) {			
 					print ("touchBeam");
-			TouchGood = true;
-							TheBeam=myRaycast.collider.gameObject;
-						}
-		else
-			TouchGood = false;
+					TouchGood = true;
+					TheBeam = myRaycast.collider.gameObject;
+				} else {
+					TouchGood = false;
+					print ("nioop");
+					TheBeam = null;
+				}
+				if (myRaycast.collider.tag != "grapRegion") {
+					TouchGood = false;
+					TheBeam = null;
 
+				}
 				if (TouchGood == true && TheBeam != null && touchedBadThing == false) {
 					TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (true);
 					if (greenhaveplayed == false) {
@@ -308,8 +333,9 @@ public class LineRendererTest : MonoBehaviour {
 		CamGrap.SetActive (false);
 		myRuneManagerScript.RuneActivated = false;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
-		yield return new WaitForSeconds ((timeDIstance / dividable)+1);
-
+		TouchGood = false;
+		BannerBase = null;
+		TheBeam = null;
 		GetComponent<LineRendererTest> ().enabled = false;
 	}
 
@@ -335,6 +361,10 @@ public class LineRendererTest : MonoBehaviour {
 	}
 	void Cancelation()
 	{
+		TouchGood = false;
+		BannerBase = null;
+		TheBeam = null;
+
 		RuneFull.GetComponent<Image> ().enabled = false;
 
 		myRuneManagerScript.RuneActivated = false;
@@ -353,7 +383,10 @@ public class LineRendererTest : MonoBehaviour {
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
 		foreach (GameObject grapRegion in theBeams)
 			grapRegion.GetComponent<Collider2D> ().isTrigger = true;
-		
+		TouchGood = false;
+		BannerBase = null;
+		TheBeam = null;
+
 		GetComponent<LineRendererTest> ().enabled = false;
 
 	}

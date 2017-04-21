@@ -1021,19 +1021,19 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 			LureAttention = true;
 	}
 
-	IEnumerator MyAttack()
-	{
-		while(true)
-		{
-		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<15)
-		{
-				print ("Attack");
-				GetComponent<Animator>().SetBool ("Attaque", true);
-			}	
-
-		}
-		GetComponent<Animator>().SetBool ("Attaque", false);
-	}	
+//	IEnumerator MyAttack()
+//	{
+//		while(true)
+//		{
+//		if(Alert==true && Vector3.Distance(transform.position, ThePlayer.position)<15)
+//		{
+//				print ("Attack");
+//				GetComponent<Animator>().SetBool ("Attaque", true);
+//			}	
+//
+//		}
+//		GetComponent<Animator>().SetBool ("Attaque", false);
+//	}	
 
 		public void StartCorTrap()
 	{

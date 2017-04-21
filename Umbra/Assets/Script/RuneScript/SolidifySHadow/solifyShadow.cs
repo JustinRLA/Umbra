@@ -17,7 +17,6 @@ public class solifyShadow : MonoBehaviour {
 	public GameObject GrimpSurfaceRight;
 	public GameObject GrimpSurfaceLeft;
 	public CursorMode cursormode=CursorMode.Auto;
-	Vector2 hotspot= Vector2.zero;
 	GameObject FullRune;
 	public bool Clickable;
 	bool colPlayer;

@@ -9,7 +9,7 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject DefTimer;
 	public GameObject OffTimer;
 	public GameObject TacticTimer;
-
+	bool canSwitchMode;
 	ShadowInstantiate myShadowInstantiate;
 	MarkEnnemy myMarkEnnemy;
 	SolidifcationEnabled mySolidicationEnabled;
@@ -280,9 +280,13 @@ public class RuneManagerScript : MonoBehaviour
 
 
 	//	myCam.GetComponent<Animator> ().SetBool ("Blue",true);
-
-		if (Input.GetKeyDown (KeyCode.Q) && RuneModeEnabled==false && myPlatformCharacter.canRune==true)
-		{
+		if (Input.GetMouseButtonUp (1))
+			canSwitchMode = true;
+			
+			if (Input.GetMouseButtonDown(1) && RuneModeEnabled==false && myPlatformCharacter.canRune==true && canSwitchMode==true)
+		{ 
+			canSwitchMode = false;
+			
 			animCamOne.SetBool ("Blue",true);
 			animCamTwo.SetBool ("Blue",true);
 			animCamFour.SetBool ("Blue",true);
@@ -295,8 +299,10 @@ public class RuneManagerScript : MonoBehaviour
 			//myCam.GetComponent<Grayscale>().enabled=true;
 
 		}
-		if (Input.GetMouseButton(1) && RuneModeEnabled==true)
+			if (Input.GetMouseButtonDown(1) && RuneModeEnabled==true && canSwitchMode==true)
 		{
+			canSwitchMode = false;
+
 			Time.timeScale = 1;
 			ImageRuneLeurreFull.GetComponent<Image> ().enabled = false;
 			ImageRuneOmbreFull.GetComponent<Image> ().enabled = false;

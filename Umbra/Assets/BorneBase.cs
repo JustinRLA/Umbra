@@ -34,6 +34,7 @@ public class BorneBase : MonoBehaviour {
 	public GameObject YellowBCGLure;
 	public GameObject UIMode;
 
+	public bool inTrapSelectionMode;
 
 	// Use this for initialization
 	void Start () {
@@ -50,6 +51,7 @@ public class BorneBase : MonoBehaviour {
 
 	public void SendInfo()
 	{
+		inTrapSelectionMode = false;
 		UIMode=GameObject.Find("RuneChangeUI");
 
 		playerMy=GameObject.Find("2DCharacter(Clone)");
@@ -77,7 +79,7 @@ public class BorneBase : MonoBehaviour {
 
 	public void ReceiveInfo()
 	{
-
+		inTrapSelectionMode = true;
 		YellowBCGGrap= GameObject.Find ("bcg_PlateGrap");
 		YellowBCGLure = GameObject.Find ("bcg_PlateLure");
 		YellowBCGmark = GameObject.Find ("bcg_PlatMark");
