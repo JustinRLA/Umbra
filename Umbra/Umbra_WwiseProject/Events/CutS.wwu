@@ -19,6 +19,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="SFX_Scripted_Shield" ID="{14A2BC5F-C995-42AD-A64E-35FD4D374CF1}">
+					<ChildrenList>
+						<Action Name="Pause All" ID="{3EEBD864-4132-4FA4-8DFB-832948AC8C46}" ShortID="117166816" Type="Pause" Scope="All" Global="true">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+						</Action>
+						<Action Name="Play" ID="{73F4DE2B-CAB0-4B9B-AD8E-9E18FB5EE539}" ShortID="495160396" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{2692A5E2-E563-498A-A564-BC770BB0C092}" Global="false">
+									<ObjectRef Name="SFX_Scripted_Shield" ID="{F40BBC14-EB1B-4C82-9516-D9CD3DE5B71D}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Resume All" ID="{8939D35F-13D1-4D4F-84CB-D75E86A3B1DB}" ShortID="104992177" Type="Resume" Scope="All" Global="true">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+							</PropertyList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

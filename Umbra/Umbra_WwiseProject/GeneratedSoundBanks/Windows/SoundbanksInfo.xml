@@ -68,7 +68,6 @@
 				<Event Id="3244327485" Name="PC_Rune_Trap_Use" ObjectPath="\Events\SFX\PC\Rune\PC_Rune_Trap_Use"/>
 				<Event Id="1483073216" Name="PC_Stealth_Off" ObjectPath="\Events\SFX\PC\Foot\PC_Stealth_Off"/>
 				<Event Id="2183052938" Name="PC_Stealth_On" ObjectPath="\Events\SFX\PC\Foot\PC_Stealth_On"/>
-				<Event Id="608424965" Name="SFX_Scripted_Shield" ObjectPath="\Events\SFX\SFX_Scripted_Shield"/>
 				<Event Id="2907867019" Name="STOPALLMUSIC" ObjectPath="\Events\MUS\STOPALLMUSIC"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -608,10 +607,6 @@
 					<ShortName>NPC_State_Normal_Talk_08.wav</ShortName>
 					<Path>SFX\NPC_State_Normal_Talk_08_3C21B142.wem</Path>
 				</File>
-				<File Id="844007448" Language="SFX">
-					<ShortName>SFX_Scripted_Shield.wav</ShortName>
-					<Path>SFX\SFX_Scripted_Shield_BC73CD53.wem</Path>
-				</File>
 				<File Id="844873148" Language="SFX">
 					<ShortName>PC_Rune_Accrochage_Red.wav</ShortName>
 					<Path>SFX\PC_Rune_Accrochage_Red_0B2D9A55.wem</Path>
@@ -777,11 +772,16 @@
 			<Path>CutS.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1323154943" Name="CutS_Start" ObjectPath="\Events\CutS\CutS_Start"/>
+				<Event Id="608424965" Name="SFX_Scripted_Shield" ObjectPath="\Events\CutS\SFX_Scripted_Shield"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="104493633" Language="SFX">
 					<ShortName>CutS_Start.wav</ShortName>
 					<Path>SFX\CutS_Start_BC73CD53.wem</Path>
+				</File>
+				<File Id="844007448" Language="SFX">
+					<ShortName>SFX_Scripted_Shield.wav</ShortName>
+					<Path>SFX\SFX_Scripted_Shield_BC73CD53.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
