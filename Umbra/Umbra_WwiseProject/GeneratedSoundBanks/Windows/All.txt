@@ -1,0 +1,253 @@
+Event	ID	Name			Wwise Object Path	Notes
+	48865357	Mus_Explo			\MUS\Mus_Explo	
+	55429609	NPC_Destroy			\SFX\NPCs\NPC_Destroy	
+	153992643	PC_Rune_Marquage_Use			\SFX\PC\Rune\PC_Rune_Marquage_Use	
+	169793748	PC_Action_Death			\SFX\PC\Action\PC_Action_Death	
+	211604505	Menu_Pause_End			\SFX\UI\Menu_Pause_End	
+	267862785	Amb_Alarm			\SFX\Amb\Amb_Alarm	
+	309439191	Menu_Hover			\SFX\UI\Menu_Hover	
+	348181601	PC_Action_SlowMo			\SFX\PC\Action\PC_Action_SlowMo	
+	562626134	Mus_Ingame			\MUS\Mus_Ingame	
+	564655388	PC_Rune_Leurre_Filter			\SFX\PC\Rune\PC_Rune_Leurre_Filter	
+	624895962	NPC_State_Normal			\SFX\NPCs\NPC_State_Normal	
+	651324617	PC_Rune_Accrochage_Equip			\SFX\PC\Rune\PC_Rune_Accrochage_Equip	
+	698530244	PC_Rune_Trap_Stun			\SFX\PC\Rune\PC_Rune_Trap_Stun	
+	710126949	PC_Rune_Ombre_Use			\SFX\PC\Rune\PC_Rune_Ombre_Use	
+	760777789	Menu_Click			\SFX\UI\Menu_Click	
+	771062343	PC_Foot_Climb			\SFX\PC\Foot\PC_Foot_Climb	
+	888215683	NPC_Foot_Run			\SFX\NPCs\NPC_Foot_Run	
+	897032325	Amb_Shadow_Pipe			\SFX\Amb\Amb_Shadow_Pipe	
+	966453248	PC_Rune_Select			\SFX\PC\Rune\PC_Rune_Select	
+	1077239935	PC_Foot_Land			\SFX\PC\Foot\PC_Foot_Land	
+	1092215814	PC_Action_Kill			\SFX\PC\Action\PC_Action_Kill	
+	1102633101	Mus_Alert			\MUS\Mus_Alert	
+	1143253532	PC_Foot_Jump			\SFX\PC\Foot\PC_Foot_Jump	
+	1166184207	PC_Foot_Run			\SFX\PC\Foot\PC_Foot_Run	
+	1350920896	Menu_Rune_Hover			\SFX\UI\Menu_Rune_Hover	
+	1483073216	PC_Stealth_Off			\SFX\PC\Foot\PC_Stealth_Off	
+	1543771206	PC_Rune_Solide_Use			\SFX\PC\Rune\PC_Rune_Solide_Use	
+	1590111458	PC_Action_Respawn			\SFX\PC\Action\PC_Action_Respawn	
+	1701807220	PC_Rune_Accrochage_Use			\SFX\PC\Rune\PC_Rune_Accrochage_Use	
+	1781658170	Amb_Check			\SFX\Amb\Amb_Check	
+	1994207056	PC_Rune_Solide_End			\SFX\PC\Rune\PC_Rune_Solide_End	
+	2004937196	PC_Rune_Accrochage_Red			\SFX\PC\Rune\PC_Rune_Accrochage_Red	
+	2170009975	Menu_Pause			\SFX\UI\Menu_Pause	
+	2183052938	PC_Stealth_On			\SFX\PC\Foot\PC_Stealth_On	
+	2295622767	PC_Rune_Leurre_Use			\SFX\PC\Rune\PC_Rune_Leurre_Use	
+	2550334218	Menu_Rune_Click			\SFX\UI\Menu_Rune_Click	
+	2684526339	PC_Action_SlowMo_End			\SFX\PC\Action\PC_Action_SlowMo_End	
+	2712572047	NPC_State_Located			\SFX\NPCs\NPC_State_Located	
+	2907867019	STOPALLMUSIC			\MUS\STOPALLMUSIC	
+	2998987929	Mus_Located			\MUS\Mus_Located	
+	3008075654	Amb_Door			\SFX\Amb\Amb_Door	
+	3149643052	Mus_Menu			\MUS\Mus_Menu	
+	3180909377	Menu_Cancel			\SFX\UI\Menu_Cancel	
+	3224037365	Mus_Secteur1			\MUS\Mus_Secteur1	
+	3224037366	Mus_Secteur2			\MUS\Mus_Secteur2	
+	3224037367	Mus_Secteur3			\MUS\Mus_Secteur3	
+	3244327485	PC_Rune_Trap_Use			\SFX\PC\Rune\PC_Rune_Trap_Use	
+	3302041772	Amb_Rain			\SFX\Amb\Amb_Rain	
+	3410690150	PC_Rune_Ombre_Decay			\SFX\PC\Rune\PC_Rune_Ombre_Decay	
+	3551547733	NPC_State_Alarmed			\SFX\NPCs\NPC_State_Alarmed	
+	3591117188	PC_Rune_Ombre_Select			\SFX\PC\Rune\PC_Rune_Ombre_Select	
+	3752724058	NPC_Action_Kill			\SFX\NPCs\NPC_Action_Kill	
+	4264946172	PC_Rune_Accrochage_Green			\SFX\PC\Rune\PC_Rune_Accrochage_Green	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3551007341	Foot_Stealth			\Default Work Unit\Foot_Stealth	
+
+State	ID	Name	State Group			Notes
+	581962986	Stealth_On	Foot_Stealth			
+	748895195	None	Foot_Stealth			
+	2099529632	Stealth_Off	Foot_Stealth			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	94911816	Stealth_On	Foot_Stealth	\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot		
+	493733568	Stealth_On	Foot_Stealth	\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run		
+	633656855	Stealth_On	Foot_Stealth	\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb		
+	1056294699	Stealth_On	Foot_Stealth	\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Land		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	954629190	Leurre			\Default Work Unit\Leurre	
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	2375286893	Located			\Default Work Unit\Located	
+
+Effect plug-ins	ID	Name	Type				Notes
+	109045632	Vibrato	Wwise Flanger			
+	4202347640	Repeat_after_me	Wwise Harmonizer			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	664015	NPC_State_Normal_Troat_06	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Troat_06_D95D59B9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Troat\NPC_State_Normal_Troat_06		4709
+	9473383	PC_Action_Respawn	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Action_SlowMo_0C5393BD.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Respawn		4987
+	13430912	Mus_Explo_A_Harpe	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_A_Harpe_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_A_ALL\Mus_Explo_A_Harpe		225451
+	20331000	Menu_Click	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Click_ADA1E8DC.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Click\Menu_Click		7890
+	32774756	Menu_Hover_12	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_12_5BCB8CE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_12		20372
+	36326777	Mus_Explo_B_Voix	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_B_Voix_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur3\Mus_Secteur3_Explo\Mus_Explo_B_ALL\Mus_Explo_B_Voix		238899
+	42002758	Mus_Explo_A_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_A_Vlc-CB_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_A_Vlc-CB		213949
+	55237842	Mus_Explo_PERCS_Gong	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Gong_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Alert_explo\Mus_Explo_PERCS_Gong		148525
+	61608593	Menu_Hover_23	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_23_AE7202A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_23		22410
+	62672227	PC_Foot_Run_05	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_05_F59400B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_05		910
+	68361163	NPC_State_Normal_Inhale_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_03_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_03		4351
+	68525548	Menu_Hover_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_03_C9BF3664.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_03		22194
+	74239228	NPC_State_Normal_Exhale_10	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_10_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_10		17199
+	76754816	PC_Foot_Run_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_02_411A6F0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_02		918
+	81609057	Amb_Alarm	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Alarm_Attack_3A484218.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Alarm		3527
+	82430543	Menu_Hover_17	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_17_30168CBA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_17		21695
+	85994893	Mus_Explo_PERCS_Gros Caisse	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Gros Caisse_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_PERCS_Gros Caisse		167741
+	98693427	NPC_State_Located_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Located_01_B7F8D223.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Located\Scream!\NPC_State_Located_01		2685
+	103559447	PC_Rune_Ombre_Select	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Ombre_Select_7FCA75DE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Select		161795
+	110852026	Mus_Explo_C_Harpe	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_C_Harpe_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_C_ALL\Mus_Explo_C_Harpe		226115
+	129252446	NPC_State_Normal_Exhale_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_02_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_02		12130
+	134443619	NPC_State_Normal_Trigger_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_02_920DDCCF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal_Trigger\NPC_State_Normal_Trigger_02		2685
+	135616672	Menu_Hover_04	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_04_FE527A84.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_04		19333
+	139496635	Menu_Hover_20	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_20_72C67429.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_20		21771
+	141244290	Menu_Hover_14	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_14_58AE88D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_14		21390
+	143369402	PC_Foot_Run_18	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_18_C6CB89CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Land\PC_Foot_Run_18		1777
+	146879306	Mus_Located_Stinger_2	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Located_Stinger_2_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Located_Stinger_2\Mus_Located_Stinger_2		49123
+	157269927	Mus_Explo_A_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_A_Vlc-CB_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_A_Vlc-CB		221944
+	157366416	NPC_State_Normal_Talk_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_02_CCA16558.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_02		4761
+	170287801	VO_PC_Jump_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\VO_PC_Jump_02_E9640CA0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Jump\PC_Jump_VO\VO_PC_Jump_02		1357
+	176784398	Mus_Menu	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Menu_D1CE1861.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Amb_Rain\Mus_Menu		807475
+	178246198	Menu_Hover_06	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_06_5F852168.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_06		21100
+	182207650	Mus_Explo_PERCS_Cloches Tubes	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Cloches Tubes_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_D_ALL\Mus_Explo_PERCS_Cloches Tubes		223630
+	182776437	NPC_State_Normal_Exhale_04	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_04_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_04		5861
+	190702804	NPC_State_Normal_Troat_04	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Troat_04_3BA78229.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Troat\NPC_State_Normal_Troat_04		1417
+	215179909	PC_Foot_Climb_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Climb_02_43138A16.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_02		1303
+	215891168	Mus_Explo_C_Vln-Vla	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_C_Vln-Vla_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_C_ALL\Mus_Explo_C_Vln-Vla		228216
+	226844212	Amb_Door	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Door_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Door		14646
+	231095716	Mus_Explo_C_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_C_Vlc-CB_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_C_ALL\Mus_Explo_C_Vlc-CB		216422
+	251136652	PC_Foot_Run_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_03_B94808A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_03		1568
+	279208026	NPC_Action_Kill	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_Action_Kill_E538DA6A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Action\NPC_Action_Kill		6508
+	294293325	VO_PC_Jump_04	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\VO_PC_Jump_04_22DB3FC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Jump\PC_Jump_VO\VO_PC_Jump_04		1177
+	304762072	Mus_Explo_B_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_B_Vlc-CB_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_B_ALL\Mus_Explo_B_Vlc-CB		219909
+	308002232	Menu_Hover_10	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_10_695F7922.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_10		21569
+	309555285	Menu_Hover_13	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_13_688D7BFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_13		21460
+	329889399	Amb_Shadow_Pipe	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Shadow_Pipe_1FC753A4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Shadow_Pipe		8074
+	330721418	NPC_State_Normal_Troat_07	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Troat_07_BE5B8B5B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Troat\NPC_State_Normal_Troat_07		2143
+	335057423	NPC_State_Normal_Troat_15	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Troat_15_F31DBBED.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Troat\NPC_State_Normal_Troat_15		5963
+	335877008	NPC_State_Normal_Talk_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_01_E6E75B81.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_01		4799
+	346669999	Mus_Explo_PERCS_Gros Caisse	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Gros Caisse_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_D_ALL\Mus_Explo_PERCS_Gros Caisse		213279
+	350158918	NPC_State_Alarmed_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_03_54B73D86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_03		3188
+	354665813	NPC_State_Normal_Exhale_07	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_07_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_07		13331
+	355961641	PC_Foot_Climb_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Climb_03_5E36DAA5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_03		1342
+	361141607	Menu_Hover_16	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_16_58AE88D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_16		21315
+	363514328	NPC_State_Normal_Troat_11	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Troat_11_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Troat\NPC_State_Normal_Troat_11		5940
+	363629891	Menu_Hover_07	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_07_424DFEA0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_07		21704
+	378437800	NPC_State_Normal_Troat_12	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Troat_12_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Troat\NPC_State_Normal_Troat_12		2061
+	378524594	PC_Foot_Jump	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Jump_EE839AF7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Jump\PC_Foot_Jump		1062
+	379893627	NPC_State_Normal_Exhale_13	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_13_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_13		13828
+	404626626	Mus_Alert_Stinger	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Alert_Stinger_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Alert_Stinger\Mus_Alert_Stinger		199689
+	406864249	Menu_Hover_05	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_05_6E2479A4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_05		21051
+	412548111	PC_Rune_Trap_Stun	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Trap_Stun_8357FE5D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Stun		6241
+	416657597	NPC_State_Alarmed_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_02_54FFEEDF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_02		3638
+	419614201	PC_Foot_Run_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_01_F96B21DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_01		1000
+	424030360	Menu_Hover_28	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_28_E57537C0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_28		21137
+	431169029	NPC_State_Normal_Talk_05	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_05_1F8D8772.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_05		3674
+	433333758	MUS_Located_Stinger	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\MUS_Located_Stinger_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Alert_explo\MUS_Located_Stinger		27014
+	433532390	NPC_State_Normal_Inhale_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_01_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_01		7327
+	461580969	PC_Rune_Solide_End	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Solide_End_194702E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Solide_End		16996
+	461900554	NPC_State_Normal_Inhale_04	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_04_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_04		3657
+	468229885	PC_Foot_Run_04	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_04_666E19E7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_04		2324
+	476926234	Mus_Explo_C_Voix	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_C_Voix_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur3\Mus_Secteur3_Explo\Mus_Explo_C_ALL\Mus_Explo_C_Voix		237075
+	479162651	NPC_State_Alarmed_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_01_871A043B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_01		3262
+	481798695	Mus_Explo_A_Vln-Vla	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_A_Vln-Vla_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_A_Vln-Vla		233638
+	488257246	NPC_State_Normal_Exhale_05	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_05_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_05		7307
+	497259216	PC_Action_SlowMo	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Action_SlowMo_CDB2608D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_SlowMo		4968
+	504236252	VO_PC_Death_Long_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\VO_PC_Death_Long_02_EEAB56D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Death\VO_PC_Death_Long_02		3894
+	522636454	NPC_State_Normal_Exhale_11	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_11_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_11		15299
+	523598272	NPC_State_Normal_Inhale_05	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_05_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_05		2740
+	526699419	Mus_Explo_C_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_C_Vlc-CB_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_C_ALL\Mus_Explo_C_Vlc-CB		219810
+	532990897	NPC_State_Normal_Inhale_18	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_18_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_18		5313
+	534495483	Mus_Secteur2_Explo_A_Gros Caisse_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Secteur2_Explo_A_Gros Caisse_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Alert_explo\Mus_Secteur2_Explo_A_Gros Caisse_01		170993
+	544265276	PC_Foot_Climb_07	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Climb_07_C66F214A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_07		1370
+	544961547	PC_Rune_Select	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Select_78050EC0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Select		4001
+	545010385	Mus_Explo_D_Harpe	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_D_Harpe_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_D_INTRO\Mus_Explo_D_Harpe		223492
+	559289768	Mus_Explo_C_Harpe	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_C_Harpe_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_C_ALL\Mus_Explo_C_Harpe		226482
+	564838257	Menu_Hover_18	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_18_D66526AE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_18		21937
+	570632283	Mus_Explo_B_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_B_Vlc-CB_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_B_ALL\Mus_Explo_B_Vlc-CB		214509
+	577751087	Menu_Hover_11	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_11_E2095724.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_11		19867
+	581344660	PC_Action_Kill	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Action_Kill_832D1320.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Kill		3225
+	588601205	Menu_Hover_27	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_27_059A6045.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_27		21984
+	605494236	PC_Foot_Run_05	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_05_812889DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_05		893
+	616094980	PC_Rune_Leurre_Use	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Leurre_Use_D60080DC.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Leurre_Use		9184
+	635535839	Mus_Explo_PERCS_Caisse Claire	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Caisse Claire_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_C_ALL\Mus_Explo_PERCS_Caisse Claire		218335
+	637684781	VO_PC_Jump_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\VO_PC_Jump_03_A5B539B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Jump\PC_Jump_VO\VO_PC_Jump_03		1220
+	638007171	Mus_Explo_A_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Gong_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_A_Vlc-CB		148255
+	644380282	PC_Foot_Climb_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Climb_01_093005EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Climb\PC_Foot_Climb_01		1366
+	652222345	Mus_Located_PERCS_ThunderHigh_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Located_PERCS_ThunderHigh_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Alert_explo\Mus_Located_PERCS_ThunderHigh_01		205428
+	670054674	Mus_Explo_PERCS_Caisse Claire	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Caisse Claire_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_C_ALL\Mus_Explo_PERCS_Caisse Claire		226916
+	676289107	Mus_Located_PERCS_ThunderLow_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Located_PERCS_ThunderLow_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Alert_explo\Mus_Located_PERCS_ThunderLow_01		197413
+	683612770	Menu_Hover_08	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_08_85BDCFF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_08		20485
+	692297524	PC_Foot_Run_13	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_13_05485002.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Land\PC_Foot_Run_13		1532
+	702015448	NPC_State_Normal_Exhale_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_01_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_01		13132
+	705567206	Menu_Hover_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_02_5313F0BE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_02		21728
+	706964778	NPC_State_Normal_Talk_10	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_10_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_10		3872
+	711225296	Menu_Hover_15	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_15_3E6090B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_15		21269
+	718459307	Mus_Explo_B_Voix	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_B_Voix_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur3\Mus_Secteur3_Explo\Mus_Explo_B_ALL\Mus_Explo_B_Voix		223327
+	719239806	Menu_Hover_22	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_22_D5695463.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_22		21428
+	728606332	NPC_State_Normal_Exhale_08	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Exhale_08_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Exhale\NPC_State_Normal_Exhale_08		9215
+	729621728	Menu_Hover_25	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_25_B95BCAE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_25		21957
+	736784849	NPC_Action_Death	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_Action_Death_01_CAD5E55B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Action\NPC_Action_Death		2982
+	737568144	PC_Rune_Accrochage_Green	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Accrochage_Green_F0DC6C6D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Green		1368
+	741349495	Mus_Located	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Located_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Alert\Mus_Alert\Mus_Located		809648
+	741816274	NPC_State_Alarmed_04	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Alarmed_04_11AD1586.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Alarmed\NPC_State_Alarmed_04		5746
+	754576286	PC_Rune_Accrochage_Equip	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Accrochage_Equip_9A37931B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Equip		1729
+	758005189	NPC_State_Normal_Talk_07	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_07_717EB6FE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_07		3166
+	762252272	PC_Foot_Run_08	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_08_06F6059F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Land\PC_Foot_Run_08		1526
+	763266189	Menu_Hover_30	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_30_FB285692.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_30		20506
+	768906688	Mus_Located_PERCS_All	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Located_PERCS_All_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Located_PERCS_All		232247
+	772259110	Mus_Explo_A_Vln-Vla	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_A_Vln-Vla_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_A_ALL\Mus_Explo_A_Vln-Vla		228396
+	772557819	Mus_Explo_B_Vln-Vla	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_B_Vln-Vla_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_B_ALL\Mus_Explo_B_Vln-Vla		220920
+	777012996	Amb_Check	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Amb_Check_5EE47257.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMB\Ponctuel\Amb_Check		8246
+	778357911	NPC_State_Normal_Inhale_12	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_12_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_12		7097
+	792365127	NPC_State_Normal_Talk_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_03_0134A82A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_03		3959
+	799048736	Mus_Explo_B_Vln-Vla	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_B_Vln-Vla_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_B_ALL\Mus_Explo_B_Vln-Vla		216985
+	807259037	NPC_State_Normal_Talk_06	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_06_F97158CC.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_06		3569
+	810069620	Menu_Hover_21	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_21_B4CE4EC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_21		22359
+	818557657	NPC_State_Normal_Inhale_10	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_10_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_10		3463
+	827086897	Mus_Explo_PERCS_Bongos	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Bongos_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_PERCS_Bongos		230076
+	829171738	VO_PC_Death_Long_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\VO_PC_Death_Long_01_4589B13F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Death\VO_PC_Death_Long_01		4515
+	831015991	PC_Rune_Accrochage_Use	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Accrochage_Use_F7E6E20E.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Use		5252
+	832865599	NPC_State_Normal_Inhale_14	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_14_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_14		6852
+	835815607	Mus_Explo_D_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_D_Vlc-CB_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_D_ALL\Mus_Explo_D_Vlc-CB		219317
+	841832338	NPC_State_Normal_Talk_08	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_08_3C21B142.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_08		3550
+	844873148	PC_Rune_Accrochage_Red	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Accrochage_Red_0B2D9A55.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Accrochage_Red		1287
+	855836638	PC_Foot_Stealth_On_Foley	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Stealth_On_Foley_59FC5074.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Stealth_On\PC_Foot_Stealth_On_Foley		1585
+	859267310	Menu_Hover_09	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_09_3FD65418.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_09		20721
+	861395658	PC_Rune_Marquage_Use	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Marquage_Use_B2EF258A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Marquage_Use		7235
+	868247795	PC_Action_Death_Thunder	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Action_Death_Thunder_BC73CD53.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Death_Thunder		28007
+	870866607	NPC_State_Normal_Troat_14	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Troat_14_C06EE31A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Troat\NPC_State_Normal_Troat_14		5367
+	873241977	Mus_Explo_A_Harpe	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_A_Harpe_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_A_ALL\Mus_Explo_A_Harpe		225776
+	887680807	PC_Action_Heartbeat	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Action_Heartbeat_1FC753A4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Heartbeat		4379
+	894411394	PC_Foot_Run_03	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_03_42E92D53.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_03		2328
+	911342259	Mus_Explo_D_Voix	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_D_Voix_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur3\Mus_Secteur3_Explo\Mus_Explo_D_ALL\Mus_Explo_D_Voix		236537
+	918065413	Menu_Cancel	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Cancel_28DC3CE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Cancel		4348
+	918385068	NPC_State_Normal_Inhale_16	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Inhale_16_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\NPC_State_Normal_Breath\Inhale\NPC_State_Normal_Inhale_16		6112
+	924241659	PC_Foot_Run_06	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_06_057143F4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_06		872
+	930092652	Mus_Explo_PERCS_Cloches Tubes	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Cloches Tubes_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_PERCS_Cloches Tubes		241535
+	930875067	VO_PC_Jump_06	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\VO_PC_Jump_06_5A4F000C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Jump\PC_Jump_VO\VO_PC_Jump_06		1213
+	945297317	PC_Rune_Solide_Use	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Solide_Use_4E05BE8D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Solide_Use		12506
+	952924631	Mus_Explo_D_Harpe	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_D_Harpe_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur2\Mus_Secteur2_Explo\Mus_Explo_D_ALL\Mus_Explo_D_Harpe		220973
+	954473284	PC_Rune_Trap_Use	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Trap_Used_21255B4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Trap_Use		23284
+	961379855	PC_Foot_Stealth_On	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Stealth_On_8DA31024.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Stealth_On\PC_Foot_Stealth_On		4452
+	967730107	Menu_Hover_24	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_24_A43F7AFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_24		20327
+	975452161	Mus_Explo_PERCS_Bongos	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_PERCS_Bongos_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_A_ALL\Mus_Explo_PERCS_Bongos		246749
+	977990538	PC_Foot_Run_07	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_07_96B22290.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_07		2247
+	989113359	Mus_Explo_D_Voix	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_D_Voix_02_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur3\Mus_Secteur3_Explo\Mus_Explo_D_ALL\Mus_Explo_D_Voix		246311
+	997023092	Menu_Hover_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_01_A80C7B1F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_01		22630
+	999333427	Mus_Explo_C_Vln-Vla	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_C_Vln-Vla_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_C_ALL\Mus_Explo_C_Vln-Vla		234172
+	1001605612	Menu_Hover_29	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_29_875856EA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_29		22117
+	1007098730	Mus_Explo_D_Vlc-CB	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Explo_D_Vln-Vla_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Mus_Secteur1\Mus_Secteur1_Explo\Mus_Explo_D_ALL\Mus_Explo_D_Vlc-CB		221746
+	1011486128	PC_Foot_Stealth_Off_Foley	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Stealth_Off_Foley_2A927AD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Stealth_Off\PC_Foot_Stealth_Off_Foley		2381
+	1015725807	PC_Foot_Stealth_Off	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Stealth_Off_62544F9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Stealth_Off\PC_Foot_Stealth_Off		3198
+	1019343635	Menu_Hover_19	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_19_2BA77700.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_19		21317
+	1021636990	PC_Foot_Run_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_01_73188DFC.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Foot\PC_Foot_Run\PC_Foot_Run_01		1218
+	1024506910	PC_Foot_Run_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Foot_Run_02_C4DBFFA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\Foot\NPC_Foot_Run\PC_Foot_Run_02		895
+	1025676270	NPC_State_Normal_Talk_09	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\NPC_State_Normal_Talk_09_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\NPC\State\NPC_State_Normal\Weird sounds\NPC_State_Normal_Talk\NPC_State_Normal_Talk_09		3436
+	1035485329	Menu_Hover_26	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Hover_26_F065DA5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Hover\Menu_Hover_26		21309
+	1041648969	PC_Rune_Ombre_Use	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\PC_Rune_Ombre_Use_AAA1B2B0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Rune\PC_Rune_Ombre_Use		11353
+	1052857111	VO_PC_Death_Short_02	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\VO_PC_Death_Short_02_CB05BFCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PC\Action\PC_Action_Death\VO_PC_Death_Short_02		4988
+	1053009425	Menu_Rune_Hover	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Menu_Rune_Hover_331ED7D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Menu_Rune_Hover		1551
+	1073435110	Mus_Secteur2_Explo_A_Cloches Tubes_01	D:\nviel_Umbra_MUS2328\JustinRLAUmbra\Umbra\Umbra\Umbra_WwiseProject\.cache\Windows\SFX\Mus_Secteur2_Explo_A_Cloches Tubes_01_D1CE1861.wem		\Interactive Music Hierarchy\Default Work Unit\InGame\Alert_explo\Mus_Secteur2_Explo_A_Cloches Tubes_01		224875
+
