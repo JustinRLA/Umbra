@@ -34,6 +34,9 @@ public void ZeroFixe()
 	transform.position = new Vector3 (transform.position.x, transform.position.y, 0);
 		GetComponent<SpriteRenderer> ().sortingOrder = -2;
 		Playa.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		Playa.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed=10;
+		Playa.GetComponent<PlatformerCharacter2D> ().CanTurn = true;
+
 		Time.timeScale = 1f;
 
 

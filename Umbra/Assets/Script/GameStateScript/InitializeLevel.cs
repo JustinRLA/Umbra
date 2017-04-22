@@ -168,58 +168,58 @@ public class InitializeLevel : MonoBehaviour {
 		
 
 		Runemanager.GetComponent<RuneManagerScript> ().RuneSetting();
-		if (GrilleJuda [0] != null)
-			GrilleJuda [0].SetActive (false);
-		if (GrilleJuda [1] != null)
-			GrilleJuda [1].SetActive (false);
-		if (GrilleJuda [2] != null)
-			GrilleJuda [2].SetActive (false);
-		if (GrilleJuda [3] != null)
-			GrilleJuda [3].SetActive (false);
-		if (GrilleJuda [4] != null)
-			GrilleJuda [4].SetActive (false);
-		if (GrilleJuda [5] != null)
-			GrilleJuda [5].SetActive (false);
-		if (GrilleJuda [6] != null)
-			GrilleJuda [6].SetActive (false);
-		if (GrilleJuda [7] != null)
-			GrilleJuda [7].SetActive (false);
-		if (GrilleJuda [8] != null)
-			GrilleJuda [8].SetActive (false);
-		if (GrilleJuda [9] != null)
-			GrilleJuda [9].SetActive (false);
-		if (GrilleJuda [10] != null)
-			GrilleJuda [10].SetActive (false);
-	
-		if (Cache [0] != null)
-			Cache [0].SetActive (false);
-		if (Cache [1] != null)
-			Cache [1].SetActive (false);
-		if (Cache [2] != null)
-			Cache [2].SetActive (false);
-		if (Cache [3] != null)
-			Cache [3].SetActive (false);
-		if (Cache [4] != null)
-			Cache [4].SetActive (false);
-		if (Cache [5] != null)
-			Cache [5].SetActive (false);
-		if (Cache [6] != null)
-			Cache [6].SetActive (false);
-		if (Cache [7] != null)
-			Cache [7].SetActive (false);
-		if (Cache [8] != null)
-			Cache [8].SetActive (false);
-		if (Cache [9] != null)
-			Cache [9].SetActive (false);
-		if (Cache [10] != null)
-			Cache[10].SetActive (false);
-		if (Cache [decoountNumber] != null)
-			Cache [decoountNumber].SetActive (true);
-		
-
-
-		if (GrilleJuda [decoountNumber] != null)
-			GrilleJuda [decoountNumber].SetActive (true);
+//		if (GrilleJuda [0] != null)
+//			GrilleJuda [0].SetActive (false);
+//		if (GrilleJuda [1] != null)
+//			GrilleJuda [1].SetActive (false);
+//		if (GrilleJuda [2] != null)
+//			GrilleJuda [2].SetActive (false);
+//		if (GrilleJuda [3] != null)
+//			GrilleJuda [3].SetActive (false);
+//		if (GrilleJuda [4] != null)
+//			GrilleJuda [4].SetActive (false);
+//		if (GrilleJuda [5] != null)
+//			GrilleJuda [5].SetActive (false);
+//		if (GrilleJuda [6] != null)
+//			GrilleJuda [6].SetActive (false);
+//		if (GrilleJuda [7] != null)
+//			GrilleJuda [7].SetActive (false);
+//		if (GrilleJuda [8] != null)
+//			GrilleJuda [8].SetActive (false);
+//		if (GrilleJuda [9] != null)
+//			GrilleJuda [9].SetActive (false);
+//		if (GrilleJuda [10] != null)
+//			GrilleJuda [10].SetActive (false);
+//	
+//		if (Cache [0] != null)
+//			Cache [0].SetActive (false);
+//		if (Cache [1] != null)
+//			Cache [1].SetActive (false);
+//		if (Cache [2] != null)
+//			Cache [2].SetActive (false);
+//		if (Cache [3] != null)
+//			Cache [3].SetActive (false);
+//		if (Cache [4] != null)
+//			Cache [4].SetActive (false);
+//		if (Cache [5] != null)
+//			Cache [5].SetActive (false);
+//		if (Cache [6] != null)
+//			Cache [6].SetActive (false);
+//		if (Cache [7] != null)
+//			Cache [7].SetActive (false);
+//		if (Cache [8] != null)
+//			Cache [8].SetActive (false);
+//		if (Cache [9] != null)
+//			Cache [9].SetActive (false);
+//		if (Cache [10] != null)
+//			Cache[10].SetActive (false);
+//		if (Cache [decoountNumber] != null)
+//			Cache [decoountNumber].SetActive (true);
+//		
+//
+//
+//		if (GrilleJuda [decoountNumber] != null)
+//			GrilleJuda [decoountNumber].SetActive (true);
 
 		if (TourelleLumiere [0] != null)
 			TourelleLumiere [0].SetActive (false);
@@ -247,58 +247,58 @@ public class InitializeLevel : MonoBehaviour {
 		if (TourelleLumiere [decoountNumber] != null)
 			TourelleLumiere [decoountNumber].SetActive (true);
 
-		if (GrapRegion [0] != null)
-			GrapRegion [0].SetActive (false);
-		if (GrapRegion [1] != null)
-			GrapRegion [1].SetActive (false);
-		if (GrapRegion [2] != null)
-			GrapRegion [2].SetActive (false);
-		if (GrapRegion [3] != null)
-			GrapRegion [3].SetActive (false);
-		if (GrapRegion [4] != null)
-			GrapRegion [4].SetActive (false);
-		if (GrapRegion [5] != null)
-			GrapRegion [5].SetActive (false);
-		if (GrapRegion [6] != null)
-			GrapRegion [6].SetActive (false);
-		if (GrapRegion [7] != null)
-			GrapRegion [7].SetActive (false);
-		if (GrapRegion [8] != null)
-			GrapRegion [8].SetActive (false);
-		if (GrapRegion [9] != null)
-			GrapRegion [9].SetActive (false);
-		if (GrapRegion [10] != null)
-			GrapRegion [10].SetActive (false);
-
-		if (GrapRegion [decoountNumber] != null)
-			GrapRegion [decoountNumber].SetActive (true);
-
-		if (TrapFeedback [0] != null)
-			TrapFeedback [0].SetActive (false);
-		if (TrapFeedback [1] != null)
-			TrapFeedback [1].SetActive (false);
-		if (TrapFeedback [2] != null)
-			TrapFeedback [2].SetActive (false);
-		if (TrapFeedback [3] != null)
-			TrapFeedback [3].SetActive (false);
-		if (TrapFeedback [4] != null)
-			TrapFeedback [4].SetActive (false);
-		if (TrapFeedback [5] != null)
-			TrapFeedback [5].SetActive (false);
-		if (TrapFeedback [6] != null)
-			TrapFeedback [6].SetActive (false);
-		if (TrapFeedback [7] != null)
-			TrapFeedback [7].SetActive (false);
-		if (TrapFeedback [8] != null)
-			TrapFeedback [8].SetActive (false);
-		if (TrapFeedback [9] != null)
-			TrapFeedback [9].SetActive (false);
-		if (TrapFeedback [10] != null)
-			TrapFeedback [10].SetActive (false);
-
-		if (TrapFeedback [decoountNumber] != null)
-			TrapFeedback [decoountNumber].SetActive (true);
-		
+//		if (GrapRegion [0] != null)
+//			GrapRegion [0].SetActive (false);
+//		if (GrapRegion [1] != null)
+//			GrapRegion [1].SetActive (false);
+//		if (GrapRegion [2] != null)
+//			GrapRegion [2].SetActive (false);
+//		if (GrapRegion [3] != null)
+//			GrapRegion [3].SetActive (false);
+//		if (GrapRegion [4] != null)
+//			GrapRegion [4].SetActive (false);
+//		if (GrapRegion [5] != null)
+//			GrapRegion [5].SetActive (false);
+//		if (GrapRegion [6] != null)
+//			GrapRegion [6].SetActive (false);
+//		if (GrapRegion [7] != null)
+//			GrapRegion [7].SetActive (false);
+//		if (GrapRegion [8] != null)
+//			GrapRegion [8].SetActive (false);
+//		if (GrapRegion [9] != null)
+//			GrapRegion [9].SetActive (false);
+//		if (GrapRegion [10] != null)
+//			GrapRegion [10].SetActive (false);
+//
+//		if (GrapRegion [decoountNumber] != null)
+//			GrapRegion [decoountNumber].SetActive (true);
+//
+//		if (TrapFeedback [0] != null)
+//			TrapFeedback [0].SetActive (false);
+//		if (TrapFeedback [1] != null)
+//			TrapFeedback [1].SetActive (false);
+//		if (TrapFeedback [2] != null)
+//			TrapFeedback [2].SetActive (false);
+//		if (TrapFeedback [3] != null)
+//			TrapFeedback [3].SetActive (false);
+//		if (TrapFeedback [4] != null)
+//			TrapFeedback [4].SetActive (false);
+//		if (TrapFeedback [5] != null)
+//			TrapFeedback [5].SetActive (false);
+//		if (TrapFeedback [6] != null)
+//			TrapFeedback [6].SetActive (false);
+//		if (TrapFeedback [7] != null)
+//			TrapFeedback [7].SetActive (false);
+//		if (TrapFeedback [8] != null)
+//			TrapFeedback [8].SetActive (false);
+//		if (TrapFeedback [9] != null)
+//			TrapFeedback [9].SetActive (false);
+//		if (TrapFeedback [10] != null)
+//			TrapFeedback [10].SetActive (false);
+//
+//		if (TrapFeedback [decoountNumber] != null)
+//			TrapFeedback [decoountNumber].SetActive (true);
+//		
 
 		if (decoountNumber > 0 && decoountNumber < 10) {
 			BackGround [0].SetActive (false);

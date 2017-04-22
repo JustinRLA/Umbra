@@ -50,6 +50,8 @@ public class checkIfAssassination : MonoBehaviour {
 	void Assassination()
 	{
 		Playa.GetComponent<DeathEvent> ().chooseSprite ();
+		Playa.GetComponent<PlatformerCharacter2D> ().CanTurn = false;
+
 		print ("I kill you");	
 		ActualEnnemy.tag = "Dead Ennemy";
 		ActualEnnemy.layer = 27;

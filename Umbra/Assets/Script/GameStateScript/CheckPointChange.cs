@@ -41,10 +41,10 @@ public class CheckPointChange : MonoBehaviour {
 			AkSoundEngine.PostEvent ("Amb_Check", gameObject);
 			saveNumber=PlayerPrefs.GetInt ("SaveSystem");
 
-			if(initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber-1]!=null)
-				initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber-1].SetActive(false);
-			if(initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber]!=null)
-				initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber].SetActive(true);
+//			if(initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber-1]!=null)
+//				initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber-1].SetActive(false);
+//			if(initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber]!=null)
+//				initialializer.GetComponent<InitializeLevel> ().Cache [saveNumber].SetActive(true);
 			
 
 			initialializer.GetComponent<InitializeLevel> ().BackGround [saveNumber].SetActive (true);
@@ -64,20 +64,20 @@ public class CheckPointChange : MonoBehaviour {
 			if(saveNumber>1)
 				initialializer.GetComponent<InitializeLevel> ().Piece [saveNumber-2].SetActive (false);
 
-			if(initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber-1]!=null)
-			initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber-1].SetActive(false);
-			if(initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber]!=null)
-			initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber].SetActive(true);
-
-			if(initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber-1]!=null)
-				initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber-1].SetActive(false);
-			if(initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber]!=null)
-			initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber].SetActive(true);
-
-			if(initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber-1]!=null)
-				initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber-1].SetActive(false);
-			if(initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber]!=null)
-			initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber].SetActive(true);
+//			if(initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber-1]!=null)
+//			initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber-1].SetActive(false);
+//			if(initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber]!=null)
+//			initialializer.GetComponent<InitializeLevel> ().GrilleJuda [saveNumber].SetActive(true);
+//
+//			if(initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber-1]!=null)
+//				initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber-1].SetActive(false);
+//			if(initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber]!=null)
+//			initialializer.GetComponent<InitializeLevel> ().TrapFeedback [saveNumber].SetActive(true);
+//
+//			if(initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber-1]!=null)
+//				initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber-1].SetActive(false);
+//			if(initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber]!=null)
+//			initialializer.GetComponent<InitializeLevel> ().GrapRegion [saveNumber].SetActive(true);
 
 			if (initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber - 1] != null)
 				Destroy (initialializer.GetComponent<InitializeLevel> ().TourelleLumiere [saveNumber - 1]);

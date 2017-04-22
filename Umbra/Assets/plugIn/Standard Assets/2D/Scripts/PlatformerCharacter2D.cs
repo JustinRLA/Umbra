@@ -14,6 +14,7 @@ using UnityEngine.SceneManagement;
 	public GameObject LightOfDeath;
 	public GameObject ImpactofDeath;
 	bool canPressHideBtn;
+	public bool CanTurn = true;
 
 	SpriteRenderer mySpriteRenderer;
 	public int numberofDeath;
@@ -209,37 +210,32 @@ using UnityEngine.SceneManagement;
 		{
 			hidden =true;
 			canPressHideBtn = false;
-		}
-
-		if (hidden == true && canPressHideBtn == true) {
-			hidden = false;
-			canPressHideBtn = false;
-		}
-		if (Input.GetKeyUp (KeyCode.E))
-			canPressHideBtn = true;
-		
-
-
-		if (hidden == true) {
+			m_MaxSpeed = 0;
 			RunTrigger.layer = 26;
 			ViewTrigger.layer = 26;
-			m_MaxSpeed = 0;
 			mySpriteRenderer.sortingOrder = -1;
 			ViewTrigger.layer = 26;
 
 			gameObject.layer = 26;
+
 		}
-			else
-		{
+
+		if (hidden == true && canPressHideBtn == true && Input.GetKeyDown (KeyCode.E)) {
+			hidden = false;
+			canPressHideBtn = false;
+			m_MaxSpeed = 10;
 			RunTrigger.layer = 13;
 			ViewTrigger.layer = 13;
 
-			m_MaxSpeed = 10;
 			mySpriteRenderer.sortingOrder = 1;
 			ViewTrigger.layer = 13;
 
-				gameObject.layer = 13;
+			gameObject.layer = 13;
+
+
 		}
+		if (Input.GetKeyUp (KeyCode.E))
+			canPressHideBtn = true;
 
 		if (canHide == false)
 			hidden = false;
@@ -371,13 +367,13 @@ using UnityEngine.SceneManagement;
 					if(ClimbTrue==false)
 				{
 				// If the input is moving the player right and the player is facing left...
-				if (move > 0 && !m_FacingRight)
+							if (move > 0 && !m_FacingRight && CanTurn ==true)
 				{
 					// ... flip the player.
 					Flip();
 				}
 				// Otherwise if the input is moving the player left and the player is facing right...
-				else if (move < 0 && m_FacingRight)
+							else if (move < 0 && m_FacingRight && CanTurn == true)
 				{
 					// ... flip the player.
 					Flip();
