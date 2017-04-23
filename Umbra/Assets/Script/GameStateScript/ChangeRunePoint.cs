@@ -31,8 +31,9 @@ public class ChangeRunePoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.E) && canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true)
+		if (Input.GetKeyDown (KeyCode.E) && canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true && playerMy.GetComponent<PlatformerCharacter2D> ().canPressHideBtn == true)
 		{
+			playerMy.GetComponent<PlatformerCharacter2D> ().canPressHideBtn = false;
 			UIMode.SetActive (true);
 			AkSoundEngine.PostEvent ("PC_Rune_Select", gameObject);
 		playerMy.GetComponent<PlatformerCharacter2D> ().enabled = false;

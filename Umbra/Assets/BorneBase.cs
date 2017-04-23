@@ -46,7 +46,11 @@ public class BorneBase : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (inTrapSelectionMode == true) {
+			if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown (KeyCode.E))
+				SendInfo ();
+		}
+			
 	}
 
 	public void SendInfo()

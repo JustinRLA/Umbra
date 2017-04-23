@@ -13,7 +13,7 @@ using UnityEngine.SceneManagement;
 
 	public GameObject LightOfDeath;
 	public GameObject ImpactofDeath;
-	bool canPressHideBtn;
+	public bool canPressHideBtn;
 	public bool CanTurn = true;
 
 	SpriteRenderer mySpriteRenderer;
