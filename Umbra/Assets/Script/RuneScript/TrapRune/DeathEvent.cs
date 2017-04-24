@@ -85,14 +85,14 @@ public class DeathEvent : MonoBehaviour {
 
 	IEnumerator StartRightAnim()
 	{
-		yield return new WaitForSeconds (0.25f);
+		yield return new WaitForSeconds (0.2f);
 		Instantiate (ActualCadre,rightTransform.position, transform.rotation);
 
 
 	}
 	IEnumerator StartLeftAnim()
 	{
-		yield return new WaitForSeconds (0.25f);
+		yield return new WaitForSeconds (0.2f);
 		Instantiate (ActualCadre,LeftTransform.position, transform.rotation);
 
 

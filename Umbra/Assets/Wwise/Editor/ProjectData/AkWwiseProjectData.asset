@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\CutS.wwu
     ParentPhysicalPath: 
     Guid: '{19E84A98-6EC0-40EB-B402-BC980F6AC5B3}'
-    m_lastTimePsrt1: 1635232844
-    m_lastTimePart2: -1999337268
+    m_lastTimePsrt1: -1993615512
+    m_lastTimePart2: -1999336654
     List:
     - Name: CutS_Start
       Path: CutS\CutS_Start
@@ -134,8 +134,8 @@ MonoBehaviour:
   - PhysicalPath: Events\SFX.wwu
     ParentPhysicalPath: 
     Guid: '{F8BE906D-1574-4337-85C6-915E7CD03B6B}'
-    m_lastTimePsrt1: 1635277969
-    m_lastTimePart2: -1999337268
+    m_lastTimePsrt1: -1993605512
+    m_lastTimePart2: -1999336654
     List:
     - Name: Amb_Alarm
       Path: SFX\Amb\Amb_Alarm
@@ -196,7 +196,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 897032325
       Guid: bebca29f814cb543a39a3f9db53f7897
-      maxAttenuation: 0
+      maxAttenuation: 25
     - Name: Menu_Cancel
       Path: SFX\UI\Menu_Cancel
       PathAndIcons:
@@ -866,7 +866,10 @@ MonoBehaviour:
         ObjectType: 7
       ID: -410711786
       Guid: fff52bd31e8c1e4f9b9aea2b0e8fd622
-  ExpandedItems: []
+  ExpandedItems:
+  - /Umbra_WwiseProject
+  - /Umbra_WwiseProject/Events
+  - /Umbra_WwiseProject/Events/MUS
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

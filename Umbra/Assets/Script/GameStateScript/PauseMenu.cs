@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour {
 	RuneManagerScript myRuneManScript;
 	public GameObject CameraOne;
 	public GameObject BorneBaseObj;
+	GameObject MusicBase;
+
 	BorneBase myBorneScript;
 	bool canPause;
 
@@ -69,6 +71,9 @@ public class PauseMenu : MonoBehaviour {
 	}
 	public void ReturnToMainMenu()
 	{
+		MusicBase = GameObject.Find ("MusicBase");
+
+		AkSoundEngine.PostEvent ("Mus_Menu",MusicBase);
 		SceneManager.LoadScene ("Main Menu");	}
 
 }
