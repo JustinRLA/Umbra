@@ -777,11 +777,193 @@
 			<Path>CutS.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1323154943" Name="CutS_Start" ObjectPath="\Events\CutS\CutS_Start"/>
+				<Event Id="562626134" Name="Mus_Ingame" ObjectPath="\Events\MUS\Mus_Ingame"/>
+				<Event Id="2907867019" Name="STOPALLMUSIC" ObjectPath="\Events\MUS\STOPALLMUSIC" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="13430912" Language="SFX">
+					<ShortName>Mus_Explo_A_Harpe_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_A_Harpe_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="36326777" Language="SFX">
+					<ShortName>Mus_Explo_B_Voix_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_B_Voix_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="42002758" Language="SFX">
+					<ShortName>Mus_Explo_A_Vlc-CB_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_A_Vlc-CB_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="55237842" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Gong_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Gong_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="85994893" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Gros Caisse_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Gros Caisse_01_D1CE1861.wem</Path>
+				</File>
 				<File Id="104493633" Language="SFX">
 					<ShortName>CutS_Start.wav</ShortName>
 					<Path>SFX\CutS_Start_BC73CD53.wem</Path>
+				</File>
+				<File Id="110852026" Language="SFX">
+					<ShortName>Mus_Explo_C_Harpe_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_C_Harpe_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="146879306" Language="SFX">
+					<ShortName>Mus_Located_Stinger_2.wav</ShortName>
+					<Path>SFX\Mus_Located_Stinger_2_D1CE1861.wem</Path>
+				</File>
+				<File Id="157269927" Language="SFX">
+					<ShortName>Mus_Explo_A_Vlc-CB_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_A_Vlc-CB_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="176784398" Language="SFX">
+					<ShortName>Mus_Menu.wav</ShortName>
+					<Path>SFX\Mus_Menu_D1CE1861.wem</Path>
+				</File>
+				<File Id="182207650" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Cloches Tubes_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Cloches Tubes_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="215891168" Language="SFX">
+					<ShortName>Mus_Explo_C_Vln-Vla_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_C_Vln-Vla_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="231095716" Language="SFX">
+					<ShortName>Mus_Explo_C_Vlc-CB_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_C_Vlc-CB_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="304762072" Language="SFX">
+					<ShortName>Mus_Explo_B_Vlc-CB_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_B_Vlc-CB_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="346669999" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Gros Caisse_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Gros Caisse_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="404626626" Language="SFX">
+					<ShortName>Mus_Alert_Stinger.wav</ShortName>
+					<Path>SFX\Mus_Alert_Stinger_D1CE1861.wem</Path>
+				</File>
+				<File Id="433333758" Language="SFX">
+					<ShortName>MUS_Located_Stinger.wav</ShortName>
+					<Path>SFX\MUS_Located_Stinger_D1CE1861.wem</Path>
+				</File>
+				<File Id="476926234" Language="SFX">
+					<ShortName>Mus_Explo_C_Voix_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_C_Voix_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="481798695" Language="SFX">
+					<ShortName>Mus_Explo_A_Vln-Vla_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_A_Vln-Vla_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="526699419" Language="SFX">
+					<ShortName>Mus_Explo_C_Vlc-CB_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_C_Vlc-CB_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="534495483" Language="SFX">
+					<ShortName>Mus_Secteur2_Explo_A_Gros Caisse_01.wav</ShortName>
+					<Path>SFX\Mus_Secteur2_Explo_A_Gros Caisse_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="545010385" Language="SFX">
+					<ShortName>Mus_Explo_D_Harpe_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_D_Harpe_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="559289768" Language="SFX">
+					<ShortName>Mus_Explo_C_Harpe_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_C_Harpe_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="570632283" Language="SFX">
+					<ShortName>Mus_Explo_B_Vlc-CB_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_B_Vlc-CB_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="635535839" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Caisse Claire_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Caisse Claire_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="638007171" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Gong_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Gong_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="652222345" Language="SFX">
+					<ShortName>Mus_Located_PERCS_ThunderHigh_01.wav</ShortName>
+					<Path>SFX\Mus_Located_PERCS_ThunderHigh_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="670054674" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Caisse Claire_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Caisse Claire_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="676289107" Language="SFX">
+					<ShortName>Mus_Located_PERCS_ThunderLow_01.wav</ShortName>
+					<Path>SFX\Mus_Located_PERCS_ThunderLow_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="718459307" Language="SFX">
+					<ShortName>Mus_Explo_B_Voix_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_B_Voix_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="741349495" Language="SFX">
+					<ShortName>Mus_Located.wav</ShortName>
+					<Path>SFX\Mus_Located_D1CE1861.wem</Path>
+				</File>
+				<File Id="768906688" Language="SFX">
+					<ShortName>Mus_Located_PERCS_All.wav</ShortName>
+					<Path>SFX\Mus_Located_PERCS_All_D1CE1861.wem</Path>
+				</File>
+				<File Id="772259110" Language="SFX">
+					<ShortName>Mus_Explo_A_Vln-Vla_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_A_Vln-Vla_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="772557819" Language="SFX">
+					<ShortName>Mus_Explo_B_Vln-Vla_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_B_Vln-Vla_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="799048736" Language="SFX">
+					<ShortName>Mus_Explo_B_Vln-Vla_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_B_Vln-Vla_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="827086897" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Bongos_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Bongos_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="835815607" Language="SFX">
+					<ShortName>Mus_Explo_D_Vlc-CB_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_D_Vlc-CB_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="873241977" Language="SFX">
+					<ShortName>Mus_Explo_A_Harpe_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_A_Harpe_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="911342259" Language="SFX">
+					<ShortName>Mus_Explo_D_Voix_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_D_Voix_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="930092652" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Cloches Tubes_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Cloches Tubes_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="952924631" Language="SFX">
+					<ShortName>Mus_Explo_D_Harpe_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_D_Harpe_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="975452161" Language="SFX">
+					<ShortName>Mus_Explo_PERCS_Bongos_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_PERCS_Bongos_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="989113359" Language="SFX">
+					<ShortName>Mus_Explo_D_Voix_02.wav</ShortName>
+					<Path>SFX\Mus_Explo_D_Voix_02_D1CE1861.wem</Path>
+				</File>
+				<File Id="999333427" Language="SFX">
+					<ShortName>Mus_Explo_C_Vln-Vla_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_C_Vln-Vla_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="1007098730" Language="SFX">
+					<ShortName>Mus_Explo_D_Vln-Vla_01.wav</ShortName>
+					<Path>SFX\Mus_Explo_D_Vln-Vla_01_D1CE1861.wem</Path>
+				</File>
+				<File Id="1073435110" Language="SFX">
+					<ShortName>Mus_Secteur2_Explo_A_Cloches Tubes_01.wav</ShortName>
+					<Path>SFX\Mus_Secteur2_Explo_A_Cloches Tubes_01_D1CE1861.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
