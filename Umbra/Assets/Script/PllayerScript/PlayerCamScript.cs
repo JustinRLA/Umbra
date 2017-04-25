@@ -22,6 +22,9 @@ public class PlayerCamScript : MonoBehaviour {
 	}
 
 	// Update is called once per frame
+	void FixedUpdate () {
+	
+	}
 	void Update () {
 		if (Input.GetKey (KeyCode.S) && PanUp > -2 && myPlatformCharacter.m_Grounded==true)
 			PanUp -= Time.smoothDeltaTime * 6;

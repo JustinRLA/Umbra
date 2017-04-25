@@ -16,14 +16,18 @@ public class AppearLetter : MonoBehaviour {
 		thisText.GetComponent<TextMesh> ().color=new Color(1,1,1,valueCOlor);
 		if(active==true)
 		valueCOlor += Time.deltaTime;
-		if (thisText.GetComponent<TextMesh> ().color.a >= 1)
-			Destroy (gameObject);
-		}
+		if (valueCOlor>=1)
+			Ending ();		}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "Player")
+		if (col.tag == "Player" && active==false)
 			active = true;
 	}
 
+	void Ending()
+	{
+		thisText.GetComponent<TextMesh> ().color=new Color(1,1,1,1);
+		Destroy (gameObject);
+	}
 }
