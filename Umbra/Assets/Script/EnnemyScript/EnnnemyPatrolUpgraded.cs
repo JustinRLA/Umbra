@@ -883,7 +883,23 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		}
 	}
 
+	void ChangeNav()
+	{
+		CurrentNavPoint = NavPointOne_Right;
+		if (CurrentNavPoint.position.x-transform.position.x <0)
+		{
+			lookRight=false;
+			flip ();
+		}
+		if (CurrentNavPoint.position.x-transform.position.x >0)
+		{
+			lookRight=true;
+			flip ();
+		}
 
+		flip ();
+
+	}
 	void Update () 
 	{
 		//Animation controller pour animation de marche
@@ -894,8 +910,14 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		}
 
 
-		if (LurePlayer.gameObject.activeInHierarchy == false) {
-			LureAttention = false;
+		if (LurePlayer.gameObject.activeInHierarchy == false ||  LurePlayer==null) {
+			{
+				LureAttention = false;
+				mySighListernetTemplate.IsawTheLure = false;
+			}
+			if(CurrentNavPoint==LurePlayer && LureAttention==false)
+				ChangeNav();
+			
 			if (stopShadow == true) {
 				timerState = 0;
 				stopShadow = false;
