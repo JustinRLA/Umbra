@@ -46,7 +46,10 @@ public void restartGame()
 
 		PlayerPrefs.SetInt ("SaveSystem", 0);
 			}
-
+	public void RuneHover()
+	{
+		AkSoundEngine.PostEvent("Menu_Rune_Hover",gameObject);
+	}
 	public void HoverSound()
 	{
 		AkSoundEngine.PostEvent("Menu_Hover",gameObject);
