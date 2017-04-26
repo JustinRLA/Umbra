@@ -257,7 +257,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 					if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
 						speed = 0;
 					if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
-						speed = OriginalSpeed;
+						speed = OriginalSpeed*1.5f;
 				}
 				else
 					speed = 0;
@@ -293,7 +293,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 					if ((transform.position.x - CurrentNavPoint.position.x) < 2 || (transform.position.x - CurrentNavPoint.position.x) > -2)
 						speed = 0;
 					if ((transform.position.x - CurrentNavPoint.position.x) > 2 || (transform.position.x - CurrentNavPoint.position.x) <= -2)
-						speed = OriginalSpeed;
+						speed = OriginalSpeed*1.5f;
 				}
 				else
 					speed = 0;
@@ -334,7 +334,7 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 				if ((transform.position.x - CurrentNavPoint.position.x) < 1 || (transform.position.x - CurrentNavPoint.position.x) > -1)
 					speed = 0;
 				if ((transform.position.x - CurrentNavPoint.position.x) > 1 || (transform.position.x - CurrentNavPoint.position.x) <= -1)
-					speed = OriginalSpeed;
+					speed = OriginalSpeed * 1.5f;
 			}
 			else
 				speed = 0;

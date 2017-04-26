@@ -10,6 +10,9 @@ public class RuneTutorialSettling : MonoBehaviour {
 	public int tacticSetter;
 	public int OffenseSet;
 	public GameObject RuneTaken;
+	public bool changeOffRune;
+	public bool changeDefRune;
+	public bool changeTacticRune;
 
 
 	// Use this for initialization
@@ -27,29 +30,41 @@ public class RuneTutorialSettling : MonoBehaviour {
 		if(col.tag=="Player")
 		{
 			print ("BVugfgmgk");
-			PlayerPrefs.SetInt ("RuneOffense", OffenseSet);
-			PlayerPrefs.SetInt ("RuneDefense", defsetter);
-			PlayerPrefs.SetInt ("RuneTactic", tacticSetter);
+			if (changeOffRune == true) {
+				myRuneManager.GetComponent<RuneManagerScript> ().OffenseRune = OffenseSet;
 
-			myRuneManager.GetComponent<RuneManagerScript> ().DefFune = defsetter;
-			myRuneManager.GetComponent<RuneManagerScript> ().OffenseRune = OffenseSet;
-			myRuneManager.GetComponent<RuneManagerScript> ().TacticRune = tacticSetter;
+				PlayerPrefs.SetInt ("RuneOffense", OffenseSet);
+			}
+
+			if (changeDefRune == true) {
+				PlayerPrefs.SetInt ("RuneDefense", defsetter);
+				myRuneManager.GetComponent<RuneManagerScript> ().DefFune = defsetter;
+			}
+			if (changeTacticRune == true) {
+				PlayerPrefs.SetInt ("RuneTactic", tacticSetter);
+
+				myRuneManager.GetComponent<RuneManagerScript> ().TacticRune = tacticSetter;
+			}
 			myRuneManager.GetComponent<RuneManagerScript> ().RuneSetting ();
-
-			if (defsetter == 1) 
-				myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneOmbre.GetComponent<Animator> ().SetBool ("Play", true);
-				if (defsetter == 2) 
+			if (changeDefRune == true) {
+				if (defsetter == 1)
+					myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneOmbre.GetComponent<Animator> ().SetBool ("Play", true);
+				if (defsetter == 2)
 					myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneLeurre.GetComponent<Animator> ().SetBool ("Play", true);
-					if (OffenseSet == 1) 
-						myRuneManager.GetComponent<RuneManagerScript> ().ImageRunePiege.GetComponent<Animator> ().SetBool ("Play", true);
-						if (OffenseSet == 2) 
-							myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneMarquage.GetComponent<Animator> ().SetBool ("Play", true);
-							if (tacticSetter == 1) 
-								myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneAccrochage.GetComponent<Animator> ().SetBool ("Play", true);
-								if (tacticSetter == 2) 
-									myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneSolidification.GetComponent<Animator> ().SetBool ("Play", true);
-			RuneTaken.SetActive (false);
-
+			}
+			if (changeOffRune == true) {
+				if (OffenseSet == 1)
+					myRuneManager.GetComponent<RuneManagerScript> ().ImageRunePiege.GetComponent<Animator> ().SetBool ("Play", true);
+				if (OffenseSet == 2)
+					myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneMarquage.GetComponent<Animator> ().SetBool ("Play", true);
+			}
+			if (changeTacticRune == true) {
+				if (tacticSetter == 1)
+					myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneAccrochage.GetComponent<Animator> ().SetBool ("Play", true);
+				if (tacticSetter == 2)
+					myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneSolidification.GetComponent<Animator> ().SetBool ("Play", true);
+				RuneTaken.SetActive (false);
+			}
 		
 					}
 		}

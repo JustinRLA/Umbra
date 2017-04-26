@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class BorneBase : MonoBehaviour {
 	GameObject playerMy;
 	GameObject RuneManager;
-	GameObject FeedBackImage;
-	public int myTempoDefRune;
+public int myTempoDefRune;
 	public int myTempoOffRune;
 	public int myTempoTacticRune;
 	public GameObject LureRune;
@@ -40,7 +39,6 @@ public class BorneBase : MonoBehaviour {
 	void Start () {
 		playerMy=GameObject.Find("2DCharacter(Clone)");
 		RuneManager=GameObject.Find("RuneManager");
-		FeedBackImage = GameObject.Find ("feedbackRuneChange");
 
 	}
 	
@@ -60,7 +58,6 @@ public class BorneBase : MonoBehaviour {
 
 		playerMy=GameObject.Find("2DCharacter(Clone)");
 		RuneManager=GameObject.Find("RuneManager");
-		FeedBackImage = GameObject.Find ("feedbackRuneChange");
 
 		RuneManager.GetComponent<RuneManagerScript> ().enabled = true;
 		PlayerPrefs.SetInt ("RuneOffense", myTempoOffRune);

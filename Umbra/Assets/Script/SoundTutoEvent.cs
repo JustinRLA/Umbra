@@ -7,7 +7,6 @@ public class SoundTutoEvent : MonoBehaviour {
 	public GameObject EnnemyTarget;
 	public Transform PhantomPoint;
 	public GameObject Shield;
-	Vector2 myvector2;
 
 	// Use this for initialization
 	void Start () {
@@ -23,9 +22,8 @@ public class SoundTutoEvent : MonoBehaviour {
 	{
 		if(col.tag=="Player")
 		{
-			myvector2 = new Vector2 (transform.position.x, transform.position.y);
 			EnnemyTarget.GetComponent<EnnnemyPatrolUpgraded> ().PhamomPoint.position = PhantomPoint.position;
-			EnnemyTarget.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 13.4f;
+			EnnemyTarget.GetComponent<EnnnemyPatrolUpgraded> ().timerState = 13.6f;
 			Shield.GetComponent<Animator> ().SetBool ("Play", true);
 			GetComponent<Collider2D> ().enabled = false;
 			StartCoroutine (timeanim ());

@@ -33,16 +33,16 @@ public class RuneTutoEvent : MonoBehaviour {
 		ThirdText.GetComponent<TextMesh> ().color=new Color(1,0.5f,0.5f,valuerColorThree);
 
 		if(actiatefirstEvent==true)
-			valueCOlor += Time.deltaTime;
+			valueCOlor += Time.deltaTime*5;
 
 		if (actiatefirstEvent == true && Input.GetMouseButton (1)) {
 			FirstText.SetActive (false);
 			activateSecondEvent = true;
 		}
 		if (activateSecondEvent == true)
-			valuerColorTwo += Time.deltaTime;
+			valuerColorTwo += Time.deltaTime*5;
 		if (activateThirdEvent == true)
-			valuerColorThree += Time.deltaTime;
+			valuerColorThree += Time.deltaTime*5;
 		
 
 		if(RuneManager.GetComponent<RuneManagerScript>().RuneModeEnabled && Input.GetKey(KeyCode.Alpha1) && activateSecondEvent==true)
