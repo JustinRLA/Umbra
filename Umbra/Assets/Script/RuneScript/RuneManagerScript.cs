@@ -9,7 +9,7 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject DefTimer;
 	public GameObject OffTimer;
 	public GameObject TacticTimer;
-	bool canSwitchMode;
+	bool canSwitchMode=true;
 	ShadowInstantiate myShadowInstantiate;
 	MarkEnnemy myMarkEnnemy;
 	SolidifcationEnabled mySolidicationEnabled;

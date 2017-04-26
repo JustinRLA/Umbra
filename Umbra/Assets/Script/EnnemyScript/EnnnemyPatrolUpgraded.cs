@@ -19,8 +19,6 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	public bool PlayerIsUp;
 	public bool PlayerIsDown;
 	public GameObject TeleportParticle;
-	public GameObject TeleportParticleTest;
-
 	Vector3 movPos;
 	bool routine;
 	public float timerAttack;
@@ -163,14 +161,16 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		AkSoundEngine.PostEvent ("NPC_State_Normal", gameObject);
 	}
 
-
+	//0.287 0.691
+	//Left -0.283 0.68
 	public void DestroyObj()
 	{
 		AkSoundEngine.PostEvent ("NPC_Destroy", gameObject);
 
 	}
 	void Start () {
-		TeleportParticle= (GameObject)Resources.Load ("Portal",typeof (GameObject));
+	//	MyViewBase = gameObject.transform.Find ("ViewBase").gameObject;
+			TeleportParticle= (GameObject)Resources.Load ("Portal",typeof (GameObject));
 
 		routine = true;
 		MyPlayer = GameObject.Find("2DCharacter(Clone)");
@@ -1259,11 +1259,16 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 		{
 			GetComponent<SpriteRenderer>().flipX=true;
 			FliPBase.transform.eulerAngles=new Vector3(0,0,180);
+			FliPBase.transform.position = new Vector3 (transform.position.x-0.283f, transform.position.y+0.691f, 0);
+
 		}
 		else
 		{
 			GetComponent<SpriteRenderer>().flipX=false;
 			FliPBase.transform.eulerAngles=new Vector3(0,0,0);
+			FliPBase.transform.position = new Vector3 (transform.position.x+0.287f, transform.position.y+0.68f, 0);
+
+
 		}
 
 

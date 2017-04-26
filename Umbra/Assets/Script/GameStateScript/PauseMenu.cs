@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour {
 	GameObject MusicBase;
 
 	BorneBase myBorneScript;
-	bool canPause;
+	bool canPause=true;
 
 	// Use this for initialization
 	void Start () {
