@@ -28,31 +28,42 @@ public class RuneTutoEvent : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		FirstText.GetComponent<TextMesh> ().color=new Color(1,1,1,valueCOlor);
-		SecondText.GetComponent<TextMesh> ().color=new Color(1,1,1,valuerColorTwo);
-		ThirdText.GetComponent<TextMesh> ().color=new Color(1,0.5f,0.5f,valuerColorThree);
+		FirstText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,valueCOlor);
+		SecondText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,valuerColorTwo);
+		ThirdText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,valuerColorThree);
 
 		if(actiatefirstEvent==true)
 			valueCOlor += Time.deltaTime*5;
 
 		if (actiatefirstEvent == true && Input.GetMouseButton (1)) {
-			FirstText.SetActive (false);
 			activateSecondEvent = true;
 		}
-		if (activateSecondEvent == true)
-			valuerColorTwo += Time.deltaTime*5;
-		if (activateThirdEvent == true)
-			valuerColorThree += Time.deltaTime*5;
-		
+		if (activateSecondEvent == true) {
+			valueCOlor = 0.4f;
+			FirstText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0.5f);
+
+			valuerColorTwo += Time.deltaTime * 5;
+			actiatefirstEvent = false;
+
+		}
+		if (activateThirdEvent == true) {
+			SecondText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0.4f);
+			valuerColorTwo = 0.4f;
+
+			valuerColorThree += Time.deltaTime * 5;
+			activateSecondEvent = false;
+		}
 
 		if(RuneManager.GetComponent<RuneManagerScript>().RuneModeEnabled && Input.GetKey(KeyCode.Alpha1) && activateSecondEvent==true)
 		{
-			SecondText.SetActive (false);
+
 			activateThirdEvent = true;
 		}
-		if (activateThirdEvent == true)
+		if (activateThirdEvent == true) {
 			valuerColorThree += Time.deltaTime;
+			SecondText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0.4f);
 
+		}
 		if (valuerColorThree >= 1)
 			Ending ();
 
@@ -66,7 +77,7 @@ public class RuneTutoEvent : MonoBehaviour {
 
 	void Ending()
 	{
-		ThirdText.GetComponent<TextMesh> ().color=new Color(1,0.5f,0.5f,1);
+		ThirdText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,1);
 		Destroy (gameObject);
 
 	}

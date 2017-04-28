@@ -40,14 +40,14 @@ public class solifyShadow : MonoBehaviour {
 		if (enable == true) {
 			if (Clickable == true && PlayerMy.GetComponent<PlatformerCharacter2D> ().inShadow == false) 
 				print ("click");
-			} 
+		
 
 		if (Input.GetMouseButtonDown(1) && Clickable == true)
 		{
 			CancelAction ();
 		MySolid.CanClickable = false;
 		}
-
+		} 
 
 	}
 
@@ -126,6 +126,7 @@ public class solifyShadow : MonoBehaviour {
 		AkSoundEngine.PostEvent("PC_Rune_Solide_Use",gameObject);
 		myMainCam = GameObject.Find ("Main Camera");
 		enable = false;
+		mymyRuneManagerScript.RuneActivated = false;
 
 		mymyRuneManagerScript.timerTactic = 0;
 		mymyRuneManagerScript.TacticTimer.SetActive (true);

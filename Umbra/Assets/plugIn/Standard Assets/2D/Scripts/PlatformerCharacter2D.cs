@@ -518,7 +518,7 @@ using UnityEngine.SceneManagement;
 		transform.localScale = theScale;
 
 	}
-        private void Flip()
+	public void Flip()
         {
             // Switch the way the player is labelled as facing.
             m_FacingRight = !m_FacingRight;
@@ -544,10 +544,11 @@ using UnityEngine.SceneManagement;
 	}
 	public void StartWave()
 	{
-		WaveFootObj=Instantiate (WaveFoot) as GameObject;
-		WaveFoot.transform.position = m_GroundCheck.position;
+	//	WaveFootObj=Instantiate (WaveFoot) as GameObject;
+		Instantiate (WaveFoot, m_GroundCheck.position, m_GroundCheck.rotation);
+		//WaveFoot.transform.position = m_GroundCheck.position;
 
-		WaveFootObj.transform.parent = m_GroundCheck.transform;
+	//	WaveFootObj.transform.parent = m_GroundCheck.transform;
 
 
 	}

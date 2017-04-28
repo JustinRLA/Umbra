@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AppearLetter : MonoBehaviour {
 	public GameObject thisText;
-	float valueCOlor;
+	public float valueCOlor;
 	public bool active=false;
 	public bool bluetext;
 	public bool greentext;
@@ -17,14 +17,8 @@ public class AppearLetter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(redtext==true)
-		thisText.GetComponent<TextMesh> ().color=new Color(1,0.6f,0.6f,valueCOlor);
-		if(bluetext==true)
-			thisText.GetComponent<TextMesh> ().color=new Color(0.6f,0.6f,1,valueCOlor);
-		if(whitetext==true)
-			thisText.GetComponent<TextMesh> ().color=new Color(1,1,1,valueCOlor);
-		if(greentext==true)
-			thisText.GetComponent<TextMesh> ().color=new Color(0.6f,1,0.6f,valueCOlor);
+
+			thisText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,valueCOlor);
 		
 		if(active==true)
 		valueCOlor += Time.deltaTime;
@@ -40,14 +34,7 @@ public class AppearLetter : MonoBehaviour {
 	void Ending()
 	{
 		
-		if(redtext==true)
-			thisText.GetComponent<TextMesh> ().color=new Color(1,0.6f,0.6f,1);
-		if(bluetext==true)
-			thisText.GetComponent<TextMesh> ().color=new Color(0.6f,0.6f,1,1);
-		if(whitetext==true)
-			thisText.GetComponent<TextMesh> ().color=new Color(1,1,1,1);
-		if(greentext==true)
-			thisText.GetComponent<TextMesh> ().color=new Color(0.6f,1,0.6f,1);
+			thisText.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,1);
 		Destroy (gameObject);
 	}
 }

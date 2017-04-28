@@ -24,7 +24,6 @@ public class InitializeLevel : MonoBehaviour {
 	public GameObject[]Piece;
 	public GameObject[]TrapFeedback;
 	public GameObject[]GrapRegion;
-	public GameObject[] interzone;
 	public GameObject[] Cache;
 	public bool debugMusTest;
 	GameObject MusicBase;
@@ -62,8 +61,6 @@ public class InitializeLevel : MonoBehaviour {
 //		if(debugMusTest==true)
 //			AkSoundEngine.PostEvent("Mus_Ingame",gameObject);
 		
-		interzone [0].SetActive (false);
-		interzone [1].SetActive (false);
 		if (debugMusTest == false) {
 			if (decoountNumber < 6)
 				AkSoundEngine.PostEvent ("Mus_Secteur1", MusicBase);
@@ -81,11 +78,6 @@ public class InitializeLevel : MonoBehaviour {
 				AkSoundEngine.PostEvent ("Mus_Secteur2", gameObject);
 		}
 
-		if (decoountNumber >= 7)
-			interzone [1].SetActive(true);
-
-		if (decoountNumber < 7)
-			interzone [0].SetActive (true);
 
 
 		if (decoountNumber > 0 && decoountNumber < 10) {

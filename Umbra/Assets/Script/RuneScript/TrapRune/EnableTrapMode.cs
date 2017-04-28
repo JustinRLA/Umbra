@@ -39,12 +39,13 @@ public class EnableTrapMode : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		Mousepos = (Input.mousePosition);
+		Mousepos.z = 0;
+
 		//    myraycast = Physics2D.Raycast(Mousepos,Mousepos-Camera.main.ScreenToWorldPoint(Mousepos));
 		ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		myraycast = Physics2D.Raycast(ray.origin, ray.direction,Mathf.Infinity);
 
-		Mousepos = (Input.mousePosition);
-		Mousepos.z = 0;
 
 		if(Input.GetMouseButton(1))
 		{

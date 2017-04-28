@@ -33,12 +33,14 @@ public class LineRendererTest : MonoBehaviour {
 	bool redhaveplayed;
 	bool greenhaveplayed;
 	public GameObject BannerBase;
+	RaycastHit2D myStraightraycast;
 
 	GameObject RuneFull;
 	float direction;
 	Vector3 movPos;
+	Vector3 Mousepos;
 
-
+	Ray ray;
 	public GameObject MainCamera;
 
 	void Start()
@@ -84,6 +86,14 @@ public class LineRendererTest : MonoBehaviour {
 
 		if(	ActivateThisShit == true)
 			{
+			Mousepos = (Input.mousePosition);
+			Mousepos.z = 0;
+
+			ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+			myStraightraycast = Physics2D.Raycast(ray.origin, ray.direction,Mathf.Infinity);
+
+
+
 			myRaycast = Physics2D.Linecast (PlayerPos,mousePos,myMask);
 
 				if(line == null)
@@ -147,6 +157,12 @@ public class LineRendererTest : MonoBehaviour {
 						//PlayerMy.GetComponent<Rigidbody2D>().AddForce((HitTransformPoint.position-PlayerMy.position).normalized *9550);
 						BannerBase=TheBeam.transform.parent.gameObject;
 						PlayerMy.GetComponent<VeryfyCol>().BeamToTouch=BannerBase;
+						if (BannerBase.GetComponent<maxHauteurLadder> ().CheckRight == true && myPlayer.GetComponent<PlatformerCharacter2D> ().m_FacingRight == false)
+							myPlayer.GetComponent<PlatformerCharacter2D> ().Flip ();
+						else
+							if (BannerBase.GetComponent<maxHauteurLadder> ().CheckRight == false && myPlayer.GetComponent<PlatformerCharacter2D> ().m_FacingRight == true)
+								myPlayer.GetComponent<PlatformerCharacter2D> ().Flip ();
+						
 					ActivateThisShit = false;
 						myRuneManagerScript.timerTactic = 0;
 						Time.timeScale = 1f;
@@ -213,16 +229,16 @@ public class LineRendererTest : MonoBehaviour {
 		else
 			touchedBadThing = false;
 
-				if (myRaycast.collider.tag == "grapRegion" && touchedBadThing == false) {			
+				if (myStraightraycast.collider.tag == "grapRegion" && touchedBadThing == false) {			
 					print ("touchBeam");
 					TouchGood = true;
-					TheBeam = myRaycast.collider.gameObject;
+					TheBeam = myStraightraycast.collider.gameObject;
 				} else {
 					TouchGood = false;
 					print ("nioop");
 					TheBeam = null;
 				}
-				if (myRaycast.collider.tag != "grapRegion") {
+				if (myStraightraycast.collider.tag != "grapRegion") {
 					TouchGood = false;
 					TheBeam = null;
 
@@ -298,7 +314,9 @@ public class LineRendererTest : MonoBehaviour {
 
 	IEnumerator StopGoThrought()
 	{
+		
 		yield return new WaitForSeconds (0.1f);
+		myPlayer.layer = 13;
 
 		AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Use", gameObject);
 		myRuneManagerScript.RuneActivated = false;
@@ -333,7 +351,9 @@ public class LineRendererTest : MonoBehaviour {
 		CamGrap.SetActive (false);
 		myRuneManagerScript.RuneActivated = false;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+
 		TouchGood = false;
+
 		BannerBase = null;
 		TheBeam = null;
 		GetComponent<LineRendererTest> ().enabled = false;

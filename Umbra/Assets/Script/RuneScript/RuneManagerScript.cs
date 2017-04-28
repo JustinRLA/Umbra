@@ -9,7 +9,7 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject DefTimer;
 	public GameObject OffTimer;
 	public GameObject TacticTimer;
-	bool canSwitchMode=true;
+	public bool canSwitchMode=true;
 	ShadowInstantiate myShadowInstantiate;
 	MarkEnnemy myMarkEnnemy;
 	SolidifcationEnabled mySolidicationEnabled;
@@ -247,12 +247,12 @@ public class RuneManagerScript : MonoBehaviour
 
 		if ( RuneModeEnabled == false)
 		{
-		texttrappe.GetComponent<Text> ().enabled = false;
-			textaccrochage.GetComponent<Text> ().enabled = false;
-			textleure.GetComponent<Text> ().enabled = false;
-			textSolid.GetComponent<Text> ().enabled = false;
-			textMark.GetComponent<Text> ().enabled = false;
-			textOmbre.GetComponent<Text> ().enabled = false;
+		texttrappe.GetComponent<Image> ().enabled = false;
+			textaccrochage.GetComponent<Image> ().enabled = false;
+			textleure.GetComponent<Image> ().enabled = false;
+			textSolid.GetComponent<Image> ().enabled = false;
+			textMark.GetComponent<Image> ().enabled = false;
+			textOmbre.GetComponent<Image> ().enabled = false;
 
 			animCamOne.speed = 2;
 			animCamTwo.speed = 2;
@@ -330,12 +330,12 @@ public class RuneManagerScript : MonoBehaviour
 			animCamTwo.speed = 13;
 			animCamThree.speed = 13;
 			animCamFour.speed = 13;
-			texttrappe.GetComponent<Text> ().enabled = true;
-			textaccrochage.GetComponent<Text> ().enabled = true;
-			textleure.GetComponent<Text> ().enabled = true;
-			textSolid.GetComponent<Text> ().enabled = true;
-			textMark.GetComponent<Text> ().enabled = true;
-			textOmbre.GetComponent<Text> ().enabled = true;
+			texttrappe.GetComponent<Image> ().enabled = true;
+			textaccrochage.GetComponent<Image> ().enabled = true;
+			textleure.GetComponent<Image> ().enabled = true;
+			textSolid.GetComponent<Image> ().enabled = true;
+			textMark.GetComponent<Image> ().enabled = true;
+			textOmbre.GetComponent<Image> ().enabled = true;
 
 			
 
