@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465791, g: 0.49641293, b: 0.57481766, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2014,7 +2014,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Produit une zone d\u2019ombre.\nUne ombre bloque la\nvision des ennemis."
+  m_Text: "Produit une zone d\u2019ombre\nUne ombre bloque la\nvision des ennemis"
 --- !u!222 &443784354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2054,7 +2054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0004272461, y: -202.76099}
+  m_AnchoredPosition: {x: 0.0004272461, y: -202.76105}
   m_SizeDelta: {x: 3687, y: 1585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530885428
@@ -2722,7 +2722,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 15, y: 0}
+  m_SizeDelta: {x: 15, y: 2}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &790749765
 MonoBehaviour:
@@ -2736,7 +2736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2762,8 +2762,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1436954463}
   m_HandleRect: {fileID: 1436954462}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.16218272
+  m_Value: 1
+  m_Size: 0.1621827
   m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3947,8 +3947,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Marque un ennemi.\nUn ennemi marqu\xE9 devient\nvisible au travers des
-    surfaces.\n\n"
+  m_Text: "Marque un ennemi\nUn ennemi marqu\xE9 devient\nvisible au travers des surfaces\n\n"
 --- !u!222 &956486767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5953,7 +5952,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Cr\xE9e un double qui peut \xEAtre\ncontr\xF4l\xE9 pour faire diversion."
+  m_Text: "Cr\xE9e un double qui peut \xEAtre\ncontr\xF4l\xE9 pour faire diversion"
 --- !u!222 &1387807494
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6216,8 +6215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.8, y: 6.7}
-  m_SizeDelta: {x: 333, y: 215.65002}
+  m_AnchoredPosition: {x: -0.6500061, y: 0.3874817}
+  m_SizeDelta: {x: 332.7, y: 199.22504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1436954463
 MonoBehaviour:
@@ -7595,7 +7594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Place un pi\xE8ge sur le sol\nqui immobilise temporairement\nun ennemi.\n"
+  m_Text: "Place un pi\xE8ge sur le sol\nqui immobilise temporairement\nun ennemi\n"
 --- !u!222 &1802563183
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7821,7 +7820,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Produit un grappin\nqui s'accroche \xE0 certaine\nsurface."
+  m_Text: "Produit un grappin\nqui s'accroche aux\nbanni\xE8res"
 --- !u!222 &1845076578
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8280,8 +8279,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Solidifie l\u2019ombre et la fum\xE9e.\nUne ombre solidifi\xE9e peut\n\xEAtre
-    escalad\xE9e."
+  m_Text: "Solidifie l\u2019ombre et la fum\xE9e\nUne ombre solidifi\xE9e peut\n\xEAtre
+    escalad\xE9e"
 --- !u!222 &2021005895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8929,5 +8928,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 58}
+  m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}

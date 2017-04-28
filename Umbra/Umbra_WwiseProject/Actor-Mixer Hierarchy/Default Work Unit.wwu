@@ -2148,7 +2148,14 @@
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Rune" ID="{29D11DBF-E706-4103-AB88-65687082DE95}" ShortID="396452769">
+									<PropertyList>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="NPC" ID="{49B11B0F-CC76-4950-B946-749AEAC2C63E}" WorkUnitID="{9DDEA9CA-00FF-443F-9714-0256F99621A7}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
 										</Reference>
@@ -2409,6 +2416,9 @@
 													<AudioFile>PC_Rune_Ombre_Select.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{4DC8F6D2-A640-4DD3-BE8F-6BFACBA9098A}"/>
+											</PositioningInfo>
 											<ActiveSourceList>
 												<ActiveSource Name="PC_Rune_Ombre_Select" ID="{A94771C3-82D6-4DA2-A4EE-BBAA9A9AF976}" Platform="Linked"/>
 											</ActiveSourceList>
@@ -2910,7 +2920,7 @@
 												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>8</Value>
+														<Value>5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3567,7 +3577,7 @@
 												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>16</Value>
+														<Value>20</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3620,6 +3630,11 @@
 														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 														<Property Name="PositioningType" Type="int16" Value="1"/>
 														<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>70</Value>
@@ -3641,6 +3656,11 @@
 														<RandomSequenceContainer Name="Inhale" ID="{3BD2F52F-343F-4B2B-8377-1861A3FFEBC6}" ShortID="345451506">
 															<PropertyList>
 																<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>7</Value>
+																	</ValueList>
+																</Property>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -4104,6 +4124,11 @@
 														<RandomSequenceContainer Name="Exhale" ID="{03CD41E0-12DF-41F5-B455-61A8C18BFD7A}" ShortID="127321486">
 															<PropertyList>
 																<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>7</Value>
+																	</ValueList>
+																</Property>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -4442,7 +4467,7 @@
 														<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>-4</Value>
+																<Value>6</Value>
 															</ValueList>
 														</Property>
 														<Property Name="Weight" Type="Real64">
@@ -5448,6 +5473,11 @@
 										<Property Name="Priority" Type="int16">
 											<ValueList>
 												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
