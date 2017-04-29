@@ -235,38 +235,6 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="VO_PC_Death_Short_01" ID="{A306288E-F0BB-4AE4-8970-A8F03917C0A1}" ShortID="334352256" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="SFX" ID="{2B135C9B-AE0C-4D00-941A-F1435180B301}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-															<ObjectRef Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-														</Reference>
-														<Reference Name="Effect1" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
-															<ObjectRef Name="Repeat_after_me" ID="{7A0568D0-BE8B-4233-B3E8-200344DB7AE0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VO_PC_Death_Short_01" ID="{C8AAD8AA-B35D-4D39-8B09-A0C6DC8FD5DB}" ShortID="970054798">
-															<Language>SFX</Language>
-															<AudioFile>VO_PC_Death_Short_01.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VO_PC_Death_Short_01" ID="{C8AAD8AA-B35D-4D39-8B09-A0C6DC8FD5DB}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 												<Sound Name="VO_PC_Death_Short_02" ID="{8638B4B2-1B7C-4EDE-9028-9DEB4E2CCB5E}" ShortID="363625422" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -354,96 +322,6 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="VO_PC_Death_Long_01" ID="{875923CF-1211-4174-A3A1-A73452D8A362}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="VO_PC_Death_Long_03" ID="{693B08DE-399A-4499-B091-4694CE26F0E2}" ShortID="162575888" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-														<Property Name="Lowpass" Type="int16">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{9C6A65AA-284B-4FE9-AC7F-E0DAC8BB1297}"/>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{0B44F842-6369-400F-8615-C167E892EFBD}"/>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="SFX" ID="{2B135C9B-AE0C-4D00-941A-F1435180B301}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-															<ObjectRef Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-														</Reference>
-														<Reference Name="Effect1" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
-															<ObjectRef Name="Repeat_after_me" ID="{7A0568D0-BE8B-4233-B3E8-200344DB7AE0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VO_PC_Death_Long_01" ID="{E863A9C3-D52C-4E57-A92A-FBEFD734BEA9}" ShortID="829171738">
-															<PropertyList>
-																<Property Name="TrimEnd" Type="Real64" Value="0.328329132248137"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>VO_PC_Death_Long_01.wav</AudioFile>
-															<ConvertedFileIDList>
-																<File ID="143388766"/>
-															</ConvertedFileIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VO_PC_Death_Long_01" ID="{E863A9C3-D52C-4E57-A92A-FBEFD734BEA9}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="VO_PC_Death_Long_04" ID="{EE9479A1-B7FF-4AD8-96BE-532491C61E53}" ShortID="235457431" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="SFX" ID="{2B135C9B-AE0C-4D00-941A-F1435180B301}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-															<ObjectRef Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-														</Reference>
-														<Reference Name="Effect1" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
-															<ObjectRef Name="Repeat_after_me" ID="{7A0568D0-BE8B-4233-B3E8-200344DB7AE0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="VO" ID="{AFA8E23F-2B66-4155-9FB3-1F0C642766F2}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VO_PC_Death_Long_02" ID="{3B9E2B06-2864-4A1F-A8D1-2B75FCD4AF4D}" ShortID="504236252">
-															<PropertyList>
-																<Property Name="TrimEnd" Type="Real64" Value="0.215281700477811"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>VO_PC_Death_Long_02.wav</AudioFile>
-															<ConvertedFileIDList>
-																<File ID="881124872"/>
-															</ConvertedFileIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VO_PC_Death_Long_02" ID="{3B9E2B06-2864-4A1F-A8D1-2B75FCD4AF4D}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -727,479 +605,6 @@
 														<ActiveSource Name="PC_Foot_Run_07" ID="{4340A484-E336-402C-B90C-0D894C98568E}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_08" ID="{1A986260-D76C-45DB-9532-5DD31AA4602F}" ShortID="550591968" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_08" ID="{D748AAFD-91E4-47DC-91B0-DDD4791F523A}" ShortID="490238902">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_08.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_08" ID="{D748AAFD-91E4-47DC-91B0-DDD4791F523A}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_09" ID="{522E4B37-8151-4462-B0F6-7607C9CE74FD}" ShortID="869559747" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_09" ID="{E2CFBC7F-ADED-4C70-BCC1-1EAD291D725C}" ShortID="758512462">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_09.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_09" ID="{E2CFBC7F-ADED-4C70-BCC1-1EAD291D725C}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_10" ID="{D258BAD1-F2B7-4B99-B82A-5CA2988C8E6B}" ShortID="704219464" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_10" ID="{E81C329B-B096-42F8-B689-BCCD79C0EE31}" ShortID="1022851238">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_10.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_10" ID="{E81C329B-B096-42F8-B689-BCCD79C0EE31}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_11" ID="{4EE69457-91D8-43DB-96F5-A1E558047C2B}" ShortID="524249692" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_11" ID="{147EA1E1-D18D-43B4-A763-B346D6BCEB31}" ShortID="871855901">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_11.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_11" ID="{147EA1E1-D18D-43B4-A763-B346D6BCEB31}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_12" ID="{6D5864D3-BB01-4DA3-BA9D-1217EF788441}" ShortID="875836092" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_12" ID="{15BA1951-7F01-4FC3-88AD-7666E05AC7CE}" ShortID="842840745">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_12.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_12" ID="{15BA1951-7F01-4FC3-88AD-7666E05AC7CE}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_13" ID="{3449A1E6-A2CA-4A0A-AD4A-C3F6D40D3EEE}" ShortID="220091648" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_13" ID="{383C33E6-AF74-48DD-88AF-7E26B2366300}" ShortID="158080461">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_13.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_13" ID="{383C33E6-AF74-48DD-88AF-7E26B2366300}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_14" ID="{AB70BB9D-4E50-4BDA-9FA9-33B3E16AE287}" ShortID="806179009" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_14" ID="{C8F5AB4B-64B5-4200-ABEB-9FBB354228DB}" ShortID="48037635">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_14.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_14" ID="{C8F5AB4B-64B5-4200-ABEB-9FBB354228DB}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_15" ID="{00D968AE-AAD7-4D63-B980-15E47AF3D6A8}" ShortID="981179612" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_15" ID="{029F3683-11E3-4C17-8EBB-ACDFD6ABF55B}" ShortID="530974734">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_15.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_15" ID="{029F3683-11E3-4C17-8EBB-ACDFD6ABF55B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_16" ID="{11049034-D7B1-40DF-9D3D-44F178FEB450}" ShortID="403390446" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_16" ID="{5A0587FE-F43C-493F-B700-94BED8A8A302}" ShortID="743855108">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_16.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_16" ID="{5A0587FE-F43C-493F-B700-94BED8A8A302}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_17" ID="{6084B7F9-B131-4E5C-9AE2-68DCDF4EAEE1}" ShortID="396714480" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_17" ID="{9DF80CA4-69F6-4722-A818-5B1201496A97}" ShortID="120637523">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_17.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_17" ID="{9DF80CA4-69F6-4722-A818-5B1201496A97}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_18" ID="{9EEDF8CE-686A-41E3-B565-0E00CE77336F}" ShortID="960007005" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_18" ID="{C3F42349-5888-42DC-ACD4-CB1ADCB239D9}" ShortID="594222128">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_18.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_18" ID="{C3F42349-5888-42DC-ACD4-CB1ADCB239D9}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_19" ID="{6D2E1CCD-007A-4738-9E9E-3ED41D1E8BB6}" ShortID="572465223" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_19" ID="{FBFD4850-A968-42C4-B8CC-40566C2EAC99}" ShortID="936663382">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_19.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_19" ID="{FBFD4850-A968-42C4-B8CC-40566C2EAC99}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_20" ID="{7BBF5AED-D34B-46BD-9341-DC31444FF7AC}" ShortID="592592950" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_20" ID="{16285DAA-1E08-4C45-8801-4C3652B3BB39}" ShortID="887571879">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_20.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_20" ID="{16285DAA-1E08-4C45-8801-4C3652B3BB39}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_21" ID="{808D6CC7-EB23-48CD-89DC-A894AB34C66B}" ShortID="33947612" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_21" ID="{B50E89C8-F254-43F4-80E7-96EDD9F15ED5}" ShortID="670559798">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_21.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_21" ID="{B50E89C8-F254-43F4-80E7-96EDD9F15ED5}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_22" ID="{DA24A7BC-8E55-492E-B815-B73A3603C1C5}" ShortID="957228098" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_22" ID="{5D58D01B-9C60-4BD0-B700-655DA8B2AEA4}" ShortID="1033123932">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_22.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_22" ID="{5D58D01B-9C60-4BD0-B700-655DA8B2AEA4}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_23" ID="{70511321-590D-48B7-B4F5-D682070DC8E7}" ShortID="128220453" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_23" ID="{9AEFEC34-9403-4EF5-B913-A795D1202376}" ShortID="964720064">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_23.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_23" ID="{9AEFEC34-9403-4EF5-B913-A795D1202376}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_24" ID="{DE8915F6-6244-4C61-ADB6-BC6634A3A985}" ShortID="1044452665" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_24" ID="{4E63DBCD-F137-40DF-BC08-22855F9AF633}" ShortID="792498545">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_24.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_24" ID="{4E63DBCD-F137-40DF-BC08-22855F9AF633}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Run_25" ID="{3006EE7D-321C-4F4D-AFA8-34609AD21EC3}" ShortID="627433026" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_25" ID="{B2205C93-AEF4-45AE-809B-FF6D85E124FE}" ShortID="433195464">
-															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.002700918164885"/>
-																<Property Name="TrimBegin" Type="Real64" Value="7.44399396663427E-03"/>
-																<Property Name="TrimEnd" Type="Real64" Value="5.34913548752834E-02"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_25.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_25" ID="{B2205C93-AEF4-45AE-809B-FF6D85E124FE}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 											</ChildrenList>
 											<StateInfo>
 												<StateGroupList>
@@ -1356,84 +761,6 @@
 														<ActiveSource Name="PC_Foot_Climb_03" ID="{6E4DA3D3-0614-437F-858E-87012B13A724}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Climb_04" ID="{8BA4C7FC-8592-4926-9938-1F82FC6D62B7}" ShortID="899963907" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Climb_04" ID="{00AD6D6A-DC83-403C-85C5-CE6852D7DD93}" ShortID="585143226">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Climb_04.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Climb_04" ID="{00AD6D6A-DC83-403C-85C5-CE6852D7DD93}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Climb_05" ID="{6B066658-6942-40E5-9CB5-6877213A0C25}" ShortID="595370420" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Climb_05" ID="{24A7E4B1-26A7-413B-AC74-66CED8E335F4}" ShortID="401738738">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Climb_05.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Climb_05" ID="{24A7E4B1-26A7-413B-AC74-66CED8E335F4}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Climb_06" ID="{CA718C55-DAC4-41AD-BE8D-4251800C063A}" ShortID="366433719" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Climb_06" ID="{C32B0F87-C69C-427E-9B7D-3710998E08D7}" ShortID="580344731">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Climb_06.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Climb_06" ID="{C32B0F87-C69C-427E-9B7D-3710998E08D7}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 												<Sound Name="PC_Foot_Climb_07" ID="{C5685807-0DC5-4AE1-8997-1A8C187433B6}" ShortID="565413753" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -1456,110 +783,6 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="PC_Foot_Climb_07" ID="{08D2A20F-A43A-4E43-B7E8-8D9A287A8C4D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Climb_08" ID="{048D5FD9-C4C4-4CF4-95F4-46CE9DCFD550}" ShortID="371758547" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Climb_08" ID="{789AA8BD-CEC9-4DCD-A670-E92103829FF9}" ShortID="939131074">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Climb_08.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Climb_08" ID="{789AA8BD-CEC9-4DCD-A670-E92103829FF9}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Climb_09" ID="{8B2C7D8B-AAD6-4371-B08E-45B1A414E229}" ShortID="843266062" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Climb_09" ID="{C71F21CB-99DF-40BC-A18D-E57DA0626807}" ShortID="948978557">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Climb_09.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Climb_09" ID="{C71F21CB-99DF-40BC-A18D-E57DA0626807}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Climb_10" ID="{B8B05815-C927-46CF-949A-7B929DAFE47D}" ShortID="1011835553" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Climb_10" ID="{D4C3E67C-1824-4D49-8A77-51EF364ECC85}" ShortID="239502760">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Climb_10.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Climb_10" ID="{D4C3E67C-1824-4D49-8A77-51EF364ECC85}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="PC_Foot_Climb_11" ID="{FCB36125-7673-4A80-ACFC-FF6595AAD66A}" ShortID="982966375" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Climb_11" ID="{3FF1856D-CB89-48ED-95C2-23ADC265420A}" ShortID="797803312">
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Climb_11.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Climb_11" ID="{3FF1856D-CB89-48ED-95C2-23ADC265420A}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -1662,32 +885,6 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<Sound Name="VO_PC_Jump_01" ID="{2923789D-B5BA-42E8-B8C8-FCD432702D6C}" ShortID="726040565" Type="SoundFX">
-															<PropertyList>
-																<Property Name="Inclusion" Type="bool">
-																	<ValueList>
-																		<Value>False</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="VO_PC_Jump_01" ID="{D5550DD9-13E8-4AFC-A50D-D1E6EE0B8B20}" ShortID="206506025">
-																	<Language>SFX</Language>
-																	<AudioFile>VO_PC_Jump_01.wav</AudioFile>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="VO_PC_Jump_01" ID="{D5550DD9-13E8-4AFC-A50D-D1E6EE0B8B20}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
 														<Sound Name="VO_PC_Jump_02" ID="{A6C293D4-F6DE-4162-A290-136704CE93AC}" ShortID="146602562" Type="SoundFX">
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -1759,32 +956,6 @@
 															</ChildrenList>
 															<ActiveSourceList>
 																<ActiveSource Name="VO_PC_Jump_04" ID="{018CB577-A403-410B-8C82-7B3E3B53B7FC}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="VO_PC_Jump_05" ID="{2A7D19ED-79EE-42FB-9F74-4DC43C473C3A}" ShortID="155279122" Type="SoundFX">
-															<PropertyList>
-																<Property Name="Inclusion" Type="bool">
-																	<ValueList>
-																		<Value>False</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="VO_PC_Jump_05" ID="{BA8701D8-C528-4482-BA19-DB202065C0E4}" ShortID="844877423">
-																	<Language>SFX</Language>
-																	<AudioFile>VO_PC_Jump_05.wav</AudioFile>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="VO_PC_Jump_05" ID="{BA8701D8-C528-4482-BA19-DB202065C0E4}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
 														<Sound Name="VO_PC_Jump_06" ID="{068680EE-536A-48BC-8330-9D21D9615151}" ShortID="842686256" Type="SoundFX">
@@ -2740,37 +1911,6 @@
 														<ActiveSource Name="PC_Foot_Run_03" ID="{0EFCD883-A7DD-463C-ACA3-FDF16F7A8509}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="PC_Foot_Run_04" ID="{BA9FBF56-5567-48CF-90CC-F83A44142328}" ShortID="1040797961" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PC_Foot_Run_04" ID="{B492C44C-EF05-4880-9ED4-60C36EF6F92E}" ShortID="57819917">
-															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="5.63217474489796E-02"/>
-																<Property Name="TrimBegin" Type="Real64" Value="1.96917517006803E-02"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.183024819302721"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>PC_Foot_Run_04.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PC_Foot_Run_04" ID="{B492C44C-EF05-4880-9ED4-60C36EF6F92E}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 												<Sound Name="PC_Foot_Run_05" ID="{337BF9FD-AE1B-4188-9599-D81A71A5249B}" ShortID="817689947" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -3133,90 +2273,6 @@
 														<ActiveSource Name="NPC_State_Alarmed_04" ID="{8BC037A4-A6BB-4F43-B35B-E95046E9A618}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="NPC_State_Alarmed_05" ID="{A1B19EB0-5279-405C-8D13-A2FE4819B055}" ShortID="762167848" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="NPC_State_Alarmed_05" ID="{857E187D-0DD2-41A9-87BC-5FCFC2A6AF93}" ShortID="192250492">
-															<Language>SFX</Language>
-															<AudioFile>NPC_State_Alarmed_05.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="NPC_State_Alarmed_05" ID="{857E187D-0DD2-41A9-87BC-5FCFC2A6AF93}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="NPC_State_Alarmed_06" ID="{CFB3DE5F-9E62-43C4-BE41-40CD243E8C7E}" ShortID="683115176" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="NPC_State_Alarmed_06" ID="{A240D50C-0B33-49C0-BD3C-89C403F8058D}" ShortID="733584388">
-															<Language>SFX</Language>
-															<AudioFile>NPC_State_Alarmed_06.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="NPC_State_Alarmed_06" ID="{A240D50C-0B33-49C0-BD3C-89C403F8058D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="NPC_State_Alarmed_07" ID="{01B27056-A9FA-41FD-9DF4-2C1406CB4F80}" ShortID="757527006" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="NPC_State_Alarmed_07" ID="{868799AA-CCA8-421A-BDC9-8D0FB308DFD2}" ShortID="92619442">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.109539158109025"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.11560360976904"/>
-																<Property Name="TrimBegin" Type="Real64" Value="9.66521983314922E-02"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.501454346637507"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>NPC_State_Alarmed_07.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="NPC_State_Alarmed_07" ID="{868799AA-CCA8-421A-BDC9-8D0FB308DFD2}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="NPC_State_Normal_Trigger" ID="{A1C2F7C7-1DFC-4A41-9D7C-9D98431126F1}" ShortID="601614223">
@@ -3243,32 +2299,6 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="NPC_State_Normal_Trigger_01" ID="{8111B7E3-9153-4276-A743-2D39155EA7FB}" ShortID="299174693" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="NPC_State_Normal_01" ID="{A9FCA8D2-8E4A-44A0-A5A7-ECE4E9FCCA0C}" ShortID="911699103">
-															<Language>SFX</Language>
-															<AudioFile>NPC_State_Normal_01.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="NPC_State_Normal_01" ID="{A9FCA8D2-8E4A-44A0-A5A7-ECE4E9FCCA0C}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 												<Sound Name="NPC_State_Normal_Trigger_02" ID="{BA5C63B9-EC50-4D04-96C5-64E405CEDE49}" ShortID="1026016042" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -3289,32 +2319,6 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="NPC_State_Normal_02" ID="{7DCAA3D3-E454-443B-9963-F18A8837849D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="NPC_State_Normal_Trigger_03" ID="{8E779FAF-2310-4673-9BB3-EF024234431D}" ShortID="696465324" Type="SoundFX">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="NPC_State_Normal_03" ID="{2FE38495-0984-4A40-BE0E-95CA12AFBF41}" ShortID="540803706">
-															<Language>SFX</Language>
-															<AudioFile>NPC_State_Normal_03.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="NPC_State_Normal_03" ID="{2FE38495-0984-4A40-BE0E-95CA12AFBF41}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -3449,82 +2453,9 @@
 																<ActiveSource Name="NPC_State_Located_01" ID="{6F821CCF-34CC-4C46-A921-F5EAE2A785C4}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="NPC_State_Located_03" ID="{7B9BDCE2-6379-48E9-88AE-3D73256C0B99}" ShortID="554873410" Type="SoundFX">
-															<PropertyList>
-																<Property Name="Inclusion" Type="bool">
-																	<ValueList>
-																		<Value>False</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="PositioningType" Type="int16" Value="1"/>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Attenuation">
-																	<ObjectRef Name="NPC" ID="{49B11B0F-CC76-4950-B946-749AEAC2C63E}" WorkUnitID="{9DDEA9CA-00FF-443F-9714-0256F99621A7}"/>
-																</Reference>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="NPC" ID="{676E26A5-D301-4F71-B3F6-0D2C0832BB69}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="NPC_State_Located_03" ID="{C6281B58-7139-413D-A162-31197F48DF0E}" ShortID="840050041">
-																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="9.92194333090379E-02"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="9.34171272675737E-02"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="3.19126832280531E-02"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="0.39223588840298"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>NPC_State_Located_03.wav</AudioFile>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="NPC_State_Located_03" ID="{C6281B58-7139-413D-A162-31197F48DF0E}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="NPC_State_Located_02" ID="{D3CC0F88-BEA8-4EC0-9036-276433C71A7A}" ShortID="63123969" Type="SoundFX">
-															<PropertyList>
-																<Property Name="Inclusion" Type="bool">
-																	<ValueList>
-																		<Value>False</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="PositioningType" Type="int16" Value="1"/>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Attenuation">
-																	<ObjectRef Name="NPC" ID="{49B11B0F-CC76-4950-B946-749AEAC2C63E}" WorkUnitID="{9DDEA9CA-00FF-443F-9714-0256F99621A7}"/>
-																</Reference>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="NPC" ID="{676E26A5-D301-4F71-B3F6-0D2C0832BB69}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="NPC_State_Located_02" ID="{6C3BE965-CEFF-4881-83C1-3DEA40BB812E}" ShortID="668117076">
-																	<PropertyList>
-																		<Property Name="FadeInDuration" Type="Real64" Value="0.118947273850016"/>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="8.76148212261095E-02"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="0.416025343172983"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>NPC_State_Located_02.wav</AudioFile>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="NPC_State_Located_02" ID="{6C3BE965-CEFF-4881-83C1-3DEA40BB812E}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
 													</ChildrenList>
 													<Playlist>
 														<ItemRef Name="NPC_State_Located_01" ID="{7363E034-8323-4D05-8BA0-F6765B90D150}"/>
-														<ItemRef Name="NPC_State_Located_03" ID="{7B9BDCE2-6379-48E9-88AE-3D73256C0B99}"/>
-														<ItemRef Name="NPC_State_Located_02" ID="{D3CC0F88-BEA8-4EC0-9036-276433C71A7A}"/>
 													</Playlist>
 												</RandomSequenceContainer>
 											</ChildrenList>
@@ -3690,32 +2621,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Inhale_01" ID="{9FEFF427-9A74-4F89-AE78-5F1EE1847278}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_02" ID="{B134B581-11DB-44D4-835C-BFDFEB5CBEEC}" ShortID="895225864" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_02" ID="{3B6F4731-80CF-4319-BC3E-C75C0075AA77}" ShortID="711143890">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_02.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_02" ID="{3B6F4731-80CF-4319-BC3E-C75C0075AA77}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Inhale_03" ID="{67CCDB0E-8831-4636-AC5A-3A13D843EB32}" ShortID="213167510" Type="SoundFX">
 																	<ReferenceList>
 																		<Reference Name="Conversion">
@@ -3780,110 +2685,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Inhale_05" ID="{B10369E3-B4A0-4396-B69A-4F3FCB95878C}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_06" ID="{FE9FD97B-5F60-46A7-A240-13BA151BB3F3}" ShortID="372971527" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_06" ID="{DCA3CC0C-D242-41F2-8DD3-9F439EF419D1}" ShortID="565478581">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_06.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_06" ID="{DCA3CC0C-D242-41F2-8DD3-9F439EF419D1}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_07" ID="{52D97B17-556D-428A-8DB7-ADA0E3B28373}" ShortID="292396729" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_07" ID="{5772637E-2D96-48C2-B51D-4C574ACDBE4E}" ShortID="935920908">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_07.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_07" ID="{5772637E-2D96-48C2-B51D-4C574ACDBE4E}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_08" ID="{7A7FB61F-E6C1-46D5-A40E-780879CD51D6}" ShortID="831293617" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_08" ID="{BA5353CB-7D45-4B79-8267-1C36675DCE8D}" ShortID="417189078">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_08.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_08" ID="{BA5353CB-7D45-4B79-8267-1C36675DCE8D}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_09" ID="{461BAEBB-007F-4FF0-9EB2-D74DDC5E6D62}" ShortID="4365562" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_09" ID="{C2DED2B9-ECDF-46A4-8173-3532882FF0A9}" ShortID="1029422787">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_09.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_09" ID="{C2DED2B9-ECDF-46A4-8173-3532882FF0A9}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Inhale_10" ID="{28792D13-A094-4772-ADC5-53A303D58256}" ShortID="177639047" Type="SoundFX">
 																	<PropertyList>
 																		<Property Name="Volume" Type="Real64">
@@ -3908,37 +2709,6 @@
 																	</ChildrenList>
 																	<ActiveSourceList>
 																		<ActiveSource Name="NPC_State_Normal_Inhale_10" ID="{CF9C84F9-E4F3-45C0-BB24-CF93A3BDE470}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_11" ID="{755F3A5B-3F3D-4C9C-A077-061E49F153A9}" ShortID="236732763" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>-3</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_11" ID="{690579B3-E4B3-4CDC-8ECB-7E1E2C94E2BE}" ShortID="507617787">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_11.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_11" ID="{690579B3-E4B3-4CDC-8ECB-7E1E2C94E2BE}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
 																<Sound Name="NPC_State_Normal_Inhale_12" ID="{9580D152-1DF2-4CF8-9D0B-8D4D5DEA7F78}" ShortID="723758911" Type="SoundFX">
@@ -3967,32 +2737,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Inhale_12" ID="{BD938F13-D1E3-483B-99E2-707296CD2B6E}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_13" ID="{841C1E31-E5D0-4D7C-A02A-192882396F21}" ShortID="777814676" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_13" ID="{7F422B60-4124-47B8-B016-93FEC57A013A}" ShortID="287832506">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_13.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_13" ID="{7F422B60-4124-47B8-B016-93FEC57A013A}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Inhale_14" ID="{D5FFE6C4-734F-400F-B6F1-9D33361BF94A}" ShortID="129245714" Type="SoundFX">
 																	<PropertyList>
 																		<Property Name="Volume" Type="Real64">
@@ -4019,37 +2763,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Inhale_14" ID="{FA86593B-B9DB-49FF-BA9D-443295A87530}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_15" ID="{11202ECA-3C40-49F2-B5D9-8A331E983536}" ShortID="24033483" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>-5</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_15" ID="{936D6FB1-08E7-428B-9695-A9B5A3C257C9}" ShortID="543036583">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_15.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_15" ID="{936D6FB1-08E7-428B-9695-A9B5A3C257C9}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Inhale_16" ID="{2D50FD01-B1C9-4587-89AA-59983C422D6D}" ShortID="952705236" Type="SoundFX">
 																	<ReferenceList>
 																		<Reference Name="Conversion">
@@ -4067,37 +2780,6 @@
 																	</ChildrenList>
 																	<ActiveSourceList>
 																		<ActiveSource Name="NPC_State_Normal_Inhale_16" ID="{06E6DA73-90F7-4DB3-8B6C-7A6C9BE57360}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Inhale_17" ID="{F23676CE-B503-4EF1-9B82-A865C844CBF5}" ShortID="1026996414" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>-2</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Inhale_17" ID="{C8CD94CB-3A35-4C28-81C4-000097ACA4AE}" ShortID="297007932">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Inhale_17.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Inhale_17" ID="{C8CD94CB-3A35-4C28-81C4-000097ACA4AE}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
 																<Sound Name="NPC_State_Normal_Inhale_18" ID="{898E3887-4092-44F3-8FC6-D105E93C6F91}" ShortID="1070260888" Type="SoundFX">
@@ -4177,32 +2859,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Exhale_02" ID="{C69B43C9-EDDD-4159-856B-F4C3153B7E5F}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Exhale_03" ID="{8658D60A-276A-48DE-8C22-638568B169CB}" ShortID="521744996" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Exhale_03" ID="{8DA79373-406E-4A60-993B-E7F653B68E65}" ShortID="168506108">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Exhale_03.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Exhale_03" ID="{8DA79373-406E-4A60-993B-E7F653B68E65}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Exhale_04" ID="{5242B0E7-8D21-4315-B78F-02F60277A6FF}" ShortID="837214919" Type="SoundFX">
 																	<ReferenceList>
 																		<Reference Name="Conversion">
@@ -4239,32 +2895,6 @@
 																	</ChildrenList>
 																	<ActiveSourceList>
 																		<ActiveSource Name="NPC_State_Normal_Exhale_05" ID="{6A4B8B7B-5DE2-4B86-AB32-071217AFAE7E}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Exhale_06" ID="{11737E74-4E88-44EF-AA29-F454F1B127CF}" ShortID="248656899" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Exhale_06" ID="{F2AF6685-04A4-4EFE-AF04-5B1A2F7B25A7}" ShortID="913441361">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Exhale_06.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Exhale_06" ID="{F2AF6685-04A4-4EFE-AF04-5B1A2F7B25A7}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
 																<Sound Name="NPC_State_Normal_Exhale_07" ID="{52DB8468-D602-4BB3-9B90-A73E3BBBC257}" ShortID="999525731" Type="SoundFX">
@@ -4319,32 +2949,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Exhale_08" ID="{0CB0D303-8056-4AF0-BA8C-FD0CD5626AFA}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Exhale_09" ID="{58D7A2DA-A69C-4CC4-BB6A-382A1901CD96}" ShortID="650903843" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Exhale_09" ID="{A66E6924-6484-4979-9296-84990C825D76}" ShortID="169359802">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Exhale_09.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Exhale_09" ID="{A66E6924-6484-4979-9296-84990C825D76}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Exhale_10" ID="{B50EFF2B-D0F4-4F59-8D7D-81297D936923}" ShortID="292149938" Type="SoundFX">
 																	<ReferenceList>
 																		<Reference Name="Conversion">
@@ -4383,32 +2987,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Exhale_11" ID="{3CF28061-9A59-42EF-A12E-0DC79C7367C8}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Exhale_12" ID="{92A5EA0E-DBD3-4CC6-8537-E29AC4B54F29}" ShortID="209986815" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Exhale_12" ID="{D47575D7-BD06-454D-9A65-BD220515A299}" ShortID="322599967">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Exhale_12.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Exhale_12" ID="{D47575D7-BD06-454D-9A65-BD220515A299}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Exhale_13" ID="{422875FA-9AF8-48EB-A4AA-C0CE44340078}" ShortID="212439413" Type="SoundFX">
 																	<ReferenceList>
 																		<Reference Name="Conversion">
@@ -4426,32 +3004,6 @@
 																	</ChildrenList>
 																	<ActiveSourceList>
 																		<ActiveSource Name="NPC_State_Normal_Exhale_13" ID="{F1F34E7D-00B5-4048-A151-123393F904F3}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Exhale_14" ID="{0071814D-641A-4F4B-B10A-BA3DA73FD9EA}" ShortID="193281933" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Exhale_14" ID="{1EB7550F-EBF1-4D82-BDE2-A5D152801D52}" ShortID="495734676">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Exhale_14.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Exhale_14" ID="{1EB7550F-EBF1-4D82-BDE2-A5D152801D52}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
 															</ChildrenList>
@@ -4601,32 +3153,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Talk_03" ID="{99B98C3C-65B2-4488-BE34-8D8ABCEEC96F}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Talk_04" ID="{90E44ECD-E42C-45F5-9612-3040577511D7}" ShortID="872636715" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Talk_04" ID="{0CF11A34-5395-457F-BEF7-3FCC0D9104E7}" ShortID="241275496">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Talk_04.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Talk_04" ID="{0CF11A34-5395-457F-BEF7-3FCC0D9104E7}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Talk_05" ID="{83B73C60-3F5A-481F-85AF-7CAA26EBE72A}" ShortID="849189901" Type="SoundFX">
 																	<ReferenceList>
 																		<Reference Name="Conversion">
@@ -4762,62 +3288,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Talk_10" ID="{0083E789-B876-4911-9164-03A03CE9AF56}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Talk_11" ID="{8C253761-9FAC-4169-BDAB-52657A06E58C}" ShortID="632304198" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Talk_11" ID="{BB2054A2-C265-4F66-AA95-9F5EA1E0A193}" ShortID="783005489">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Talk_11.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Talk_11" ID="{BB2054A2-C265-4F66-AA95-9F5EA1E0A193}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Talk_12" ID="{DBC52FDA-28CD-4B51-A487-F3EE51949065}" ShortID="878324086" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Talk_12" ID="{6E25E822-39E4-47CC-AB63-21738414FE32}" ShortID="701392982">
-																			<PropertyList>
-																				<Property Name="FadeInDuration" Type="Real64" Value="3.35881316812439E-02"/>
-																				<Property Name="FadeOutDuration" Type="Real64" Value="9.01576166180758E-02"/>
-																			</PropertyList>
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Talk_12.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Talk_12" ID="{6E25E822-39E4-47CC-AB63-21738414FE32}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 															</ChildrenList>
 														</RandomSequenceContainer>
 														<RandomSequenceContainer Name="NPC_State_Normal_Troat" ID="{7CB11930-AD26-43D4-B6F1-E0BDF301CA60}" ShortID="98645294">
@@ -4862,94 +3332,6 @@
 																</Reference>
 															</ReferenceList>
 															<ChildrenList>
-																<Sound Name="NPC_State_Normal_Troat_01" ID="{4F4BE7D3-A424-4813-8F05-035C8A0DF033}" ShortID="161681659" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>-6</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_01" ID="{C22597C8-1FBC-4641-9B0F-F845224CD4AB}" ShortID="840378386">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_01.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_01" ID="{C22597C8-1FBC-4641-9B0F-F845224CD4AB}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Troat_02" ID="{F86B896B-3CEA-4EF5-BCFB-4B450AFBB82E}" ShortID="540619513" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>-5</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_02" ID="{DE333837-01C1-4524-9849-1F636809D385}" ShortID="1052697192">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_02.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_02" ID="{DE333837-01C1-4524-9849-1F636809D385}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Troat_03" ID="{72FEDC88-32C7-4A4C-AC93-920C403D83CF}" ShortID="67023565" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_03" ID="{EB9A464E-A945-4A5A-B93A-E1E91EA7E0F5}" ShortID="586353748">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_03.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_03" ID="{EB9A464E-A945-4A5A-B93A-E1E91EA7E0F5}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Troat_04" ID="{192FD866-E90E-4E5F-AF07-5EFBDF8D47A6}" ShortID="817519303" Type="SoundFX">
 																	<ReferenceList>
 																		<Reference Name="Conversion">
@@ -4971,37 +3353,6 @@
 																	</ChildrenList>
 																	<ActiveSourceList>
 																		<ActiveSource Name="NPC_State_Normal_Troat_04" ID="{3BBECF45-2C22-4812-8E42-CE1AD2BC4A12}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Troat_05" ID="{0261454E-97FA-4B92-A44C-B2077564C8B3}" ShortID="1011526562" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>-5</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_05" ID="{15D24596-A03D-478B-8BFA-44DD7718C8FD}" ShortID="844472713">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_05.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_05" ID="{15D24596-A03D-478B-8BFA-44DD7718C8FD}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
 																<Sound Name="NPC_State_Normal_Troat_06" ID="{1D0F8EA6-B4D2-4A05-B67E-F6FA8835654F}" ShortID="515335308" Type="SoundFX">
@@ -5064,94 +3415,6 @@
 																		<ActiveSource Name="NPC_State_Normal_Troat_07" ID="{F04A94BE-3615-4CCC-8897-CDA7700333D6}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
-																<Sound Name="NPC_State_Normal_Troat_08" ID="{91230F43-F99B-4591-8990-4D180186CF56}" ShortID="485012232" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>8</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_08" ID="{657EEC5C-9007-4861-9A3C-1B270BC06FB7}" ShortID="907719855">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_08.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_08" ID="{657EEC5C-9007-4861-9A3C-1B270BC06FB7}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Troat_09" ID="{CFFE252F-307C-4987-AD5A-850B8CA1E6A9}" ShortID="110060413" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_09" ID="{F49711E1-E505-45CE-A851-ABE13325CC65}" ShortID="1024456608">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_09.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_09" ID="{F49711E1-E505-45CE-A851-ABE13325CC65}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Troat_10" ID="{1589CF32-EFA7-4466-B8F3-A355988C89B3}" ShortID="898746945" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>4</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_10" ID="{B3DACC5F-4968-49FF-BA7A-70EFD0CF8D2C}" ShortID="977414153">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_10.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_10" ID="{B3DACC5F-4968-49FF-BA7A-70EFD0CF8D2C}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
 																<Sound Name="NPC_State_Normal_Troat_11" ID="{7CDCE6C5-EBBA-4F4A-8922-9E7AC9C5AFFA}" ShortID="282321095" Type="SoundFX">
 																	<ReferenceList>
 																		<Reference Name="Conversion">
@@ -5195,32 +3458,6 @@
 																	</ChildrenList>
 																	<ActiveSourceList>
 																		<ActiveSource Name="NPC_State_Normal_Troat_12" ID="{3441C91A-91DD-43F9-8657-5448D5E0711D}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Troat_13" ID="{34682694-89FD-4D32-B1C5-EF55690FF45C}" ShortID="6907173" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_13" ID="{A5553C3A-66C2-4AF6-9672-8D4B390F13A1}" ShortID="184575071">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_13.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_13" ID="{A5553C3A-66C2-4AF6-9672-8D4B390F13A1}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
 																<Sound Name="NPC_State_Normal_Troat_14" ID="{40E5DCF9-06FF-4C38-B25D-7A032A735A5B}" ShortID="293170413" Type="SoundFX">
@@ -5274,32 +3511,6 @@
 																	</ChildrenList>
 																	<ActiveSourceList>
 																		<ActiveSource Name="NPC_State_Normal_Troat_15" ID="{EC3F9C6B-EF04-4D13-B27B-3726BC80F073}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="NPC_State_Normal_Troat_16" ID="{C71E12A4-B9C3-4E92-AC42-8D05ED539057}" ShortID="1053752901" Type="SoundFX">
-																	<PropertyList>
-																		<Property Name="Inclusion" Type="bool">
-																			<ValueList>
-																				<Value>False</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="NPC_State_Normal_Troat_16" ID="{22B618A1-9CE8-435F-92AA-FC87F6D1E040}" ShortID="975437694">
-																			<Language>SFX</Language>
-																			<AudioFile>NPC_State_Normal_Troat_16.wav</AudioFile>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="NPC_State_Normal_Troat_16" ID="{22B618A1-9CE8-435F-92AA-FC87F6D1E040}" Platform="Linked"/>
 																	</ActiveSourceList>
 																</Sound>
 															</ChildrenList>
