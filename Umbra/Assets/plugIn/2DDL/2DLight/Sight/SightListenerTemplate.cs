@@ -51,7 +51,7 @@ public class SightListenerTemplate : MonoBehaviour {
 		RuneManager = GameObject.Find ("RuneManager");
 			//LurePlayer=GameObject.Find("2DCharacterShadow");
 //		RuneManager = GameObject.Find ("RuneManager");
-		if (TypeOfObj == 3)
+		//if (TypeOfObj == 3)
 		//myLureScript = RuneManager.GetComponent<LureScript> ();
 		//print (gameObject.name);
 		//EnnemyBase=
@@ -299,6 +299,7 @@ public class SightListenerTemplate : MonoBehaviour {
 		dangerLight.SetActive (false);
 		SuspiciousLight.SetActive (false);
 		NoDangerLight.SetActive (true);
+			InAlert = false;
 		}
 			
 	}

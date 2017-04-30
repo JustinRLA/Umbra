@@ -72,7 +72,7 @@ public class LineRendererTest : MonoBehaviour {
 		TouchGood = false;
 		BannerBase = null;
 		touchedBadThing = true;
-		CamGrap.SetActive (true);
+	//	CamGrap.SetActive (true);
 
 
 	}
@@ -292,7 +292,7 @@ public class LineRendererTest : MonoBehaviour {
 
 		MainCamera.GetComponent<BloomOptimized> ().enabled =false;
 		ActivateThisShit = false;
-		CamGrap.SetActive (false);
+		//CamGrap.SetActive (false);
 		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
@@ -321,7 +321,7 @@ public class LineRendererTest : MonoBehaviour {
 		AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Use", gameObject);
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
-		CamGrap.SetActive (false);
+		//CamGrap.SetActive (false);
 		foreach (GameObject grapRegion in theBeams)
 			grapRegion.GetComponent<Collider2D> ().isTrigger = true;
 		
@@ -348,7 +348,7 @@ public class LineRendererTest : MonoBehaviour {
 		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
 		ActivateThisShit = false;
-		CamGrap.SetActive (false);
+		//CamGrap.SetActive (false);
 		myRuneManagerScript.RuneActivated = false;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
@@ -395,7 +395,7 @@ public class LineRendererTest : MonoBehaviour {
 		MainCamera.GetComponent<BloomOptimized> ().enabled = false;
 		Time.timeScale = 1f;
 		ActivateThisShit = false;
-		CamGrap.SetActive (false);
+		//CamGrap.SetActive (false);
 		myPlayer.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 		myPlayer.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;

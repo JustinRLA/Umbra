@@ -13,6 +13,13 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject CameraOne;
 	public GameObject BorneBaseObj;
 	GameObject MusicBase;
+	public bool isPause;
+	public GameObject YesBtn;
+	public GameObject NoBtn;
+	public GameObject WarningText;
+	public GameObject ResumeBtn;
+	public GameObject QuitBtn;
+
 
 	BorneBase myBorneScript;
 	bool canPause=true;
@@ -46,6 +53,7 @@ public class PauseMenu : MonoBehaviour {
 
 	void PauseBegin()
 	{
+		isPause = true;
 		AkSoundEngine.PostEvent ("Menu_Pause", gameObject);
 		CameraOne.GetComponent<BlurOptimized> ().enabled = true;
 		Paused = true;
@@ -58,6 +66,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public void PauseEnd()
 	{	
+		isPause = false;
 		AkSoundEngine.PostEvent ("Menu_Pause_End", gameObject);
 
 		Cursor.visible = false;
@@ -67,6 +76,12 @@ public class PauseMenu : MonoBehaviour {
 		Paused = false;
 		Time.timeScale = 1;
 		OtherUI.GetComponent<Canvas> ().enabled = true;
+		QuitBtn.SetActive (true);
+		ResumeBtn.SetActive (true);
+		YesBtn.SetActive (false);
+		NoBtn.SetActive (false);
+		WarningText.SetActive (false);
+
 		PauseUI.SetActive (false);
 	}
 	public void ReturnToMainMenu()

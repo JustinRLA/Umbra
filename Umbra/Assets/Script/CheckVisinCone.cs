@@ -359,11 +359,13 @@ public class CheckVisinCone : MonoBehaviour {
 			thereisAnAlert = true;
 	
 			if (AlertHavePlayer==false) {
-			
+				print ("alert");
+
 				AkSoundEngine.PostEvent ("Mus_Located", gameObject);
-				AlertHavePlayer = true;
 				RetrnHavePlayed = false;
 				suspiciousHavePlayed = false;
+				AlertHavePlayer = true;
+
 			}
 
 					pplatformscript.canhideThree = false;
@@ -376,11 +378,15 @@ public class CheckVisinCone : MonoBehaviour {
 			ThereisAsuspicious = false;
 			}
 			 else {
-			if (suspiciousHavePlayed==false) {
+			if (suspiciousHavePlayed==false && thereisAnAlert==false) {			
+				print ("suspicious");
+				
+
 				AkSoundEngine.PostEvent ("Mus_Alert", gameObject);
 				RetrnHavePlayed = false;
-				suspiciousHavePlayed = true;
 				AlertHavePlayer = false;
+				suspiciousHavePlayed = true;
+
 			}
 
 			ThereisAsuspicious = true;
@@ -389,10 +395,12 @@ public class CheckVisinCone : MonoBehaviour {
 
 		if (thereisAnAlert == false && ThereisAsuspicious == false){
 			if (RetrnHavePlayed == false) {
+				print ("explo");
 				AkSoundEngine.PostEvent ("Mus_Explo", gameObject);
-				RetrnHavePlayed = true;
 				AlertHavePlayer = false;
 				suspiciousHavePlayed = false;
+				RetrnHavePlayed = true;
+
 			}		
 		}
 	}

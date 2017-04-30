@@ -12,7 +12,6 @@ public class EnableTrapMode : MonoBehaviour {
 	public GameObject Trapping;
 	RuneManagerScript myRuneManager;
 	public GameObject gameCam;
-	public GameObject trapcam;
 	public float movespeed;
 	public GameObject nowherepointObj;
 	public GameObject myPlayer;
@@ -118,7 +117,6 @@ public class EnableTrapMode : MonoBehaviour {
 				myRuneManager.OffTimer.SetActive (true);
 				gameCam.GetComponent<BloomOptimized> ().enabled = false;
 
-				trapcam.SetActive (false);
 				CanInstantiate = false;
 
 				Demotrap.transform.position = NowherePoint.position;
@@ -144,7 +142,7 @@ public class EnableTrapMode : MonoBehaviour {
 
 		Time.timeScale = 1f;
 		gameCam.GetComponent<BloomOptimized> ().enabled = false;
-		trapcam.SetActive (false);
+
 		foreach (GameObject TrapRegion in AllTrap)
 			TrapRegion.GetComponent<Collider2D> ().isTrigger = true;
 
@@ -167,7 +165,6 @@ public class EnableTrapMode : MonoBehaviour {
 
 		Time.timeScale = 0.1f;
 		Cursor.visible = true;
-		trapcam.SetActive (true);
 
 		AllTrap = GameObject.FindGameObjectsWithTag ("TrapPlacement");
 		ThisEvent = true;

@@ -106,7 +106,7 @@ public class LureScript : MonoBehaviour {
 		raycar.transform.position = ThePlayer.transform.position;
 		raycar.transform.parent = ThePlayer.transform;
 
-		myRuneManagerScript.RuneActivated = false;
+		//myRuneManagerScript.RuneActivated = false;
 		FullRune.GetComponent<Image> ().enabled = false;
 
 		myCam.GetComponent<Animator> ().SetBool ("MegaBlue", false);

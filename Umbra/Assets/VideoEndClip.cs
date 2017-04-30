@@ -29,7 +29,7 @@ public class VideoEndClip : MonoBehaviour {
 	}
 	IEnumerator ReturnToMain()
 	{
-		yield return new WaitForSeconds (75);
-		SceneManager.LoadScene ("Main Menu");
+		yield return new WaitForSeconds (70);
+		SceneManager.LoadScene ("Main MenuCredit");
 	}
 }

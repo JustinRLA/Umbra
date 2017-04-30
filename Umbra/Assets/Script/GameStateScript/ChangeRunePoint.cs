@@ -11,6 +11,9 @@ public class ChangeRunePoint : MonoBehaviour {
 	public GameObject RuneManager;
 	public Sprite SpawnerNormal;
 	public Sprite SpawnerOver;
+	public GameObject pauseBase;
+
+	PauseMenu myPauseMenu;
 
 
 	GameObject MyBorneBase;
@@ -22,6 +25,8 @@ public class ChangeRunePoint : MonoBehaviour {
 	public GameObject playerMy;
 	// Use this for initialization
 	void Start () {
+		pauseBase = GameObject.Find ("PauseBase");
+		myPauseMenu = pauseBase.GetComponent<PauseMenu> ();
 		playerMy=GameObject.Find("2DCharacter(Clone)");
 		MyBorneBase = GameObject.Find ("BorneBase");
 
@@ -31,7 +36,7 @@ public class ChangeRunePoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.E) && canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true && playerMy.GetComponent<PlatformerCharacter2D> ().canPressHideBtn == true)
+		if (Input.GetKeyDown (KeyCode.E) && canChange == true && playerMy.GetComponent<PlatformerCharacter2D> ().canChangeRune == true && playerMy.GetComponent<PlatformerCharacter2D> ().canPressHideBtn == true && myPauseMenu.isPause==false)
 		{
 			playerMy.GetComponent<PlatformerCharacter2D> ().canPressHideBtn = false;
 			UIMode.SetActive (true);

@@ -27,8 +27,9 @@ public class startTimer : MonoBehaviour {
 			timershadow.GetComponent<TimerShadowPieceFour> ().StopShadow ();
 			Destroy(gameObject);
 		}
-		if (col.tag == "Player" && PlayerPrefs.GetInt("SaveSystem")==10)
+		if (col.tag == "Player" && PlayerPrefs.GetInt("SaveSystem") >=9)
 		{
+			print ("starttimer");
 			SecondShadow.GetComponent<CoroutinePipePuzzle> ().StartPipe ();
 			Destroy(gameObject);
 		}

@@ -71,12 +71,14 @@ public class checkIfAssassination : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D (Collider2D col) {
+		if(ActualEnnemy !=null)
+		{
 		if(col.tag=="ennemy")
 		{
 			ActualEnnemy.GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 1);
 			canAssassinate=false;
 			ActualEnnemy.GetComponent<SKullInDanger> ().MySkull.SetActive(false);
-
+			}
 
 		}
 	

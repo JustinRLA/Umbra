@@ -52,6 +52,8 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject ImageRuneSolidificationFull;
 	public GameObject ImageRuneMarquageFull;
 	public GameObject ImageRuneLeurreFull;
+	PauseMenu myPause;
+	GameObject pauseBase;
 
 	PlatformerCharacter2D myPlatchar;
 	Platformer2DUserControl myPlatUserControl;
@@ -71,7 +73,8 @@ public class RuneManagerScript : MonoBehaviour
 
 
 	void Start () {
-		
+		pauseBase = GameObject.Find ("PauseBase");
+		myPause = pauseBase.GetComponent<PauseMenu> ();
 		ThePlayer=GameObject.Find("2DCharacter(Clone)");
 		myPlatUserControl = ThePlayer.GetComponent<Platformer2DUserControl>();
 		myPlatformCharacter = ThePlayer.GetComponent<PlatformerCharacter2D>();
@@ -283,7 +286,7 @@ public class RuneManagerScript : MonoBehaviour
 		if (Input.GetMouseButtonUp (1))
 			canSwitchMode = true;
 			
-			if (Input.GetMouseButtonDown(1) && RuneModeEnabled==false && myPlatformCharacter.canRune==true && canSwitchMode==true)
+		if (Input.GetMouseButtonDown(1) && RuneModeEnabled==false && myPlatformCharacter.canRune==true && canSwitchMode==true && RuneActivated==false)
 		{ 
 			canSwitchMode = false;
 			

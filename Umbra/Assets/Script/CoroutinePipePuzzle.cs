@@ -24,7 +24,7 @@ public class CoroutinePipePuzzle : MonoBehaviour {
 		while (true)
 		{
 		Pipe [4].SetActive (false);
-		Pipe [0].SetActive (true);
+//		Pipe [0].SetActive (true);
 			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
 
 		yield return new WaitForSeconds (timebetween);
@@ -36,7 +36,7 @@ public class CoroutinePipePuzzle : MonoBehaviour {
 			AkSoundEngine.PostEvent ("Amb_Shadow_Pipe", gameObject);
 
 		Pipe [2].SetActive (true);
-		Pipe [0].SetActive (false);
+	//	Pipe [0].SetActive (false);
 			Pipe [6].SetActive (false);
 
 		yield return new WaitForSeconds (timebetween);
