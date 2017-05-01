@@ -143,7 +143,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>3</Value>
+														<Value>5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1020,6 +1020,12 @@
 										</SwitchContainer>
 										<RandomSequenceContainer Name="PC_Foot_Land" ID="{37FC9B77-546C-4433-B65F-5FE3FB0B48C1}" ShortID="956165533">
 											<PropertyList>
+												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>-900</Value>
@@ -1036,6 +1042,11 @@
 													</ModifierList>
 												</Property>
 												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-6</Value>
@@ -2508,7 +2519,7 @@
 												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>20</Value>
+														<Value>10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
