@@ -34,6 +34,7 @@ public class LineRendererTest : MonoBehaviour {
 	bool greenhaveplayed;
 	public GameObject BannerBase;
 	RaycastHit2D myStraightraycast;
+	bool soundPlayed;
 
 	GameObject RuneFull;
 	float direction;
@@ -152,6 +153,10 @@ public class LineRendererTest : MonoBehaviour {
 						dir =  HitTransformPoint.position-PlayerMy.position;
 					timeDIstance = Vector3.Distance (PlayerMy.position,HitTransformPoint.position);
 						PlayerMy.GetComponent<VeryfyCol> ().enabled = true;
+						if (soundPlayed == false) {
+							AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Use", gameObject);
+							soundPlayed = true;
+						}
 //						print (timeDIstance);
 //					print ("SomethingHappe");
 						//PlayerMy.GetComponent<Rigidbody2D>().AddForce((HitTransformPoint.position-PlayerMy.position).normalized *9550);
@@ -300,7 +305,7 @@ public class LineRendererTest : MonoBehaviour {
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);
 		myRuneManagerScript.RuneActivated = false;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
-
+		soundPlayed = false;
 		GetComponent<LineRendererTest> ().enabled = false;
 
 
@@ -318,7 +323,6 @@ public class LineRendererTest : MonoBehaviour {
 		yield return new WaitForSeconds (0.1f);
 		myPlayer.layer = 13;
 
-		AkSoundEngine.PostEvent ("PC_Rune_Accrochage_Use", gameObject);
 		myRuneManagerScript.RuneActivated = false;
 		myRuneManagerScript.RuneModeEnabled = false;
 		//CamGrap.SetActive (false);
@@ -356,6 +360,8 @@ public class LineRendererTest : MonoBehaviour {
 
 		BannerBase = null;
 		TheBeam = null;
+		soundPlayed = false;
+
 		GetComponent<LineRendererTest> ().enabled = false;
 	}
 

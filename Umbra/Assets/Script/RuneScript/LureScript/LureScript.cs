@@ -47,6 +47,8 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Filter", gameObject);
 		raycar = GameObject.Find ("raycar");
 		raycar.transform.position = ThePlayerShadow.transform.position;
