@@ -160,9 +160,10 @@ using UnityEngine.SceneManagement;
 	void JumpFromLader()
 	{
 
-		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
-		GetComponent<Rigidbody2D>().velocity=new Vector2(0, 15);
+		m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+		m_Rigidbody2D.velocity=new Vector2(0, 15);
 		AkSoundEngine.PostEvent ("PC_Foot_Jump", gameObject);
+		m_Rigidbody2D.gravityScale = 3;
 
 		canJump = false;
 
@@ -182,7 +183,9 @@ using UnityEngine.SceneManagement;
 	{
 
 		//canClimb = false;
-		GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
+		m_Rigidbody2D.gravityScale = 3;
+
+		m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
 
 		//		ThePlayer.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		GetComponent<Animator>().SetBool ("Climb", false);
@@ -260,7 +263,10 @@ using UnityEngine.SceneManagement;
 					if (ActualLadder.GetComponent<maxHauteurLadder> ().CheckRight == false && m_FacingRight == true)
 						Flip ();
 				m_JumpForce = 0;
+				GetComponent<Rigidbody2D> ().gravityScale = 0;
+
 				GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
+
 				if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.Space) == false && transform.position.y < ActualLadder.GetComponent<maxHauteurLadder> ().MaxHauteur.position.y) {
 					transform.Translate (Vector2.up * 2 * Time.deltaTime);
 					m_Anim.SetBool ("GrimpeBouge", true);
@@ -286,6 +292,7 @@ using UnityEngine.SceneManagement;
 			{
 					m_JumpForce = 650;
 					m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+				m_Rigidbody2D.gravityScale = 3;
 				m_Anim.SetBool ("Climb", false);
 
 			}
