@@ -63,9 +63,11 @@ public class RuneTutorialSettling : MonoBehaviour {
 					myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneAccrochage.GetComponent<Animator> ().SetBool ("Play", true);
 				if (tacticSetter == 2)
 					myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneSolidification.GetComponent<Animator> ().SetBool ("Play", true);
-				RuneTaken.SetActive (false);
-				GetComponent<Collider2D>().enabled = false;
 			}
+			if(tacticSetter !=0 || defsetter !=0 || OffenseSet !=0)
+			RuneTaken.SetActive (false);
+			GetComponent<Collider2D>().enabled = false;
+
 		
 					}
 		}

@@ -22,6 +22,7 @@ public class LureScript : MonoBehaviour {
 	public GameObject CamThree;
 	public GameObject PlayerCam;
 	GameObject FullRune;
+	public bool LurePresent;
 
 
 	public bool Active=false;
@@ -33,7 +34,7 @@ public class LureScript : MonoBehaviour {
 
 
 	void Start () {
-		GetComponent<LureScript> ().enabled = false;
+		//GetComponent<LureScript> ().enabled = false;
 		myCam = GameObject.Find ("Main Camera");
 		CamOne = GameObject.Find ("Main Camera (1)");
 		CamTwo = GameObject.Find ("Main Camera (2)");
@@ -47,6 +48,7 @@ public class LureScript : MonoBehaviour {
 
 
 	public void StartLure () {
+		LurePresent = true;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Filter", gameObject);
@@ -101,10 +103,14 @@ public class LureScript : MonoBehaviour {
 		{
 			StartCoroutine (DistractEnnemFast());
 		}
+		if(LurePresent==true)
+			myRuneManagerScript.timerDef = 0;
+		
 	}
 
 	IEnumerator DistractEnnemFast()
 	{
+		StopCoroutine (DistractEnnemy ());
 		raycar.transform.position = ThePlayer.transform.position;
 		raycar.transform.parent = ThePlayer.transform;
 
@@ -127,7 +133,6 @@ public class LureScript : MonoBehaviour {
 		myCam.GetComponent<BloomOptimized> ().enabled = false;
 		myRuneManagerScript.RuneActivated = false;
 
-		myRuneManagerScript.timerDef = 0;
 		RuneManager.GetComponent<RuneManagerScript>().DefTimer.SetActive (true);
 
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = true;
@@ -155,6 +160,7 @@ public class LureScript : MonoBehaviour {
 		timer = 2;
 		yield return new WaitForSeconds(2f);
 		Lurelight.SetActive (false);
+		LurePresent = false;
 		//ThePlayerShadow.transform.parent = ThePlayer.transform;
 		EnnemyDistracted = false;
 		//ThePlayerShadow.transform.position = ThePlayer.transform.position;
@@ -210,7 +216,6 @@ public class LureScript : MonoBehaviour {
 		myCam.GetComponent<BloomOptimized> ().enabled = false;
 		myRuneManagerScript.RuneActivated = false;
 
-		myRuneManagerScript.timerDef = 0;
 		RuneManager.GetComponent<RuneManagerScript>().DefTimer.SetActive (true);
 		ThePlayer.GetComponent<BoxCollider2D> ().enabled = true;
 
@@ -229,7 +234,7 @@ public class LureScript : MonoBehaviour {
 		yield return new WaitForSeconds(2f);
 		timer = 2;
 		yield return new WaitForSeconds(2f);
-
+		LurePresent = false;
 			EnnemyDistracted = false;
 				Lurelight.SetActive (false);
 
