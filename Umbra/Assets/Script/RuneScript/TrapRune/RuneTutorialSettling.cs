@@ -64,8 +64,10 @@ public class RuneTutorialSettling : MonoBehaviour {
 				if (tacticSetter == 2)
 					myRuneManager.GetComponent<RuneManagerScript> ().ImageRuneSolidification.GetComponent<Animator> ().SetBool ("Play", true);
 			}
-			if(tacticSetter !=0 || defsetter !=0 || OffenseSet !=0)
-			RuneTaken.SetActive (false);
+			if (tacticSetter != 0 || defsetter != 0 || OffenseSet != 0) {
+				RuneTaken.SetActive (false);
+				AkSoundEngine.PostEvent ("PC_Rune_Select", gameObject);
+			}
 			GetComponent<Collider2D>().enabled = false;
 
 		
