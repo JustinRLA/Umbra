@@ -5,17 +5,28 @@
 			<ChildrenList>
 				<Event Name="Mus_Secteur1" ID="{C6814B7A-8E6B-41C1-82CB-907D07F4336C}">
 					<ChildrenList>
+						<Action Name="Set State" ID="{AAD90A15-7445-41C9-950A-0C3111407D86}" ShortID="789425431" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
+								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
+							</SetItemParam>
+						</Action>
 						<Action Name="Set State" ID="{3DC3F7FC-28DB-4E46-820F-2189A647D295}" ShortID="867240218" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
 								<GroupItem Name="Secteur1" ID="{5FDFB4B5-CB83-4A62-9E6D-3B2F3A9EBCF0}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Set State" ID="{AAD90A15-7445-41C9-950A-0C3111407D86}" ShortID="789425431" Type="SetState" Scope="All" Global="true">
-							<SetItemParam>
-								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
-								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
-							</SetItemParam>
+						<Action Name="Stop" ID="{2130E266-7787-433E-8605-B995F4BD1D49}" ShortID="183490544" Type="Stop" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{7A5BEA35-A0FF-4D1B-89E4-771BF5813DC2}" Global="true">
+									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+								</Element>
+							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
@@ -42,33 +53,55 @@
 				</Event>
 				<Event Name="Mus_Secteur3" ID="{2805320F-6E74-43FD-B36C-34DE62F30307}">
 					<ChildrenList>
-						<Action Name="Set State" ID="{B3C923E2-3F0D-41D5-B1B9-30325ABB0320}" ShortID="985985644" Type="SetState" Scope="All" Global="true">
-							<SetItemParam>
-								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
-								<GroupItem Name="Secteur3" ID="{5A5DFBC6-2121-42BC-A3DB-6F784FA51199}"/>
-							</SetItemParam>
-						</Action>
 						<Action Name="Set State" ID="{B1480349-D7DD-47AA-BEED-C84294DDD830}" ShortID="633506393" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
 								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
 							</SetItemParam>
 						</Action>
+						<Action Name="Set State" ID="{B3C923E2-3F0D-41D5-B1B9-30325ABB0320}" ShortID="985985644" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
+								<GroupItem Name="Secteur3" ID="{5A5DFBC6-2121-42BC-A3DB-6F784FA51199}"/>
+							</SetItemParam>
+						</Action>
+						<Action Name="Stop" ID="{8C84DE4A-573D-4055-B51E-92AEF5BAC0E5}" ShortID="440726678" Type="Stop" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{339CD969-94BC-4B3F-A9AE-3359D1A8DAA1}" Global="true">
+									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Mus_Secteur2" ID="{EAA7BD23-29AA-4042-A1E5-2C8253E2F604}">
 					<ChildrenList>
+						<Action Name="Set State" ID="{CAEE0925-3A99-426C-8D34-90755D6CDC98}" ShortID="773163064" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
+								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
+							</SetItemParam>
+						</Action>
 						<Action Name="Set State" ID="{E032E3D9-C1F6-473B-AE32-23527FCAB93F}" ShortID="230634003" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
 								<Group Name="Secteurs" ID="{0592B349-7705-4CE7-9355-341F1190CB9B}"/>
 								<GroupItem Name="Secteur2" ID="{BA737EB1-F3DA-4678-9B50-C0D677E5D593}"/>
 							</SetItemParam>
 						</Action>
-						<Action Name="Set State" ID="{CAEE0925-3A99-426C-8D34-90755D6CDC98}" ShortID="773163064" Type="SetState" Scope="All" Global="true">
-							<SetItemParam>
-								<Group Name="Music" ID="{E922257B-895B-48CA-BC79-90E2C0EFE7BF}"/>
-								<GroupItem Name="Explo" ID="{158952FC-FD6E-4463-A596-60C49A19E437}"/>
-							</SetItemParam>
+						<Action Name="Stop" ID="{B4665B38-75AE-453A-9A44-C096BAB4BCB1}" ShortID="624169249" Type="Stop" Scope="One" Global="true">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{7AB0AF35-194A-4A68-864D-2A62029C2993}" Global="true">
+									<ObjectRef Name="PC_Action_Heartbeat" ID="{0B0EE828-1579-4980-8EC2-66E0083174A4}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
+								</Element>
+							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
