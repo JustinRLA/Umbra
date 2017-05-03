@@ -61,14 +61,14 @@ public class InitializeLevel : MonoBehaviour {
 //		if(debugMusTest==true)
 //			AkSoundEngine.PostEvent("Mus_Ingame",gameObject);
 		
-		if (debugMusTest == false) {
-			if (decoountNumber < 6)
-				AkSoundEngine.PostEvent ("Mus_Secteur1", MusicBase);
-			if (decoountNumber > 8)
-				AkSoundEngine.PostEvent ("Mus_Secteur3", MusicBase);
-			if (decoountNumber >= 6 && decoountNumber <= 8)
-				AkSoundEngine.PostEvent ("Mus_Secteur2", MusicBase);
-		}
+//		if (debugMusTest == false) {
+//			if (decoountNumber < 6)
+//				AkSoundEngine.PostEvent ("Mus_Secteur1", MusicBase);
+//			if (decoountNumber > 8)
+//				AkSoundEngine.PostEvent ("Mus_Secteur3", MusicBase);
+//			if (decoountNumber >= 6 && decoountNumber <= 8)
+//				AkSoundEngine.PostEvent ("Mus_Secteur2", MusicBase);
+//		}
 		if (debugMusTest == true) {
 			if (decoountNumber < 6)
 				AkSoundEngine.PostEvent ("Mus_Secteur1", gameObject);

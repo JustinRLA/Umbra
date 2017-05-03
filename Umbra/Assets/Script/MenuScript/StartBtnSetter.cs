@@ -9,8 +9,18 @@ public class StartBtnSetter : MonoBehaviour {
 	public GameObject CommencerStartedGame;
 	GameObject MusicBase;
 	// Use this for initialization
-	void Start () {
+
+	void Awake()
+	{
 		MusicBase = GameObject.Find ("MusicBase");
+		AkSoundEngine.PostEvent("Mus_InGame",MusicBase);
+
+		AkSoundEngine.PostEvent("Mus_Menu",MusicBase);
+
+
+	}
+	void Start () {
+		//MusicBase = GameObject.Find ("MusicBase");
 		if (PlayerPrefs.GetInt ("SaveSystem") == 0)
 		{
 			ContinueBtn.SetActive (false);

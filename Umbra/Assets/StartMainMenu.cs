@@ -9,9 +9,6 @@ public class StartMainMenu : MonoBehaviour {
 	void Start () {
 		DontDestroyOnLoad (gameObject);
 		SceneManager.LoadScene("Main Menu");
-		AkSoundEngine.PostEvent("Mus_InGame",gameObject);
-
-		AkSoundEngine.PostEvent("Mus_Menu",gameObject);
 		print ("Start");
 
 	}
@@ -23,7 +20,12 @@ public class StartMainMenu : MonoBehaviour {
 
 	public void StartLevelMusic()
 	{
+		if(PlayerPrefs.GetInt("SaveSystem")<6)
 		AkSoundEngine.PostEvent("Mus_Secteur1",gameObject);
+		if(PlayerPrefs.GetInt("SaveSystem")>=6 && PlayerPrefs.GetInt("SaveSystem")<=8)
+			AkSoundEngine.PostEvent("Mus_Secteur2",gameObject);
+		if(PlayerPrefs.GetInt("SaveSystem")>=9)
+			AkSoundEngine.PostEvent("Mus_Secteur3",gameObject);
 	}
 
 	public void ReturnToMenuMusic()
