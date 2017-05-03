@@ -22,17 +22,19 @@ public class solifyShadow : MonoBehaviour {
 	bool colPlayer;
 	public bool enable = false;
 	public Texture2D cursor;
-
+	public GameObject myParticle;
+	ParticleSystem ps;
+	public GameObject BlackSquare;
+	public GameObject GlowParticle;
 	// Use this for initialization
 	void Start () {
 		PlayerMy = GameObject.Find("2DCharacter(Clone)");
 		RuneManager = GameObject.Find ("RuneManager");
 		myMainCam = GameObject.Find ("Main Camera");
-
+//		GetComponent<ParticleSystem>().main
 		mymyRuneManagerScript = RuneManager.GetComponent<RuneManagerScript> ();
 		MySolid = RuneManager.GetComponent<SolidifcationEnabled> ();
 		cursor = (Texture2D)Resources.Load ("DaggerIconActiveGreenFullDefault");
-
 	}
 	
 	// Update is called once per frame
@@ -121,6 +123,14 @@ public class solifyShadow : MonoBehaviour {
 
 	IEnumerator SolidicationEvent()
 	{
+//		ps.main.simulationSpeed = 1;
+		GlowParticle.SetActive (true);
+		BlackSquare.SetActive (true);
+		ps = myParticle.GetComponent<ParticleSystem> ();
+		myParticle.SetActive (false);
+//		var main = ps.main;
+//		main.simulationSpeed = 0.15f;
+
 		FullRune = GameObject.Find ("solideImageFull");
 		FullRune.GetComponent<Image> ().enabled = false;
 		AkSoundEngine.PostEvent("PC_Rune_Solide_Use",gameObject);
@@ -133,7 +143,7 @@ public class solifyShadow : MonoBehaviour {
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
-		GetComponent<SpriteRenderer> ().enabled = true;
+		//GetComponent<SpriteRenderer> ().enabled = true;
 		GetComponent<Collider2D> ().isTrigger = false;
 		Time.timeScale = 1f;
 		Cursor.visible = false;
@@ -158,6 +168,11 @@ public class solifyShadow : MonoBehaviour {
 
 		yield return new WaitForSeconds(10f);
 		AkSoundEngine.PostEvent("PC_Rune_Solide_End",gameObject);
+		myParticle.SetActive (true);
+
+//		main.simulationSpeed = 1;
+		BlackSquare.SetActive (false);
+		GlowParticle.SetActive (false);
 
 		GrimpSurfaceLeft.GetComponent<Collider2D> ().enabled = false;
 		GrimpSurfaceRight.GetComponent<Collider2D> ().enabled = false;
@@ -170,7 +185,7 @@ public class solifyShadow : MonoBehaviour {
 		MySolid.CanClickable = false;
 		gameObject.layer = 10;
 
-		GetComponent<SpriteRenderer> ().enabled = false;
+		//GetComponent<SpriteRenderer> ().enabled = false;
 		gameObject.tag="Ombre";
 
 		foreach (GameObject Ombre in AllShadow)
@@ -179,6 +194,7 @@ public class solifyShadow : MonoBehaviour {
 			Ombre.GetComponent<solifyShadow> ().enabled = false;
 
 		}
+
 		GetComponent<solifyShadow> ().enable = false;
 
 //		myBlindEnmnemyRune.CanClick = false;

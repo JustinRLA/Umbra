@@ -66,7 +66,7 @@ public class DragShadow : MonoBehaviour {
 
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
-		GetComponent<SpriteRenderer> ().enabled = false;
+		//GetComponent<SpriteRenderer> ().enabled = false;
 		GetComponent<DragShadow>().enabled=false;
 
 		gameObject.name=("OldCube");
@@ -107,7 +107,7 @@ public class DragShadow : MonoBehaviour {
 		if (dragging)
 		{		distance = Vector3.Distance(transform.position, Camera.main.transform.position);
 			//gameObject.layer = 23;
-			GetComponent<SpriteRenderer> ().enabled = true;
+		//	GetComponent<SpriteRenderer> ().enabled = true;
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			//Vector3 rayPoint = ray.GetPoint(distance);
 			rayPoint = ray.GetPoint(distance);
