@@ -411,6 +411,18 @@
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Foot" ID="{C6055C79-CB42-4E18-8A0F-FD244B9DDCFE}" ShortID="607807331">
+									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -422,6 +434,17 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="PC_Foot_Run" ID="{66E41A44-0164-409F-AA46-B764A92EFA89}" ShortID="730011648">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-13</Value>
@@ -644,6 +667,11 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -655,6 +683,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -1020,10 +1053,11 @@
 										</SwitchContainer>
 										<RandomSequenceContainer Name="PC_Foot_Land" ID="{37FC9B77-546C-4433-B65F-5FE3FB0B48C1}" ShortID="956165533">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
-														<Value>2</Value>
+														<Value>1</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Pitch" Type="int32">
@@ -1169,6 +1203,14 @@
 											</StateInfo>
 										</RandomSequenceContainer>
 										<BlendContainer Name="PC_Foot_Stealth_On" ID="{31A3988B-AB97-43E4-AB95-D36933117D1B}" ShortID="378513280">
+											<PropertyList>
+												<Property Name="OverridePriority" Type="bool" Value="True"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>60</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -1251,6 +1293,14 @@
 											</ChildrenList>
 										</BlendContainer>
 										<BlendContainer Name="PC_Foot_Stealth_Off" ID="{00DC723A-53F9-4F41-B2C3-5ED2EA39A318}" ShortID="155186358">
+											<PropertyList>
+												<Property Name="OverridePriority" Type="bool" Value="True"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>60</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
