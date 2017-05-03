@@ -22,11 +22,14 @@ public class StartLevelThirdMusic : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if(MusTest==false)
-			AkSoundEngine.PostEvent ("Mus_Secteur3", MusBase);
-		else
-			AkSoundEngine.PostEvent ("Mus_Secteur3", camSound);
+		if (col.tag == "Player") {
+			
+			if (MusTest == false)
+				AkSoundEngine.PostEvent ("Mus_Secteur3", MusBase);
+			else
+				AkSoundEngine.PostEvent ("Mus_Secteur3", camSound);
 
-
+			Destroy (gameObject);
+		}
 	}
 }

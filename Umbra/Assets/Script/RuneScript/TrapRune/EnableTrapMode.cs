@@ -67,13 +67,13 @@ public class EnableTrapMode : MonoBehaviour {
 		{
 			if (CanInstantiate == true)
 			{
-				myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (true);
+				//myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (true);
 				Demotrap.transform.position = new Vector3 (myraycast.point.x, myTrapZone.transform.position.y, 0);
 			}
 
 			if(CanInstantiate==false)
 			{
-				myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
+				//myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
 				Demotrap.transform.position = NowherePoint.position;
 
 			}
@@ -104,7 +104,7 @@ public class EnableTrapMode : MonoBehaviour {
 				myPlayer.GetComponent<Platformer2DUserControl> ().enabled = true;
 				if(myTrapZone != null)
 				{
-					myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
+					//myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
 					Demotrap.transform.position = NowherePoint.position;
 				}
 				Demotrap.transform.position = NowherePoint.position;
@@ -146,10 +146,10 @@ public class EnableTrapMode : MonoBehaviour {
 		foreach (GameObject TrapRegion in AllTrap)
 			TrapRegion.GetComponent<Collider2D> ().isTrigger = true;
 
-		if(myTrapZone != null)
-		{
-			myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
-		}
+//		if(myTrapZone != null)
+//		{
+//			myTrapZone.GetComponent<ThisisMyFeedBackTrap> ().myFeedback.SetActive (false);
+//		}
 		CanInstantiate = false;
 		Demotrap.transform.position = NowherePoint.position;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
