@@ -24,8 +24,18 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -43,6 +53,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<ActorMixer Name="Action" ID="{07A51518-8DB3-4833-9DB9-DBD0BE4882A2}" ShortID="125611532">
+									<PropertyList>
+										<Property Name="Priority" Type="int16">
+											<ValueList>
+												<Value>90</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -173,6 +190,12 @@
 															<Modifier Name="" ID="{26874AEB-3D2E-4D5F-9C95-24ABBFC7A77B}"/>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="OverridePriority" Type="bool" Value="True"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>80</Value>
+													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -336,6 +359,12 @@
 													</ModifierList>
 												</Property>
 												<Property Name="OverrideConversion" Type="bool" Value="True"/>
+												<Property Name="OverridePriority" Type="bool" Value="True"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-4</Value>
@@ -369,9 +398,15 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="OverridePriority" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>-600</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>100</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
@@ -412,6 +447,7 @@
 								</ActorMixer>
 								<ActorMixer Name="Foot" ID="{C6055C79-CB42-4E18-8A0F-FD244B9DDCFE}" ShortID="607807331">
 									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>6</Value>
@@ -2155,11 +2191,13 @@
 								<ActorMixer Name="State" ID="{23E84DB6-59EF-412B-B63A-5EEED973C203}" ShortID="44060707">
 									<PropertyList>
 										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>20</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
@@ -4704,6 +4742,12 @@
 						<ActorMixer Name="Scripted" ID="{6D0F5C71-A5D0-4A68-ABAE-07DE6EED892A}" ShortID="308019416">
 							<PropertyList>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverridePriority" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>90</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4745,6 +4789,13 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="CutS" ID="{05349632-C4F3-4437-85E0-7733DE1653E4}" ShortID="412886661">
+					<PropertyList>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
