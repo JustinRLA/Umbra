@@ -1838,7 +1838,7 @@
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
-										<Value>30</Value>
+										<Value>60</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
@@ -1874,6 +1874,11 @@
 							<ChildrenList>
 								<ActorMixer Name="Foot" ID="{DD51B0F9-9039-4D02-8EA3-00614322AE08}" ShortID="672466227">
 									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverridePriority" Type="bool" Value="True"/>
 										<Property Name="Priority" Type="int16">
 											<ValueList>
@@ -1881,6 +1886,11 @@
 											</ValueList>
 										</Property>
 										<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1894,6 +1904,11 @@
 										<RandomSequenceContainer Name="NPC_Foot_Run" ID="{5C4104EF-E2ED-4374-9219-1E6CFBA733CF}" ShortID="679808201">
 											<PropertyList>
 												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
 														<Value>10</Value>
 													</ValueList>
@@ -1921,6 +1936,11 @@
 												</Property>
 												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-8</Value>
@@ -2057,10 +2077,21 @@
 								</ActorMixer>
 								<ActorMixer Name="Action" ID="{1A935223-29DF-4DE2-A40D-BF16FACA1D53}" ShortID="417984094">
 									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverridePriority" Type="bool" Value="True"/>
 										<Property Name="Priority" Type="int16">
 											<ValueList>
 												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2190,13 +2221,7 @@
 								</ActorMixer>
 								<ActorMixer Name="State" ID="{23E84DB6-59EF-412B-B63A-5EEED973C203}" ShortID="44060707">
 									<PropertyList>
-										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-										<Property Name="MaxSoundPerInstance" Type="int16">
-											<ValueList>
-												<Value>20</Value>
-											</ValueList>
-										</Property>
 										<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
@@ -2220,6 +2245,13 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="NPC_State_Alarmed" ID="{A7BD7DD8-AFE9-4617-B232-5312700776D9}" ShortID="830456234">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>8</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="OverridePriority" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
@@ -2259,6 +2291,11 @@
 												</Property>
 												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>12</Value>
@@ -2376,11 +2413,22 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="NPC_State_Normal_Trigger" ID="{A1C2F7C7-1DFC-4A41-9D7C-9D98431126F1}" ShortID="601614223">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="OverridePriority" Type="bool" Value="True"/>
 												<Property Name="Priority" Type="int16">
 													<ValueList>
 														<Value>30</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
@@ -2424,6 +2472,13 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="NPC_State_Located" ID="{1BCEB177-5751-4533-A7A0-91B6C368CED6}" ShortID="133809176">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>8</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="OverridePriority" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
@@ -2463,6 +2518,11 @@
 												</Property>
 												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>9</Value>
@@ -2579,6 +2639,13 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>8</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="OverridePriority" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
@@ -2605,6 +2672,11 @@
 												</Property>
 												<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
 												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>10</Value>
@@ -3656,6 +3728,16 @@
 									<ChildrenList>
 										<Sound Name="Amb_Door" ID="{ECCF7AAD-A782-4A76-844B-DD200948CEF7}" ShortID="721180904" Type="SoundFX">
 											<PropertyList>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-3</Value>
@@ -3717,6 +3799,18 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Amb_Alarm" ID="{F615352B-6748-42FA-8515-6EA69E08F646}" ShortID="114435181" Type="SoundFX">
+											<PropertyList>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
@@ -3741,10 +3835,22 @@
 										</Sound>
 										<Sound Name="Amb_Shadow_Pipe" ID="{33E1FF04-53C3-4C73-819F-00241E632014}" ShortID="203410174" Type="SoundFX">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-22</Value>
@@ -3942,6 +4048,12 @@
 								<RandomSequenceContainer Name="Menu_Hover" ID="{2AAA4214-5F0E-4AB3-96AC-3D671DC7622E}" ShortID="21542672">
 									<PropertyList>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="OverridePriority" Type="bool" Value="True"/>
+										<Property Name="Priority" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
 										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
