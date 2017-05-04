@@ -155,12 +155,19 @@ public class EnnnemyPatrolUpgraded : MonoBehaviour {
 	{
 		LurePlayer = GameObject.Find ("2DCharacterShadow").transform;
 
+
 	}
 	public void NormalStart()
 	{
-		AkSoundEngine.PostEvent ("NPC_State_Normal", gameObject);
+		haveplayedNeutral = true;
+		StartCoroutine (DelaySound ());
 	}
+	IEnumerator DelaySound()
+	{
+		yield return new WaitForSeconds (0.5f);
+		AkSoundEngine.PostEvent ("NPC_State_Normal", gameObject);
 
+	}
 	//0.287 0.691
 	//Left -0.283 0.68
 	public void DestroyObj()
