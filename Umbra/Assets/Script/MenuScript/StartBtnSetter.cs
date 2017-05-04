@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartBtnSetter : MonoBehaviour {
 	public GameObject ContinueBtn;
 	public GameObject CommencerNewGame;
 	public GameObject CommencerStartedGame;
+	public bool CreditMainMenu;
+
 	GameObject MusicBase;
 	// Use this for initialization
 
@@ -23,6 +26,7 @@ public class StartBtnSetter : MonoBehaviour {
 		//MusicBase = GameObject.Find ("MusicBase");
 		if (PlayerPrefs.GetInt ("SaveSystem") == 0)
 		{
+				
 			ContinueBtn.SetActive (false);
 			CommencerNewGame.SetActive (true);
 			CommencerStartedGame.SetActive (false);
@@ -30,9 +34,26 @@ public class StartBtnSetter : MonoBehaviour {
 		}
 		else
 		{
+			if(CreditMainMenu==false)
+			{
 			ContinueBtn.SetActive (true);
 			CommencerNewGame.SetActive (false);
 			CommencerStartedGame.SetActive (true);
+			}
+			if(CreditMainMenu==true)
+			{
+				ContinueBtn.SetActive (true);
+				CommencerNewGame.SetActive (false);
+				CommencerStartedGame.SetActive (true);
+
+				CommencerStartedGame.GetComponent<Image> ().enabled = false;
+				CommencerStartedGame.GetComponent<Button> ().enabled = false;
+
+				ContinueBtn.GetComponent<Image> ().enabled = false;
+				ContinueBtn.GetComponent<Button> ().enabled = false;
+
+			}
+
 		}
 			
 	}
