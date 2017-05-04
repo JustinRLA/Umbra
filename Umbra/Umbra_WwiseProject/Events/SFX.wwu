@@ -232,6 +232,20 @@
 						<Event Name="NPC_State_Normal" ID="{C4662E75-92A5-443F-BDEA-99F0403F6BE2}">
 							<ChildrenList>
 								<Action Name="Play" ID="{E088C3DD-51A8-472E-ACAD-F29665A37DE9}" ShortID="661023472" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{14D5FAF4-234D-47B9-A123-C29D23215F58}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="2.5"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{0A1A4EE2-CB52-4E48-9C46-33DD36E40CD3}" Global="false">
 											<ObjectRef Name="NPC_State_Normal_Trigger" ID="{A1C2F7C7-1DFC-4A41-9D7C-9D98431126F1}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
