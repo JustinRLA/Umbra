@@ -123,6 +123,9 @@ public class solifyShadow : MonoBehaviour {
 
 	IEnumerator SolidicationEvent()
 	{
+		print ("change Layer");
+		gameObject.layer = 24;
+
 //		ps.main.simulationSpeed = 1;
 		GlowParticle.SetActive (true);
 		BlackSquare.SetActive (true);
@@ -151,7 +154,6 @@ public class solifyShadow : MonoBehaviour {
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 		gameObject.tag="SolidOmbre";
-		gameObject.layer = 10;
 		GrimpSurfaceLeft.layer = 24;
 		GrimpSurfaceRight.layer = 24;
 

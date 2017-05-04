@@ -6,6 +6,7 @@ public class DragShadow : MonoBehaviour {
 	//GameObject TheRealSPrite;
 	Ray ray;
 	GameObject FullShadow;
+	bool canClick;
 
 	public bool dragging = true;
 	private float distance;
@@ -27,6 +28,8 @@ public class DragShadow : MonoBehaviour {
 
 		mainCamMy = GameObject.Find ("Main Camera");
 		RuneMangerMy=GameObject.Find ("RuneManager");
+		canClick = true;
+
 	}
 	void OnMouseEnter()
 	{
@@ -61,15 +64,17 @@ public class DragShadow : MonoBehaviour {
 		//gameObject.layer = 10;
 		RuneMangerMy.GetComponent<RuneManagerScript> ().RuneActivated = false;
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+		if(canClick==true)
 		gameObject.layer = 10;
 		GetComponent<timerEffetc> ().enabled = true;
 
 		Time.timeScale =1f;
 		//Destroy (GetComponent<DragShadow> ());
 		//GetComponent<SpriteRenderer> ().enabled = false;
-		GetComponent<DragShadow>().enabled=false;
 
 		gameObject.name=("OldCube");
+		Destroy(GetComponent<DragShadow>());
+
 	}
 	void CancelThis()
 	{
