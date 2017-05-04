@@ -11,6 +11,9 @@
 							</PropertyList>
 						</Action>
 						<Action Name="Play" ID="{7580777A-D2A1-4583-BDFD-77190356E879}" ShortID="468272782" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{8D3AF8B0-3D4C-4885-9971-EE465C9C5C72}" Global="false">
 									<ObjectRef Name="CutS_Start" ID="{05F4D97F-C8AC-4D5A-A89B-CA96E0CDEF9B}" WorkUnitID="{8D2B4C1C-A9D3-4C83-B5CA-2C43973012FC}"/>
