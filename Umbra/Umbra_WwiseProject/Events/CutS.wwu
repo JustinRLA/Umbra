@@ -5,11 +5,7 @@
 			<ChildrenList>
 				<Event Name="CutS_Start" ID="{24D941C3-4515-4AB4-9EBF-AAED947B3E90}">
 					<ChildrenList>
-						<Action Name="Stop All" ID="{64746AD6-6ADC-46B2-B03B-D56AB35B063C}" ShortID="682702398" Type="Stop" Scope="All" Global="true">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
-						</Action>
+						<Action Name="Stop All" ID="{64746AD6-6ADC-46B2-B03B-D56AB35B063C}" ShortID="682702398" Type="Stop" Scope="All" Global="true"/>
 						<Action Name="Play" ID="{7580777A-D2A1-4583-BDFD-77190356E879}" ShortID="468272782" Type="Play" Scope="One" Global="false">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="0.01"/>
