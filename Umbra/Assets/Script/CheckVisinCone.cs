@@ -113,18 +113,25 @@ public class CheckVisinCone : MonoBehaviour {
 
 					EnnmyRay  = Physics2D.Linecast (transform.position, EnnemyInScene [0].position,LayerMaskOne);
 			SecondEnnmyRay  = Physics2D.Linecast (SecondRay.position, EnnemyInScene [0].position,LayerMaskOne);
-
+			if (EnnmyRay.collider == null)
+				CanSee = true;
+			if (SecondEnnmyRay.collider == null)
+				SecondCanSee = true;
+			
 					if (EnnmyRay.collider != null) {
 
 						if (EnnmyRay.collider.tag == "bloc")
 							CanSee = false;
 						else
 							CanSee = true;
+			}
+			if (SecondEnnmyRay.collider != null) {
 
 				if (SecondEnnmyRay.collider.tag == "bloc")
 					SecondCanSee = false;
 				else
 					SecondCanSee = true;
+			}
 				
 				if (CanSee == true || MarkOne.isMarked==true || SecondCanSee==true) {
 							if (PatrolOne != null)
@@ -135,7 +142,7 @@ public class CheckVisinCone : MonoBehaviour {
 							if (PatrolOne != null)
 						ConvisibleOne.HisSight.SetActive(false);
 						}
-					}
+					
 				}
 				else
 				{
@@ -165,17 +172,24 @@ public class CheckVisinCone : MonoBehaviour {
 			SecondEnnmyRayTwo  = Physics2D.Linecast (SecondRay.position, EnnemyInScene [1].position,LayerMaskOne);
 
 					EnnmyRayTwo  = Physics2D.Linecast (transform.position, EnnemyInScene [1].position,LayerMaskOne);
+			if (EnnmyRayTwo.collider == null)
+				CanSeeTwo = true;
+			if (SecondEnnmyRayTwo.collider == null)
+				SecondCanSeeTwo = true;
+			
+
 					if (EnnmyRayTwo.collider != null) {
 						if (EnnmyRayTwo.collider.tag == "bloc")
 							CanSeeTwo = false;
 						else
 							CanSeeTwo = true;
-				
+			}
+			if (SecondEnnmyRayTwo.collider != null) {
 				if (SecondEnnmyRayTwo.collider.tag == "bloc")
 					SecondCanSeeTwo = false;
 				else
 					SecondCanSeeTwo = true;
-
+			}
 				if (CanSeeTwo == true || MarkTwo.isMarked==true ||SecondCanSeeTwo == true) {
 							if (PatrolTwo != null)
 						ConvisibleTwo.HisSight.SetActive(true);
@@ -185,7 +199,7 @@ public class CheckVisinCone : MonoBehaviour {
 							if (PatrolTwo != null)
 						ConvisibleTwo.HisSight.SetActive(false);
 						}
-					}
+			
 
 				}
 				else
@@ -215,18 +229,27 @@ public class CheckVisinCone : MonoBehaviour {
 			SecondEnnmyRayThree  = Physics2D.Linecast (SecondRay.position, EnnemyInScene [2].position,LayerMaskOne);
 
 					EnnmyRayThree  = Physics2D.Linecast (transform.position, EnnemyInScene [2].position,LayerMaskOne);
-					if (EnnmyRayThree.collider != null) {
 
+			if (EnnmyRayThree.collider == null)
+				CanSeeThree = true;
+			if (SecondEnnmyRayThree.collider == null)
+				SecondCanSeeThree = true;
+			
+					if (EnnmyRayThree.collider != null) {
 						if (EnnmyRayThree.collider.tag == "bloc")
 							CanSeeThree = false;
 						else
 							CanSeeThree = true;
+			}
 
+			if (SecondEnnmyRayThree.collider != null) {
+				
 				if (SecondEnnmyRayThree.collider.tag == "bloc")
 					SecondCanSeeThree = false;
 				else
 					SecondCanSeeThree = true;
-				
+			}
+
 				if (CanSeeThree == true || MarkThree.isMarked==true || SecondCanSeeThree == true) {
 							if (Patrolthree != null)
 						ConvisibleThree.HisSight.SetActive(true);
@@ -237,7 +260,7 @@ public class CheckVisinCone : MonoBehaviour {
 						ConvisibleThree.HisSight.SetActive(false);
 						}
 						//	}
-					}
+					
 				}
 				else
 				{
@@ -267,17 +290,23 @@ public class CheckVisinCone : MonoBehaviour {
 			SecondEnnmyRayFour = Physics2D.Linecast (SecondRay.position, EnnemyInScene [3].position, LayerMaskOne);
 
 					EnnmyRayFour = Physics2D.Linecast (transform.position, EnnemyInScene [3].position, LayerMaskOne);
+			if (EnnmyRayFour.collider == null)
+				CanSeeFour = true;
+			if (SecondEnnmyRayFour.collider == null)
+				SecondCanSeeFour = true;
+			
 					if (EnnmyRayFour.collider != null) {
 						if (EnnmyRayFour.collider.tag == "bloc")
 							CanSeeFour = false;
 						else
 							CanSeeFour = true;
-
+			}
+			if (SecondEnnmyRayFour.collider != null) {
 				if (SecondEnnmyRayFour.collider.tag == "bloc")
 					SecondCanSeeFour = false;
 				else
 					SecondCanSeeFour = true;
-				
+			}
 				if (CanSeeFour == true || MarkFour.isMarked == true  || SecondCanSeeFour==true) {
 							if (PatrolFour != null)
 						ConvisibleFour.HisSight.SetActive(true);
@@ -286,7 +315,7 @@ public class CheckVisinCone : MonoBehaviour {
 							if (PatrolFour != null)
 						ConvisibleFour.HisSight.SetActive(false);
 						}
-					}
+
 					//	}
 
 				} else {
@@ -317,15 +346,24 @@ public class CheckVisinCone : MonoBehaviour {
 					//			{
 			SecondEnnmyRayFive =  Physics2D.Linecast (SecondRay.position, EnnemyInScene [4].position,LayerMaskOne);
 					EnnmyRayFive  = Physics2D.Linecast (transform.position, EnnemyInScene [4].position,LayerMaskOne);
+
+			if (EnnmyRayFive.collider == null)
+				CanSeeFive = true;
+			if (SecondEnnmyRayFive.collider == null)
+				SecondCanSeeFive = true;
+			
 					if (EnnmyRayFive.collider != null) {
 						if (EnnmyRayFive.collider.tag == "bloc")
 							CanSeeFive = false;
 						else
 							CanSeeFive = true;
+			}
+			if (SecondEnnmyRayFive.collider != null) {
 				if (SecondEnnmyRayFive.collider.tag == "bloc")
 					SecondCanSeeFive = false;
 				else
 					SecondCanSeeFive = true;
+			}
 						if (PatrolFive != null)
 						{
 					if (CanSeeFive == true || MarkFive.isMarked==true || SecondCanSeeFive==true)
@@ -339,7 +377,7 @@ public class CheckVisinCone : MonoBehaviour {
 
 							//	}
 						}
-					}
+
 				}
 				else
 				{
@@ -369,19 +407,26 @@ public class CheckVisinCone : MonoBehaviour {
 					//			if(EnnmyRay  !=null)
 					//			{
 			SecondEnnmyRaySix = Physics2D.Linecast (SecondRay.position, EnnemyInScene [5].position, LayerMaskOne);
-
 					EnnmyRaySix = Physics2D.Linecast (transform.position, EnnemyInScene [5].position, LayerMaskOne);
-					if (EnnmyRaySix.collider != null) {
+			if (EnnmyRaySix.collider == null)
+				CanSeeSix = true;
+			if (SecondEnnmyRaySix.collider == null)
+				SecondCanSeeSix = true;
+			
 
+
+					if (EnnmyRaySix.collider != null) {
 						if (EnnmyRaySix.collider.tag == "bloc")
 							CanSeeSix = false;
 						else
 							CanSeeSix = true;
-
+			}
+			if (SecondEnnmyRaySix.collider != null) {
 				if (SecondEnnmyRaySix.collider.tag == "bloc")
 					SecondCanSeeSix = false;
 				else
 					SecondCanSeeSix = true;
+			}
 				if (CanSeeSix == true || MarkSix == true || SecondCanSeeSix==true) {
 							if (PatrolSix != null)
 						ConvisibleSix.HisSight.SetActive(true);
@@ -394,8 +439,9 @@ public class CheckVisinCone : MonoBehaviour {
 							//	}
 
 						}
-					}
-				} else
+
+				}
+		else
 				{
 					AlerEnnemy [5] = false;
 					SuspiciousEnnemy[5]=false;

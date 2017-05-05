@@ -95,11 +95,14 @@ public class EnnemyMarked : MonoBehaviour {
 			PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
 			PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
 			PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+			myRuneManager.RuneActivated = false;
 
 			Time.timeScale = 1f;
 			AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 			myMarkEnmnemyRune.CanBeClicked = false;
+			myMarkEnmnemyRune.enabled = false;
+
 
 		}
 
@@ -116,6 +119,7 @@ public class EnnemyMarked : MonoBehaviour {
 		GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1);
 		myMainCam.GetComponent<BloomOptimized> ().enabled = false;
 		myCam.GetComponent<ColorCorrectionCurves> ().enabled = false;
+		myRuneManager.RuneActivated = false;
 
 		Cursor.visible = false;
 		PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
@@ -126,6 +130,7 @@ public class EnnemyMarked : MonoBehaviour {
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
 
 		myMarkEnmnemyRune.CanBeClicked = false;
+		myMarkEnmnemyRune.enabled = false;
 
 	}
 

@@ -304,8 +304,9 @@ public class RuneManagerScript : MonoBehaviour
 		}
 			if (Input.GetMouseButtonDown(1) && RuneModeEnabled==true && canSwitchMode==true)
 		{
+			// -33 R  160 B  67 V
 			canSwitchMode = false;
-
+			RuneActivated = false;
 			Time.timeScale = 1;
 			ImageRuneLeurreFull.GetComponent<Image> ().enabled = false;
 			ImageRuneOmbreFull.GetComponent<Image> ().enabled = false;

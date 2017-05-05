@@ -11,6 +11,7 @@ public class SolidifcationEnabled : MonoBehaviour {
 	GameObject FullRune;
 	GameObject RuneManager;
 	GameObject PlayerMy;
+	public bool canCancell;
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
@@ -21,14 +22,32 @@ public class SolidifcationEnabled : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetMouseButtonDown (1) && canCancell==true)
+			CancelFromHere ();
 	}
+	void CancelFromHere()
+	{
+		print ("cancell");
+		Time.timeScale = 1;
+		RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+		PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+		PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
+		PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+		FullRune.GetComponent<Image> ().enabled = false;
+		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = false;
+		canCancell = false;
+		Time.timeScale = 1;
+		Cursor.visible = false;
 
+		GetComponent<SolidifcationEnabled> ().enabled = false;
+
+
+	}
 	public void SolidificationStart()
 	{		
-		if(GameObject.FindGameObjectsWithTag ("Ombre") != null && GameObject.FindGameObjectWithTag ("Ombre") != null)
+		if(GameObject.FindGameObjectsWithTag ("Ombre") != null || GameObject.FindGameObjectWithTag ("SolidOmbre") != null)
 		{
-			
+			canCancell = false;
 			print ("thereis asgadiw");
 		Cursor.visible = true;
 			Test = GameObject.FindGameObjectWithTag ("Ombre");
@@ -36,6 +55,7 @@ public class SolidifcationEnabled : MonoBehaviour {
 		FullRune = GameObject.Find ("solideImageFull");
 		FullRune.GetComponent<Image> ().enabled = true;
 		RuneManager = GameObject.Find ("RuneManager");
+			RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;
 
 		AllShadow = GameObject.FindGameObjectsWithTag ("Ombre");
 
@@ -47,18 +67,18 @@ public class SolidifcationEnabled : MonoBehaviour {
 			Ombre.GetComponent<solifyShadow> ().enable = true;
 
 		}
-		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;
 		print ("sp;od");
+			GetComponent<SolidifcationEnabled> ().enabled = false;
 	//MyCache.SetActive (true);
 		}
 		else
 		{
-			Time.timeScale = 1;
-			RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
-			PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
-			PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
-			PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
+			FullRune = GameObject.Find ("solideImageFull");
+			FullRune.GetComponent<Image> ().enabled = true;
+			RuneManager = GameObject.Find ("RuneManager");
+			RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;
 
+			canCancell = true;
 
 
 		}
