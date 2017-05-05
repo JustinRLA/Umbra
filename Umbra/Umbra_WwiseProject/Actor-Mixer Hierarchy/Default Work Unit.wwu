@@ -4641,74 +4641,20 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
-					</ChildrenList>
-				</ActorMixer>
-				<ActorMixer Name="CutS" ID="{05349632-C4F3-4437-85E0-7733DE1653E4}" ShortID="412886661">
-					<PropertyList>
-						<Property Name="Priority" Type="int16">
-							<ValueList>
-								<Value>100</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="CutS_Start" ID="{05F4D97F-C8AC-4D5A-A89B-CA96E0CDEF9B}" ShortID="458619367" Type="SoundFX">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="CutS_Start" ID="{1AEA3BCF-0DE3-4867-A46C-D587C744507B}" ShortID="104493633">
-									<Language>SFX</Language>
-									<AudioFile>CutS_Start.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="CutS_Start" ID="{1AEA3BCF-0DE3-4867-A46C-D587C744507B}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</ActorMixer>
-				<ActorMixer Name="AMB" ID="{16C92E38-35C7-4A32-9C84-9D6194021DE8}" ShortID="520717537">
-					<PropertyList>
-						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
-						<Property Name="OverrideOutput" Type="bool" Value="True"/>
-						<Property Name="OverridePriority" Type="bool" Value="True"/>
-						<Property Name="Priority" Type="int16">
-							<ValueList>
-								<Value>20</Value>
-							</ValueList>
-						</Property>
-						<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="SFX" ID="{2B135C9B-AE0C-4D00-941A-F1435180B301}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
 						<ActorMixer Name="Ponctuel" ID="{8F360A60-E8A8-4EE5-B65E-72A158BD88FD}" ShortID="942666033">
 							<PropertyList>
+								<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+									<ObjectRef Name="SFX" ID="{2B135C9B-AE0C-4D00-941A-F1435180B301}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="AMB Ponctuel" ID="{F7FBBD40-7B31-42DA-8728-54C10DFCE3BB}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
@@ -4717,6 +4663,7 @@
 							<ChildrenList>
 								<Sound Name="Amb_Door" ID="{ECCF7AAD-A782-4A76-844B-DD200948CEF7}" ShortID="721180904" Type="SoundFX">
 									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>2</Value>
@@ -4861,6 +4808,9 @@
 										<AudioFileSource Name="Amb_Shadow_Pipe" ID="{0063D490-A43C-4B34-AF20-F49EFA1C9DE8}" ShortID="329889399">
 											<Language>SFX</Language>
 											<AudioFile>Amb_Shadow_Pipe.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="746815393"/>
+											</ConvertedFileIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -4869,6 +4819,67 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="CutS" ID="{05349632-C4F3-4437-85E0-7733DE1653E4}" ShortID="412886661">
+					<PropertyList>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="CutS_Start" ID="{05F4D97F-C8AC-4D5A-A89B-CA96E0CDEF9B}" ShortID="458619367" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CutS_Start" ID="{1AEA3BCF-0DE3-4867-A46C-D587C744507B}" ShortID="104493633">
+									<Language>SFX</Language>
+									<AudioFile>CutS_Start.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CutS_Start" ID="{1AEA3BCF-0DE3-4867-A46C-D587C744507B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="AMB" ID="{16C92E38-35C7-4A32-9C84-9D6194021DE8}" ShortID="520717537">
+					<PropertyList>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+						<Property Name="OverridePriority" Type="bool" Value="True"/>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
+						<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="SFX" ID="{2B135C9B-AE0C-4D00-941A-F1435180B301}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
 						<BlendContainer Name="Amb_Rain" ID="{8620F060-9852-42EA-ADEB-B925E0EB95F5}" ShortID="308390097">
 							<PropertyList>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
