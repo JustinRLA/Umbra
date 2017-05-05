@@ -6,13 +6,17 @@ using UnityEngine.UI;
 public class SolidifcationEnabled : MonoBehaviour {
 	public bool CanClickable=false;
 //	public GameObject MyCache;
+	public GameObject Test;
 	public GameObject[] AllShadow;
 	GameObject FullRune;
 	GameObject RuneManager;
+	GameObject PlayerMy;
 	// Use this for initialization
 	void Start () {
 		RuneManager = GameObject.Find ("RuneManager");
 		CanClickable=false;
+		PlayerMy = GameObject.Find("2DCharacter(Clone)");
+
 	}
 	
 	// Update is called once per frame
@@ -21,9 +25,13 @@ public class SolidifcationEnabled : MonoBehaviour {
 	}
 
 	public void SolidificationStart()
-	{
+	{		
+		if(GameObject.FindGameObjectsWithTag ("Ombre") != null && GameObject.FindGameObjectWithTag ("Ombre") != null)
+		{
+			
+			print ("thereis asgadiw");
 		Cursor.visible = true;
-
+			Test = GameObject.FindGameObjectWithTag ("Ombre");
 		CanClickable = true;
 		FullRune = GameObject.Find ("solideImageFull");
 		FullRune.GetComponent<Image> ().enabled = true;
@@ -40,8 +48,19 @@ public class SolidifcationEnabled : MonoBehaviour {
 
 		}
 		RuneManager.GetComponent<RuneManagerScript> ().RuneActivated = true;
-
+		print ("sp;od");
 	//MyCache.SetActive (true);
+		}
+		else
+		{
+			Time.timeScale = 1;
+			RuneManager.GetComponent<RuneManagerScript> ().RuneModeEnabled = false;
+			PlayerMy.GetComponent<PlatformerCharacter2D> ().m_MaxSpeed = 10;
+			PlayerMy.GetComponent<PlatformerCharacter2D> ().enabled = true;
+			PlayerMy.GetComponent<Platformer2DUserControl> ().enabled = true;
 
+
+
+		}
 	}
 }
