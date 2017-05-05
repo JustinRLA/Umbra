@@ -6,11 +6,19 @@
 				<ActorMixer Name="SFX" ID="{1DB6864E-3EDD-46E3-A36A-241C075AD7F8}" ShortID="445137036">
 					<PropertyList>
 						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+						<Property Name="RenderEffect0" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="SFX" ID="{2B135C9B-AE0C-4D00-941A-F1435180B301}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+							<ObjectRef Name="Medium" ID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX_ALL" ID="{674719A5-FF3D-49E6-B3BC-537EAED38975}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
@@ -19,17 +27,11 @@
 					<ChildrenList>
 						<ActorMixer Name="PC" ID="{FFD9FD6F-49C8-4582-832A-B2DF5F570A1E}" ShortID="961580517">
 							<PropertyList>
-								<Property Name="BypassEffect0" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>10</Value>
 									</ValueList>
 								</Property>
-								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
@@ -40,12 +42,6 @@
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-								</Reference>
-								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-									<ObjectRef Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-								</Reference>
-								<Reference Name="Effect1" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
-									<ObjectRef Name="Repeat_after_me" ID="{7A0568D0-BE8B-4233-B3E8-200344DB7AE0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="PC" ID="{1CAE5AA5-87A2-464C-ACD7-3FC2ED76398F}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
@@ -1090,10 +1086,9 @@
 										<RandomSequenceContainer Name="PC_Foot_Land" ID="{37FC9B77-546C-4433-B65F-5FE3FB0B48C1}" ShortID="956165533">
 											<PropertyList>
 												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
-														<Value>1</Value>
+														<Value>5</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Pitch" Type="int32">
@@ -1643,9 +1638,6 @@
 												<AudioFileSource Name="Amb_Shadow_Pipe" ID="{43356751-DAD6-46E1-97DE-2E2F29DCAA59}" ShortID="746815393">
 													<Language>SFX</Language>
 													<AudioFile>Amb_Shadow_Pipe.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="329889399"/>
-													</ConvertedFileIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -2642,7 +2634,7 @@
 												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
-														<Value>8</Value>
+														<Value>15</Value>
 													</ValueList>
 												</Property>
 												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
@@ -2657,7 +2649,7 @@
 															<Modifier Name="" ID="{BA680268-BF8B-43C0-9F46-7E1FE9AAC855}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="0.5"/>
+																	<Property Name="Max" Type="Real64" Value="0.3"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -3694,255 +3686,6 @@
 								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
-						<ActorMixer Name="AMB" ID="{16C92E38-35C7-4A32-9C84-9D6194021DE8}" ShortID="520717537">
-							<PropertyList>
-								<Property Name="OverrideOutput" Type="bool" Value="True"/>
-								<Property Name="OverridePriority" Type="bool" Value="True"/>
-								<Property Name="Priority" Type="int16">
-									<ValueList>
-										<Value>20</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<ActorMixer Name="Ponctuel" ID="{8F360A60-E8A8-4EE5-B65E-72A158BD88FD}" ShortID="942666033">
-									<PropertyList>
-										<Property Name="OverrideOutput" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="AMB Ponctuel" ID="{F7FBBD40-7B31-42DA-8728-54C10DFCE3BB}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Amb_Door" ID="{ECCF7AAD-A782-4A76-844B-DD200948CEF7}" ShortID="721180904" Type="SoundFX">
-											<PropertyList>
-												<Property Name="MaxSoundPerInstance" Type="int16">
-													<ValueList>
-														<Value>2</Value>
-													</ValueList>
-												</Property>
-												<Property Name="UseMaxSoundPerInstance" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX_ALL" ID="{674719A5-FF3D-49E6-B3BC-537EAED38975}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Amb_Door" ID="{305062A8-73E9-4EAC-87F8-89F8A234092C}" ShortID="226844212">
-													<Language>SFX</Language>
-													<AudioFile>Amb_Door.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Amb_Door" ID="{305062A8-73E9-4EAC-87F8-89F8A234092C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Amb_Check" ID="{E589DA29-F227-45DC-95EA-F608E8022342}" ShortID="1056970807" Type="SoundFX">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-300</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-8</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Amb_Check" ID="{3230D00A-D769-44AD-BEA0-0E2EC674C604}" ShortID="777012996">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="5.25223214285714E-02"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.260591517857143"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.22215401785714"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Amb_Check.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Amb_Check" ID="{3230D00A-D769-44AD-BEA0-0E2EC674C604}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Amb_Alarm" ID="{F615352B-6748-42FA-8515-6EA69E08F646}" ShortID="114435181" Type="SoundFX">
-											<PropertyList>
-												<Property Name="MaxSoundPerInstance" Type="int16">
-													<ValueList>
-														<Value>1</Value>
-													</ValueList>
-												</Property>
-												<Property Name="UseMaxSoundPerInstance" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Amb_Alarm_Attack" ID="{FADD765D-3E37-4C60-90CB-07D4175357CE}" ShortID="81609057">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="2.89283689666343E-02"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.398877702866861"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Amb_Alarm_Attack.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Amb_Alarm_Attack" ID="{FADD765D-3E37-4C60-90CB-07D4175357CE}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Amb_Shadow_Pipe" ID="{33E1FF04-53C3-4C73-819F-00241E632014}" ShortID="203410174" Type="SoundFX">
-											<PropertyList>
-												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
-												<Property Name="MaxSoundPerInstance" Type="int16">
-													<ValueList>
-														<Value>4</Value>
-													</ValueList>
-												</Property>
-												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
-												<Property Name="UseMaxSoundPerInstance" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-22</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Attenuation">
-													<ObjectRef Name="NPC" ID="{49B11B0F-CC76-4950-B946-749AEAC2C63E}" WorkUnitID="{9DDEA9CA-00FF-443F-9714-0256F99621A7}"/>
-												</Reference>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Amb_Shadow_Pipe" ID="{0063D490-A43C-4B34-AF20-F49EFA1C9DE8}" ShortID="329889399">
-													<Language>SFX</Language>
-													<AudioFile>Amb_Shadow_Pipe.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Amb_Shadow_Pipe" ID="{0063D490-A43C-4B34-AF20-F49EFA1C9DE8}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</ActorMixer>
-								<BlendContainer Name="Amb_Rain" ID="{8620F060-9852-42EA-ADEB-B925E0EB95F5}" ShortID="308390097">
-									<PropertyList>
-										<Property Name="OverrideConversion" Type="bool" Value="True"/>
-										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="OverridePriority" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Priority" Type="int16">
-											<ValueList>
-												<Value>20</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Rain" ID="{F45C1CFF-7FF9-4460-8893-3EF239C55945}" WorkUnitID="{9DDEA9CA-00FF-443F-9714-0256F99621A7}"/>
-										</Reference>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Mus_Menu" ID="{04F42BA7-9C4B-4356-85D7-BE2F75F91EAD}" ShortID="143157463" Type="SoundFX">
-											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-19</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Mus_Menu" ID="{880C510C-2AAE-4E11-BD81-4F0098BE8349}" ShortID="721335870">
-													<Language>SFX</Language>
-													<AudioFile>Mus_Menu.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="176784398"/>
-													</ConvertedFileIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Mus_Menu" ID="{880C510C-2AAE-4E11-BD81-4F0098BE8349}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</BlendContainer>
-							</ChildrenList>
-						</ActorMixer>
 						<ActorMixer Name="UI" ID="{6370E247-B9F0-4AA9-B97A-8338ABAD90BF}" ShortID="187758">
 							<PropertyList>
 								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
@@ -4936,6 +4679,262 @@
 								<ActiveSource Name="CutS_Start" ID="{1AEA3BCF-0DE3-4867-A46C-D587C744507B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="AMB" ID="{16C92E38-35C7-4A32-9C84-9D6194021DE8}" ShortID="520717537">
+					<PropertyList>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+						<Property Name="OverridePriority" Type="bool" Value="True"/>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
+						<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="SFX" ID="{2B135C9B-AE0C-4D00-941A-F1435180B301}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Ponctuel" ID="{8F360A60-E8A8-4EE5-B65E-72A158BD88FD}" ShortID="942666033">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="AMB Ponctuel" ID="{F7FBBD40-7B31-42DA-8728-54C10DFCE3BB}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Amb_Door" ID="{ECCF7AAD-A782-4A76-844B-DD200948CEF7}" ShortID="721180904" Type="SoundFX">
+									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX_ALL" ID="{674719A5-FF3D-49E6-B3BC-537EAED38975}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Amb_Door" ID="{305062A8-73E9-4EAC-87F8-89F8A234092C}" ShortID="226844212">
+											<Language>SFX</Language>
+											<AudioFile>Amb_Door.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Amb_Door" ID="{305062A8-73E9-4EAC-87F8-89F8A234092C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Amb_Check" ID="{E589DA29-F227-45DC-95EA-F608E8022342}" ShortID="1056970807" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-300</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Amb_Check" ID="{3230D00A-D769-44AD-BEA0-0E2EC674C604}" ShortID="777012996">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="5.25223214285714E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.260591517857143"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.22215401785714"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Amb_Check.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Amb_Check" ID="{3230D00A-D769-44AD-BEA0-0E2EC674C604}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Amb_Alarm" ID="{F615352B-6748-42FA-8515-6EA69E08F646}" ShortID="114435181" Type="SoundFX">
+									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{BF25E8E7-040E-4484-9D33-9BC0F6861AF6}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Amb_Alarm_Attack" ID="{FADD765D-3E37-4C60-90CB-07D4175357CE}" ShortID="81609057">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.89283689666343E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.398877702866861"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Amb_Alarm_Attack.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Amb_Alarm_Attack" ID="{FADD765D-3E37-4C60-90CB-07D4175357CE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Amb_Shadow_Pipe" ID="{33E1FF04-53C3-4C73-819F-00241E632014}" ShortID="203410174" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-22</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="NPC" ID="{49B11B0F-CC76-4950-B946-749AEAC2C63E}" WorkUnitID="{9DDEA9CA-00FF-443F-9714-0256F99621A7}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Amb_Shadow_Pipe" ID="{0063D490-A43C-4B34-AF20-F49EFA1C9DE8}" ShortID="329889399">
+											<Language>SFX</Language>
+											<AudioFile>Amb_Shadow_Pipe.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Amb_Shadow_Pipe" ID="{0063D490-A43C-4B34-AF20-F49EFA1C9DE8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<BlendContainer Name="Amb_Rain" ID="{8620F060-9852-42EA-ADEB-B925E0EB95F5}" ShortID="308390097">
+							<PropertyList>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="OverridePriority" Type="bool" Value="True"/>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Rain" ID="{F45C1CFF-7FF9-4460-8893-3EF239C55945}" WorkUnitID="{9DDEA9CA-00FF-443F-9714-0256F99621A7}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Mus_Menu" ID="{04F42BA7-9C4B-4356-85D7-BE2F75F91EAD}" ShortID="143157463" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-19</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Music" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{64451578-2DDE-46D4-8435-A601F601D080}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Mus_Menu" ID="{880C510C-2AAE-4E11-BD81-4F0098BE8349}" ShortID="721335870">
+											<Language>SFX</Language>
+											<AudioFile>Mus_Menu.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="176784398"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Mus_Menu" ID="{880C510C-2AAE-4E11-BD81-4F0098BE8349}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

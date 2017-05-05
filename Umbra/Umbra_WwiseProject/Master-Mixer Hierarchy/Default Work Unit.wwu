@@ -4,31 +4,89 @@
 		<WorkUnit Name="Default Work Unit" ID="{CBF1AA19-26AB-44F7-A96A-F46CFF0B19CB}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ChildrenList>
-						<Bus Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}"/>
-						<Bus Name="SFX_ALL" ID="{674719A5-FF3D-49E6-B3BC-537EAED38975}">
+						<Bus Name="Mus" ID="{A7FBE4AA-B262-41C5-87A5-DDE0438F511E}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="SFX_ALL" ID="{674719A5-FF3D-49E6-B3BC-537EAED38975}">
+							<PropertyList>
+								<Property Name="BypassEffect0" Type="bool">
 									<RTPCList>
-										<RTPC Name="" ID="{8EE21E92-137B-4998-BD79-ED8C8B36F272}" ShortID="1003863115">
+										<RTPC Name="" ID="{07A60F2D-99E7-4EB0-84E6-55B517C8DC34}" ShortID="962472793">
 											<ReferenceList>
 												<Reference Name="ControlInput">
 													<ObjectRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
 												</Reference>
 											</ReferenceList>
-											<Curve Name="" ID="{976061EF-95D8-44D4-8CA9-897154F5170C}">
+											<Curve Name="" ID="{60F2B1CD-F4F2-4C62-B634-052EEB291F68}">
 												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
+													<Property Name="Flags" Type="int32" Value="65537"/>
 												</PropertyList>
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>0</YPos>
+														<YPos>1</YPos>
 														<Flags>5</Flags>
 													</Point>
 													<Point>
+														<XPos>79.6571428571429</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
 														<XPos>100</XPos>
-														<YPos>-4</YPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="BypassEffect1" Type="bool">
+									<RTPCList>
+										<RTPC Name="" ID="{17881BCD-5282-472B-BCB4-CCF526A9A835}" ShortID="925764133">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{BBB982AB-A605-49ED-8775-84B2C12D374C}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>1</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>79.999</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>80</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -42,11 +100,92 @@
 									<ObjectRef Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="Effect1" CompanyID="4095" PluginID="65535" PluginType="15">
-									<ObjectRef Name="Medium" ID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									<ObjectRef Name="Holy" ID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Bus Name="PC" ID="{1CAE5AA5-87A2-464C-ACD7-3FC2ED76398F}"/>
+								<Bus Name="PC" ID="{1CAE5AA5-87A2-464C-ACD7-3FC2ED76398F}">
+									<ChildrenList>
+										<AuxBus Name="Leurre" ID="{238CE753-595F-4081-B047-69636778432A}">
+											<PropertyList>
+												<Property Name="BypassEffect0" Type="bool">
+													<RTPCList>
+														<RTPC Name="" ID="{14AF1A93-07F1-42DF-824C-18DAB2E637D4}" ShortID="198454519">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{5814A48A-D820-401F-8F88-9D24CA68C9DE}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>1</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>78.05714</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+												<Property Name="BypassEffect1" Type="bool">
+													<RTPCList>
+														<RTPC Name="" ID="{75802BC0-DBC4-49AD-9CB3-7626354E20FC}" ShortID="473605694">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{3240382F-0604-4032-BB57-28B95A99A784}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>1</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>73.25714</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Effect0" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+													<ObjectRef Name="Repeat_after_me" ID="{7A0568D0-BE8B-4233-B3E8-200344DB7AE0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="Effect1" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+													<ObjectRef Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+											</ReferenceList>
+										</AuxBus>
+									</ChildrenList>
+								</Bus>
 								<Bus Name="NPC" ID="{676E26A5-D301-4F71-B3F6-0D2C0832BB69}">
 									<ChildrenList>
 										<Bus Name="Normal" ID="{D081C6A7-03AC-484E-A358-8A8167C9E5D3}">

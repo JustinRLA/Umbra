@@ -132,39 +132,7 @@
 						<Effect Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 							<PropertyList>
 								<Property Name="Feedback" Type="Real32" Value="10"/>
-								<Property Name="WetDryMix" Type="Real32">
-									<RTPCList>
-										<RTPC Name="" ID="{FB306363-B752-4C3C-AA16-F275174F93DA}" ShortID="505774817">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{55E9496E-029F-4833-864C-79DD7F74335A}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="1"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>0</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>82.79302</XPos>
-														<YPos>0</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>16.93548</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
+								<Property Name="WetDryMix" Type="Real32" Value="10"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="One_Tap_Quarter_Second" ID="{6BD2D67D-601A-45A6-AD4C-2C089078EBED}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
@@ -1371,34 +1339,6 @@
 									<PropertyList>
 										<Property Name="DecayTime" Type="Real32" Value="8"/>
 										<Property Name="Density" Type="Real32" Value="70"/>
-										<Property Name="DryLevel" Type="Real32">
-											<RTPCList>
-												<RTPC Name="" ID="{6A824627-88E3-4DC0-A2DB-A0B1A55F10D1}" ShortID="717994576">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{80F8B2EC-25EF-4327-8A0C-4BB7F0DB4E7D}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-2.36899</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>-10.55148</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
-										</Property>
 										<Property Name="ERLevel" Type="Real32" Value="-24"/>
 										<Property Name="ERPattern" Type="int32" Value="9"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="490"/>
@@ -1410,7 +1350,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="5.7"/>
 										<Property Name="PreDelay" Type="Real32" Value="180"/>
 										<Property Name="Quality" Type="int32" Value="14"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-23"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-30"/>
 										<Property Name="RoomSize" Type="Real32" Value="100"/>
 										<Property Name="StereoWidth" Type="Real32" Value="172"/>
 									</PropertyList>
@@ -1421,6 +1361,8 @@
 										<Property Name="Density" Type="Real32" Value="70"/>
 										<Property Name="ERLevel" Type="Real32" Value="-28"/>
 										<Property Name="ERPattern" Type="int32" Value="9"/>
+										<Property Name="EnableEarlyReflections" Type="bool" Value="False"/>
+										<Property Name="EnableToneControls" Type="bool" Value="True"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="490"/>
 										<Property Name="Filter1Gain" Type="Real32" Value="-2"/>
 										<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
@@ -1430,34 +1372,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="5.7"/>
 										<Property Name="PreDelay" Type="Real32" Value="120"/>
 										<Property Name="Quality" Type="int32" Value="14"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-22">
-											<RTPCList>
-												<RTPC Name="" ID="{B52EF8D2-6AB0-40CC-900F-507C3C6B4A18}" ShortID="363790896">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="Rune_Mode" ID="{E3E06289-4311-4423-9317-A180A8F0A4BC}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{070F6486-AA65-44CB-87ED-C9055F4DCB65}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-45.97263</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>-19.45697</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
-										</Property>
+										<Property Name="ReverbLevel" Type="Real32" Value="-33"/>
 										<Property Name="RoomSize" Type="Real32" Value="100"/>
 										<Property Name="StereoWidth" Type="Real32" Value="172"/>
 									</PropertyList>
