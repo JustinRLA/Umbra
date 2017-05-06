@@ -105,9 +105,21 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Bus Name="PC" ID="{1CAE5AA5-87A2-464C-ACD7-3FC2ED76398F}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ChildrenList>
 										<AuxBus Name="Leurre" ID="{238CE753-595F-4081-B047-69636778432A}">
 											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-14</Value>
+													</ValueList>
+												</Property>
 												<Property Name="BypassEffect0" Type="bool">
 													<RTPCList>
 														<RTPC Name="" ID="{14AF1A93-07F1-42DF-824C-18DAB2E637D4}" ShortID="198454519">

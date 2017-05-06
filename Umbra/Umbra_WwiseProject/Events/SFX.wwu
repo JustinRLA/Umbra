@@ -494,22 +494,22 @@
 							<ChildrenList>
 								<Event Name="PC_Rune_Leurre_Filter" ID="{77647A6F-B783-4D1B-8DD8-2FFA46999B51}">
 									<ChildrenList>
-										<Action Name="Set Game Parameter" ID="{8A0F1E0C-364D-4247-8FC2-01100DFC4FB1}" ShortID="128457974" Type="SetGameParameter" Scope="One" Global="false">
+										<Action Name="Set Game Parameter" ID="{8A0F1E0C-364D-4247-8FC2-01100DFC4FB1}" ShortID="128457974" Type="SetGameParameter" Scope="One" Global="true">
 											<PropertyList>
 												<Property Name="GameParameterValue" Type="Real64" Value="100"/>
 											</PropertyList>
 											<ElementList>
-												<Element ID="{BAD37D3E-3F0C-467D-A871-E40B41686522}" Global="false">
+												<Element ID="{BAD37D3E-3F0C-467D-A871-E40B41686522}" Global="true">
 													<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
 												</Element>
 											</ElementList>
 										</Action>
-										<Action Name="Set Game Parameter" ID="{CC2EE186-E04B-451D-9EDC-A6D30CD0C31B}" ShortID="316142281" Type="SetGameParameter" Scope="One" Global="false">
+										<Action Name="Set Game Parameter" ID="{CC2EE186-E04B-451D-9EDC-A6D30CD0C31B}" ShortID="316142281" Type="SetGameParameter" Scope="One" Global="true">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="7"/>
 											</PropertyList>
 											<ElementList>
-												<Element ID="{4A12020C-032A-4636-96BD-5B5797BEA3A9}" Global="false">
+												<Element ID="{4A12020C-032A-4636-96BD-5B5797BEA3A9}" Global="true">
 													<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
 												</Element>
 											</ElementList>

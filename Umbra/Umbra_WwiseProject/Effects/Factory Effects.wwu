@@ -1643,40 +1643,13 @@
 						</Folder>
 						<Effect Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 							<PropertyList>
-								<Property Name="DelayTime" Type="Real32" Value="8.5"/>
+								<Property Name="DelayTime" Type="Real32" Value="0.2"/>
 								<Property Name="DryLevel" Type="Real32" Value="0.3"/>
 								<Property Name="FeedBackLevel" Type="Real32" Value="0.9"/>
 								<Property Name="ModDepth" Type="Real32" Value="10"/>
 								<Property Name="ModFrequency" Type="Real32" Value="5.5"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
-								<Property Name="WetDryMix" Type="Real32">
-									<RTPCList>
-										<RTPC Name="" ID="{D4333CB8-3F4B-4835-ABB0-23A32319A883}" ShortID="310812767">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{D323514C-A3A7-45F2-A7C4-B450003B6931}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="1"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>0</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>20.32256</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
+								<Property Name="OutputLevel" Type="Real32" Value="6"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
@@ -1784,41 +1757,15 @@
 						</Effect>
 						<Effect Name="Repeat_after_me" ID="{7A0568D0-BE8B-4233-B3E8-200344DB7AE0}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
 							<PropertyList>
+								<Property Name="DryLevel" Type="Real32" Value="-96"/>
+								<Property Name="SyncDry" Type="bool" Value="False"/>
 								<Property Name="Voice1FilterFrequency" Type="Real32" Value="3656"/>
-								<Property Name="Voice1FilterType" Type="int32" Value="4"/>
+								<Property Name="Voice1FilterType" Type="int32" Value="3"/>
 								<Property Name="Voice1Pitch" Type="Real32" Value="1300"/>
 								<Property Name="Voice2Enable" Type="bool" Value="True"/>
 								<Property Name="Voice2FilterFrequency" Type="Real32" Value="361"/>
 								<Property Name="Voice2FilterType" Type="int32" Value="4"/>
 								<Property Name="Voice2Pitch" Type="Real32" Value="-1100"/>
-								<Property Name="WetLevel" Type="Real32" Value="24">
-									<RTPCList>
-										<RTPC Name="" ID="{0471A70B-713C-4E2C-9C5E-F02EF638C1BA}" ShortID="70797053">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Leurre" ID="{AF66C250-DEF6-486B-87E1-65602614A6CE}" WorkUnitID="{9940378A-16D7-4B98-908C-2A05BD0D52B7}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{20426015-08A0-4725-9E3F-F256BD52F31D}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-96</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
 								<Property Name="WindowSize" Type="int32" Value="3840"/>
 							</PropertyList>
 						</Effect>
