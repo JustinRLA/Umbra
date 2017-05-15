@@ -45,6 +45,7 @@ public class DragShadow : MonoBehaviour {
 	{
 		FullShadow=GameObject.Find("OmbreRuneImageFull");
 		FullShadow.GetComponent<Image> ().enabled = false;
+		PlayerPrefs.SetInt ("RuneShadowNumber", (PlayerPrefs.GetInt ("RuneShadowNumber") + 1));
 
 		mainCamMy = GameObject.Find ("Main Camera");
 		AkSoundEngine.PostEvent ("PC_Rune_Ombre_Use", gameObject);

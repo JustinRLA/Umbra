@@ -4,18 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartMainMenu : MonoBehaviour {
+	bool timerOn;
+	public float PlayerTimer;
 
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad (gameObject);
 		SceneManager.LoadScene("Main Menu");
 		print ("Start");
+		PlayerTimer=PlayerPrefs.GetFloat ("Timer");
+
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (timerOn == true)
+			PlayerTimer += Time.deltaTime;
 	}
 
 	public void StartLevelMusic()
@@ -26,6 +31,17 @@ public class StartMainMenu : MonoBehaviour {
 			AkSoundEngine.PostEvent("Mus_Secteur2",gameObject);
 		if(PlayerPrefs.GetInt("SaveSystem")>=9)
 			AkSoundEngine.PostEvent("Mus_Secteur3",gameObject);
+	}
+	public void StopTimer()
+	{
+		timerOn = false;
+		PlayerPrefs.SetFloat ("Timer", PlayerTimer);
+	}
+
+	public void StartTimer()
+	{
+		timerOn = true;
+
 	}
 
 	public void ReturnToMenuMusic()

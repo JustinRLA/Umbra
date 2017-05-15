@@ -125,6 +125,8 @@ public class solifyShadow : MonoBehaviour {
 	{
 		print ("change Layer");
 		gameObject.layer = 24;
+		PlayerPrefs.SetInt ("RuneSolidNumber", (PlayerPrefs.GetInt ("RuneSolidNumber") + 1));
+		print (PlayerPrefs.GetInt ("RuneSolidNumber"));
 
 //		ps.main.simulationSpeed = 1;
 		GlowParticle.SetActive (true);

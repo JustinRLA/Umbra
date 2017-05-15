@@ -74,6 +74,13 @@ public void restartGame()
 			{
 		PlayerPrefs.SetInt ("Death", 0);
 		PlayerPrefs.SetInt ("Kill", 0);
+		PlayerPrefs.SetInt ("Timer", 0);
+		PlayerPrefs.SetInt ("RuneMarkNumber", 0);
+		PlayerPrefs.SetInt ("RuneTrapNumber", 0);
+		PlayerPrefs.SetInt ("RuneShadowNumber", 0);
+		PlayerPrefs.SetInt ("RuneGrapNumber", 0);
+		PlayerPrefs.SetInt ("RuneLureNumber", 0);
+		PlayerPrefs.SetInt ("RuneSolidNumber", 0);
 
 		PlayerPrefs.SetInt ("SaveSystem", 0);
 			}

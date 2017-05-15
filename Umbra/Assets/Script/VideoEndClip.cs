@@ -30,6 +30,6 @@ public class VideoEndClip : MonoBehaviour {
 	IEnumerator ReturnToMain()
 	{
 		yield return new WaitForSeconds (70);
-		SceneManager.LoadScene ("Main MenuCredit");
+		SceneManager.LoadScene ("LeaderBoard_French");
 	}
 }

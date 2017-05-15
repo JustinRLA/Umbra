@@ -49,7 +49,9 @@ public class LureScript : MonoBehaviour {
 
 	public void StartLure () {
 		LurePresent = true;
+
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
+		PlayerPrefs.SetInt ("RuneLureNumber", (PlayerPrefs.GetInt ("RuneLureNumber") + 1));
 
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Filter", gameObject);
 		raycar = GameObject.Find ("raycar");

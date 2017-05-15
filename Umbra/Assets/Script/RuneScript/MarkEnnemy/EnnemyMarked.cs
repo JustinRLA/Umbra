@@ -138,6 +138,8 @@ public class EnnemyMarked : MonoBehaviour {
 	IEnumerator MarkEvent()
 	{
 		{
+			PlayerPrefs.SetInt ("RuneMarkNumber", (PlayerPrefs.GetInt ("RuneMarkNumber") + 1));
+
 			MarkParticleObj.SetActive (true);
 			Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 			ennemyBase.GetComponent<EnnnemyPatrolUpgraded> ().timerAttack = 1.5f;
