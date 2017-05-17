@@ -9,7 +9,7 @@ public class StartBtnSetter : MonoBehaviour {
 	public GameObject CommencerNewGame;
 	public GameObject CommencerStartedGame;
 	public bool CreditMainMenu;
-
+	public bool English;
 	GameObject MusicBase;
 	// Use this for initialization
 
@@ -21,6 +21,15 @@ public class StartBtnSetter : MonoBehaviour {
 		AkSoundEngine.PostEvent("Mus_Menu",MusicBase);
 
 
+	}
+
+	public void ChangeLangage()
+	{
+		if (English == true)
+			SceneManager.LoadScene ("Main menu");
+		else
+			SceneManager.LoadScene ("Main menuEnglish");
+		
 	}
 	void Start () {
 		//MusicBase = GameObject.Find ("MusicBase");
