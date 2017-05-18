@@ -10,6 +10,14 @@ public class RuneTutoEvent : MonoBehaviour {
 	public GameObject SecondText;
 	public GameObject ThirdText;
 
+	public GameObject FirstTextEng;
+	public GameObject SecondTextEng;
+	public GameObject ThirdTextEng;
+
+	public GameObject FirstTextFr;
+	public GameObject SecondTextFr;
+	public GameObject ThirdTextFr;
+
 	float valueCOlor;
 	float valuerColorTwo;
 	float valuerColorThree;
@@ -23,6 +31,27 @@ public class RuneTutoEvent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		FirstTextFr.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0);
+		SecondTextFr.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0);
+		ThirdTextFr.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0);
+
+		FirstTextEng.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0);
+		SecondTextEng.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0);
+		ThirdTextEng.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0);
+
+
+		if (PlayerPrefs.GetInt ("English") == 0) {
+			FirstText = FirstTextFr;
+			SecondText = SecondTextFr;
+			ThirdText = ThirdTextFr;
+		}
+		if (PlayerPrefs.GetInt ("English") == 1) {
+			FirstText = FirstTextEng;
+			SecondText = SecondTextEng;
+			ThirdText = ThirdTextEng;
+		}
+		
+
 		RuneManager = GameObject.Find ("RuneManager");
 	}
 	

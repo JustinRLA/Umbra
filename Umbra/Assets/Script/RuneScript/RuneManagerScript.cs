@@ -33,12 +33,29 @@ public class RuneManagerScript : MonoBehaviour
 	Animator animCamTwo;
 	Animator animCamThree;
 	Animator animCamFour;
+
+	public GameObject Truetextleure;
+	public GameObject Truetextaccrochage;
+	public GameObject Truetexttrappe;
+	public GameObject TruetextSolid;
+	public GameObject TruetextMark;
+	public GameObject TruetextOmbre;
+
+
 	public GameObject textleure;
 	public GameObject textaccrochage;
 	public GameObject texttrappe;
 	public GameObject textSolid;
 	public GameObject textMark;
 	public GameObject textOmbre;
+
+	public GameObject textleureEng;
+	public GameObject textaccrochageEng;
+	public GameObject texttrappeEng;
+	public GameObject textSolidEng;
+	public GameObject textMarkEng;
+	public GameObject textOmbreEng;
+
 	public GameObject ImageRuneOmbre;
 	public GameObject ImageRuneAccrochage;
 	public GameObject ImageRunePiege;
@@ -79,6 +96,7 @@ public class RuneManagerScript : MonoBehaviour
 		myPlatUserControl = ThePlayer.GetComponent<Platformer2DUserControl>();
 		myPlatformCharacter = ThePlayer.GetComponent<PlatformerCharacter2D>();
         m_Anim = ThePlayer.GetComponent<Animator>();
+
         textaccrochage =GameObject.Find ("accorchageText");
 		textOmbre=GameObject.Find ("ombreText");
 		textSolid=GameObject.Find ("solidText");
@@ -86,6 +104,29 @@ public class RuneManagerScript : MonoBehaviour
 		textMark=GameObject.Find ("markText");
 	textleure=GameObject.Find ("leurreText");
 
+		textaccrochageEng =GameObject.Find ("accorchageTextEnglish");
+		textOmbreEng=GameObject.Find ("ombreTextEnglish");
+		textSolidEng=GameObject.Find ("solidTextEnglish");
+		texttrappeEng=GameObject.Find ("trapTextEnglish");
+		textMarkEng=GameObject.Find ("markTextEnglish");
+		textleureEng=GameObject.Find ("leurreTextEnglish");
+
+		if (PlayerPrefs.GetInt ("English") == 0) {
+			Truetextleure = textleure;
+			Truetextaccrochage = textaccrochage;
+			TruetextMark = textMark;
+			TruetextOmbre = textOmbre;
+			TruetextSolid = textSolid;
+			Truetexttrappe = texttrappe;
+		}
+		if (PlayerPrefs.GetInt ("English") == 1) {
+			Truetextleure = textleure;
+			Truetextaccrochage = textaccrochageEng;
+			TruetextMark = textMarkEng;
+			TruetextOmbre = textOmbreEng;
+			TruetextSolid = textSolidEng;
+			Truetexttrappe = texttrappeEng;
+		}
 		ImageRuneLeurre = GameObject.Find ("LeureImage");
 		ImageRuneAccrochage = GameObject.Find ("AccrochageImage");
 		ImageRuneMarquage = GameObject.Find ("MaquageRuneImage");

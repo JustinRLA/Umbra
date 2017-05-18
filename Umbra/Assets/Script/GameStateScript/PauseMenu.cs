@@ -20,12 +20,42 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject ResumeBtn;
 	public GameObject QuitBtn;
 
+	public GameObject YesBtnFr;
+	public GameObject NoBtnFr;
+	public GameObject WarningTextFr;
+	public GameObject ResumeBtnFr;
+	public GameObject QuitBtnFr;
+
+	public GameObject YesBtnEng;
+	public GameObject NoBtnEng;
+	public GameObject WarningTextEng;
+	public GameObject ResumeBtnEng;
+	public GameObject QuitBtnEng;
 
 	BorneBase myBorneScript;
 	bool canPause=true;
 
 	// Use this for initialization
 	void Start () {
+		if (PlayerPrefs.GetInt ("English") == 0) {
+			YesBtnEng=YesBtnFr;
+			NoBtn = NoBtnFr;
+			WarningText = WarningTextFr;
+			QuitBtn = QuitBtnFr;
+			ResumeBtn = ResumeBtnFr;
+			ResumeBtnEng.SetActive (false);
+			QuitBtnEng.SetActive (false);
+		}
+		if (PlayerPrefs.GetInt ("English") == 1) {
+			YesBtnEng=YesBtnEng;
+			NoBtn = NoBtnEng;
+			WarningText = WarningTextEng;
+			QuitBtn = QuitBtnEng;
+			ResumeBtn = ResumeBtnEng;
+			ResumeBtnFr.SetActive (false);
+			QuitBtnFr.SetActive (false);
+		}
+		
 		CameraOne = GameObject.Find ("Main Camera");
 		RuneManager = GameObject.Find ("RuneManager");
 		myRuneManScript = RuneManager.GetComponent<RuneManagerScript> ();

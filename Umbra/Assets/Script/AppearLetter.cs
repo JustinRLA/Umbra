@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class AppearLetter : MonoBehaviour {
 	public GameObject thisText;
+	public GameObject thisTextFrench;
+	public GameObject thisTextEnglish;
+
+
 	public float valueCOlor;
 	public bool active=false;
 	public bool bluetext;
@@ -12,7 +16,15 @@ public class AppearLetter : MonoBehaviour {
 	public bool redtext;
 	// Use this for initialization
 	void Start () {
+		thisTextFrench.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0);
+		thisTextEnglish.GetComponent<SpriteRenderer> ().color=new Color(1,1,1,0);
+
+		if (PlayerPrefs.GetInt ("English") == 0) {
+			thisText = thisTextFrench;		}
+		if (PlayerPrefs.GetInt ("English") == 1) {
+			thisText = thisTextEnglish;		}
 		
+
 	}
 	
 	// Update is called once per frame
