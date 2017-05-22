@@ -15,6 +15,11 @@ public class StartBtnSetter : MonoBehaviour {
 
 	void Awake()
 	{
+		if (English == true)
+			PlayerPrefs.SetInt ("English", 0);
+		else
+			PlayerPrefs.SetInt ("English", 1);
+		
 		MusicBase = GameObject.Find ("MusicBase");
 		AkSoundEngine.PostEvent("Mus_InGame",MusicBase);
 

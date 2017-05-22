@@ -26,13 +26,13 @@ public class PlayerCamScript : MonoBehaviour {
 	
 	}
 	void Update () {
-		if (Input.GetKey (KeyCode.S) && PanUp > -2 && myPlatformCharacter.m_Grounded==true)
+		if (Input.GetAxis("Vertical")<0 && PanUp > -2 && myPlatformCharacter.m_Grounded==true)
 			PanUp -= Time.smoothDeltaTime * 6;
-		if (Input.GetKey (KeyCode.W) && PanUp <2 && myPlatformCharacter.m_Grounded==true)
+		if (Input.GetAxis("Vertical")>0 && PanUp <2 && myPlatformCharacter.m_Grounded==true)
 			PanUp += Time.smoothDeltaTime * 6;
-		if (Input.GetKey (KeyCode.W)==false && Input.GetKey (KeyCode.S)==false && PanUp>0)
+		if (Input.GetAxis("Vertical")==0 && PanUp>0)
 			PanUp -= Time.smoothDeltaTime * 6;
-		if (Input.GetKey (KeyCode.W)==false && Input.GetKey (KeyCode.S)==false && PanUp<0)
+		if (Input.GetAxis("Vertical")==0 && PanUp<0)
 			PanUp += Time.smoothDeltaTime * 6;
 		if (myPlatformCharacter.m_Grounded==false && PanUp>0)
 			PanUp -= Time.smoothDeltaTime * 6;

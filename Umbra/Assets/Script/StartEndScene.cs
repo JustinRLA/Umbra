@@ -16,8 +16,10 @@ public class StartEndScene : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "Player")
+		if (col.tag == "Player" && PlayerPrefs.GetInt("English")==0)
 			SceneManager.LoadScene ("cutscene");
+		if (col.tag == "Player" && PlayerPrefs.GetInt("English")==1)
+			SceneManager.LoadScene ("cutsceneEnglish");
 	}
 
 }

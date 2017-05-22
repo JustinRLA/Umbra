@@ -18,7 +18,7 @@ public class SkipSceneBtn : MonoBehaviour {
 			numberEscape = 1;
 		}
 		if (Input.GetKeyDown (KeyCode.Escape) && numberEscape==1) {
-			SceneManager.LoadScene ("LeaderBoard_French");
+			SceneManager.LoadScene ("LeaderBoard_English");
 		}
 	}
 }

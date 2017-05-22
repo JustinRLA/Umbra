@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeathEvent : MonoBehaviour {
 	public GameObject[] PossibleSprite;
 	public bool EventTriggered=false;
-	int number;
+	public int number;
 	public GameObject ActualCadre;
 	public Transform rightTransform;
 	public Transform LeftTransform;
@@ -16,6 +16,7 @@ public class DeathEvent : MonoBehaviour {
 	float xNumber;
 	public GameObject BloodRight;
 	public GameObject BloodLeft;
+	GameObject un;
 
 	public Transform EnnemyPos;
 	public GameObject Ennemy;
@@ -24,12 +25,17 @@ public class DeathEvent : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		AssassinTrigger = GameObject.Find ("AssassinTrigger");
+		patate ();
+		un.GetComponent<DeathEvent>().patate();
 	}
-	
+	public void patate()
+	{
+		print ("im stupid");
+	}
 	// Update is called once per frame
 	void Update () {
 //		dir=new Vector3(ActualCadre.transform.position.x-Center.position.x, ActualCadre.transform.position.y-Center.position.y,0);
-//
+		//
 //		if(EventTriggered)
 //		{
 //			dir=new Vector3(ActualCadre.transform.position.x-Center.position.x, ActualCadre.transform.position.y-Center.position.y,0);
