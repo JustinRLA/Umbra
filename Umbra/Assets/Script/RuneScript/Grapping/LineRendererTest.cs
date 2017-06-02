@@ -328,8 +328,7 @@ public class LineRendererTest : MonoBehaviour {
 		//CamGrap.SetActive (false);
 		foreach (GameObject grapRegion in theBeams)
 			grapRegion.GetComponent<Collider2D> ().isTrigger = true;
-		PlayerPrefs.SetInt ("RuneGrapNumber", (PlayerPrefs.GetInt ("RuneGrapNumber") + 1));
-
+		myRuneManagerScript.GrapUSe++;
 		TouchGood = false;
 		if(TheBeam!=null)
 		TheBeam.GetComponent<ThisIsMyFeedback> ().myFeedbackOn.SetActive (false);

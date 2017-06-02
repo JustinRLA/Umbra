@@ -8,13 +8,14 @@ public class CheckPointChange : MonoBehaviour {
 	int saveNumber;
 	public GameObject initialializer;
 	public GameObject CheckPointParticle;
-	public 
+	public GameObject runeman;
+
 
 	// Use this for initialization
 	void Start () {
 		
 		initialializer=GameObject.Find("Initialiser");
-
+		runeman = GameObject.Find ("RuneManager");
 		//DeathManager=GameObject.Find("deathManager");
 		PlayerOne=GameObject.Find("2DCharacter(Clone)");
 	}
@@ -29,6 +30,12 @@ public class CheckPointChange : MonoBehaviour {
 
 		if (col.tag == "Player")
 		{
+			PlayerPrefs.SetInt ("RuneShadowNumber",runeman.GetComponent<RuneManagerScript>().ShadowUse);
+			PlayerPrefs.SetInt ("RuneGrapNumber",runeman.GetComponent<RuneManagerScript>().GrapUSe);
+			PlayerPrefs.SetInt ("RuneTrapNumber",runeman.GetComponent<RuneManagerScript>().TrapUse);
+			PlayerPrefs.SetInt ("RuneLureNumber",runeman.GetComponent<RuneManagerScript>().LureUse);
+			PlayerPrefs.SetInt ("RuneMarkNumber",runeman.GetComponent<RuneManagerScript>().MarkUse);
+			PlayerPrefs.SetInt ("RuneSolidNumber",runeman.GetComponent<RuneManagerScript>().SolidUse);
 
 		
 

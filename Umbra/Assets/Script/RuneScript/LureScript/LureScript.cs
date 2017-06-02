@@ -51,7 +51,6 @@ public class LureScript : MonoBehaviour {
 		LurePresent = true;
 
 		AkSoundEngine.PostEvent ("PC_Action_slowMo_End", gameObject);
-		PlayerPrefs.SetInt ("RuneLureNumber", (PlayerPrefs.GetInt ("RuneLureNumber") + 1));
 
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Filter", gameObject);
 		raycar = GameObject.Find ("raycar");
@@ -60,6 +59,7 @@ public class LureScript : MonoBehaviour {
 				Lurelight.SetActive (true);
 		FullRune = GameObject.Find ("LeureImageFull");
 		myRuneManagerScript = GetComponent<RuneManagerScript> ();
+		myRuneManagerScript.LureUse++;
 		AkSoundEngine.PostEvent ("PC_Rune_Leurre_Use", gameObject);
 		myRuneManagerScript.RuneActivated = true;
 		ThePlayer = GameObject.Find("2DCharacter(Clone)");

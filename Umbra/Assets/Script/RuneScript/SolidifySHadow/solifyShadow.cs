@@ -125,7 +125,7 @@ public class solifyShadow : MonoBehaviour {
 	{
 		print ("change Layer");
 		gameObject.layer = 24;
-		PlayerPrefs.SetInt ("RuneSolidNumber", (PlayerPrefs.GetInt ("RuneSolidNumber") + 1));
+		mymyRuneManagerScript.SolidUse++;
 		print (PlayerPrefs.GetInt ("RuneSolidNumber"));
 
 //		ps.main.simulationSpeed = 1;

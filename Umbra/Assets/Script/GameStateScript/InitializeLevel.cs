@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class InitializeLevel : MonoBehaviour {
 	//public GameObject GameManager;
+	public GameObject LetterOne;
+	public GameObject LetterTwo;
+	public GameObject LetterThree;
+	public GameObject LetterFour;
+	public GameObject LetterFive;
 
 	public GameObject ThePlayer;
 	public Transform[] SpawnPoint;
@@ -58,6 +63,19 @@ public class InitializeLevel : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		if (PlayerPrefs.GetInt ("LetterOne") == 1)
+			LetterOne.SetActive (false);
+		if (PlayerPrefs.GetInt ("LetterTwo") == 1)
+			LetterTwo.SetActive (false);
+		if (PlayerPrefs.GetInt ("LetterThree") == 1)
+			LetterThree.SetActive (false);
+		if (PlayerPrefs.GetInt ("LetterFour") == 1)
+			LetterFour.SetActive (false);
+		if (PlayerPrefs.GetInt ("LetterFive") == 1)
+			LetterFive.SetActive (false);
+
+
+
 //		if(debugMusTest==true)
 //			AkSoundEngine.PostEvent("Mus_Ingame",gameObject);
 		

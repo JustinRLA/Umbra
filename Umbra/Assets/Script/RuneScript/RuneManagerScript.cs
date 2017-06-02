@@ -40,6 +40,12 @@ public class RuneManagerScript : MonoBehaviour
 	public GameObject TruetextSolid;
 	public GameObject TruetextMark;
 	public GameObject TruetextOmbre;
+	public int ShadowUse;
+	public int LureUse;
+	public int MarkUse;
+	public int TrapUse;
+	public int GrapUSe;
+	public int SolidUse;
 
 
 	public GameObject textleure;
@@ -90,6 +96,13 @@ public class RuneManagerScript : MonoBehaviour
 
 
 	void Start () {
+		ShadowUse = PlayerPrefs.GetInt ("RuneShadowNumber");
+		GrapUSe= PlayerPrefs.GetInt ("RuneGrapNumber");
+		TrapUse= PlayerPrefs.GetInt ("RuneTrapNumber");
+		LureUse= PlayerPrefs.GetInt ("RuneLureNumber");
+		MarkUse= PlayerPrefs.GetInt ("RuneMarkNumber");
+		SolidUse= PlayerPrefs.GetInt ("RuneSolidNumber");
+
 		pauseBase = GameObject.Find ("PauseBase");
 		myPause = pauseBase.GetComponent<PauseMenu> ();
 		ThePlayer=GameObject.Find("2DCharacter(Clone)");

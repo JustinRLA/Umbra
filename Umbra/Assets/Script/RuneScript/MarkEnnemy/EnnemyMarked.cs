@@ -138,7 +138,7 @@ public class EnnemyMarked : MonoBehaviour {
 	IEnumerator MarkEvent()
 	{
 		{
-			PlayerPrefs.SetInt ("RuneMarkNumber", (PlayerPrefs.GetInt ("RuneMarkNumber") + 1));
+			myRuneManager.GetComponent<RuneManagerScript> ().MarkUse++;
 
 			MarkParticleObj.SetActive (true);
 			Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
