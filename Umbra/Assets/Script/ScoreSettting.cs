@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreSettting : MonoBehaviour {
+	public GameObject LetterOne;
+	public GameObject LetterTwo;
+	public GameObject LetterThree;
+	public GameObject LetterFour;
+	public GameObject LetterFive;
+
+
 	public GameObject Timertext;
 	public GameObject BestTimertext;
 
@@ -43,6 +50,17 @@ public class ScoreSettting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (PlayerPrefs.GetInt ("LetterOne") == 1)
+			LetterOne.SetActive (true);
+		
+		if (PlayerPrefs.GetInt ("LetterTwo") == 1)
+			LetterTwo.SetActive (true);
+		if (PlayerPrefs.GetInt ("LetterThree") == 1)
+			LetterThree.SetActive (true);
+		if (PlayerPrefs.GetInt ("LetterFour") == 1)
+			LetterFour.SetActive (true);
+		if (PlayerPrefs.GetInt ("LetterFive") == 1)
+			LetterFive.SetActive (true);
 		// best time
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
 			PlayerPrefs.SetFloat("BestTimer",PlayerPrefs.GetFloat("Timer"));
