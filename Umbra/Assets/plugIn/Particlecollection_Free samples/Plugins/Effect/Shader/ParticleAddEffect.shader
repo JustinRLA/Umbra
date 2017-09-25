@@ -162,9 +162,9 @@ Shader "Effect/Effect Add"
 				fixed4 c = 2.0f * i.color * _TintColor * tex2D(_MainTex, i.uv_MainTex);
 #endif
 #ifdef Enable_AlphaMask
-				fixed ca = tex2D(_CutTex, i.uv_CutOut).a;
-				c.a *= ca;
-				c.a = ca >= _Cutoff ? c.a:0;
+				fixed4 ca = tex2D(_CutTex, i.uv_CutOut);
+				c.a *= ca.a;
+				c = ca.a >= _Cutoff ? c : 0;
 #endif
 				UNITY_APPLY_FOG_COLOR(i.fogCoord, c, fixed4(0,0,0,0)); // fog towards black due to our blend mode
 				return c;

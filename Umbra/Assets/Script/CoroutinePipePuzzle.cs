@@ -37,7 +37,6 @@ public class CoroutinePipePuzzle : MonoBehaviour {
 
 		Pipe [2].SetActive (true);
 	//	Pipe [0].SetActive (false);
-			Pipe [6].SetActive (false);
 
 		yield return new WaitForSeconds (timebetween);
 		Pipe [3].SetActive (true);
@@ -52,7 +51,6 @@ public class CoroutinePipePuzzle : MonoBehaviour {
 
 		Pipe [5].SetActive (true);
 		Pipe [3].SetActive (false);
-			Pipe [6].SetActive (true);
 
 		yield return new WaitForSeconds (timebetween);
 

@@ -15,11 +15,12 @@ public class StartBtnSetter : MonoBehaviour {
 
 	void Awake()
 	{
-		if (English == true)
+		if (English == false)
 			PlayerPrefs.SetInt ("English", 0);
 		else
 			PlayerPrefs.SetInt ("English", 1);
-		
+
+		print(PlayerPrefs.GetInt ("English"));
 		MusicBase = GameObject.Find ("MusicBase");
 		AkSoundEngine.PostEvent("Mus_InGame",MusicBase);
 
@@ -78,6 +79,9 @@ public class StartBtnSetter : MonoBehaviour {
 	}
 	public void Continue()
 	{
+		MusicBase.GetComponent<StartMainMenu> ().PlayerTimer = 		PlayerPrefs.GetInt ("Timer");
+		MusicBase.GetComponent<StartMainMenu> ().timerOn = true;
+
 		MusicBase.GetComponent<StartMainMenu> ().StartLevelMusic ();
 		SceneManager.LoadScene ("NiveauComplete");
 	}
@@ -97,6 +101,7 @@ public void restartGame()
 		PlayerPrefs.SetInt ("RuneSolidNumber", 0);
 
 		PlayerPrefs.SetInt ("SaveSystem", 0);
+		MusicBase.GetComponent<StartMainMenu> ().PlayerTimer = 0;
 			}
 	public void RuneHover()
 	{

@@ -82,9 +82,13 @@ using UnityEngine.SceneManagement;
 	{
 		if (havePlayedDeath == false) {
 			AkSoundEngine.PostEvent ("PC_Action_Death", gameObject);
-			havePlayedDeath = true;
+		
 			Instantiate (LightOfDeath, new Vector3 (transform.position.x, transform.position.y + 4, transform.position.z), transform.rotation);
 			StartCoroutine (Impactdelay ());
+
+			numberofDeath++;
+			PlayerPrefs.SetInt("Death",numberofDeath);
+			havePlayedDeath = true;
 		}
 			AssassinTrigger.SetActive (false);
 		dead = true;
@@ -92,8 +96,7 @@ using UnityEngine.SceneManagement;
 		Time.timeScale = 1;
 		inShadow = false;
 		ClimbTrue = false;
-		numberofDeath++;
-		PlayerPrefs.SetInt("Death",numberofDeath);
+	
 		StartCoroutine (DeathEvent ());
 
 	}

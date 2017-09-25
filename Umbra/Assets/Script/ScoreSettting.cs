@@ -50,6 +50,7 @@ public class ScoreSettting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Cursor.visible = true;
 		if (PlayerPrefs.GetInt ("LetterOne") == 1)
 			LetterOne.SetActive (true);
 		
@@ -69,143 +70,142 @@ public class ScoreSettting : MonoBehaviour {
 				PlayerPrefs.SetFloat("BestTimer",PlayerPrefs.GetFloat("Timer"));
 		// Less death
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("LessDeath",PlayerPrefs.GetFloat("Death"));
+			PlayerPrefs.SetInt("LessDeath",PlayerPrefs.GetInt("Death"));
 		else
-			if(PlayerPrefs.GetFloat("LessDeath")>PlayerPrefs.GetFloat("Death"))
-				PlayerPrefs.SetFloat("LessDeath",PlayerPrefs.GetFloat("Death"));
+			if(PlayerPrefs.GetInt("LessDeath")>PlayerPrefs.GetInt("Death"))
+				PlayerPrefs.SetInt("LessDeath",PlayerPrefs.GetInt("Death"));
 		//More Kill
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("MoreKill",PlayerPrefs.GetFloat("Kill"));
+			PlayerPrefs.SetInt("MoreKill",PlayerPrefs.GetInt("Kill"));
 		else
-			if(PlayerPrefs.GetFloat("MoreKill")<PlayerPrefs.GetFloat("Kill"))
-				PlayerPrefs.SetFloat("MoreKill",PlayerPrefs.GetFloat("Kill"));
+			if(PlayerPrefs.GetInt("MoreKill")<PlayerPrefs.GetInt("Kill"))
+				PlayerPrefs.SetInt("MoreKill",PlayerPrefs.GetInt("Kill"));
 		//Less Kill
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("LessKill",PlayerPrefs.GetFloat("Kill"));
+			PlayerPrefs.SetInt("LessKill",PlayerPrefs.GetInt("Kill"));
 		else
-			if(PlayerPrefs.GetFloat("LessKill")>PlayerPrefs.GetFloat("Kill"))
-				PlayerPrefs.SetFloat("LessKill",PlayerPrefs.GetFloat("Kill"));
+			if(PlayerPrefs.GetInt("LessKill")>PlayerPrefs.GetInt("Kill"))
+				PlayerPrefs.SetInt("LessKill",PlayerPrefs.GetInt("Kill"));
 
 		// More Shadow Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("MoreRuneShadowNumber",PlayerPrefs.GetFloat("RuneShadowNumber"));
+			PlayerPrefs.SetInt("MoreRuneShadowNumber",PlayerPrefs.GetInt("RuneShadowNumber"));
 		else
-			if(PlayerPrefs.GetFloat("MoreRuneShadowNumber")<PlayerPrefs.GetFloat("RuneShadowNumber"))
-				PlayerPrefs.SetFloat("MoreRuneShadowNumber",PlayerPrefs.GetFloat("RuneShadowNumber"));
+			if(PlayerPrefs.GetInt("MoreRuneShadowNumber")<PlayerPrefs.GetInt("RuneShadowNumber"))
+				PlayerPrefs.SetInt("MoreRuneShadowNumber",PlayerPrefs.GetInt("RuneShadowNumber"));
 
 		// Less Shadow Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("LessRuneShadowNumber",PlayerPrefs.GetFloat("RuneShadowNumber"));
+			PlayerPrefs.SetInt("LessRuneShadowNumber",PlayerPrefs.GetInt("RuneShadowNumber"));
 		else
-			if(PlayerPrefs.GetFloat("LessRuneShadowNumber")>PlayerPrefs.GetFloat("RuneShadowNumber"))
-				PlayerPrefs.SetFloat("LessRuneShadowNumber",PlayerPrefs.GetFloat("RuneShadowNumber"));
+			if(PlayerPrefs.GetInt("LessRuneShadowNumber")>PlayerPrefs.GetInt("RuneShadowNumber"))
+				PlayerPrefs.SetInt("LessRuneShadowNumber",PlayerPrefs.GetInt("RuneShadowNumber"));
 
 		// More Mark Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("MoreRuneMarkNumber",PlayerPrefs.GetFloat("RuneMarkNumber"));
+			PlayerPrefs.SetInt("MoreRuneMarkNumber",PlayerPrefs.GetInt("RuneMarkNumber"));
 		else
-			if(PlayerPrefs.GetFloat("MoreRuneMarkNumber")<PlayerPrefs.GetFloat("RuneMarkNumber"))
-				PlayerPrefs.SetFloat("MoreRuneMarkNumber",PlayerPrefs.GetFloat("RuneMarkNumber"));
+			if(PlayerPrefs.GetInt("MoreRuneMarkNumber")<PlayerPrefs.GetInt("RuneMarkNumber"))
+				PlayerPrefs.SetInt("MoreRuneMarkNumber",PlayerPrefs.GetInt("RuneMarkNumber"));
 
 		// Less Mark Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("LessRuneMarkNumber",PlayerPrefs.GetFloat("RuneMarkNumber"));
+			PlayerPrefs.SetInt("LessRuneMarkNumber",PlayerPrefs.GetInt("RuneMarkNumber"));
 		else
-			if(PlayerPrefs.GetFloat("LessRuneMarkNumber")>PlayerPrefs.GetFloat("RuneMarkNumber"))
-				PlayerPrefs.SetFloat("LessRuneMarkNumber",PlayerPrefs.GetFloat("RuneMarkNumber"));
+			if(PlayerPrefs.GetInt("LessRuneMarkNumber")>PlayerPrefs.GetInt("RuneMarkNumber"))
+				PlayerPrefs.SetInt("LessRuneMarkNumber",PlayerPrefs.GetInt("RuneMarkNumber"));
 		
 		// More Solid Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("MoreRuneSolidNumber",PlayerPrefs.GetFloat("RuneSolidNumber"));
+			PlayerPrefs.GetInt("MoreRuneSolidNumber",PlayerPrefs.GetInt("RuneSolidNumber"));
 		else
-			if(PlayerPrefs.GetFloat("MoreRuneSolidNumber")<PlayerPrefs.GetFloat("RuneSolidNumber"))
-				PlayerPrefs.SetFloat("MoreRuneSolidNumber",PlayerPrefs.GetFloat("RuneSolidNumber"));
+			if(PlayerPrefs.GetInt("MoreRuneSolidNumber")<PlayerPrefs.GetInt("RuneSolidNumber"))
+				PlayerPrefs.SetInt("MoreRuneSolidNumber",PlayerPrefs.GetInt("RuneSolidNumber"));
 
 		// Less Solid Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("LessRuneSolidNumber",PlayerPrefs.GetFloat("RuneSolidNumber"));
+			PlayerPrefs.GetInt("LessRuneSolidNumber",PlayerPrefs.GetInt("RuneSolidNumber"));
 		else
-			if(PlayerPrefs.GetFloat("LessRuneSolidNumber")>PlayerPrefs.GetFloat("RuneSolidNumber"))
-				PlayerPrefs.SetFloat("LessRuneSolidNumber",PlayerPrefs.GetFloat("RuneSolidNumber"));
+			if(PlayerPrefs.GetInt("LessRuneSolidNumber")>PlayerPrefs.GetInt("RuneSolidNumber"))
+				PlayerPrefs.SetInt("LessRuneSolidNumber",PlayerPrefs.GetInt("RuneSolidNumber"));
 		
 		// More Trap Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("MoreRuneTrapNumber",PlayerPrefs.GetFloat("RuneTrapNumber"));
+			PlayerPrefs.SetInt("MoreRuneTrapNumber",PlayerPrefs.GetInt("RuneTrapNumber"));
 		else
-			if(PlayerPrefs.GetFloat("MoreRuneTrapNumber")<PlayerPrefs.GetFloat("RuneTrapNumber"))
-				PlayerPrefs.SetFloat("MoreRuneTrapNumber",PlayerPrefs.GetFloat("RuneTrapNumber"));
+			if(PlayerPrefs.GetInt("MoreRuneTrapNumber")<PlayerPrefs.GetInt("RuneTrapNumber"))
+				PlayerPrefs.SetInt("MoreRuneTrapNumber",PlayerPrefs.GetInt("RuneTrapNumber"));
 
 		// Less Trap Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("LessRuneTrapNumber",PlayerPrefs.GetFloat("RuneTrapNumber"));
+			PlayerPrefs.SetInt("LessRuneTrapNumber",PlayerPrefs.GetInt("RuneTrapNumber"));
 		else
-			if(PlayerPrefs.GetFloat("LessRuneTrapNumber")>PlayerPrefs.GetFloat("RuneTrapNumber"))
-				PlayerPrefs.SetFloat("LessRuneTrapNumber",PlayerPrefs.GetFloat("RuneTrapNumber"));
+			if(PlayerPrefs.GetInt("LessRuneTrapNumber")>PlayerPrefs.GetInt("RuneTrapNumber"))
+				PlayerPrefs.SetInt("LessRuneTrapNumber",PlayerPrefs.GetInt("RuneTrapNumber"));
 
 		// More Lure Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("MoreRuneLureNumber",PlayerPrefs.GetFloat("RuneLureNumber"));
+			PlayerPrefs.SetInt("MoreRuneLureNumber",PlayerPrefs.GetInt("RuneLureNumber"));
 		else
-			if(PlayerPrefs.GetFloat("MoreRuneLureNumber")<PlayerPrefs.GetFloat("RuneLureNumber"))
-				PlayerPrefs.SetFloat("MoreRuneLureNumber",PlayerPrefs.GetFloat("RuneLureNumber"));
+			if(PlayerPrefs.GetInt("MoreRuneLureNumber")<PlayerPrefs.GetInt("RuneLureNumber"))
+				PlayerPrefs.SetInt("MoreRuneLureNumber",PlayerPrefs.GetInt("RuneLureNumber"));
 
 		// Less Lure Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("LessRuneLureNumber",PlayerPrefs.GetFloat("RuneLureNumber"));
+			PlayerPrefs.GetInt("LessRuneLureNumber",PlayerPrefs.GetInt("RuneLureNumber"));
 		else
-			if(PlayerPrefs.GetFloat("LessRuneLureNumber")>PlayerPrefs.GetFloat("RuneLureNumber"))
-				PlayerPrefs.SetFloat("LessRuneLureNumber",PlayerPrefs.GetFloat("RuneLureNumber"));
+			if(PlayerPrefs.GetInt("LessRuneLureNumber")>PlayerPrefs.GetInt("RuneLureNumber"))
+				PlayerPrefs.SetInt("LessRuneLureNumber",PlayerPrefs.GetInt("RuneLureNumber"));
 		
 		// More Grap Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("MoreRuneGrapNumber",PlayerPrefs.GetFloat("RuneGrapNumber"));
+			PlayerPrefs.SetInt("MoreRuneGrapNumber",PlayerPrefs.GetInt("RuneGrapNumber"));
 		else
-			if(PlayerPrefs.GetFloat("MoreRuneGrapNumber")<PlayerPrefs.GetFloat("RuneGrapNumber"))
-				PlayerPrefs.SetFloat("MoreRuneGrapNumber",PlayerPrefs.GetFloat("RuneGrapNumber"));
+			if(PlayerPrefs.GetInt("MoreRuneGrapNumber")<PlayerPrefs.GetInt("RuneGrapNumber"))
+				PlayerPrefs.SetInt("MoreRuneGrapNumber",PlayerPrefs.GetInt("RuneGrapNumber"));
 
 		// Less Grap Use
 		if((PlayerPrefs.GetInt ("PartieFinies")==0))
-			PlayerPrefs.SetFloat("LessRuneGrapNumber",PlayerPrefs.GetFloat("RuneGrapNumber"));
+			PlayerPrefs.SetInt("LessRuneGrapNumber",PlayerPrefs.GetInt("RuneGrapNumber"));
 		else
-			if(PlayerPrefs.GetFloat("LessRuneGrapNumber")>PlayerPrefs.GetFloat("RuneGrapNumber"))
-				PlayerPrefs.SetFloat("LessRuneGrapNumber",PlayerPrefs.GetFloat("RuneGrapNumber"));
+			if(PlayerPrefs.GetInt("LessRuneGrapNumber")>PlayerPrefs.GetInt("RuneGrapNumber"))
+				PlayerPrefs.SetInt("LessRuneGrapNumber",PlayerPrefs.GetInt("RuneGrapNumber"));
 		
 
 		Timertext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("Timer").ToString());
 		BestTimertext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("BestTimer").ToString());
 
 
-		Deathtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("Death").ToString());
-		LessDeathtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessDeath").ToString());
+		Deathtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("Death").ToString());
+		LessDeathtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessDeath").ToString());
 
-		Killtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("Kill").ToString());
-		LessKilltext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessKill").ToString());
-		MostKilltext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreKill").ToString());
+		Killtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("Kill").ToString());
+		LessKilltext.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessKill").ToString());
+		MostKilltext.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreKill").ToString());
 
+		Solidtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("RuneSolidNumber").ToString());
+		LessSolidtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneSolidNumber").ToString());
+		MostSolidtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneSolidNumber").ToString());
 
-		Solidtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("RuneSolidNumber").ToString());
-		LessSolidtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneSolidNumber").ToString());
-		MostSolidtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneSolidNumber").ToString());
+		MarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("RuneMarkNumber").ToString());
+		LessMarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneMarkNumber").ToString());
+		MostMarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneMarkNumber").ToString());
 
-		MarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("RuneMarkNumber").ToString());
-		LessMarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneMarkNumber").ToString());
-		MostMarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneMarkNumber").ToString());
+		MarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("RuneShadowNumber").ToString());
+		LessMarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneShadowNumber").ToString());
+		MostMarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneShadowNumber").ToString());
 
-		MarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("RuneShadowNumber").ToString());
-		LessMarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneShadowNumber").ToString());
-		MostMarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneShadowNumber").ToString());
+		TrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("RuneTrapNumber").ToString());
+		LessTrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneTrapNumber").ToString());
+		MostTrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneTrapNumber").ToString());
 
-		TrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("RuneTrapNumber").ToString());
-		LessTrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneTrapNumber").ToString());
-		MostTrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneTrapNumber").ToString());
+		GrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("RuneGrapNumber").ToString());
+		LessGrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneGrapNumber").ToString());
+		MostGrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneGrapNumber").ToString());
 
-		GrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("RuneGrapNumber").ToString());
-		LessGrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneGrapNumber").ToString());
-		MostGrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneGrapNumber").ToString());
-
-		LureText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("RuneLureNumber").ToString());
-		LessLureText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneLureNumber").ToString());
-		MostLureText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneLureNumber").ToString());
+		LureText.GetComponent<Text>().text=(PlayerPrefs.GetInt("RuneLureNumber").ToString());
+		LessLureText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneLureNumber").ToString());
+		MostLureText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneLureNumber").ToString());
 
 
 		PlayerPrefs.SetInt ("PartieFinies", (PlayerPrefs.GetInt ("PartieFinies") + 1));

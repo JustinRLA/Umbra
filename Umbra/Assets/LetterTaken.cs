@@ -21,15 +21,7 @@ public class LetterTaken : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.tag=="Player")
 		{
-			if (PlayerPrefs.GetInt ("English") == 1) {
-				CanvatexteEng.SetActive (true);
-				ClosureBase.GetComponent<LetterClosure> ().ThisLetter = CanvatexteEng;
-			}
-			if (PlayerPrefs.GetInt ("English") == 0) {
-				CanvatexteFr.SetActive (true);
-				ClosureBase.GetComponent<LetterClosure> ().ThisLetter = CanvatexteFr;
-
-			}
+			
 			if (LetterNumber == 1) {
 				PlayerPrefs.SetInt ("LetterOne", 1);
 			}
@@ -45,10 +37,7 @@ public class LetterTaken : MonoBehaviour {
 			if (LetterNumber == 5) {
 				PlayerPrefs.SetInt ("LetterFive", 1);
 			}
-			gameObject.GetComponent<Collider2D> ().enabled = false;
-			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
-
-
+		Destroy (gameObject);
 
 		}
 

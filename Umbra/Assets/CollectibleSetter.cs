@@ -7,18 +7,13 @@ using UnityEngine.UI;
 
 
 public class CollectibleSetter : MonoBehaviour {
-	public Sprite LetterOneSprite;
-	public Sprite LetterTwoSprite;
-	public Sprite LetterThreeSprite;
-	public Sprite LetterFourSprite;
-	public Sprite LetterFiveSprite;
 
 	public GameObject LetterOne;
 	public GameObject LetterTwo;
 	public GameObject LetterThree;
 	public GameObject LetterFour;
 	public GameObject LetterFive;
-
+	public GameObject LetterComplete;
 	int NumberofLetter;
 	public GameObject ScoreSetter;
 
@@ -26,26 +21,31 @@ public class CollectibleSetter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (PlayerPrefs.GetInt ("LetterOne") == 1) {
-			LetterOne.GetComponent<SpriteRenderer> ().sprite = LetterOneSprite;
+			LetterOne.SetActive (true);
 			NumberofLetter++;
 		}
 		if (PlayerPrefs.GetInt ("LetterTwo") == 1) {
-			LetterTwo.GetComponent<SpriteRenderer> ().sprite = LetterTwoSprite;
+			LetterTwo.SetActive (true);
 			NumberofLetter++;
 		}
 		if (PlayerPrefs.GetInt ("LetterThree") == 1) {
-			LetterThree.GetComponent<SpriteRenderer> ().sprite = LetterThreeSprite;
+			LetterThree.SetActive (true);
 			NumberofLetter++;
 
 		}
 		if (PlayerPrefs.GetInt ("LetterFour") == 1) {
-			LetterFour.GetComponent<SpriteRenderer> ().sprite = LetterFourSprite;
+			LetterFour.SetActive (true);
 			NumberofLetter++;
 
 		}
 		if (PlayerPrefs.GetInt ("LetterFive") == 1) {
-			LetterFive.GetComponent<SpriteRenderer> ().sprite = LetterFiveSprite;
+			LetterFive.SetActive (true);
 			NumberofLetter++;
+		}
+		if(NumberofLetter==5)
+			{
+			LetterComplete.SetActive (true);
+
 		}
 		ScoreSetter.GetComponent<Text> ().text = NumberofLetter.ToString();
 	}

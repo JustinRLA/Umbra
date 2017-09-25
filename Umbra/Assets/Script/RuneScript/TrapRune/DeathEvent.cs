@@ -26,7 +26,7 @@ public class DeathEvent : MonoBehaviour {
 	void Start () {
 		AssassinTrigger = GameObject.Find ("AssassinTrigger");
 		patate ();
-		un.GetComponent<DeathEvent>().patate();
+		//un.GetComponent<DeathEvent>().patate();
 	}
 	public void patate()
 	{

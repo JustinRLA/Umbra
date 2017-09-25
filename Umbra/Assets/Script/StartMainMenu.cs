@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartMainMenu : MonoBehaviour {
-	bool timerOn;
+	public bool timerOn;
 	public float PlayerTimer;
 
 	// Use this for initialization
@@ -21,6 +21,7 @@ public class StartMainMenu : MonoBehaviour {
 	void Update () {
 		if (timerOn == true)
 			PlayerTimer += Time.deltaTime;
+		print (PlayerTimer);
 	}
 
 	public void StartLevelMusic()

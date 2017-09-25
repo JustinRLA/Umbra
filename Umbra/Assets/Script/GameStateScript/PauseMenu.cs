@@ -83,6 +83,8 @@ public class PauseMenu : MonoBehaviour {
 
 	void PauseBegin()
 	{
+		MusicBase = GameObject.Find ("MusicBase");
+		MusicBase.GetComponent<StartMainMenu> ().timerOn = false;
 		isPause = true;
 		AkSoundEngine.PostEvent ("Menu_Pause", gameObject);
 		CameraOne.GetComponent<BlurOptimized> ().enabled = true;
@@ -96,6 +98,9 @@ public class PauseMenu : MonoBehaviour {
 
 	public void PauseEnd()
 	{	
+		MusicBase = GameObject.Find ("MusicBase");
+		MusicBase.GetComponent<StartMainMenu> ().timerOn = true;
+
 		isPause = false;
 		AkSoundEngine.PostEvent ("Menu_Pause_End", gameObject);
 
