@@ -34,29 +34,31 @@ public class LeaderBoardMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		LessDeathtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessDeath").ToString());
+		BestTimertext.GetComponent<Text>().text=((Mathf.Floor(PlayerPrefs.GetFloat("BestTimer"))/ 60).ToString() + " : "+ ((PlayerPrefs.GetFloat("BestTimer"))% 60).ToString());
 
-		LessKilltext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessKill").ToString());
-		MostKilltext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreKill").ToString());
+		LessDeathtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessDeath").ToString());
+
+		LessKilltext.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessKill").ToString());
+		MostKilltext.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreKill").ToString());
 
 
-		LessSolidtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneSolidNumber").ToString());
-		MostSolidtext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneSolidNumber").ToString());
+		LessSolidtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneSolidNumber").ToString());
+		MostSolidtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneSolidNumber").ToString());
 
-		LessMarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneMarkNumber").ToString());
-		MostMarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneMarkNumber").ToString());
+		LessMarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneMarkNumber").ToString());
+		MostMarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneMarkNumber").ToString());
 
-		LessMarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneShadowNumber").ToString());
-		MostMarkText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneShadowNumber").ToString());
+		LessMarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneShadowNumber").ToString());
+		MostMarkText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneShadowNumber").ToString());
 
-		LessTrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneTrapNumber").ToString());
-		MostTrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneTrapNumber").ToString());
+		LessTrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneTrapNumber").ToString());
+		MostTrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneTrapNumber").ToString());
 
-		LessGrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneGrapNumber").ToString());
-		MostGrapText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneGrapNumber").ToString());
+		LessGrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneGrapNumber").ToString());
+		MostGrapText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneGrapNumber").ToString());
 
-		LessLureText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("LessRuneLureNumber").ToString());
-		MostLureText.GetComponent<Text>().text=(PlayerPrefs.GetFloat("MoreRuneLureNumber").ToString());
+		LessLureText.GetComponent<Text>().text=(PlayerPrefs.GetInt("LessRuneLureNumber").ToString());
+		MostLureText.GetComponent<Text>().text=(PlayerPrefs.GetInt("MoreRuneLureNumber").ToString());
 
 	}
 	

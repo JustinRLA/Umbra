@@ -172,8 +172,10 @@ public class ScoreSettting : MonoBehaviour {
 				PlayerPrefs.SetInt("LessRuneGrapNumber",PlayerPrefs.GetInt("RuneGrapNumber"));
 		
 
-		Timertext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("Timer").ToString());
-		BestTimertext.GetComponent<Text>().text=(PlayerPrefs.GetFloat("BestTimer").ToString());
+
+		Timertext.GetComponent<Text>().text=((Mathf.Floor(PlayerPrefs.GetFloat("Timer"))/ 60).ToString() + " : "+ ((PlayerPrefs.GetFloat("Timer"))% 60).ToString());
+
+		BestTimertext.GetComponent<Text>().text=((Mathf.Floor(PlayerPrefs.GetFloat("BestTimer"))/ 60).ToString() + " : "+ ((PlayerPrefs.GetFloat("BestTimer"))% 60).ToString());
 
 
 		Deathtext.GetComponent<Text>().text=(PlayerPrefs.GetInt("Death").ToString());
