@@ -21,7 +21,7 @@ public class LetterTaken : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.tag=="Player")
 		{
-			
+			AkSoundEngine.PostEvent ("PC_Rune_Select", gameObject);
 			if (LetterNumber == 1) {
 				PlayerPrefs.SetInt ("LetterOne", 1);
 			}
